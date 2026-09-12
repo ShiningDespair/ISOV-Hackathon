@@ -1,0 +1,1249 @@
+{
+  "collector": "kurumlar",
+  "collected_at": "2026-09-12T18:00:00+03:00",
+  "sources": [
+    {
+      "slug": "kosgeb",
+      "name": "KOSGEB - Kucuk ve Orta Olcekli Isletmeleri Gelistirme ve Destekleme Idaresi Baskanligi",
+      "homepage_url": "https://www.kosgeb.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 90,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "tubitak",
+      "name": "TUBITAK - Turkiye Bilimsel ve Teknolojik Arastirma Kurumu",
+      "homepage_url": "https://tubitak.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 90,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ticaret-bakanligi",
+      "name": "T.C. Ticaret Bakanligi",
+      "homepage_url": "https://ticaret.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "tim",
+      "name": "TIM - Turkiye Ihracatcilar Meclisi",
+      "homepage_url": "https://tim.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "tobb",
+      "name": "TOBB - Turkiye Odalar ve Borsalar Birligi",
+      "homepage_url": "https://www.tobb.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "iso",
+      "name": "Istanbul Sanayi Odasi",
+      "homepage_url": "https://www.iso.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "istka",
+      "name": "ISTKA - Istanbul Kalkinma Ajansi",
+      "homepage_url": "https://www.istka.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 80,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "turkpatent",
+      "name": "Turk Patent ve Marka Kurumu",
+      "homepage_url": "https://www.turkpatent.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "tse",
+      "name": "TSE - Turk Standardlari Enstitusu",
+      "homepage_url": "https://www.tse.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ufuk-avrupa",
+      "name": "Ufuk Avrupa Turkiye (Horizon Europe Ulusal Koordinasyon - TUBITAK)",
+      "homepage_url": "https://ufukavrupa.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 80,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "igexx",
+      "name": "IGEXX - Istanbul Kuresel E-Ihracat Zirvesi",
+      "homepage_url": "https://www.igexx.com",
+      "source_type": "kurum",
+      "authority_weight": 65,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "etkinlik"
+    },
+    {
+      "slug": "dunya-gazetesi",
+      "name": "DUNYA Gazetesi",
+      "homepage_url": "https://www.dunya.com",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "alomaliye",
+      "name": "Alomaliye",
+      "homepage_url": "https://www.alomaliye.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "sabah-ekonomi",
+      "name": "Sabah Ekonomi",
+      "homepage_url": "https://www.sabah.com.tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "sanayi-gazetesi",
+      "name": "Sanayi Gazetesi",
+      "homepage_url": "https://sanayigazetesi.com.tr",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ticaret-gazetesi",
+      "name": "Ticaret Gazetesi",
+      "homepage_url": "https://ticaretgazetesi.com.tr",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "kosgeb",
+      "url": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9476/kobilerin-kuresel-rekabet-gucunu-artiracak-destek-programina-basvurular-basladi",
+      "title": "KOSGEB Kuresel Rekabetcilik Destek Programi 2026/1 basvurulari acildi: isletme basina 75 milyon TL'ye kadar kredi",
+      "body": "KOSGEB, KOBI'lerin kuresel pazarlarda daha guclu bir konuma ulasmasini, uluslararasi rekabet gucunu artirmasini ve surdurulebilir buyumesini hedefleyen Kuresel Rekabetcilik Destek Programi'nin 2026 yili 1. basvuru donemini 7 Eylul 2026 itibariyla acti. Basvurular 30 Eylul 2026 tarihine kadar e-Devlet uzerinden alinacak; yani sanayicinin elinde yaklasik uc haftalik dar bir pencere var.\n\nProgram, klasik hibe mantigindan farkli olarak faiz/kar payi destekli kredi modeliyle calisiyor. Isletme basina kredi ust limiti niteliklere gore 30 milyon TL ile 75 milyon TL araliginda belirleniyor. Proje suresi 24 ay, kredi vadesi ise 36 ay olarak uygulaniyor. Programin en kritik bileseni, KOSGEB'in sagladigi 20 puanlik geri odemesiz finansman destegi; bu destek, bankanin uyguladigi faiz/kar payi oranindan 20 puanlik indirim anlamina geliyor ve yuksek faiz ortaminda yatirim maliyetini ciddi olcude asagi cekiyor. Teminat tarafinda ise Kredi Garanti Fonu (KGF) kefaleti imkani sunuluyor; bu, teminat yetersizligi nedeniyle krediye erisemeyen orta olcekli imalatcilar icin belirleyici bir kolaylik.\n\nBasvuru kosullari acisindan isletmenin KOSGEB veri tabaninda kayitli ve aktif olmasi, guncel KOBI beyannamesinin bulunmasi gerekiyor. Bunun otesinde en az bir nitelik kriterinin saglanmasi sart: orta-yuksek veya yuksek teknoloji sektorlerinde faaliyet gosteren ve ihracatini yillik bazda artiran hizli buyuyen isletme olmak, ya da Turcorn 100 Programi kapsaminda yer almak bu kriterler arasinda sayiliyor.\n\nDesteklenen gider kalemleri genis tutulmus durumda: makine-teçhizat ve kalip alimlari, dijital donusum amacli yazilim yatirimlari, nitelikli personel istihdami, egitim-danismanlik-belgelendirme-tasarim gibi hizmet alimlari ve projeyle iliskili isletme sermayesi ihtiyaci finanse edilebiliyor. Bu yapisiyla program, sadece makine yatirimi degil, ayni zamanda ihracat pazarlarina yonelik sertifikasyon ve markalasma harcamalarini da kapsiyor.\n\nKOSGEB'in duyurusunda paylasilan rakamlara gore program kapsaminda bugune kadar 71 KOBI 3 milyar TL'lik finansmana erisim sagladi, bu isletmelerden 43'u 1,3 milyar TL'lik krediyi fiilen kullandi. Kontenjanin sinirli olmasi ve basvurularin donem bazli alinmasi, hazirligini erken tamamlayan isletmeler lehine bir avantaj yaratiyor. ISO uyesi orta-yuksek teknoloji imalatcilari icin bu donem, 2026 yatirim planlarini uygun maliyetli finansmanla eslestirmenin en somut kanallarindan biri konumunda.",
+      "published_at": "2026-09-07T10:00:00+03:00",
+      "language": "tr",
+      "summary": "KOSGEB Kuresel Rekabetcilik Destek Programi'nin 2026/1 donemi 7-30 Eylul 2026 arasinda basvuruya acik. Orta-yuksek/yuksek teknoloji sektorlerinde faaliyet gosteren, ihracatini artiran hizli buyuyen KOBI'ler ile Turcorn 100 isletmeleri isletme basina 30-75 milyon TL kredi, 20 puanlik geri odemesiz finansman destegi ve KGF kefaleti ile makine, yazilim, personel, belgelendirme ve isletme sermayesi giderlerini finanse edebiliyor. Son basvuru tarihi 30 Eylul 2026.",
+      "key_points": [
+        "Basvuru donemi 7-30 Eylul 2026, e-Devlet uzerinden",
+        "Isletme basina 30-75 milyon TL kredi limiti, 24 ay proje / 36 ay vade",
+        "KOSGEB'ten 20 puanlik geri odemesiz faiz/kar payi destegi ve KGF kefaleti",
+        "Makine, yazilim, personel, egitim-danismanlik-belgelendirme ve isletme sermayesi desteklenebiliyor",
+        "Orta-yuksek/yuksek teknoloji, ihracatini artiran hizli buyuyen isletme veya Turcorn 100 sarti"
+      ],
+      "entities": {
+        "kurum": [
+          "KOSGEB",
+          "KGF",
+          "Sanayi ve Teknoloji Bakanligi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Makine",
+          "Yazilim",
+          "Elektronik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "kosgeb",
+        "kobi",
+        "tesvik",
+        "finansman",
+        "ihracat",
+        "kuresel-rekabetcilik",
+        "kgf"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 95,
+        "keyword": 85,
+        "recency": 57,
+        "corroboration": 45,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "kosgeb",
+      "url": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9467/kobilerin-buyumesine-guclu-destek-yeni-basvuru-donemi-basladi",
+      "title": "KOSGEB Kapasite Gelistirme Destek Programi 2026/3 donemi icin son gun 15 Eylul 2026",
+      "body": "KOSGEB'in imalat sanayii basta olmak uzere secili sektorlerde faaliyet gosteren KOBI'lere yonelik Kapasite Gelistirme Destek Programi'nin 2026 yili 3. donem basvurulari 22 Agustos 2026'da acildi ve 15 Eylul 2026 tarihinde kapaniyor. Bu, ISO uyesi sanayiciler acisindan onumuzdeki gunlerin en yakin tarihli basvuru sonu olmasi nedeniyle takvim onceligi tasiyor.\n\nProgram, uretim kapasitesini artirmak isteyen isletmelerin makine, teçhizat ve kalip yatirimlarini; dijital donusum amacli yazilim alimlarini; nitelikli personel istihdamini; egitim, danismanlik, belgelendirme, test-analiz, tanitim-pazarlama ve tasarim gibi hizmet alimlarini ve projeyle iliskili isletme sermayesi ihtiyacini finanse ediyor. Destek mekanizmasi kredi tabanli: isletmenin nitelilerine gore 20 milyon TL ile 30 milyon TL arasinda degisen kredi ust limitleri uygulaniyor. Proje suresi 24 ay, kredi vadesi 36 ay. KOSGEB, kredinin faiz/kar payi maliyetinden 20 puanlik geri odemesiz finansman destegi sagliyor ve teminat sorununu asmak icin KGF kefaleti imkani sunuluyor.\n\nUygunluk kriterleri acisindan program; imalat, telekomunikasyon, yazilim, danismanlik, bilisim altyapisi, veri isleme-barindirma ve bilimsel arastirma-gelistirme sektorlerinde faaliyet gosteren kucuk ve orta olcekli isletmeleri hedefliyor. Isletmenin KOSGEB veri tabaninda kayitli ve aktif olmasi, guncel KOBI beyannamesinin bulunmasi, Turk Ticaret Kanunu kapsaminda gercek veya tuzel kisi olarak kurulmus olmasi ve hizli buyume kriterini karsilamasi bekleniyor. Teknogirisim rozeti bulunan ya da tedarikci gelistirme isbirliklerinde yer alan isletmeler icin hizli buyume sartinda istisnalar tanimlanmis durumda.\n\nProgramin olcegi kucumsenecek gibi degil: KOSGEB verilerine gore 2025 yilinda yaklasik 3.938 KOBI bu program uzerinden 64 milyar TL'lik finansmana erisim sagladi ve 2.457 isletme 33,2 milyar TL'lik krediyi fiilen kullandi. Bu buyukluk, programin sanayi finansmani icinde tasidigi agirligi gosteriyor.\n\nBasvuru surecinin online yurutulmesi ve degerlendirmenin donem bazli yapilmasi nedeniyle, proje dosyasini, makine proforma faturalarini ve banka on gorusmelerini tamamlamamis isletmelerin 15 Eylul oncesinde hizli hareket etmesi gerekiyor. Bu donemi kaciran isletmeler icin bir sonraki donem beklenecek; ancak limit ve kosullarin donemler arasinda degisebilecegi not edilmeli.",
+      "published_at": "2026-08-22T10:00:00+03:00",
+      "language": "tr",
+      "summary": "KOSGEB Kapasite Gelistirme Destek Programi'nin 2026/3 donem basvurulari 15 Eylul 2026'da kapaniyor. Imalat, yazilim, bilisim ve Ar-Ge sektorlerindeki KOBI'ler 20-30 milyon TL kredi limiti, 20 puanlik geri odemesiz finansman destegi ve KGF kefaleti ile makine, yazilim, personel ve isletme sermayesi yatirimlarini finanse edebiliyor. Basvurusunu tamamlamamis uyelerin birkac gun icinde hareket etmesi gerekiyor.",
+      "key_points": [
+        "Son basvuru tarihi 15 Eylul 2026 - takvimdeki en yakin son tarih",
+        "20-30 milyon TL kredi limiti, 24 ay proje suresi, 36 ay vade",
+        "20 puanlik geri odemesiz finansman destegi ve KGF kefalet imkani",
+        "Imalat, telekomunikasyon, yazilim, danismanlik, bilisim ve Ar-Ge sektorleri uygun",
+        "2025'te 3.938 KOBI bu program uzerinden 64 milyar TL finansmana eristi"
+      ],
+      "entities": {
+        "kurum": [
+          "KOSGEB",
+          "KGF"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Yazilim",
+          "Bilisim",
+          "Telekomunikasyon"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "kosgeb",
+        "kobi",
+        "tesvik",
+        "finansman",
+        "kapasite-gelistirme",
+        "makine-yatirimi",
+        "kgf"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 92,
+        "keyword": 80,
+        "recency": 20,
+        "corroboration": 40,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "kosgeb",
+      "url": "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9224/istihdami-koruma-destek-programi",
+      "title": "Istihdami Koruma Destek Programi 2026-2 donemi acildi: imalatciya 50 milyon TL, buyuk isletmeye 150 milyon TL kredi",
+      "body": "KOSGEB ile Sanayi ve Teknoloji Bakanligi isbirliginde yurutulen Istihdami Koruma Destek Programi'nin 2026-2 donem basvurulari 1 Eylul 2026 itibariyla acildi. Basvurular 31 Ekim 2026 tarihine kadar KOSGEB sistemleri uzerinden alinacak; kredilerin son kullandirim tarihi ise 31 Aralik 2026 olarak belirlendi.\n\nProgram, dogrudan NACE Kisim C, yani imalat sanayii altinda faaliyet gosteren isletmeleri hedefliyor ve amaci acikca istihdam seviyesinin korunmasi ve gelistirilmesi. Iç talebin zayifladigi, ISO Turkiye Imalat PMI'in aylardir esik degerin altinda seyrettigi bir konjonkturde program, nakit akisi baskisi altindaki imalatcilar icin dogrudan bir nefes alani anlamina geliyor.\n\nFinansman kosullari su sekilde: KOBI olcegindeki isletmeler icin kredi ust limiti 50.000.000 TL, buyuk isletmeler icin 150.000.000 TL. Krediler azami 6 ay anapara odemesiz donemli ve 36 aya kadar vadeli olarak kullandiriliyor. KOSGEB, kredinin faiz/kar payi maliyetinden 12 puanlik destek sagliyor. Program mantigi geleneksel yatirim kredisinden farkli: isletme basina kredi tutari, isletmenin 2026 Ocak-Haziran donemine ait muhtasar ve prim hizmet beyannamelerinde beyan edilen, destek kapsamindaki isyerleri bazinda prime esas kazanc toplam tutarinin aylik ortalamasi kadar belirleniyor. Yani kredi hacmi dogrudan isletmenin bordro buyuklugune endeksleniyor; bu da yogun istihdam yaratan imalatcilari one cikariyor.\n\nBu yapi, programin bir yatirim tesviki degil bir istihdam koruma araci oldugunu gosteriyor. Isletmeler icin pratik sonuc, bordro maliyetlerinin bir aylik ortalamasi kadar uygun kosullu isletme sermayesine erisim imkani. Program suresince istihdam seviyesinin korunmasina iliskin taahhutler bulundugundan, basvuru oncesi SGK bildirimlerinin ve calisan sayisi projeksiyonunun dikkatle degerlendirilmesi gerekiyor.\n\nISO ve ISOV uyeleri acisindan 1 Eylul - 31 Ekim 2026 penceresi, 2026 son ceyregi ve 2027 ilk ceyregi nakit planlamasi icin dogrudan aksiyon gerektiren bir baslik. Ozellikle isci yogun sektorlerde (tekstil, gida, metal isleri, mobilya) kredi limiti anlamli buyukluklere ulasabiliyor. Kredi kullandirimlarinin 31 Aralik 2026'da sona erecek olmasi, basvurusu onaylanan isletmelerin banka sureclerini de yil sonundan once tamamlamasini zorunlu kiliyor.",
+      "published_at": "2026-09-01T09:00:00+03:00",
+      "language": "tr",
+      "summary": "KOSGEB Istihdami Koruma Destek Programi'nin 2026-2 donemi 1 Eylul - 31 Ekim 2026 arasinda basvuruya acik. NACE Kisim C imalat sanayiindeki KOBI'ler 50 milyon TL'ye, buyuk isletmeler 150 milyon TL'ye kadar, 6 ay anapara odemesiz ve 36 ay vadeli kredi kullanabiliyor; KOSGEB 12 puanlik faiz destegi sagliyor. Kredi tutari 2026 Ocak-Haziran prime esas kazanc ortalamasina gore hesaplaniyor, son kullandirim 31 Aralik 2026.",
+      "key_points": [
+        "Basvuru donemi 1 Eylul - 31 Ekim 2026, son kredi kullanimi 31 Aralik 2026",
+        "KOBI'ye 50 milyon TL, buyuk isletmeye 150 milyon TL kredi ust limiti",
+        "6 aya kadar anapara odemesiz donem, 36 aya kadar vade, 12 puan KOSGEB faiz destegi",
+        "Kredi tutari 2026 Ocak-Haziran prime esas kazanc aylik ortalamasina endeksli",
+        "Sadece NACE Kisim C (imalat sanayii) isletmeleri basvurabiliyor"
+      ],
+      "entities": {
+        "kurum": [
+          "KOSGEB",
+          "Sanayi ve Teknoloji Bakanligi",
+          "SGK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Tekstil",
+          "Gida",
+          "Metal"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "POZITIF",
+      "tags": [
+        "kosgeb",
+        "istihdam",
+        "finansman",
+        "kobi",
+        "imalat-sanayi",
+        "kredi-destegi"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 93,
+        "keyword": 82,
+        "recency": 15,
+        "corroboration": 45,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "iso",
+      "url": "https://www.iso.org.tr/duyurular/genel-duyurular/kosgeb-isletme-degerlendirme-raporu/",
+      "title": "ISO'dan uyelere duyuru: KOSGEB Isletme Degerlendirme Raporu (IDR) e-Devlet uzerinden erisime acildi",
+      "body": "Istanbul Sanayi Odasi, uyelerine yonelik 11 Eylul 2026 tarihli duyurusunda KOSGEB tarafindan gelistirilen Isletme Degerlendirme Raporu'nun (IDR) guncel surumune dikkat cekti. Rapor, isletmelerin mevcut durumlarini, faaliyet gosterdikleri sektorun gelisimini ve bu sektor icindeki kendi konumlarini veriye dayali sekilde gorebilmelerini amacliyor.\n\nIDR'nin en onemli ozelligi, tek bir kurumun degil bes farkli kamu kurumunun idari verilerinin birlestirilmesiyle uretilmesi. Rapora kaynaklik eden kurumlar: Sanayi ve Teknoloji Bakanligi, Sosyal Guvenlik Kurumu, Turk Patent ve Marka Kurumu, Ticaret Bakanligi ve Gelir Idaresi Baskanligi. Bu cok kaynakli yapi, isletmenin kendi beyanina degil resmi kayitlara dayanan, bagimsiz bir portre cikariyor.\n\nRapor yedi bolumden olusuyor: Isletme Kunye Bilgileri, Genel Siralama, Insan Kaynaklari, Ar-Ge - Yenilik - Markalasma, Verimlilik, Ihracat ve Finansman. Genel Siralama bolumu, isletmenin kendi NACE sektoru ve olcek grubu icinde nerede durdugunu gosteriyor; Verimlilik bolumu calisan basina katma deger gibi karsilastirilabilir gostergeler sunuyor; Ar-Ge - Yenilik - Markalasma bolumu patent, faydali model ve marka tescili gecmisini ozetliyor. Ihracat ve Finansman bolumleri ise sirketin dis ticaret performansini ve borçluluk gostergelerini sektor ortalamalariyla kiyasliyor.\n\nGuncel surumde 2021-2025 donemini kapsayan veriler yer aliyor ve rapora e-Devlet uzerinden ucretsiz olarak erisilebiliyor; ayrica Findeks platformu uzerinden de erisim saglanabiliyor. Isletmeler icin pratik degeri su noktalarda toplaniyor: KOSGEB ve diger kurum desteklerine basvuru oncesi kendi konumunu objektif olarak gormek, banka ve yatirimci gorusmelerinde ucuncu taraf veriye dayali bir belge sunabilmek, ve stratejik planlama surecinde sektor ortalamalarina gore zayif alanlari tespit etmek.\n\nISO uyesi sanayiciler icin bu duyuru, ozellikle Eylul-Ekim doneminde acik olan KOSGEB Kuresel Rekabetcilik ve Kapasite Gelistirme programlarina basvuru hazirligi yapan isletmeler acisindan zamanlama olarak anlamli. Basvuru dosyalarinda kullanilacak verimlilik ve buyume gostergelerinin IDR ile teyit edilmesi, degerlendirme surecinde tutarlilik saglayabilir. Rapora erisim icin ek bir basvuru veya ucret gerekmiyor; isletme yetkilisinin e-Devlet sifresiyle giris yapmasi yeterli.",
+      "published_at": "2026-09-11T10:00:00+03:00",
+      "language": "tr",
+      "summary": "ISO, 11 Eylul 2026 duyurusuyla uyelerine KOSGEB Isletme Degerlendirme Raporu'nun (IDR) e-Devlet uzerinden erisilebilir oldugunu hatirlatti. Bes kamu kurumunun idari verisiyle uretilen ve 2021-2025 donemini kapsayan rapor, isletmenin sektor icindeki siralamasini, insan kaynaklari, Ar-Ge/markalasma, verimlilik, ihracat ve finansman gostergelerini ucretsiz sunuyor. Devlet destegi basvurularinda ve banka gorusmelerinde kullanilabilecek objektif bir referans belgesi.",
+      "key_points": [
+        "IDR e-Devlet uzerinden ucretsiz erisilebiliyor, ek basvuru gerekmiyor",
+        "Bes kurumun (Sanayi Bakanligi, SGK, TURKPATENT, Ticaret Bakanligi, GIB) idari verileri birlestiriliyor",
+        "Yedi bolum: kunye, genel siralama, insan kaynaklari, Ar-Ge-yenilik-markalasma, verimlilik, ihracat, finansman",
+        "Guncel surum 2021-2025 donemi verilerini kapsiyor",
+        "KOSGEB destek basvurularinda ve banka gorusmelerinde referans belge olarak kullanilabilir"
+      ],
+      "entities": {
+        "kurum": [
+          "Istanbul Sanayi Odasi",
+          "KOSGEB",
+          "Sanayi ve Teknoloji Bakanligi",
+          "SGK",
+          "Turk Patent ve Marka Kurumu",
+          "Ticaret Bakanligi",
+          "Gelir Idaresi Baskanligi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "NOTR",
+      "tags": [
+        "iso",
+        "kosgeb",
+        "kobi",
+        "veri-analizi",
+        "verimlilik",
+        "duyuru"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 62,
+        "keyword": 55,
+        "recency": 91,
+        "corroboration": 35,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "tubitak",
+      "url": "https://tubitak.gov.tr/tr/duyuru/1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi",
+      "title": "TUBITAK 1707 Siparis Ar-Ge Programi 2026 yili 3. cagrisi acildi, son basvuru 13 Kasim 2026",
+      "body": "TUBITAK, 1707 Siparise Dayali Ar-Ge Projeleri icin KOBI Destekleme Programi'nin 2026 yili 3. cagrisini 2 Eylul 2026 tarihli duyurusuyla ilan etti. Cagri 1 Eylul 2026'da basvuruya acildi ve 13 Kasim 2026 saat 23:59 (TSI) itibariyla kapanacak. On kayit icin son tarih ise 11 Kasim 2026 olarak belirlendi. Basvurular TEYDEB Proje Degerlendirme ve Izleme Sistemi (PRODIS) uzerinden aliniyor.\n\n1707 programi, TUBITAK'in destek portfoyunde ozel bir yere sahip. Klasik Ar-Ge destek programlarindan farki, projenin bir musteri kurulusun somut gereksinimlerinden dogmasi. Musteri kurulus, cozmek istedigi teknik problemi tanimliyor; tedarikci KOBI bu probleme yonelik cozum onerisini Ar-Ge faaliyetine donusturuyor. Boylece proje daha basindan bir ticari talebe bagli oluyor ve ticarilesme riski belirgin sekilde azaliyor. Program, musteri kurulus ile TUBITAK'in birlikte finansman sagladigi bir risk paylasimi modeli kuruyor; fikri mulkiyet haklarinin taraflar arasinda nasil paylasilacagi basvuru asamasinda sozlesmeyle netlestiriliyor.\n\nBu cagri doneminde degerlendirmede oncelik verilecek konular daraltilmis durumda. TUBITAK 2026-2028 Oncelikli Ar-Ge ve Yenilik Konu Basliklari icinden yalnizca \"Sanayide Teknolojik Sicrama\" ve \"Dijital Liderlik\" basliklari altinda sunulan projeler degerlendirme asamasinda oncelikli olarak ele alinacak. Bu, otomasyon, endustriyel yapay zeka, dijital ikiz, ileri uretim teknolojileri ve yazilim tabanli uretim cozumlerine odaklanan projelerin one cikacagi anlamina geliyor.\n\n2026 yili cagri takvimi uc donem olarak planlanmisti: 1. cagri 2 Ocak - 13 Mart, 2. cagri 4 Mayis - 17 Temmuz ve simdi acik olan 3. cagri 1 Eylul - 13 Kasim. Bu, yil icinde ucuncu ve son firsat penceresi anlamina geliyor; bu cagriyi kaciran isletmeler 2027 takvimini beklemek durumunda kalacak.\n\nISO uyeleri acisindan programin en pratik kullanim alani tedarik zinciri iliskisi. Buyuk olcekli bir ana sanayi firmasi musteri kurulus rolunu ustlenip, kendi tedarikcisi olan KOBI'nin Ar-Ge kapasitesini TUBITAK destegiyle gelistirebiliyor. Bu model, hem ithal ikamesi hedefleyen lokalizasyon projelerinde hem de deneyimli isletmelerden KOBI'lere bilgi transferinde etkin sekilde kullanilabiliyor. On kayit ve PRODIS sureclerinin zaman aldigi goz onune alindiginda, musteri-tedarikci sozlesmesinin Ekim ayi icinde tamamlanmasi kritik.",
+      "published_at": "2026-09-02T09:00:00+03:00",
+      "language": "tr",
+      "summary": "TUBITAK 1707 Siparis Ar-Ge Programi'nin 2026 yili 3. ve son cagrisi 1 Eylul - 13 Kasim 2026 arasinda PRODIS uzerinden basvuruya acik; on kayit son tarihi 11 Kasim. Program, musteri kurulusun tanimladigi bir teknik ihtiyaci tedarikci KOBI'nin Ar-Ge projesine donusturmesini TUBITAK ve musteri esfinansmani ile destekliyor. Bu donemde 'Sanayide Teknolojik Sicrama' ve 'Dijital Liderlik' basliklarindaki projelere degerlendirmede oncelik veriliyor.",
+      "key_points": [
+        "Cagri 1 Eylul - 13 Kasim 2026, on kayit son tarihi 11 Kasim 2026",
+        "Basvurular PRODIS uzerinden, 2026'nin ucuncu ve son cagrisi",
+        "Musteri kurulus + TUBITAK esfinansmanli risk paylasim modeli",
+        "Sanayide Teknolojik Sicrama ve Dijital Liderlik basliklarina degerlendirme onceligi",
+        "Ana sanayi - tedarikci KOBI isbirliginde lokalizasyon projeleri icin uygun"
+      ],
+      "entities": {
+        "kurum": [
+          "TUBITAK",
+          "TEYDEB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Otomotiv",
+          "Makine",
+          "Yazilim",
+          "Savunma"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tubitak",
+        "ar-ge",
+        "teydeb",
+        "kobi",
+        "siparis-ar-ge",
+        "tedarik-zinciri",
+        "dijital-donusum"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 82,
+        "keyword": 78,
+        "recency": 20,
+        "corroboration": 40,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "tubitak",
+      "url": "https://tubitak.gov.tr/en/announcement/ardeb-1001-programme-aplication-deadline-2026-2nd-term-has-been-extended",
+      "title": "TUBITAK ARDEB 1001 Programi 2026 yili 2. donem basvuru suresi 14 Eylul 2026'ya uzatildi",
+      "body": "TUBITAK Arastirma Destek Programlari Baskanligi (ARDEB), 1001 - Bilimsel ve Teknolojik Arastirma Projelerini Destekleme Programi'nin 2026 yili 2. donem basvuru suresini uzattigini 2 Eylul 2026 tarihli duyurusuyla acikladi. Cevrim ici basvuru ve elektronik imza islemlerinin tamamlanmasi icin yeni son tarih 14 Eylul 2026 saat 23:59 (UTC+3) olarak belirlendi. Duyuruda, elektronik imza islemleri icin ayrica ek sure verilmeyecegi acikca vurgulandi; yani hem basvuru formunun hem de e-imza adiminin ayni gun saat 23:59'dan once tamamlanmis olmasi gerekiyor.\n\nOnceki takvimde cevrim ici basvuru icin 7 Eylul 2026, e-imza islemleri icin 10 Eylul 2026 tarihleri gecerliydi. Uzatma ile her iki adim tek bir tarihte birlestirilmis oldu.\n\n1001 programi, akademik tarafta TUBITAK'in amiral gemisi destek mekanizmasi olarak kabul ediliyor. Bilimsel ve teknolojik bilgi uretmeyi hedefleyen, yeni bilimsel yontem ve teknolojiler gelistiren projeleri destekliyor. Universite, kamu arastirma kurumlari ve ozel sektor Ar-Ge merkezleri programa proje yuruturucusu ya da proje ortagi olarak dahil olabiliyor. Sanayi sirketleri acisindan programin degeri, universite-sanayi isbirligi kurgusuyla ilerleyen projelerde ortaya cikiyor: sirket, kendi teknik problemini akademik bir arastirma sorusuna donusturup universite ekipleriyle ortak proje yurutebiliyor.\n\nISO ve ISOV uyeleri icin bu duyurunun pratik anlami sinirli ama net: universitelerle yurutulen ortak projelerde sirket tarafinin sunmasi gereken taahhut yazilari, ayni finansman belgeleri ve altyapi beyanlari 14 Eylul 2026 aksamina kadar tamamlanmis olmali. Proje yuruturuculerinin cogu akademisyen oldugundan, sanayi ortaginin gecikmesi tum basvuruyu riske atabiliyor.\n\nARDEB tarafinda 2026 yili boyunca yasanan takvim guncellemeleri (1001'in hem 1. hem 2. donem son basvuru tarihlerinin guncellenmis olmasi, ayrica Kutup Arastirmalari 2026 cagrilarinin basvuru suresinin de uzatilmis olmasi) sistem yogunlugu ve basvuru hacmindeki artisla iliskilendiriliyor. Yine de TUBITAK'in vurgusu acik: bu sefer e-imza icin ek sure yok. Basvuru sahiplerinin sistem yogunlugunu hesaba katarak son gune birakmamasi oneriliyor.",
+      "published_at": "2026-09-02T14:00:00+03:00",
+      "language": "tr",
+      "summary": "TUBITAK ARDEB, 1001 Bilimsel ve Teknolojik Arastirma Projeleri Programi'nin 2026/2 donem basvuru suresini 14 Eylul 2026 saat 23:59'a uzatti; e-imza islemleri icin ek sure verilmeyecek. Universite-sanayi isbirligi ile proje hazirlayan ISO uyelerinin taahhut yazilari, esfinansman belgeleri ve altyapi beyanlarini bu tarihe kadar tamamlamasi gerekiyor.",
+      "key_points": [
+        "Yeni son basvuru tarihi 14 Eylul 2026, saat 23:59 (UTC+3)",
+        "Cevrim ici basvuru ve e-imza tek tarihte birlestirildi",
+        "E-imza islemleri icin ek sure verilmeyecegi ozellikle belirtildi",
+        "Onceki takvim: 7 Eylul basvuru, 10 Eylul e-imza",
+        "Universite-sanayi ortak projelerinde sirket taahhut belgeleri ayni tarihe tabi"
+      ],
+      "entities": {
+        "kurum": [
+          "TUBITAK",
+          "ARDEB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Ar-Ge",
+          "Universite-Sanayi Isbirligi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ar-ge",
+      "sentiment": "NOTR",
+      "tags": [
+        "tubitak",
+        "ardeb",
+        "ar-ge",
+        "proje-cagrisi",
+        "universite-sanayi-isbirligi",
+        "son-basvuru"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 68,
+        "keyword": 65,
+        "recency": 20,
+        "corroboration": 35,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "tubitak",
+      "url": "https://tubitak.gov.tr/tr/duyuru/turkiyenin-ilk-yatirim-tabanli-girisimcilik-destek-programi-olan-bigg-yatirim-programinin-2026-2-cagrisi-acildi",
+      "title": "TUBITAK BiGG Yatirim Programi 2026-2 cagrisi acildi: yuzde 3 hisse karsiliginda 1,35 milyon TL yatirim, son basvuru 30 Eylul",
+      "body": "Turkiye'nin ilk yatirim tabanli girisimcilik destek programi olan TUBITAK BiGG Yatirim Programi'nin 2026 yili 2. cagrisi basvuruya acildi. TUBITAK'a basvurular 31 Agustos - 30 Eylul 2026 tarihleri arasinda PRODIS uzerinden aliniyor. 2. asama degerlendirmeleri 12 Ekim - 20 Kasim 2026 tarihlerinde yapilacak; destek baslangici ise 1 Ocak 2027 olarak planlandi.\n\nBiGG Yatirim, geleneksel hibe mantigindan koklu bir ayrilmayi temsil ediyor. Klasik BiGG modelinde girisimciye geri odemesiz hibe veriliyordu; yeni modelde TUBITAK BiGG Fonu, mukemmeliyet muhru alan girisimlere yuzde 3 hisse karsiliginda 1.350.000 TL yatirim yapiyor. Izleme doneminde, performansa bagli olarak 1.350.000 TL'ye kadar takip yatirimi (follow-on) saglanabiliyor. Es yatirimci ile birlikte basvuran girisimler hizlandirilmis degerlendirmeden yararlanabiliyor; bu, ozel sermayeyi devlet destegiyle birlikte harekete geciren bir kaldirac mekanizmasi kuruyor.\n\nProgramda temiz teknolojilere ozel bir pencere de var. UNIDO'nun Kuresel Temiz Teknoloji Girisimciligi Programi (GCIP) kapsaminda, sertifika alan ilk uc temiz teknoloji girisimi yuzde 5 hisse karsiliginda 2.250.000 TL yatirim alabiliyor. Yesil donusum ve enerji verimliligi alaninda calisan girisimler icin bu, standart pakete gore daha yuksek bir tutar anlamina geliyor.\n\nBasvuru kosulu olarak, uygulayici kuruluslarla 1. asama faaliyetlerini tamamlamis ve 2. asamaya gecmeye hak kazanmis girisimciler programa basvurabiliyor. Yani program dogrudan herkese acik degil; on asamanin tamamlanmis olmasi gerekiyor.\n\nISO ve ISOV ekosistemi acisindan programin iki boyutu one cikiyor. Birincisi, sanayi sirketlerinin kurumsal girisimcilik (corporate venturing) stratejileri kapsaminda spin-off yapilar kurmasi ve bu yapilari BiGG Yatirim ile finanse etmesi mumkun. Ikincisi, olgunlasan BiGG girisimleri, sanayi sirketleri icin potansiyel tedarikci veya teknoloji ortagi havuzu olusturuyor; es yatirimci olarak surece dahil olan sanayi firmalari hem hizlandirilmis degerlendirmeden yararlaniyor hem de erken asamada teknolojiye erisim sagliyor. Son basvuru tarihinin 30 Eylul 2026 olmasi, karar sureclerini Eylul ayi icinde tamamlamayi gerektiriyor.",
+      "published_at": "2026-08-31T09:00:00+03:00",
+      "language": "tr",
+      "summary": "TUBITAK BiGG Yatirim Programi'nin 2026-2 cagrisi 31 Agustos - 30 Eylul 2026 arasinda basvuruya acik. Mukemmeliyet muhru alan girisimler yuzde 3 hisse karsiliginda 1,35 milyon TL yatirim, izleme doneminde ayni tutarda takip yatirimi alabiliyor; UNIDO GCIP kapsaminda ilk uc temiz teknoloji girisimi icin tutar yuzde 5 hisseye karsilik 2,25 milyon TL. Es yatirimci ile basvuran girisimler hizlandirilmis degerlendirmeye giriyor - kurumsal girisimcilik yapan sanayi sirketleri icin dogrudan firsat.",
+      "key_points": [
+        "TUBITAK'a basvuru 31 Agustos - 30 Eylul 2026, PRODIS uzerinden",
+        "Yuzde 3 hisse karsiliginda 1.350.000 TL yatirim, ayni tutarda takip yatirimi imkani",
+        "UNIDO GCIP temiz teknoloji girisimlerine yuzde 5 hisseye karsilik 2.250.000 TL",
+        "Es yatirimci ile basvuranlara hizlandirilmis degerlendirme",
+        "2. asama degerlendirmeleri 12 Ekim - 20 Kasim 2026, destek baslangici 1 Ocak 2027"
+      ],
+      "entities": {
+        "kurum": [
+          "TUBITAK",
+          "UNIDO"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Girisimcilik",
+          "Temiz Teknoloji",
+          "Derin Teknoloji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tubitak",
+        "bigg",
+        "girisimcilik",
+        "yatirim",
+        "temiz-teknoloji",
+        "ar-ge"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 70,
+        "keyword": 68,
+        "recency": 12,
+        "corroboration": 45,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "tubitak",
+      "url": "https://tubitak.gov.tr/tr/duyuru/1501-sanayi-ar-ge-destek-programi-ve-1507-kobi-ar-ge-baslangic-destek-programi-2026-yili-2-cagrilari-acildi",
+      "title": "TUBITAK 1501 ve 1507 programlarinin 2026/2 cagrilari acik: proje basina 20 milyon TL'ye kadar hibe, destek orani yuzde 75",
+      "body": "TUBITAK TEYDEB'in sanayi Ar-Ge'sindeki iki temel programi olan 1501 - Sanayi Ar-Ge Destek Programi ve 1507 - KOBI Ar-Ge Baslangic Destek Programi'nin 2026 yili 2. cagrilari 20 Temmuz 2026'da basvuruya acildi ve halen acik durumda. Son basvuru tarihleri farkli: 1501 icin kurulus bazli on kayit son tarihi 22 Ekim 2026, cagri kapanisi 26 Ekim 2026; 1507 icin on kayit 9 Kasim 2026, cagri kapanisi 11 Kasim 2026. Basvurular PRODIS sistemi uzerinden aliniyor.\n\n2026/2 cagrisinin en dikkat cekici yenilikleri destek orani yapisinda. 1501 programinda destek orani artik kurulusun proje gecmisine bagli olarak kademeli uygulaniyor: ilk bes desteklenen proje icin destek orani yuzde 75 ve proje basina hibe destek tutari en fazla 20 milyon TL. Altinci projeden itibaren destek orani yuzde 60'a düsüyor, 20 milyon TL'lik ust limit korunuyor. Bu kademeli yapi, programin Ar-Ge kulturune yeni giren sirketleri one cikarma niyetini yansitiyor.\n\nProje sayisi hesabinda onemli bir istisna var: 1505, 1512/1812, 1831 ve 1702 programlarindan desteklenen projeler ilk bes proje kademesine sayilmiyor. 1711 ve 1707 programlari icin ise yalnizca tedarikci kurulusun desteklenen projeleri dikkate aliniyor. Bu ayrimlar, farkli programlardan yararlanmis sirketlerin hangi kademede degerlendirilecegini belirlediginden basvuru oncesi dikkatle kontrol edilmeli.\n\n1501 programi, KOBI ve buyuk olcekli sirketlerin proje bazli Ar-Ge, teknoloji gelistirme ve yenilikcilik faaliyetlerini destekliyor; yeni urun ve surec gelistirme ile ticarilestirilebilir teknoloji uretimini tesvik ediyor. 1507 ise KOBI olcegindeki firmalarin ilk Ar-Ge projelerini gerceklestirmesine, sistematik Ar-Ge yapabilme kapasitesi kazanmasina odaklaniyor; Ar-Ge kulturune yeni baslayan isletmeler icin giris kapisi islevi goruyor.\n\nISO uyeleri acisindan pratik sonuc net: 20 milyon TL'ye kadar geri odemesiz hibe, yuzde 75 destek oraniyla, yeni urun veya uretim sureci gelistirme projelerinde kullanilabiliyor. Personel giderleri, alet-teçhizat, yazilim, danismanlik hizmet alimlari, malzeme ve seyahat giderleri destek kapsaminda. Proje dosyasinin teknik icerigi ve yenilikcilik iddiasinin gucu degerlendirmede belirleyici oldugundan, 1501 icin 26 Ekim ve 1507 icin 11 Kasim son tarihlerine kadar kalan surenin proje yazimina ayrilmasi gerekiyor. On kayit adiminin cagri kapanisindan birkac gun once bitmesi, takvimin en sik atlanan detayi.",
+      "published_at": "2026-07-20T09:00:00+03:00",
+      "language": "tr",
+      "summary": "TUBITAK 1501 Sanayi Ar-Ge ve 1507 KOBI Ar-Ge Baslangic programlarinin 2026/2 cagrilari acik: 1501 icin son basvuru 26 Ekim (on kayit 22 Ekim), 1507 icin 11 Kasim 2026 (on kayit 9 Kasim). Yeni donemde 1501'de ilk bes proje icin destek orani yuzde 75 ve proje basina hibe ust limiti 20 milyon TL; altinci projeden itibaren oran yuzde 60'a düsüyor. Yeni urun/surec gelistirme projesi olan ISO uyeleri icin en yuksek tutarli geri odemesiz Ar-Ge hibesi.",
+      "key_points": [
+        "1501 son basvuru 26 Ekim 2026 (on kayit 22 Ekim), 1507 son basvuru 11 Kasim 2026 (on kayit 9 Kasim)",
+        "Ilk bes desteklenen proje icin destek orani yuzde 75, hibe ust limiti proje basina 20 milyon TL",
+        "Altinci projeden itibaren destek orani yuzde 60'a düsüyor, 20 milyon TL limiti korunuyor",
+        "1505, 1512/1812, 1831 ve 1702 projeleri ilk bes proje kademesine sayilmiyor",
+        "Basvurular PRODIS uzerinden, 1507 Ar-Ge'ye yeni baslayan KOBI'ler icin giris programi"
+      ],
+      "entities": {
+        "kurum": [
+          "TUBITAK",
+          "TEYDEB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Makine",
+          "Elektronik",
+          "Kimya",
+          "Yazilim"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tubitak",
+        "teydeb",
+        "ar-ge",
+        "hibe",
+        "kobi",
+        "ar-ge-tesviki",
+        "proje-cagrisi"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 90,
+        "keyword": 85,
+        "recency": 5,
+        "corroboration": 50,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/04/yatirim-projelerinin-finansmaninda-yeni-bir-arac-oncelikli-finansman-belgesi/",
+      "title": "Yatirim finansmaninda yeni arac: Oncelikli Finansman Belgesi 3 Eylul 2026 itibariyla yururlukte",
+      "body": "3 Eylul 2026 tarihli Resmi Gazete'de yayimlanan teblig degisikligi ile Sanayi ve Teknoloji Bakanligi'nin yatirim finansmani mimarisine yeni bir arac eklendi: Oncelikli Finansman Belgesi. Duzenleme, Yatirim Projelerinin Stratejik Oncelik ve Teknik Degerlendirmesine Iliskin Teblig'de yapilan degisiklikle hayata gecirildi ve ayni gun itibariyla yururluge girdi.\n\nMevcut sistemde yatirimcilarin kamu destekli finansman programlarina erisebilmesi icin Teknik ve Stratejik Oncelik (TSO) Belgesi almasi gerekiyordu. Ancak TSO Belgesi icin aranan asgari 1 milyar TL yatirim buyuklugu ve son bilancoda en az 50 milyon TL ozkaynak/odenmis sermaye sarti, orta olcekli yatirimcilarin bu kanaldan tamamen dislanmasina yol aciyordu. Yeni duzenleme tam da bu bosluga yanit veriyor.\n\nOncelikli Finansman Belgesi, TSO Belgesi'nin yerini almiyor; farkli bir esik, farkli bir basvuru kapsami ve farkli bir degerlendirme mantigiyla calisan ikinci bir kanal olarak konumlandiriliyor. Asgari yatirim tutari 100 milyon TL olarak belirlendi ve belge ozellikle imalat sanayii projelerini hedefliyor. Onemli bir kolaylik: imalat sanayiine yonelik yatirim tesvik belgesi bulunan sirketler otomatik uygunluk kazaniyor. Bu kapsama girmeyen basvuru sahiplerinin ise Bakanlikca belirlenen kriterler uzerinden en az 50 puan alarak esigi asmasi gerekiyor. Degerlendirme kriterleri arasinda yatirimin buyuklugu, teknoloji seviyesi, ihracat kapasitesi, verimlilik etkisi ve Ar-Ge faaliyetleri yer aliyor.\n\nSurec yonetimi acisindan yeni kural net: yatirimcinin araci banka uzerinden kredi basvurusu yapabilmesi icin oncesinde ya TSO Belgesi ya da Oncelikli Finansman Belgesi almis olmasi zorunlu. Basvurular dogrudan Bakanligin elektronik portali uzerinden yapiliyor. Ayrica iki kisitlama getirilmis durumda: ayni programdan iki kez destek alinamiyor ve yatirimci ayni anda yalnizca tek bir finansman programini takip edebiliyor.\n\nISO ve ISOV uyeleri acisindan bu duzenleme somut bir esik düsürmesi anlamina geliyor. 1 milyar TL'lik TSO esigine ulasamayan, ancak 100 milyon TL ve uzerinde imalat yatirimi planlayan orta olcekli sanayiciler, ilk kez kamu destekli uygun kosullu finansman programlarina dogrudan erisim hakki kazaniyor. Halihazirda imalat sanayii yatirim tesvik belgesi bulunan firmalarin otomatik uygunluk kazanmasi, bu firmalar icin ek bir degerlendirme yuku olmadan kredi kanalinin acilmasi demek. 2026 sonu ve 2027 yatirim planlarini yapan uyelerin, banka gorusmelerine baslamadan once belge basvurusunu Bakanlik portali uzerinden tamamlamasi gerekiyor.",
+      "published_at": "2026-09-04T08:00:00+03:00",
+      "language": "tr",
+      "summary": "3 Eylul 2026 Resmi Gazete'de yayimlanan teblig degisikligiyle Oncelikli Finansman Belgesi uygulamasi basladi. Asgari 100 milyon TL imalat sanayii yatirimi yapan sirketler, TSO Belgesi icin gereken 1 milyar TL / 50 milyon TL ozkaynak esiklerini asmadan kamu destekli finansman programlarina erisebilecek. Imalat yatirim tesvik belgesi olan sirketler otomatik uygun sayilirken digerlerinin en az 50 puan almasi gerekiyor; kredi basvurusundan once belge alinmasi zorunlu.",
+      "key_points": [
+        "3 Eylul 2026 tarihli Resmi Gazete ile yururluge girdi",
+        "Asgari yatirim tutari 100 milyon TL (TSO Belgesi'nde 1 milyar TL)",
+        "Imalat sanayii yatirim tesvik belgesi olan sirketler otomatik uygun",
+        "Digerleri icin teknoloji, ihracat, verimlilik, Ar-Ge kriterlerinden en az 50 puan sarti",
+        "Kredi basvurusu oncesi TSO veya Oncelikli Finansman Belgesi alinmasi zorunlu; ayni anda tek program"
+      ],
+      "entities": {
+        "kurum": [
+          "Sanayi ve Teknoloji Bakanligi",
+          "Resmi Gazete"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "yatirim-tesvik",
+        "finansman",
+        "sanayi-bakanligi",
+        "mevzuat-degisikligi",
+        "imalat-sanayi",
+        "oncelikli-finansman"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 95,
+        "keyword": 88,
+        "recency": 32,
+        "corroboration": 55,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "dunya-gazetesi",
+      "url": "https://www.dunya.com/ekonomi/yatirim-yapacak-sirketler-dikkat-finansmanda-yeni-donem-basladi-haberi-838565",
+      "title": "Yatirim yapacak sirketler dikkat: finansmanda yeni donem, kredi oncesi belge sarti geldi",
+      "body": "Resmi Gazete'de yayimlanan ve 3 Eylul 2026 itibariyla yururluge giren duzenleme, Turkiye'de yatirim finansmani sistemini yeniden kurguluyor. Getirilen en temel degisiklik, sirketlerin araci bankalar uzerinden kamu destekli kredi basvurusu yapmadan once Bakanliktan belge almasi zorunlulugu. Bu belge ya Teknik ve Stratejik Oncelik (TSO) Belgesi ya da yeni ihdas edilen Oncelikli Finansman Belgesi olabiliyor. Basvurular dogrudan Bakanligin elektronik portali uzerinden yapiliyor.\n\nTSO Belgesi tarafinda esikler yuksek tutuldu: asgari yatirim buyuklugu 1 milyar TL ve sirketin son bilancosunda en az 50 milyon TL ozkaynak veya odenmis sermaye bulunmasi sart. Bu kriterler, belgeyi buyuk olcekli stratejik yatirimlarin kanali olarak konumlandiriyor.\n\nOncelikli Finansman Belgesi ise esigi 100 milyon TL'ye düsürerek imalat sanayii projelerine yeni bir kapi aciyor. Halihazirda imalat sanayii yatirim tesvik belgesi bulunan sirketler bu belge icin otomatik onay aliyor. Bu kapsamda olmayan basvuru sahiplerinin ise belirlenmis kriterler uzerinden en az 50 puan toplamasi gerekiyor. Boylece sistem, tesvik belgesi sahibi mevcut yatirimcilari hizli kanaldan gecirirken, yeni basvuru sahiplerini puanlamaya tabi tutuyor.\n\nDuzenlemede iki onemli kisitlama da yer aliyor. Birincisi, sirketler ayni programdan iki kez destek alamiyor. Ikincisi, bir sirket ayni anda yalnizca tek bir finansman programini takip edebiliyor. Bu kurallar, sinirli kamu kaynagini daha genis bir yatirimci tabanina dagitma amacini tasiyor ancak cok fazli buyuk yatirim projeleri planlayan sirketler acisindan program secimini stratejik bir karar haline getiriyor.\n\nUygulamanin sanayici acisindan pratik sonucu su: yatirim karari verildikten sonra dogrudan bankaya gitmek artik yeterli degil. Once Bakanlik portali uzerinden belge sureci baslatilmali, belge alindiktan sonra araci banka basvurusu yapilmali. Bu, yatirim takviminde ek bir asama anlamina geliyor ve on hazirligin (fizibilite, teknoloji seviyesi dokumantasyonu, ihracat projeksiyonu, Ar-Ge kayitlari) daha erken tamamlanmasini gerektiriyor.\n\nOrta olcekli ISO uyeleri icin duzenleme net bir kazanim: 1 milyar TL esigi nedeniyle daha once sistem disinda kalan 100-1.000 milyon TL araligindaki imalat yatirimlari, ilk kez kamu destekli uygun kosullu finansmana dogrudan basvurabilir hale geldi. 2026 son ceyregi ve 2027 yatirim butcelerini hazirlayan sirketlerin, kredi gorusmeleri oncesinde belge basvurularini planlamaya almasi oneriliyor.",
+      "published_at": "2026-09-08T07:30:00+03:00",
+      "language": "tr",
+      "summary": "3 Eylul 2026'da yururluge giren duzenlemeyle kamu destekli yatirim kredisi basvurusu oncesi Bakanliktan TSO Belgesi veya Oncelikli Finansman Belgesi alinmasi zorunlu hale geldi. TSO icin 1 milyar TL yatirim ve 50 milyon TL ozkaynak sarti aranirken, yeni belge esigi 100 milyon TL imalat yatirimina cekiyor; imalat tesvik belgesi sahipleri otomatik uygun. Sirketler ayni programdan iki kez destek alamiyor ve ayni anda tek program takip edebiliyor.",
+      "key_points": [
+        "Kredi basvurusu oncesi Bakanlik portali uzerinden belge alinmasi zorunlu hale geldi",
+        "TSO Belgesi: asgari 1 milyar TL yatirim + 50 milyon TL ozkaynak/odenmis sermaye",
+        "Oncelikli Finansman Belgesi: asgari 100 milyon TL imalat sanayii yatirimi",
+        "Imalat yatirim tesvik belgesi sahipleri otomatik uygun, digerleri icin 50 puan esigi",
+        "Ayni programdan iki kez destek yok; ayni anda tek finansman programi takip edilebilir"
+      ],
+      "entities": {
+        "kurum": [
+          "Sanayi ve Teknoloji Bakanligi",
+          "Resmi Gazete"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "NOTR",
+      "tags": [
+        "yatirim-tesvik",
+        "finansman",
+        "sanayi-bakanligi",
+        "mevzuat-degisikligi",
+        "kredi-destegi",
+        "imalat-sanayi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 93,
+        "keyword": 86,
+        "recency": 66,
+        "corroboration": 55,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "sabah-ekonomi",
+      "url": "https://www.sabah.com.tr/ekonomi/ihracatciya-finansman-destegi-reeskont-kredilerinde-bsmv-istisnasi-genisletildi-7654888",
+      "title": "Reeskont kredilerinde BSMV istisnasi genisletildi: uzun vadeli krediler de kapsama alindi",
+      "body": "Ticaret Bakanligi, ihracatcilarin finansman maliyetini düsürmek amaciyla reeskont kredilerinde uygulanan Banka ve Sigorta Muameleleri Vergisi (BSMV) istisnasinin kapsaminin genisletildigini duyurdu. 5 Eylul 2026 tarihli Resmi Gazete'de yayimlanan Cumhurbaskani Karari ve ilgili teblig ile daha once yalnizca kisa vadeli reeskont kredilerinde gecerli olan istisna, artik Turk Eximbank ve ticari bankalar araciligiyla kullandirilan uzun vadeli reeskont kredilerini de kapsiyor.\n\nDuzenleme, ihracatcinin finansman maliyeti uzerinde dogrudan bir etki yaratiyor. BSMV, kredi faizi uzerinden alinan bir islem vergisi oldugundan, istisnanin uzun vadeli kredilere genisletilmesi efektif kredi maliyetini asagi cekiyor. Aciklamalarda reeskont kredilerinin finansman maliyetinin yuzde 23,95'e düsürüldügü belirtildi.\n\nKapsam genislemesinin yaninda limit artislari da onemli. Reeskont kredilerinin gunluk toplam limiti 300 milyon TL'den 5 milyar TL'ye cikarildi; firma basina gunluk kredi limiti ise 45 milyon TL'den 60 milyon TL'ye yukseltildi. Gunluk toplam limitin yaklasik 16 kat artmasi, uygulamada en sik karsilasilan sorunu, yani limit dolmasi nedeniyle basvurularin ertesi gune kalmasi sorununu buyuk olcude ortadan kaldirma potansiyeli tasiyor. Firma basi limitin 60 milyon TL'ye cikarilmasi ise orta-buyuk olcekli ihracatcilarin tek seferde daha yuksek tutarli kredi kullanabilmesi anlamina geliyor.\n\nUzun vadeli reeskont kredilerinin kapsama alinmasi, ozellikle yatirim mali ihracati yapan, uzun uretim cevrimine sahip makine, savunma, gemi insa ve raylı sistem gibi sektorler icin belirleyici. Bu sektorlerde siparisten teslimata kadar gecen sure kisa vadeli kredi yapisiyla uyumsuz kalabiliyordu; yeni duzenleme bu uyumsuzlugu gideriyor.\n\nISO uyeleri acisindan aksiyon maddesi acik: reeskont kredisi kullanan ya da kullanmayi planlayan ihracatci firmalarin, Turk Eximbank ve calistiklari ticari banka ile guncel kosullari yeniden gozden gecirmesi gerekiyor. Ozellikle daha once limit yetersizligi ya da vade uyumsuzlugu nedeniyle reeskont kanalini kullanamayan firmalar icin kanal yeniden acilmis durumda. Ihracat taahhut kapama sartlari ve doviz/TL cinsi secimi konularinda Eximbank'in guncel faiz ve kar payi oranlari tablosunun takip edilmesi oneriliyor. Parite kaynakli kayiplarin surdugu ve ISO Turkiye Imalat PMI'in daralma bolgesinde seyrettigi mevcut konjonkturde, finansman maliyetindeki bu indirim ihracatci sanayici icin somut bir marj destegi anlamina geliyor.",
+      "published_at": "2026-09-05T12:00:00+03:00",
+      "language": "tr",
+      "summary": "5 Eylul 2026 Resmi Gazete'de yayimlanan Cumhurbaskani Karari ile reeskont kredilerindeki BSMV istisnasi Turk Eximbank ve ticari bankalarca kullandirilan uzun vadeli kredileri de kapsayacak sekilde genisletildi. Gunluk toplam limit 300 milyon TL'den 5 milyar TL'ye, firma basina gunluk limit 45 milyon TL'den 60 milyon TL'ye cikti ve finansman maliyeti yuzde 23,95'e düsürüldü. Uzun uretim cevrimine sahip makine, savunma ve gemi insa ihracatcilari icin dogrudan maliyet avantaji.",
+      "key_points": [
+        "5 Eylul 2026 tarihli Resmi Gazete karariyla yururluge girdi",
+        "BSMV istisnasi uzun vadeli reeskont kredilerini de kapsiyor",
+        "Gunluk toplam reeskont limiti 300 milyon TL'den 5 milyar TL'ye cikarildi",
+        "Firma basina gunluk limit 45 milyon TL'den 60 milyon TL'ye yukseltildi",
+        "Reeskont kredisi finansman maliyeti yuzde 23,95 seviyesine düsürüldü"
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanligi",
+          "Turk Eximbank",
+          "TCMB",
+          "Resmi Gazete"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Ihracat",
+          "Makine",
+          "Savunma",
+          "Gemi Insa",
+          "Imalat"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ihracat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "eximbank",
+        "ihracat",
+        "reeskont-kredisi",
+        "bsmv",
+        "finansman",
+        "ticaret-bakanligi",
+        "ihracat-destegi"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 92,
+        "keyword": 88,
+        "recency": 40,
+        "corroboration": 60,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/duyurular/ticaret-bakanligi-ihracat-surecleri-ve-devlet-destekleri-egitim-programi-22-23-24-eylul-2026",
+      "title": "Ticaret Bakanligi Ihracat Surecleri ve Devlet Destekleri Egitim Programi 22-24 Eylul 2026'da cevrim ici yapilacak",
+      "body": "T.C. Ticaret Bakanligi, ihracatcilara ve ihracata yeni baslayacak isletmelere yonelik duzenledigi \"Ihracat Surecleri ve Devlet Destekleri Egitim Programi\"nin yeni donemini 22, 23 ve 24 Eylul 2026 tarihlerinde cevrim ici olarak gerceklestirecek. Program yil icinde duzenli araliklarla tekrarlaniyor; onceki donemler 24-26 Mart, 20-22 Mayis ve 23-25 Haziran tarihlerinde yapilmisti.\n\nUc gune yayilan egitim, ihracat operasyonunun teknik adimlarini ve bu adimlarin her birine karsilik gelen devlet destek mekanizmalarini birlikte ele aliyor. Icerik tipik olarak gumruk mevzuati ve beyanname surecleri, dis ticarette odeme sekilleri ve teslim sekilleri (Incoterms), mensei kurallari ve serbest ticaret anlasmalarindan yararlanma, ihracatta KDV iadesi ve dahilde isleme rejimi gibi operasyonel basliklar ile Bakanligin ihracat destek portfoyunu kapsiyor.\n\nDestek tarafinda anlatilan basliklar ISO uyeleri icin dogrudan aksiyon degeri tasiyor. 5973 sayili Ihracat Destekleri Hakkinda Karar cercevesinde yurutulen UR-GE Proje Destegi, isbirligi kuruluslari (odalar, birlikler, OSB'ler) onculugunde ihtiyac analizi, egitim, danismanlik, tanitim, istihdam, yurt disi pazarlama ve alim heyeti faaliyetlerini butunlesik bir mekanizmayla destekliyor; projeler bes yil suruyor ve faaliyet masraflarinin yuzde 75'i Bakanlikca karsilaniyor. Sektorel Ticaret Heyeti ve Alim Heyeti Destekleri ise hedef pazarlara yonelik organize is gezileri ve Turkiye'ye yabanci alici getirme faaliyetlerinin masraflarini kapsiyor; bu destege iliskin genelge 20 Nisan 2026 tarihinde guncellendi. Bunlarin yaninda pazara giris belgeleri destegi, yurt disi birim-marka-tanitim destegi, e-ihracat destekleri ve Turquality programi da egitim kapsaminda ele aliniyor.\n\nCevrim ici format, Istanbul disindaki tesislerde calisan dis ticaret personelinin de katilimini mumkun kiliyor ve katilim ucretsiz olarak duzenleniyor. Kayit, Bakanligin duyuru sayfasindaki baglanti uzerinden yapiliyor.\n\nISO ve ISOV uyeleri acisindan programin en pratik faydasi, dagink bir destek mevzuatinin tek bir takvimde derli toplu aktarilmasi. Ozellikle dis ticaret departmani kucuk olan orta olcekli imalatcilar, hangi destege hangi kosullarla basvurabileceklerini bu egitimde netlestirebiliyor. UR-GE projesine katilim veya sektorel ticaret heyeti basvurusu planlayan firmalarin, ilgili ihracatci birligi ya da oda ile baglantiyi egitim sonrasinda kurmasi oneriliyor.",
+      "published_at": "2026-08-19T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanligi'nin ucretsiz ve cevrim ici Ihracat Surecleri ve Devlet Destekleri Egitim Programi 22-24 Eylul 2026'da duzenlenecek. Program, gumruk ve dis ticaret operasyonunun teknik adimlarinin yani sira UR-GE Proje Destegi (bes yil, masraflarin yuzde 75'i), sektorel ticaret ve alim heyeti destekleri, pazara giris belgeleri ve e-ihracat desteklerini kapsiyor. Dis ticaret ekibi sinirli olan ISO uyeleri icin destek mevzuatini tek takvimde ogrenme firsati.",
+      "key_points": [
+        "Egitim 22-24 Eylul 2026 tarihlerinde cevrim ici ve ucretsiz",
+        "Kayit Ticaret Bakanligi duyuru sayfasindaki baglanti uzerinden",
+        "UR-GE Proje Destegi: bes yil sureli, faaliyet masraflarinin yuzde 75'i Bakanlikca karsilaniyor",
+        "Sektorel Ticaret Heyeti ve Alim Heyeti Destekleri genelgesi 20 Nisan 2026'da guncellendi",
+        "Gumruk, Incoterms, mensei kurallari, KDV iadesi ve dahilde isleme rejimi basliklari da kapsamda"
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanligi",
+          "TIM"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Ihracat",
+          "Imalat",
+          "Dis Ticaret"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ihracat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ticaret-bakanligi",
+        "ihracat-destegi",
+        "ur-ge",
+        "ticaret-heyeti",
+        "egitim",
+        "kobi"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 70,
+        "keyword": 72,
+        "recency": 5,
+        "corroboration": 35,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "tim",
+      "url": "https://tim.org.tr/tr/ihracat-rakamlari",
+      "title": "TIM: Agustos 2026 ihracati yuzde 8,1 artisla 23,5 milyar dolar, 12 aylik ihracat 280,3 milyar dolara ulasti",
+      "body": "Turkiye Ihracatcilar Meclisi (TIM), 2026 yili Agustos ayi ihracat rakamlarini acikladi. Agustos ayinda ihracat bir onceki yilin ayni ayina gore yuzde 8,1 artarak 23,5 milyar dolara ulasti. Yilin ilk sekiz ayinda toplam ihracat 185 milyar dolar, son 12 aylik ihracat ise 280,3 milyar dolar seviyesine cikti.\n\nIl bazinda siralamada Istanbul 5 milyar 503 milyon dolarla acik ara birinci sirada yer aldi. Kocaeli 3 milyar 122 milyon dolarla ikinci, Izmir 1 milyar 842 milyon dolarla ucuncu oldu. Istanbul'un tek basina aylik ihracatin yaklasik dortte birini olusturmasi, ISO uye tabaninin ulke ihracatindaki agirligini bir kez daha gozler onune seriyor.\n\nTIM Baskani Mustafa Gultepe, Agustos ayinda 17 sektorun ihracatini artirdigini belirtti. Baskan Gultepe ayrica ayin en dikkat cekici verilerinden birine dikkat cekti: Agustos'ta 874 firma ilk kez ihracat yapti ve bu firmalarin toplam ihracata katkisi 83 milyon dolara yaklasti. Ihracatci taban genisligindeki bu artis, destek programlarinin ve UR-GE gibi kolektif mekanizmalarin etkisiyle iliskilendiriliyor.\n\nGultepe, parite etkisinin ihracat uzerindeki baskisinin devam ettigine de isaret etti ve \"Agustosta yaklasik 32,5 milyon dolarlik parite kaynakli kayip yasadik\" ifadelerini kullandi. Euro/dolar paritesindeki dalgalanma, ihracatinin buyuk bolumunu Avrupa pazarina euro cinsinden yapan sanayiciler icin dogrudan gelir kaybina donusuyor.\n\nBu tablo, ayni donemde aciklanan diger gostergelerle birlikte okundugunda daha anlamli hale geliyor. ISO Turkiye Imalat PMI Agustos ayinda 48,1 ile esik degerin altinda kalmaya devam etti ve yeni ihracat siparislerinde gerileme kaydedildi. TUIK verilerine gore Temmuz ayinda sanayi uretimi yillik yuzde 0,3 azaldi. Yani dolar bazli ihracat artisi surerken, uretim ve siparis tarafindaki zayiflik devam ediyor; bu ayrisma kismen fiyat ve parite etkilerinden, kismen de birim ihracat degerindeki degisimden kaynaklaniyor.\n\nISO uyeleri acisindan cikarim su: ihracat hacmi buyurken marj baskisi surdugu icin, finansman maliyetini düsüren araclarin (5 Eylul'de genisletilen reeskont BSMV istisnasi, Eximbank kredileri) ve destek mekanizmalarinin (UR-GE, pazara giris belgeleri, e-ihracat destekleri) etkin kullanimi onem kazaniyor. Ilk kez ihracat yapan firma sayisindaki artis ise, ihracata yeni baslayan uyeler icin Bakanlik destek programlarinin gercek bir kaldirac olusturdugunu gosteriyor.",
+      "published_at": "2026-09-01T12:00:00+03:00",
+      "language": "tr",
+      "summary": "TIM'e gore Agustos 2026 ihracati yuzde 8,1 artisla 23,5 milyar dolar oldu; sekiz aylik ihracat 185 milyar dolara, 12 aylik ihracat 280,3 milyar dolara ulasti. Istanbul 5,5 milyar dolarla ilk sirada, Kocaeli ve Izmir onu izliyor; 17 sektor ihracatini artirdi ve 874 firma ilk kez ihracat yapti. TIM Baskani Gultepe, ayda yaklasik 32,5 milyon dolarlik parite kaynakli kayip yasandigini belirtti - ihracatci uyeler icin kur riski yonetimi ve finansman maliyeti one cikiyor.",
+      "key_points": [
+        "Agustos 2026 ihracati 23,5 milyar dolar, yillik artis yuzde 8,1",
+        "Sekiz aylik ihracat 185 milyar dolar, son 12 ay 280,3 milyar dolar",
+        "Istanbul 5,503 milyar dolar ile birinci, Kocaeli 3,122 milyar dolar ikinci",
+        "874 firma ilk kez ihracat yapti, katkilari 83 milyon dolara yakin",
+        "Agustos'ta yaklasik 32,5 milyon dolarlik parite kaynakli kayip"
+      ],
+      "entities": {
+        "kurum": [
+          "TIM",
+          "Ticaret Bakanligi"
+        ],
+        "kisi": [
+          "Mustafa Gultepe"
+        ],
+        "sektor": [
+          "Ihracat",
+          "Imalat",
+          "Otomotiv",
+          "Kimya",
+          "Hazir Giyim"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ihracat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tim",
+        "ihracat",
+        "dis-ticaret",
+        "istanbul",
+        "parite",
+        "ekonomik-gosterge"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 72,
+        "keyword": 70,
+        "recency": 15,
+        "corroboration": 65,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "igexx",
+      "url": "https://www.igexx.com/",
+      "title": "Istanbul Kuresel E-Ihracat Zirvesi IGEXX 2026, 3-5 Eylul'de Halic Kongre Merkezi'nde yapildi",
+      "body": "T.C. Ticaret Bakanligi koordinasyonunda, Turkiye Ihracatcilar Meclisi (TIM) tarafindan Elektronik Ticaret Isletmecileri Dernegi (ETID) isbirligiyle duzenlenen Istanbul Kuresel E-Ihracat Zirvesi (IGEXX) 2026, 3-5 Eylul 2026 tarihlerinde Istanbul Halic Kongre Merkezi'nde gerceklestirildi.\n\nZirvenin cikis noktasi, Turkiye'nin 6,4 milyar dolara ulasan e-ihracat hacmini daha ileri tasima hedefi. Organizasyon, 60'tan fazla ulkeden 6 bini askin katilimciyi agirladi; 40 kuresel pazar yeri sektor temsilcileriyle bulusturuldu ve 2 bin 500'den fazla B2B is gorusmesine ev sahipligi yapildi. Katilimci profili genis tutuldu: dunya capinda pazar yerleri, teknoloji sirketleri, lojistik ve odeme sistemi saglayicilari, yatirimcilar, markalar ve ureticiler ayni cati altinda bir araya geldi.\n\nE-ihracat, geleneksel ihracattan farkli bir operasyonel altyapi gerektiriyor: pazar yeri hesap yonetimi, sinir otesi lojistik ve iade sureci, yerel odeme sistemleri entegrasyonu, urun listeleme ve dijital pazarlama, ilgili ulkelerin urun guvenligi ve etiket mevzuatina uyum. IGEXX gibi organizasyonlar, uretici firmalarin bu zincirin her halkasindaki saglayicilarla tek noktada gorusebilmesini mumkun kiliyor.\n\nTicaret Bakanligi'nin e-ihracat destek portfoyu de bu alanda genisliyor. Bakanlik, e-ihracat siteleri ve pazar yerlerine uyelik, dijital reklam ve tanitim harcamalari, yurt disi depolama ve fulfillment hizmetleri gibi kalemleri destek kapsaminda tutuyor; destek ust limitleri ve genelge ekleri Bakanligin resmi sayfalarinda yayimlaniyor. Ayrica Bakanlik, TOBB ve MUSIAD isbirligiyle yurutulen \"E-Ticareti Guclendirme Projesi\" kapsaminda Turkiye genelinde esnaf, KOBI ve girisimcilere yonelik egitim programlari duzenliyor; bu programlar dogrudan nakdi hibe yerine bilgi birikimi ve platform/altyapi indirimleri gibi dolayli destekler sunuyor.\n\nISO uyeleri acisindan e-ihracat, ozellikle tuketici urunleri, ev tekstili, mobilya, hirdavat, kozmetik ve gida gibi sektorlerde faaliyet gosteren orta olcekli ureticiler icin araci bagimliligini azaltan ve birim marji yukselten bir kanal. Klasik ihracatta bulunmasi zor olan nihai tuketici verisine erisim, urun gelistirme kararlarini da besliyor. Zirveyi kacirani uyeler icin pratik aksiyon, Ticaret Bakanligi'nin e-ihracat destekleri genelge eklerini ve destek ust limitlerini inceleyerek mevcut pazar yeri harcamalarinin destek kapsamina alinip alinamayacagini degerlendirmek.",
+      "published_at": "2026-09-03T09:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanligi koordinasyonunda TIM ve ETID isbirligiyle duzenlenen IGEXX 2026, 3-5 Eylul'de Halic Kongre Merkezi'nde yapildi; 60'tan fazla ulkeden 6 binin uzerinde katilimci, 40 kuresel pazar yeri ve 2.500'den fazla B2B gorusme gerceklesti. Turkiye'nin 6,4 milyar dolarlik e-ihracat hacmini buyutmeyi hedefleyen zirve, uretici uyelere pazar yeri, lojistik ve odeme saglayicilariyla tek noktada temas imkani sundu. Bakanligin e-ihracat destekleri pazar yeri uyeligi, dijital reklam ve yurt disi depolama giderlerini kapsiyor.",
+      "key_points": [
+        "IGEXX 2026, 3-5 Eylul 2026'da Istanbul Halic Kongre Merkezi'nde yapildi",
+        "Ticaret Bakanligi koordinasyonunda, TIM organizasyonu ve ETID isbirligi",
+        "60'tan fazla ulke, 6 binin uzerinde katilimci, 40 kuresel pazar yeri, 2.500+ B2B gorusme",
+        "Turkiye'nin e-ihracat hacmi 6,4 milyar dolar seviyesinde",
+        "Bakanligin e-ihracat destekleri pazar yeri uyeligi, dijital reklam ve yurt disi depolamayi kapsiyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanligi",
+          "TIM",
+          "ETID",
+          "TOBB",
+          "MUSIAD"
+        ],
+        "kisi": [],
+        "sektor": [
+          "E-Ticaret",
+          "Ihracat",
+          "Lojistik",
+          "Perakende",
+          "Tekstil",
+          "Mobilya"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ihracat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "e-ihracat",
+        "ihracat-destegi",
+        "ticaret-bakanligi",
+        "tim",
+        "dijital-donusum",
+        "etkinlik"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 68,
+        "keyword": 66,
+        "recency": 25,
+        "corroboration": 55,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "ticaret-gazetesi",
+      "url": "https://ticaretgazetesi.com.tr/2026/09/01/iso-turkiye-imalat-pmi-agustosta-481e-yukseldi/",
+      "title": "ISO Turkiye Imalat PMI Agustos'ta 48,1'e yukseldi: daralma surdu ama hiz kesti",
+      "body": "Istanbul Sanayi Odasi ve S&P Global isbirligiyle hazirlanan ISO Turkiye Imalat PMI, Agustos 2026'da 48,1 seviyesine yukseldi. Temmuz ayindaki 48,0 civarindaki seviyeden gelen bu artis endeksi son uc ayin zirvesine tasirken, endeks 50,0 esik degerinin altinda kalmaya devam ederek imalat sektorundeki daralmanin surdugunu gosterdi. Kritik nokta su: bozulma devam ediyor ancak hizi bir onceki aya gore ilimlilasti.\n\nAnket sonuclarina gore talep kosullarindaki zayiflik ana belirleyici olmayi surduruyor. Orta Dogu'daki savas ve buna bagli genisleyen belirsizlik ortami imalat sektorunde talebi baskilamaya devam ediyor. Zayif talep nedeniyle hem toplam yeni siparislerde hem de yeni ihracat siparislerinde gerileme yasandi. Yeni ihracat siparislerindeki dususun surmesi, TIM'in acikladigi dolar bazli ihracat artisiyla birlikte okundugunda, hacim ve deger arasindaki ayrismayi dogruluyor.\n\nIstihdam tarafindaki tablo dikkat cekici. Yeni siparisler ve uretimdeki zayif seyir, imalatcilarin Agustos ayinda istihdam kararlarinda temkinli davranmasina neden oldu. Istihdam artisi kaydedilen sektor sayisi Temmuz'da bes iken Agustos ayinda ikiye geriledi. Bu veri, KOSGEB'in Istihdami Koruma Destek Programi'nin 2026-2 donemini 1 Eylul'de acmasinin arka planini da aciklar nitelikte.\n\nEndeksin son uc ayin zirvesine cikmis olmasi analistler tarafindan temkinli bir olumlu isaret olarak degerlendiriliyor. Yeni siparislerdeki daralmanin hiz kaybetmesi, onumuzdeki donemde imalat sektorunun yeniden ivme kazanabilecegine iliskin umut veriyor; ancak gelismelerin buyuk olcude Orta Dogu'daki savasin seyrine bagli olmaya devam edecegi vurgulaniyor.\n\nPMI verisi, TUIK'in Temmuz 2026 sanayi uretim endeksi verileriyle de tutarli bir resim ciziyor: sanayi uretimi Temmuz'da yillik yuzde 0,3 azalirken imalat sanayii alt endeksi yillik yuzde 0,3 artti, aylik bazda ise yuzde 0,8 geriledi.\n\nISO ve ISOV uyeleri acisindan PMI, sirket duzeyindeki planlamanin temel referanslarindan biri. 48,1 seviyesi, kapasite kullanim ve stok kararlarinda temkinli bir cizgi izlenmesini; buna karsilik ivme kaybinin yavaslamasi, 2026 son ceyregi icin acik olan destek programlarina (KOSGEB Kuresel Rekabetcilik, Kapasite Gelistirme, Istihdami Koruma) basvuru yaparak yatirim ve istihdam kapasitesini koruma stratejisini destekliyor.",
+      "published_at": "2026-09-01T10:00:00+03:00",
+      "language": "tr",
+      "summary": "ISO Turkiye Imalat PMI Agustos 2026'da 48,1'e yukselerek son uc ayin zirvesine cikti, ancak 50,0 esiginin altinda kalarak daralmanin surdugunu gosterdi. Orta Dogu'daki savasin yarattigi belirsizlik toplam ve ihracat siparislerini baskilamaya devam ederken, istihdam artisi kaydedilen sektor sayisi besten ikiye geriledi. ISO uyeleri icin veri, kapasite ve stok kararlarinda temkinli durusu ve acik destek programlarina basvuru onemini vurguluyor.",
+      "key_points": [
+        "ISO Turkiye Imalat PMI Agustos 2026'da 48,1 - son uc ayin en yuksegi",
+        "Endeks 50,0 esik degerinin altinda, daralma devam ediyor ancak hiz kesti",
+        "Toplam yeni siparisler ve yeni ihracat siparisleri geriledi",
+        "Istihdam artisi kaydedilen sektor sayisi Temmuz'da bes iken Agustos'ta ikiye düstü",
+        "Gorunumun buyuk olcude Orta Dogu'daki savasin seyrine bagli oldugu belirtildi"
+      ],
+      "entities": {
+        "kurum": [
+          "Istanbul Sanayi Odasi",
+          "S&P Global"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "iso",
+        "pmi",
+        "imalat-sanayi",
+        "ekonomik-gosterge",
+        "istihdam",
+        "ihracat"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 80,
+        "keyword": 75,
+        "recency": 15,
+        "corroboration": 70,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "sanayi-gazetesi",
+      "url": "https://sanayigazetesi.com.tr/iso-baskani-bahcivan-yapay-zeka-sanayide-oyunun-kurallarini-yeniden-yaziyor/",
+      "title": "ISO Baskani Bahcivan: Yapay zeka sanayide oyunun kurallarini yeniden yaziyor",
+      "body": "Istanbul Sanayi Odasi Yonetim Kurulu Baskani Erdal Bahcivan, 9 Eylul 2026'da duzenlenen GITEX AI Turkiye etkinliginde \"Mevcut surum gercek yapay zeka dunyasini kaldirabilir mi?\" basligini tasiyan panelde konustu. Bahcivan, kuresel rekabetin yeniden kuruldugunu ve yapay zeka yatirimlarinin imalat sektorleri icin oyunun kurallarini yeniden yazdigini vurguladi.\n\nBahcivan'in konusmasinda one cikan ilk baslik nitelikli isgucu acigi oldu. Yapay zeka donusumune eslik eden temel zorlugun insan kaynagi oldugunu belirten Bahcivan, teknolojik gelismelerin ancak insan sermayesi donusume entegre edildigi olcude etkili ve surdurulebilir olabilecegini soyledi. Rekabetin artik yalnizca teknolojiye sahip olmakla degil, o teknolojiyi kullanabilecek \"yeni nesil mavi ve beyaz yakali\" isgucunu yetistirmekle olculdugunu ifade etti.\n\nTurkiye'nin yapay zeka stratejisine iliskin olarak Bahcivan, Turkiye Yapay Zeka Eylem Plani'nin 2026-2030 doneminde 10 bin ileri duzey yapay zeka uzmani yetistirmeyi hedefledigini hatirlatti. ISO Akademi'nin sanayinin ihtiyac duydugu insan kaynaginin gelistirilmesine destek verdigini belirtti.\n\nBahcivan ayrica KOBI'lerin yapay zeka donusum surecine dahil edilmesinin onemini vurguladi. Yapay zeka uygulamalarinin olceklendirilmesi ve veri altyapisinin guclendirilmesi, bu donusumun iki teknik on kosulu olarak one cikti. Turkiye'nin yalnizca yapay zeka teknolojilerini ithal eden degil, yapay zeka cozumleri ihrac eden bir uretim merkezi olabilecegi degerlendirmesinde bulundu.\n\nBu mesajlar, ayni haftada aciklanan makro verilerle birlikte okundugunda anlam kazaniyor. ISO Turkiye Imalat PMI'in 48,1 ile daralma bolgesinde seyretmesi ve TUIK'in Temmuz sanayi uretim verilerinde yillik yuzde 0,3'luk dusus, verimlilik artisinin buyume icin tek surdurulebilir kanal haline geldigini gosteriyor. Bu cercevede yapay zeka ve dijital donusum yatirimlari, maliyetten tasarruf araci olmanin otesinde rekabetcilik meselesi olarak konumlaniyor.\n\nISO uyeleri acisindan somut karsiliklari mevcut destek mekanizmalarinda bulmak mumkun: KOSGEB Kapasite Gelistirme ve Kuresel Rekabetcilik programlari dijital donusum amacli yazilim alimlarini ve nitelikli personel istihdamini finanse ediyor; TUBITAK 1707 Siparis Ar-Ge cagrisinda \"Dijital Liderlik\" basligi degerlendirmede oncelikli; TUBITAK 1501 programi ise yeni urun/surec gelistirme projelerine proje basina 20 milyon TL'ye kadar hibe sunuyor. Yapay zeka pilot projelerini bu araclarla eslestiren uyeler, donusum maliyetini anlamli olcude düsürebiliyor.",
+      "published_at": "2026-09-09T16:00:00+03:00",
+      "language": "tr",
+      "summary": "ISO Baskani Erdal Bahcivan, 9 Eylul 2026'daki GITEX AI Turkiye panelinde yapay zeka yatirimlarinin imalat sektorlerinde rekabetin kurallarini yeniden yazdigini soyledi. Nitelikli isgucu acigini temel darbogaz olarak isaret eden Bahcivan, Turkiye Yapay Zeka Eylem Plani'nin 2026-2030'da 10 bin ileri duzey uzman yetistirme hedefini ve KOBI'lerin donusume dahil edilmesi gerektigini vurguladi. ISO uyeleri bu donusumu KOSGEB dijital donusum ve TUBITAK 1707/1501 destekleriyle finanse edebiliyor.",
+      "key_points": [
+        "Bahcivan 9 Eylul 2026'da GITEX AI Turkiye panelinde konustu",
+        "Nitelikli isgucu acigi yapay zeka donusumunun temel darbogazi olarak isaret edildi",
+        "Turkiye Yapay Zeka Eylem Plani 2026-2030'da 10 bin ileri duzey uzman hedefliyor",
+        "KOBI'lerin donusume dahil edilmesi, uygulamalarin olceklenmesi ve veri altyapisi on kosul",
+        "Turkiye'nin yapay zeka cozumleri ihrac eden bir uretim merkezi olabilecegi degerlendirmesi"
+      ],
+      "entities": {
+        "kurum": [
+          "Istanbul Sanayi Odasi",
+          "ISO Akademi",
+          "GITEX AI Turkiye"
+        ],
+        "kisi": [
+          "Erdal Bahcivan"
+        ],
+        "sektor": [
+          "Imalat",
+          "Yapay Zeka",
+          "Bilisim",
+          "Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "NOTR",
+      "tags": [
+        "iso",
+        "yapay-zeka",
+        "dijital-donusum",
+        "nitelikli-isgucu",
+        "sanayi",
+        "rekabetcilik"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 68,
+        "keyword": 70,
+        "recency": 74,
+        "corroboration": 50,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "tobb",
+      "url": "https://tr100basvuru.tobb.org.tr/",
+      "title": "TOBB Turkiye 100 Programi basvurulari 18 Eylul 2026'ya uzatildi",
+      "body": "Turkiye Odalar ve Borsalar Birligi (TOBB) onculugunde, Turkiye Ekonomi Politikalari Arastirma Vakfi (TEPAV) ve TOBB Ekonomi ve Teknoloji Universitesi (TOBB ETU) isbirligiyle yurutulen Turkiye 100 Programi'nin basvuru suresi uzatildi. Daha once 14 Agustos 2026 olarak belirlenen son basvuru tarihi, programa gosterilen yogun ilgi nedeniyle 18 Eylul 2026 tarihine cekildi.\n\nTurkiye 100, Turkiye'nin en hizli buyuyen 100 sirketini belirleyen ve kamuoyuna duyuran bir programa denk geliyor. Bu donem icin degerlendirme kriteri, sirketlerin 2023-2025 yillari arasindaki ortalama yillik satis geliri buyume orani olarak belirlendi. Katilimci sirketler buyume oranlarina gore siralanarak Turkiye'nin en hizli buyuyen sirketleri tespit ediliyor. Basvurular ucretsiz olarak aliniyor.\n\nProgramin sirketler acisindan degeri cok boyutlu. Birincisi, listeye giren sirketler ulusal duzeyde gorunurluk kazaniyor; bu, hem musteri hem de yetenek cekimi acisindan somut bir itibar unsuru olusturuyor. Ikincisi, siralamada yer almak yurt ici ve yurt disi yatirimcilar, finans kuruluslari ve potansiyel is ortaklari nezdinde dogrulanmis bir buyume performansi belgesi islevi goruyor. Ucuncusu, programa katilan sirketler TOBB ve TEPAV'in duzenledigi ag kurma etkinliklerine ve is gelistirme programlarina erisim sagliyor.\n\nBasvuru sureci, sirketin son uc yila ait finansal verilerini (satis geliri) beyan etmesi ve dogrulama icin gerekli belgeleri sunmasi uzerine kurulu. Sirket buyuklugu acisindan alt esik sinirlayici olmadigindan, hizli buyuyen KOBI'ler de buyuk sirketlerle ayni havuzda degerlendiriliyor; siralama mutlak ciro degil buyume orani uzerinden yapildigi icin kucuk ve orta olcekli isletmelerin listeye girme sansi yuksek.\n\nISO ve ISOV uyeleri acisindan pratik aksiyon net: 2023-2025 doneminde guclu ciro buyumesi kaydeden uye sirketlerin, 18 Eylul 2026 tarihine kadar tr100basvuru.tobb.org.tr adresi uzerinden basvurusunu tamamlamasi gerekiyor. Basvuru ucretsiz ve mali musavir onayli finansal verilerin hazir olmasi halinde sureci birkac saatte tamamlamak mumkun. Ayrica Turkiye 100 listesinde yer almak, KOSGEB'in hizli buyume kriteri arayan Kapasite Gelistirme ve Kuresel Rekabetcilik programlari basta olmak uzere bazi destek basvurularinda da guclendirici bir referans olusturuyor.",
+      "published_at": "2026-08-27T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TOBB, TEPAV ve TOBB ETU isbirligiyle yurutulen Turkiye 100 Programi'nin basvuru suresi yogun ilgi nedeniyle 14 Agustos'tan 18 Eylul 2026'ya uzatildi. Program, sirketlerin 2023-2025 ortalama yillik satis geliri buyume oranina gore Turkiye'nin en hizli buyuyen 100 sirketini belirliyor ve basvurular ucretsiz. Hizli buyuyen ISO uyeleri icin hem itibar ve gorunurluk hem de KOSGEB destek basvurularinda guclendirici referans firsati.",
+      "key_points": [
+        "Son basvuru tarihi 14 Agustos'tan 18 Eylul 2026'ya uzatildi",
+        "TOBB onculugunde TEPAV ve TOBB ETU isbirligiyle yurutuluyor",
+        "Siralama kriteri: 2023-2025 ortalama yillik satis geliri buyume orani",
+        "Basvurular ucretsiz, tr100basvuru.tobb.org.tr adresi uzerinden",
+        "Buyume orani esasli siralama sayesinde KOBI'ler de listeye girebiliyor"
+      ],
+      "entities": {
+        "kurum": [
+          "TOBB",
+          "TEPAV",
+          "TOBB ETU"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Hizmet",
+          "Teknoloji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tobb",
+        "turkiye-100",
+        "kobi",
+        "buyume",
+        "basvuru",
+        "duyuru"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 62,
+        "keyword": 58,
+        "recency": 8,
+        "corroboration": 50,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "istka",
+      "url": "https://www.istka.org.tr/duyuru/2026-yili-yaratici-ekonominin-guclendirilmesi-mali-destek-programi-1zsq",
+      "title": "ISTKA 2026 Yaratici Ekonominin Guclendirilmesi Mali Destek Programi ilan edildi: 300 milyon TL butce, proje basina 20 milyon TL'ye kadar destek",
+      "body": "Istanbul Kalkinma Ajansi (ISTKA), 8 Eylul 2026 tarihinde \"2026 Yili Yaratici Ekonominin Guclendirilmesi Mali Destek Programi\"ni (referans: ISTKA/2026/YEG) ilan etti. Program, Istanbul'un yaratici endustrilerini uluslararasi alanda rekabetci bir yapiya kavusturmayi ve sehrin yaratici kimligini guclendirmeyi hedefliyor.\n\nProgramin toplam butcesi 300.000.000 TL olarak belirlendi. Proje basina saglanacak destek tutari asgari 5.000.000 TL, azami 20.000.000 TL araliginda. Destek orani uygun proje maliyetlerinin yuzde 75'i seviyesinde; yani 20 milyon TL destek alan bir proje icin basvuru sahibinin yaklasik 6,7 milyon TL esfinansman koymasi gerekiyor. Bu tutarlar, kalkinma ajansi mali destek programlari icinde oldukca yuksek bir seviyeye karsilik geliyor.\n\nBasvuru takvimi su sekilde belirlendi: proje basvurulari yalnizca cevrim ici olarak Kalkinma Ajanslari Yonetim Sistemi (KAYS) uzerinden, 4 Aralik 2026 saat 23:59'a kadar kabul edilecek. Taahhutname islemlerinin ise 11 Aralik 2026 saat 17:00'a kadar tamamlanmasi gerekiyor. Bu iki tarihin ayri ayri takip edilmesi kritik; KAYS basvurusunu zamaninda yapip taahhutname adimini kaciran basvurular degerlendirme disi kaliyor.\n\nBasvuru sahipleri icin soru-cevap mekanizmasi da tanimlanmis durumda: kuruluslar yes@istka.org.tr adresine son basvuru tarihinden 20 gun oncesine kadar soru gonderebiliyor; yanitlar 10 gun icinde programin Sikca Sorulan Sorular bolumunde yayimlaniyor. Ayrica 2 Ekim 2026 tarihinde Istanbul'da bir bilgilendirme toplantisi duzenlenecek.\n\nYaratici ekonomi tanimi, sanildigindan daha genis bir alani kapsiyor: tasarim (endustriyel tasarim, moda tasarimi, ic mimari), dijital oyun ve animasyon, yazilim ve interaktif medya, reklam ve iletisim, film-dizi-muzik uretimi, yayincilik, mimarlik, el sanatlari ve kulturel miras temelli urun gelistirme bu cati altinda degerlendiriliyor. Bu nedenle program, yalnizca \"yaratici sektor\" sirketlerini degil, tasarim yogunlugunu artirmak isteyen imalat sanayii firmalarini da ilgilendirebiliyor: mobilya, tekstil-hazir giyim, seramik, mucevher, ambalaj ve ev esyasi ureticileri tasarim merkezleri, koleksiyon gelistirme ve marka insasi projeleriyle programa yonelebiliyor.\n\nISO ve ISOV uyeleri acisindan Aralik basi son tarihine kadar uc aydan fazla sure bulunmasi, proje gelistirme icin yeterli bir pencere sunuyor. Ancak KAYS uzerindeki basvuru formatinin detayli olmasi, esfinansman planinin ve proje mantiksal cercevesinin erkenden hazirlanmasini gerektiriyor. Basvuru rehberi ve destekleyici sablonlar ISTKA'nin duyuru sayfasindan indirilebiliyor.",
+      "published_at": "2026-09-08T10:00:00+03:00",
+      "language": "tr",
+      "summary": "ISTKA, 8 Eylul 2026'da 2026 Yili Yaratici Ekonominin Guclendirilmesi Mali Destek Programi'ni (ISTKA/2026/YEG) ilan etti: toplam butce 300 milyon TL, proje basina 5-20 milyon TL destek ve yuzde 75 destek orani. Basvurular KAYS uzerinden 4 Aralik 2026 saat 23:59'a, taahhutname islemleri 11 Aralik saat 17:00'a kadar. Tasarim yogunlugunu artirmak isteyen mobilya, tekstil, seramik, mucevher ve ambalaj ureticileri de programa yonelebiliyor; bilgilendirme toplantisi 2 Ekim 2026'da.",
+      "key_points": [
+        "Program 8 Eylul 2026'da ilan edildi, referans ISTKA/2026/YEG",
+        "Toplam butce 300 milyon TL, proje basina 5-20 milyon TL destek",
+        "Destek orani uygun proje maliyetlerinin yuzde 75'i",
+        "KAYS son basvuru 4 Aralik 2026 23:59, taahhutname 11 Aralik 2026 17:00",
+        "Bilgilendirme toplantisi 2 Ekim 2026'da Istanbul'da; sorular yes@istka.org.tr adresine"
+      ],
+      "entities": {
+        "kurum": [
+          "ISTKA",
+          "Istanbul Kalkinma Ajansi",
+          "Sanayi ve Teknoloji Bakanligi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Tasarim",
+          "Yaratici Endustriler",
+          "Mobilya",
+          "Tekstil",
+          "Dijital Oyun",
+          "Yazilim"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "istka",
+        "kalkinma-ajansi",
+        "mali-destek",
+        "hibe",
+        "tasarim",
+        "istanbul",
+        "yaratici-ekonomi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 80,
+        "keyword": 78,
+        "recency": 66,
+        "corroboration": 50,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "dunya-gazetesi",
+      "url": "https://www.dunya.com/ekonomi/sanayide-uretim-frene-basti-temmuz-verileri-aciklandi-haberi-839459",
+      "title": "TUIK: Temmuz 2026'da sanayi uretimi yillik yuzde 0,3, aylik yuzde 1 azaldi",
+      "body": "Turkiye Istatistik Kurumu (TUIK), 10 Eylul 2026'da Temmuz 2026 donemine ait Sanayi Uretim Endeksi verilerini acikladi. Takvim etkisinden arindirilmis sanayi uretim endeksi Temmuz ayinda bir onceki yilin ayni ayina gore yuzde 0,3 azaldi; mevsim ve takvim etkilerinden arindirilmis endeks ise bir onceki aya gore yuzde 1 geriledi. Her iki yonde de eksi isaretli bir tablo soz konusu.\n\nAlt sektorler bazinda ayrisma dikkat cekici. Madencilik ve tas ocakciligi sektoru endeksi yillik bazda yuzde 3,8 azaldi. Elektrik, gaz, buhar ve iklimlendirme uretimi ve dagitimi sektoru endeksinde yillik yuzde 5,6'lik belirgin bir dusus kaydedildi. Buna karsilik imalat sanayii sektoru endeksi yillik bazda yuzde 0,3 artti; yani genel endeksteki dususu suruukleyen madencilik ve enerji kalemleri oldu, imalat sinirli da olsa pozitif bolgede kalmayi basardi.\n\nAylik bazda ise imalat da negatife dondu: Temmuz ayinda imalat sanayii endeksi bir onceki aya gore yuzde 0,8 azaldi. Madencilik ve tas ocakciligi aylik yuzde 2,2, elektrik-gaz-buhar sektoru yine yuzde 2,2 geriledi.\n\nBu veriler, ayni hafta icinde degerlendirilen diger gostergelerle tutarli bir resim olusturuyor. ISO Turkiye Imalat PMI Agustos ayinda 48,1 ile esik degerin altinda kaldi; anket sonuclarina gore hem toplam yeni siparisler hem de yeni ihracat siparisleri geriledi ve istihdam artisi kaydedilen sektor sayisi besten ikiye düstü. Uretim tarafindaki bu zayiflik, TIM'in acikladigi dolar bazli yuzde 8,1'lik ihracat artisiyla birlikte okundugunda, artisin buyuk olcude fiyat ve kompozisyon etkilerinden kaynaklandigini dusundurüyor.\n\nISO ve ISOV uyeleri acisindan Temmuz verisi, 2026 son ceyregi planlamasi icin temkinli bir zemin olusturuyor. Kapasite kullanim oranlarinin baski altinda olmasi, stok politikalarinin siki tutulmasini ve nakit dongusunun yakin takibini gerektiriyor. Ayni donemde acilan destek mekanizmalari bu tablonun dogrudan politika yaniti niteliginde: KOSGEB Istihdami Koruma Destek Programi 2026-2 donemi 1 Eylul'de acildi ve imalat sanayiindeki KOBI'lere 50 milyon TL'ye kadar, buyuk isletmelere 150 milyon TL'ye kadar 12 puan faiz destekli kredi sunuyor. Ayrica 3 Eylul'de yururluge giren Oncelikli Finansman Belgesi, 100 milyon TL ve uzeri imalat yatirimlarinin kamu destekli finansmana erisimini kolaylastiriyor. Uretimdeki duraganligin surdugu bir donemde bu araclarin zamaninda kullanilmasi, kapasite ve istihdamin korunmasi acisindan belirleyici olabilir.",
+      "published_at": "2026-09-10T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TUIK'in 10 Eylul 2026'da acikladigi verilere gore sanayi uretimi Temmuz 2026'da yillik yuzde 0,3, aylik yuzde 1 azaldi. Imalat sanayii yillik yuzde 0,3 artarken aylik yuzde 0,8 geriledi; madencilik yillik yuzde 3,8, elektrik-gaz-buhar yuzde 5,6 düstü. Veri, ISO PMI'in 48,1 ile daralma bolgesinde kalmasiyla tutarli; uyeler icin kapasite, stok ve nakit yonetiminde temkinli durus ile acik destek programlarindan yararlanma onem kazaniyor.",
+      "key_points": [
+        "Sanayi uretimi Temmuz 2026'da yillik yuzde 0,3, aylik yuzde 1 azaldi",
+        "Imalat sanayii yillik yuzde 0,3 artti, aylik yuzde 0,8 geriledi",
+        "Madencilik ve tas ocakciligi yillik yuzde 3,8 azaldi",
+        "Elektrik, gaz, buhar ve iklimlendirme yillik yuzde 5,6 geriledi",
+        "Veri, ISO Turkiye Imalat PMI'in 48,1 seviyesiyle tutarli bir zayiflama tablosu ciziyor"
+      ],
+      "entities": {
+        "kurum": [
+          "TUIK",
+          "Istanbul Sanayi Odasi",
+          "KOSGEB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Madencilik",
+          "Enerji",
+          "Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "tuik",
+        "sanayi-uretimi",
+        "imalat-sanayi",
+        "ekonomik-gosterge",
+        "kapasite-kullanimi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 78,
+        "keyword": 72,
+        "recency": 83,
+        "corroboration": 65,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "turkpatent",
+      "url": "https://www.turkpatent.gov.tr/duyurular/patent-vekilligi-ve-marka-vekilligi-sinavlari-17-ekim-2026-tarihinde-ankara-ve-istanbulda-gerceklestirilecektir",
+      "title": "TURKPATENT: Patent ve Marka Vekilligi Sinavlari 17 Ekim 2026'da Ankara ve Istanbul'da yapilacak",
+      "body": "Turk Patent ve Marka Kurumu (TURKPATENT), 2026 yili Patent Vekilligi ve Marka Vekilligi Sinavlari'nin 17 Ekim 2026 tarihinde Ankara ve Istanbul'da gerceklestirilecegini duyurdu. Sinav basvurulari 24 Agustos - 7 Eylul 2026 tarihleri arasinda, saat 18:00'a kadar Kurumun resmi internet sitesi uzerinden elektronik ortamda alindi. Sinav ucretleri basvuru sirasinda kredi karti ile veya Ziraat Bankasi nezdindeki kurumsal tahsilat hesabi uzerinden odendi. Kurum duyurusunda, basvuru adimlarinin ve ucret odemelerinin sistem kapanmadan once tamamlanmasi gerektigi ve bu tarihlerin kesin oldugu ozellikle vurgulanmisti.\n\nPatent ve marka vekilligi, sinai mulkiyet haklarinin tescili ve takibi surecinde sirketleri TURKPATENT nezdinde temsil etme yetkisi veren bir meslek. Vekillik sinavini gecen ve sicile kayitli vekiller, marka ve patent basvurulari, itiraz sureclerinin yonetimi, yenilemeler, devir ve lisans islemleri ile hukuki uyusmazliklarda sirketler adina islem yapabiliyor.\n\nSanayi sirketleri acisindan konunun iki boyutu var. Birincisi, buyuk olcekli ve Ar-Ge yogun sirketlerin kendi bunyelerinde vekillik yetkisine sahip personel bulundurmasi, sinai mulkiyet portfoyu yonetiminde hem maliyet hem de reaksiyon suresi avantaji sagliyor. Ikincisi, disaridan hizmet alan sirketler acisindan calisilan vekilin sicile kayitli olup olmadiginin dogrulanmasi onem tasiyor.\n\nSinai mulkiyet tarafinda 2026 yili maliyet cercevesi de sirketler icin planlama unsuru. TURKPATENT'in 2026 yilinda uygulanacak ucret tarifesine iliskin teblig 31 Aralik 2025 tarihli Resmi Gazete'nin 5. mukerrer sayisinda yayimlandi. Tarifeye gore tek sinifli marka basvuru ucreti 2.820,00 TL, ikinci sinif ek ucreti 2.820,00 TL, ucuncu ve sonraki her bir sinif icin ek ucret 3.150,00 TL olarak belirlendi. Marka tescil belge ucreti ise 7.010 TL seviyesinde. Toplam odenecek tutar, TURKPATENT ucretine KDV ve varsa harc eklenerek hesaplaniyor.\n\nISO uyeleri acisindan pratik cikarim, marka ve patent portfoyunun yillik butcelenmesinde bu tarifelerin dikkate alinmasi. Ozellikle ihracat pazarlarina acilan sirketlerin yurt ici tescilin yani sira Madrid Protokolu uzerinden uluslararasi marka tescilini de planlamasi oneriliyor; Ticaret Bakanligi'nin pazara giris ve marka tescil destekleri bu harcamalarin bir kismini karsilayabiliyor. Ayrica sinai mulkiyet portfoyu, KOSGEB Isletme Degerlendirme Raporu'nun \"Ar-Ge, Yenilik, Markalasma\" bolumunde de olculuyor ve destek basvurularinda degerlendirmeye giriyor.",
+      "published_at": "2026-08-24T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TURKPATENT, 2026 Patent ve Marka Vekilligi Sinavlari'nin 17 Ekim 2026'da Ankara ve Istanbul'da yapilacagini duyurdu; basvurular 24 Agustos - 7 Eylul 2026 arasinda elektronik ortamda alindi. 2026 ucret tarifesine gore tek sinifli marka basvurusu 2.820 TL, ucuncu ve sonraki her sinif 3.150 TL, marka tescil belge ucreti 7.010 TL (KDV ve harc haric). ISO uyeleri icin sinai mulkiyet butcelemesi ve calisilan vekilin sicil kaydinin dogrulanmasi onem tasiyor.",
+      "key_points": [
+        "Patent ve Marka Vekilligi Sinavlari 17 Ekim 2026'da Ankara ve Istanbul'da",
+        "Basvurular 24 Agustos - 7 Eylul 2026 arasinda elektronik ortamda alindi",
+        "2026 ucret tarifesi 31 Aralik 2025 tarihli Resmi Gazete 5. mukerrer sayisinda yayimlandi",
+        "Tek sinifli marka basvuru ucreti 2.820 TL, ucuncu ve sonraki her sinif 3.150 TL",
+        "Marka tescil belge ucreti 7.010 TL; toplam tutara KDV ve varsa harc ekleniyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Turk Patent ve Marka Kurumu",
+          "TURKPATENT",
+          "Resmi Gazete"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Sinai Mulkiyet",
+          "Imalat",
+          "Ar-Ge"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "NOTR",
+      "tags": [
+        "turkpatent",
+        "marka-tescili",
+        "patent",
+        "sinai-mulkiyet",
+        "ucret-tarifesi",
+        "duyuru"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 52,
+        "keyword": 55,
+        "recency": 6,
+        "corroboration": 30,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "tse",
+      "url": "https://www.tse.org.tr/duyuru/tse-kdu-sinavi-eylul-25-2026/",
+      "title": "TSE Kimyasal Degerlendirme Uzmani sinavi 25 Eylul 2026'da, basvurular 11 Eylul'de tamamlandi",
+      "body": "Turk Standardlari Enstitusu (TSE), Kimyasal Degerlendirme Uzmani (KDU) Belgelendirme Sinavi'nin 25 Eylul 2026 tarihinde yapilacagini duyurdu. Sinav basvurulari 14 Agustos 2026'da baslamis ve 11 Eylul 2026 tarihinde sona ermisti.\n\nKimyasal Degerlendirme Uzmani belgelendirmesi, kimyasallarin kayit, degerlendirme, izin ve kisitlanmasi mevzuati (KKDIK) kapsaminda onemli bir yeterlilik. Turkiye'de kimyasal madde ureten, ithal eden veya kullanan sanayi kuruluslarinin KKDIK yukumluluklerini yerine getirebilmesi icin kimyasal degerlendirme uzmani ile calismasi ya da bunyesinde bu yeterlilige sahip personel bulundurmasi gerekiyor. Kimyasal Guvenlik Raporu hazirlanmasi, maruz kalma senaryolarinin olusturulmasi ve guvenlik bilgi formlarinin (GBF) mevzuata uygun sekilde duzenlenmesi bu uzmanlik alaninin kapsaminda.\n\nTSE'nin Eylul 2026 takviminde belgelendirme ve egitim faaliyetleri yogun. Bilgi ve Iletisim Guvenligi Rehberi Uyum Denetcisi Egitimleri 8-25 Eylul 2026 tarihleri arasinda uzaktan cevrim ici olarak duzenleniyor. Ayrica Yetkili Teknik Sorumlu (YTS) 114. Egitimi ve Sinavi ile Sizma Testi Uzmani Belgelendirme Sinavlari da Kurumun duyuru takviminde yer aliyor.\n\nBelgelendirme sureci acisindan TSE, 2026 yili itibariyla basvurularin tamamen dijital ortamda, e-Devlet entegrasyonuyla TSE Portali uzerinden alindigini duyurmustu. Belgelendirme sureci hazirlik, basvuru, denetim, deney ve karar olmak uzere bes ana asamadan olusuyor.\n\nISO ve ISOV uyeleri acisindan bu takvimin pratik anlami su: kimya, boya, plastik, tekstil terbiyesi, metal yuzey isleme, temizlik urunleri ve yapistirici gibi kimyasal yogun sektorlerde faaliyet gosteren isletmelerin KKDIK uyum sureclerini yurutebilmesi icin nitelikli personel ihtiyaci bulunuyor. KDU sinav takviminin takip edilmesi, bu yeterliligi ic kaynakla saglamak isteyen sirketler icin onem tasiyor. Bu donem basvurulari kapanmis olsa da, TSE'nin duyurular sayfasi uzerinden bir sonraki donem sinav takvimi izlenebilir.\n\nAyrica bilgi guvenligi tarafinda, kritik altyapi ve kamu tedarikcisi konumundaki sanayi sirketleri icin Bilgi ve Iletisim Guvenligi Rehberi uyum denetcisi yeterliliginin kurum icinde bulundurulmasi, denetim maliyetlerini düsüren bir unsur olarak degerlendiriliyor. Personel egitimi ve belgelendirme giderleri, KOSGEB Kapasite Gelistirme ve Kuresel Rekabetcilik programlarinda desteklenen hizmet alimi kalemleri arasinda yer aliyor; bu, belgelendirme yatirimlarinin destek kapsaminda finanse edilebilecegi anlamina geliyor.",
+      "published_at": "2026-08-14T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TSE Kimyasal Degerlendirme Uzmani Belgelendirme Sinavi 25 Eylul 2026'da yapilacak; basvurular 11 Eylul 2026'da kapandi. KKDIK mevzuati kapsaminda kimyasal madde ureten, ithal eden veya kullanan sanayi kuruluslari icin bu yeterlilik zorunlu bir uyum unsuru. TSE ayrica 8-25 Eylul'de Bilgi ve Iletisim Guvenligi Rehberi Uyum Denetcisi egitimleri duzenliyor; belgelendirme ve egitim giderleri KOSGEB programlarinda hizmet alimi olarak desteklenebiliyor.",
+      "key_points": [
+        "TSE Kimyasal Degerlendirme Uzmani sinavi 25 Eylul 2026'da yapilacak",
+        "Basvurular 14 Agustos - 11 Eylul 2026 arasinda alindi",
+        "KDU yeterliligi KKDIK mevzuati uyumu icin kritik (Kimyasal Guvenlik Raporu, GBF)",
+        "Bilgi ve Iletisim Guvenligi Rehberi Uyum Denetcisi egitimleri 8-25 Eylul 2026 arasinda cevrim ici",
+        "TSE basvurulari 2026 itibariyla e-Devlet entegreli TSE Portali uzerinden aliniyor"
+      ],
+      "entities": {
+        "kurum": [
+          "TSE",
+          "Turk Standardlari Enstitusu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Kimya",
+          "Boya",
+          "Plastik",
+          "Tekstil",
+          "Metal"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "NOTR",
+      "tags": [
+        "tse",
+        "belgelendirme",
+        "kkdik",
+        "kimya",
+        "standart",
+        "egitim"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 50,
+        "keyword": 50,
+        "recency": 5,
+        "corroboration": 25,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "ufuk-avrupa",
+      "url": "https://ufukavrupa.org.tr/tr/haberler/2026-yilinda-avrupanin-en-buyuk-derin-teknoloji-desteklerini-sunacak-eicde-sizleri-neler",
+      "title": "Ufuk Avrupa EIC 2026 Calisma Programi: 1,42 milyar euro butce, EIC Accelerator'de yil boyunca alti degerlendirme donemi",
+      "body": "Avrupa Komisyonu ve Avrupa Yenilik Konseyi ile KOBI Yurutme Ajansi (EISMEA) tarafindan yonetilen Avrupa Yenilik Konseyi (EIC), 1,42 milyar euro butceli EIC 2026 Calisma Programi ile oncu arastirmalardan olceklenebilir pazar cozumlerine kadar yenilik zincirinin tum asamalarini desteklemeye devam ediyor. Turkiye, Ufuk Avrupa (Horizon Europe) Programi'na tam katilim sagliyor ve programin ulusal koordinasyonu TUBITAK tarafindan yurutuluyor; TUBITAK ayni zamanda Turkiye'deki ulusal irtibat noktasi (NCP) gorevini ustleniyor.\n\nSanayi sirketleri acisindan EIC'in en dogrudan ilgili bileseni EIC Accelerator. Program, yuksek potansiyelli KOBI'lerin, start-up'larin ve kucuk olcekli sirketlerin cigir acici yeniliklerini ticarilestirmelerini ve olceklendirmelerini destekliyor. Destek yapisi iki bilesenli: hibe bileseni ve ozsermaye (equity) bileseni. Hibe tarafi Ar-Ge ve dogrulama faaliyetlerini, ozsermaye tarafi ise EIC Fonu araciligiyla olceklenme ve seri uretime gecis asamasini finanse ediyor.\n\nBasvuru takvimi acisindan onemli bir yapisal ozellik var: kisa basvuru (short proposal) surekli acik tutuluyor; yani sirketler yil boyunca istedikleri zaman kisa basvuru yapabiliyor. Tam basvurular (full proposal) icin ise 2026 yili boyunca alti degerlendirme (cut-off) donemi uygulaniyor. Bu yapi, sirketlere kendi hazirlik takvimlerine gore basvuru zamanlamasi secme esnekligi sunuyor.\n\nTurkiye'de Ufuk Avrupa destek yapisi, sadece bilgilendirmeyle sinirli degil. \"Turkiye in Horizon Europe\" Teknik Destek Projesi kapsaminda kume bazli bilgilendirme etkinlikleri, WIDERA Hop-on cagri bilgilendirmeleri ve EIC Accelerator kisa basvuru gelistirme destegi gibi cagrilar duzenleniyor. Ayrica TUBITAK, Ufuk Avrupa cagrilarina basvuran ve belirli esikleri asan Turk kuruluslarina yonelik ulusal tesvik ve odul mekanizmalari isletiyor; koordinatorluk destegi ve basarili proje odulleri bunlar arasinda.\n\nISO ve ISOV uyeleri acisindan EIC Accelerator, TUBITAK'in ulusal programlarina kiyasla daha buyuk tutarli ve kurumsal olarak daha talepkar bir kanal. Basvuru icin guclu bir teknoloji hazirlik seviyesi (TRL 5-6 ve uzeri), net bir Avrupa pazari stratejisi ve olceklenebilir bir is modeli gerekiyor. Derin teknoloji alaninda calisan, ihracat potansiyeli yuksek ve Avrupa pazarina yonelen uyeler icin kanal degerlendirilmeye deger. Ilk adim olarak surekli acik olan kisa basvuru formunun hazirlanmasi ve TUBITAK ulusal irtibat noktasi ile on gorusme yapilmasi oneriliyor; kume bazli cagri takvimi ve Turkiye'deki etkinlikler ufukavrupa.org.tr uzerinden izlenebiliyor.",
+      "published_at": "2025-11-05T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Avrupa Yenilik Konseyi'nin (EIC) 1,42 milyar euro butceli 2026 Calisma Programi kapsaminda EIC Accelerator, KOBI ve start-up'larin cigir acici yeniliklerini hibe + ozsermaye bilesenleriyle destekliyor; kisa basvuru surekli acik, tam basvuru icin 2026'da alti degerlendirme donemi var. Turkiye Ufuk Avrupa'ya tam katilim sagliyor ve ulusal koordinasyon ile irtibat noktasi gorevini TUBITAK yurutuyor. Derin teknoloji ve Avrupa pazarina yonelen ISO uyeleri icin ulusal programlardan daha buyuk tutarli bir kanal.",
+      "key_points": [
+        "EIC 2026 Calisma Programi butcesi 1,42 milyar euro",
+        "EIC Accelerator hibe + ozsermaye (EIC Fonu) yapisiyla calisiyor",
+        "Kisa basvuru surekli acik, tam basvurular icin 2026'da alti cut-off donemi",
+        "Turkiye Ufuk Avrupa'ya tam katilimci; ulusal koordinasyon ve irtibat noktasi TUBITAK",
+        "Basvuru icin yuksek TRL, Avrupa pazari stratejisi ve olceklenebilir is modeli gerekiyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "EIC",
+          "EISMEA",
+          "TUBITAK",
+          "Ufuk Avrupa Turkiye"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Derin Teknoloji",
+          "Ar-Ge",
+          "Imalat",
+          "Biyoteknoloji",
+          "Yazilim"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ufuk-avrupa",
+        "horizon-europe",
+        "eic",
+        "ar-ge",
+        "ab-destegi",
+        "tubitak",
+        "kobi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 62,
+        "keyword": 60,
+        "recency": 2,
+        "corroboration": 35,
+        "reach": 55
+      }
+    }
+  ]
+}

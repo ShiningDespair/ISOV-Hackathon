@@ -33,6 +33,7 @@ const SOURCE_TYPE_MAP = {
   'kurum': 'kurum', 'resmi-kurum': 'kurum', 'kamu': 'kurum', 'kamu-kurumu': 'kurum',
   'bakanlik': 'kurum', 'duzenleyici': 'kurum', 'duzenleyici-kurum': 'kurum',
   'oda': 'kurum', 'birlik': 'kurum', 'merkez-bankasi': 'kurum', 'kalkinma-ajansi': 'kurum',
+  'sektor-orgutu': 'kurum', 'meslek-orgutu': 'kurum', 'etkinlik': 'kurum', 'fuar': 'kurum',
   // acik veri / istatistik / fiyat servisleri
   'acik_veri': 'acik_veri', 'acik-veri': 'acik_veri', 'istatistik': 'acik_veri',
   'istatistik-kurumu': 'acik_veri', 'veri': 'acik_veri', 'sektorel-veri': 'acik_veri',
@@ -43,13 +44,16 @@ const SOURCE_TYPE_MAP = {
   'medya': 'basin', 'sektorel-medya': 'basin', 'sektorel-basin': 'basin',
   'uluslararasi-medya': 'basin', 'uluslararasi-ajans': 'basin', 'ajans': 'basin',
   'haber-ajansi': 'basin', 'sektorel-analiz': 'basin', 'analiz': 'basin',
-  'ekonomi-basini': 'basin', 'dergi': 'basin',
+  'ekonomi-basini': 'basin', 'dergi': 'basin', 'arastirma': 'basin',
+  'arastirma-kurulusu': 'basin', 'dusunce-kurulusu': 'basin',
   // uluslararasi kurum
   'uluslararasi': 'uluslararasi', 'uluslararasi-kurum': 'uluslararasi',
   'uluslararasi-kurulus': 'uluslararasi', 'uluslararasi-orgut': 'uluslararasi',
   'standart-kurulusu': 'uluslararasi', 'standart': 'uluslararasi',
   'ab-kurumu': 'uluslararasi', 'ab': 'uluslararasi', 'cok-tarafli': 'uluslararasi',
   'yabanci-kamu': 'uluslararasi', 'yabanci-kurum': 'uluslararasi',
+  // Bilincli "siniflandirilamadi" degeri; uyari uretmemeli.
+  'diger': 'diger',
 };
 
 const REGION_MAP = {
@@ -90,7 +94,11 @@ for (const file of readdirSync(SEED_DIR).filter((f) => f.endsWith('.json')).sort
   stats.files++;
 
   for (const s of doc.sources ?? []) {
-    const raw = slugify(s.source_type ?? 'diger');
+    // Ham degeri koru. Normalizasyon idempotent olmali ama YIKICI olmamali:
+    // esleme tablosu sonradan zenginlestiginde betik yeniden calistirilip
+    // 'diger'e dusmus kayitlar dogru tipe tasinabilsin.
+    s.source_type_raw ??= s.source_type ?? 'diger';
+    const raw = slugify(s.source_type_raw);
     const mapped = SOURCE_TYPE_MAP[raw];
     if (mapped) {
       if (mapped !== s.source_type) { s.source_type = mapped; stats.sourceTypes++; }

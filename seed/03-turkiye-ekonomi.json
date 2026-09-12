@@ -1,0 +1,1331 @@
+{
+  "collector": "turkiye-ekonomi",
+  "collected_at": "2026-09-12T12:00:00+03:00",
+  "sources": [
+    {
+      "slug": "aa-ekonomi",
+      "name": "Anadolu Ajansi Ekonomi",
+      "homepage_url": "https://www.aa.com.tr/tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "euronews-tr",
+      "name": "Euronews Turkce",
+      "homepage_url": "https://tr.euronews.com",
+      "source_type": "basin",
+      "authority_weight": 78,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ekonomim",
+      "name": "Ekonomim (Dunya Gazetesi Dijital)",
+      "homepage_url": "https://www.ekonomim.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ing-think",
+      "name": "ING Think",
+      "homepage_url": "https://think.ing.com",
+      "source_type": "basin",
+      "authority_weight": 82,
+      "country_code": "NL",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "dunya-gazetesi",
+      "name": "Dunya Gazetesi",
+      "homepage_url": "https://www.dunya.com",
+      "source_type": "basin",
+      "authority_weight": 82,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "cumhuriyet-ekonomi",
+      "name": "Cumhuriyet Ekonomi",
+      "homepage_url": "https://www.cumhuriyet.com.tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "turkiye-ajansi",
+      "name": "Turkiye Ajansi",
+      "homepage_url": "https://www.turkiyeajansi.com",
+      "source_type": "basin",
+      "authority_weight": 58,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "finansopia",
+      "name": "Finansopia",
+      "homepage_url": "https://www.finansopia.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "tyb-haber",
+      "name": "TYB Haber Portali",
+      "homepage_url": "https://www.tyb.org.tr",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ticaret-gazetesi",
+      "name": "Ticaret Gazetesi",
+      "homepage_url": "https://ticaretgazetesi.com.tr",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "borsa-gundem",
+      "name": "Borsa Gundem",
+      "homepage_url": "https://www.borsagundem.com.tr",
+      "source_type": "basin",
+      "authority_weight": 62,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "isci-haber",
+      "name": "Isci Haber",
+      "homepage_url": "https://www.iscihaber.net",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "karar-gazetesi",
+      "name": "Karar Gazetesi",
+      "homepage_url": "https://www.karar.com",
+      "source_type": "basin",
+      "authority_weight": 66,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ekonomist",
+      "name": "Ekonomist Dergisi",
+      "homepage_url": "https://www.ekonomist.com.tr",
+      "source_type": "basin",
+      "authority_weight": 72,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "alomaliye",
+      "name": "Alomaliye",
+      "homepage_url": "https://www.alomaliye.com",
+      "source_type": "mevzuat",
+      "authority_weight": 72,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "mevzuat"
+    },
+    {
+      "slug": "internet-haber",
+      "name": "Internet Haber",
+      "homepage_url": "https://www.internethaber.com",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "hurses",
+      "name": "Hurses Gazetesi",
+      "homepage_url": "https://www.hurses.com.tr",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ekonomim-net",
+      "name": "Ekonomim Haber",
+      "homepage_url": "https://www.ekonomim.net",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "sanayi-gazetesi",
+      "name": "Sanayi Gazetesi",
+      "homepage_url": "https://sanayigazetesi.com.tr",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "musavirler-kulubu",
+      "name": "Musavirler Kulubu",
+      "homepage_url": "https://musavirlerkulubu.com.tr",
+      "source_type": "mevzuat",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "mevzuat"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "aa-ekonomi",
+      "url": "https://www.aa.com.tr/tr/ekonomi/merkez-bankasi-politika-faizini-yuzde-37de-sabit-birakti/4053089",
+      "title": "Merkez Bankasi, politika faizini yuzde 37'de sabit birakti",
+      "body": "Turkiye Cumhuriyet Merkez Bankasi (TCMB) Para Politikasi Kurulu (PPK), 10 Eylul 2026 tarihinde gerceklestirdigi toplantida politika faizi olan bir hafta vadeli repo ihale faiz oranini yuzde 37 seviyesinde sabit tutma karari aldi. Kurul ayrica Merkez Bankasi gecelik borc verme faiz oranini yuzde 40, gecelik borclanma faiz oranini ise yuzde 35,5 duzeyinde degistirmeden birakti. Karar, yil icinde ocak ayinda yapilan indirimin ardindan mart, nisan, haziran ve temmuz toplantilarinda da surdurulen bekle-gor tutumunun devami niteliginde oldu ve politika faizi boylece yaklasik sekiz aydir ayni seviyede kalmis oldu.\n\nPPK'nin karar metninde, aylik oynakliklara ragmen son donem enflasyon gerceklesmeleri ve oncu gostergelerin enflasyonun ana egiliminde dususe isaret ettigi vurgulandi. Buna karsilik jeopolitik gelismelere bagli olarak yukselen enerji fiyatlarinin enflasyon gorunumu uzerinde yukari yonlu risk olusturdugu belirtildi. Kurul, fiyat istikrari saglanana kadar siki para politikasi durusunun korunacagini, parasal aktarim mekanizmasini etkileyen unsurlarin yakindan izlenecegini ve enflasyonda belirgin ve kalici bir bozulma ongorulmesi halinde para politikasi durusunun sikilastirilacagini yineledi.\n\nKarar metninde ayrica para politikasi araclarinin, orta vadeli yuzde 5 enflasyon hedefine ulasilmasi amaciyla veri odakli ve toplanti bazli bir yaklasimla belirlenmeye devam edilecegi ifade edildi. Merkez Bankasi, kararlarin sadelik ve seffaflik ilkeleri cercevesinde alinacagini belirtti. Toplantinin ozeti bes is gunu icinde yayimlanacak. Bir sonraki PPK toplantisinin 23 Ekim 2026'da yapilmasi planlaniyor.\n\nPiyasa acisindan karar surpriz olusturmadi. AA Finans'in anketine katilan 25 ekonomistten 24'u politika faizinin yuzde 37'de sabit kalmasini bekliyordu. Sanayi tarafinda ise kararin anlami net: ticari kredi maliyetleri, isletme sermayesi finansmani ve yatirim kredisi fiyatlamalari en az bir ay daha mevcut yuksek seviyelerde kalacak. Imalat sanayiinde kapasite kullanimini ve yeni siparisleri baskilayan finansman maliyeti sorununun kisa vadede hafiflemeyecegi anlasiliyor. Ekim toplantisi, yil sonuna dogru olasi bir indirim dongusunun baslangici olarak izlenecek.",
+      "published_at": "2026-09-10T14:15:00+03:00",
+      "language": "tr",
+      "summary": "TCMB, 10 Eylul 2026 PPK toplantisinda politika faizini yuzde 37'de sabit tuttu; gecelik borc verme yuzde 40, borclanma yuzde 35,5 olarak korundu. Karar metni enflasyonun ana egiliminde dususe isaret etti ancak enerji fiyatlarini yukari yonlu risk olarak tanimladi. Sanayici acisindan ticari kredi ve isletme sermayesi maliyetlerinin en az bir ay daha yuksek kalacagi anlamina geliyor; indirim beklentisi 23 Ekim toplantisina otelendi.",
+      "key_points": [
+        "Politika faizi (bir hafta vadeli repo) yuzde 37'de sabit birakildi",
+        "Gecelik borc verme yuzde 40, gecelik borclanma yuzde 35,5 duzeyinde korundu",
+        "Karar metninde enflasyonun ana egiliminin dustugu, enerji fiyatlarinin yukari yonlu risk olusturdugu belirtildi",
+        "Siki para politikasi durusu ve toplanti bazli veri odakli yaklasim korunuyor",
+        "Bir sonraki PPK toplantisi 23 Ekim 2026"
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB",
+          "Para Politikasi Kurulu"
+        ],
+        "kisi": [
+          "Fatih Karahan"
+        ],
+        "sektor": [
+          "Bankacilik",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "faiz-karari",
+        "tcmb",
+        "para-politikasi",
+        "politika-faizi",
+        "dezenflasyon",
+        "kredi-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 92,
+        "impact": 96,
+        "keyword": 88,
+        "recency": 97,
+        "corroboration": 92,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "euronews-tr",
+      "url": "https://tr.euronews.com/business/2026/09/10/merkez-bankasi-politika-faizini-yuzde-37de-sabit-tuttu",
+      "title": "Merkez Bankasi politika faizini yuzde 37'de sabit tuttu",
+      "body": "Turkiye Cumhuriyet Merkez Bankasi, eylul ayi para politikasi toplantisinda ekonomistlerin beklentisiyle uyumlu sekilde politika faizini yuzde 37 duzeyinde sabit tuttu. Bir hafta vadeli repo ihale faiz orani degismezken, faiz koridorunun ust bandi olan gecelik borc verme orani yuzde 40, alt bandi olan gecelik borclanma orani yuzde 35,5 seviyesinde birakildi.\n\nKarar, enflasyon gorunumundeki iyilesmenin surdugu ancak jeopolitik kaynakli enerji soklarinin risk yarattigi bir konjonkturde alindi. TUIK verilerine gore yillik tuketici enflasyonu agustos ayinda temmuzdaki yuzde 31,75 seviyesinden yuzde 31,51'e geriledi. Buna karsilik hizmet enflasyonunun yuzde 40'in uzerinde seyretmesi ve ucret dinamikleri, dezenflasyon surecinin onundeki baslica engeller olarak one cikiyor. Hukumet, 2027-2029 Orta Vadeli Program kapsaminda 2026 yil sonu enflasyon tahminini yuzde 28,4'e revize etmisti.\n\nMerkez Bankasi'nin aciklamasinda, fiyat istikrari saglanana kadar siki para politikasi durusunun korunacagi ve enflasyon gorunumunde belirgin ile kalici bir bozulma halinde ek sikilastirmaya gidilecegi vurgulandi. Banka, orta vadeli yuzde 5 enflasyon hedefine baglilik mesajini yineledi.\n\nOrta Dogu'daki gerilimin tirmanmasi ve Brent petrolun varil basina 100 dolarin uzerine cikmasi, enerjide net ithalatci konumundaki Turkiye icin hem enflasyon hem de cari denge kanalindan risk olusturuyor. Bu tablo, Merkez Bankasi'nin faiz indirimine baslama zamanlamasini oteleyen temel unsur olarak degerlendiriliyor.\n\nReel sektor acisindan karar, ticari kredi faizlerinde bir gevseme sinyali icermiyor. Ozellikle ihracatci imalat sanayii firmalari icin isletme sermayesi maliyeti ve doviz kuru oynakligi es zamanli baski yaratmaya devam edecek. Piyasa anketlerinde yil sonu politika faizi beklentisinin medyani yuzde 35 duzeyinde bulunuyor; bu da yil bitmeden sinirli bir indirim dongusunun fiyatlandigini gosteriyor.",
+      "published_at": "2026-09-10T14:40:00+03:00",
+      "language": "tr",
+      "summary": "Merkez Bankasi eylulde de faizi yuzde 37'de tuttu; agustosta yillik enflasyon yuzde 31,51'e gerilemis olsa da hizmet enflasyonu ve petrol kaynakli enerji soku indirimi oteledi. Sanayici icin ticari kredi maliyetlerinde yakin vadede rahatlamaya isaret yok. Piyasa yil sonu icin yuzde 35 politika faizi bekliyor.",
+      "key_points": [
+        "Faiz yuzde 37'de sabit; koridor bantlari yuzde 40 ve yuzde 35,5",
+        "Agustos yillik TUFE yuzde 31,51; temmuzda yuzde 31,75 idi",
+        "OVP'de 2026 yil sonu enflasyon tahmini yuzde 28,4'e cekildi",
+        "Brent petroldeki yukselis enflasyon ve cari denge riskini artiriyor",
+        "Piyasada yil sonu politika faizi beklentisi medyani yuzde 35"
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB",
+          "TUIK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacilik",
+          "Enerji",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "faiz-karari",
+        "tcmb",
+        "enflasyon",
+        "politika-faizi",
+        "enerji-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 94,
+        "keyword": 86,
+        "recency": 97,
+        "corroboration": 92,
+        "reach": 72
+      }
+    },
+    {
+      "source_slug": "ekonomim",
+      "url": "https://www.ekonomim.com/ekonomi/tcmbnin-faiz-kararina-ekonomistlerden-ilk-yorumlar-haberi-917430",
+      "title": "TCMB'nin faiz kararina ekonomistlerden ilk yorumlar",
+      "body": "Merkez Bankasi'nin politika faizini yuzde 37'de sabit tutma karari sonrasi ekonomistler, karar metnindeki dil degisikliginin ekim ayinda baslayabilecek bir indirim dongusune kapi araladigi yorumunu yapti.\n\nMahfi Egilmez, kararin dogru oldugunu belirterek enerji fiyatlarindaki belirsizlik ortaminda faizi degistirmemenin mantikli bir tercih oldugunu ifade etti. Burcu Aydin, karar metninde enflasyonun ana egiliminin dustugune ve ic talebin zayifladigina yapilan vurgunun bir sonraki toplantida indirim icin yesil isik anlamina geldigini degerlendirdi; ancak enerji fiyati riskinin metinde korundugunun altini cizdi.\n\nProf. Dr. Serap Durusoy karari temkinli ama iyimser olarak niteledi ve metnin ekim ayindaki bir indirim icin zemin hazirladigini, belirleyici unsurun enerji piyasasi gelismeleri olacagini soyledi. Emre Alkin, faizin sabit tutulmasini mizahi bir dille degerlendirerek yil bitmeden indirim yapilabilecegini belirtti. Ali Cufadar ise arz yonlu bir sok yasanmadigi surece ciddi bir enflasyonist baski gormedigini, buna karsilik buyumenin yuzde 3'un altinda kalma ihtimali ve takipteki kredilerdeki artisin faizin uzun sure sabit kalmasi riskini buyuttugunu ifade etti.\n\nEkonomistlerin ortak vurgusu, dezenflasyonun surdugu ancak hizmet enflasyonu ve ucret dinamiklerinin katiligi nedeniyle indirimlerin sinirli ve kademeli olacagi yonunde. Piyasa anketlerinde yil sonu politika faizi beklentisinin medyani yuzde 35 seviyesinde.\n\nSanayiciler acisindan bu degerlendirmeler onemli bir sinyal tasiyor: ekim ve aralik toplantilarinda toplam 200 baz puana kadar indirim ihtimali fiyatlanirken, bu ancak ticari kredi faizlerine gecikmeli yansiyacak. Ayrica takipteki kredi oranindaki yukselise dikkat ceken uyarilar, KOBI'lerin finansmana erisiminde bankalarin risk istahinin daralabilecegine isaret ediyor. Imalat sanayii tarafinda isletme sermayesi ihtiyacinin yuksek seyrettigi bir donemde bu, tedarik zinciri finansmani ve vade yapisi acisindan izlenmesi gereken bir risk.",
+      "published_at": "2026-09-10T16:20:00+03:00",
+      "language": "tr",
+      "summary": "Ekonomistler TCMB'nin yuzde 37'de sabit kalma kararini dogru bulurken, karar metninin ekim ayinda indirim icin zemin hazirladigi konusunda genis olcude hemfikir. Buyumenin yuzde 3'un altinda kalma riski ve takipteki kredilerdeki artis one cikan uyarilar arasinda. Sanayici icin mesaj: indirim gelse bile ticari kredi maliyetine yansimasi gecikmeli olacak, KOBI finansmaninda banka risk istahi daralabilir.",
+      "key_points": [
+        "Mahfi Egilmez: faizi degistirmemek dogru karar",
+        "Burcu Aydin ve Serap Durusoy: metin ekim ayinda indirime yesil isik yakiyor",
+        "Ali Cufadar: buyume yuzde 3'un altinda kalabilir, takipteki krediler artiyor",
+        "Yil sonu politika faizi beklentisi medyani yuzde 35",
+        "Indirimlerin ticari kredi faizlerine yansimasi gecikmeli olacak"
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [
+          "Mahfi Egilmez",
+          "Burcu Aydin",
+          "Serap Durusoy",
+          "Emre Alkin",
+          "Ali Cufadar"
+        ],
+        "sektor": [
+          "Bankacilik",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "faiz-karari",
+        "tcmb",
+        "para-politikasi",
+        "kredi-maliyeti",
+        "kobi-finansmani"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 88,
+        "keyword": 82,
+        "recency": 97,
+        "corroboration": 88,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "ing-think",
+      "url": "https://think.ing.com/snaps/the-turkish-central-bank-stays-on-hold-signals-continued-caution",
+      "title": "The Turkish central bank stays on hold, signals continued caution",
+      "body": "The Central Bank of the Republic of Turkey (CBRT) kept its policy rate unchanged at 37% at its September meeting, leaving the interest rate corridor intact with the overnight lending rate at 40% and the overnight borrowing rate at 35.5%. The decision matched consensus expectations and marked another hold in a cycle that has been paused since the January cut.\n\nIn the accompanying statement, the Monetary Policy Committee cited heightened geopolitical uncertainty and growing inflation risks from rising oil prices as the main reasons for maintaining a cautious stance. Renewed Middle East tensions and the associated jump in crude prices have raised the near-term inflation risk for an energy-importing economy such as Turkey, offsetting the improvement seen in underlying price dynamics.\n\nAt the same time, the CBRT expressed confidence that the underlying trend of inflation is decelerating. The bank attributed this to slowing economic activity, which has helped contain second-round effects from the energy shock. Weak domestic demand, reflected in soft industrial production and a manufacturing PMI that remains below the 50 threshold, is doing part of the disinflationary work.\n\nING's base case projects the policy rate falling to 35% by the end of 2026, implying two 100-basis-point cuts in the final quarter of the year. The risks around that path are two-sided: a further escalation in the conflict affecting oil supply routes would delay easing, while a faster-than-expected decline in services inflation could bring cuts forward.\n\nThe committee retained its meeting-by-meeting, data-dependent approach and preserved the option to tighten again should the inflation outlook deteriorate materially and persistently. For Turkish manufacturers, the read-across is that commercial borrowing costs are likely to stay elevated through the third quarter, with only modest relief expected before year-end. Exporters remain exposed to the combination of high real funding costs, an appreciating real effective exchange rate and rising imported energy bills.",
+      "published_at": "2026-09-10T15:30:00+03:00",
+      "language": "en",
+      "summary": "ING'ye gore TCMB'nin yuzde 37'de sabit kalma karari, petrol kaynakli enflasyon riski ve jeopolitik belirsizligin sonucu. Banka yil sonuna kadar politika faizinin yuzde 35'e inecegini, yani son ceyrekte iki kez 100'er baz puanlik indirim yapilacagini ongoruyor. Turk imalatcisi icin ticari kredi maliyetlerinin ucuncu ceyrek boyunca yuksek kalacagi, ihracatcinin yuksek reel finansman maliyeti ve artan enerji faturasi ile es zamanli basci altinda oldugu vurgulaniyor.",
+      "key_points": [
+        "CBRT held the policy rate at 37% as expected, corridor unchanged at 40%/35.5%",
+        "Oil-driven inflation risk and Middle East escalation cited as the reason for caution",
+        "Weak domestic demand and sub-50 manufacturing PMI support disinflation",
+        "ING forecasts 35% policy rate by end-2026 via two 100bp cuts in Q4",
+        "Commercial borrowing costs seen staying elevated for Turkish manufacturers"
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB",
+          "ING"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacilik",
+          "Imalat Sanayi",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "faiz-karari",
+        "tcmb",
+        "para-politikasi",
+        "petrol",
+        "jeopolitik-risk",
+        "kredi-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 84,
+        "impact": 90,
+        "keyword": 80,
+        "recency": 97,
+        "corroboration": 88,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "dunya-gazetesi",
+      "url": "https://www.dunya.com/ekonomi/sanayide-uretim-frene-basti-temmuz-verileri-aciklandi-haberi-839459",
+      "title": "Sanayide uretim frene basti: Temmuz verileri aciklandi",
+      "body": "Turkiye Istatistik Kurumu (TUIK), 2026 yili Temmuz ayina iliskin Sanayi Uretim Endeksi sonuclarini acikladi. Mevsim ve takvim etkisinden arindirilmis sanayi uretimi temmuz ayinda bir onceki aya gore yuzde 1,0 azalirken, takvim etkisinden arindirilmis endeks gecen yilin ayni ayina gore yuzde 0,3 geriledi. Boylece sanayi uretiminde yillik bazda dusus serisi ucuncu aya ulasti.\n\nAlt sektorler incelendiginde yillik bazda madencilik ve tas ocakciligi sektoru endeksi yuzde 3,8, elektrik, gaz, buhar ve iklimlendirme uretimi ve dagitimi sektoru endeksi ise yuzde 5,6 azaldi. Imalat sanayii sektoru endeksi yillik yuzde 0,3 artis kaydetti; ancak bu sinirli artis, diger iki alt sektordeki sert dususlerin toplam endeks uzerindeki asagi yonlu etkisini telafi etmeye yetmedi.\n\nAylik bazda tablo daha olumsuz. Temmuzda madencilik ve tas ocakciligi sektoru endeksi bir onceki aya gore yuzde 2,2, imalat sanayii sektoru endeksi yuzde 0,8, elektrik, gaz, buhar ve iklimlendirme uretimi ve dagitimi sektoru endeksi ise yuzde 2,2 azaldi. Yani sanayinin uc ana alt sektoru de aylik bazda daraldi.\n\nVeriler, yuksek finansman maliyetleri, zayif ic talep ve ihracat pazarlarindaki belirsizligin uretim uzerindeki baskisinin surdugunu gosteriyor. Elektrik ve dogal gaz uretim ve dagitim kaleminde gorulen yuzde 5,6'lik yillik dusus, hem sanayinin enerji talebindeki zayifligi hem de enerji arz kompozisyonundaki degisimi yansitiyor.\n\nSanayiciler acisindan tablo, kapasite kullanim oranlarinda ve istihdamda yeni bir gerileme riskine isaret ediyor. ISO Turkiye Imalat PMI'nin agustosta 48,1 ile hala esik degerin altinda kalmasi, ucuncu ceyrekte de toparlanmanin sinirli olacagi beklentisini guclendiriyor. Uretimdeki yavaslamanin surmesi, 2026 buyume tahminlerinin asagi yonlu revize edilmesine zemin hazirliyor; nitekim yeni Orta Vadeli Program'da 2026 buyume tahmini yuzde 3,3'e cekilmisti.",
+      "published_at": "2026-09-10T10:30:00+03:00",
+      "language": "tr",
+      "summary": "TUIK'e gore sanayi uretimi temmuzda aylik yuzde 1,0, yillik yuzde 0,3 azaldi ve yillik dusus serisi uc aya cikti. Imalat sanayii yillik yuzde 0,3 artsa da madencilik yuzde 3,8, elektrik-gaz yuzde 5,6 geriledi; aylik bazda uc alt sektor de daraldi. Sanayici icin bu, kapasite kullanimi ve istihdamda yeni bir gerileme riski ve 2026 buyume beklentilerinin asagi cekilmesi anlamina geliyor.",
+      "key_points": [
+        "Sanayi uretimi temmuzda aylik yuzde 1,0, yillik yuzde 0,3 azaldi",
+        "Yillik dusus serisi ucuncu aya ulasti",
+        "Madencilik yillik yuzde 3,8, elektrik-gaz-buhar yuzde 5,6 geriledi",
+        "Imalat sanayii yillik yuzde 0,3 artti ancak aylik yuzde 0,8 azaldi",
+        "Ucuncu ceyrekte toparlanmanin sinirli kalmasi bekleniyor"
+      ],
+      "entities": {
+        "kurum": [
+          "TUIK",
+          "Istanbul Sanayi Odasi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat Sanayi",
+          "Madencilik",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "sanayi-uretimi",
+        "tuik",
+        "imalat-sanayi",
+        "madencilik",
+        "kapasite-kullanimi"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 92,
+        "keyword": 90,
+        "recency": 97,
+        "corroboration": 85,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "cumhuriyet-ekonomi",
+      "url": "https://www.cumhuriyet.com.tr/ekonomi/sanayi-uretimi-temmuzda-geriledi-tuik-verileri-aciklandi-2536357",
+      "title": "Sanayi uretimi temmuzda geriledi: TUIK verileri aciklandi",
+      "body": "Turkiye Istatistik Kurumu'nun (TUIK) acikladigi verilere gore sanayi uretim endeksi 2026 Temmuz ayinda gecen yilin ayni ayina gore yuzde 0,3, bir onceki aya gore ise yuzde 1,0 azaldi. Veri, sanayide yavaslamanin yaz aylarinda da surdugunu ortaya koydu.\n\nTakvim etkisinden arindirilmis yillik degisimlere bakildiginda madencilik ve tas ocakciligi sektoru endeksi yuzde 3,8 azalirken; elektrik, gaz, buhar ve iklimlendirme uretimi ve dagitimi sektoru endeksinde yuzde 5,6'lik bir dusus yasandi. Imalat sanayii sektoru endeksi ise yuzde 0,3 artis gosterdi. Mevsim ve takvim etkisinden arindirilmis aylik degisimlerde madencilik yuzde 2,2, imalat sanayii yuzde 0,8, elektrik-gaz-buhar uretimi ve dagitimi yuzde 2,2 geriledi.\n\nSanayi uretimi, Turkiye ekonomisinde buyumenin oncu gostergelerinden biri olarak izleniyor. TUIK'in agustos sonunda acikladigi milli gelir verilerine gore Turkiye ekonomisi 2026'nin ikinci ceyreginde yillik yuzde 2,3 buyumus, sanayi sektoru katma degeri ise yuzde 2,4 artis kaydetmisti. Temmuz verisi, ucuncu ceyrege zayif bir giris yapildigina isaret ediyor.\n\nUretimdeki gerilemenin arkasinda yuksek reel faiz ortami, ic talepteki daralma, ihracat pazarlarindaki belirsizlik ve Orta Dogu kaynakli jeopolitik risklerin yarattigi maliyet baskisi gosteriliyor. Ozellikle enerji yogun sektorlerde artan girdi maliyetleri, kar marjlarini asindiriyor.\n\nSanayi kuruluslari acisindan tablo, siparis defterlerinin zayifligi ve stok yonetiminde temkinli davranilmasi gerektigine isaret ediyor. Elektrik ve gaz uretimindeki yuzde 5,6'lik yillik dusus, sanayinin enerji talebindeki zayiflamanin dolayli bir gostergesi olarak da okunabilir. Yeni Orta Vadeli Program'da 2026 buyume tahmininin yuzde 3,3'e cekilmis olmasi, resmi tarafin da yavaslamayi teyit ettigini gosteriyor.",
+      "published_at": "2026-09-10T10:14:00+03:00",
+      "language": "tr",
+      "summary": "TUIK verilerine gore sanayi uretimi temmuzda yillik yuzde 0,3, aylik yuzde 1,0 geriledi; madencilik ve elektrik-gaz uretimi sert dustu, imalat sanayii sinirli artti. Ikinci ceyrekte yuzde 2,3 buyuyen ekonomi icin ucuncu ceyrege zayif bir giris anlamina geliyor. Sanayici acisindan siparis defterlerindeki zayiflik ve enerji yogun sektorlerdeki marj baskisi one cikiyor.",
+      "key_points": [
+        "Sanayi uretimi temmuzda yillik yuzde 0,3, aylik yuzde 1,0 azaldi",
+        "Madencilik yillik yuzde 3,8, elektrik-gaz-buhar yuzde 5,6 geriledi",
+        "Imalat sanayii yillik yuzde 0,3 artti",
+        "Ekonomi ikinci ceyrekte yuzde 2,3, sanayi katma degeri yuzde 2,4 buyumustu",
+        "Temmuz verisi ucuncu ceyrege zayif giris sinyali veriyor"
+      ],
+      "entities": {
+        "kurum": [
+          "TUIK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat Sanayi",
+          "Madencilik",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "sanayi-uretimi",
+        "tuik",
+        "imalat-sanayi",
+        "buyume",
+        "maliyet-baskisi"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 88,
+        "keyword": 88,
+        "recency": 97,
+        "corroboration": 85,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "turkiye-ajansi",
+      "url": "https://www.turkiyeajansi.com/guncel/sanayi-uretimi-hem-yillik-hem-aylik-geriledi-499924h",
+      "title": "Sanayi uretimi hem yillik hem aylik geriledi",
+      "body": "TUIK'in yayimladigi Sanayi Uretim Endeksi verilerine gore 2026 Temmuz ayinda sanayi uretimi hem yillik hem de aylik bazda geriledi. Takvim etkisinden arindirilmis sanayi uretim endeksi bir onceki yilin ayni ayina gore yuzde 0,3 azalirken, mevsim ve takvim etkilerinden arindirilmis endeks bir onceki aya gore yuzde 1,0 dustu.\n\nSanayinin alt sektorleri incelendiginde, 2026 yili Temmuz ayinda madencilik ve tas ocakciligi sektoru endeksi bir onceki aya gore yuzde 2,2 azaldi. Imalat sanayii sektoru endeksi ayni donemde yuzde 0,8; elektrik, gaz, buhar ve iklimlendirme uretimi ve dagitimi sektoru endeksi ise yuzde 2,2 geriledi. Boylece sanayinin uc ana alt sektorunun tamami aylik bazda daralma kaydetti.\n\nYillik karsilastirmada ise gorunum karisik. Madencilik ve tas ocakciligi sektoru endeksi yuzde 3,8, elektrik, gaz, buhar ve iklimlendirme uretimi ve dagitimi sektoru endeksi yuzde 5,6 azalirken; imalat sanayii sektoru endeksi yuzde 0,3 artis gosterdi. Imalattaki bu sinirli artis, toplam endeksteki dususu engelleyemedi.\n\nAciklanan veriler, Turkiye sanayisinde yaz aylarina girerken belirginlesen yavaslamanin temmuzda da surdugunu ortaya koyuyor. Enerji ve madencilik kalemlerindeki gerilemenin boyutu, sanayi uretiminin genel seyri uzerinde belirleyici oldu.\n\nSanayi kuruluslari icin bu veri seti, uretim planlamasi ve yatirim kararlarinda temkinli bir donemin devam edecegini gosteriyor. Ozellikle ara mali ve enerji yogun alt sektorlerde uretim kesintileri ve vardiya azaltmalari gundeme gelebilir. Sanayi uretimindeki zayiflik ayni zamanda istihdam verilerine de yansiyor; temmuz ayinda mevsim etkisinden arindirilmis issizlik orani yuzde 8,1'e yukselmis, istihdam edilenlerin sayisi 388 bin kisi azalmisti.",
+      "published_at": "2026-09-10T11:05:00+03:00",
+      "language": "tr",
+      "summary": "TUIK verilerine gore temmuzda sanayi uretimi yillik yuzde 0,3, aylik yuzde 1,0 azaldi ve sanayinin uc alt sektoru de aylik bazda daraldi. Madencilik yuzde 3,8, elektrik-gaz yuzde 5,6 gerilerken imalat sanayii yillik yuzde 0,3 artti. Sanayici acisindan uretim planlamasinda temkinli donemin surecegini, ara mali ve enerji yogun sektorlerde vardiya/kapasite azaltmalarinin gundeme gelebilecegini gosteriyor.",
+      "key_points": [
+        "Sanayi uretimi temmuzda yillik yuzde 0,3, aylik yuzde 1,0 geriledi",
+        "Uc ana alt sektorun tamami aylik bazda daraldi",
+        "Madencilik yillik yuzde 3,8, elektrik-gaz-buhar yuzde 5,6 azaldi",
+        "Imalat sanayii yillik yuzde 0,3 arttı",
+        "Temmuzda issizlik orani yuzde 8,1'e yukselmis, istihdam 388 bin kisi azalmisti"
+      ],
+      "entities": {
+        "kurum": [
+          "TUIK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat Sanayi",
+          "Madencilik",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "sanayi-uretimi",
+        "tuik",
+        "imalat-sanayi",
+        "istihdam",
+        "kapasite-kullanimi"
+      ],
+      "importance_factors": {
+        "authority": 78,
+        "impact": 85,
+        "keyword": 86,
+        "recency": 97,
+        "corroboration": 85,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "cumhuriyet-ekonomi",
+      "url": "https://www.cumhuriyet.com.tr/ekonomi/2027-2029-orta-vadeli-program-aciklandi-iste-buyume-enflasyon-ve-butce-hedefleri-2535325",
+      "title": "2027-2029 Orta Vadeli Program aciklandi: Iste buyume, enflasyon ve butce hedefleri",
+      "body": "Cumhurbaskani Yardimcisi Cevdet Yilmaz, Cumhurbaskanligi Kulliyesi'nde duzenlenen toplantiyla 2027-2029 donemini kapsayan Orta Vadeli Program'i (OVP) acikladi. Program, dezenflasyon surecinin tamamlanmasi ve uretim kapasitesinin korunmasi hedeflerini ayni cerceveye yerlestiriyor.\n\nBuyume tarafinda 2026 tahmini yuzde 3,3'e revize edildi. Program donemi icin buyume hedefleri 2027'de yuzde 4,2, 2028'de yuzde 4,6 ve 2029'da yuzde 5,0 olarak belirlendi. Enflasyonda ise 2026 yil sonu tahmini yuzde 28,4'e guncellendi; hedef patikasi 2027 icin yuzde 21,0, 2028 icin yuzde 13,5 ve 2029 icin yuzde 9,0 seklinde ciziliyor. Boylece program sonunda tuketici enflasyonunun tek haneye dusurulmesi amaclaniyor.\n\nIstihdam tarafinda program donemi boyunca 2,1 milyon ilave istihdam yaratilmasi hedefleniyor. Issizlik oraninin 2026'daki yuzde 8,1 seviyesinden 2027'de yuzde 8,0, 2028'de yuzde 7,8 ve 2029'da yuzde 7,6'ya gerilemesi ongoruluyor.\n\nMaliye politikasinda butce aciginin GSYH'ye orani 2026 icin yuzde 3,1, 2027 icin yuzde 3,5 olarak belirlenirken program sonunda yuzde 2,8'e dusurulmesi planlaniyor. Disa acilma tarafinda yillik ihracatin agustos itibariyla 280 milyar dolara ulastigi, doviz rezervlerinin 89,7 milyar dolar artarak 188,2 milyar dolar seviyesine ciktigi ve mevduat icinde TL payinin yuzde 31,6'dan yuzde 61,5'e yukseldigi vurgulandi.\n\nSanayi acisindan program, yapay zeka, yari iletkenler, ileri malzemeler, robotik, biyoteknoloji ve enerji depolama gibi stratejik alanlarda Ar-Ge'den olcekli uretime uzanan butunlesik bir ekosistem kurmayi hedefliyor. Uluslararasi koridorlarin liman, lojistik merkez ve organize sanayi bolgeleriyle baglantisinin gelistirilmesi de program basliklari arasinda yer aliyor. ISO/ISOV uyeleri acisindan kritik nokta, dezenflasyon hedefine baglilik nedeniyle siki finansal kosullarin 2027'ye kadar surecek olmasi; buna karsilik tesvik ve yatirim finansmani araclarinda yeni duzenlemelerin gundeme gelecegi anlasiliyor.",
+      "published_at": "2026-09-06T14:30:00+03:00",
+      "language": "tr",
+      "summary": "2027-2029 OVP aciklandi: 2026 buyume tahmini yuzde 3,3'e, yil sonu enflasyon tahmini yuzde 28,4'e revize edildi; 2029'da yuzde 5 buyume ve yuzde 9 enflasyon hedefleniyor. Butce aciginin GSYH'ye orani 2027'de yuzde 3,5. Sanayici icin program yari iletken, robotik, ileri malzeme gibi stratejik alanlarda Ar-Ge'den olcekli uretime gecis vaadi tasiyor ancak siki finansal kosullarin 2027'ye kadar surecegini de teyit ediyor.",
+      "key_points": [
+        "2026 buyume tahmini yuzde 3,3'e, enflasyon tahmini yuzde 28,4'e revize edildi",
+        "Buyume hedefleri: 2027 yuzde 4,2, 2028 yuzde 4,6, 2029 yuzde 5,0",
+        "Enflasyon patikasi: 2027 yuzde 21, 2028 yuzde 13,5, 2029 yuzde 9",
+        "Program doneminde 2,1 milyon ilave istihdam hedefi, issizlik yuzde 7,6'ya inecek",
+        "Yari iletken, robotik, ileri malzeme ve enerji depolamada olcekli uretim ekosistemi hedefi"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaskanligi Strateji ve Butce Baskanligi",
+          "Hazine ve Maliye Bakanligi"
+        ],
+        "kisi": [
+          "Cevdet Yilmaz"
+        ],
+        "sektor": [
+          "Imalat Sanayi",
+          "Teknoloji",
+          "Lojistik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "ovp",
+        "orta-vadeli-program",
+        "buyume",
+        "enflasyon",
+        "butce",
+        "sanayi-politikasi"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 90,
+        "keyword": 85,
+        "recency": 88,
+        "corroboration": 85,
+        "reach": 72
+      }
+    },
+    {
+      "source_slug": "finansopia",
+      "url": "https://www.finansopia.com/ekonomi/orta-vadeli-programda-2027-2029-hedefleri/",
+      "title": "Orta Vadeli Program'da 2027-2029 hedefleri",
+      "body": "Yeni aciklanan Orta Vadeli Program, 2027-2029 donemi icin makroekonomik hedefleri ve varsayimlari ortaya koydu. Programa gore enflasyonun 2026 sonundaki yuzde 28,4 seviyesinden kademeli olarak gerileyerek 2029'da yuzde 9'a inmesi bekleniyor. Buyume hedefleri 2027 icin yuzde 4,2, 2028 icin yuzde 4,6 ve 2029 icin yuzde 5,0 olarak belirlendi.\n\nIssizlik oraninin program donemi boyunca yuzde 8,1'den yuzde 7,6'ya gerilemesi ongoruluyor. Kisi basi gelirin ise 20.523 dolardan 24.842 dolara yukselmesi hedefleniyor.\n\nMaliye tarafinda program, 2027-2029 doneminde toplam 71,5 trilyon TL vergi geliri ongoruyor. Faiz giderlerinin 2026'daki 2,824 trilyon TL seviyesinden 2029'da 5,244 trilyon TL'ye cikmasi bekleniyor; bu, butce uzerindeki faiz yukunun program donemi boyunca artmaya devam edecegini gosteriyor. 2026-2029 doneminde toplam 596,8 milyar TL ozellestirme geliri ongoruluyor.\n\nDis denge tarafinda 2026 icin dis ticaret aciginin 105 milyar dolar, turizm gelirinin yaklasik 65 milyar dolar olarak gerceklesmesi bekleniyor. Programin kur varsayimlarinda ortalama dolar/TL kurunun program donemi boyunca 46,87'den 69,83'e yukseldigi gorulüyor.\n\nBu varsayim seti sanayiciler acisindan dogrudan planlama girdisi niteliginde. Ortalama kur patikasi, ithal girdi maliyetlerinin TL bazinda yillik ortalama yuzde 14-16 bandinda artacagini ima ederken; enflasyon hedef patikasinin altinda kalan bir kur artisi, reel efektif kurun deger kazanmaya devam edecegi anlamina geliyor. Ihracatci imalat sanayii icin bu, fiyat rekabetciligi uzerindeki baskinin 2027'de de surecegini gosteriyor. Faiz giderlerindeki artis ise kamu borclanmasinin ozel sektor kredi imkanlarini disladigi bir ortamda finansman maliyetlerinin yuksek kalmasi riskine isaret ediyor.",
+      "published_at": "2026-09-06T17:10:00+03:00",
+      "language": "tr",
+      "summary": "OVP 2027-2029'un sayisal cercevesi: enflasyon 2029'da yuzde 9, buyume yuzde 5, issizlik yuzde 7,6, kisi basi gelir 24.842 dolar. Program 2026 icin 105 milyar dolar dis ticaret acigi ongoruyor ve faiz giderlerinin 2029'da 5,24 trilyon TL'ye cikacagini varsayiyor. Sanayici icin kritik girdi: ortalama kur patikasi enflasyonun altinda kaliyor, yani reel efektif kur deger kazanmaya devam edecek ve ihracatta fiyat rekabetciligi baskisi surecek.",
+      "key_points": [
+        "Enflasyon 2026'da yuzde 28,4'ten 2029'da yuzde 9'a inecek",
+        "Buyume 2027 yuzde 4,2, 2028 yuzde 4,6, 2029 yuzde 5",
+        "2027-2029 doneminde 71,5 trilyon TL vergi geliri ongorusu",
+        "Faiz giderleri 2026'da 2,82 trilyon TL'den 2029'da 5,24 trilyon TL'ye cikacak",
+        "Ortalama dolar/TL varsayimi 46,87'den 69,83'e yukseliyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaskanligi Strateji ve Butce Baskanligi"
+        ],
+        "kisi": [
+          "Cevdet Yilmaz"
+        ],
+        "sektor": [
+          "Imalat Sanayi",
+          "Turizm"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "ovp",
+        "orta-vadeli-program",
+        "kur",
+        "butce",
+        "dis-ticaret-acigi",
+        "enflasyon"
+      ],
+      "importance_factors": {
+        "authority": 66,
+        "impact": 86,
+        "keyword": 82,
+        "recency": 88,
+        "corroboration": 82,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "tyb-haber",
+      "url": "https://www.tyb.org.tr/orta-vadeli-program-2027-2029-dezenflasyondan-refaha-gecisin-kritik-esikleri-72683h.htm",
+      "title": "Orta Vadeli Program 2027-2029: Dezenflasyondan refaha gecisin kritik esikleri",
+      "body": "Dr. Yunus Emre Aydinbas imzali degerlendirme, yeni aciklanan 2027-2029 Orta Vadeli Program'i uc yillik bir ekonomik yol haritasi olarak ele aliyor ve dezenflasyondan refaha gecisin kritik esiklerini tartisiyor.\n\nProgramin enflasyonu 2026 sonundaki yuzde 28,4 seviyesinden 2029'da yuzde 9'a dusurmeyi, buyumeyi ise yuzde 3,3'ten yuzde 5'e cikarmayi hedefledigi hatirlatiliyor. Yazara gore programin merkezi meydan okumasi, fiyat istikrari ile uretim kapasitesi artisini es zamanli saglayabilmek.\n\nDegerlendirmede one cikan ilk elestiri, siki finansal kosullarin ekonomik buyume ve hanehalki refahi uzerindeki baskisinin ne kadar sure daha devam edecegi sorusuna programda net bir yanit bulunmamasi. Ikinci elestiri, sabit gelirli calisanlarin satin alma gucunu koruyacak somut mekanizmalarin programda yer almamasi. Enflasyon oranlari dusse bile 2029'a kadar kumulatif fiyat artisi yaklasik yuzde 50'ye ulasabilir; nominal gelir artislari bunun gerisinde kalirsa reel ucretler asinir.\n\nYazar, programin basarisinin hedeflerin tutarliligindan cok dogru siralamaya bagli oldugunu savunuyor: once enflasyon beklentilerinin istikrara kavusturulmasi, ardindan finansman kosullarinin normallestirilerek uretken yatirimin desteklenmesi.\n\nSanayi ve uretim acisindan degerlendirme, KOBI'lerin finansmana erisiminin iyilestirilmesi, ihracat-finansman araclarinin maliyetlerinin dusurulmesi ve sanayideki daralmanin durdurulmasini onumuzdeki donemin kilit basliklari olarak siraliyor. Programin mali disiplin, dezenflasyon, verimlilik ve teknoloji yogun sanayi vurgusunun dogru bir eksen olusturdugu; ancak bu eksenin uygulamaya donusturulmesi icin tesvik mimarisinin ve finansman araclarinin yeniden tasarlanmasi gerektigi belirtiliyor. ISO/ISOV uyeleri icin bu analiz, OVP'nin sanayiye dair vaatlerinin hangi kosullarda hayata gececegine dair bir cerceve sunuyor.",
+      "published_at": "2026-09-08T09:30:00+03:00",
+      "language": "tr",
+      "summary": "OVP 2027-2029'un sanayi ve refah boyutuna odaklanan analiz, programin dogru bir eksen cizdigini ancak siki finansal kosullarin suresi ve sabit gelirlilerin satin alma gucu konusunda bosluk biraktigini savunuyor. Sanayi icin kilit basliklar KOBI finansmanina erisim, ihracat-finansman maliyetlerinin dusurulmesi ve sanayideki daralmanin durdurulmasi olarak siralaniyor. Sanayiciye mesaj: tesvik mimarisi yeniden tasarlanmadan programin uretim hedefleri zor tutar.",
+      "key_points": [
+        "Program enflasyonu 2029'da yuzde 9'a, buyumeyi yuzde 5'e cikarmayi hedefliyor",
+        "Siki finansal kosullarin suresi konusunda programda net taahhut yok",
+        "2029'a kadar kumulatif fiyat artisi yaklasik yuzde 50'ye ulasabilir",
+        "Basari, once beklenti istikrari sonra finansman normallesmesi siralamasina bagli",
+        "KOBI finansmani, ihracat-finansman maliyeti ve sanayideki daralma kilit basliklar"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaskanligi Strateji ve Butce Baskanligi"
+        ],
+        "kisi": [
+          "Yunus Emre Aydinbas"
+        ],
+        "sektor": [
+          "Imalat Sanayi",
+          "KOBI"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "ovp",
+        "orta-vadeli-program",
+        "kobi-finansmani",
+        "sanayi-politikasi",
+        "dezenflasyon"
+      ],
+      "importance_factors": {
+        "authority": 58,
+        "impact": 78,
+        "keyword": 78,
+        "recency": 92,
+        "corroboration": 78,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "ticaret-gazetesi",
+      "url": "https://ticaretgazetesi.com.tr/2026/09/01/iso-turkiye-imalat-pmi-agustosta-481e-yukseldi/",
+      "title": "ISO Turkiye Imalat PMI agustosta 48,1'e yukseldi",
+      "body": "Istanbul Sanayi Odasi (ISO) ve S&P Global isbirligiyle hazirlanan ISO Turkiye Imalat PMI, 2026 Agustos ayinda 48,1 seviyesine yukseldi. Manset PMI temmuz ayindaki 47,7 duzeyinden yukselmesine ragmen 50,0 esik degerinin altinda kalmaya devam etti ve boylece son uc ayin en yuksek seviyesine cikti. Endeks, imalat sektorundeki daralmanin surdugunu ancak faaliyet kosullarindaki bozulmanin hiz kestigini gosterdi.\n\nOrta Dogu'daki savasin genis bir olcege yayilan belirsizlige bagli olarak agustos ayinda da talebin zayif seyretmesine yol actigi ve imalat sektorunun performansini baskilamaya devam ettigi belirtildi. Yeni siparisler ve yeni ihracat siparisleri gerilemeye devam etti; ancak dususun hizi temmuza gore daha ilimli gerceklesti.\n\nUreticiler ust uste ucuncu ay uretimlerini azaltti. Istihdam tarafinda da kayiplar derinlesti: agustosta yalnizca iki sektor istihdam artisi bildirirken, temmuzda bu sayi bes idi.\n\nMaliyet tarafinda tablo olumsuz. Girdi maliyeti enflasyonu, yakit ve hammadde fiyatlarindaki artis nedeniyle uc ayin en yuksek seviyesine ulasti. Firmalar nihai urun fiyatlarini artirdi, ancak artis hizi yaz baslarina gore daha yavas kaldi; bu da kar marjlari uzerindeki sikismaya isaret ediyor. Tedarikcilerin teslimat sureleri Orta Dogu kaynakli aksakliklar nedeniyle uzadi.\n\nAgustosta son bes ayda ilk kez tum sektorlerde yeni siparisler yavasladi. En sert daralma kimyasal, plastik ve kaucuk sektorunde kaydedilirken, en ilimli dusus giyim ve deri urunlerinde gorulduAyrica metalik olmayan mineral urunler sektorunde Mayis 2022'den bu yana en yuksek hizda uretim artisi yasandi. S&P Global Market Intelligence'tan Andrew Harker, yeni siparis dususlerindeki yavaslamanin bolgesel gerilimin istikrara kavusmasi halinde ivme icin umut verdigini belirtti.",
+      "published_at": "2026-09-01T10:00:00+03:00",
+      "language": "tr",
+      "summary": "ISO Turkiye Imalat PMI agustosta 47,7'den 48,1'e yukselerek uc ayin zirvesine cikti ancak esik deger 50'nin altinda kaldi; daralma suruyor, bozulma hiz kesiyor. Girdi maliyeti enflasyonu yakit ve hammadde kaynakli olarak uc ayin en yuksegine ulasti, satis fiyati artislari ise yavasladi. Sanayici icin bu, marj sikismasinin derinlestigi ve istihdam kayiplarinin genislediği bir tablo anlamina geliyor.",
+      "key_points": [
+        "ISO Turkiye Imalat PMI agustosta 48,1 (temmuz: 47,7) ile uc ayin zirvesinde",
+        "Endeks 50 esiginin altinda kalarak daralmanin surdugunu gosteriyor",
+        "Uretim ust uste ucuncu ay azaldi, istihdam kayiplari derinlesti",
+        "Girdi maliyeti enflasyonu yakit ve hammadde kaynakli olarak uc ayin zirvesinde",
+        "En sert daralma kimyasal, plastik ve kaucuk sektorunde"
+      ],
+      "entities": {
+        "kurum": [
+          "Istanbul Sanayi Odasi",
+          "S&P Global"
+        ],
+        "kisi": [
+          "Andrew Harker"
+        ],
+        "sektor": [
+          "Imalat Sanayi",
+          "Kimya",
+          "Plastik",
+          "Tekstil"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "imalat-pmi",
+        "iso-pmi",
+        "yeni-siparis",
+        "imalat-sanayi",
+        "maliyet-baskisi",
+        "istihdam"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 90,
+        "keyword": 92,
+        "recency": 72,
+        "corroboration": 78,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "borsa-gundem",
+      "url": "https://www.borsagundem.com.tr/iso-turkiye-imalat-pmi-agustosta-son-3-ayin-zirvesine-cikti",
+      "title": "ISO Turkiye Imalat PMI agustosta son 3 ayin zirvesine cikti",
+      "body": "Istanbul Sanayi Odasi Turkiye Imalat PMI verileri, agustos ayinda endeksin 47,7'den 48,1'e yukselerek son uc ayin en yuksek seviyesine ulastigini gosterdi. Endeks 50,0 esik degerinin altinda kalmayi surdurdugu icin imalat sektorunde daralmanin devam ettigi, ancak bozulma hizinin yavasladigi degerlendiriliyor.\n\nRapora gore Orta Dogu'daki catisma Turk imalat sanayii uzerinde golgesini surduruyor ve genis capli belirsizlik talebi zayiflatiyor. Hem yeni siparisler hem de yeni ihracat siparisleri geriledi; ancak dusus temmuz ayina kiyasla daha sinirli kaldi.\n\nUretim artisi sinirli kalirken istihdam tarafindaki kazanimlar belirgin sekilde yavasladi: agustosta yalnizca iki sektor istihdam artisi kaydederken temmuzda bu sayi bes idi. Sektorel kirilimda kimyasal, plastik ve kaucuk sanayii en sert daralmayi yasarken, metalik olmayan mineral urunler guclu bir uretim artisi gosterdi. Bu, ust uste ikinci ay kaydedilen artis oldu ve Mayis 2022'den bu yana en yuksek hizda gerceklesti.\n\nMaliyet basliginda girdi maliyeti enflasyonu, yakit ve hammadde fiyatlarindaki yukselis nedeniyle uc ayin en yuksek seviyesine cikti. Firmalar satis fiyatlarini buna paralel artirdi; ancak giyim ve deri urunleri ureticileri fiyat artislarinda daha temkinli davrandi. Tedarikcilerin teslimat sureleri Orta Dogu kaynakli aksakliklar nedeniyle uzadi, buna karsilik genel satin alma yavaslamasi tedarik zinciri baskisini kismen hafifletti.\n\nISO uyesi sanayi kuruluslari acisindan veri, ucuncu ceyrekte de talep kosullarinin zayif kalacagina ve maliyet-fiyat makasinin daraldigina isaret ediyor. Ozellikle ihracata donuk kimya ve plastik kollarinda siparis kaybi belirgin. PMI'daki sinirli iyilesme, bolgesel gerilimin yatismasi halinde son ceyrekte toparlanma potansiyeli oldugunu da gosteriyor.",
+      "published_at": "2026-09-01T11:20:00+03:00",
+      "language": "tr",
+      "summary": "ISO Turkiye Imalat PMI agustosta 48,1'e cikarak uc ayin zirvesine ulasti; daralma suruyor ama hiz kesiyor. Kimya, plastik ve kaucukta en sert daralma, metalik olmayan mineral urunlerde Mayis 2022'den bu yana en hizli uretim artisi kaydedildi. Sanayici icin ucuncu ceyrekte zayif talep ve daralan maliyet-fiyat makasi anlamina geliyor.",
+      "key_points": [
+        "PMI agustosta 48,1; uc ayin en yuksegi ancak hala 50 esiginin altinda",
+        "Yeni siparisler ve ihracat siparisleri geriledi, dusus hizi yavasladi",
+        "Agustosta yalnizca iki sektor istihdam artisi bildirdi (temmuzda bes)",
+        "Metalik olmayan mineral urunlerde Mayis 2022'den bu yana en hizli uretim artisi",
+        "Tedarikci teslimat sureleri Orta Dogu kaynakli aksakliklarla uzadi"
+      ],
+      "entities": {
+        "kurum": [
+          "Istanbul Sanayi Odasi",
+          "S&P Global"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat Sanayi",
+          "Kimya",
+          "Plastik",
+          "Cimento"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "imalat-pmi",
+        "iso-pmi",
+        "yeni-siparis",
+        "tedarik-zinciri",
+        "maliyet-baskisi"
+      ],
+      "importance_factors": {
+        "authority": 68,
+        "impact": 86,
+        "keyword": 90,
+        "recency": 72,
+        "corroboration": 78,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "isci-haber",
+      "url": "https://www.iscihaber.net/gundem/tcmb-cari-islemler-hesabi-36-milyon-dolar-fazla-verdi/262273",
+      "title": "TCMB: Cari islemler hesabi 36 milyon dolar fazla verdi",
+      "body": "Turkiye Cumhuriyet Merkez Bankasi, 2026 Temmuz ayina iliskin odemeler dengesi istatistiklerini acikladi. Verilere gore cari islemler hesabi temmuz ayinda 36 milyon ABD dolari fazla verdi. Boylece yillikandirilmis cari acik yaklasik 40,7 milyar ABD dolari seviyesinde gerceklesti.\n\nAltin ve enerji haric cari islemler fazlasi temmuzda 4 milyar 972 milyon dolara ulasti. Bu ayrim, cari acigin buyuk olcude enerji ithalati ve altin talebinden kaynaklandigini gosteriyor; enerji fiyatlarindaki her yukselis dogrudan dis dengeye yansiyor.\n\nOdemeler dengesi tanimli dis ticaret acigi temmuz ayinda 5 milyar 579 milyon dolar olarak gerceklesti. Yillik bazda dis ticaret acigi 77,2 milyar dolar seviyesinde bulunuyor. Hizmetler dengesi yillik bazda 63,5 milyar dolar fazla vererek dis dengeyi destekleyen ana kalem olmayi surdurdu; tasimacilik hizmetlerinden 2 milyar 893 milyon dolar, seyahat kaleminden ise 5 milyar 968 milyon dolar net gelir saglandi. Birincil gelir dengesi 25,2 milyar dolar, ikincil gelir dengesi 1,9 milyar dolar acik verdi.\n\nRezerv tarafinda temmuz ayinda resmi rezervlerde 14 milyar 252 milyon dolarlik net artis kaydedildi. Yillik bazda ise doviz rezervlerinde 31,5 milyar dolarlik bir azalis gozleniyor.\n\nSanayiciler acisindan veri iki yonlu okunuyor. Bir yandan enerji ve altin haric fazlanin 5 milyar dolara yaklasmasi, imalat sanayii ihracatinin dis dengeye guclu katki verdigini gosteriyor. Diger yandan Brent petrolun eylul basinda 100 dolarin uzerine cikmasi, agustos ve eylul cari denge verilerinde enerji faturasinin yeniden artacagina isaret ediyor. Bu da hem kur baskisi hem de Merkez Bankasi'nin faiz indirim takvimi uzerinde belirleyici olacak.",
+      "published_at": "2026-09-11T11:10:00+03:00",
+      "language": "tr",
+      "summary": "TCMB verilerine gore cari islemler hesabi temmuzda 36 milyon dolar fazla verdi; altin ve enerji haric fazla 4,97 milyar dolara ulasti, yillikandirilmis cari acik 40,7 milyar dolar. Resmi rezervlerde temmuzda 14,25 milyar dolar net artis kaydedildi. Sanayici icin kritik nokta: imalat ihracati dis dengeye guclu katki veriyor ancak eylulde 100 dolari asan petrol fiyati enerji faturasini ve kur baskisini yeniden artiracak.",
+      "key_points": [
+        "Temmuzda cari islemler hesabi 36 milyon dolar fazla verdi",
+        "Altin ve enerji haric cari fazla 4 milyar 972 milyon dolar",
+        "Yillikandirilmis cari acik yaklasik 40,7 milyar dolar",
+        "Odemeler dengesi tanimli dis ticaret acigi 5 milyar 579 milyon dolar",
+        "Resmi rezervlerde temmuzda 14 milyar 252 milyon dolar net artis"
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Turizm",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "cari-denge",
+        "odemeler-dengesi",
+        "tcmb",
+        "dis-ticaret-acigi",
+        "rezervler",
+        "enerji-ithalati"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 82,
+        "keyword": 80,
+        "recency": 99,
+        "corroboration": 60,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "karar-gazetesi",
+      "url": "https://www.karar.com/ekonomi-haberleri/bankacilik-sektorunun-net-kari-5964-milyar-liraya-ulasti-2069167",
+      "title": "Bankacilik sektorunun net kari 596,4 milyar liraya ulasti",
+      "body": "Bankacilik Duzenleme ve Denetleme Kurumu'nun (BDDK) acikladigi verilere gore Turk bankacilik sektorunun net kari 2026 Temmuz ayi itibariyla 596 milyar 395 milyon liraya ulasti. Sektorun toplam aktif buyuklugu ise 2025 sonuna gore yuzde 14,6 artisla yaklasik 53,8 trilyon lira seviyesine cikti.\n\nKredi tarafinda toplam kredi hacmi 2025 sonuna gore yuzde 18,7 artarak 27 trilyon 448 milyar liraya yukseldi. Kredilerin takibe donusum orani yuzde 2,86 olarak gerceklesti; bu oran onceki donemlere gore yukselis egiliminde olup, reel sektorde odeme guclugunun arttigina isaret ediyor. Mevduat hacmi yuzde 13,6 artarak yaklasik 30,9 trilyon liraya ulasti. Sektorun ozkaynaklari yuzde 11,9 artisla 4,6 trilyon liraya cikarken, sermaye yeterlilik rasyosu yuzde 16,61 duzeyinde korundu.\n\nBanka gruplari bazinda temmuz ayinda mevduat kabul eden yerli ozel bankalarin net kari 68 milyar 962 milyon TL olarak gerceklesti; bu, Temmuz 2025'teki 56 milyar 746 milyon TL seviyesine gore yuzde 21,5 artisa isaret ediyor. Yabanci bankalarin net kari 10 milyar 887 milyon TL, kalkinma-yatirim ve katilim bankalari grubunda ise net kar 15 milyar 151 milyon TL oldu; sonuncu grup gecen yilin ayni donemine gore yuzde 85 artis kaydetti.\n\nISO/ISOV uyeleri acisindan verilerin en kritik basligi takibe donusum orani. Kredi hacmindeki yuzde 18,7'lik nominal artis enflasyonun altinda kaldigindan reel kredi hacmi daraliyor; ayni anda takipteki kredi oraninin yukselmesi bankalarin risk istahini sinirliyor. Bu kombinasyon, ozellikle KOBI olcegindeki imalat sanayii firmalari icin isletme sermayesi kredisine erisimin zorlasacagi ve teminat kosullarinin agirlasacagi anlamina geliyor. Sermaye yeterlilik rasyosunun yuzde 16,61 ile guclu seyretmesi ise sektorun sok emme kapasitesinin korundugunu gosteriyor.",
+      "published_at": "2026-09-08T12:40:00+03:00",
+      "language": "tr",
+      "summary": "BDDK verilerine gore bankacilik sektorunun net kari temmuz itibariyla 596,4 milyar TL'ye, aktif buyuklugu 53,8 trilyon TL'ye ulasti; kredi hacmi yuzde 18,7 artisla 27,4 trilyon TL oldu. Takibe donusum orani yuzde 2,86'ya cikti. Sanayici icin anlam: nominal kredi artisi enflasyonun altinda kaldigi icin reel kredi daraliyor, takipteki kredi artisiyla birlikte KOBI'lerin isletme sermayesine erisimi zorlasiyor.",
+      "key_points": [
+        "Sektorun net kari temmuz itibariyla 596,4 milyar TL",
+        "Toplam aktif buyuklugu 53,8 trilyon TL, yil sonuna gore yuzde 14,6 artis",
+        "Kredi hacmi yuzde 18,7 artisla 27,4 trilyon TL",
+        "Takibe donusum orani yuzde 2,86",
+        "Sermaye yeterlilik rasyosu yuzde 16,61"
+      ],
+      "entities": {
+        "kurum": [
+          "BDDK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacilik",
+          "KOBI"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "bddk",
+        "bankacilik",
+        "kredi",
+        "takipteki-krediler",
+        "kobi-finansmani"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 80,
+        "keyword": 75,
+        "recency": 92,
+        "corroboration": 55,
+        "reach": 58
+      }
+    },
+    {
+      "source_slug": "ekonomist",
+      "url": "https://www.ekonomist.com.tr/borsa/spk-dan-borsada-iki-onemli-karar-pay-sahipligi-bildirim-siniri-yuzde-3-oldu-78519",
+      "title": "SPK'dan borsada iki onemli karar: Pay sahipligi bildirim siniri yuzde 3 oldu",
+      "body": "Sermaye Piyasasi Kurulu (SPK), Borsa Istanbul'da islem goren ortakliklari yakindan ilgilendiren iki onemli duzenleme karari acikladi. Kararlar 11 Eylul 2026 tarihinden itibaren uygulamaya giriyor.\n\nBirinci karar, pay sahipligi bildirim esigine iliskin. Borsada islem goren ihraccilarda pay sahipligi bildirim siniri yuzde 3 olarak belirlendi. Boylece daha genis bir yatirimci kitlesi, sahip olduklari paylari kamuya duyurmakla yukumlu hale geliyor. SPK, dogrudan ve dolayli pay sahipliklerinin belirlenen esiklerin uzerindeki kisimlarini gosteren tablolarin Merkezi Kayit Kurulusu (MKK) tarafindan aninda guncellenerek kamuya aciklanacagini bildirdi.\n\nIkinci karar, fiili dolasimdaki pay orani tanimina iliskin. SPK, fiili dolasimdaki pay oranini halka acikligi gosteren oran olarak yeniden tanimladi. Hesaplamada kamu kurumlarinin sahip oldugu paylar, kurucu ve iliskili taraflarin paylari, yonetim kurulu uyeleri ve ust yonetimin paylari, rehinli veya kisitlamaya tabi paylar ile yurt disi piyasalarda islem goren paylar dislanacak. Fiili dolasimdaki pay orani verileri 11 Eylul 2026 tarihinden itibaren MKK tarafindan gunluk olarak hesaplanacak ve kamuya duyurulacak.\n\nDuzenlemelerin amaci, Borsa Istanbul'da seffafligi artirmak, manipulasyon ve fiyat oynakligi risklerini azaltmak ve endeks hesaplamalarinda kullanilan halka aciklik verilerini gercek dolasim gorunumuyle uyumlu hale getirmek olarak aciklandi.\n\nBorsada islem goren sanayi sirketleri acisindan karar, ortaklik yapisinin daha seffaf sekilde raporlanmasi ve endeks agirliklarinin yeniden hesaplanmasi anlamina geliyor. Fiili dolasim oraninin gunluk yayimlanmasi, ozellikle dusuk halka aciklik oranina sahip sanayi sirketlerinin endeks agirliklarinda ve likidite gorunumunde degisiklige yol acabilir. Ayrica yuzde 3 esigi, stratejik ortak ve fon girislerinin daha erken asamada kamuya yansimasini saglayacak.",
+      "published_at": "2026-09-09T13:15:00+03:00",
+      "language": "tr",
+      "summary": "SPK, 11 Eylul 2026'dan gecerli olmak uzere borsada pay sahipligi bildirim esigini yuzde 3'e indirdi ve fiili dolasimdaki pay oranini yeniden tanimlayarak MKK'nin gunluk hesaplamasini zorunlu kildi. Kamu, kurucu, ust yonetim, rehinli ve yurt disi paylar hesaplamadan dislaniyor. Borsada islem goren sanayi sirketleri icin ortaklik yapisi seffafligi artacak, endeks agirliklari ve likidite gorunumu degisebilir.",
+      "key_points": [
+        "Pay sahipligi bildirim siniri yuzde 3'e indirildi, 11 Eylul 2026'da yururlukte",
+        "Fiili dolasimdaki pay orani halka acikligi gosteren oran olarak yeniden tanimlandi",
+        "Kamu, kurucu, ust yonetim, rehinli ve yurt disi paylar hesaplamadan dislaniyor",
+        "MKK verileri gunluk olarak hesaplayip kamuya duyuracak",
+        "Dusuk halka aciklikli sanayi sirketlerinin endeks agirliklari degisebilir"
+      ],
+      "entities": {
+        "kurum": [
+          "SPK",
+          "Borsa Istanbul",
+          "MKK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Sermaye Piyasalari"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "spk",
+        "sermaye-piyasasi",
+        "borsa-istanbul",
+        "halka-aciklik",
+        "mevzuat-degisikligi"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 68,
+        "keyword": 65,
+        "recency": 95,
+        "corroboration": 45,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/03/enflasyon-rakamlari-tufe-agustos-2026/",
+      "title": "Enflasyon Rakamlari (TUFE) - Agustos 2026",
+      "body": "Turkiye Istatistik Kurumu (TUIK), 2026 Agustos ayina iliskin Tuketici Fiyat Endeksi (TUFE) ve Yurt Ici Uretici Fiyat Endeksi (Yi-UFE) sonuclarini acikladi.\n\nTUFE agustos ayinda bir onceki aya gore yuzde 1,84 artti. Bu gelismeyle yillik enflasyon bir onceki aya gore 0,24 puan gerileyerek yuzde 31,51 seviyesine indi. On iki aylik ortalamalara gore degisim orani yuzde 31,79 olarak hesaplandi.\n\nAna harcama gruplari bazinda yillik artislar incelendiginde gida ve alkolsuz icecekler yuzde 33,79, ulastirma yuzde 35,08, konut-su-elektrik-gaz ve diger yakitlar yuzde 39,77 oraninda arttı. Gida grubu tek basina yillik enflasyona yaklasik 8,12 puan katki yaparak en buyuk baski kalemi oldu. Aylik bazda ise yuzde 4,82 artan ulastirma grubu fiyatlari agustos enflasyonunun ana belirleyicisi oldu.\n\nCekirdek gostergelerde B ve C endeksleri de yuksek seyrini surduruyor. Enerji, gida, icecek, tutun ve altin haric TUFE olarak hesaplanan C endeksi agustosta yuzde 1,81 artti; yillik cekirdek enflasyon yuzde 30,07 olarak gerceklesti. Temel mal grubunda yillik fiyat artisi yuzde 15,89 iken hizmet grubunda yuzde 40,28'e ulasti. Hizmet enflasyonundaki bu katilik, dezenflasyon surecinin onundeki en onemli engel olarak one cikiyor.\n\nUretici tarafinda Yi-UFE agustosta yuzde 2,57 artarken yillik Yi-UFE artis orani yuzde 27,95 oldu. Uretici enflasyonunun tuketici enflasyonunun altinda kalmasi, imalat sanayiinde maliyet artislarinin nihai fiyatlara tam yansitilamadigini ve marj sikismasinin surdugunu gosteriyor. Sanayiciler acisindan ozellikle konut-elektrik-gaz grubundaki yuzde 39,77'lik yillik artis, enerji maliyetlerinin uretim maliyetleri icindeki payinin buyumeye devam ettigine isaret ediyor.",
+      "published_at": "2026-09-03T10:45:00+03:00",
+      "language": "tr",
+      "summary": "TUIK'e gore agustosta TUFE aylik yuzde 1,84 artti, yillik enflasyon yuzde 31,51'e geriledi; Yi-UFE aylik yuzde 2,57, yillik yuzde 27,95 oldu. Hizmet enflasyonu yuzde 40,28 ile katiligini koruyor, konut-elektrik-gaz grubu yillik yuzde 39,77 artti. Sanayici icin kritik: uretici enflasyonunun tuketici enflasyonunun altinda kalmasi, maliyet artislarinin fiyata yansitilamadigini ve marj sikismasinin surdugunu gosteriyor.",
+      "key_points": [
+        "TUFE agustosta aylik yuzde 1,84 artti, yillik enflasyon yuzde 31,51",
+        "Yi-UFE aylik yuzde 2,57, yillik yuzde 27,95",
+        "Cekirdek (C) endeks yillik yuzde 30,07; hizmet enflasyonu yuzde 40,28",
+        "Konut-su-elektrik-gaz ve diger yakitlar yillik yuzde 39,77 artti",
+        "Ulastirma grubu aylik yuzde 4,82 ile agustos enflasyonunun ana belirleyicisi oldu"
+      ],
+      "entities": {
+        "kurum": [
+          "TUIK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Gida",
+          "Enerji",
+          "Ulastirma",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "enflasyon",
+        "tufe",
+        "ufe",
+        "cekirdek-enflasyon",
+        "tuik",
+        "maliyet-baskisi"
+      ],
+      "importance_factors": {
+        "authority": 92,
+        "impact": 94,
+        "keyword": 90,
+        "recency": 75,
+        "corroboration": 70,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "finansopia",
+      "url": "https://www.finansopia.com/ekonomi/brent-petrol-110-dolara-dayandi/",
+      "title": "Brent petrol 110 dolara dayandi",
+      "body": "Uluslararasi petrol piyasalarinda sert yukselis surdu. Brent petrolun varil fiyati 11 Eylul 2026 Cuma gunu 108 dolarin uzerine cikarak 110 dolar esigine yaklasti; ABD hafif ham petrolu WTI ise 103 dolar seviyelerine ulasti. Brent haftalik bazda yuzde 13'e yaklasan artis kaydederken, eylul ayindaki toplam yukselis yuzde 18'e ulasti.\n\nYukselisin arkasindaki temel etken, kritik enerji koridorlarindaki jeopolitik gerilim. Yemen'de Muha Limani'nin ele gecirilmesi ve Hurmuz Bogazi'nda yasanan tanker olaylari, kuresel enerji sevkiyatinda risk primini yukseltti. Gemi gecislerindeki azalma arz endiselerini derinlestirdi.\n\nPetroldeki yukselis kuresel finansal kosullara da yansidi. Artan enflasyon beklentileri ABD tahvil getirilerini yukaride tuttu; 10 yillik ABD tahvil faizi yuzde 5 seviyesine yaklasirken 30 yillik getiriler 19 yilin en yuksek duzeylerine cikti. Degerli metallerde ise satis baskisi gorulduve spot altin haftalik bazda yuzde 2'nin uzerinde deger kaybetti, spot gumus 63,49 dolar seviyesine geriledi.\n\nTurkiye tarafinda 11 Eylul'de pompa fiyatlarinda yeni bir duzenleme yapilmadi; en son 4 Eylul'de akaryakit fiyatlarinda artis gerceklesmisti. Ancak ham petroldeki seviyenin kalici olmasi halinde yeni zamlarin kacinilmaz oldugu degerlendiriliyor.\n\nEnerjide net ithalatci konumundaki Turkiye icin bu tablo dogrudan maliyet ve dis denge riski anlamina geliyor. Sanayiciler acisindan etkiler uc kanaldan geliyor: dogrudan yakit ve elektrik maliyeti, petrol turevi hammadde (plastik, kimya, kaucuk) fiyatlari ve lojistik-navlun maliyetleri. ISO Turkiye Imalat PMI verilerinde agustosta girdi maliyeti enflasyonunun uc ayin zirvesine cikmasinin ana nedenlerinden biri de yakit fiyatlariydi. Merkez Bankasi'nin eylul karar metninde enerji fiyatlarini yukari yonlu risk olarak tanimlamasi, faiz indiriminin da bu gelismeye bagli oldugunu gosteriyor.",
+      "published_at": "2026-09-11T17:40:00+03:00",
+      "language": "tr",
+      "summary": "Brent petrol 11 Eylul'de 108 dolarin uzerine cikarak 110 dolara dayandi; haftalik artis yuzde 13'e, eylul ayi artisi yuzde 18'e ulasti. Yukselisin nedeni Hurmuz Bogazi ve Yemen kaynakli arz riskleri. Enerjide net ithalatci Turkiye'de sanayici icin yakit-elektrik maliyeti, petrol turevi hammadde fiyatlari ve navlun olmak uzere uc kanaldan maliyet baskisi anlamina geliyor; ayrica TCMB'nin faiz indirim takvimini oteleyen ana unsur.",
+      "key_points": [
+        "Brent petrol 11 Eylul'de 108 dolarin uzerine cikti, WTI 103 dolara ulasti",
+        "Haftalik yukselis yuzde 13'e, eylul ayi toplam artisi yuzde 18'e ulasti",
+        "Hurmuz Bogazi ve Yemen Muha Limani kaynakli arz riskleri belirleyici",
+        "ABD 10 yillik tahvil faizi yuzde 5'e yaklasti, 30 yillik getiriler 19 yilin zirvesinde",
+        "Turkiye'de son akaryakit zammi 4 Eylul'de yapildi, yeni zam bekleniyor"
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB",
+          "EPDK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Kimya",
+          "Plastik",
+          "Lojistik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "petrol",
+        "brent",
+        "enerji-maliyeti",
+        "jeopolitik-risk",
+        "hurmuz-bogazi",
+        "akaryakit"
+      ],
+      "importance_factors": {
+        "authority": 62,
+        "impact": 92,
+        "keyword": 85,
+        "recency": 99,
+        "corroboration": 75,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "internet-haber",
+      "url": "https://www.internethaber.com/kuresel-piyasalarda-enerji-krizi-tirmaniyor-brent-petrol-neden-yukseliyor-dev-zam-mi-geliyor-2459067h.htm",
+      "title": "Kuresel piyasalarda enerji krizi tirmaniyor! Brent petrol neden yukseliyor, dev zam mi geliyor?",
+      "body": "Kuresel enerji piyasalarinda tansiyon yukseliyor. Brent petrolun varil fiyati 11 Eylul 2026'da 109,62 dolar seviyesine kadar cikarak son donemin en yuksek duzeylerine ulasti; haftalik kazanc yuzde 8'i asti. ABD hafif ham petrolu WTI ise ayni gun 103 dolarin uzerinde islem gordu.\n\nHaberde yukselisi tetikleyen dort ana etken siralaniyor. Birincisi, Orta Dogu'daki jeopolitik gerilim ve ABD-Iran iliskilerindeki tirmanmanin yarattigi arz endiseleri. Ikincisi, Hurmuz Bogazi ve Kizildeniz'deki denizcilik guvenligi riskleri ve buna bagli olarak artan navlun ve sigorta maliyetleri. Ucuncusu, basta Cin olmak uzere Asya kaynakli talep artisi. Dorduncusu, ABD stratejik petrol rezervlerindeki ve dizel stoklarindaki gerileme.\n\nTurkiye'ye etkisi basliginda, varil fiyatinin 100 dolar esiginin uzerine yerlesmesi ve kur hareketlerinin birlesimiyle benzin ve motorinde yeni zamlarin gundeme gelecegi belirtiliyor. Analistler, yurt ici pompa fiyatlarinda onumuzdeki gunlerde artis bekliyor.\n\nEnflasyon kanali da degerlendirmede yer aliyor. TUFE sepetinde yakit alt grubunun agirligi yuzde 5-6 civarinda olsa da, ikincil etkiler lojistik, gida ve imalat kanallarindan enflasyonun yapisal bilesenlerini besliyor. Bu da Merkez Bankasi'nin dezenflasyon patikasini zorlastiriyor.\n\nSanayi uzerindeki etki dogrudan. Elektrik uretiminde dogal gazin agirligi nedeniyle petrol ve gaz fiyatlarindaki artis, sanayi elektrik tarifelerine gecikmeli olarak yansiyor. Ayrica petrokimya zincirinde hammadde maliyetleri yukselecegi icin plastik, kaucuk, boya ve kimya sanayiinde girdi maliyeti baskisi artacak. ISO Turkiye Imalat PMI agustos verisinde girdi maliyeti enflasyonunun uc ayin zirvesine cikmasi, bu surecin zaten basladigini gosteriyor. Ihracatci firmalar icin navlun maliyetlerindeki artis ek bir rekabet dezavantaji yaratiyor.",
+      "published_at": "2026-09-11T12:25:00+03:00",
+      "language": "tr",
+      "summary": "Brent petrol 11 Eylul'de 109,62 dolara cikti; jeopolitik gerilim, Hurmuz ve Kizildeniz guvenlik riskleri, Asya talebi ve ABD stok dususu yukselisin dort nedeni. Turkiye'de benzin ve motorinde yeni zam bekleniyor. Sanayici icin etki uc kanalda: sanayi elektrik tarifelerine gecikmeli yansima, petrokimya zincirinde hammadde maliyeti artisi ve ihracatta navlun kaynakli rekabet dezavantaji.",
+      "key_points": [
+        "Brent 11 Eylul'de 109,62 dolara ulasti, haftalik kazanc yuzde 8'i asti",
+        "Jeopolitik gerilim, denizcilik guvenligi, Asya talebi ve ABD stok dususu ana etkenler",
+        "Yurt ici benzin ve motorin fiyatlarinda yeni zam bekleniyor",
+        "Yakitin TUFE agirligi yuzde 5-6 olsa da ikincil etkiler enflasyonu besliyor",
+        "Petrokimya zincirinde plastik, kaucuk, boya ve kimya sanayii girdi maliyeti baskisi altinda"
+      ],
+      "entities": {
+        "kurum": [
+          "EPDK",
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Petrokimya",
+          "Plastik",
+          "Lojistik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "petrol",
+        "brent",
+        "enerji-maliyeti",
+        "akaryakit",
+        "petrokimya",
+        "jeopolitik-risk"
+      ],
+      "importance_factors": {
+        "authority": 58,
+        "impact": 90,
+        "keyword": 85,
+        "recency": 99,
+        "corroboration": 75,
+        "reach": 58
+      }
+    },
+    {
+      "source_slug": "hurses",
+      "url": "https://www.hurses.com.tr/demir-celik-ihracatinda-agustos-atagi",
+      "title": "Demir-celik ihracatinda agustos atagi",
+      "body": "Turkiye'nin demir ve demir disi metaller ile celik sektorlerinin ihracat performansi agustos ayinda yukselisini surdurdu. Agustos ayinda demir ve demir disi metaller ihracati yuzde 19,3 artisla 1,3 milyar dolara, celik ihracati ise yuzde 12,2 artisla 1,5 milyar dolara ulasti. Iki sektorun agustos ayindaki toplam ihracati 2,8 milyar dolari asti.\n\nAkdeniz Demir ve Demir Disi Metaller Ihracatcilari Birligi (ADMIB) verilerine gore birligin demir ve demir disi metaller ihracati agustosta yuzde 12,7 artisla 73 milyon dolara, celik ihracati ise yuzde 48,1 artisla 270 milyon dolara yukseldi. Ocak-Agustos doneminde ADMIB'in demir ve demir disi metaller ihracati yuzde 3,7 artisla 549 milyon dolara, celik ihracati yuzde 19,9 artisla 1,7 milyar dolara ulasti; toplam ihracat 2,2 milyar dolari gecti.\n\nPazar dagiliminda Almanya 222,4 milyon dolarla agustos ayinin en buyuk pazari oldu. Almanya'yi 182,1 milyon dolarla Italya ve 163,8 milyon dolarla Birlesik Krallik izledi. Buyume hizinda ise ABD yuzde 137 ile one cikti; Misir'a ihracat yuzde 134 artis kaydetti. Urun bazinda ADMIB ihracatinda celik borular 78,1 milyon dolarla ilk sirada yer alirken, yassi sicak haddelenmis urunler 71,8 milyon dolara ulasti.\n\nADMIB Yonetim Kurulu Baskani Rahmi Incetan, firmalarin zorlu kosullara ragmen pazarlardaki varliklarini korudugunu belirtti. Incetan, Cin kaynakli rekabetin ve artan girdi maliyetlerinin kar marjlarini tehdit ettigini vurgulayarak enerji, isgucu ve lojistik maliyetlerini hedefleyen ihracat destek mekanizmalari talep etti.\n\nSektor acisindan tablo ikili bir gorunum sunuyor: miktar ve deger bazinda ihracat artiyor ancak marjlar eriyor. Avrupa Birligi'nin karbon sinirinda duzenleme mekanizmasi (SKDM) gecis doneminin devam ettigi bir ortamda, enerji yogun demir-celik sektorunde maliyet rekabetciligi kritik onem tasiyor.",
+      "published_at": "2026-09-09T09:20:00+03:00",
+      "language": "tr",
+      "summary": "Agustosta Turkiye'nin celik ihracati yuzde 12,2 artisla 1,5 milyar dolara, demir ve demir disi metaller ihracati yuzde 19,3 artisla 1,3 milyar dolara ulasti; toplam 2,8 milyar dolari asti. Almanya, Italya ve Birlesik Krallik ilk uc pazar; ABD'ye ihracat yuzde 137 artti. ADMIB Baskani Incetan, Cin rekabeti ve artan girdi maliyetlerinin marjlari tehdit ettigini belirterek enerji, isgucu ve lojistik odakli ihracat destegi istedi.",
+      "key_points": [
+        "Agustosta celik ihracati yuzde 12,2 artisla 1,5 milyar dolar",
+        "Demir ve demir disi metaller ihracati yuzde 19,3 artisla 1,3 milyar dolar",
+        "Almanya 222,4 milyon dolarla en buyuk pazar; ABD'ye ihracat yuzde 137 artti",
+        "ADMIB'in ocak-agustos toplam ihracati 2,2 milyar dolari gecti",
+        "ADMIB Baskani Incetan: Cin rekabeti ve girdi maliyetleri marjlari tehdit ediyor"
+      ],
+      "entities": {
+        "kurum": [
+          "ADMIB"
+        ],
+        "kisi": [
+          "Rahmi Incetan"
+        ],
+        "sektor": [
+          "Demir-Celik",
+          "Metal"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "dis-ticaret",
+      "sentiment": "POZITIF",
+      "tags": [
+        "demir-celik",
+        "ihracat",
+        "metal-sanayi",
+        "maliyet-baskisi",
+        "cin-rekabeti"
+      ],
+      "importance_factors": {
+        "authority": 68,
+        "impact": 82,
+        "keyword": 80,
+        "recency": 95,
+        "corroboration": 55,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "ekonomim",
+      "url": "https://www.ekonomim.com/sektorler/kimya-ihracati-8-ayda-228-milyar-dolara-ulasti-hedef-35-milyar-dolar-haberi-916931",
+      "title": "Kimya ihracati 8 ayda 22,8 milyar dolara ulasti, hedef 35 milyar dolar",
+      "body": "Turkiye kimya sektoru, 2026 yilinin ilk 8 ayinda ihracatini gecen yilin ayni donemine gore yuzde 4,6 artirarak 22,8 milyar dolara cikardi. Yilin ilk yarisinda 17,1 milyar dolarla tarihinin en yuksek ilk 6 aylik ihracatina ulasan sektor, agustos ayinda da 2,7 milyar dolarlik ihracat gerceklestirdi.\n\nIstanbul Kimyevi Maddeler ve Mamulleri Ihracatcilari Birligi (IKMIB) Yonetim Kurulu Baskani Vefa Ibrahim Araci, kuresel ticaretteki belirsizlik, jeopolitik riskler ve maliyet baskisina ragmen 2026 yili icin belirlenen 35 milyar dolarlik ihracat hedefini koruduklarini soyledi. Araci, 2029 icin sektorun hedefini 55 milyar dolar olarak acikladi.\n\nPazar siralamasinda 2026'nin ilk 8 ayinda 1,27 milyar dolarla Ispanya ilk sirada yer aldi. Italya 1,26 milyar dolarla ikinci, ABD 1,04 milyar dolarla ucuncu, Almanya ise 966 milyon dolarla dorduncu siradaydi.\n\nAraci, sektorun stratejik onceligini ithalat bagimliliginin azaltilmasi olarak tanimladi. Bu kapsamda Yumurtalik'taki petrokimya yatirimlari ve GEBKIM'de Turkiye'de ilk kez gerceklestirilecek maleik asit uretimi one cikan projeler arasinda. Avrupa'nin belirli kimyasallarda uretimden cekilmesinin Turk ureticilerine pazar payi firsati yarattigi da vurgulandi.\n\nKimya Teknoloji Merkezi'nin yeniden yapilandirildigi, aylik gelirinin yuzde 52 arttigi ve sabit borcunun yuzde 40 azaldigi bildirildi. Turk Standardlari Enstitusu (TSE) ile yeni test isbirlikleri sayesinde firmalarin yurt disinda test yaptirma maliyetlerinin dusurulmesi hedefleniyor.\n\nSektorun performansi, ISO Turkiye Imalat PMI verileriyle birlikte degerlendirildiginde celiskili bir tablo ortaya koyuyor: ihracat deger bazinda artarken, agustos PMI'da en sert daralma kimyasal, plastik ve kaucuk sektorunde kaydedilmisti. Bu, ic talepteki zayifligin ve girdi maliyeti baskisinin sektorde marj erimesine yol actigina isaret ediyor.",
+      "published_at": "2026-09-09T10:30:00+03:00",
+      "language": "tr",
+      "summary": "Kimya sektoru 2026'nin ilk 8 ayinda ihracatini yuzde 4,6 artirarak 22,8 milyar dolara cikardi; agustos ihracati 2,7 milyar dolar. IKMIB Baskani Araci, 35 milyar dolarlik yil sonu hedefini koruduklarini ve 2029 icin 55 milyar dolar hedeflediklerini belirtti. Ithalat bagimliligini azaltmak icin Yumurtalik petrokimya yatirimlari ve GEBKIM'de Turkiye'nin ilk maleik asit uretimi one cikiyor.",
+      "key_points": [
+        "Kimya ihracati 8 ayda yuzde 4,6 artisla 22,8 milyar dolar",
+        "Agustos ayi ihracati 2,7 milyar dolar; ilk yari 17,1 milyar dolarla rekor",
+        "2026 hedefi 35 milyar dolar, 2029 hedefi 55 milyar dolar",
+        "En buyuk pazarlar: Ispanya 1,27 milyar, Italya 1,26 milyar, ABD 1,04 milyar dolar",
+        "Yumurtalik petrokimya yatirimlari ve GEBKIM'de ilk maleik asit uretimi"
+      ],
+      "entities": {
+        "kurum": [
+          "IKMIB",
+          "GEBKIM",
+          "TSE"
+        ],
+        "kisi": [
+          "Vefa Ibrahim Araci"
+        ],
+        "sektor": [
+          "Kimya",
+          "Petrokimya",
+          "Plastik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "dis-ticaret",
+      "sentiment": "POZITIF",
+      "tags": [
+        "kimya",
+        "ihracat",
+        "petrokimya",
+        "ithalat-bagimliligi",
+        "yatirim"
+      ],
+      "importance_factors": {
+        "authority": 78,
+        "impact": 80,
+        "keyword": 78,
+        "recency": 95,
+        "corroboration": 55,
+        "reach": 62
+      }
+    },
+    {
+      "source_slug": "ekonomim-net",
+      "url": "https://www.ekonomim.net/haber/otomotiv-ihracati-8-ayda-guclu-performansini-surdurdu-12323",
+      "title": "Otomotiv ihracati 8 ayda guclu performansini surdurdu",
+      "body": "Turkiye otomotiv endustrisi, 2026 yilinin ocak-agustos doneminde 27,2 milyar dolarlik ihracat gerceklestirerek tum zamanlarin en yuksek ocak-agustos donemi performansina ulasti. Turkiye Ihracatcilar Meclisi (TIM) verilerine gore bu rakam gecen yilin ayni donemine gore yuzde 2,5 artisa isaret ediyor. Agustos ayinda otomotiv ihracati 2 milyar 791 milyon dolar oldu.\n\nSektor, Turkiye ihracatinda birinciligini surdurdu; sekiz aylik donemde toplam ihracattan aldigi pay yaklasik yuzde 14,7 seviyesinde gerceklesti.\n\nAlt urun gruplari icinde en buyuk kalem tedarik sanayii oldu. Tedarik sanayii agustosta 1 milyar 208 milyon dolar, ocak-agustos doneminde ise 10 milyar 677 milyon dolar ihracat yapti ve toplam otomotiv ihracatinin yuzde 39,2'sini olusturdu. Bu, Turkiye'nin otomotivdeki gucunun yalnizca ana sanayiden degil, genis yan sanayi tabaninda oldugunu gosteriyor.\n\nUlke bazinda Almanya 4,4 milyar dolarla en buyuk pazar konumunda. Almanya'yi 3,3 milyar dolarla Fransa, 2,5 milyar dolarla Birlesik Krallik, 2,4 milyar dolarla Italya ve 2,2 milyar dolarla Ispanya izliyor. Buyume performansinda Fransa yillik 338,2 milyon dolarlik artisla one cikarken, Italya 318,2 milyon dolarlik ilave ihracatla ikinci sirada yer aldi.\n\nUretim bolgeleri acisindan Kocaeli 8 milyar dolarlik ihracatla sektorde lider konumda. Kocaeli'yi 6,3 milyar dolarla Bursa, 5,6 milyar dolarla Istanbul, 2,9 milyar dolarla Sakarya ve 1,3 milyar dolarla Ankara izliyor.\n\nDeger bazindaki bu artisa karsin adet bazinda tablo farkli. OSD verilerine gore yilin ilk 7 ayinda toplam otomotiv uretimi yuzde 8 dususle 767 bin 216 adede geriledi, otomobil uretimi yuzde 19 azaldi ve sektorde kapasite kullanim orani ortalama yuzde 62 duzeyinde kaldi. Deger artisi ile adet dususu arasindaki makas, urun kompozisyonunun daha yuksek katma degerli ticari araclara ve tedarik sanayii urunlerine kaydigini gosteriyor.",
+      "published_at": "2026-09-03T11:15:00+03:00",
+      "language": "tr",
+      "summary": "Otomotiv ihracati ocak-agustos doneminde yuzde 2,5 artisla 27,2 milyar dolara ulasarak tum zamanlarin en yuksek 8 aylik performansini kaydetti; agustos ihracati 2,79 milyar dolar. Tedarik sanayii tek basina 10,68 milyar dolarla toplamin yuzde 39,2'sini olusturdu. Ancak OSD verilerine gore uretim adet bazinda yuzde 8 geriledi ve kapasite kullanimi yuzde 62'de kaldi; deger ile adet arasindaki makas urun kompozisyonunun katma degerli araclara kaydigini gosteriyor.",
+      "key_points": [
+        "Ocak-agustos otomotiv ihracati yuzde 2,5 artisla 27,2 milyar dolar (rekor)",
+        "Agustos ihracati 2 milyar 791 milyon dolar; sektor Turkiye ihracatinda birinci",
+        "Tedarik sanayii 10,68 milyar dolarla toplam otomotiv ihracatinin yuzde 39,2'si",
+        "En buyuk pazarlar Almanya 4,4 milyar, Fransa 3,3 milyar, Birlesik Krallik 2,5 milyar dolar",
+        "OSD verilerine gore ilk 7 ayda uretim yuzde 8 dustu, kapasite kullanimi yuzde 62"
+      ],
+      "entities": {
+        "kurum": [
+          "TIM",
+          "OSD",
+          "OIB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Tedarik Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "dis-ticaret",
+      "sentiment": "POZITIF",
+      "tags": [
+        "otomotiv",
+        "ihracat",
+        "tedarik-sanayi",
+        "kapasite-kullanimi",
+        "uretim"
+      ],
+      "importance_factors": {
+        "authority": 64,
+        "impact": 80,
+        "keyword": 78,
+        "recency": 75,
+        "corroboration": 60,
+        "reach": 52
+      }
+    },
+    {
+      "source_slug": "sanayi-gazetesi",
+      "url": "https://sanayigazetesi.com.tr/turkiyenin-ihracatinda-sanayi-sektorunun-payi-yuzde-576-oldu/",
+      "title": "Turkiye'nin ihracatinda sanayi sektorunun payi yuzde 57,6 oldu",
+      "body": "Turkiye Istatistik Kurumu'nun Girisim Ozelliklerine Gore Dis Ticaret Istatistikleri arastirmasi, Turkiye'nin dis ticaretinde sanayi sektorunun agirligini ortaya koydu. Verilere gore toplam ihracatin yuzde 57,6'sini sanayi sektorunde faaliyet gosteren girisimler gerceklestirdi.\n\nArastirmanin en dikkat cekici bulgularindan biri, ihracatta yogunlasma duzeyi oldu: toplam ihracatin yuzde 51'ine ilk 500 girisim imza atti. Bu, Turkiye'nin ihracat kapasitesinin gorece kucuk sayida buyuk olcekli firmada yogunlastigini ve ihracat tabanini genisletme ihtiyacinin surdugunu gosteriyor.\n\nSanayi sektorunun ihracattaki yuzde 57,6'lik payi, hizmet ve ticaret sektorlerinin toplamindan daha yuksek. Bu yapi, Turkiye'nin dis ticaret dengesinin imalat sanayii performansina dogrudan bagli oldugunu teyit ediyor. Nitekim TUIK'in acikladigi temmuz sanayi uretimi verilerinde imalat sanayii yillik yalnizca yuzde 0,3 artis kaydetmisti; ISO Turkiye Imalat PMI ise agustosta 48,1 ile esik degerin altinda kalmisti.\n\nIhracatci girisimlerin sektorel dagiliminda otomotiv, kimya, demir-celik, tekstil-hazir giyim ve makine on siralarda yer aliyor. Otomotiv sektoru tek basina ocak-agustos doneminde 27,2 milyar dolar, kimya 22,8 milyar dolar ihracat gerceklestirmisti.\n\nISO ve ISOV uyeleri acisindan veri iki temel cikarima isaret ediyor. Birincisi, ihracatta yogunlasmanin yuksek olmasi KOBI olcegindeki sanayi kuruluslarinin dis pazarlara acilmasinda yapisal engeller bulundugunu gosteriyor; ihracat finansmani, pazar bilgisi ve sertifikasyon maliyetleri bu engellerin basinda geliyor. Ikincisi, sanayi sektorunun ihracattaki belirleyici agirligi, enerji ve finansman maliyetlerindeki her artisin dogrudan ulke ihracat performansina yansiyacagi anlamina geliyor. Yeni Orta Vadeli Program'da yer alan tesvik ve finansman baslıklarinin bu yapisal sorunlara ne olcude yanit verecegi izlenecek.",
+      "published_at": "2026-09-11T10:40:00+03:00",
+      "language": "tr",
+      "summary": "TUIK'in Girisim Ozelliklerine Gore Dis Ticaret Istatistikleri'ne gore toplam ihracatin yuzde 57,6'sini sanayi sektorundeki girisimler gerceklestirdi; ilk 500 girisim tek basina ihracatin yuzde 51'ini yapti. Yuksek yogunlasma, KOBI olcegindeki sanayicilerin dis pazarlara acilmasinda yapisal engeller bulundugunu gosteriyor. Sanayinin ihracattaki belirleyici agirligi, enerji ve finansman maliyetlerindeki artislarin dogrudan ulke ihracat performansina yansiyacagi anlamina geliyor.",
+      "key_points": [
+        "Toplam ihracatin yuzde 57,6'si sanayi sektorundeki girisimler tarafindan yapildi",
+        "Ilk 500 girisim toplam ihracatin yuzde 51'ini gerceklestirdi",
+        "Ihracatta yuksek yogunlasma, KOBI'lerin dis pazara acilmasinda yapisal engellere isaret ediyor",
+        "Otomotiv 27,2 milyar, kimya 22,8 milyar dolarla one cikan sektorler",
+        "Sanayi maliyetlerindeki artislar dogrudan ulke ihracat performansina yansiyor"
+      ],
+      "entities": {
+        "kurum": [
+          "TUIK",
+          "Istanbul Sanayi Odasi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat Sanayi",
+          "Otomotiv",
+          "Kimya",
+          "Tekstil",
+          "Makine"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "ihracat",
+        "girisim-istatistikleri",
+        "tuik",
+        "kobi",
+        "imalat-sanayi"
+      ],
+      "importance_factors": {
+        "authority": 78,
+        "impact": 78,
+        "keyword": 80,
+        "recency": 99,
+        "corroboration": 40,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "musavirler-kulubu",
+      "url": "https://musavirlerkulubu.com.tr/makale/sanayi-ve-teknoloji-bakanligindan-kobilere-yeni-finansman-destegi-oncelikli-finansman-belgesi-2026-U7h3",
+      "title": "Sanayi ve Teknoloji Bakanligi'ndan KOBI'lere yeni finansman destegi: Oncelikli Finansman Belgesi",
+      "body": "3 Eylul 2026 tarihinde Resmi Gazete'de yayimlanarak yururluge giren teblig degisikligi ile Sanayi ve Teknoloji Bakanligi bunyesinde Oncelikli Finansman Belgesi uygulamasi baslatildi. Duzenleme, ozellikle imalat sanayiine yonelik yatirim tesvik belgesine sahip sirketlerin finansmana erisimini kolaylastirmayi hedefliyor.\n\nBelge, finansman programlarina basvuru oncesinde Bakanlik onayini saglayan bir on yeterlilik belgesi niteliginde calisiyor. Onemli bir ayrimi var: Oncelikli Finansman Belgesi dogrudan bir finansal destek saglamiyor; yatirimcilarin araci bankalar uzerinden sunulan finansman programlarina erisimini kolaylastiran bir kapi gorevi goruyor.\n\nTemel kosullar arasinda asgari yatirim tutari 100 milyon TL olarak belirlendi. Kapsam, imalat sanayisine yonelik tesvik belgesi sahibi projelerle sinirli tutuldu. Ozkaynak sarti aranmamasi, ozellikle KOBI olcegindeki yatirimcilar icin onemli bir avantaj olarak degerlendiriliyor.\n\nBasvuru degerlendirmesi iki sekilde yapiliyor. Belirli tesvik programlarina sahip yatirimlar icin belge dogrudan duzenleniyor. Diger basvurular ise bir puanlama sistemine tabi tutuluyor ve belge duzenlenebilmesi icin en az 50 puan alinmasi gerekiyor.\n\nDuzenlemenin dikkat edilmesi gereken bir sinirlamasi bulunuyor: finansman programlarindan yararlanan yatirimlara, ayni finansman kullanimi nedeniyle tesvik belgesi kapsaminda ayrica faiz veya kar payi destegi verilmeyecek. Yatirimcilarin bu ikilemi degerlendirerek hangi destek mekanizmasinin kendileri icin daha avantajli oldugunu hesaplamalari gerekiyor.\n\nISO ve ISOV uyeleri acisindan duzenleme, politika faizinin yuzde 37'de sabit kaldigi ve bankalarin takipteki kredi artisi nedeniyle risk istahini daralttigi bir donemde onem tasiyor. Ozkaynak sarti aranmamasi ve puanlama esiginin gorece erisilebilir olmasi, 100 milyon TL ve uzeri imalat yatirimi planlayan orta olcekli sanayi kuruluslari icin somut bir firsat yaratiyor.",
+      "published_at": "2026-09-04T09:00:00+03:00",
+      "language": "tr",
+      "summary": "3 Eylul 2026'da Resmi Gazete'de yayimlanan teblig degisikligiyle Oncelikli Finansman Belgesi uygulamasi basladi; imalat sanayiine yonelik tesvik belgesi sahibi ve asgari 100 milyon TL tutarindaki yatirimlar kapsamda. Belge dogrudan destek degil, banka finansman programlarina erisim icin on yeterlilik saglıyor; ozkaynak sarti aranmiyor. Ancak bu programdan yararlanan yatirimlara ayni finansman icin ayrica faiz/kar payi destegi verilmeyecek.",
+      "key_points": [
+        "Oncelikli Finansman Belgesi 3 Eylul 2026 Resmi Gazete ile yururlukte",
+        "Asgari yatirim tutari 100 milyon TL, kapsam imalat sanayii tesvik belgeli projeler",
+        "Ozkaynak sarti aranmiyor; KOBI'ler icin onemli avantaj",
+        "Belirli tesvik programlari disindaki basvurular icin 50 puan esigi",
+        "Ayni finansman icin tesvik belgesi kapsaminda ayrica faiz/kar payi destegi verilmiyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Sanayi ve Teknoloji Bakanligi",
+          "Resmi Gazete",
+          "KOSGEB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat Sanayi",
+          "KOBI"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tesvik",
+        "yatirim-tesvik-belgesi",
+        "kobi-finansmani",
+        "mevzuat-degisikligi",
+        "imalat-sanayi"
+      ],
+      "importance_factors": {
+        "authority": 82,
+        "impact": 88,
+        "keyword": 85,
+        "recency": 80,
+        "corroboration": 40,
+        "reach": 48
+      }
+    },
+    {
+      "source_slug": "cumhuriyet-ekonomi",
+      "url": "https://www.cumhuriyet.com.tr/ekonomi/turkiye-de-issizlik-orani-ne-kadar-oldu-tuik-verileri-aciklandi-2533698",
+      "title": "Turkiye'de issizlik orani ne kadar oldu? TUIK verileri aciklandi",
+      "body": "Turkiye Istatistik Kurumu'nun (TUIK) acikladigi isgucu istatistiklerine gore mevsim etkisinden arindirilmis issizlik orani 2026 Temmuz ayinda bir onceki aya gore 0,5 puan artarak yuzde 8,1 seviyesinde gerceklesti.\n\n15 ve daha yukari yastaki nufusta issiz sayisi temmuz ayinda bir onceki aya gore 150 bin kisi artarak 2 milyon 860 bin kisiye yukseldi. Issizlik orani erkeklerde yuzde 6,8, kadinlarda ise yuzde 10,6 olarak hesaplandi.\n\nIstihdam tarafindaki tablo daha dikkat cekici. Mevsim etkisinden arindirilmis verilere gore istihdam edilenlerin sayisi temmuz ayinda bir onceki aya kiyasla 388 bin kisi azalarak 32 milyon 362 bin kisiye geriledi; istihdam orani yuzde 48,3 oldu. Isgucu 35 milyon 222 bin kisi, isgucune katilim orani ise yuzde 52,5 olarak hesaplandi.\n\n15-24 yas grubunu kapsayan genc nufusta issizlik orani bir onceki aya gore 1,5 puan artarak yuzde 14,5'e yukseldi. Genc issizlikteki bu sert artis, isgucu piyasasinda yeni is arayanlarin istihdama katilmakta zorlandigini gosteriyor.\n\nVeriler, ayni donemde aciklanan sanayi uretimi rakamlariyla tutarli bir tablo ciziyor. Temmuzda sanayi uretimi aylik yuzde 1,0 gerilerken, ISO Turkiye Imalat PMI verilerinde agustosta yalnizca iki sektorun istihdam artisi bildirdigi ve istihdam kayiplarinin derinlestigi kaydedilmisti.\n\nSanayi kuruluslari acisindan istihdamdaki 388 bin kisilik aylik azalis, kapasite kullanimindaki gerilemenin isgucu tarafina yansimaya basladigina isaret ediyor. Yeni Orta Vadeli Program'da 2026 issizlik orani yuzde 8,1 olarak ongoruluyor ve program donemi boyunca 2,1 milyon ilave istihdam hedefleniyor; ancak temmuz verisi bu hedefin baslangic noktasinin zorlu oldugunu gosteriyor. Nitelikli isgucu kaybi, toparlanma doneminde imalat sanayii icin ayrica bir risk unsuru olusturuyor.",
+      "published_at": "2026-08-31T11:00:00+03:00",
+      "language": "tr",
+      "summary": "TUIK verilerine gore temmuzda mevsim etkisinden arindirilmis issizlik orani 0,5 puan artarak yuzde 8,1'e yukseldi, issiz sayisi 2 milyon 860 bine cikti. Istihdam edilenlerin sayisi 388 bin kisi azalarak 32 milyon 362 bine geriledi; genc issizlik 1,5 puan artisla yuzde 14,5 oldu. Sanayici icin bu, kapasite kullanimindaki dususun isgucu tarafina yansimaya basladigini ve nitelikli isgucu kaybi riskinin arttigini gosteriyor.",
+      "key_points": [
+        "Temmuzda issizlik orani 0,5 puan artisla yuzde 8,1",
+        "Issiz sayisi 150 bin kisi artarak 2 milyon 860 bine yukseldi",
+        "Istihdam edilenlerin sayisi 388 bin kisi azalarak 32 milyon 362 bine geriledi",
+        "Genc issizlik 1,5 puan artisla yuzde 14,5",
+        "Issizlik erkeklerde yuzde 6,8, kadinlarda yuzde 10,6"
+      ],
+      "entities": {
+        "kurum": [
+          "TUIK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat Sanayi",
+          "Hizmetler"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "istihdam",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "issizlik",
+        "isgucu",
+        "istihdam",
+        "genc-issizlik",
+        "tuik"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 78,
+        "keyword": 78,
+        "recency": 55,
+        "corroboration": 60,
+        "reach": 62
+      }
+    }
+  ]
+}

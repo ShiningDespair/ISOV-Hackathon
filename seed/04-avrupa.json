@@ -1,0 +1,1105 @@
+{
+  "collector": "avrupa",
+  "collected_at": "2026-09-12T18:30:00+03:00",
+  "sources": [
+    {
+      "slug": "eur-lex",
+      "name": "EUR-Lex / AB Resmi Gazetesi",
+      "homepage_url": "https://eur-lex.europa.eu",
+      "source_type": "mevzuat",
+      "authority_weight": 100,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "mevzuat"
+    },
+    {
+      "slug": "ab-komisyonu-ticaret",
+      "name": "Avrupa Komisyonu Ticaret ve Ekonomik Guvenlik Genel Mudurlugu",
+      "homepage_url": "https://policy.trade.ec.europa.eu",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ab-komisyonu-basin",
+      "name": "Avrupa Komisyonu Basin Odasi",
+      "homepage_url": "https://ec.europa.eu/commission/presscorner",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ecb",
+      "name": "Avrupa Merkez Bankasi (ECB)",
+      "homepage_url": "https://www.ecb.europa.eu",
+      "source_type": "kurum",
+      "authority_weight": 90,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "eurostat",
+      "name": "Eurostat",
+      "homepage_url": "https://ec.europa.eu/eurostat",
+      "source_type": "acik_veri",
+      "authority_weight": 90,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "acik_veri"
+    },
+    {
+      "slug": "destatis",
+      "name": "Destatis - Almanya Federal Istatistik Ofisi",
+      "homepage_url": "https://www.destatis.de",
+      "source_type": "acik_veri",
+      "authority_weight": 80,
+      "country_code": "DE",
+      "language": "en",
+      "source_type_raw": "acik_veri"
+    },
+    {
+      "slug": "istat",
+      "name": "Istat - Italya Ulusal Istatistik Enstitusu",
+      "homepage_url": "https://www.istat.it",
+      "source_type": "acik_veri",
+      "authority_weight": 80,
+      "country_code": "IT",
+      "language": "en",
+      "source_type_raw": "acik_veri"
+    },
+    {
+      "slug": "eunews",
+      "name": "Eunews",
+      "homepage_url": "https://www.eunews.it",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "IT",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "borderlex",
+      "name": "Borderlex",
+      "homepage_url": "https://borderlex.net",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "BE",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "cyprus-mail",
+      "name": "Cyprus Mail (Reuters servisi)",
+      "homepage_url": "https://cyprus-mail.com",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "CY",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "envirotec",
+      "name": "Envirotec Magazine",
+      "homepage_url": "https://envirotecmagazine.com",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "GB",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "eurocommerce",
+      "name": "EuroCommerce",
+      "homepage_url": "https://www.eurocommerce.eu",
+      "source_type": "kurum",
+      "authority_weight": 70,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "sektor-orgutu"
+    },
+    {
+      "slug": "investing-com",
+      "name": "Investing.com",
+      "homepage_url": "https://www.investing.com",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "eur-lex",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/2022/oj/eng",
+      "title": "AB, Turkiye ve Cin mensei kaynakli hasir celik ithalatini kayda aldi (Komisyon Uygulama Tuzugu 2026/2022)",
+      "body": "Avrupa Komisyonu, 10 Eylul 2026 tarihli 2026/2022 sayili Uygulama Tuzugu ile Turkiye ve Cin Halk Cumhuriyeti mensei kaynakli kaynakli hasir celik urunlerinin ithalatini gumruk idarelerince kayda alinmasi yukumlulugune tabi tutmustur. Tuzuk 11 Eylul 2026 tarihli AB Resmi Gazetesi'nde yayimlanmis ve 12 Eylul 2026 itibariyla yururluge girmistir.\n\nUrun kapsami, dugum noktalarindan kaynakla birlestirilmis duz tellerden olusan izgara, hasir, ag ve cit urunleridir; kaplamasiz, cinko veya diger malzemeyle kaplanmis, galvanizli veya galvanizsiz, rulo halinde olsun olmasin tum formlar dahildir. Urunler 7314 20 90, 7314 31 00 ve 7314 39 00 GTIP (CN) kodlari altinda siniflandirilmaktadir.\n\nSurec, AB kaynakli hasir celik uretiminin yuzde 25'inden fazlasini temsil eden European Welded Steel Mesh Producers Association tarafindan 20 Nisan 2026'da yapilan sikayet uzerine baslatilmistir. Komisyon damping sorusturmasini 3 Haziran 2026 tarihli C/2026/2971 sayili bildirim ile acmisti. Sikayet dosyasinda Turkiye icin tahmini damping marji yuzde 44-51 araliginda, zarari giderici seviye ise yuzde 41 olarak hesaplanmistir. Komisyon bu rakamlarin yalnizca bilgilendirme amacli oldugunu ve nihai bulgulari baglamadigini vurgulamaktadir.\n\nKayda alma karari, temel damping onleme tuzugu cercevesinde ilerideki gecici veya kesin damping vergilerinin kayit tarihinden itibaren geriye donuk olarak tahsil edilebilmesinin onunu acmaktadir. Kayit yukumlulugu, yururluge giris tarihinden itibaren dokuz ay sure ile gecerlidir.\n\nUygulamada bu, 12 Eylul 2026'dan itibaren AB'ye hasir celik sevk eden Turk ihracatcilarinin ve AB'deki ithalatcilarinin, henuz vergi yururlukte olmasa bile ileride dogabilecek bir vergi yukumlulugu riski altinda islem yaptigi anlamina gelir. Ithalatcilar genellikle bu asamada teminat talep etmeye, fiyat revizyonu istemeye veya sevkiyatlari askiya almaya yonelmektedir.",
+      "published_at": "2026-09-11T09:00:00+03:00",
+      "language": "en",
+      "summary": "AB Komisyonu, Turkiye ve Cin mensei hasir celik ithalatini 12 Eylul 2026 itibariyla kayda aldi; bu, surmekte olan damping sorusturmasi sonucunda konulacak verginin kayit tarihinden geriye donuk tahsil edilebilecegi anlamina geliyor. Sikayet dosyasinda Turkiye icin yuzde 44-51 damping marji ve yuzde 41 zarar marji iddia ediliyor. AB'ye hasir celik ihrac eden firmalarin sozlesmelerine geriye donuk vergi riski maddesi koymasi, ithalatci tarafindan teminat taleplerine hazirlikli olmasi ve sorusturmada soru formlarini eksiksiz doldurarak bireysel marj alma sansini kullanmasi kritik onemde.",
+      "summary_en": "The European Commission has made imports of welded steel mesh from Turkiye and China subject to registration as of 12 September 2026, enabling retroactive collection of any future anti-dumping duties. The complaint alleges dumping margins of 44-51% for Turkiye and an injury elimination level of 41%.",
+      "key_points": [
+        "Komisyon Uygulama Tuzugu 2026/2022, 11 Eylul 2026 AB Resmi Gazetesi'nde yayimlandi, 12 Eylul 2026'da yururluge girdi",
+        "Kapsam: kaynakli hasir celik, CN 7314 20 90, 7314 31 00, 7314 39 00",
+        "Sikayet dosyasindaki iddia: Turkiye icin yuzde 44-51 damping marji, yuzde 41 zarari giderici seviye",
+        "Kayit dokuz ay gecerli; ileride konulacak vergi geriye donuk tahsil edilebilir",
+        "Sorusturma 3 Haziran 2026'da acilmisti, sikayetci European Welded Steel Mesh Producers Association"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "European Welded Steel Mesh Producers Association"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Celik",
+          "Demir-Celik",
+          "Insaat Malzemeleri"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "anti-damping",
+        "celik",
+        "ab-mevzuati",
+        "ihracat",
+        "ticaret-savunmasi",
+        "kayit-yukumlulugu",
+        "ab-turkiye"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 98,
+        "keyword": 90,
+        "recency": 100,
+        "corroboration": 60,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "eur-lex",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/2023/oj/eng",
+      "title": "AB, Cin mensei celik raf sistemleri ithalatini kayda aldi (Uygulama Tuzugu 2026/2023)",
+      "body": "Avrupa Komisyonu ayni gun, 10 Eylul 2026 tarihli 2026/2023 sayili Uygulama Tuzugu ile Cin Halk Cumhuriyeti mensei civatali ve civatasiz celik raf sistemleri ile bunlarin bilesenlerinin (celik dikmeler ve kirisler) ithalatini da kayda alma yukumluluguna tabi tutmustur. Urunler ex 9403 20 80 ve ex 9403 99 10 CN kodlari altinda siniflandirilmaktadir.\n\nSikayet, AB toplam uretiminin yuzde 25'inden fazlasini temsil eden European Metal Shelving Manufacturers' Defence Committee tarafindan 27 Nisan 2026'da yapilmis, Komisyon sorusturmayi 10 Haziran 2026'da baslatmistir. Sikayet dosyasindaki hesaplamalara gore Ekim 2024 - Eylul 2025 sorusturma doneminde damping marjlari yuzde 62 ile yuzde 103 arasinda hesaplanmistir. Komisyon bu rakamlarin bilgi amacli oldugunu ve herhangi bir beklenti yaratmayacagini belirtmektedir.\n\nTuzuk 11 Eylul 2026'da AB Resmi Gazetesi'nde yayimlanmis, 12 Eylul 2026'da yururluge girmistir. Kayit yukumlulugu dokuz ay surecektir ve ileride konulacak gecici veya kesin damping vergilerinin geriye donuk tahsiline imkan tanimaktadir.\n\nBu dosya Turkiye mensei urunleri dogrudan kapsamamakla birlikte Turk sanayicisi icin iki acidan onemlidir. Birincisi, Cin mensei celik raf sistemlerine AB pazarinda vergi konmasi halinde, ayni urun grubunda uretim yapan Turk firmalari icin AB pazarinda rekabet avantaji dogabilir; metal mobilya ve depolama sistemleri ihracatcilari icin bu bir pazar firsatidir. Ikincisi, Komisyon'un ayni gun iki ayri celik turevi urun grubunda kayit karari almasi, AB'nin celik ve celik turevi urunlerde ticaret savunmasi araclarini agresif bicimde kullanma egiliminin surdugunu gostermektedir; bu egilim orta vadede Turk menseili urunleri de hedef alabilir.",
+      "published_at": "2026-09-11T09:05:00+03:00",
+      "language": "en",
+      "summary": "AB, Cin mensei civatali/civatasiz celik raf sistemlerini de 12 Eylul 2026 itibariyla kayit yukumluluguna tabi tuttu; sikayette yuzde 62-103 damping marji iddia ediliyor. Cin'e vergi gelmesi halinde metal raf ve depolama sistemi ureten Turk firmalari icin AB pazarinda pay kapma firsati dogabilir. Ayni gun iki ayri celik turevi dosyasinda kayit karari cikmasi, AB'nin ticaret savunmasi araclarini yogun kullandigini gosteriyor.",
+      "summary_en": "The EU also registered imports of bolted and boltless steel shelving from China from 12 September 2026, with alleged dumping margins of 62-103%. Turkish metal shelving producers could gain EU market share if duties follow.",
+      "key_points": [
+        "Uygulama Tuzugu 2026/2023, Cin mensei celik raf sistemleri, CN ex 9403 20 80 ve ex 9403 99 10",
+        "Sikayette iddia edilen damping marji yuzde 62-103",
+        "Kayit 12 Eylul 2026'da basladi, dokuz ay gecerli",
+        "Turk metal raf ureticileri icin AB pazarinda ikame firsati dogabilir"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "European Metal Shelving Manufacturers Defence Committee"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Metal Esya",
+          "Mobilya",
+          "Depolama Sistemleri"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "celik",
+        "ab-mevzuati",
+        "ticaret-savunmasi",
+        "kayit-yukumlulugu",
+        "metal-esya"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 60,
+        "keyword": 70,
+        "recency": 100,
+        "corroboration": 40,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "ecb",
+      "url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html",
+      "title": "ECB politika faizini 25 baz puan artirdi: mevduat faizi yuzde 2,50",
+      "body": "Avrupa Merkez Bankasi (ECB) 10 Eylul 2026 tarihli toplantisinda uc politika faizini de 25 baz puan artirdi. Mevduat kolaylik faizi yuzde 2,25'ten yuzde 2,50'ye cikarildi. Baskan Christine Lagarde kararin oybirligi ile alindigini ve amacinin enflasyonun orta vadede yuzde 2 hedefine donmesini guvence altina almak oldugunu belirtti.\n\nKarar, Orta Dogu'daki catismanin enerji fiyatlarini beklenenden yukari tasimasiyla euro bolgesi enflasyonunun Agustos 2026'da yuzde 3,3'e, uc yilin en yuksek seviyesine cikmasinin ardindan geldi. Bu, ABD-Iran savasinin baslamasindan bu yana yapilan ikinci faiz artisi oldu.\n\nYeni ECB personel projeksiyonlarina gore manset enflasyon 2026'da ortalama yuzde 3,0, 2027'de yuzde 2,5 ve 2028'de yuzde 2,1 olacak. Cekirdek enflasyon sirasiyla yuzde 2,5, yuzde 2,6 ve yuzde 2,3 ongoruluyor. Buyume tahminleri ise yukari yonlu revize edildi: 2026 icin yuzde 0,9 (onceki yuzde 0,8), 2027 icin yuzde 1,4 ve 2028 icin yuzde 1,5. ECB, ikinci ceyrekte ekonominin sektorler ve ulkeler genelinde beklenenden direncli bir performans gosterdigini kaydetti.\n\nKonsey veriye bagli ve toplanti bazli yaklasimini surdurecegini, belirli bir faiz patikasina onceden baglanmadigini yineledi. Enflasyonda yukari yonlu riskler (enerji soklari, ucretlerde ikinci tur etkiler) one cikarken, buyumede asagi yonlu riskler jeopolitik catismalar ve ticaret gerilimlerinden kaynaklaniyor.\n\nTurk sanayicisi acisindan bu kararin uc dogrudan sonucu var. Birincisi, euro cinsi kredi ve ihracat finansmani maliyetleri yukselmeye devam edecek; Euribor'a endeksli kredisi olan firmalar icin finansman gideri artacak. Ikincisi, siki para politikasi euroyu destekleyerek EUR/TRY paritesini yukari itebilir - bu, euro cinsi ihracat geliri olan firmalar icin TL bazinda olumlu, euro cinsi borcu olanlar icin olumsuzdur. Ucuncusu, AB'de talebin baskilanmaya devam etmesi, ozellikle dayanikli tuketim mallari, beyaz esya, mobilya ve otomotiv yan sanayi ihracatinda siparis hacimlerini sinirlayabilir.",
+      "published_at": "2026-09-10T15:45:00+03:00",
+      "language": "en",
+      "summary": "ECB 10 Eylul'de faizleri 25 baz puan artirarak mevduat faizini yuzde 2,50'ye cikardi; Agustos enflasyonu yuzde 3,3 ile uc yilin zirvesinde. Euro cinsi kredi ve ihracat finansmani maliyeti yukselmeye devam edecek, AB'de tuketim talebi baskilanmis kalacak. Euro cinsi ihracat yapan Turk firmalari icin parite lehte calisabilir, ancak euro borclu firmalar ve AB pazarina dayanikli tuketim mali satan ureticiler icin tablo zorlayici.",
+      "summary_en": "The ECB raised all three key rates by 25bp on 10 September 2026, taking the deposit rate to 2.50%, after euro area inflation hit a three-year high of 3.3% in August. Euro-denominated financing costs for exporters will stay elevated.",
+      "key_points": [
+        "Mevduat faizi yuzde 2,25'ten yuzde 2,50'ye, karar oybirligiyle alindi",
+        "Agustos 2026 euro bolgesi enflasyonu yuzde 3,3 - uc yilin en yuksegi",
+        "Enflasyon projeksiyonu: 2026 yuzde 3,0, 2027 yuzde 2,5, 2028 yuzde 2,1",
+        "Buyume projeksiyonu yukari revize: 2026 yuzde 0,9, 2027 yuzde 1,4",
+        "ECB belirli bir faiz patikasina baglanmadigini yineledi"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Merkez Bankasi"
+        ],
+        "kisi": [
+          "Christine Lagarde"
+        ],
+        "sektor": [
+          "Finans",
+          "Bankacilik",
+          "Ihracat"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "faiz",
+        "enflasyon",
+        "para-politikasi",
+        "euro",
+        "ihracat-finansmani"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 80,
+        "keyword": 65,
+        "recency": 100,
+        "corroboration": 70,
+        "reach": 90
+      }
+    },
+    {
+      "source_slug": "ab-komisyonu-basin",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1842",
+      "title": "Komisyon AB-Hindistan Serbest Ticaret Anlasmasi'ni imza icin Konsey'e sundu",
+      "body": "Avrupa Komisyonu 11 Eylul 2026'da, Avrupa Birligi ile Hindistan arasindaki Serbest Ticaret Anlasmasi'nin (STA) imzalanmasi ve akdedilmesi icin Konsey'e onerilerini sundu. Konsey yetki verirse, bu hem AB hem de Hindistan tarafindan imzalanmis en buyuk ticaret anlasmasi olacak.\n\nAnlasma, AB'nin Hindistan'a mal ihracatinin yuzde 96'sinda gumruk vergilerini kaldiracak veya azaltacak ve ticaret onundeki teknik engelleri dusurecek. Komisyon'un hesaplamasina gore vergi indirimleri Avrupali ihracatcilara yilda yaklasik 4 milyar euro tasarruf saglayacak. Anlasma, yaklasik yirmi yila yayilan muzakerelerin ardindan 27 Ocak 2026'da sonuclandirilmisti.\n\nSurecin bundan sonraki adimlari: Konsey imza yetkisi verecek, ardindan Avrupa Parlamentosu'nun onayi (consent) alinacak ve anlasma yururluge girebilecek. Komisyon Baskani Ursula von der Leyen'in Aralik 2026'da Basbakan Narendra Modi ile anlasmayi imzalamasi bekleniyor.\n\nTurk sanayicisi acisindan bu gelisme dolayli ama onemli bir rekabet etkisi tasiyor. Turkiye, Gumruk Birligi cercevesinde AB'nin uculuncu ulkelerle yaptigi STA'lara otomatik taraf olmuyor; AB pazarinda Hindistan mensei urunler kademeli olarak vergisiz hale gelirken, Turk urunleri halihazirda vergisiz oldugu icin dogrudan bir dezavantaj dogmuyor. Ancak Hindistan pazarina erisimde AB'li rakipler Turk ihracatcisinin sahip olmadigi bir avantaj elde ediyor. Daha kritik olani, AB pazarinda tekstil, hazir giyim, kimya, otomotiv yan sanayi ve makine gibi Turkiye'nin guclu oldugu kalemlerde Hindistan'in rekabet gucunun artacak olmasi. Bu, Gumruk Birligi'nin guncellenmesi ve Turkiye'nin AB'nin STA agina paralel katilimi tartismasini yeniden gundeme tasiyacak bir gelismedir.",
+      "published_at": "2026-09-11T13:00:00+03:00",
+      "language": "en",
+      "summary": "Komisyon 11 Eylul'de AB-Hindistan STA'sini imza icin Konsey'e sundu; anlasma AB mal ihracatinin yuzde 96'sinda vergileri kaldiracak ve tarihin en buyuk AB ticaret anlasmasi olacak. Turkiye Gumruk Birligi nedeniyle bu STA'ya taraf olmadigi icin Hindistan pazarina erisimde AB'li rakiplerin gerisinde kalacak; ayrica AB pazarinda tekstil, kimya ve otomotiv yan sanayinde Hindistan rekabeti sertlesecek. Gumruk Birligi'nin guncellenmesi talebini guclendiren bir gelisme.",
+      "summary_en": "On 11 September 2026 the Commission sent the EU-India FTA to the Council for signature. It will remove or cut tariffs on 96% of EU goods exports to India, saving EU exporters about EUR 4 billion a year.",
+      "key_points": [
+        "Komisyon 11 Eylul 2026'da imza ve akdetme onerilerini Konsey'e sundu",
+        "AB'nin Hindistan'a mal ihracatinin yuzde 96'sinda vergiler kalkacak veya azalacak",
+        "Avrupali ihracatcilara yillik yaklasik 4 milyar euro tasarruf",
+        "Sonraki adim: Konsey yetkisi, ardindan Avrupa Parlamentosu onayi; imza Aralik 2026'da bekleniyor",
+        "Turkiye Gumruk Birligi nedeniyle anlasmaya taraf degil - asimetri riski"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "AB Konseyi",
+          "Avrupa Parlamentosu"
+        ],
+        "kisi": [
+          "Ursula von der Leyen",
+          "Narendra Modi"
+        ],
+        "sektor": [
+          "Tekstil",
+          "Kimya",
+          "Otomotiv",
+          "Makine"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "serbest-ticaret-anlasmasi",
+        "gumruk-birligi",
+        "hindistan",
+        "ihracat",
+        "ab-turkiye"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 80,
+        "keyword": 70,
+        "recency": 100,
+        "corroboration": 65,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "cyprus-mail",
+      "url": "https://cyprus-mail.com/2026/09/11/eu-dropped-aluminium-scrap-duty-plan-over-india-concerns",
+      "title": "AB aluminyum hurdasina ihracat vergisi planindan vazgecti",
+      "body": "Avrupa Birligi, 23 Eylul 2026'da aciklanmasi planlanan aluminyum hurdasi ihracat vergisi onerisinden vazgecti. Reuters'a konusan kaynaklara gore geri adimin nedeni, verginin Hindistan ile serbest ticaret anlasmasinin imzalanmasini zora sokacagi endisesi oldu.\n\nHazirlanan taslakta uc yil sureyle yuzde 15 ihracat vergisi ongoruluyordu; sektor yuzde 30 talep etmisti. Taslakta 91 ulke ve toprak parcasini kapsayan bir muafiyet listesi bulunuyordu ve Hindistan bu listede yer aliyordu. Hindistan, AB hurda ihracatinin yaklasik ucte birini aliyor. Kaynaklara gore Komisyon Baskani'nin kabinesi ve Ticaret Genel Mudurlugu Hindistan'i onerinin kapsamindan cikartmayi basardi; bu da olcuyu sanayi acisindan islevsiz hale getirdi. Von der Leyen'in Aralik ayinda Modi ile ticaret anlasmasini imzalamasi bekleniyor.\n\nVerginin yerine AB, Atik Sevkiyati Tuzugu'na (Waste Shipment Regulation) dayanacak. Kasim 2026'da tamamlanmasi beklenen duzenleme, tehlikesiz atik ihracatini Mayis 2027'ye kadar OECD uyesi olmayan ulkelere yasaklayacak; muafiyetler olasi gorunuyor.\n\nAvrupali eriticiler, Asyali rakiplerine kiyasla daha yuksek enerji maliyetleri ve duzenleyici yuk nedeniyle yapisal dezavantaj altinda oldugunu savunuyor. Avrupa Aluminyum dernegi baskani sektorun yakinda ticaret onlemine geri donmesi gerekecegini soyledi.\n\nTurk sanayicisi acisindan bu karar dogrudan olumlu. Turkiye, AB'den cikan metal hurdanin en buyuk alicilarindan biridir ve Turk celik ve aluminyum sektoru hurda bazli (ikincil) uretime dayalidir. Yuzde 15'lik bir AB ihracat vergisi, Turkiye'ye gelen aluminyum hurdasinin maliyetini dogrudan yukseltecek, ikincil aluminyum ureticilerinin marjlarini daraltacakti. Planin rafa kaldirilmasi, en azindan kisa vadede hammadde erisiminde bir risk unsurunu ortadan kaldirdi. Ancak sektorun konuyu yeniden gundeme getirecegini acikca beyan etmesi, riskin ortadan kalkmadigini, ertelendigini gosteriyor.",
+      "published_at": "2026-09-11T11:00:00+03:00",
+      "language": "en",
+      "summary": "AB, 23 Eylul'de aciklanacak yuzde 15'lik aluminyum hurdasi ihracat vergisi planini Hindistan ile STA'yi riske atmamak icin rafa kaldirdi. Turkiye AB metal hurdasinin en buyuk alicilarindan biri oldugu icin bu karar, hurda bazli calisan Turk aluminyum ve celik ureticileri icin dogrudan olumlu: hammadde maliyetinde beklenen artis simdilik gerceklesmeyecek. Avrupali uretici dernegi konuyu yeniden gundeme tasiyacagini acikladi; risk ortadan kalkmadi, ertelendi.",
+      "summary_en": "The EU shelved a planned 15% export duty on aluminium scrap, reportedly to avoid jeopardising the India FTA. This removes a near-term cost risk for Turkiye's scrap-based secondary aluminium and steel producers, though industry vows to revive the measure.",
+      "key_points": [
+        "Taslakta uc yil sureyle yuzde 15 ihracat vergisi vardi; 23 Eylul'de aciklanacakti",
+        "Hindistan muafiyet listesinde yer alinca olcu sanayi acisindan islevsiz kaldi",
+        "Hindistan AB hurda ihracatinin yaklasik ucte birini aliyor",
+        "Yerine Atik Sevkiyati Tuzugu kullanilacak: OECD disi ulkelere tehlikesiz atik ihracat yasagi",
+        "Turkiye hurda bazli uretim yaptigi icin karar hammadde maliyeti acisindan olumlu"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "European Aluminium"
+        ],
+        "kisi": [
+          "Ursula von der Leyen"
+        ],
+        "sektor": [
+          "Aluminyum",
+          "Geri Donusum",
+          "Celik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "aluminyum",
+        "hurda",
+        "ihracat-vergisi",
+        "dongusel-ekonomi",
+        "hammadde"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 85,
+        "keyword": 75,
+        "recency": 100,
+        "corroboration": 60,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "borderlex",
+      "url": "https://borderlex.net/2026/09/11/aluminium-industry-lashes-out-at-eu-over-shelved-export-curbs/",
+      "title": "Avrupa aluminyum sanayi, rafa kaldirilan ihracat kisitlamalarina sert tepki gosterdi",
+      "body": "Avrupa aluminyum sanayii, Komisyon'un aluminyum hurdasi ihracat vergisi taslagini rafa kaldirip yerine AB Atik Sevkiyati Tuzugu'nu kullanma karari aldigini aciklamasinin ardindan sert tepki gosterdi. Sektorun cati orgutu European Aluminium, Komisyon'a yazdigi mektupta derin sok, hayal kirikligi ve ofke ifade ettigini belirtti ve alternatif onlemlerin kapsamli bir ticaret stratejisinin yerini tutamayacagini savundu.\n\nKomisyon'un planladigi alternatif, Atik Sevkiyati Tuzugu kapsaminda cikarilacak bir yetki devrine dayali tasarruf (delegated act) ile aluminyum hurdasi ihracatini OECD uyesi olmayan ulkelere yasaklamak; bazi AB aday ulkeleri icin sinirli istisnalar ongoruluyor. Komisyon bunu yil sonuna kadar hayata gecirmeyi hedefliyor, ancak temel tuzuk tam olarak Mayis 2027'de uygulanmaya baslayacak.\n\nSektorun temel elestirisi, Atik Sevkiyati Tuzugu'nun OECD uyesi ulkelere yapilan ihracati nasil sinirlayacaginin belirsiz olmasi. Tuzuk, OECD ulkelerine sevkiyatlarda dogrudan ihracat yasagi degil, izleme, diyalog, cevresel degerlendirme ve buyuk olcude gonullu uyum mekanizmalari ongoruyor.\n\nBu ayrim Turk sanayicisi icin belirleyicidir. Turkiye bir OECD uyesidir; dolayisiyla OECD disi ulkelere yonelik bir yasak Turkiye'ye yapilan hurda sevkiyatlarini dogrudan kapsamayacaktir. Bu, kisa ve orta vadede Turk ikincil aluminyum ve elektrik ark ocakli celik ureticileri icin AB kaynakli hurda arzinin surecegi anlamina gelir; hatta OECD disi rakiplerin (ozellikle Hindistan ve Cin) AB hurdasina erisimi kisitlanirsa Turkiye goreli avantaj bile elde edebilir. Buna karsilik sektorun OECD ulkelerine yonelik ilave kisitlama talebini surdurecek olmasi, Turkiye'nin orta vadede hedefe girme riskini canli tutuyor. Hurda tedarikinde kaynak cesitlendirmesi ve uzun vadeli sozlesmelerin onemi artiyor.",
+      "published_at": "2026-09-11T14:00:00+03:00",
+      "language": "en",
+      "summary": "European Aluminium, ihracat vergisinin rafa kaldirilmasina derin sok ve ofke ifadeleriyle tepki gosterdi ve Atik Sevkiyati Tuzugu'nun yeterli olmayacagini savundu. Planlanan yasak OECD disi ulkeleri hedefledigi icin OECD uyesi Turkiye kapsam disinda kaliyor; bu, AB kaynakli hurdaya erisimde Turk ureticilerine goreli avantaj saglayabilir. Ancak sektorun OECD ulkelerine de kisitlama talebini surdurmesi, orta vadeli riski canli tutuyor.",
+      "summary_en": "European Aluminium reacted with shock and anger to the shelving of the scrap export duty. Since the planned waste-shipment ban targets non-OECD destinations, OECD member Turkiye would remain outside its scope, potentially gaining relative access to EU scrap.",
+      "key_points": [
+        "European Aluminium mektubunda derin sok, hayal kirikligi ve ofke ifadeleri kullandi",
+        "Alternatif: Atik Sevkiyati Tuzugu kapsaminda OECD disi ulkelere hurda ihracat yasagi",
+        "AB aday ulkeleri icin sinirli istisnalar ongoruluyor; temel tuzuk Mayis 2027'de tam uygulanacak",
+        "OECD ulkelerine ihracatin nasil sinirlandirilacagi belirsiz",
+        "Turkiye OECD uyesi oldugu icin yasagin dogrudan kapsaminda degil"
+      ],
+      "entities": {
+        "kurum": [
+          "European Aluminium",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Aluminyum",
+          "Geri Donusum",
+          "Celik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "aluminyum",
+        "hurda",
+        "atik",
+        "dongusel-ekonomi",
+        "hammadde"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 75,
+        "keyword": 70,
+        "recency": 100,
+        "corroboration": 55,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "envirotec",
+      "url": "https://envirotecmagazine.com/2026/09/10/eu-prepares-broader-ban-on-waste-exports-to-non-oecd-countries/",
+      "title": "AB, OECD disi ulkelere atik ihracatinda daha genis bir yasaga hazirlaniyor",
+      "body": "Avrupa Komisyonu, Atik Sevkiyati Tuzugu kapsaminda cikaracagi bir yetki devrine dayali tasarruf ile OECD uyesi olmayan ulkelere atik ihracatini yasaklamayi hazirliyor. Eylul 2026'da duyurulan plan icin kamuoyu istisaresi yapilmasi ve duzenlemenin 2026 sonuna kadar kabul edilmesi bekleniyor. Bu, revize Atik Sevkiyati Tuzugu ile halihazirda getirilen ihracat kontrollerinin daha da sikilastirilmasi anlamina geliyor.\n\nOnlemin ilk hedefi aluminyum hurdasi; ancak hangi atik akislarinin kapsanacagi, istisnalar ve yururluk tarihi henuz aciklanmadi. Her ikisi de OECD uyesi olmayan Cin ve Hindistan, AB hurdasinin onemli varis noktalari olarak kisitlamayla karsilasabilir. Habere gore AB aday ulkeleri icin bazi istisnalar ongoruluyor.\n\nKritik nokta sudur: OECD uyeligi, Turkiye dahil olmak uzere diger buyuk atik varis noktalarini da kapsamaktadir. Dolayisiyla OECD disi ulkeleri hedefleyen bir yasak, Turkiye'ye yapilan sevkiyatlari dogrudan etkilemeyecektir.\n\nDuzenlemenin arka planinda AB'den cikan malzeme kacaginin buyumesi yatiyor: AB aluminyum hurdasi ihracati 2024'te 1,26 milyon tona ulasti, bu bes yilda yuzde 50'lik bir artisa isaret ediyor. Komisyon, dongusel ekonomi ve dekarbonizasyon hedefleri icin ikincil hammaddenin AB icinde kalmasini istiyor; ikincil aluminyum uretimi birincil metale gore yuzde 95 daha az enerji tuketiyor.\n\nTurk sanayicisi icin cikarim iki katmanli. Kisa vadede Turkiye OECD uyesi oldugu icin AB hurdasina erisim korunuyor ve OECD disi rakiplerin kisitlanmasi Turk alicilarin pazarlik gucunu artirabilir. Orta vadede ise AB'nin genel egilimi ikincil hammaddeyi kendi sinirlari icinde tutmak yonunde; Turk celik ve aluminyum sektorunun hurda tedarikinde AB'ye bagimliligi azaltacak alternatif kaynak, yurt ici toplama altyapisi ve geri donusum yatirimlarini hizlandirmasi gerekiyor.",
+      "published_at": "2026-09-10T10:00:00+03:00",
+      "language": "en",
+      "summary": "AB, Atik Sevkiyati Tuzugu kapsaminda OECD disi ulkelere atik ihracatini yasaklayacak bir duzenleme hazirliyor; ilk hedef aluminyum hurdasi ve kabulun 2026 sonuna kadar yapilmasi bekleniyor. Turkiye OECD uyesi oldugu icin dogrudan kapsam disinda; bu Cin ve Hindistan'a gore Turk hurda alicilarina avantaj saglayabilir. Yine de AB'nin ikincil hammaddeyi ic pazarda tutma egilimi gucleniyor; Turk sektorunun yurt ici toplama ve geri donusum kapasitesine yatirim yapmasi stratejik onem tasiyor.",
+      "summary_en": "The Commission is preparing a delegated act under the Waste Shipment Regulation banning waste exports to non-OECD countries, starting with aluminium scrap. OECD member Turkiye is outside the ban's direct scope, which may improve its relative access versus China and India.",
+      "key_points": [
+        "Atik Sevkiyati Tuzugu kapsaminda yetki devrine dayali tasarruf hazirlaniyor",
+        "Kabul 2026 sonuna kadar hedefleniyor, once kamuoyu istisaresi yapilacak",
+        "Cin ve Hindistan OECD disi oldugu icin kisitlanacak; Turkiye OECD uyesi oldugu icin kapsam disi",
+        "AB aluminyum hurdasi ihracati 2024'te 1,26 milyon ton, bes yilda yuzde 50 artis",
+        "Ikincil aluminyum uretimi birincil metale gore yuzde 95 daha az enerji tuketiyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Aluminyum",
+          "Geri Donusum",
+          "Celik",
+          "Atik Yonetimi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "atik",
+        "hurda",
+        "dongusel-ekonomi",
+        "aluminyum",
+        "yesil-mutabakat",
+        "hammadde"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 88,
+        "keyword": 80,
+        "recency": 100,
+        "corroboration": 55,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "eunews",
+      "url": "https://www.eunews.it/en/2026/09/09/a-single-european-platform-and-less-discretion-for-member-states-the-eu-reforms-public-procurement/",
+      "title": "AB kamu alimlarini reforme ediyor: tek platform, kalite kriterleri ve ucuncu ulke kisitlamalari",
+      "body": "Avrupa Komisyonu 9 Eylul 2026'da kamu alimlari mevzuatinda kapsamli bir reform onerisi sundu. Yururlukteki uc direktif tek bir tuzukte birlestiriliyor. AB'de kamu alimlari yillik yaklasik 2,5 trilyon euro, yani AB GSYH'sinin yuzde 15'i buyuklugunde.\n\nOnerinin ana basliklari:\n\nTek Avrupa platformu. Tum ihaleler icin birlestirilmis tek bir cevrim ici portal kuruluyor. Komisyon, idari yukte toplam 649 milyon euro azalma, kamu alicilari icin yillik 220 milyon euro tasarruf ongoruyor.\n\nUye devlet takdirinin daraltilmasi. Esnek direktif yapisindan dogrudan baglayici tuzuk yapisina gecilerek ulusal hukumetlerin kural belirleme esnekligi sinirlaniyor.\n\nFiyat yerine kalite. En iyi fiyat-kalite orani (BPQR) standart hale geliyor; artik yalnizca fiyat belirleyici olmayacak. Cevresel ve sosyal kriterlerin sozlesme degerinin en az yuzde 30'unu, emek yogun sozlesmelerde yuzde 50'sini olusturmasi gerekecek.\n\nGuvenlik ve karsiliklilik. Kritik altyapi ihaleleri icin yeni koruma hukumleri getiriliyor ve karsiliklilik taahhutlerini yerine getirmeyen AB disi operatorler icin ihalelere katilim kisitlamalari ongoruluyor.\n\nOneri, Avrupa Parlamentosu ve uye devletlerin onayindan sonra yururluge girecek. Girisimi Icra Baskan Yardimcisi Stephane Sejourne yurutuyor. Isveren orgutleri ve ETUC dahil sendikalar reforma destek verdi.\n\nTurk sanayicisi icin bu duzenleme iki yonlu. Olumsuz tarafta, karsiliklilik temelli kisitlamalar ve kritik altyapi koruma hukumleri, AB kamu ihalelerine giren Turk muteahhitlik, makine, ulasim araclari ve savunma tedarik firmalari icin ilave engel yaratabilir; Turkiye AB'nin Kamu Alimlari Anlasmasi (GPA) kapsaminda tam taraf olmadigindan bu risk gercektir. Olumlu tarafta, cevresel ve sosyal kriterlerin agirliginin artmasi, karbon ayak izi dusuk ve sosyal uyum belgeleri guclu Turk tedarikcileri icin fiyat disi bir rekabet alani aciyor. Tek platform ise ihale takibi ve pazarlama maliyetini dusurecek.",
+      "published_at": "2026-09-09T16:00:00+03:00",
+      "language": "en",
+      "summary": "Komisyon 9 Eylul'de kamu alimlarinda uc direktifi tek tuzukte birlestiren reform onerisini acikladi; 2,5 trilyon euroluk pazarda tek Avrupa platformu, en iyi fiyat-kalite orani zorunlulugu ve cevresel-sosyal kriterlerde asgari yuzde 30 agirlik geliyor. AB disi operatorler icin karsiliklilik kosuluna bagli kisitlamalar, GPA'ya tam taraf olmayan Turk firmalari icin AB ihalelerinde yeni engel riski dogurabilir. Buna karsilik fiyat disi kriterlerin agirlik kazanmasi, karbon ayak izi ve sosyal uyum belgeleri guclu Turk tedarikcilere firsat sunuyor.",
+      "summary_en": "The Commission proposed merging three procurement directives into a single regulation, with one EU-wide platform, mandatory best price-quality ratio, minimum 30% weighting for environmental and social criteria, and reciprocity-based restrictions on non-EU operators.",
+      "key_points": [
+        "Uc direktif tek tuzukte birlesiyor; pazar buyuklugu yillik 2,5 trilyon euro (AB GSYH'sinin yuzde 15'i)",
+        "Tek Avrupa ihale platformu; 649 milyon euro idari yuk azalmasi ongoruluyor",
+        "En iyi fiyat-kalite orani standart oluyor; cevresel/sosyal kriterler en az yuzde 30, emek yogun islerde yuzde 50",
+        "Karsiliklilik taahhudunu yerine getirmeyen AB disi operatorlere kisitlama imkani",
+        "Oneri Avrupa Parlamentosu ve Konsey onayina sunulacak"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "ETUC"
+        ],
+        "kisi": [
+          "Stephane Sejourne"
+        ],
+        "sektor": [
+          "Insaat",
+          "Makine",
+          "Ulasim Araclari",
+          "Hizmetler"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "kamu-alimlari",
+        "ab-mevzuati",
+        "karsiliklilik",
+        "yesil-mutabakat",
+        "ihracat"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 80,
+        "keyword": 70,
+        "recency": 95,
+        "corroboration": 60,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "eunews",
+      "url": "https://www.eunews.it/en/2026/09/09/eu-unveils-plan-to-keep-start-ups-from-slipping-away-up-to-10-2-billion-available-for-innovation/",
+      "title": "Avrupa Inovasyon Yasasi acikladi: yilda 10,2 milyar euroya kadar ilave finansman hedefi",
+      "body": "Avrupa Komisyonu 9 Eylul 2026'da Avrupa Inovasyon Yasasi'ni (European Innovation Act) sundu. Sunumu Girisimler, Arastirma ve Inovasyondan sorumlu Komisyon Uyesi Ekaterina Zaharieva yapti.\n\nYasanin cozmeyi hedefledigi temel sorun, Avrupa'da gelistirilen inovasyonlarin ticari basariyi kita disinda elde etmesi. Uye devletler arasindaki parcali kurallar ve sermayeye erisim zorlugu, buyume onunde engel olusturuyor.\n\nUc ana bilesen var:\n\nFinansman cercevesi. Fikri mulkiyetin degerlemesi icin ortak bir Avrupa cercevesi ve alici ile saticilari bulusturan dijital bir pazar yeri kuruluyor. Beklenen sonuc: 35 milyon euro idari tasarruf ve risk sermayesi ile fikri mulkiyet teminatli borclanma yoluyla yilda 10,2 milyar euroya kadar ilave finansman.\n\nBasitlestirilmis kamu alimi. Uye devletlerin Ar-Ge alimlari icin tek bir usul, sinir otesi ortak alimlarda sadelestirme. Beklenen sonuc: kamu alicilari icin yillik 1 milyar euro tasarruf ve isletmeler icin yillik 25,92 milyar euro ilave ciro.\n\nDuzenleyici kum havuzlari (regulatory sandbox). Sirketlerin ve arastirmacilarin yeniliklerini duzenleyici gozetim altinda, kamu yarari guvenceleriyle test edebilecekleri kontrollu ortamlar icin ortak bir Avrupa cercevesi.\n\nZaharieva hedefi soyle ozetledi: fikri mulkiyet degerlemesi icin tek cerceve, alici ve saticiyi bulusturan tek bir dijital pazar yeri ve kamu alimi icin tek ve daha basit bir yol. Hedef yil 2028.\n\nTurk sanayicisi acisindan onemi: Turkiye Horizon Europe'a asosiye ulke olarak katildigi icin Turk sirketleri ve arastirma kuruluslari AB inovasyon ekosisteminin bircok aracina erisebiliyor. Duzenleyici kum havuzlarinin ortak cerceveye baglanmasi, Turk teknoloji ve makine ureticilerinin AB pazarina yonelik urun sertifikasyon ve test sureclerini kolaylastirabilir. Fikri mulkiyet teminatli borclanma modelinin AB'de kurumsallasmasi ise Ar-Ge yogun Turk KOBI'leri icin Avrupa'da ortaklik ve finansman kanali acabilir.",
+      "published_at": "2026-09-09T14:00:00+03:00",
+      "language": "en",
+      "summary": "Komisyon 9 Eylul'de Avrupa Inovasyon Yasasi'ni acikladi: fikri mulkiyet degerlemesi icin ortak cerceve, IP teminatli borclanma, Ar-Ge kamu alimlarinda tek usul ve duzenleyici kum havuzlari icin ortak AB cercevesi. Yilda 10,2 milyar euroya kadar ilave finansman ve isletmeler icin 25,92 milyar euro ilave ciro hedefleniyor. Horizon Europe'a asosiye olan Turkiye'deki Ar-Ge yogun KOBI'ler ve teknoloji ureticileri icin Avrupa'da ortaklik, test ve finansman kanallari acilabilir.",
+      "summary_en": "The Commission presented the European Innovation Act on 9 September 2026: a common IP valuation framework, an IP marketplace, a single R&D procurement route and an EU framework for regulatory sandboxes, targeting up to EUR 10.2 billion in additional annual funding.",
+      "key_points": [
+        "Fikri mulkiyet degerlemesi icin ortak Avrupa cercevesi ve dijital pazar yeri",
+        "Yilda 10,2 milyar euroya kadar ilave finansman hedefi (VC ve IP teminatli borclanma)",
+        "Ar-Ge kamu alimlarinda tek usul; kamu alicilari icin yillik 1 milyar euro tasarruf",
+        "Duzenleyici kum havuzlari icin ortak AB cercevesi",
+        "Hedef yil 2028"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [
+          "Ekaterina Zaharieva"
+        ],
+        "sektor": [
+          "Teknoloji",
+          "Ar-Ge",
+          "KOBI"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ar-ge",
+        "inovasyon",
+        "kobi",
+        "fikri-mulkiyet",
+        "kamu-alimlari",
+        "finansman"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 60,
+        "keyword": 60,
+        "recency": 95,
+        "corroboration": 50,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "ab-komisyonu-ticaret",
+      "url": "https://policy.trade.ec.europa.eu/news/commission-launches-consultation-first-review-international-procurement-instrument-2026-09-10_en",
+      "title": "Komisyon Uluslararasi Kamu Alimlari Araci'nin (IPI) ilk gozden gecirmesi icin istisare baslatti",
+      "body": "Avrupa Komisyonu 10 Eylul 2026'da, Uluslararasi Kamu Alimlari Araci'nin (International Procurement Instrument - IPI) ilk zorunlu gozden gecirmesi kapsaminda kamuoyu istisaresi baslattigini duyurdu. Istisare (EU) 2022/1031 sayili Tuzuk'un 14. maddesi uyarinca yurutuluyor ve 4 Eylul 2026'dan 27 Kasim 2026'ya kadar 12 hafta acik kalacak.\n\nIPI, AB isletmelerinin AB disi kamu alimi pazarlarinda pazar acikligini ve esit rekabet kosullarini saglamak amaciyla tasarlanmis bir duzenleyici cercevedir. Komisyon'a, ucuncu ulkelerdeki kisitlamalari sorusturma ve pazar erisimini tesvik etmek uzere ilgili ulkelerle istisare yurutme yetkisi verir; sonuc alinamazsa o ulkenin tedarikcilerinin AB ihalelerine katilimini sinirlayan onlemler alinabilir.\n\nIstisarenin inceledigi sekiz ana baslik: uygulama kapsami, mense belirleme kurallari, sikayet basvuru aracinin etkinligi, sorusturma usulleri, esik degerlerin verimliligi, onlemlerin bicimi ve kapsami, ihaleyi kazanan isteklilere getirilen yukumlulukler ve IPI onlemlerine iliskin istisnalar.\n\nArka planda, Komisyon'un Haziran 2025'te Cin'in kamu alimi pazarindaki engellere iliskin sorusturmanin ardindan Cinli tibbi cihaz sirketlerine yonelik ilk IPI onlemini uygulamaya koymasi bulunuyor. Bu, aracin teorik olmaktan cikip fiilen kullanilan bir ticaret savunmasi mekanizmasina donustugunu gosterdi.\n\nTurk sanayicisi acisindan bu gozden gecirme yakindan izlenmelidir. Turkiye, DTO Kamu Alimlari Anlasmasi'na (GPA) tam taraf degildir ve AB ile arasinda kamu alimlarini kapsayan bir karsiliklilik anlasmasi bulunmamaktadir. IPI'nin kapsaminin genisletilmesi, mense kurallarinin sikilastirilmasi veya esik degerlerin dusurulmesi halinde, AB kamu ihalelerine katilan Turk muteahhitlik, makine, rayli sistem, tibbi cihaz ve savunma sanayi firmalari icin erisim daralabilir. Ayni zamanda 9 Eylul'de aciklanan kamu alimlari reformu onerisindeki karsiliklilik hukumleriyle birlikte degerlendirildiginde, AB'nin kamu alimlarinda giderek daha korumaci bir cizgiye yoneldigi gorulmektedir. Istisareye Turk sektor orgutlerinin gorus sunmasi, kapsam disinda kalmak acisindan degerli bir firsattir.",
+      "published_at": "2026-09-10T12:00:00+03:00",
+      "language": "en",
+      "summary": "Komisyon, AB disi tedarikcilerin AB ihalelerine katilimini kisitlama yetkisi veren IPI'nin ilk gozden gecirmesi icin 27 Kasim 2026'ya kadar surecek kamuoyu istisaresi acti. Kapsam, mense kurallari ve esik degerler gozden geciriliyor. Turkiye GPA'ya tam taraf olmadigi icin IPI'nin genisletilmesi AB kamu ihalelerine katilan Turk muteahhitlik, makine ve tibbi cihaz firmalari icin erisimi daraltabilir; sektor orgutlerinin istisareye gorus sunmasi onerilir.",
+      "summary_en": "The Commission opened a 12-week public consultation (4 Sept - 27 Nov 2026) on the first review of the International Procurement Instrument, covering scope, origin rules and thresholds. Turkiye is not a full GPA party, so any widening of the IPI could restrict Turkish bidders in EU tenders.",
+      "key_points": [
+        "Istisare 4 Eylul - 27 Kasim 2026 arasinda acik, (EU) 2022/1031 madde 14 uyarinca",
+        "Sekiz baslik inceleniyor: kapsam, mense kurallari, sikayet araci, sorusturma usulu, esikler, onlem bicimi, yuklenici yukumlulukleri, istisnalar",
+        "Ilk IPI onlemi Haziran 2025'te Cinli tibbi cihaz sirketlerine uygulanmisti",
+        "Turkiye GPA'ya tam taraf degil - kapsam genislemesi risk yaratir",
+        "9 Eylul kamu alimlari reformundaki karsiliklilik hukumleriyle birlikte degerlendirilmeli"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "Dunya Ticaret Orgutu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Insaat",
+          "Makine",
+          "Tibbi Cihaz",
+          "Savunma Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "kamu-alimlari",
+        "karsiliklilik",
+        "ticaret-savunmasi",
+        "ab-mevzuati",
+        "ihracat"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 70,
+        "keyword": 65,
+        "recency": 100,
+        "corroboration": 40,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "destatis",
+      "url": "https://www.destatis.de/EN/Press/2026/09/PE26_316_421.html",
+      "title": "Almanya'da sanayi uretimi Temmuz 2026'da yuzde 1,1 geriledi, otomotivde yuzde 9,2 dusus",
+      "body": "Almanya Federal Istatistik Ofisi'nin (Destatis) 7 Eylul 2026'da yayimladigi gecici verilere gore, Almanya'da sanayi uretimi Temmuz 2026'da mevsim ve takvim etkilerinden arindirilmis olarak bir onceki aya gore reel yuzde 1,1 azaldi. Temmuz 2025 ile karsilastirildiginda (takvim etkisinden arindirilmis) uretim yuzde 1,6 daha dusuk.\n\nDususu suruklen ana kalem otomotiv sektoru oldu: yuzde 9,2 gerileme, buyuk olcude cok haftali bir uretim durusundan kaynaklandi. Sermaye mallarinda yuzde 3,4, tuketim mallarinda yuzde 2,2 dusus yasandi. Buna karsilik enerji uretimi ruzgar ve gunes kaynakli uretimin katkisiyla yuzde 4,7, insaat yuzde 0,9 artti.\n\nEnerji yogun bes sanayi dalinda uretim Haziran'a gore yuzde 1,7 geriledi; uc aylik karsilastirmada ise yatay seyretti (yuzde 0,0). Yillik bazda takvim etkisinden arindirilmis olarak yuzde 0,5 dusus goruldu. Enerji ve insaat haric uretim, Mayis-Temmuz doneminde bir onceki uc aya gore yuzde 0,4 artti.\n\nAyni istatistik serisinde 4 Eylul'de yayimlanan siparis verileri karisik bir tablo cizdi: Temmuz'da imalat sanayi yeni siparisleri aylik yuzde 2,5, yillik yuzde 13,1 artti; ancak buyuk olcekli siparisler haric tutuldugunda aylik yuzde 1,4 geriledi. Artisin kaynagi gemi ve ucak insa sozlesmeleriyle yuzde 126,4 sicrayan diger ulasim araclari kalemiydi. Otomotiv siparisleri yuzde 12,5 dustu. Yurt disi siparisler toplamda yuzde 2,1 azalirken euro bolgesi siparisleri yuzde 12,1 artti, euro bolgesi disi siparisler yuzde 10,1 geriledi. Yurt ici siparisler yuzde 9,1 artti.\n\nTurk sanayicisi acisindan bu veri seti onemli bir erken uyari niteligindedir. Almanya, Turkiye'nin en buyuk ihracat pazaridir ve Turk otomotiv yan sanayi, makine, metal isleme ve tekstil sektorlerinin siparis akisi Alman sanayi konjonkturune siki bicimde baglidir. Otomotivdeki sert dusus ve sermaye mallarindaki gerileme, Turk yan sanayi ihracatcilari icin 2026 sonbaharinda siparis hacimlerinin baskilanacagina isaret ediyor. Buna karsilik euro bolgesi ici siparislerdeki artis ve savunma-havacilik kaynakli buyuk olcekli siparis dalgasi, bu alanlarda tedarik zincirine girebilen firmalar icin telafi edici bir kanal sunuyor.",
+      "published_at": "2026-09-07T09:00:00+03:00",
+      "language": "en",
+      "summary": "Almanya'da sanayi uretimi Temmuz 2026'da aylik yuzde 1,1, yillik yuzde 1,6 geriledi; otomotiv yuzde 9,2, sermaye mallari yuzde 3,4 dustu. Almanya Turkiye'nin en buyuk ihracat pazari oldugundan bu tablo, Turk otomotiv yan sanayi, makine ve metal isleme ihracatcilari icin sonbaharda siparis baskisi anlamina geliyor. Ote yandan euro bolgesi ici siparislerdeki yuzde 12,1 artis ve savunma-havacilik kaynakli buyuk siparisler, bu tedarik zincirlerine girebilen firmalar icin telafi kanali sunuyor.",
+      "summary_en": "German industrial production fell 1.1% m/m and 1.6% y/y in July 2026, with automotive down 9.2% and capital goods down 3.4%. As Germany is Turkiye's largest export market, this signals weaker order flows for Turkish auto supplier, machinery and metalworking exporters.",
+      "key_points": [
+        "Temmuz 2026 sanayi uretimi aylik yuzde 1,1, yillik yuzde 1,6 dusus (Destatis, 7 Eylul 2026)",
+        "Otomotiv yuzde 9,2 geriledi - cok haftali uretim durusu etkili",
+        "Sermaye mallari yuzde 3,4, tuketim mallari yuzde 2,2 dusus; enerji yuzde 4,7 artis",
+        "Enerji yogun bes sanayi dalinda aylik yuzde 1,7 dusus",
+        "4 Eylul'deki siparis verisinde yeni siparisler yuzde 2,5 artti ama buyuk siparisler haric yuzde 1,4 dustu"
+      ],
+      "entities": {
+        "kurum": [
+          "Destatis"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Makine",
+          "Metal Isleme",
+          "Enerji"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "sanayi-uretimi",
+        "almanya",
+        "otomotiv",
+        "ihracat",
+        "siparis"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 75,
+        "keyword": 60,
+        "recency": 90,
+        "corroboration": 65,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "investing-com",
+      "url": "https://ca.investing.com/news/stock-market-news/frances-industrial-output-falls-04-in-july-missing-forecasts-93CH-4831815",
+      "title": "Fransa'da sanayi uretimi Temmuz'da yuzde 0,4 geriledi, imalat yuzde 0,8 dustu",
+      "body": "Fransa Ulusal Istatistik ve Ekonomik Etudler Enstitusu'nun (INSEE) 9 Eylul 2026'da yayimladigi Informations Rapides sayi 217 verilerine gore, Fransa'da sanayi uretimi Temmuz 2026'da bir onceki aya gore yuzde 0,4 azaldi. Sonuc, Reuters anketinde yuzde 0,2 artis bekleyen ekonomistlerin tahminlerinin belirgin sekilde altinda kaldi.\n\nDaha carpici olan imalat sanayindeki tablo: imalat uretimi Haziran'daki yuzde 1,0 dususun ardindan Temmuz'da yuzde 0,8 daha geriledi. Uc aylik karsilastirmada imalat uretimi yuzde 1,2 dustu; bu, Fransiz imalat sanayinde art arda gelen ve derinlesen bir daralmaya isaret ediyor. Toplam sanayi uretimindeki gerilemenin imalattan daha sinirli kalmasinin nedeni, sicak hava dalgasinin destekledigi enerji uretimi oldu; enerji kalemi olmasaydi toplam dusus cok daha sert olacakti.\n\nFransa, Turkiye'nin AB icindeki en buyuk ucuncu-dorduncu ihracat pazarlari arasinda yer aliyor ve ozellikle otomotiv yan sanayi, beyaz esya, tekstil-hazir giyim ve makine kalemlerinde onemli bir alici konumunda. Fransiz imalat sanayindeki uc aylik yuzde 1,2'lik daralma, bu kalemlerdeki ithalat talebinin de zayifladigina isaret ediyor.\n\nAlmanya'da Temmuz uretiminin yuzde 1,1 dusmesi, Fransa'da imalatin yuzde 0,8 gerilemesi ve Italya'da yalnizca yuzde 0,7'lik sinirli bir toparlanma gorulmesi bir arada degerlendirildiginde, euro bolgesi sanayi konjonkturunun 2026 yazinda zayif seyrettigi anlasiliyor. Bu tablo, ECB'nin 10 Eylul'de faiz artirmasiyla birleserek AB pazarina yonelik Turk ihracati icin talep tarafinda ikili bir baski olusturuyor: hem sanayi uretim hacmi daraliyor hem de finansman kosullari sikilasiyor.\n\nIhracatci firmalar acisindan pratik cikarim, 2026 son ceyregi ve 2027 ilk ceyregi icin siparis projeksiyonlarinin temkinli tutulmasi, stok politikalarinin siki yonetilmesi ve pazar cesitlendirmesinin (ozellikle Korfez, Kuzey Afrika ve Orta Asya) hizlandirilmasidir.",
+      "published_at": "2026-09-09T09:30:00+03:00",
+      "language": "en",
+      "summary": "INSEE verilerine gore Fransa'da sanayi uretimi Temmuz'da yuzde 0,4, imalat sanayi yuzde 0,8 geriledi; uc aylik bazda imalatta yuzde 1,2 daralma var ve sonuc beklentilerin altinda kaldi. Almanya ve Italya verileriyle birlikte degerlendirildiginde euro bolgesi sanayi konjonkturu zayif seyrediyor. Fransa'ya otomotiv yan sanayi, beyaz esya, tekstil ve makine ihrac eden Turk firmalarinin son ceyrek siparis projeksiyonlarini temkinli tutmasi ve pazar cesitlendirmesini hizlandirmasi gerekiyor.",
+      "summary_en": "French industrial output fell 0.4% m/m in July 2026 and manufacturing dropped 0.8%, missing forecasts; manufacturing is down 1.2% over three months. Combined with weak German data, euro area industrial demand looks soft heading into Q4.",
+      "key_points": [
+        "INSEE Informations Rapides 217, 9 Eylul 2026 yayimi",
+        "Toplam sanayi uretimi aylik yuzde 0,4 dusus; beklenti yuzde 0,2 artisti",
+        "Imalat sanayi yuzde 0,8 dustu (Haziran'da yuzde 1,0 dusmustu)",
+        "Uc aylik bazda imalat yuzde 1,2 daraldi",
+        "Dususu sinirlayan tek kalem sicak hava kaynakli enerji uretimi oldu"
+      ],
+      "entities": {
+        "kurum": [
+          "INSEE"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Beyaz Esya",
+          "Tekstil",
+          "Makine"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "sanayi-uretimi",
+        "fransa",
+        "ihracat",
+        "imalat-sanayi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 60,
+        "keyword": 55,
+        "recency": 95,
+        "corroboration": 55,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "istat",
+      "url": "https://www.istat.it/en/press-release/industrial-production-july-2026/",
+      "title": "Italya'da sanayi uretimi Temmuz'da yuzde 0,7 artti ama uc aylik egilim hala negatif",
+      "body": "Italya Ulusal Istatistik Enstitusu Istat'in 10 Eylul 2026'da yayimladigi verilere gore, Italya'da mevsimsel duzeltilmis sanayi uretimi endeksi Temmuz 2026'da bir onceki aya gore yuzde 0,7 artti. Ancak bu artis, altta yatan zayifligi gizliyor: uc aylik ortalamanin bir onceki uc aylik doneme gore degisimi yuzde -0,1 ile negatif kaldi.\n\nYillik karsilastirmada tablo duz: takvim etkisinden arindirilmis endeks Temmuz 2025 ile ayni seviyede kaldi; arindirilmamis veri de ayni sonucu veriyor. Istat'in tam raporu enerji, sermaye mallari, tuketim mallari ve ara mallar kirilimlarini iceriyor. Bir sonraki yayin 9 Ekim 2026'da yapilacak.\n\nItalya, Turkiye'nin AB icindeki en buyuk ikinci-ucuncu ticaret ortaklari arasindadir ve iki ulke sanayileri arasinda ozellikle tekstil-hazir giyim, makine, beyaz esya, mobilya, otomotiv yan sanayi, celik ve mermer-dogal tas alanlarinda yogun bir tedarik zinciri iliskisi vardir. Italyan makine ureticileri Turk sanayisinin en onemli yatirim mali tedarikcisi, Italyan moda evleri ise Turk tekstil ve deri ureticilerinin onemli musterisidir.\n\nTemmuz'daki yuzde 0,7'lik aylik artis, Almanya ve Fransa'daki dususlerin aksine sinirli bir olumlu sinyal olarak okunabilir; ancak uc aylik trendin negatif ve yillik degisimin sifir olmasi, Italyan sanayisinde de kalici bir toparlanma bulunmadigini gosteriyor.\n\nEuro bolgesinin uc buyuk sanayi ekonomisinin ayni ay icinde acikladigi verilerin toplu okumasi sudur: Almanya -1,1, Fransa -0,4 (imalat -0,8), Italya +0,7. Euro bolgesi genelinde Haziran'da uretim yatay seyretmisti. Bu tablo, 2026 son ceyreginde AB'ye yonelik Turk ara mali ve yatirim mali ihracatinda hacim buyumesinin sinirli kalacagini, rekabetin fiyat ve teslimat performansi uzerinden sertlesecegini isaret ediyor.",
+      "published_at": "2026-09-10T11:00:00+03:00",
+      "language": "en",
+      "summary": "Istat verilerine gore Italya'da sanayi uretimi Temmuz 2026'da aylik yuzde 0,7 artti, ancak uc aylik egilim yuzde -0,1 ile negatif ve yillik degisim sifir. Italya Turk tekstil, makine, mobilya, beyaz esya ve celik sektorleri icin kritik bir tedarik zinciri ortagi. Almanya (-1,1) ve Fransa (-0,4) verileriyle birlikte okundugunda, AB'ye yonelik Turk ara mali ve yatirim mali ihracatinda son ceyrekte hacim buyumesi sinirli kalacak, rekabet fiyat ve teslimat performansi uzerinden sertlesecek.",
+      "summary_en": "Italian industrial production rose 0.7% m/m in July 2026 but the three-month trend stayed negative (-0.1%) and the annual change was flat. Read alongside Germany (-1.1%) and France (-0.4%), euro area industrial demand remains subdued.",
+      "key_points": [
+        "Istat, 10 Eylul 2026: Temmuz'da sanayi uretimi aylik yuzde 0,7 artis",
+        "Uc aylik ortalama degisimi yuzde -0,1 ile negatif",
+        "Yillik degisim sifir (takvim etkisinden arindirilmis)",
+        "Sonraki yayin 9 Ekim 2026",
+        "Almanya -1,1, Fransa -0,4 ile birlikte euro bolgesi sanayisinde toparlanma yok"
+      ],
+      "entities": {
+        "kurum": [
+          "Istat"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Tekstil",
+          "Makine",
+          "Mobilya",
+          "Beyaz Esya",
+          "Celik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "sanayi-uretimi",
+        "italya",
+        "ihracat",
+        "imalat-sanayi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 60,
+        "keyword": 55,
+        "recency": 100,
+        "corroboration": 50,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "eurostat",
+      "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-07092026-ap",
+      "title": "Euro bolgesi GSYH ikinci ceyrekte yuzde 0,6 buyudu, buyumeyi net ihracat tasidi",
+      "body": "Eurostat'in 7 Eylul 2026'da yayimladigi verilere gore euro bolgesi GSYH'si 2026 yilinin ikinci ceyreginde bir onceki ceyrege gore yuzde 0,6, bir onceki yilin ayni ceyregine gore yuzde 1,2 buyudu. AB genelinde ceyreklik buyume yuzde 0,7 oldu.\n\nIstihdam ayni donemde hem euro bolgesinde hem AB'de ceyreklik bazda yuzde 0,1 artti. Yillik bazda euro bolgesi istihdami yuzde 0,5, AB istihdami yuzde 0,4 yukseldi. Istihdamda en guclu artislar Portekiz (yuzde 1,0), Cekya (yuzde 0,9) ve Malta (yuzde 0,9) kaydetti.\n\nUlke bazinda buyume performansi belirgin sekilde farklilasti. Irlanda yuzde 10,2 ile olaganustu bir ceyreklik buyume acikladi (cok uluslu sirket muhasebe etkileriyle sisirilen bir seri). Avusturya yuzde -0,1 ile daralan tek ulke oldu.\n\nBuyumenin kompozisyonu Turk ihracatcisi icin en dikkat cekici basliktir: buyume agirlikli olarak dis talebe dayandi. Ihracat eksi ithalat kalemi hem euro bolgesinde (+0,9 puan) hem AB'de (+0,8 puan) GSYH buyumesine pozitif katki yapti. Stok eritme bu katkinin bir kismini gerilerken, hanehalki tuketimi yalnizca ilimli bir destek sagladi.\n\nNet ihracatin buyumenin ana kaynagi olmasi iki sey anlatir. Birincisi, AB'nin ic talebi hala zayif; ithalat bastirilmis durumda. Bu, AB pazarina satis yapan Turk ihracatcisi icin talep tarafinda dogrudan olumsuz bir sinyaldir. Ikincisi, AB uretiminin ihracata yonelmesi, ucuncu pazarlarda (Kuzey Afrika, Korfez, Orta Asya, Balkanlar) Turk urunleriyle AB urunleri arasindaki rekabetin sertlesecegi anlamina gelir.\n\nStok eritmenin buyumeye negatif katki yapmasi ise orta vadeli bir firsat isaretidir: AB'de stoklar erimeye devam ederse, 2026 son ceyregi ve 2027 basinda yeniden stoklanma talebi ara mali ithalatini canlandirabilir. Turk tedarikcilerin bu donem icin kapasite ve teslimat hazirligi yapmasi anlamlidir.",
+      "published_at": "2026-09-07T12:00:00+03:00",
+      "language": "en",
+      "summary": "Eurostat'a gore euro bolgesi GSYH'si 2026 ikinci ceyrekte yuzde 0,6, yillik yuzde 1,2 buyudu; istihdam artisi yuzde 0,1 ile sinirli kaldi. Buyumeyi agirlikla net ihracat tasidi (euro bolgesinde +0,9 puan), hanehalki tuketimi zayif destek verdi. Bu, AB ic talebinin hala bastirilmis oldugunu ve Turk ihracatcisinin AB pazarinda hacim buyutmesinin zor olacagini gosteriyor; ayrica AB uretiminin ihracata yonelmesi ucuncu pazarlarda Turk urunleriyle rekabeti sertlestirecek.",
+      "summary_en": "Euro area GDP grew 0.6% q/q and 1.2% y/y in Q2 2026, driven mainly by net exports (+0.9pp), while household consumption contributed only modestly. Weak EU domestic demand limits volume growth for Turkish exporters and sharpens competition in third markets.",
+      "key_points": [
+        "Euro bolgesi GSYH ceyreklik yuzde 0,6, yillik yuzde 1,2 buyudu; AB'de ceyreklik yuzde 0,7",
+        "Istihdam ceyreklik yuzde 0,1, yillik euro bolgesinde yuzde 0,5 artti",
+        "Net ihracatin buyumeye katkisi euro bolgesinde +0,9 puan, AB'de +0,8 puan",
+        "Irlanda yuzde 10,2 ile en hizli buyuyen, Avusturya yuzde -0,1 ile tek daralan ulke",
+        "Stok eritme buyumeye negatif katki yapti - yeniden stoklama talebi firsati"
+      ],
+      "entities": {
+        "kurum": [
+          "Eurostat"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Ihracat",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "buyume",
+        "istihdam",
+        "ihracat",
+        "ic-talep",
+        "euro-bolgesi"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 65,
+        "keyword": 55,
+        "recency": 90,
+        "corroboration": 60,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "eurostat",
+      "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-07092026-bp",
+      "title": "Euro bolgesinde hizmet uretimi Haziran'da yuzde 0,3 geriledi",
+      "body": "Eurostat'in 7 Eylul 2026'da yayimladigi verilere gore, Haziran 2026'da hizmet uretimi Mayis 2026'ya gore euro bolgesinde yuzde 0,3, AB'de yuzde 0,2 azaldi. Yillik karsilastirmada ise tablo daha olumlu: Haziran 2025'e gore hizmet uretimi hem euro bolgesinde hem AB'de yuzde 1,5 artti.\n\nSektor kirilimlari belirgin farklilik gosteriyor. Euro bolgesinde en guclu performansi bilgi ve iletisim hizmetleri kaydetti: aylik yuzde 0,8, yillik yuzde 5,2 artis. Zayif kalemler ise gayrimenkul faaliyetleri (aylik yuzde -1,0) ve mesleki, bilimsel ve teknik faaliyetler (aylik yuzde -0,7) oldu.\n\nUlke bazinda Luksemburg yuzde +7,8 ile en yuksek aylik artisi, Letonya yuzde -3,7 ile en sert dususu kaydetti. Yillik bazda Yunanistan (yuzde +9,3) ve Slovenya (yuzde +8,5) one cikarken, Danimarka yuzde -6,5 ile ters yonde ayristi.\n\nHizmet uretimi verisi, sanayi uretimi verisiyle birlikte AB ekonomisinin genel momentumunu okumak icin kullanilir. Haziran'da sanayi uretimi euro bolgesinde yatay seyretmis, hizmetler ise gerilemistir; bu, ikinci ceyrek sonunda ic talebin zayif kaldigini teyit eder ve GSYH buyumesinin net ihracata dayanmasi bulgusuyla tutarlidir.\n\nTurk sanayicisi acisindan dolayli ama anlamli iki cikarim var. Birincisi, mesleki-teknik hizmetlerdeki daralma, AB'de yatirim projelerinin (muhendislik, danismanlik, tasarim) ivme kaybettigine isaret eder; bu, Turk makine ve yatirim mali ihracatcilari icin proje bazli siparislerin gecikebilecegi anlamina gelir. Ikincisi, bilgi ve iletisim hizmetlerinin yillik yuzde 5,2 buyumesi, AB'nin dijitallesme harcamalarinin surdugunu gosterir; yazilim, gomulu sistem ve elektronik bilesenler alaninda calisan Turk firmalari icin bu alan gorece guclu bir talep kanali olmayi surduruyor.",
+      "published_at": "2026-09-07T12:05:00+03:00",
+      "language": "en",
+      "summary": "Eurostat'a gore Haziran 2026'da hizmet uretimi euro bolgesinde aylik yuzde 0,3, AB'de yuzde 0,2 geriledi; yillik bazda ise yuzde 1,5 artis var. Bilgi-iletisim hizmetleri yillik yuzde 5,2 ile guclu, gayrimenkul ve mesleki-teknik faaliyetler zayif. Mesleki-teknik hizmetlerdeki daralma AB'de yatirim projelerinin ivme kaybettigine isaret ediyor; bu Turk makine ve yatirim mali ihracatcilari icin proje siparislerinde gecikme riski demek. Dijital hizmetlerdeki buyume ise yazilim ve elektronik alanindaki Turk firmalari icin talep kanalini canli tutuyor.",
+      "summary_en": "Euro area services production fell 0.3% m/m in June 2026 (EU -0.2%) but was up 1.5% y/y. Information and communication grew 5.2% y/y while real estate and professional/technical activities contracted.",
+      "key_points": [
+        "Haziran 2026 hizmet uretimi: euro bolgesi aylik yuzde -0,3, AB yuzde -0,2",
+        "Yillik bazda her iki bolgede de yuzde 1,5 artis",
+        "Bilgi ve iletisim: aylik yuzde +0,8, yillik yuzde +5,2 - en guclu kalem",
+        "Gayrimenkul yuzde -1,0, mesleki-bilimsel-teknik faaliyetler yuzde -0,7",
+        "Luksemburg yuzde +7,8, Letonya yuzde -3,7"
+      ],
+      "entities": {
+        "kurum": [
+          "Eurostat"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Hizmetler",
+          "Bilisim",
+          "Gayrimenkul",
+          "Muhendislik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "hizmetler",
+        "euro-bolgesi",
+        "ic-talep",
+        "dijitallesme"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 45,
+        "keyword": 45,
+        "recency": 90,
+        "corroboration": 35,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "eurocommerce",
+      "url": "https://www.eurocommerce.eu/2026/09/feedback-on-cbam-extension-to-downstream-products",
+      "title": "AB perakende sektoru CBAM'in alt urunlere genisletilmesine karsi cikti",
+      "body": "Avrupa perakende ve toptan ticaret sektorunun cati orgutu EuroCommerce, 7 Eylul 2026'da Sinirda Karbon Duzenleme Mekanizmasi'nin (CBAM) alt (downstream) urunlere genisletilmesi onerisine iliskin resmi gorusunu yayimladi ve genislemeye karsi cikti.\n\nArka plan: Komisyon Aralik 2025'te CBAM kapsaminin celik ve aluminyum yogun islenmis urunlere genisletilmesini onermisti; Konsey 12 Haziran 2026'da 180-200 arasi ilave celik iceren urunun kapsama alinmasini onerdi. Kapsam genislemesinin 1 Ocak 2028'de yururluge girmesi planlaniyor. Kapsanacak urunler arasinda islenmis metal urunleri, makine ve endustriyel ekipman, tasit ve tasit parcalari (vites kutusu, motor gibi), beyaz esya (camasir makinesi, buzdolabi) ve metal insaat ekipmanlari bulunuyor.\n\nEuroCommerce'in temel itirazlari:\n\nIdari karmasiklik. Makine, ulasim ve ithal ara mala dayali diger sektorlerde CBAM'in alt urunlere genisletilmesi idari ve uyum yukunu belirgin sekilde artiracak.\n\nVeri toplama zorlugu. AB disi tedarikcilerden dogrulanmis emisyon verisi almak buyuk bir engel. Sirketler cogu zaman malzeme bilesimi ve tedarik kaynagina dair ayrintili bilgiye erisemiyor; bitmis urun ithal eden perakendeciler icin sorun daha da agir.\n\nMaliyetin zincire yayilmasi. CBAM maliyetleri tedarik zinciri boyunca birikerek urun bulunabilirligini azaltabilir ve AB pazarinda tuketici fiyatlarini yukseltebilir.\n\nOrgut, mevzuat surecinin uygulama ve raporlama cercevesi sadelesene kadar durdurulmasini, genisletme oncesi kapsamli etki analizi yapilmasini, karbon yogunlugu esiklerine dayali net kapsam kriterleri belirlenmesini ve varsayilan degerlerle basitlestirilmis uyum yollari olusturulmasini oneriyor.\n\nTurk sanayicisi icin bu dosya kritik onemdedir. CBAM'in alt urunlere genisletilmesi, halihazirda kapsamda olan celik, aluminyum, cimento ve gubre ihracatcilarina ek olarak Turkiye'nin AB'ye en cok sattigi urun gruplarini - otomotiv yan sanayi, beyaz esya, makine, metal esya ve insaat ekipmani - dogrudan kapsama alacaktir. Bu, ihracatcinin her celik ve aluminyum girdisinin dogrulanmis gomulu emisyonunu bilmesini, yani tum ust tedarikci zincirinden CBAM uyumlu dogrulanmis veri toplamasini zorunlu kilar. AB'nin kendi perakende sektorunun bile uygulanabilirlik itirazi yukseltmesi, Turk sektor orgutleri icin (TCUD, OIB, TIM, ISO) kamu istisare surecine gorus sunma ve gecis sureleri ile varsayilan deger kolayliklari talep etme acisindan onemli bir dayanak olusturmaktadir.",
+      "published_at": "2026-09-07T10:00:00+03:00",
+      "language": "en",
+      "summary": "EuroCommerce, CBAM'in 180-200 alt urune genisletilmesi onerisine karsi resmi gorus sundu; idari yuk, AB disi tedarikcilerden dogrulanmis emisyon verisi alma zorlugu ve maliyetin zincire yayilmasi gerekcesiyle surecin durdurulmasini istedi. Genisleme 1 Ocak 2028'de yururluge girerse otomotiv yan sanayi, beyaz esya, makine, metal esya ve insaat ekipmani ihracatcilari - yani Turkiye'nin AB'ye en cok sattigi kalemler - dogrudan CBAM kapsamina girecek. Turk sektor orgutlerinin kamu istisaresine gorus sunarak gecis suresi ve varsayilan deger kolayligi talep etmesi kritik.",
+      "summary_en": "EuroCommerce formally opposed extending CBAM to 180-200 downstream steel- and aluminium-intensive products from 1 January 2028, citing administrative burden and the difficulty of obtaining verified supplier emissions data. The extension would directly capture Turkiye's main EU export lines: auto parts, white goods, machinery and fabricated metal.",
+      "key_points": [
+        "EuroCommerce gorusu 7 Eylul 2026'da yayimlandi, genislemeye karsi cikiyor",
+        "Konsey 12 Haziran 2026'da 180-200 ilave celik iceren urunun kapsama alinmasini onerdi",
+        "Kapsam genislemesi 1 Ocak 2028'de yururluge girecek",
+        "Kapsanacak urunler: islenmis metal, makine, tasit parcalari, beyaz esya, insaat ekipmani",
+        "Talepler: surecin durdurulmasi, etki analizi, karbon yogunlugu esikleri, varsayilan degerlerle basit uyum yolu"
+      ],
+      "entities": {
+        "kurum": [
+          "EuroCommerce",
+          "Avrupa Komisyonu",
+          "AB Konseyi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Beyaz Esya",
+          "Makine",
+          "Metal Esya",
+          "Celik",
+          "Aluminyum"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "cevre",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cbam",
+        "karbon",
+        "yesil-mutabakat",
+        "celik",
+        "aluminyum",
+        "tedarik-zinciri",
+        "ihracat"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 92,
+        "keyword": 95,
+        "recency": 90,
+        "corroboration": 55,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "ab-komisyonu-ticaret",
+      "url": "https://policy.trade.ec.europa.eu/news/commission-presents-eu-ecuador-sustainable-investment-facilitation-agreement-sifa-council-2026-09-11_en",
+      "title": "Komisyon AB-Ekvador Surdurulebilir Yatirim Kolaylastirma Anlasmasi'ni Konsey'e sundu",
+      "body": "Avrupa Komisyonu 11 Eylul 2026'da AB ile Ekvador arasindaki Surdurulebilir Yatirim Kolaylastirma Anlasmasi'ni (Sustainable Investment Facilitation Agreement - SIFA) imza icin Konsey'e sundu.\n\nSIFA, yatirim onundeki burokratik engelleri ve duzenleyici belirsizligi azaltmayi amaclayan bir cerceve anlasmasidir. Bu anlasma, surdurulebilir enerji ve hammadde alanlarinda isbirligini derinlestirmeyi ve yatirimi kolaylastirmayi hedefleyen ozel hukumler icermesi bakimindan ilk kez bir Latin Amerika ulkesiyle imzalanacak SIFA olma ozelligini tasiyor.\n\nAnlasma AB'nin Global Gateway stratejisiyle uyumlu bir yatirim girisimi niteliginde. AB'nin Ekvador'daki dogrudan yatirim stoku 2024 itibariyla 9,1 milyar euro; basta insaat, is hizmetleri ve imalat sektorlerinde yogunlasiyor.\n\nSurec: Komisyon Konsey'den imza yetkisi istiyor; Konsey onayinin ardindan Avrupa Parlamentosu'nun onayi alinacak ve anlasma yururluge girebilecek. Anlasma, AB'nin Rekabetcilik Pusulasi (Competitiveness Compass) belgesinde belirtilen, Avrupa isletmelerine - ozellikle yenilenebilir enerji gibi yuksek buyume potansiyelli sektorlerde - fayda saglayan yeni ortaklik yaklasimlari gelistirme hedefini destekliyor.\n\nTurk sanayicisi acisindan dogrudan bir maliyet veya uyum etkisi yok; ancak stratejik bir okuma sunuyor. AB, klasik serbest ticaret anlasmalarinin yani sira hammadde ve enerji erisimini guvence altina alan yatirim kolaylastirma anlasmalari agini hizla genisletiyor. Kritik hammadde ve yenilenebilir enerji bilesenlerinde AB'nin tedarik guvenligini artirmasi, orta vadede bu girdilerde kuresel rekabeti ve fiyatlamayi etkileyecektir. Turk sanayisinin kritik hammadde erisiminde benzer ikili cerceveler kurmasi ve AB'nin Global Gateway projelerinde muteahhit/tedarikci olarak yer alma imkanlarini degerlendirmesi anlamlidir.",
+      "published_at": "2026-09-11T12:00:00+03:00",
+      "language": "en",
+      "summary": "Komisyon 11 Eylul'de AB-Ekvador Surdurulebilir Yatirim Kolaylastirma Anlasmasi'ni imza icin Konsey'e sundu; anlasma surdurulebilir enerji ve hammadde isbirligi hukumleri iceren ilk Latin Amerika SIFA'si. Turk sanayicisi icin dogrudan uyum yuku yok, ancak AB'nin kritik hammadde ve enerji erisimini guvence altina alan anlasma agini hizla genislettigini gosteriyor. Turkiye'nin de benzer ikili cerceveler kurmasi ve AB Global Gateway projelerinde tedarikci olarak konumlanmasi degerlendirilmeli.",
+      "summary_en": "The Commission sent the EU-Ecuador Sustainable Investment Facilitation Agreement to the Council on 11 September 2026. It is the first SIFA with a Latin American country to include sustainable energy and raw materials provisions.",
+      "key_points": [
+        "Komisyon 11 Eylul 2026'da imza icin Konsey'e sundu",
+        "Surdurulebilir enerji ve hammadde hukumleri iceren ilk Latin Amerika SIFA'si",
+        "AB'nin Ekvador'daki dogrudan yatirim stoku 2024'te 9,1 milyar euro",
+        "Global Gateway ve Rekabetcilik Pusulasi ile uyumlu",
+        "Sonraki adim Konsey yetkisi ve Avrupa Parlamentosu onayi"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "AB Konseyi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Hammadde",
+          "Insaat",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "yatirim",
+        "hammadde",
+        "enerji",
+        "serbest-ticaret-anlasmasi"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 40,
+        "keyword": 40,
+        "recency": 100,
+        "corroboration": 35,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "ab-komisyonu-ticaret",
+      "url": "https://policy.trade.ec.europa.eu/news/eu-welcomes-cambodia-wto-appeal-arrangement-2026-09-09_en",
+      "title": "Kambocya DTO gecici temyiz mekanizmasina katildi: MPIA uyeligi 62'ye cikti",
+      "body": "Avrupa Birligi 9 Eylul 2026'da Kambocya'nin Cok Tarafli Gecici Temyiz Tahkim Duzenlemesi'ne (Multi-party Interim Appeal Arbitration Arrangement - MPIA) katilmasini memnuniyetle karsiladi.\n\nMPIA, Dunya Ticaret Orgutu'nun Temyiz Organi'nin islevsiz kalmasi uzerine 2020'de gecici bir cozum olarak kurulan, uye ulkelerin ticaret uyusmazliklarini hakemler araciligiyla temyiz etmesine imkan taniyan bir sistemdir. Temyizler, uluslararasi ticaret hukuku alaninda 10 uzmandan olusan bir havuzdan rastgele secilen hakemler tarafindan karara baglanir.\n\nKambocya'nin katilimiyla MPIA uye sayisi 62'ye, temsil edilen kuresel ticaret payi yuzde 60,4'e ulasti. Uyeler arasinda Avustralya, Brezilya, Kanada, Cin, AB, Japonya, Meksika, Yeni Zelanda, Singapur, Isvicre ve Birlesik Krallik bulunuyor.\n\nAB Ticaret Komiseri Maros Sefcovic, duzenlemenin kurallara dayali ticaret sistemini ayakta tutmada onemli bir rol oynadigini belirtti. MPIA, ticaret uyusmazliklarinin cozumsuz kalan temyizler yerine duzenli ve baglayici bicimde sonuclanmasini sagliyor.\n\nTurk sanayicisi acisindan bu gelismenin onemi su noktada toplaniyor: Turkiye MPIA'ya taraf degildir. Turk ihracatcisi bir AB ticaret savunmasi onlemine (ornegin hasir celikte acilan damping sorusturmasina) karsi DTO nezdinde dava acip panelde kazanirsa, karsi taraf temyize gittiginde dosya islevsiz Temyiz Organi'nda askida kalabilir - bu duruma bosluga temyiz (appeal into the void) deniyor. MPIA uyesi olan taraflar arasinda ise uyusmazlik baglayici tahkimle sonuclaniyor.\n\nKuresel ticaretin yuzde 60'ini temsil eden bir mekanizmanin disinda kalmak, korumaci onlemlerin yogunlastigi bir donemde Turkiye'nin hukuki basvuru yollarini zayiflatiyor. MPIA'ya katilim, Turkiye'nin ticaret savunmasi onlemlerine karsi elindeki araclari guclendirecek dusuk maliyetli bir politika secenegi olarak degerlendirilebilir.",
+      "published_at": "2026-09-09T11:00:00+03:00",
+      "language": "en",
+      "summary": "Kambocya'nin katilimiyla DTO gecici temyiz mekanizmasi MPIA'nin uye sayisi 62'ye, temsil ettigi kuresel ticaret payi yuzde 60,4'e ulasti. Turkiye MPIA'ya taraf degil; bu, AB'nin damping ve korunma onlemlerine karsi DTO'da acilacak davalarda karsi tarafin bosluga temyiz yoluyla dosyayi askiya alabilmesi riskini doguruyor. Korumaciligin arttigi bir donemde MPIA'ya katilim, Turkiye icin dusuk maliyetli ve hukuki basvuru yollarini guclendirecek bir politika secenegi.",
+      "summary_en": "Cambodia joined the WTO's MPIA interim appeal arrangement, taking membership to 62 members covering 60.4% of global trade. Turkiye is not a party, leaving its WTO cases against EU trade defence measures vulnerable to appeals into the void.",
+      "key_points": [
+        "Kambocya'nin katilimiyla MPIA uye sayisi 62, kuresel ticaret payi yuzde 60,4",
+        "MPIA 2020'de DTO Temyiz Organi islevsiz kalinca gecici cozum olarak kuruldu",
+        "Temyizler 10 uzmanlik havuzdan rastgele secilen hakemlerce karara baglaniyor",
+        "AB Ticaret Komiseri Sefcovic duzenlemenin kurallara dayali sistemi ayakta tuttugunu vurguladi",
+        "Turkiye MPIA'ya taraf degil - bosluga temyiz riski"
+      ],
+      "entities": {
+        "kurum": [
+          "Dunya Ticaret Orgutu",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [
+          "Maros Sefcovic"
+        ],
+        "sektor": [
+          "Ihracat",
+          "Celik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "wto",
+        "ticaret-savunmasi",
+        "uyusmazlik-cozumu",
+        "ihracat"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 45,
+        "keyword": 45,
+        "recency": 95,
+        "corroboration": 35,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "eunews",
+      "url": "https://www.eunews.it/en/2026/09/10/competitiveness-migration-cost-of-living-what-parliamentary-groups-expect-from-the-2026-state-of-the-union-address/",
+      "title": "2026 Birligin Durumu konusmasi oncesi Parlamento gruplarindan rekabetcilik vurgusu",
+      "body": "Avrupa Komisyonu Baskani Ursula von der Leyen'in 16 Eylul 2026 Carsamba gunu Strazburg'daki genel kurulda yapacagi Birligin Durumu (State of the Union - SOTEU) konusmasi oncesinde, Avrupa Parlamentosu siyasi gruplari beklentilerini acikladi. Konusma, Birligin onumuzdeki yila iliskin siyasi ve yasal onceliklerini belirleyecek.\n\nRekabetcilik ve ekonomi basliginda Avrupa Halk Partisi (EPP) lideri Manfred Weber, ekonominin, isletmelerin ve istihdamin AB hedeflerinin merkezinde yer almasi gerektigini ve subvansiyonlu mallara karsi adil rekabetin saglanmasinin onemini vurguladi. Bu, AB'nin ticaret savunmasi araclarini (damping onleme, korunma onlemleri, yabanci subvansiyon tuzugu) daha yogun kullanacagina isaret eden bir mesaj olarak okunuyor.\n\nSosyalistler ve Demokratlar grubu adina Iratxe Garcia Perez ucretleri, emekli ayliklarini, egitimi ve saglik hizmetlerini oncelikledi. Sol grup adina Martin Schirdewan konut, enerji ve gida erisilebilirligi konusunda yasal adim ve buyuk sirketlere vergi bekledigini soyledi. Renew lideri Valerie Hayer yasal goc kanallari icin AB ofisleri kurulmasini talep etti. Yesiller adina Terry Reintke fosil yakitlardan cikis ve altyapinin iklim degisikligine uyarlanmasi konusunda netlik istedi. Egemen Uluslar Avrupasi grubundan Stanislaw Tyszka sinir kontrolu politikalarina ve Schengen'e iliskin aciklama talep etti.\n\nTurk sanayicisi acisindan SOTEU 2026, izlenmesi gereken en onemli takvim maddesidir. Konusmada aciklanacak basliklar, 2027 Komisyon Calisma Programi'nin iskeletini olusturur ve dogrudan AB pazarina erisim kosullarini belirler. Ozellikle su alanlar kritik: celik ve metal sektorunde ilave ticaret onlemleri, CBAM'in alt urunlere genisletilmesinin takvimi, Dongusel Ekonomi Yasasi (2026 ucuncu ceyrek), Sanayi Dekarbonizasyon Hizlandirici Yasasi, kamu alimlarinda Avrupa tercihi ve enerji maliyetlerine yonelik onlemler. EPP'nin adil rekabet ve subvansiyonlu mal vurgusu, korumaci egilimin 2027'de de gucleneceginin isaretidir.",
+      "published_at": "2026-09-10T17:00:00+03:00",
+      "language": "en",
+      "summary": "Von der Leyen'in 16 Eylul'deki Birligin Durumu konusmasi oncesi Parlamento gruplari beklentilerini acikladi; EPP ekonomi, isletme ve istihdamin merkeze alinmasini ve subvansiyonlu mallara karsi adil rekabeti vurguladi. Konusma 2027 Komisyon Calisma Programi'nin iskeletini olusturacagi icin Turk ihracatcisi acisindan kritik: celikte ilave ticaret onlemleri, CBAM'in alt urunlere genisletilme takvimi, Dongusel Ekonomi Yasasi ve kamu alimlarinda Avrupa tercihi basliklari yakindan izlenmeli.",
+      "summary_en": "Ahead of von der Leyen's 16 September State of the Union address, EP political groups set out expectations, with the EPP stressing competitiveness and fair competition against subsidised goods - a signal of continued protectionist momentum into 2027.",
+      "key_points": [
+        "SOTEU 2026, 16 Eylul Carsamba gunu Strazburg genel kurulunda yapilacak",
+        "EPP lideri Weber: ekonomi, isletme ve istihdam merkeze alinmali, subvansiyonlu mallara karsi adil rekabet",
+        "S&D ucret, emekli ayligi, egitim ve saglik onceliklerini one cikardi",
+        "Yesiller fosil yakitlardan cikista netlik istedi",
+        "Konusma 2027 Komisyon Calisma Programi'nin cercevesini belirleyecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "Avrupa Parlamentosu",
+          "EPP",
+          "S&D",
+          "Renew"
+        ],
+        "kisi": [
+          "Ursula von der Leyen",
+          "Manfred Weber",
+          "Iratxe Garcia Perez",
+          "Terry Reintke"
+        ],
+        "sektor": [
+          "Celik",
+          "Enerji",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "rekabetcilik",
+        "ab-mevzuati",
+        "ticaret-savunmasi",
+        "yesil-mutabakat",
+        "sanayi-politikasi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 55,
+        "keyword": 50,
+        "recency": 100,
+        "corroboration": 50,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "eur-lex",
+      "url": "https://eur-lex.europa.eu/eli/reg_del/2026/1221/oj/eng",
+      "title": "AB, bankalarin piyasa riski sermaye yukunu hafifleten gecici FRTB duzenlemesini yayimladi",
+      "body": "11 Eylul 2026 tarihli AB Resmi Gazetesi'nde yayimlanan 4 Haziran 2026 tarihli Komisyon Yetki Devrine Dayali Tuzugu (EU) 2026/1221, kredi kuruluslarinin piyasa riskine iliskin ozkaynak gereksinimlerinin hesaplanmasinda gecici rahatlama onlemleri ve hedefli carpanlar getiriyor. Duzenleme, Basel cercevesindeki Alim Satim Hesabinin Temel Gozden Gecirmesi (Fundamental Review of the Trading Book - FRTB) standartlarina iliskindir.\n\nTuzuk, 575/2013 sayili Sermaye Gereksinimleri Tuzugu'na (CRR) 495i ile 495v arasinda yeni maddeler ekliyor. Basli baslica gecis hukumleri sunlardir: kar-zarar atfetme testinin (PLAT) baglayici bir gereklilik yerine izleme araci olarak kullanilabilmesi; modellenemeyen risk faktorleri (NMRF) icin gerekli asgari dogrulanabilir fiyat gozlemi sayisinin ikiye indirilmesi; sifir risk agirlikli maruziyetlerin temerrut olasiligi tahminlerine sifir carpan uygulanmasi; beklenen kayip ve stres olculerinin gunluk yerine haftalik hesaplanabilmesi.\n\nOnemli carpanlar: standart ve basitlestirilmis yaklasimlarda 31 Aralik 2029'a kadar 0,9 gecis carpani; belirli enstrumanlar icin artik risk ilavesine (RRAO) sifir carpan; AB Emisyon Ticaret Sistemi (ETS) maruziyetlerinde korelasyon parametrelerinin yuzde 99,1'e bolunmesi; FRTB uygulamasindan olumsuz etkilenen kuruluslar icin banka bazli takdiri carpan (1,0'i asmayacak sekilde).\n\nTuzuk yayimi izleyen gun yururluge girdi, 1 Ocak 2027'de uygulanmaya baslayacak ve tum hukumleri 31 Aralik 2029'da sona erecek (uc yillik gecis).\n\nTurk sanayicisi acisindan etki dolayli ama somuttur. FRTB'nin tam uygulanmasi, Avrupali bankalarin alim satim ve turev islemlerine ayirmasi gereken sermayeyi artiriyor; bu da doviz ve emtia turevleri, akreditif, ihracat finansmani ve riskten korunma urunlerinin fiyatlanmasini yukseltiyor. Gecici rahatlama, AB bankalarinin bu urunleri sunma maliyetini 2029'a kadar sinirli tutacak. AB bankalariyla calisan, euro cinsi turev kullanan veya AB'li alicilarin akreditifleriyle ihracat yapan Turk firmalari icin bu, korumak istedikleri kur ve emtia risklerinin maliyetinde beklenen artisin ertelenmesi anlamina gelir. Ayrica AB ETS maruziyetlerine getirilen korelasyon indirimi, karbon piyasasi araclarinin bankalarca fiyatlanmasini kolaylastirarak CBAM sertifikasi ve karbon riski yonetimi urunlerinin gelisimini destekleyebilir.",
+      "published_at": "2026-09-11T09:10:00+03:00",
+      "language": "en",
+      "summary": "AB Resmi Gazetesi'nde 11 Eylul'de yayimlanan 2026/1221 sayili yetki devrine dayali tuzuk, bankalarin piyasa riski sermaye yukunu 2027-2029 doneminde hafifleten gecici FRTB carpanlari getiriyor; AB ETS maruziyetlerinde korelasyon parametresi de indiriliyor. Etki Turk sanayicisi icin dolayli ama somut: AB bankalarindan alinan doviz/emtia turevleri, akreditif ve ihracat finansmani urunlerinde beklenen maliyet artisi 2029'a kadar sinirlanmis oluyor; karbon riski yonetim urunlerinin gelismesi de kolaylasabilir.",
+      "summary_en": "Commission Delegated Regulation (EU) 2026/1221, published in the OJ on 11 September 2026, introduces transitional FRTB relief and multipliers for banks' market risk own funds requirements, applying from 1 January 2027 until end-2029, including a correlation reduction for EU ETS exposures.",
+      "key_points": [
+        "4 Haziran 2026 tarihli tuzuk 11 Eylul 2026'da AB Resmi Gazetesi'nde yayimlandi",
+        "CRR'ye 495i-495v maddeleri ekleniyor; 1 Ocak 2027'de uygulanacak, 31 Aralik 2029'da sona erecek",
+        "Standart ve basitlestirilmis yaklasimlarda 0,9 gecis carpani",
+        "AB ETS maruziyetlerinde korelasyon parametreleri yuzde 99,1'e boluniyor",
+        "PLAT testi baglayici gereklilik yerine izleme araci olarak kullanilabilecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "Basel Komitesi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacilik",
+          "Finans",
+          "Ihracat"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "mevzuat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "bankacilik",
+        "ab-mevzuati",
+        "ihracat-finansmani",
+        "karbon",
+        "sermaye-yeterliligi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 45,
+        "keyword": 45,
+        "recency": 100,
+        "corroboration": 30,
+        "reach": 50
+      }
+    }
+  ]
+}

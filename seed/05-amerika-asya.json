@@ -1,0 +1,1448 @@
+{
+  "collector": "amerika-asya",
+  "collected_at": "2026-09-12T18:30:00+03:00",
+  "sources": [
+    {
+      "slug": "ustr",
+      "name": "Office of the United States Trade Representative (USTR)",
+      "homepage_url": "https://ustr.gov",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "federal-register",
+      "name": "Federal Register (ABD Resmi Gazetesi)",
+      "homepage_url": "https://www.federalregister.gov",
+      "source_type": "mevzuat",
+      "authority_weight": 100,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "mevzuat"
+    },
+    {
+      "slug": "us-eia",
+      "name": "U.S. Energy Information Administration",
+      "homepage_url": "https://www.eia.gov",
+      "source_type": "kurum",
+      "authority_weight": 92,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "cnbc",
+      "name": "CNBC",
+      "homepage_url": "https://www.cnbc.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "bloomberg",
+      "name": "Bloomberg",
+      "homepage_url": "https://www.bloomberg.com",
+      "source_type": "basin",
+      "authority_weight": 88,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "npr",
+      "name": "NPR",
+      "homepage_url": "https://www.npr.org",
+      "source_type": "basin",
+      "authority_weight": 82,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "kiplinger",
+      "name": "Kiplinger",
+      "homepage_url": "https://www.kiplinger.com",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "globe-and-mail",
+      "name": "The Globe and Mail",
+      "homepage_url": "https://www.theglobeandmail.com",
+      "source_type": "basin",
+      "authority_weight": 78,
+      "country_code": "CA",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "trade-compliance-hub",
+      "name": "Trade Compliance Resource Hub",
+      "homepage_url": "https://www.tradecomplianceresourcehub.com",
+      "source_type": "basin",
+      "authority_weight": 75,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "drewry",
+      "name": "Drewry Maritime Research",
+      "homepage_url": "https://www.drewry.co.uk",
+      "source_type": "basin",
+      "authority_weight": 88,
+      "country_code": "GB",
+      "language": "en",
+      "source_type_raw": "arastirma"
+    },
+    {
+      "slug": "korea-herald",
+      "name": "The Korea Herald",
+      "homepage_url": "https://www.koreaherald.com",
+      "source_type": "basin",
+      "authority_weight": 78,
+      "country_code": "KR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "seoul-economic-daily",
+      "name": "Seoul Economic Daily",
+      "homepage_url": "https://en.sedaily.com",
+      "source_type": "basin",
+      "authority_weight": 72,
+      "country_code": "KR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "rio-times",
+      "name": "The Rio Times - Asia Intelligence Brief",
+      "homepage_url": "https://www.riotimesonline.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "BR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "asia-times",
+      "name": "Asia Times",
+      "homepage_url": "https://asiatimes.com",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "HK",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "vision-times",
+      "name": "Vision Times",
+      "homepage_url": "https://www.visiontimes.com",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TW",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "vantage-markets",
+      "name": "Vantage Markets Research",
+      "homepage_url": "https://www.vantagemarkets.com",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "AU",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "indexbox",
+      "name": "IndexBox Market Intelligence",
+      "homepage_url": "https://www.indexbox.io",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "arastirma"
+    },
+    {
+      "slug": "gcc-business-news",
+      "name": "GCC Business News",
+      "homepage_url": "https://www.gccbusinessnews.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "AE",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "china-briefing",
+      "name": "China Briefing (Dezan Shira & Associates)",
+      "homepage_url": "https://www.china-briefing.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "CN",
+      "language": "en",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "ustr",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-president-trumps-response-canadas-continued-retaliation-against",
+      "title": "ABD, Kanada'ya karsi Tarife Kanunu'nun 338. maddesini devreye soktu: bazi urunlere ithalat yasagi",
+      "body": "ABD Ticaret Temsilcisi (USTR) Buyukelci Jamieson Greer, 8 Eylul 2026 tarihli aciklamasinda Baskan Trump'in 1930 tarihli Tarife Kanunu'nun 338. maddesi (Section 338) uyarinca Kanada'ya karsi yeni bir dizi onlem aldigini duyurdu. Section 338, ABD ticaretine karsi ayrimci muamele uygulayan ulkelerin urunlerine ek gumruk vergisi getirilmesine veya dogrudan ithalat yasagi konulmasina imkan taniyan, onlarca yildir neredeyse hic kullanilmamis bir yetki maddesi. Trump yonetimi bu yetkiyi ilk kez 20 Temmuz 2026'da kullanmis, 8 Eylul'de ise kapsamini genisletmisti.\n\nAlinan kararlarla motorlu tasitlar, sut urunleri ve alkollu icecekler basta olmak uzere belirli Kanada menseli urunlerin ABD pazarina girisi yasaklandi; 20 Temmuz tarihli tarife listesinin kapsami Kanada'nin ayrimci uygulamalarini dengeleyecek sekilde yeniden duzenlendi. Ayrica Genel Hizmetler Idaresi'ne (GSA) bagli kamu alim katalogu olan Multiple Award Schedules'tan yaklasik 50 milyar dolarlik Kanada menseli urunun cikarilmasi talimati verildi. Yani Kanada mensei mallar ABD federal kamu alimlarinda artik listelenmeyecek.\n\nGreer aciklamasinda, \"Haftalarca suren iyi niyetli ve yogun muzakerelerin ardindan Kanada, herhangi bir ticaret ortagina taninandan daha iyi kosullar sunan, sonuca cok yaklasilmis bir anlasmadan cekildi ve bunun yerine ABD'ye karsi anlamsiz bir misilleme yolunu secti\" ifadelerini kullandi. Yonetim, adimin Kanada'nin \"ABD ihracatina yonelik ayrimci muamelesine\" karsilik oldugunu ve ikili ticarette \"mutekabiliyeti yeniden tesis etmeyi\" amacladigini savunuyor.\n\nGelisme, ABD-Kanada ticaret muzakerelerinin Agustos sonunda cokmesi ve Kanada Basbakani Mark Carney'nin 8 Eylul'den itibaren ABD menseli celik, sut urunleri ve elektronik esyaya misilleme tarifesi uygulanacagini aciklamasinin ardindan geldi. Iki NAFTA/USMCA ortagi arasindaki iliski, 2026 boyunca kademeli olarak tam bir ticaret savasina donusmus durumda.\n\nTurkiye acisindan bu gelisme dolayli ama onemli sonuclar dogruyor: Kuzey Amerika ic ticaretindeki tikanma, Kanada menseli celik, aluminyum ve otomotiv yan sanayi urunlerinin ABD disindaki pazarlara - ozellikle Avrupa'ya - yonelmesine yol acabilir. Bu da Turk ihracatcisinin AB pazarinda karsilasacagi rekabeti sertlestirir. Ayni zamanda ABD kamu alimlarinda Kanada menseli urunlerin cikarilmasi, alternatif tedarikciler icin sinirli da olsa bir bosluk yaratiyor.",
+      "published_at": "2026-09-08T17:00:00+03:00",
+      "language": "en",
+      "summary": "ABD, Kanada'ya karsi 1930 Tarife Kanunu'nun neredeyse hic kullanilmamis 338. maddesini devreye sokarak motorlu tasit, sut urunu ve alkollu icecek gibi bazi Kanada urunlerine dogrudan ithalat yasagi getirdi; ayrica 50 milyar dolarlik Kanada menseli urun federal kamu alim kataloglarindan cikariliyor. Turk sanayicisi icin bu, Kuzey Amerika ic ticaretinde acilan tikanikligin Kanada menseli celik, aluminyum ve otomotiv yan sanayi urunlerini Avrupa pazarina itmesi riski demek. AB'de rekabet sertlesebilir; buna karsilik ABD kamu alimlarinda sinirli bir tedarikci bosluku olusuyor. Tarife savasinin 'kanunun unutulmus maddeleri' ile yurutulmesi, kural tabanli ticaretin ongorulebilirligini daha da azaltiyor.",
+      "summary_en": "USTR announced that President Trump invoked Section 338 of the Tariff Act of 1930 against Canada on 8 September 2026, banning certain Canadian motor vehicles, dairy and alcoholic beverages from the US market, reshaping the 20 July tariff scope and removing about $50bn of Canadian-origin goods from federal procurement schedules. Trade talks collapsed after Canada walked away from a near-final deal.",
+      "key_points": [
+        "Section 338 ile bazi Kanada urunlerine dogrudan ithalat yasagi getirildi",
+        "Hedef sektorler: motorlu tasitlar, sut urunleri, alkollu icecekler",
+        "50 milyar dolarlik Kanada menseli urun GSA kamu alim kataloglarindan cikariliyor",
+        "20 Temmuz 2026 tarihli tarife listesinin kapsami yeniden duzenlendi",
+        "Kanada 8 Eylul'de ABD celik, sut ve elektronik urunlerine misilleme tarifesi baslatti"
+      ],
+      "entities": {
+        "kurum": [
+          "USTR",
+          "GSA",
+          "Beyaz Saray"
+        ],
+        "kisi": [
+          "Jamieson Greer",
+          "Donald Trump",
+          "Mark Carney"
+        ],
+        "sektor": [
+          "Otomotiv",
+          "Gida",
+          "Celik",
+          "Icecek"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "tarife",
+        "ticaret-savasi",
+        "kanada",
+        "abd",
+        "section-338",
+        "kamu-alimlari",
+        "otomotiv"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 78,
+        "keyword": 85,
+        "recency": 97,
+        "corroboration": 88,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "trade-compliance-hub",
+      "url": "https://www.tradecomplianceresourcehub.com/2026/09/10/trump-2-0-tariff-tracker/",
+      "title": "Kanada'ya yonelik bes yeni baskanlik kararnamesi: urun listeleri 15 Eylul'de degisiyor",
+      "body": "Trump yonetiminin tarife hamlelerini izleyen Trade Compliance Resource Hub'in 10 Eylul 2026 tarihli guncellemesine gore, Baskan Trump 8 Eylul 2026'da Kanada ile ticaret politikasina iliskin bes ayri baskanlik kararnamesi (proclamation) imzaladi. Bunlarin ucu belirli urunlerin ABD'ye ithalatini dogrudan yasaklarken, ikisi 1930 tarihli Tarife Kanunu'nun 338. maddesi kapsamindaki mevcut tarife listelerini revize ediyor.\n\nRevizyonlar teknik ama ithalatci icin kritik: Listeye bazi urunler eklendi (ornegin belirli yaglar ve peynirler), buna karsilik daha once kapsamda olan cimento ve islenmemis rafine kursun gibi kalemler listeden cikarildi. Ayrica genis tanimli bazi urun gruplari - ornegin \"elektrikli kontrol ekipmani\" - daha dar ve teknik alt tanimlarla (ornegin \"programlanabilir kontrolorler\") degistirildi. Bu tur kapsam daraltmalari ve genisletmeleri, GTIP bazinda calisan ithalatci ve ihracatcilar icin dogrudan maliyet farki anlamina geliyor. Urun eklemeleri ve cikarmalari 15 Eylul 2026 itibariyla yururluge giriyor.\n\nIthalat yasagi kararnamelerinde ise ornek olarak Kanada'nin Valcourt tesisinde uretilen BRP marka Can-Am Spyder ve Canyon modellerinin 29 Eylul 2026'dan itibaren ABD'ye girisinin yasaklanacagi belirtiliyor. Yani yaptirim yalnizca sektor duzeyinde degil, tesis ve model duzeyinde de hedefli sekilde uygulanabiliyor.\n\nBu kararnameler ayni donemde ABD'nin diger sektorel Section 232 hamleleriyle birlikte okunmali: 3 Eylul 2026'dan itibaren 25 kg uzeri insansiz hava araclari ve belirli kritik IHA bilesenlerine yuzde 100, 25 kg ve altindaki sistemlere yuzde 25 tarife uygulanmaya baslandi.\n\nTurk sanayicisi acisindan cikarilacak ders sudur: ABD tarife rejimi artik yalnizca \"ulke + urun grubu\" duzeyinde degil, GTIP alt kirilimi, uretim tesisi ve hatta model bazinda calisiyor. ABD'ye ihracat yapan veya ABD'ye ihracat yapan bir zincirin alt tedarikcisi olan firmalarin, HTS kodu bazinda haftalik takip yapmasi ve sozlesmelerine tarife degisikligi (change in law) maddeleri koymasi zorunlu hale geldi. Ayrica cimento ve rafine kursun gibi kalemlerin listeden cikarilmasi, bu urunlerde ABD talebinin kisa vadede yeniden acilabilecegine isaret ediyor.",
+      "published_at": "2026-09-10T12:00:00+03:00",
+      "language": "en",
+      "summary": "Trump 8 Eylul 2026'da Kanada'ya iliskin bes baskanlik kararnamesi imzaladi; ucu dogrudan ithalat yasagi getiriyor, ikisi Section 338 tarife listelerini revize ediyor ve degisiklikler 15 Eylul'de yururluge giriyor. Listeye yaglar ve peynirler eklenirken cimento ile islenmemis rafine kursun cikarildi, genis urun tanimlari daha dar teknik tanimlarla degistirildi. Turk ihracatcisi icin mesaj net: ABD tarife rejimi artik GTIP alt kirilimi, hatta uretim tesisi ve model bazinda isliyor; haftalik HTS takibi ve sozlesmelerde tarife degisikligi maddesi sart. Listeden cikarilan cimento gibi kalemlerde ABD talebinde kisa vadeli bir acilma ihtimali var.",
+      "summary_en": "Trump signed five proclamations on Canada on 8 September 2026: three outright import bans, two revising Section 338 tariff lists effective 15 September. Oils and cheeses were added; cement and unwrought refined lead removed; broad categories replaced with narrower HTS definitions. Certain BRP vehicles are banned from 29 September.",
+      "key_points": [
+        "8 Eylul'de bes ayri baskanlik kararnamesi imzalandi",
+        "Uc kararname dogrudan ithalat yasagi, iki kararname tarife listesi revizyonu",
+        "Urun eklemeleri/cikarmalari 15 Eylul 2026'da yururlukte",
+        "Cimento ve islenmemis rafine kursun listeden cikarildi",
+        "Belirli BRP modelleri 29 Eylul'den itibaren ABD'ye giremeyecek",
+        "3 Eylul'den itibaren buyuk IHA'lara yuzde 100 tarife basladi"
+      ],
+      "entities": {
+        "kurum": [
+          "Beyaz Saray",
+          "CBP",
+          "BRP"
+        ],
+        "kisi": [
+          "Donald Trump"
+        ],
+        "sektor": [
+          "Otomotiv",
+          "Cimento",
+          "Metal",
+          "Savunma",
+          "Gida"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "tarife",
+        "kanada",
+        "abd",
+        "section-338",
+        "ithalat-yasagi",
+        "gtip",
+        "ticaret-savasi"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 72,
+        "keyword": 82,
+        "recency": 98,
+        "corroboration": 75,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "globe-and-mail",
+      "url": "https://www.theglobeandmail.com/canada/article-canada-us-trade-war-tariffs-live-updates-september-9/",
+      "title": "Kanada-ABD ticaret savasi: Ottawa temasi surduruyor, misilleme tarifeleri yururlukte",
+      "body": "Globe and Mail'in 9 Eylul 2026 tarihli canli takip dosyasina gore Kanada Sanayi Bakani Francois-Philippe Champagne, ABD'li muhataplariyla temasin surdugunu acikladi. Aciklama, Kanada'nin ABD menseli celik, sut urunleri ve elektronik esya basta olmak uzere genis bir listeye 8 Eylul 2026'dan itibaren misilleme tarifesi uygulamaya baslamasinin hemen ertesinde geldi.\n\nSurecin kronolojisi soyle: Agustos ayinin ikinci yarisinda iki ulke arasindaki muzakereler cokme noktasina geldi; Basbakan Mark Carney, ulkesinin ABD ile fiilen \"savas halinde\" oldugunu soyleyecek kadar sert bir dil kullandi ve 8 Eylul'den itibaren misilleme tarifelerinin devreye girecegini duyurdu. ABD tarafi 22 Agustos'ta bazi Kanada urunlerine yuzde 50'ye varan tarifeleri yururluge koymus, 8 Eylul'de ise Section 338 kapsaminda ithalat yasaklarina gecmisti.\n\nKanada'nin misilleme listesi, ABD'nin Great Lakes bolgesindeki celik ureticileri ile Midwest tarim ve gida sanayisini hedef aliyor. Kanada, ABD'nin en buyuk celik ve aluminyum tedarikcilerinden biri oldugu gibi, ABD celik urunleri icin de onemli bir pazar. Iki yonlu tarifeler, entegre Kuzey Amerika otomotiv tedarik zincirinde parca gecislerini pahalilastiriyor - tipik bir otomobil parcasinin uretim sureci boyunca sinirdan birden fazla kez gectigi dusunulurse, kumulatif maliyet etkisi nominal tarife oranindan cok daha yuksek olabiliyor.\n\nMuzakerelerin tam kopmamis olmasi, piyasalar acisindan tek olumlu sinyal. Ancak taraflarin kamuoyuna yonelik soylemi sertlestikce, kisa vadede bir uzlasi ihtimali zayifliyor.\n\nTurk sanayicisi icin uc kanal onemli: Birincisi, Kuzey Amerika'da pahalilasan celik ve otomotiv parcasi, ABD alicilarini ucuncu ulke tedarikcilerine yoneltebilir - ancak Turkiye menseli celik zaten Section 232 kapsaminda yuzde 50 tarifeye tabi oldugu icin bu firsattan yararlanmak sinirli. Ikincisi, Kanada'nin ABD'ye satamadigi celigin Avrupa'ya yonelmesi, AB'de zaten sikilasan koruma onlemleri ortaminda Turk ihracatcisinin kota payini tehdit eder. Ucuncusu, Kanada'nin AB ve diger ortaklarla ticaretini cesitlendirme arayisi, Turk makine ve gida sanayisi icin yeni bir pazar acilimi anlamina gelebilir.",
+      "published_at": "2026-09-09T20:00:00+03:00",
+      "language": "en",
+      "summary": "Kanada'nin ABD menseli celik, sut urunleri ve elektronige yonelik misilleme tarifeleri 8 Eylul'de yururluge girdi; Sanayi Bakani Champagne 9 Eylul'de ABD ile temasin surdugunu acikladi. Karsilikli tarifeler entegre Kuzey Amerika otomotiv tedarik zincirinde parca gecislerini pahalilastiriyor ve kumulatif maliyet etkisi nominal oranlarin cok uzerine cikabiliyor. Turk sanayicisi icin en kritik risk, ABD'ye satilamayan Kanada celiginin Avrupa'ya yonelerek AB kota ve fiyat rekabetini sertlestirmesi. Buna karsilik Kanada'nin pazar cesitlendirme arayisi, Turk makine ve gida sanayisi icin yeni bir acilim firsati yaratabilir.",
+      "summary_en": "Canada's retaliatory tariffs on US steel, dairy and electronics took effect on 8 September 2026; Industry Minister Champagne said contacts with Washington continue. Two-way tariffs raise cumulative costs across the integrated North American auto supply chain, where parts cross the border multiple times.",
+      "key_points": [
+        "Kanada misilleme tarifeleri 8 Eylul 2026'da yururluge girdi",
+        "Hedef: ABD celik, sut urunleri ve elektronik esya",
+        "Bakan Champagne temaslarin surdugunu acikladi",
+        "ABD 22 Agustos'ta yuzde 50'ye varan tarifeleri devreye sokmustu",
+        "Entegre otomotiv zincirinde kumulatif maliyet etkisi buyuk"
+      ],
+      "entities": {
+        "kurum": [
+          "Kanada Hukumeti",
+          "USTR"
+        ],
+        "kisi": [
+          "Francois-Philippe Champagne",
+          "Mark Carney"
+        ],
+        "sektor": [
+          "Celik",
+          "Otomotiv",
+          "Gida",
+          "Elektronik"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "tarife",
+        "kanada",
+        "abd",
+        "ticaret-savasi",
+        "celik",
+        "otomotiv",
+        "misilleme"
+      ],
+      "importance_factors": {
+        "authority": 78,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 98,
+        "corroboration": 90,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html",
+      "title": "ABD Agustos enflasyonu yuzde 3,4'e cikti: Fed'de faiz artirimi masada",
+      "body": "ABD Calisma Istatistikleri Burosu'nun (BLS) 11 Eylul 2026'da acikladigi Agustos ayi Tuketici Fiyat Endeksi (TUFE) verilerine gore manset enflasyon aylik bazda mevsimsellikten arindirilmis yuzde 0,4 artti; yillik enflasyon yuzde 3,4'e yukseldi. Gida ve enerji disi cekirdek TUFE aylik yuzde 0,3 ile beklentilerin bir miktar uzerinde artarken, yillik cekirdek enflasyon yuzde 2,4 seviyesinde gerceklesti.\n\nVeri, Fed'in 15-16 Eylul 2026 tarihli FOMC toplantisi oncesinde aciklandigi icin olaganustu agirlik tasiyor. Federal fonlama orani 2026 boyunca yuzde 3,50-3,75 araliginda sabit tutulmustu. Agustos istihdam raporunun beklentilerin uzerinde gelmesinin ardindan piyasa, Eylul toplantisinda 25 baz puanlik bir faiz ARTIRIMI ihtimalini fiyatlamaya baslamisti; TUFE verisi bu beklentiyi guclendirdi. Fed Baskani Warsh'in 28 Agustos'taki Jackson Hole konusmasindaki sahin tonu da ayni yonde okundu.\n\nEnflasyondaki yukselisin ana suruculeri iki basliga toplaniyor: Birincisi, 2026 boyunca kademeli olarak genisleyen tarife rejiminin ithal girdi ve tuketici mali fiyatlarina yansimasi. Ikincisi, Ortadogu kaynakli jeopolitik gerilimin enerji fiyatlarini yukari itmesi - Brent petrol 11 Eylul itibariyla varil basina 104 dolar civarinda seyrediyor ve son bir ayda yuzde 17'nin uzerinde deger kazanmis durumda. Bu kombinasyon, bazi analistlerin \"tam anlamiyla stagflasyon\" olarak tanimladigi bir tabloya isaret ediyor.\n\nTurk sanayicisi ve ihracatcisi acisindan sonuclar cok katmanli. Fed'in faiz artirmasi veya \"daha uzun sure yuksek\" mesaji vermesi, gelismekte olan ulke para birimleri uzerinde deger kaybi baskisi yaratir; TL uzerindeki baski ve dis borclanma maliyeti artar. Ayni zamanda dolar cinsi finansmana erisim pahalilasir, bu da sermaye yogun yatirim planlarini erteletir. Ote yandan yuksek ABD enflasyonu, ABD'li alicilarin fiyat hassasiyetini artirir ve Turk ihracatcisinin dolar bazli fiyat artislarini gecirmesini zorlastirir. Ancak guclu dolar, EUR/USD paritesi uzerinden AB'ye ihracat yapan firmalar icin kismi bir rekabet avantaji da saglayabilir.",
+      "published_at": "2026-09-11T15:45:00+03:00",
+      "language": "en",
+      "summary": "ABD'de Agustos TUFE aylik yuzde 0,4, yillik yuzde 3,4 arti; cekirdek enflasyon aylik yuzde 0,3 ile beklentiyi asti. Guclu istihdam verisiyle birlesince piyasa 15-16 Eylul FOMC toplantisinda 25 baz puanlik faiz ARTIRIMI ihtimalini fiyatlamaya basladi. Turk sanayicisi icin bu, TL ve gelismekte olan ulke varliklari uzerinde yenilenen deger kaybi baskisi, dolar cinsi finansman maliyetinde artis ve yatirim planlarinda erteleme riski demek. Ayrica ABD'li alicinin fiyat hassasiyetinin artmasi, dolar bazli fiyat artislarini gecirmeyi zorlastiriyor.",
+      "summary_en": "US August CPI rose 0.4% m/m and 3.4% y/y, with core CPI up 0.3% m/m (2.4% y/y), released 11 September 2026. Combined with a strong August jobs report, markets moved to price a possible 25bp Fed hike at the 15-16 September FOMC. Tariffs and oil above $100 are the main drivers.",
+      "key_points": [
+        "Agustos TUFE aylik yuzde 0,4, yillik yuzde 3,4",
+        "Cekirdek TUFE aylik yuzde 0,3, yillik yuzde 2,4",
+        "Fed politika faizi yuzde 3,50-3,75 araliginda",
+        "Piyasa 16 Eylul'de faiz artirimi ihtimalini fiyatliyor",
+        "Tarifeler ve 100 dolar uzeri petrol enflasyonu besliyor"
+      ],
+      "entities": {
+        "kurum": [
+          "BLS",
+          "Federal Reserve",
+          "FOMC"
+        ],
+        "kisi": [
+          "Kevin Warsh"
+        ],
+        "sektor": [
+          "Finans",
+          "Enerji",
+          "Perakende"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "enflasyon",
+        "fed",
+        "faiz",
+        "abd",
+        "kur-riski",
+        "finansman-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 82,
+        "keyword": 75,
+        "recency": 100,
+        "corroboration": 92,
+        "reach": 90
+      }
+    },
+    {
+      "source_slug": "kiplinger",
+      "url": "https://www.kiplinger.com/investing/economy/cpi-report-august-2026-what-to-expect",
+      "title": "Fed 16 Eylul'de faiz artirabilir: 2026'nin ilk sikilasma adimi gundemde",
+      "body": "Kiplinger'in Agustos TUFE verisinin ardindan yayimladigi degerlendirmeye gore, Fed'in 15-16 Eylul 2026 tarihli toplantisinda faiz artirimi secenegi ciddi bicimde masada. Federal fonlama orani 2026 yilinin tamamini yuzde 3,50-3,75 araliginda gecirdi; son hareket Aralik 2025'te yapilmisti. Simdi tartisma, indirimden ziyade artirim yonunde.\n\nArtirim beklentisini besleyen uc gelisme var. Birincisi, 28 Agustos'taki Jackson Hole sempozyumunda Fed Baskani Warsh'in belirgin sahin tonu. Ikincisi, beklentilerin uzerinde gelen Agustos istihdam raporu. Ucuncusu, 11 Eylul'de aciklanan ve yillik yuzde 3,4'e cikan manset enflasyon ile beklentiyi asan cekirdek enflasyon. Buna karsilik Temmuz ayina ait daha zayif istihdam ve perakende satis verileri, faizin sabit birakilmasi senaryosunu destekliyor; dolayisiyla toplanti gercek anlamda \"canli\" (live) kabul ediliyor.\n\nEylul toplantisi ayrica yilda dort kez yayimlanan Ekonomik Projeksiyonlar Ozeti'ni (SEP) ve uyelerin faiz patikasi tahminlerini gosteren \"nokta grafigi\"ni (dot plot) iceriyor. Bu nedenle karardan bagimsiz olarak, Fed'in 2027 icin cizecegi patika piyasalar acisindan karardan bile daha belirleyici olabilir.\n\nEnflasyonun kaynagi konusundaki tartisma da politika acisindan onemli: Fiyat baskisinin buyuk bolumu tarifeler ve enerji gibi arz yonlu soklardan geliyorsa, faiz artirimi enflasyonu dusurmekten cok buyumeyi yavaslatabilir. Bu, klasik bir stagflasyon ikilemi.\n\nTurk sanayicisi acisindan senaryolarin ikisi de maliyetli. Faiz artirimi durumunda dolar guclenir, gelismekte olan ulkelerden sermaye cikisi hizlanir, TL uzerindeki baski artar ve Turk firmalarinin dis piyasadan borclanma maliyeti yukselir. Faizin sabit birakilmasi ancak sahin bir mesajla desteklenmesi durumunda ise belirsizlik surer. Her iki durumda da kritik olan, ABD'de talebin yavaslama ihtimali: ABD'ye dogrudan veya AB uzerinden dolayli ihracat yapan Turk makine, otomotiv yan sanayi ve tekstil firmalarinin 2027 siparis planlamasinda temkinli senaryolara agirlik vermesi gerekiyor. Doviz pozisyonu ve hedge stratejilerinin toplanti oncesinde gozden gecirilmesi tavsiye edilir.",
+      "published_at": "2026-09-11T18:00:00+03:00",
+      "language": "en",
+      "summary": "Fed'in 15-16 Eylul 2026 toplantisinda 2026'nin ilk faiz ARTIRIMI ihtimali ciddi bicimde masada; toplanti ayni zamanda SEP ve nokta grafigi iceriyor. Guclu istihdam, sahin Jackson Hole mesaji ve yukselen cekirdek enflasyon artirimi desteklerken, zayif Temmuz verileri sabit kalma senaryosunu besliyor. Turk sanayicisi icin her iki senaryo da maliyetli: artirim dolari guclendirip TL ve dis borclanma maliyetini vururken, belirsizligin surmesi yatirim kararlarini erteletiyor. ABD talebinde yavaslama ihtimali nedeniyle 2027 siparis planlamasinda temkinli senaryolar ve doviz hedge stratejileri gozden gecirilmeli.",
+      "summary_en": "Kiplinger analysis ahead of the 15-16 September 2026 FOMC: a 25bp rate hike is genuinely in play after hawkish Jackson Hole remarks, a strong August jobs report and hotter core CPI. The meeting also carries the Summary of Economic Projections and dot plot.",
+      "key_points": [
+        "FOMC toplantisi 15-16 Eylul 2026",
+        "Politika faizi yuzde 3,50-3,75, son hareket Aralik 2025",
+        "Toplanti SEP ve nokta grafigi iceriyor",
+        "Arz yonlu enflasyon nedeniyle stagflasyon ikilemi",
+        "Sonuc TL, dolar finansmani ve ABD talebini dogrudan etkileyecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Federal Reserve",
+          "FOMC"
+        ],
+        "kisi": [
+          "Kevin Warsh"
+        ],
+        "sektor": [
+          "Finans",
+          "Makine",
+          "Otomotiv",
+          "Tekstil"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "fed",
+        "faiz",
+        "abd",
+        "kur-riski",
+        "enflasyon",
+        "finansman-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 80,
+        "keyword": 72,
+        "recency": 100,
+        "corroboration": 85,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/14/2026-18723/corrugated-pizza-boxes-from-china-malaysia-and-turkey-institution-of-antidumping-and-countervailing",
+      "title": "ABD, Turkiye menseli oluklu mukavva pizza kutularina anti-damping ve telafi edici vergi sorusturmasi acti",
+      "body": "ABD Uluslararasi Ticaret Komisyonu (USITC), 9 Eylul 2026 tarihi itibariyla Cin Halk Cumhuriyeti, Malezya ve Turkiye menseli oluklu mukavva pizza kutulari (corrugated pizza boxes) icin anti-damping ve telafi edici vergi sorusturmalarini baslatti. Sorusturmalar 1930 tarihli Tarife Kanunu uyarinca 701-TA-806 ve 731-TA-1805-1807 (On Asama) numaralariyla yurutuluyor; ilgili Federal Register bildirimi 14 Eylul 2026'da yayimlanacak.\n\nUsul geregi Komisyon, on asama zarar tespitini basvurunun ardindan 45 gun icinde - bu dosyada 26 Ekim 2026'ya kadar - sonuclandirmak zorunda. Telafi edici vergi (CVD) bacagi yalnizca Cin'e degil, ayni zamanda Turkiye'ye de yoneltilmis durumda; bu, ABD tarafinin Turkiye'deki bazi destek ve tesvik mekanizmalarini \"telafi edilebilir sübvansiyon\" olarak degerlendirdigi anlamina geliyor.\n\nUrun grubu ilk bakista dar gorunse de sektorel onemi yuksek: Oluklu mukavva ambalaj, Turkiye'nin kagit-karton ve ambalaj sanayisinde onemli bir ihracat kalemi ve gida hizmeti zincirlerine yonelik standart urun ureten cok sayida KOBI'yi kapsiyor. Bu tur dosyalarda on asamada olumlu zarar tespiti cikmasi halinde, Ticaret Bakanligi'nin (Commerce) on damping ve sübvansiyon marjlari birkac ay icinde aciklanir ve ithalatcilardan teminat alinmaya baslanir. Teminat yukumlulugu, nihai karar cikmadan once bile fiili olarak ticareti durdurabiliyor.\n\nDosya, ayni hafta icinde ABD'de acilan veya sonuclandirilan bir dizi ticaret savunma islemiyle birlikte degerlendirilmeli. Turkiye zaten ABD'de yuvarlak kaynakli karbon celik boru, insaat demiri (rebar), kaynakli hat borusu ve teneke (tin mill) urunleri gibi cok sayida dosyada acik onlem veya devam eden sorusturmayla karsi karsiya.\n\nTurk sanayicisi icin yapilmasi gerekenler acik: Sorusturmaya konu urun grubunda ABD'ye ihracat yapan firmalarin, USITC'nin on asama anketlerine (questionnaire) eksiksiz ve suresi icinde yanit vermesi kritik. Yanit vermeyen veya isbirligi yapmayan ureticiler icin \"mevcut olgulara dayali\" (adverse facts available) yuksek marjlar uygulanabiliyor. Sektor dernekleri ve Ticaret Bakanligi ile koordineli bir savunma dosyasi hazirlanmasi, bireysel firma marjlarini belirgin sekilde dusurebilir.",
+      "published_at": "2026-09-09T09:00:00+03:00",
+      "language": "en",
+      "summary": "USITC, 9 Eylul 2026'da Cin, Malezya ve TURKIYE menseli oluklu mukavva pizza kutulari icin anti-damping ve telafi edici vergi sorusturmasi baslatti; on asama zarar karari icin son tarih 26 Ekim 2026. CVD bacaginin Turkiye'ye de yoneltilmesi, ABD'nin bazi Turk destek mekanizmalarini telafi edilebilir sübvansiyon saydigi anlamina geliyor. Bu urun grubunda ABD'ye ihracat yapan kagit-karton ve ambalaj KOBI'lerinin USITC anketlerine suresinde ve eksiksiz yanit vermesi hayati; isbirligi yapmayan ureticilere cezai nitelikte yuksek marj uygulanabiliyor. Sektor dernekleri ve Ticaret Bakanligi ile koordineli savunma marjlari belirgin dusurebilir.",
+      "summary_en": "On 9 September 2026 the USITC instituted preliminary-phase antidumping and countervailing duty investigations (Nos. 701-TA-806, 731-TA-1805-1807) on corrugated pizza boxes from China, Malaysia and Türkiye. A preliminary injury determination is due by 26 October 2026. Türkiye faces both AD and CVD legs.",
+      "key_points": [
+        "Sorusturma 9 Eylul 2026'da baslatildi",
+        "Kapsam: Cin, Malezya ve Turkiye menseli oluklu mukavva pizza kutulari",
+        "Dosya numaralari: 701-TA-806 ve 731-TA-1805-1807 (On Asama)",
+        "On asama zarar karari son tarihi: 26 Ekim 2026",
+        "Turkiye hem anti-damping hem telafi edici vergi bacaginda hedefte",
+        "USITC anketlerine yanit vermemek cezai yuksek marj riski dogurur"
+      ],
+      "entities": {
+        "kurum": [
+          "USITC",
+          "ABD Ticaret Bakanligi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Kagit-Karton",
+          "Ambalaj",
+          "Gida Hizmeti"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "anti-damping",
+        "telafi-edici-vergi",
+        "turkiye-mensei",
+        "ambalaj",
+        "abd",
+        "usitc",
+        "kobi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 90,
+        "keyword": 92,
+        "recency": 96,
+        "corroboration": 45,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/09/2026-18280/steel-grating-from-the-peoples-republic-of-china-final-results-of-the-expedited-third-sunset-review",
+      "title": "ABD, Cin menseli celik izgara urunlerindeki telafi edici vergiyi bir donem daha uzatiyor",
+      "body": "ABD Ticaret Bakanligi Uluslararasi Ticaret Idaresi (ITA), 9 Eylul 2026 tarihli Federal Register bildirimiyle Cin Halk Cumhuriyeti menseli celik izgara (steel grating) urunlerine uygulanan telafi edici vergi (countervailing duty) emrine iliskin hizlandirilmis ucuncu nihai gozden gecirme (expedited third sunset review) sonuclarini yayimladi. Bakanlik, onlemin kaldirilmasi halinde telafi edilebilir sübvansiyonlarin devam etmesinin veya yeniden ortaya cikmasinin muhtemel oldugu sonucuna vardi. Bu, onlemin bes yil daha yururlukte kalacagi anlamina geliyor.\n\nSunset review mekanizmasi, ABD ticaret savunma sisteminin en kalici unsurlarindan biri: Bir anti-damping veya telafi edici vergi emri her bes yilda bir gozden gecirilir, ancak pratikte cok az onlem gercekten kaldirilir. \"Hizlandirilmis\" (expedited) prosedur, ilgili yabanci ureticilerden yeterli katilim gelmedigi durumlarda uygulanir ve genellikle mevcut sübvansiyon oranlarinin oldugu gibi korunmasiyla sonuclanir.\n\nCelik izgara, endustriyel tesisler, platformlar, yuruyus yollari, drenaj kanallari ve altyapi projelerinde kullanilan, gorece standart bir celik urunu. ABD pazarinda Cin menseli urune kapinin bir donem daha kapali kalmasi, ucuncu ulke tedarikcileri icin teorik olarak alan aciyor.\n\nAncak Turk ureticisi icin tablo karisik. Bir yandan Cin'in ABD pazarindan dislanmasi rekabeti azaltir; diger yandan Turkiye menseli celik urunleri Section 232 kapsaminda yuzde 50 ek gumruk vergisine tabi ve turev urunler de listeye dahil edildi. Yani Cin'in cekilmesinden dogan bosluk, ABD'de yerli ureticiler ya da tarife avantajina sahip ulkeler tarafindan doldurulacak.\n\nAsil onemli sonuc su: Cin menseli celik izgara ve benzeri standart celik urunleri ABD pazarina giremediginde, bu hacim Avrupa, Ortadogu ve Kuzey Afrika pazarlarina yoneliyor. Turk ureticisinin yurt ici pazarda ve geleneksel ihrac pazarlarinda Cin kaynakli fiyat baskisiyla karsilasma ihtimali artiyor. Turkiye'nin kendi ticaret savunma araclarini (ithalatta haksiz rekabetin onlenmesi mevzuati, gozetim onlemleri) bu urun gruplarinda proaktif kullanmasi, sektorun onumuzdeki donemde gundeme getirmesi gereken bir baslik.",
+      "published_at": "2026-09-09T08:00:00+03:00",
+      "language": "en",
+      "summary": "ABD Ticaret Bakanligi, Cin menseli celik izgara urunlerindeki telafi edici vergiyi hizlandirilmis ucuncu sunset review sonucunda bes yil daha uzatti. Onlemin kalkmasi halinde sübvansiyonlarin devam edecegi sonucuna varildi. Turk ureticisi icin tek tarafli bir firsat degil: Turkiye menseli celik zaten Section 232 kapsaminda yuzde 50 tarifeye tabi oldugu icin ABD'de acilan boslugu doldurmak zor. Asil risk, ABD'ye giremeyen Cin menseli standart celik urunlerinin Avrupa, Ortadogu ve Kuzey Afrika pazarlarina yonelerek Turk ihracatcisi uzerinde fiyat baskisi yaratmasi.",
+      "summary_en": "Commerce's ITA published final results of the expedited third sunset review on 9 September 2026, finding that revoking the countervailing duty order on steel grating from China would likely lead to continuation or recurrence of countervailable subsidies. The order stays in place for another five years.",
+      "key_points": [
+        "Cin menseli celik izgarada telafi edici vergi bes yil daha yururlukte",
+        "Hizlandirilmis (expedited) sunset review prosedurü uygulandi",
+        "Sübvansiyonlarin devam etme ihtimali tespit edildi",
+        "Turkiye menseli celik Section 232 kapsaminda yuzde 50 tarifeye tabi",
+        "Dislanan Cin hacminin AB/MENA pazarlarina yonelme riski"
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanligi",
+          "International Trade Administration"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Celik",
+          "Insaat",
+          "Altyapi"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "telafi-edici-vergi",
+        "celik",
+        "cin",
+        "abd",
+        "sunset-review",
+        "ticaret-savunmasi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 62,
+        "keyword": 75,
+        "recency": 96,
+        "corroboration": 35,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/10/2026-18495/prestressed-concrete-steel-wire-strand-from-malaysia-preliminary-results-and-rescission-in-part-of",
+      "title": "On gerilmeli beton celik teli halatlarinda ABD gozden gecirmeleri: Malezya on sonuclari acikland",
+      "body": "ABD Ticaret Bakanligi Uluslararasi Ticaret Idaresi, 10 Eylul 2026 tarihli Federal Register bildirimiyle Malezya menseli on gerilmeli beton celik teli halati (prestressed concrete steel wire strand - PC strand) urunlerine iliskin anti-damping idari gozden gecirmesinin on sonuclarini ve bir kismi iptali (rescission in part) yayimladi. Ayni gun, Ukrayna menseli ayni urun grubu icin de 2024-2025 donemine ait idari gozden gecirme on sonuclari yayimlandi.\n\nPC strand, on germeli ve ard germeli beton yapilarda - koprüler, viyadukler, prefabrik kirisler, endustriyel zeminler, silolar ve stadyum yapilar - kullanilan yuksek mukavemetli celik halat. ABD, bu urun grubunda bir dizi ulkeye karsi anti-damping ve telafi edici vergi emri yurutuyor. Idari gozden gecirmeler (administrative review), mevcut emirlerin belirli bir donemdeki fiili damping marjlarini yeniden hesapliyor ve ithalatci icin nihai vergi yukunu belirliyor.\n\n\"Kismi iptal\" ifadesi, gozden gecirme talebinin bazi ureticiler icin geri cekilmesi veya ilgili donemde ihracat bulunmamasi nedeniyle dosyanin o kisminin kapatildigini gosteriyor. On sonuclarin ardindan taraflarin gorus sunma hakki bulunuyor; nihai sonuclar genellikle 120 gun icinde aciklaniyor.\n\nBu dosyanin Turk sanayicisi acisindan onemi dolayli ama somut. Birincisi, PC strand Turkiye'nin de uretim ve ihracat kapasitesine sahip oldugu bir celik turev urunu; ABD pazarinda rakip ulkelerin marjlarinin nasil sekillendigi rekabet dengesini belirliyor. Ikincisi ve daha onemlisi, bu bildirim ABD'nin celik turev urunlerinde ticaret savunma mekanizmasini ne kadar yogun kullandiginin gostergesi: Sadece 8-11 Eylul 2026 haftasinda Federal Register'da celik teli halat (Malezya ve Ukrayna), celik izgara (Cin), cim bicme makineleri (Cin ve Vietnam) ve oluklu mukavva pizza kutulari (Cin, Malezya, Turkiye) dosyalari yayimlandi.\n\nUcuncusu, Section 232 kapsamindaki yuzde 50 celik tarifesinin turev urunleri de kapsamasiyla birlikte, ABD'ye celik turev urunu ihrac eden Turk firmalari hem tarife hem ticaret savunma onlemi riskini ayni anda tasiyor. Ihracat planlamasinda, hedef pazarin yalnizca gumruk vergisi degil, acik ve potansiyel damping dosyalari acisindan da taranmasi gerekiyor.",
+      "published_at": "2026-09-10T08:00:00+03:00",
+      "language": "en",
+      "summary": "ABD Ticaret Bakanligi 10 Eylul 2026'da Malezya menseli on gerilmeli beton celik teli halatinda anti-damping idari gozden gecirmesinin on sonuclarini ve kismi iptalini yayimladi; ayni gun Ukrayna icin de 2024-2025 on sonuclari cikti. Bildirim, ABD'nin celik turev urunlerinde ticaret savunma mekanizmasini ne kadar yogun kullandigini gosteriyor: tek bir haftada celik teli halat, celik izgara, cim bicme makinesi ve oluklu mukavva dosyalari yayimlandi. Section 232'nin yuzde 50 celik tarifesi turev urunleri de kapsadigindan, ABD'ye celik turev urunu satan Turk firmalari hem tarife hem damping riskini ayni anda tasiyor. Ihracat planlamasinda acik ve potansiyel damping dosyalarinin taranmasi sart.",
+      "summary_en": "Commerce published preliminary results and a partial rescission of the antidumping administrative review on prestressed concrete steel wire strand from Malaysia on 10 September 2026, alongside 2024-2025 preliminary results for Ukraine. The week saw an unusually dense cluster of US steel-derivative trade remedy notices.",
+      "key_points": [
+        "Malezya PC strand anti-damping idari gozden gecirme on sonuclari yayimlandi",
+        "Dosyanin bir kismi iptal edildi (rescission in part)",
+        "Ayni gun Ukrayna icin 2024-2025 on sonuclari da cikti",
+        "Ayni hafta celik izgara, cim bicme makinesi ve mukavva dosyalari da yayimlandi",
+        "Section 232 turev urunleri de kapsiyor: cifte risk"
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanligi",
+          "International Trade Administration"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Celik",
+          "Insaat",
+          "Prefabrik Yapi"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "celik",
+        "abd",
+        "on-gerilmeli-celik-tel",
+        "ticaret-savunmasi",
+        "section-232"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 58,
+        "keyword": 70,
+        "recency": 98,
+        "corroboration": 30,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/08/2026-18249/certain-walk-behind-lawn-mowers-and-parts-thereof-from-the-peoples-republic-of-china-and-the",
+      "title": "ABD, Cin ve Vietnam menseli cim bicme makinelerindeki anti-damping onlemlerini kaldirdi",
+      "body": "ABD Ticaret Bakanligi Uluslararasi Ticaret Idaresi, 8 Eylul 2026 tarihli Federal Register bildirimiyle Cin Halk Cumhuriyeti ve Vietnam Sosyalist Cumhuriyeti menseli belirli el tipi (walk-behind) cim bicme makineleri ve parcalarina uygulanan anti-damping emirlerinin sunset review sonucunda kaldirildigini (revocation) duyurdu.\n\nBu, ABD ticaret savunma sisteminde gorece nadir bir sonuc. Sunset review'larin buyuk cogunlugu onlemlerin devamiyla sonuclanir; iptal genellikle yerli sanayinin gozden gecirme surecine katilim gostermemesi ya da zarar iddiasini surdurmemesi halinde gerceklesir. Bu dosyada, emirlerin kaldirilmasi Cin ve Vietnam menseli urunlerin ABD pazarina anti-damping vergisi odemeden tekrar girebilecegi anlamina geliyor - ancak genel tarife rejimi (reciprocal tarifeler ve varsa sektorel Section 232 onlemleri) ayrica gecerli olmaya devam ediyor.\n\nUrun grubu dogrudan Turk sanayisi icin buyuk bir kalem degil; ancak sinyal degeri onemli. Birincisi, ABD'nin ticaret savunma mimarisinde kapsamli tarife rejimi yururlukteyken, klasik anti-damping emirlerinin bazi urun gruplarinda ikincil hale geldigini gosteriyor: Yerli uretici, zaten yuksek genel tarife korumasindan yararlandigi icin ayri bir damping dosyasini surdurme motivasyonunu kaybedebiliyor.\n\nIkincisi, bahce ve peyzaj ekipmani, kucuk motorlu el aletleri ve bunlarin yedek parcalari, Turkiye'nin makine ve metal esya ihracatinda buyume potansiyeli tasiyan alt segmentler. Cin ve Vietnam menseli urunun ABD pazarina anti-damping vergisi olmadan donmesi, bu segmentte kuresel fiyat seviyelerini asagi cekebilir ve Turk ureticisinin ucuncu pazarlardaki marjini daraltabilir.\n\nUcuncusu ve yontemsel olarak en onemlisi: ABD'de bir onlemin kaldirilmasi, ayni urun grubunda AB veya Turkiye'de acik olan koruma onlemlerinin yeterliligini de tartismaya acar. Cin ve Vietnam kaynakli hacim, ABD'ye ek olarak Avrupa ve Turkiye pazarlarina da yoneliyorsa, ithalat trendlerinin izlenmesi ve gerektiginde gozetim veya korunma onlemi basvurusu icin veri birikimi olusturulmasi sektorun yararina olur.",
+      "published_at": "2026-09-08T08:00:00+03:00",
+      "language": "en",
+      "summary": "ABD, sunset review sonucunda Cin ve Vietnam menseli el tipi cim bicme makineleri ve parcalarindaki anti-damping emirlerini kaldirdi. Sunset review'larda iptal nadir bir sonuctur ve genellikle yerli sanayinin dosyayi surdurmemesi halinde gerceklesir; bu da kapsamli tarife rejimi yururlukteyken klasik damping dosyalarinin ikincillesebildigini gosteriyor. Turk makine ve metal esya ureticisi icin risk, Cin ve Vietnam menseli urunun vergisiz donusuyle kuresel fiyat seviyelerinin gerilemesi ve ucuncu pazarlardaki marjin daralmasi. Ayni urun grubunda AB ve Turkiye'deki koruma onlemlerinin yeterliligi icin ithalat trendlerinin izlenmesi onerilir.",
+      "summary_en": "Commerce revoked the antidumping duty orders on certain walk-behind lawn mowers and parts from China and Vietnam following a sunset review, published 8 September 2026. Revocation is a comparatively rare sunset outcome and signals that broad tariff coverage can reduce domestic industry's incentive to sustain individual AD cases.",
+      "key_points": [
+        "Cin ve Vietnam menseli cim bicme makinelerinde anti-damping emirleri kaldirildi",
+        "Sunset review'da iptal nadir gorulen bir sonuc",
+        "Genel tarife rejimi (reciprocal/Section 232) gecerliligini koruyor",
+        "Kuresel fiyat seviyelerinde asagi baski riski",
+        "AB ve Turkiye'deki koruma onlemlerinin yeterliligi gundeme gelebilir"
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanligi",
+          "International Trade Administration"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makine",
+          "Metal Esya",
+          "Bahce Ekipmani"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "cin",
+        "vietnam",
+        "abd",
+        "makine",
+        "sunset-review"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 52,
+        "keyword": 65,
+        "recency": 95,
+        "corroboration": 30,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/11/2026-18586/citric-acid-and-certain-citrate-salts-from-canada-and-india-scheduling-of-the-final-phase-of",
+      "title": "Sitrik asit dosyasinda nihai asama basliyor: ABD kimya ve gida katki zincirinde yeni koruma",
+      "body": "ABD Uluslararasi Ticaret Komisyonu (USITC), 11 Eylul 2026 tarihli Federal Register bildirimiyle Kanada ve Hindistan menseli sitrik asit ve belirli sitrat tuzlarina iliskin anti-damping ve telafi edici vergi sorusturmalarinin (701-TA-783-784 ve 731-TA-1771-1772, Nihai) nihai asamasinin takvimini duyurdu.\n\nSitrik asit ve sitrat tuzlari, gida ve icecek sanayisinde asitlik duzenleyici, deterjan ve temizlik urunlerinde kelatlayici ajan, ilac ve kozmetik formulasyonlarinda tampon madde olarak kullanilan temel kimyasallar. Kuresel ticareti yuksek hacimli ve fiyat duyarli; birkac buyuk uretici ulke pazarin cogunu elinde tutuyor.\n\nNihai asamaya gecilmesi, on asamada olumlu zarar tespiti yapildigini ve Ticaret Bakanligi'nin on damping/sübvansiyon marjlarini acikladigini gosteriyor. Bu asamanin sonunda olumlu karar cikmasi halinde bes yil sureli kesin vergi emirleri yururluge girer. Dikkat cekici olan, dosyanin hedeflerinden birinin Kanada olmasi - ayni hafta ABD'nin Kanada'ya karsi Section 338 kapsaminda ithalat yasagi getirdigi dusunulurse, Kanada menseli urunler ABD pazarinda es zamanli olarak birden fazla katmandan baski goruyor.\n\nTurk sanayicisi icin uc boyut one cikiyor. Birincisi, Turkiye gida, icecek, deterjan ve ilac sanayisinde sitrik asidin net ithalatcisi konumunda; ABD'nin Kanada ve Hindistan kaynagini kisitlamasi bu ureticileri baska pazarlara yoneltir ve kisa vadede Turkiye'ye yonelen arz artabilir, fiyatlar gerileyebilir. Bu, Turk gida ve temizlik urunleri ureticisi icin girdi maliyeti avantaji anlamina gelir.\n\nIkincisi, orta vadede kuresel sitrik asit ticaretinde yeniden yonlenme, Turkiye'nin de dahil oldugu pazarlarda damping sikayetlerini tetikleyebilir; Turkiye'nin kendi ticaret savunma takibi onem kazanir.\n\nUcuncusu ve daha genel olani: ABD, 2026 boyunca yalnizca celik ve aluminyum gibi agir sanayi kalemlerinde degil, ara kimyasallar ve gida katki maddeleri gibi zincirin derinliklerindeki urunlerde de koruma insa ediyor. ABD'ye nihai urun ihrac eden Turk firmalarinin, kullandiklari girdilerin mensei ve bu girdilerin ABD'de acik dosyalara konu olup olmadigini izlemesi gerekiyor.",
+      "published_at": "2026-09-11T08:00:00+03:00",
+      "language": "en",
+      "summary": "USITC, 11 Eylul 2026'da Kanada ve Hindistan menseli sitrik asit ve sitrat tuzlari dosyasinin nihai asama takvimini duyurdu; olumlu karar halinde bes yil sureli kesin vergiler devreye girecek. Turkiye sitrik asitte net ithalatci oldugu icin, ABD'nin bu iki kaynagi kisitlamasi kisa vadede Turkiye'ye yonelen arzi artirabilir ve gida, icecek, deterjan ile ilac sanayisinde girdi maliyetini dusurebilir. Orta vadede ise ticaretin yeniden yonlenmesi Turkiye pazarinda damping sikayetlerini tetikleyebilir. ABD'nin korumayi ara kimyasallar ve gida katki maddelerine kadar derinlestirmesi, ihracatcilarin girdi mensei takibini zorunlu kiliyor.",
+      "summary_en": "The USITC scheduled the final phase of AD/CVD investigations on citric acid and certain citrate salts from Canada and India (notice published 11 September 2026). Affirmative final determinations would trigger five-year duty orders, adding another layer of pressure on Canadian-origin goods.",
+      "key_points": [
+        "Dosya numaralari: 701-TA-783-784 ve 731-TA-1771-1772 (Nihai)",
+        "Hedef ulkeler: Kanada ve Hindistan",
+        "Olumlu kararda bes yil sureli kesin vergi emirleri",
+        "Turkiye sitrik asitte net ithalatci: kisa vadede girdi maliyeti avantaji",
+        "ABD korumayi ara kimyasallara kadar derinlestiriyor"
+      ],
+      "entities": {
+        "kurum": [
+          "USITC",
+          "ABD Ticaret Bakanligi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Kimya",
+          "Gida",
+          "Icecek",
+          "Temizlik Urunleri",
+          "Ilac"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "telafi-edici-vergi",
+        "kimya",
+        "gida",
+        "abd",
+        "kanada",
+        "hindistan"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 60,
+        "keyword": 68,
+        "recency": 100,
+        "corroboration": 35,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "us-eia",
+      "url": "https://www.eia.gov/outlooks/steo/",
+      "title": "EIA Kisa Vadeli Enerji Gorunumu: Brent 100 dolarin uzerinde, yil sonu tahmini 90 dolar",
+      "body": "ABD Enerji Enformasyon Idaresi'nin (EIA) Eylul 2026 tarihli Kisa Vadeli Enerji Gorunumu (Short-Term Energy Outlook - STEO) raporu, petrol piyasalarinda jeopolitik risk primi ile talep zayifligi arasindaki gerilimi ortaya koyuyor. EIA, Brent ham petrol spot fiyatinin 2026'nin ikinci yarisinda ortalama varil basina 90 dolar civarinda gerceklesmesini ongoruyor.\n\nAncak fiili fiyatlar bu tahminin belirgin uzerinde seyrediyor: Brent, 11 Eylul 2026 itibariyla varil basina yaklasik 104 dolar seviyesinde; son bir ayda yuzde 17'den fazla, gecen yilin ayni donemine gore yuzde 55'in uzerinde yukselmis durumda. WTI ise 100 dolar civarinda.\n\nFiyatlari yukari iten temel unsur arz tarafindaki jeopolitik risk. Ortadogu'da suren catisma, Hormuz Bogazi'ndaki tanker trafigini ciddi bicimde azaltti ve Kizildeniz'in guney girisindeki Bab-el Mendeb Bogazi'nda Husi saldirilari arz guvenligi endisesini surdurdu. Savas riski sigortasi primlerindeki artis, tek bir Hormuz gecisi icin dev tankerlerde milyonlarca dolarlik ek maliyet anlamina geliyor.\n\nTalep tarafinda ise tablo tam tersi: Uluslararasi Enerji Ajansi (IEA), 2026 icin kuresel petrol talebi ongorusunu sert bicimde asagi cekerek gunluk 2,5 milyon varillik bir daralma ongordu - pandemiden bu yana en buyuk yillik dusus. OPEC de 2026 talep artis tahminini ust uste besinci kez asagi yonlu revize etti. J.P. Morgan, Brent'in ucuncu ceyrekte ortalama 86 dolar, dorduncu ceyrekte 80 dolar ve yil sonunda 78 dolar olmasini bekliyor.\n\nTurk sanayicisi icin bu tablonun anlami net ve dogrudan. Turkiye enerji ithalatcisi bir ekonomi; 100 dolarin uzerinde seyreden petrol, cari acigi buyutur, enerji maliyetlerini yukseltir ve dogalgaza endeksli elektrik fiyatlari uzerinden tum imalat sanayisini vurur. Ozellikle cam, cimento, seramik, demir-celik, kimya ve gubre gibi enerji yogun sektorlerde birim maliyet artisi marjlari hizla eritir. Ayrica yuksek enerji fiyatlari, navlun maliyetlerini de yukari tasiyor. Firmalarin enerji tedarik sozlesmelerinde fiyat sabitleme ve hedge mekanizmalarini, enerji verimliligi yatirimlarini ve yenilenebilir oz tuketim projelerini onceliklendirmesi gerekiyor.",
+      "published_at": "2026-09-09T17:00:00+03:00",
+      "language": "en",
+      "summary": "EIA'nin Eylul 2026 Kisa Vadeli Enerji Gorunumu, Brent'in 2026 ikinci yarisinda ortalama 90 dolar olacagini ongoruyor; ancak fiili fiyat 11 Eylul'de 104 dolar civarinda, son bir ayda yuzde 17 artmis durumda. Hormuz ve Bab-el Mendeb kaynakli arz riski fiyatlari yukari iterken, IEA 2026 talebinde gunluk 2,5 milyon varillik daralma ongoruyor ve OPEC tahminlerini ust uste besinci kez dusurdu. Enerji ithalatcisi Turkiye icin 100 dolar uzeri petrol, cari acik, elektrik ve dogalgaz maliyetleri ile navlun uzerinden tum imalat sanayisini vuruyor. Cam, cimento, seramik, demir-celik, kimya ve gubre gibi enerji yogun sektorlerde hedge, enerji verimliligi ve oz tuketim yatirimlari oncelik kazanmali.",
+      "summary_en": "EIA's September 2026 Short-Term Energy Outlook forecasts Brent averaging around $90/bbl in H2 2026, while spot Brent traded near $104 on 11 September, up over 17% in a month. Middle East supply risk at Hormuz and Bab al-Mandeb is lifting prices even as the IEA cut 2026 demand by 2.5 mb/d and OPEC lowered its forecast for a fifth time.",
+      "key_points": [
+        "EIA tahmini: Brent 2026 ikinci yarisinda ortalama 90 dolar",
+        "Fiili Brent 11 Eylul'de yaklasik 104 dolar, aylik artis yuzde 17",
+        "IEA 2026 talebinde gunluk 2,5 milyon varillik daralma ongoruyor",
+        "OPEC talep tahminini ust uste besinci kez dusurdu",
+        "Hormuz ve Bab-el Mendeb kaynakli arz riski fiyati yukari itiyor",
+        "Enerji yogun Turk sektorlerinde marj baskisi yuksek"
+      ],
+      "entities": {
+        "kurum": [
+          "EIA",
+          "IEA",
+          "OPEC",
+          "J.P. Morgan"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Cam",
+          "Cimento",
+          "Seramik",
+          "Demir-Celik",
+          "Kimya",
+          "Gubre"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "petrol",
+        "brent",
+        "enerji",
+        "opec",
+        "maliyet",
+        "emtia",
+        "cari-acik"
+      ],
+      "importance_factors": {
+        "authority": 92,
+        "impact": 92,
+        "keyword": 80,
+        "recency": 96,
+        "corroboration": 85,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/08/china-exports-imports-august-trade-rebalance-demand-surplus-.html",
+      "title": "Cin ihracati Agustos'ta yuzde 25 artti, ticaret fazlasi 119 milyar dolarla rekor kirdi",
+      "body": "Cin Gumruk Idaresi'nin 8 Eylul 2026'da acikladigi verilere gore Cin'in Agustos ayi ihracati yillik bazda yuzde 25 artarak 401,44 milyar dolara ulasti. Ithalat yuzde 28,2 artisla 282,36 milyar dolar olarak gerceklesti ancak beklentilerin bir miktar altinda kaldi. Aylik ticaret fazlasi Temmuz'daki 112,5 milyar dolardan 119,09 milyar dolara cikarak 2026'nin en yuksek seviyesine ulasti. Yilin ilk sekiz ayinda kumulatif ticaret fazlasi 805,5 milyar dolara vardi.\n\nIhracat artisinin surukleyicileri dikkat cekici: Otomobil ihracati yillik yuzde 43, yari iletken ihracati ise yuzde 129,8 artti. Yani Cin'in ihracat buyumesi artik dusuk katma degerli tuketim mallarindan degil, otomotiv ve elektronik gibi orta-yuksek teknoloji segmentlerinden geliyor. ABD'ye yapilan sevkiyatlar - yururlukteki tarifelere ragmen - yuzde 34,4 artarken, ABD'den yapilan ithalat yuzde 17,8 buyudu.\n\nIthalatin beklentinin altinda kalmasi, ic talebin hala zayif oldugunu gosteriyor ve Cin'in ticaret dengesini yeniden dengelemesine yonelik uluslararasi cagrilari guclendiriyor. Avrupa Birligi, Cin ile ticaret fazlasini sinirlamaya yonelik bir anlasma icin Ekim 2026 son tarihine yaklasirken \"daha sert onlemler\" uygulayabilecegi uyarisinda bulunmus durumda.\n\nTurk sanayicisi acisindan bu veri seti uc kritik mesaj tasiyor. Birincisi, Cin'in rekor ihracat fazlasi kuresel imalat sanayisinde fiyat baskisinin devam edecegi anlamina geliyor; Turk ureticisi hem ic pazarda hem ihrac pazarlarinda Cin menseli urunle daha keskin bir fiyat rekabetine hazirlanmali.\n\nIkincisi, otomotiv ve yari iletken gibi katma degerli segmentlerdeki siramaya dikkat: Cin artik Turkiye'nin buyume hedefi koydugu alanlarda dogrudan rakip. Turk otomotiv yan sanayisinin Avrupa'daki konumu, Cin menseli tam arac ve parca ihracatindaki bu ivmeden etkilenecek.\n\nUcuncusu, AB'nin Ekim 2026 son tarihi ve olasi sert onlemleri, AB'nin ticaret savunma mimarisini genel olarak sertlestirecek. Bu, Cin'i hedefleyen onlemlerin bazen Turkiye gibi ucuncu ulke ihracatcilarini da dolayli olarak etkilemesi (mensei kurallari, gozetim, kota yapilari) anlamina geliyor. AB'deki mevzuat surecinin yakin takibi sart.",
+      "published_at": "2026-09-08T11:00:00+03:00",
+      "language": "en",
+      "summary": "Cin'in Agustos 2026 ihracati yillik yuzde 25 artarak 401,4 milyar dolara, ticaret fazlasi ise 119,1 milyar dolarla 2026'nin zirvesine ulasti; sekiz aylik kumulatif fazla 805,5 milyar dolar. Buyume artik dusuk katma degerli mallardan degil, yuzde 43 artan otomobil ve yuzde 130 artan yari iletken ihracatindan geliyor. Turk sanayicisi icin bu, hem ic pazarda hem ihrac pazarlarinda keskinlesen Cin fiyat rekabeti ve otomotiv gibi stratejik segmentlerde dogrudan rakiplik demek. AB'nin Ekim 2026 son tarihine dogru sertlesen ticaret savunma mimarisi, Cin'i hedefleyen onlemlerin mensei kurallari ve kotalar uzerinden Turk ihracatcisini da dolayli etkilemesi riskini tasiyor.",
+      "summary_en": "China's August 2026 exports rose 25% y/y to $401.4bn and the trade surplus hit $119.1bn, the highest of the year, with an $805.5bn cumulative surplus in the first eight months. Auto exports rose 43% and semiconductor exports 130%. Imports missed estimates, fuelling calls for rebalancing; the EU has warned of harsher measures ahead of an October 2026 deadline.",
+      "key_points": [
+        "Agustos ihracati yillik yuzde 25 artisla 401,44 milyar dolar",
+        "Ticaret fazlasi 119,09 milyar dolar ile 2026 rekoru",
+        "Otomobil ihracati yuzde 43, yari iletken ihracati yuzde 129,8 artti",
+        "ABD'ye sevkiyatlar tarifelere ragmen yuzde 34,4 arti",
+        "Ithalat beklentinin altinda: ic talep hala zayif",
+        "AB, Ekim 2026 son tarihi oncesi 'daha sert onlemler' uyarisi yapti"
+      ],
+      "entities": {
+        "kurum": [
+          "Cin Gumruk Idaresi",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Yari Iletken",
+          "Elektronik",
+          "Imalat"
+        ]
+      },
+      "region": "ASYA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin",
+        "ihracat",
+        "ticaret-fazlasi",
+        "otomotiv",
+        "yari-iletken",
+        "fiyat-rekabeti",
+        "kapasite-fazlasi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 88,
+        "keyword": 88,
+        "recency": 98,
+        "corroboration": 92,
+        "reach": 88
+      }
+    },
+    {
+      "source_slug": "vantage-markets",
+      "url": "https://www.vantagemarkets.com/market-news/china-cpi-ppi-august-energy-prices-september-9-2026/",
+      "title": "Cin'de enflasyon toparlaniyor: TUFE yuzde 0,8, UFE beklentiyi asti",
+      "body": "Cin Ulusal Istatistik Burosu'nun 9 Eylul 2026'da acikladigi Agustos ayi fiyat verileri, uzun suredir deflasyon endisesi altindaki Cin ekonomisinde sinirli bir toparlanmaya isaret ediyor. Tuketici Fiyat Endeksi (TUFE) yillik bazda yuzde 0,8 artti; Temmuz'daki yuzde 0,5'in uzerinde gerceklesti. Aylik artis yuzde 0,4 ile yuzde 0,3'luk piyasa beklentisini asti.\n\nGida disi fiyatlar daha hizli yukseldi: Temmuz'daki yuzde 0,9'dan Agustos'ta yuzde 1,2'ye cikti. Ana surukleyici ulastirma maliyetleri oldu; yakit fiyatlarindaki artis ve seyahat talebindeki guclenme sayesinde ulastirma kalemi yuzde 0,4'ten yuzde 2,5'e sicradi.\n\nUretici Fiyat Endeksi (UFE) tarafinda da beklentilerin uzerinde bir performans var: Enerji maliyetlerindeki artis UFE'yi yukari itti ve endeks yuzde 3,2'ye dogru sertlesti. Cin'de UFE uzun sure negatif bolgede kalmis, sanayi urunlerinde kuresel deflasyonist baskinin ana kaynagi olmustu.\n\nAnalistlerin uyarisi onemli: Manset TUFE'deki toparlanmanin buyuk olcude gida fiyatlarindaki baz etkisinden ve enerji maliyetlerinden kaynaklandigi, gercek bir ic talep canlanmasini yansitmadigi degerlendiriliyor. Nitekim ayni hafta aciklanan Agustos ithalat verileri beklentilerin altinda kalmisti. Cin Merkez Bankasi (PBoC) ise politika faizlerini rekor dusuk seviyelerde tutmaya devam ediyor; bir yillik kredi faizi yuzde 3,0, bes yillik yuzde 3,5 seviyesinde ve Agustos ile birlikte ust uste 15. ay degismedi.\n\nTurk sanayicisi icin bu verinin iki yonu var. Olumlu taraf: Cin'de uretici fiyatlarinin deflasyondan cikmasi, Cin menseli sanayi urunlerindeki asiri ucuz fiyat baskisinin kismen hafifleyebilecegine isaret ediyor. Demir-celik, kimya, plastik ve makine gibi sektorlerde ithalat kaynakli fiyat baskisi bir nebze azalabilir.\n\nOlumsuz taraf: UFE'deki artisin kaynagi ic talep degil enerji maliyeti oldugu icin, bu toparlanma surdurulebilir bir talep canlanmasi anlamina gelmiyor. Cin'in ic talebi zayif kaldigi surece uretim fazlasi ihracata yonelmeye devam edecek. Ayrica Cin'de ulastirma maliyetlerindeki artis, kuresel navlun ve girdi maliyetlerine yansiyabilir.",
+      "published_at": "2026-09-09T10:00:00+03:00",
+      "language": "en",
+      "summary": "Cin'de Agustos TUFE yillik yuzde 0,8'e (Temmuz yuzde 0,5), aylik yuzde 0,4'e yukseldi; UFE ise enerji maliyetleri sayesinde beklentiyi asarak yuzde 3,2'ye dogru sertlesti. Ancak analistler toparlanmanin gida baz etkisi ve enerji kaynakli oldugunu, gercek bir ic talep canlanmasi olmadigini vurguluyor; PBoC faizleri ust uste 15. ay sabit tuttu. Turk sanayicisi icin olumlu yon, Cin uretici fiyatlarinin deflasyondan cikmasiyla demir-celik, kimya, plastik ve makinede ithalat kaynakli fiyat baskisinin bir miktar hafifleyebilmesi. Olumsuz yon ise zayif ic talebin Cin uretim fazlasini ihracata itmeye devam etmesi ve artan ulastirma maliyetlerinin kuresel girdi fiyatlarina yansimasi.",
+      "summary_en": "China's August 2026 CPI rose 0.8% y/y (from 0.5% in July) and 0.4% m/m, beating the 0.3% consensus, while PPI firmed toward 3.2% on higher energy costs. Analysts caution the pickup reflects food base effects and fuel prices rather than genuine demand recovery; the PBoC held LPRs at record lows for a 15th month.",
+      "key_points": [
+        "Agustos TUFE yillik yuzde 0,8, aylik yuzde 0,4",
+        "Gida disi fiyatlar yuzde 1,2, ulastirma yuzde 2,5 artti",
+        "UFE enerji maliyetiyle yuzde 3,2'ye dogru sertlesti",
+        "PBoC: 1 yillik LPR yuzde 3,0, 5 yillik yuzde 3,5 - 15. ay sabit",
+        "Toparlanma ic talep degil baz etkisi ve enerji kaynakli"
+      ],
+      "entities": {
+        "kurum": [
+          "Cin Ulusal Istatistik Burosu",
+          "PBoC"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Imalat",
+          "Demir-Celik",
+          "Kimya",
+          "Plastik",
+          "Lojistik"
+        ]
+      },
+      "region": "ASYA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "cin",
+        "enflasyon",
+        "uretici-fiyatlari",
+        "pboc",
+        "faiz",
+        "emtia"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 70,
+        "keyword": 72,
+        "recency": 98,
+        "corroboration": 75,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "indexbox",
+      "url": "https://www.indexbox.io/blog/chinas-steel-exports-edge-up-in-august-2026/",
+      "title": "Cin celik ihracati Agustos'ta 10,15 milyon tona cikti, ham celik uretimi geriliyor",
+      "body": "Cin'in Agustos 2026 celik ihracati aylik bazda yuzde 0,3 artisla 10,15 milyon tona ulasti; yillik bazda artis yuzde 6,8. Ayni donemde ic uretim tarafinda tablo tam tersi yonde: Cin Demir Celik Birligi (CISA) verilerine gore Agustos ayi sonunda buyuk celik isletmelerinin ham celik uretimi 20,74 milyon ton, gunluk ortalama uretim 1,885 milyon ton oldu ve aylik bazda yuzde 4 geriledi. Pik demir uretimi gunluk 1,765 milyon tona inerek yuzde 3 dustu. Buna karsilik mamul celik urun uretimi gunluk 2,008 milyon tona cikarak yuzde 4,8 artti.\n\nBu tablo, Cin celik sanayisinin icinde bulundugu yapisal donusumu ozetliyor: Insaat sektorundeki durgunluk ic talebi asagi cekiyor, tesisler ham celik uretimini kisiyor ancak mamul urun uretimini ve ihracati koruyor. Bloomberg'in degerlendirmesine gore Cin celik uretimi, bu on yilin en dusuk yillik toplamina dogru ilerliyor.\n\nSektor analizlerine gore Cin'in 2026 celik talebi hafif gerileyecek; imalat sanayisinden gelen kazanimlar insaat sektorundeki dususu ancak notrleyecek. Bu denklemin sonucu net: Ic talebin karsilayamadigi kapasite, ihracata yoneliyor.\n\nTurk demir-celik sanayisi icin bu, dogrudan ve olculebilir bir tehdit. Turkiye, Almanya'daki uretim dususunun ardindan Avrupa'nin en buyuk celik ureticisi konumuna yukselmis ve kuresel siralamada yedinci sirada yer aliyor. Ancak Turk ureticisi ayni anda uc cepheden baski altinda: ABD'de Section 232 kapsaminda yuzde 50 ek gumruk vergisi (turev urunler dahil), AB'de 1 Temmuz 2026'dan itibaren yururluge giren ve vergisiz kota hacimlerini yaklasik yariya indirip kota disi vergiyi yuzde 25'ten yuzde 50'ye cikaran yeni korunma rejimi, ve ucuncu pazarlarda Cin menseli celigin fiyat baskisi.\n\nTurk ureticisinin elindeki en guclu koz, yuzde 75'e varan daha dusuk karbon emisyonuyla uretim yapabilmesi. AB'nin Sinirda Karbon Duzenleme Mekanizmasi (SKDM/CBAM) tam olarak devreye girdiginde bu avantaj fiyata yansiyacak. Kisa vadede ise yuksek katma degerli urunlere gecis, ABD'de montaj/nihai isleme stratejileri ve Turkiye'nin kendi ithalat gozetim mekanizmalarinin etkin kullanimi one cikan savunma hatlari.",
+      "published_at": "2026-09-09T12:00:00+03:00",
+      "language": "en",
+      "summary": "Cin'in Agustos 2026 celik ihracati aylik yuzde 0,3, yillik yuzde 6,8 artisla 10,15 milyon tona cikarken, buyuk isletmelerde ham celik uretimi gunluk bazda yuzde 4 geriledi ve mamul urun uretimi yuzde 4,8 artti. Insaattaki durgunluk ic talebi kisarken, kapasite fazlasi ihracata yoneliyor; Cin uretimi on yilin en dusuk yillik toplamina dogru gidiyor. Avrupa'nin en buyuk celik ureticisi konumundaki Turkiye ise uc cepheden baski altinda: ABD'de Section 232 yuzde 50 tarife, AB'de 1 Temmuz 2026'da kotalari yariya indiren yeni korunma rejimi ve ucuncu pazarlarda Cin fiyat baskisi. Yuzde 75'e varan daha dusuk emisyonla uretim avantaji, CBAM tam devreye girdiginde fiyata yansiyacak stratejik koz.",
+      "summary_en": "China's August 2026 steel exports edged up 0.3% m/m to 10.15 million tonnes (+6.8% y/y) while crude steel output at major mills fell 4% m/m on a daily basis. Weak construction demand is pushing surplus capacity into export markets, squeezing Turkish producers already facing 50% US Section 232 duties and the EU's tightened safeguard regime.",
+      "key_points": [
+        "Agustos celik ihracati 10,15 milyon ton (+yuzde 0,3 aylik, +yuzde 6,8 yillik)",
+        "Buyuk isletmelerde gunluk ham celik uretimi yuzde 4 geriledi",
+        "Mamul celik urun uretimi gunluk bazda yuzde 4,8 artti",
+        "Cin uretimi on yilin en dusuk yillik toplamina dogru gidiyor",
+        "Turkiye Avrupa'nin en buyuk celik ureticisi, kuresel 7. sirada",
+        "ABD yuzde 50 Section 232 + AB yeni korunma rejimi + Cin fiyat baskisi"
+      ],
+      "entities": {
+        "kurum": [
+          "CISA",
+          "Cin Gumruk Idaresi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Celik",
+          "Insaat",
+          "Imalat"
+        ]
+      },
+      "region": "ASYA",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin",
+        "celik",
+        "kapasite-fazlasi",
+        "ihracat",
+        "section-232",
+        "korunma-onlemi",
+        "cbam"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 95,
+        "keyword": 92,
+        "recency": 94,
+        "corroboration": 78,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "drewry",
+      "url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+      "title": "Drewry Dunya Konteyner Endeksi 10 Eylul: 4.476 dolarda sabit, Asya-Avrupa geriliyor",
+      "body": "Drewry'nin 10 Eylul 2026 tarihli Dunya Konteyner Endeksi (WCI) degerlendirmesine gore kompozit endeks, ust uste ikinci hafta 40 ayaklik konteyner basina 4.476 dolar seviyesinde sabit kaldi. Ancak hatlar arasindaki ayrisma belirginlesiyor.\n\nTranspasifik hatlarda yukselis var: Shanghai-Los Angeles navlunu yuzde 2 artisla 4.476 dolar degil, 40 ayak basina 7.352 dolara; Shanghai-New York ise yuzde 1 artisla 9.726 dolara cikti. Bu hatlarda gelecek hafta icin sekiz bos sefer (blank sailing) ilan edilmesi, tasiyicilarin kapasiteyi sikilastirdigina isaret ediyor.\n\nAsya-Avrupa hatlarinda ise tablo asagi yonlu: Shanghai-Cenova navlunu yuzde 3 gerileyerek 4.216 dolara, Shanghai-Rotterdam yuzde 2 dususle 3.997 dolara indi. Bu hatlarda uc bos sefer ilan edildi (onceki hafta bir), Shanghai limanindaki yigilma ise 94 saatten 64 saate geriledi.\n\nAsya-Avrupa'daki dususun ana nedeni, tasiyicilarin Suveys Kanali'na secmeli olarak donmesi. Umit Burnu rotasi terk edildikce Asya-Avrupa koridorunda efektif kapasite geri geliyor ve bu navlun uzerinde asagi yonlu baski yaratiyor. Buna karsilik Iran-ABD gerilimi Hormuz Bogazi tasimaciligini aksatmaya devam ediyor. Drewry, zayif talep, Asya'da suren liman yigilmasi ve tasiyicilarin kapasite yonetimi nedeniyle navlunlarin gelecek hafta da genel olarak sabit kalmasini bekliyor.\n\nTurk sanayicisi ve ihracatcisi icin bu veri seti dogrudan maliyet planlamasi anlami tasiyor. Asya-Avrupa navlunlarinin gerilemesi, Uzak Dogu'dan hammadde, ara mal ve makine ithal eden Turk ureticisi icin girdi maliyetinde rahatlamadir. Ayni zamanda Suveys'in yeniden devreye girmesi transit surelerini kisaltarak stok maliyetlerini ve tedarik belirsizligini azaltir - Kizildeniz krizinin zirvesinde Asya-Avrupa transit sureleri 10-14 gun uzamisti.\n\nAncak iki uyari notu var: Birincisi, Suveys'e donus \"secmeli\" ve Bab-el Mendeb'deki guvenlik durumu kirilgan; 11 Eylul'de Husi guclerinin Mokha limanini ele gecirmesi bu kirilganligi teyit ediyor. Ikincisi, transpasifikteki yukselis ve bos sefer stratejisi, tasiyicilarin kapasiteyi fiyat savunmasi icin aktif kullandigini gosteriyor; Asya-Avrupa'daki dusus kalici olmayabilir. Uzun vadeli navlun sozlesmelerinde esnek hacim ve rota degisikligi maddeleri onem kazaniyor.",
+      "published_at": "2026-09-10T12:00:00+03:00",
+      "language": "en",
+      "summary": "Drewry Dunya Konteyner Endeksi 10 Eylul 2026'da ust uste ikinci hafta 40 ayak basina 4.476 dolarda sabit kaldi; transpasifik yukselirken (Shanghai-LA 7.352 dolar, +yuzde 2) Asya-Avrupa geriledi (Shanghai-Rotterdam 3.997 dolar, -yuzde 2). Dususun nedeni tasiyicilarin Suveys Kanali'na secmeli donusuyle Asya-Avrupa koridorunda efektif kapasitenin geri gelmesi. Uzak Dogu'dan hammadde, ara mal ve makine ithal eden Turk ureticisi icin bu, girdi maliyetinde ve transit surelerinde rahatlama demek. Ancak Bab-el Mendeb guvenligi kirilgan ve tasiyicilar bos seferlerle kapasiteyi aktif yonetiyor; uzun vadeli navlun sozlesmelerinde esnek hacim ve rota maddeleri kritik.",
+      "summary_en": "Drewry's WCI held at $4,476/40ft for a second week on 10 September 2026. Transpacific rates rose (Shanghai-LA $7,352, +2%; Shanghai-NY $9,726, +1%) while Asia-Europe fell (Genoa $4,216, -3%; Rotterdam $3,997, -2%) as carriers selectively returned to the Suez Canal, restoring effective capacity.",
+      "key_points": [
+        "WCI kompozit endeks 4.476 dolar/40ft, ikinci hafta sabit",
+        "Shanghai-Los Angeles 7.352 dolar (+yuzde 2), Shanghai-New York 9.726 dolar (+yuzde 1)",
+        "Shanghai-Cenova 4.216 dolar (-yuzde 3), Shanghai-Rotterdam 3.997 dolar (-yuzde 2)",
+        "Suveys'e secmeli donus Asya-Avrupa kapasitesini geri getiriyor",
+        "Transpasifikte sekiz bos sefer ilan edildi",
+        "Shanghai liman yigilmasi 94 saatten 64 saate geriledi"
+      ],
+      "entities": {
+        "kurum": [
+          "Drewry",
+          "Suveys Kanali Idaresi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Denizcilik",
+          "Ihracat",
+          "Ithalat"
+        ]
+      },
+      "region": "ASYA",
+      "category": "tedarik-zinciri",
+      "sentiment": "POZITIF",
+      "tags": [
+        "navlun",
+        "konteyner",
+        "lojistik",
+        "suveys",
+        "tedarik-zinciri",
+        "maliyet",
+        "kizildeniz"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 88,
+        "keyword": 85,
+        "recency": 98,
+        "corroboration": 72,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "npr",
+      "url": "https://www.npr.org/2026/09/11/g-s1-142822/houthis-red-sea-port",
+      "title": "Husiler Kizildeniz'in guney girisinde Mokha limanini ve stratejik adayi ele gecirdi",
+      "body": "Iran destekli Husi guclerinin, Kizildeniz'in guney girisinde stratejik bir adayi ve Yemen'in Mokha limanini ele gecirdigi 11 Eylul 2026'da duyuruldu. Mokha, Bab-el Mendeb Bogazi'ni kontrol etmek acisindan hayati oneme sahip bir nokta; boganin Kizildeniz'e acilan agzinda bulunuyor. Gelisme, Kizildeniz-Suveys koridorunda yeni bir cephe acilmasi anlamina geliyor.\n\nGelisme, yaklasik uc yildir suren ve kuresel tedarik zincirlerini yeniden sekillendiren Kizildeniz krizinin en son ve en ciddi tirmanma adimi. ABD Denizcilik Idaresi (MARAD) verilerine gore Kasim 2023 ile Ekim 2025 arasinda ticari gemilere 100'un uzerinde ayri Husi saldirisi gerceklesti ve 60'tan fazla ulkenin gemileri etkilendi. Bab-el Mendeb'den gecen gemi trafigi, saldirilarin basladigi 2023 sonundan bu yana yaklasik yuzde 60 azaldi.\n\nMARAD'in tehdit degerlendirmesine gore olasi dusman eylemleri arasinda tek yonlu insansiz hava araci saldirilari, insansiz su ustu ve su alti araci saldirilari, balistik ve seyir fuzesi saldirilari, kucuk teknelerden hafif silah atesi, patlayici yuklu tekne saldirilari ve yasa disi bordalama, alikoyma veya el koyma yer aliyor. Israil, ABD veya Ingiltere baglantili gemiler ile Israil limanlarina ugrak yaptigi tespit edilen sirket filolarindaki tum gemiler yuksek risk grubunda.\n\nTurk sanayicisi icin bu gelisme dogrudan ve cift yonlu bir risk tasiyor. Birincisi, tam da tasiyicilarin Suveys'e secmeli olarak donmeye basladigi ve Asya-Avrupa navlunlarinin gerilemeye basladigi bir donemde geliyor; Mokha'nin kaybi bu normallesmeyi tersine cevirebilir. Umit Burnu rotasina geri donus, Asya-Avrupa transit surelerini yeniden 10-14 gun uzatir, navlun ve savas riski sigortasi primlerini yukseltir.\n\nIkincisi, Turkiye'nin Uzak Dogu ve Korfez ile ticaretinin buyuk bolumu bu koridordan geciyor. Isletme sermayesi baglaminda, stokta bekleyen gun sayisinin artmasi nakit dongusunu uzatir. Ucuncusu, Kizildeniz'deki tirmanmanin petrol fiyatlarina yansimasi (Brent 104 dolar civarinda) enerji yogun Turk sanayisinin maliyet tabanini dogrudan vuruyor.\n\nOnerilen aksiyonlar: Alternatif rota ve liman senaryolarinin hazir tutulmasi, savas riski sigortasi kapsaminin gozden gecirilmesi, kritik hammaddede emniyet stogunun artirilmasi ve musteri sozlesmelerinde mucbir sebep ile teslim suresi maddelerinin guncellenmesi.",
+      "published_at": "2026-09-11T14:00:00+03:00",
+      "language": "en",
+      "summary": "Iran destekli Husi gucleri 11 Eylul 2026'da Kizildeniz'in guney girisindeki stratejik bir adayi ve Yemen'in Mokha limanini ele gecirerek Bab-el Mendeb Bogazi uzerindeki kontrolunu guclendirdi. Bogazdan gecen gemi trafigi 2023 sonundan bu yana zaten yuzde 60 azalmis durumda. Gelisme, tam da tasiyicilarin Suveys'e donmeye basladigi ve Asya-Avrupa navlunlarinin gerilemeye basladigi anda normallesmeyi tersine cevirme riski tasiyor. Umit Burnu'na donus, Turk ihracatcisi icin 10-14 gunluk ek transit suresi, yuksek navlun, artan savas riski sigortasi primi ve uzayan nakit dongusu demek. Alternatif rota senaryolari, emniyet stogu ve sozlesmelerde mucbir sebep maddeleri simdiden hazirlanmali.",
+      "summary_en": "Iran-backed Houthi forces seized a strategic island at the southern entrance to the Red Sea and Yemen's port of Mokha, reported 11 September 2026, tightening their grip on the Bab al-Mandeb Strait. Traffic through the strait is already down roughly 60% since late 2023. The escalation threatens the fragile, selective return of carriers to the Suez Canal.",
+      "key_points": [
+        "Husiler Mokha limanini ve stratejik adayi ele gecirdi (11 Eylul 2026)",
+        "Bab-el Mendeb trafigi 2023 sonundan bu yana yuzde 60 azaldi",
+        "Kasim 2023-Ekim 2025 arasinda 100'un uzerinde saldiri, 60+ ulke etkilendi",
+        "Suveys'e donus ve navlun normallesmesi tersine donebilir",
+        "Umit Burnu rotasi Asya-Avrupa transitine 10-14 gun ekliyor",
+        "Savas riski sigortasi primleri ve petrol fiyatlari uzerinde yukari baski"
+      ],
+      "entities": {
+        "kurum": [
+          "MARAD",
+          "Husi hareketi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Denizcilik",
+          "Enerji",
+          "Sigorta",
+          "Ihracat"
+        ]
+      },
+      "region": "ASYA",
+      "category": "tedarik-zinciri",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "kizildeniz",
+        "suveys",
+        "lojistik",
+        "navlun",
+        "tedarik-zinciri",
+        "jeopolitik-risk",
+        "sigorta"
+      ],
+      "importance_factors": {
+        "authority": 82,
+        "impact": 92,
+        "keyword": 88,
+        "recency": 100,
+        "corroboration": 88,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-10/houthi-attacks-how-they-threaten-red-sea-shipping-and-saudi-oil",
+      "title": "Husi saldirilari Kizildeniz tasimaciligini ve Suudi petrol altyapisini tehdit ediyor",
+      "body": "Bloomberg'in 10 Eylul 2026 tarihli analizi, Husi saldirilarinin yalnizca konteyner tasimaciligini degil, Suudi Arabistan'in petrol altyapisini de hedef alan bir tehdide donustugunu ortaya koyuyor. Temmuz ayinda ortaya cikan raporlara gore Husiler, guney Kizildeniz'de gemilere yonelik fuze ve insansiz hava araci saldirilarini yogunlastirdi; deniz koalisyon gucleri tehdidin seviyesini artirdi.\n\nRiskin genislemesi iki boyutlu. Birincisi, deniz tasimaciligi boyutu: Bab-el Mendeb Bogazi, Suveys Kanali uzerinden Asya-Avrupa ticaretinin ana kapisi. Bogazin tehdit altinda kalmasi, tasiyicilari Umit Burnu rotasina yonlendiriyor, bu da 10-14 gunluk ek transit suresi ve ciddi yakit maliyeti demek.\n\nIkincisi, enerji altyapisi boyutu: Suudi Arabistan'in Kizildeniz kiyisindaki petrol tesisleri ve ihrac terminalleri (ozellikle Yanbu ve Doguya-Batiya uzanan boru hatti) menzil icinde. Bu altyapinin tehdit altinda kalmasi, Suudi Arabistan'in Hormuz Bogazi'ni baypas etme kapasitesini zayiflatiyor. Hormuz'un zaten Iran-ABD gerilimi nedeniyle kisitli oldugu bir ortamda, Kizildeniz cikisinin da riske girmesi kuresel petrol arz guvenligi acisindan cifte darbo anlamina geliyor.\n\nBu tablo, Brent petrolun neden 100 dolarin uzerinde seyrettigini aciklayan temel unsur. Savas riski sigortasi primlerindeki artis da benzer: 2026 basindaki tirmanma sonrasinda Hormuz gecisleri icin savas riski primleri tekne degerinin yuzde 0,25'inden yuzde 1-3 bandina cikti; 150 milyon dolarlik bir tanker icin tek gecis sigorta maliyeti 375 bin dolardan 1,5-4,5 milyon dolar araligina yukseldi.\n\nTurk sanayicisi icin sonuc dogrudan maliyet: Enerji ithalatcisi bir ekonomi olarak Turkiye, yuksek petrol ve dogalgaz fiyatlarini elektrik tarifeleri ve girdi maliyetleri uzerinden imalat sanayisine yansitiyor. Cam, cimento, seramik, demir-celik, kagit, kimya ve gubre gibi enerji yogun sektorlerde birim maliyet basincinin 2026 son ceyreginde de surmesi bekleniyor. Ayrica navlun ve sigorta maliyetleri, ozellikle Korfez ve Uzak Dogu ile ticaret yapan firmalarin lojistik butcelerini zorluyor. Enerji verimliligi yatirimlari, uzun vadeli enerji alim anlasmalari ve alternatif tedarik rotalari artik operasyonel oncelik.",
+      "published_at": "2026-09-10T16:00:00+03:00",
+      "language": "en",
+      "summary": "Bloomberg'in 10 Eylul 2026 analizi, Husi saldirilarinin Kizildeniz tasimaciliginin yani sira Suudi Arabistan'in Kizildeniz kiyisindaki petrol ihrac altyapisini da tehdit ettigini gosteriyor. Hormuz Bogazi Iran-ABD gerilimi nedeniyle zaten kisitliyken, Suudi Arabistan'in Hormuz'u baypas eden Kizildeniz cikisinin da riske girmesi kuresel arz guvenligi acisindan cifte darbe. Hormuz gecisi icin savas riski sigortasi primi tekne degerinin yuzde 0,25'inden yuzde 1-3 bandina cikti; 150 milyon dolarlik bir tankerde tek gecis maliyeti 4,5 milyon dolara kadar ulasabiliyor. Enerji ithalatcisi Turkiye'de bu tablo cam, cimento, seramik, celik, kagit, kimya ve gubre sektorlerinde birim maliyet basincini son ceyrekte de surdurecek.",
+      "summary_en": "Bloomberg analysis (10 September 2026) on how Houthi missile and drone attacks now threaten both Red Sea container shipping and Saudi Arabia's Red Sea oil export infrastructure, undermining Riyadh's ability to bypass a constrained Strait of Hormuz. War risk premiums for Hormuz transits have moved from about 0.25% to 1-3% of hull value.",
+      "key_points": [
+        "Husi fuze ve IHA saldirilari guney Kizildeniz'de yogunlasti",
+        "Suudi Arabistan'in Kizildeniz kiyisindaki petrol altyapisi menzilde",
+        "Hormuz baypas kapasitesi zayifliyor: cifte arz riski",
+        "Savas riski primi yuzde 0,25'ten yuzde 1-3 bandina cikti",
+        "150 milyon dolarlik tankerde tek gecis 1,5-4,5 milyon dolar sigorta",
+        "Enerji yogun Turk sektorlerinde maliyet basinci suruyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Husi hareketi",
+          "Suudi Aramco",
+          "P&I Kulupleri"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Denizcilik",
+          "Sigorta",
+          "Cam",
+          "Cimento",
+          "Kimya"
+        ]
+      },
+      "region": "ASYA",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "kizildeniz",
+        "petrol",
+        "enerji",
+        "jeopolitik-risk",
+        "sigorta",
+        "lojistik",
+        "korfez"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 88,
+        "keyword": 82,
+        "recency": 98,
+        "corroboration": 82,
+        "reach": 82
+      }
+    },
+    {
+      "source_slug": "korea-herald",
+      "url": "https://www.koreaherald.com/article/10869986",
+      "title": "Guney Kore ihracati Eylul'un ilk 10 gununde yuzde 83 artti: cipler rekor kiriyor",
+      "body": "Guney Kore'nin Eylul 2026'nin ilk 10 gunundeki ihracati yillik bazda yaklasik yuzde 83 artarak 35 milyar dolara ulasti. Artisin motoru yari iletkenler: Cip ihracati ayni donemde yuzde 270 siciayarak 16,5 milyar dolara cikti ve donem rekorunu tazeledi. Yapay zeka altyapisina yonelik kuresel yatirim dalgasi, bellek cipi fiyatlarini yukari cekmeye devam ediyor.\n\nBu performans Agustos'taki tabloyu da teyit ediyor: Agustos ayinda Kore'nin toplam ihracati yillik yuzde 68,7 artmis, yari iletken ihracati yuzde 209 yukselisle rekor 46,7 milyar dolara ulasmisti. Cipler artik Kore'nin toplam ihracatinin neredeyse yarisini (yuzde 47,5) olusturuyor. Agustos ticaret fazlasi 34,8 milyar dolar ile tarihin ikinci en yuksek seviyesiydi.\n\nKore'nin 2026 ihracati, Eylul basi itibariyla gecen yilin tamamindaki 709,3 milyar dolari zaten asmis durumda. Mevcut hiz korunursa yillik 1 trilyon dolarlik ihracat esigi gorunur hale geliyor ve Kore, yillik ihracatta ilk kez Japonya'yi gecmeye hazirlaniyor.\n\nAncak analistler onemli bir uyari yapiyor: Bu rakamlar Kore ekonomisinin yapay zeka sektorune bagimliliginin ne kadar arttigini gosteriyor. Bellek cipi fiyatlarinda sert bir duzeltme yasanmasi halinde Kore ekonomisi ozellikle kirilgan hale gelecek.\n\nTurk sanayicisi acisindan bu tablonun uc anlami var. Birincisi, yapay zeka ve veri merkezi yatirim dalgasi kuresel elektronik ve elektrik ekipmani talebini yukari cekiyor; Turk elektrik-elektronik, kablo, transformator, sogutma sistemleri ve mekanik ekipman ureticileri icin veri merkezi tedarik zinciri buyuyen bir pazar.\n\nIkincisi, bellek cipi fiyatlarindaki artis, otomotiv, beyaz esya ve endustriyel otomasyon urunlerinde elektronik komponent maliyetini yukseltiyor. Turk beyaz esya ve otomotiv yan sanayisinin komponent tedarik sozlesmelerinde fiyat artisi ve tahsis (allocation) riskiyle karsilasmasi muhtemel.\n\nUcuncusu, Kore'nin ihracat rekorlari gelismekte olan ulke imalat rekabetinin ne kadar teknoloji yogunlastigini gosteriyor. Turkiye'nin orta-yuksek teknoloji segmentine gecis stratejisi, bu kuresel ayrisma karsisinda aciliyet kazaniyor.",
+      "published_at": "2026-09-11T11:00:00+03:00",
+      "language": "en",
+      "summary": "Guney Kore'nin Eylul 2026'nin ilk 10 gunundeki ihracati yillik yuzde 83 artisla 35 milyar dolara, cip ihracati yuzde 270 artisla 16,5 milyar dolara ulasti; Agustos'ta toplam ihracat yuzde 68,7 artmis, cipler ihracatin yuzde 47,5'ini olusturmustu. Kore 2026'da yillik 1 trilyon dolar ihracata ve ilk kez Japonya'yi gecmeye hazirlaniyor. Turk sanayicisi icin birinci firsat, yapay zeka ve veri merkezi dalgasinin buyuttugu elektrik-elektronik, kablo, transformator ve sogutma ekipmani tedarik zinciri. Risk tarafinda ise bellek cipi fiyatlarindaki artis, Turk beyaz esya ve otomotiv yan sanayisinde elektronik komponent maliyetini yukseltiyor ve tahsis riski dogruyor.",
+      "summary_en": "South Korea's exports in the first 10 days of September 2026 jumped about 83% y/y to $35bn, with semiconductor shipments up 270% to a record $16.5bn. Chips now make up roughly 47.5% of total exports and Korea is on track to top $1trn in annual exports and overtake Japan for the first time.",
+      "key_points": [
+        "Eylul ilk 10 gun ihracati 35 milyar dolar (+yuzde 83)",
+        "Cip ihracati 16,5 milyar dolar (+yuzde 270)",
+        "Agustos toplam ihracat +yuzde 68,7, cip ihracati rekor 46,7 milyar dolar",
+        "Cipler toplam ihracatin yuzde 47,5'i",
+        "2026 ihracati gecen yilin tamamini asti, 1 trilyon dolar hedefte",
+        "Yapay zeka bagimliligi kirilganlik yaratiyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Kore Ticaret Bakanligi",
+          "Samsung",
+          "SK Hynix"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Yari Iletken",
+          "Elektronik",
+          "Otomotiv",
+          "Beyaz Esya",
+          "Veri Merkezi"
+        ]
+      },
+      "region": "ASYA",
+      "category": "teknoloji",
+      "sentiment": "NOTR",
+      "tags": [
+        "kore",
+        "yari-iletken",
+        "ihracat",
+        "yapay-zeka",
+        "veri-merkezi",
+        "elektronik",
+        "tedarik-zinciri"
+      ],
+      "importance_factors": {
+        "authority": 78,
+        "impact": 72,
+        "keyword": 78,
+        "recency": 100,
+        "corroboration": 82,
+        "reach": 68
+      }
+    },
+    {
+      "source_slug": "seoul-economic-daily",
+      "url": "https://en.sedaily.com/finance/2026/09/09/korea-set-to-pass-japan-in-annual-exports",
+      "title": "Kore yillik ihracatta ilk kez Japonya'yi geciyor: Asya'da guc dengesi kayiyor",
+      "body": "Seoul Economic Daily'nin 9 Eylul 2026 tarihli analizine gore Guney Kore, yillik mal ihracatinda ilk kez Japonya'yi gecmeye hazirlaniyor. Kore'nin 2026 ihracati Eylul basi itibariyla gecen yilin tamamindaki 709,3 milyar dolari zaten asmis durumda ve mevcut tempo korunursa yillik 1 trilyon dolar esigi gorunur hale geliyor.\n\nBu, Asya imalat cografyasinda tarihi bir devir degisikligi. Japonya, on yillar boyunca Asya'nin en buyuk sanayi ihracatcisi konumunu korumustu. Kore'nin one gecmesinin tek nedeni yapay zeka ve bellek cipi cevrimi degil; ayni zamanda Japon ihracat payinin uzun sureli gerilemesi ve Kore'nin savunma sanayi, gemi insa, pil, biyoteknoloji ve otomotiv gibi alanlarda cesitlenmesi.\n\nAncak analiz onemli bir nuans iceriyor: Japonya, yari iletken uretim ekipmani gibi zincirin en yuksek katma degerli ve en yuksek giris bariyerli segmentlerinde hakimiyetini surduruyor. 2026'nin ilk yarisinda Japonya'nin bu kategorideki ihracati 15 milyar dolar iken, Kore'nin 5,2 milyar dolar, Tayvan'in ise 3,5 milyar dolar seviyesinde kaldi. Yani Kore hacimde one geciyor ama Japonya teknolojik derinlikte hala once.\n\nAyrica Kore'nin Cin ile ticaret fazlasi acik vermeye donusmus durumda; bu, Cin'in ara mal ve komponent tedarikinde kendi kendine yeterlilige ulasmasinin dogrudan gostergesi.\n\nTurk sanayicisi icin bu analizin cikardigi dersler stratejik. Birincisi, \"hacim liderligi\" ile \"teknolojik derinlik\" farkli seylerdir ve uzun vadede belirleyici olan ikincisidir. Turkiye'nin ihracat hacmi buyurken, Japonya'nin uretim ekipmani orneginde oldugu gibi yuksek giris bariyerli nis alanlarda konumlanmasi kritik onemde.\n\nIkincisi, Kore'nin Cin'e karsi ticaret dengesini kaybetmesi, Cin'in ara mal ithalatindan hizla cikmasinin bir uyari sinyali. Turkiye'nin Cin'e ara mal ve makine satan sektorleri icin ayni risk gecerli; Cin pazarina bagimli ihracat kalemlerinin cesitlendirilmesi gerekiyor.\n\nUcuncusu, Asya'da guc dengesinin kaymasi, Turk firmalarinin Asya ortaklik stratejisini yeniden degerlendirmesini gerektiriyor: Kore ve Tayvan ile teknoloji ortakligi, Japonya ile yuksek hassasiyetli ekipman tedariki, Cin ile ise rekabet-isbirligi dengesi ayri ayri kurgulanmali.",
+      "published_at": "2026-09-09T09:00:00+03:00",
+      "language": "en",
+      "summary": "Guney Kore, 2026'da yillik mal ihracatinda ilk kez Japonya'yi gecmeye hazirlaniyor; Eylul basinda 2026 ihracati gecen yilin tamamindaki 709,3 milyar dolari asti ve 1 trilyon dolar esigi gorunur hale geldi. Ancak Japonya, yari iletken uretim ekipmani gibi en yuksek giris bariyerli segmentlerde hakimiyetini koruyor (ilk yari: Japonya 15 milyar dolar, Kore 5,2 milyar, Tayvan 3,5 milyar). Kore'nin Cin ile ticaret fazlasinin acige donmesi, Cin'in ara mal tedarikinde kendi kendine yeterlilige ulastiginin uyari sinyali. Turk sanayicisi icin ders: hacim liderligi degil teknolojik derinlik belirleyici; Cin pazarina bagimli ara mal ihracati cesitlendirilmeli.",
+      "summary_en": "Seoul Economic Daily (9 September 2026) reports South Korea is set to surpass Japan in annual merchandise exports for the first time, with 2026 exports already above last year's full-year $709.3bn. Japan retains dominance in high-barrier segments such as semiconductor manufacturing equipment ($15bn vs Korea's $5.2bn in H1). Korea's China trade surplus has turned to deficit.",
+      "key_points": [
+        "Kore yillik ihracatta ilk kez Japonya'yi geciyor",
+        "2026 ihracati gecen yilin tamamini (709,3 milyar dolar) asti",
+        "Yillik 1 trilyon dolar esigi gorunur hale geldi",
+        "Japonya cip uretim ekipmaninda hakim: H1'de 15 milyar dolar",
+        "Kore'nin Cin ile ticaret fazlasi acige dondu",
+        "Cin ara mal tedarikinde kendi kendine yeterliliyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Kore Ticaret Bakanligi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Yari Iletken",
+          "Gemi Insa",
+          "Savunma",
+          "Pil",
+          "Otomotiv",
+          "Makine"
+        ]
+      },
+      "region": "ASYA",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "kore",
+        "japonya",
+        "ihracat",
+        "yari-iletken",
+        "makine",
+        "cin",
+        "rekabet"
+      ],
+      "importance_factors": {
+        "authority": 72,
+        "impact": 65,
+        "keyword": 70,
+        "recency": 98,
+        "corroboration": 65,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "rio-times",
+      "url": "https://www.riotimesonline.com/asia-intelligence-brief-thursday-september-10-2026/",
+      "title": "TSMC Agustos geliri rekor kirdi, ABD ortaklarindan 'yapay zekada taraf secin' baskisi",
+      "body": "Rio Times'in 10 Eylul 2026 tarihli Asya Istihbarat Brifingi, haftanin Asya sanayi ve teknoloji gundemini ozetliyor.\n\nTSMC rekor serisini surduruyor: Dunyanin en buyuk sozlesmeli cip ureticisi TSMC, Agustos ayi gelirinin 514,8 milyar Yeni Tayvan Dolari (yaklasik 16,4 milyar dolar) oldugunu acikladi. Bu, gecen yilin ayni ayina gore yuzde 53,3, Temmuz'a gore yuzde 10,1 artis anlamina geliyor ve ust uste dorduncu rekor ay. Sirket ucuncu ceyrek gelir beklentisini 44,6-45,8 milyar dolar araliginda verdi. TSMC'nin performansi, yapay zeka altyapi yatirim dalgasinin en guvenilir gostergesi olarak izleniyor.\n\nDeepSeek halka arza hazirlaniyor: Cinli yapay zeka girisimi DeepSeek, Sanghay STAR pazarinda halka arz icin CITIC Securities'i gorevlendirdi. Paralel bir fon turunda sirketin degeri yaklasik 500 milyar yuan (75 milyar dolar) olarak belirlendi.\n\nBolgesel cip talebi: Japon ureticilerin guveni guclu cip talebiyle yukselirken, Seul'de Samsung uzerinde hissedar aktivizmi yogunlasiyor.\n\nTicaret politikasi: AB, Pakistan'a GSP+ kapsamindaki gumruk vergisi muafiyetlerinin insan haklari kriterleri temelinde gozden gecirilebilecegi uyarisini yapti. Bu, AB'nin tercihli ticaret rejimlerini siyasi kosulluluga baglama egiliminin devam ettigini gosteriyor.\n\nJeopolitik konumlanma: Washington'in ortaklarina yapay zeka rekabetinde \"taraf secmeleri\" gerektigini bildirdigi, tedarik kararlarinin diplomatik tercih olarak cerceveleyerek Tayvan, Guney Kore ve Japonya'yi etkiledigi bildiriliyor.\n\nTurk sanayicisi icin cikarilacak sonuclar: Birincisi, yapay zeka altyapisi yatirimi kuresel olarak sonlanma isareti gostermiyor; veri merkezi insaati, sogutma sistemleri, guc dagitimi, kablo ve celik konstruksiyon gibi alanlarda Turk tedarikcileri icin Korfez ve Avrupa'da genisleyen bir pazar var. Ikincisi, AB'nin GSP+ gibi tercihli rejimleri siyasi kosullara baglama egilimi, Turkiye'nin Gumruk Birligi'nin guncellenmesi muzakerelerinde de benzer kosulluluk taleplerini gundeme getirebilir. Ucuncusu, teknoloji tedarik zincirinin jeopolitik bloklara ayrismasi, Turk firmalarinin cift kaynakli (dual-source) tedarik stratejisi kurmasini zorunlu kiliyor.",
+      "published_at": "2026-09-10T10:00:00+03:00",
+      "language": "en",
+      "summary": "TSMC Agustos 2026 gelirini 514,8 milyar TWD (yaklasik 16,4 milyar dolar) ile ust uste dorduncu kez rekor seviyeye tasidi (+yuzde 53,3 yillik); Q3 beklentisi 44,6-45,8 milyar dolar. Cinli DeepSeek Sanghay STAR halka arzi icin CITIC'i gorevlendirdi, degerlemesi 75 milyar dolar. AB Pakistan'a GSP+ muafiyetlerinin gozden gecirilebilecegi uyarisini yaparken, Washington ortaklarindan yapay zeka rekabetinde taraf secmelerini istiyor. Turk sanayicisi icin veri merkezi insaati, sogutma, guc dagitimi ve celik konstruksiyon alanlarinda Korfez ve Avrupa'da genisleyen bir pazar var; ancak teknoloji tedarik zincirinin jeopolitik bloklara ayrismasi cift kaynakli tedarik stratejisini zorunlu kiliyor.",
+      "summary_en": "Asia brief for 10 September 2026: TSMC's August revenue hit a record NT$514.8bn (~$16.4bn), up 53.3% y/y, its fourth straight record month; Q3 guidance $44.6-45.8bn. DeepSeek hired CITIC for a Shanghai STAR listing at a ~$75bn valuation. The EU warned Pakistan over GSP+ preferences, and Washington is pressing partners to pick sides in the AI race.",
+      "key_points": [
+        "TSMC Agustos geliri 514,8 milyar TWD, yillik +yuzde 53,3, dorduncu rekor ay",
+        "TSMC Q3 gelir beklentisi 44,6-45,8 milyar dolar",
+        "DeepSeek Sanghay STAR halka arzi icin CITIC'i gorevlendirdi (75 milyar dolar deger)",
+        "AB, Pakistan'in GSP+ muafiyetlerini gozden gecirme uyarisi yapti",
+        "ABD ortaklarindan yapay zeka rekabetinde taraf secmelerini istiyor",
+        "Veri merkezi tedarik zinciri Turk ureticiler icin genisleyen pazar"
+      ],
+      "entities": {
+        "kurum": [
+          "TSMC",
+          "DeepSeek",
+          "CITIC Securities",
+          "Samsung",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Yari Iletken",
+          "Yapay Zeka",
+          "Veri Merkezi",
+          "Elektrik Ekipmani",
+          "Celik Konstruksiyon"
+        ]
+      },
+      "region": "ASYA",
+      "category": "teknoloji",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tayvan",
+        "yari-iletken",
+        "yapay-zeka",
+        "veri-merkezi",
+        "cin",
+        "teknoloji",
+        "tedarik-zinciri"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 62,
+        "keyword": 72,
+        "recency": 98,
+        "corroboration": 70,
+        "reach": 58
+      }
+    },
+    {
+      "source_slug": "asia-times",
+      "url": "https://asiatimes.com/2026/09/china-overcapacity-or-western-protectionism-what-the-numbers-say/",
+      "title": "Cin kapasite fazlasi mi, Bati korumaciligi mi? Rakamlarin soyledigi",
+      "body": "Asia Times'in Eylul 2026 tarihli analizi, kuresel sanayi politikasinin en tartismali sorusunu ele aliyor: Bati'nin Cin'e yonelik artan ticaret onlemleri gercek bir kapasite fazlasina mi karsilik veriyor, yoksa korumaciligin kilifi mi?\n\nRakamlar tablonun ciddiyetini gosteriyor. Cin 2026'nin ilk yarisinda 5,096 milyon arac ihrac etti - yillik yuzde 65,3 artis. Yeni enerji araci (NEV) ihracati 2,355 milyon adede ulasarak iki katindan fazla buyudu. Buna karsilik Cin ic pazarinda satislar yilin ilk yedi ayinda yuzde 12 geriledi. Uluslararasi Enerji Ajansi, Cin pazarinin bu yil on yilin ilk kez yatay kapanmasini bekliyor.\n\nIc talep daralirken ihracatin ikiye katlanmasi, kapasite fazlasi tezini destekleyen en guclu veri. Ayni dinamik fiyatlara da yansiyor: Cin pil fiyatlari Kuzey Amerika muadillerinin yuzde 30, Avrupa muadillerinin yuzde 35 altinda. Ic pazardaki marj eritici fiyat savasi, ihracat fiyatlarina da tasiniyor.\n\nAvrupa tarafinda tepki sertlesiyor. Elektrikli araclarla baslayan tartisma, pil, celik ve elektronigi kapsayan genel bir kapasite fazlasi konfrontasyonuna donusmus durumda. 2024'te getirilen EV tarifeleri (BYD yuzde 17, Geely yuzde 18,8, SAIC yuzde 35 uzeri, Cin'de uretilen Tesla yuzde 9) Cin'in pazar penetrasyonunu anlamli sekilde yavaslatamadi. AB, Cin'in blokla ticaret fazlasini sinirlamaya yonelik bir anlasma icin Ekim 2026 son tarihine yaklasirken \"daha sert onlemler\" uyarisinda bulundu.\n\nTurk sanayicisi icin bu analiz uc stratejik baslik iceriyor. Birincisi, AB'nin Ekim 2026'da alacagi kararlar Turkiye'yi dolayli olarak dogrudan etkileyecek: Gumruk Birligi uyesi olarak Turkiye, AB'nin ucuncu ulkelere karsi uyguladigi ortak gumruk tarifesini takip etmek durumunda ve AB'nin sertlesen mensei kurallari Turk ureticisinin Cin menseli girdi kullanimini sinirlayabilir.\n\nIkincisi, Cin'in EV ve pil fiyat avantaji, Turkiye'nin elektrikli arac ve pil ekosistemi yatirimlarinin rekabet edebilirligini test ediyor. Turkiye'nin 2026'da Cin menseli araclara uyguladigi ek vergiler bu nedenle stratejik bir savunma hatti.\n\nUcuncusu, kapasite fazlasi tartismasi celik, cimento, cam, kimya ve makine gibi Turkiye'nin guclu oldugu tum sektorlere yayiliyor. Turk sanayicisinin, AB'nin kapasite fazlasi mevzuatinda Cin'e karsi degil Turkiye'nin yaninda konumlanmasi icin veri temelli lobi calismasi yapmasi gerekiyor.",
+      "published_at": "2026-09-07T10:00:00+03:00",
+      "language": "en",
+      "summary": "Asia Times analizi, Cin'in 2026 ilk yarisinda 5,1 milyon arac ihrac ettigini (+yuzde 65,3), NEV ihracatinin ikiye katlandigini, buna karsilik ic satislarin yuzde 12 geriledigini gosteriyor; Cin pil fiyatlari Avrupa muadillerinin yuzde 35 altinda. Ic talep daralirken ihracatin patlamasi kapasite fazlasi tezini guclendiriyor ve AB, Ekim 2026 son tarihine dogru 'daha sert onlemler' uyarisi yapiyor. Turk sanayicisi icin kritik nokta, Gumruk Birligi uyesi olarak AB'nin sertlesen mensei kurallarindan ve ortak tarifesinden dolayli etkilenmesi. Kapasite fazlasi tartismasi celik, cimento, cam, kimya ve makineye yayilirken, Turkiye'nin veri temelli lobi calismasi yapmasi gerekiyor.",
+      "summary_en": "Asia Times examines whether Western trade measures respond to real Chinese overcapacity: China exported 5.096m vehicles in H1 2026 (+65.3%) with NEV exports more than doubling, while domestic sales fell 12%. Chinese battery prices run 30-35% below North American and European equivalents. The EU warns of harsher measures ahead of an October 2026 deadline.",
+      "key_points": [
+        "Cin H1 2026'da 5,096 milyon arac ihrac etti (+yuzde 65,3)",
+        "NEV ihracati 2,355 milyon adede ciktive ikiye katlandi",
+        "Ic satislar ilk yedi ayda yuzde 12 geriledi",
+        "Cin pil fiyatlari Avrupa'nin yuzde 35, Kuzey Amerika'nin yuzde 30 altinda",
+        "2024 EV tarifeleri penetrasyonu yavaslatamadi",
+        "AB Ekim 2026 son tarihi oncesi sert onlem uyarisi yapti"
+      ],
+      "entities": {
+        "kurum": [
+          "IEA",
+          "Avrupa Komisyonu",
+          "BYD",
+          "Geely",
+          "SAIC"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Pil",
+          "Celik",
+          "Elektronik",
+          "Kimya"
+        ]
+      },
+      "region": "ASYA",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin",
+        "kapasite-fazlasi",
+        "elektrikli-arac",
+        "pil",
+        "fiyat-rekabeti",
+        "gumruk-birligi",
+        "mensei-kurallari"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 85,
+        "keyword": 88,
+        "recency": 92,
+        "corroboration": 72,
+        "reach": 62
+      }
+    },
+    {
+      "source_slug": "vision-times",
+      "url": "https://www.visiontimes.com/2026/09/04/taiwan-seeks-tariff-protections-as-us-weighs-new-semiconductor-duties.html",
+      "title": "Tayvan cip tarifelerinde muafiyet pesinde: ABD 'Amerika'da uret ya da ode' modeline geciyor",
+      "body": "ABD Ticaret Bakani Howard Lutnick, 2 Eylul 2026'da Trump yonetiminin yeni bir yari iletken tarife cercevesi gelistirdigini ve bu cerceve altinda ABD'de cip ureten sirketlerin ayricalikli muamele gorecegini acikladi. Tayvan, daha once muzakere edilen anlasmalar kapsaminda kendi cip sirketlerinin tercihli muamele almasini guvence altina almaya calisiyor.\n\nLutnick'in tarif ettigi model \"yatirim karsiligi muafiyet\" (investment-for-exemption) olarak adlandiriliyor: Sirketlere, ABD'de taahhut ettikleri uretim kapasitesi yatirimiyla orantili olarak gumruksuz cip ithalat kotasi taniniyor. ABD'de fabrika kuran ya da fab kapasitesini finanse eden sirketler daha buyuk vergisiz ithalat kotasi aliyor; ABD'de uretim yatirimi yapmayan sirketlere ise hic gumruksuz kota taninmiyor. Lutnick'in ozetledigi ilke net: \"Amerika'da uret ya da bedelini ode.\"\n\nBu cerceve, Section 232 yetkisinin sektorel kullaniminin en gelismis ornegi. Yonetim, yari iletkenler, ilac ve otomotivin sektorel tarifeler olarak ele alinacagini ve \"bunlarin muzakereye acik olmadigini\" belirtiyor. Tayvan ile yil basinda yapilan ticaret anlasmasi kapsaminda Tayvan mallarina uygulanan karsilikli (reciprocal) tarife oraninin yuzde 15'i gecmemesi ongorulmustu.\n\nBu model, kuresel sanayi politikasi acisindan bir esik degisimi anlamina geliyor: Pazar erisimi artik yalnizca mensei veya fiyata degil, hedef ulkede yapilan yatirim taahhudune baglaniyor. Guney Kore de ABD ile cip yatirimi goruşmelerine katilmis durumda.\n\nTurk sanayicisi icin uc onemli ders var. Birincisi, bu model diger sektorlere yayilabilir; celik, otomotiv ve makinede ABD pazarina erisimin ABD'de yatirim taahhuduyle iliskilendirilmesi ihtimali gercek. ABD pazarina ciddi bagimligi olan Turk firmalarinin ABD'de montaj, nihai isleme veya ortak girisim senaryolarini simdiden degerlendirmesi gerekiyor.\n\nIkincisi, Section 232'nin aluminyum tarafinda benzer bir tesvik programi zaten devreye alindi: 20 Temmuz 2026'dan itibaren ABD'de birincil aluminyum uretim tesisine yatirim yapan sirketler ithal birincil aluminyumda indirimli tarife icin basvurabiliyor.\n\nUcuncusu, cip tarifeleri elektronik komponent maliyetlerini kuresel olarak yukseltecek. Turk beyaz esya, otomotiv yan sanayi ve elektronik ureticilerinin komponent maliyet senaryolarini bu cerceveye gore guncellemesi sart.",
+      "published_at": "2026-09-04T10:00:00+03:00",
+      "language": "en",
+      "summary": "ABD Ticaret Bakani Lutnick, yari iletkenlerde 'yatirim karsiligi muafiyet' modeline dayali yeni bir Section 232 tarife cercevesi hazirlandigini acikladi: ABD'de fab yatirimi yapan sirketler yatirimlariyla orantili gumruksuz ithalat kotasi alacak, yatirim yapmayanlara hic kota verilmeyecek. Tayvan ve Guney Kore kendi sirketleri icin tercihli muamele pazarligi yuruttuyor. Turk sanayicisi icin en kritik uyari, bu modelin celik, otomotiv ve makineye yayilma ihtimali; ABD pazarina bagimli firmalarin ABD'de montaj, nihai isleme veya ortak girisim senaryolarini degerlendirmesi gerekiyor. Ayrica cip tarifeleri elektronik komponent maliyetlerini kuresel olarak yukseltecek: beyaz esya ve otomotiv yan sanayi maliyet senaryolarini guncellemeli.",
+      "summary_en": "Commerce Secretary Lutnick outlined a Section 232 semiconductor tariff framework based on investment-for-exemption: duty-free chip import allowances proportional to committed US fab investment, with none for non-investors. Taiwan and South Korea are negotiating preferential treatment. Semiconductors, pharmaceuticals and autos are treated as non-negotiable sectoral tariffs.",
+      "key_points": [
+        "Lutnick 2 Eylul'de yari iletken tarife cercevesini duyurdu",
+        "Model: ABD'deki yatirimla orantili gumruksuz ithalat kotasi",
+        "Yatirim yapmayan sirketlere gumruksuz kota yok",
+        "Tayvan mallarinda karsilikli tarife ust siniri yuzde 15",
+        "Yari iletken, ilac ve otomotiv 'muzakereye kapali' sektorel tarifeler",
+        "Aluminyumda benzer yatirim-tesvik programi 20 Temmuz'da baslamisti"
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanligi",
+          "TSMC",
+          "Samsung"
+        ],
+        "kisi": [
+          "Howard Lutnick"
+        ],
+        "sektor": [
+          "Yari Iletken",
+          "Elektronik",
+          "Otomotiv",
+          "Beyaz Esya",
+          "Aluminyum"
+        ]
+      },
+      "region": "ASYA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "tayvan",
+        "yari-iletken",
+        "section-232",
+        "tarife",
+        "abd",
+        "yatirim",
+        "tesvik"
+      ],
+      "importance_factors": {
+        "authority": 55,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 86,
+        "corroboration": 80,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "gcc-business-news",
+      "url": "https://www.gccbusinessnews.com/jeddah-saudi-industry-forum-2026/",
+      "title": "Suudi Sanayi Forumu 14-16 Eylul'de Cidde'de: otomotiv, gida ve ilacta yerlilesme hedefi",
+      "body": "Suudi Arabistan'in ikinci Sanayi Forumu (Saudi Industry Forum 2026), 14-16 Eylul 2026 tarihlerinde Cidde Superdome'da duzenlenecek. Etkinlik, Sanayi ve Maden Kaynaklari Bakanligi ile stratejik ortaklik icinde yurutuluyor ve kamu kurumlari, ulusal sirketler, universiteler, akademik kurumlar ve arastirma merkezlerinin yani sira yurt icinden ve disindan sektor liderlerini bir araya getiriyor.\n\nUc gunluk programin ana basliklari: sanayi gelismeleri ve firsatlar, ulusal sanayilerin gelecegi, tedarik zincirleri ve lojistik hizmetleri, ve stratejik sektorlerde entegre bir sanayi tabaninin gelistirilmesi. Ozellikle otomotiv, gida ve ilac sektorlerine odaklaniliyor.\n\nForum, Suudi Arabistan'in Vision 2030 cercevesinde yurutulen sanayi yerlilestirme programinin bir parcasi. Kralik, sanayi yatirimlarinda 20,27 milyar dolarlik bir esige ulastigini ve 2,5 trilyon dolarlik maden potansiyeli bulundugunu acikladi. Suudi Arabistan ve BAE'nin, Iran catismasina bagli artan nakliye, sigorta ve insaat maliyetlerine ragmen 2026'nin ikinci yarisinda Korfez proje ihaleleri dalgasina onculuk etmesi bekleniyor. BAE, 2026'nin ilk yarisinda Korfez'de en yuksek mutlak ihale degerini kaydetti.\n\nTurk sanayicisi ve mutaahhitleri icin Korfez, 2026'da en stratejik pazar konumunda. Uc alan one cikiyor: Birincisi, otomotiv, gida ve ilac yerlilestirme programlari, Turk makine ve uretim hatti tedarikcileri ile teknoloji transferi ortakliklari icin dogrudan bir kapi. Suudi Arabistan sifirdan sanayi tabani kuruyor ve anahtar teslim tesis, uretim hatti, kalip ve otomasyon coumu ihtiyaci yuksek.\n\nIkincisi, Korfez proje ihalelerindeki hacim, Turk mutaahhitlik sektoru ile yapi malzemeleri (celik konstruksiyon, cimento, seramik, cam, kablo, asansor) ureticileri icin talep anlamina geliyor. Turkiye'nin cografi yakinligi, Kizildeniz koridorundaki lojistik riskler artarken karayolu ve Akdeniz rotalari uzerinden avantaja donusebiliyor.\n\nUcuncusu, Iran catismasinin yol actigi maliyet artislarina ragmen Korfez yatirimlarinin devam etmesi, bolgenin petrol geliriyle desteklenen karsi-donguselligini gosteriyor: Kuresel talep zayiflarken Korfez talebi guclu kaliyor. Turk ihracatcisinin Avrupa ve ABD'de daralan pazar paylarini Korfez ile dengelemesi 2026-2027 icin rasyonel bir strateji.",
+      "published_at": "2026-09-09T09:00:00+03:00",
+      "language": "en",
+      "summary": "Suudi Sanayi Forumu 2026, 14-16 Eylul'de Cidde'de Sanayi ve Maden Kaynaklari Bakanligi ortakliginda duzenleniyor; gundem otomotiv, gida ve ilacta yerlilesme ile tedarik zincirleri ve entegre sanayi tabani. Suudi Arabistan sanayi yatirimlarinda 20,27 milyar dolarlik esige ulasti ve 2,5 trilyon dolarlik maden potansiyeli aciklandi; Suudi Arabistan ile BAE, Iran catismasi kaynakli maliyet artislarina ragmen 2026 ikinci yarisinda Korfez ihale dalgasina onculuk edecek. Turk makine, uretim hatti, otomasyon tedarikcileri ile mutaahhitlik ve yapi malzemeleri sektorleri icin dogrudan firsat. Korfez'in karsi-dongusel talebi, Avrupa ve ABD'de daralan paylari dengelemek icin rasyonel bir strateji.",
+      "summary_en": "The second Saudi Industry Forum runs 14-16 September 2026 at Jeddah Superdome in partnership with the Ministry of Industry and Mineral Resources, focused on localisation in automotive, food and pharmaceuticals, supply chains and building an integrated industrial base. Saudi Arabia reports $20.27bn in industrial investment and $2.5trn in mineral potential; Saudi and UAE are expected to lead Gulf project awards in H2 2026.",
+      "key_points": [
+        "Saudi Industry Forum 2026: 14-16 Eylul, Cidde Superdome",
+        "Odak sektorler: otomotiv, gida, ilac",
+        "Suudi sanayi yatirimi 20,27 milyar dolar esiginde",
+        "2,5 trilyon dolarlik maden potansiyeli aciklandi",
+        "Suudi Arabistan ve BAE H2 2026 Korfez ihale dalgasina onculuk edecek",
+        "Turk makine, otomasyon, mutaahhitlik ve yapi malzemeleri icin dogrudan firsat"
+      ],
+      "entities": {
+        "kurum": [
+          "Suudi Sanayi ve Maden Kaynaklari Bakanligi",
+          "ADCB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makine",
+          "Otomasyon",
+          "Otomotiv",
+          "Gida",
+          "Ilac",
+          "Mutaahhitlik",
+          "Yapi Malzemeleri"
+        ]
+      },
+      "region": "ASYA",
+      "category": "sanayi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "korfez",
+        "suudi-arabistan",
+        "bae",
+        "yatirim",
+        "makine",
+        "mutaahhitlik",
+        "ihracat-pazari"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 72,
+        "keyword": 68,
+        "recency": 96,
+        "corroboration": 50,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "china-briefing",
+      "url": "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+      "title": "Cin nadir toprak ihracat kontrollerinde denetim sikilasiyor: askiya alma Kasim 2026'da sona eriyor",
+      "body": "Cin'in nadir toprak elementleri ve stratejik mineraller uzerindeki ihracat kontrol mimarisi, kuresel imalat sanayisi icin 2026'nin en onemli tedarik zinciri riski olmayi surduruyor.\n\nMevcut durum su: Cin, 9 Ekim 2025'te aciklanan ve 8 Kasim 2025'te yururluge girmesi planlanan nadir toprak ihracat kontrollerinin uygulanmasini bir yil sureyle, 10 Kasim 2026'ya kadar resmen askiya aldi. Ancak askiya alma yalnizca Ekim 2025 paketini kapsiyor; Nisan 2025'te yururluge giren ve yedi nadir toprak elementi ile bunlarin turev urunlerini etkileyen onceki kontrol turu yururlukte kalmaya devam ediyor.\n\nAskiya almaya ragmen denetim tarafinda sikilasma belirgin. Cin'de yabanci uyruklu kisilerin gozaltina alindigi yonundeki raporlar, Cinli ihracatcilara yonelik ic yaptirim islemleri ve MOFCOM'un 2026 tarihli 26 No'lu Duyurusu ile stratejik mineral ihracat kontrolu ihlalleri icin kamuya acik bir ihbar mekanizmasi kurulmasi, giderek aktif bir uygulama duruşuna isaret ediyor.\n\nHedefli kontroller de suruyor: Ocak 2026'dan itibaren Cin, belirli Japon kuruluslari ve askeri son kullanim iceren cift kullanimli ihracatlar uzerindeki kontrolleri sikilastirdi ve bunun nadir toprak ile ilgili tedarik zincirlerinde fiili etkileri oldugu bildirildi. Japonya'ya yonelik nadir toprak ihracatinda daha siki inceleme onlemleri uygulandigi belirtiliyor.\n\nTurk sanayicisi icin bu tablo dogrudan operasyonel risk tasiyor. Nadir toprak elementleri; kalici miknatislar (elektrikli motor, ruzgar turbini jeneratoru, beyaz esya kompresoru), katalizorler, ozel alasimlar, lazer ve optik sistemler ile savunma elektroniginde vazgecilmez girdiler. Turkiye'nin elektrikli motor, beyaz esya, otomotiv yan sanayi, savunma ve yenilenebilir enerji ekipmani ureticileri bu zincire dogrudan bagli.\n\nEn kritik takvim noktasi 10 Kasim 2026: Askiya almanin sona ermesi halinde Ekim 2025 paketi - ki ekstraterritoryal yetki ve yuzde 50 kurali gibi cok genis kapsamli hukumler iceriyordu - devreye girebilir. Bu, Cin menseli nadir toprak iceren urunlerin ucuncu ulkelerde islenmesi durumunda bile lisans gerektirmesi anlamina gelebilir.\n\nOnerilen aksiyonlar: Kritik miknatis ve alasim girdilerinde stok seviyelerinin gozden gecirilmesi, Cin disi (Avustralya, ABD, Brezilya, Vietnam) tedarikci havuzunun arastirilmasi, urun tasariminda nadir toprak yogunlugunu azaltacak alternatiflerin degerlendirilmesi ve mensei/lisans dokumantasyonunun simdiden hazirlanmasi.",
+      "published_at": "2026-09-08T10:00:00+03:00",
+      "language": "en",
+      "summary": "Cin, Ekim 2025'te aciklanan nadir toprak ihracat kontrollerini 10 Kasim 2026'ya kadar askiya almis durumda; ancak Nisan 2025'te yururluge giren ve yedi elementi kapsayan onceki tur yururlukte ve denetim belirgin sekilde sikilasiyor (MOFCOM 26 No'lu Duyuru ile ihbar mekanizmasi, ic yaptirim islemleri, Japonya'ya yonelik daha siki inceleme). Turk elektrikli motor, beyaz esya, otomotiv yan sanayi, savunma ve yenilenebilir enerji ekipmani ureticileri bu zincire dogrudan bagli. Kritik takvim 10 Kasim 2026: askiya alma sona ererse ekstraterritoryal yetki ve yuzde 50 kurali iceren genis paket devreye girebilir. Stok gozden gecirmesi, Cin disi tedarikci havuzu ve mensei dokumantasyonu simdiden hazirlanmali.",
+      "summary_en": "China has suspended the October 2025 rare earth export control package until 10 November 2026, but the April 2025 controls on seven REEs and derivatives remain in force, and enforcement is tightening (MOFCOM Announcement No. 26 of 2026 created a public reporting mechanism; targeted controls affect Japanese end-users). The November 2026 expiry is a key risk date for manufacturers dependent on permanent magnets and specialty alloys.",
+      "key_points": [
+        "Ekim 2025 kontrol paketi 10 Kasim 2026'ya kadar askiya alindi",
+        "Nisan 2025'teki yedi element kontrolu yururlukte kaliyor",
+        "MOFCOM 26 No'lu Duyuru ile ihbar mekanizmasi kuruldu",
+        "Japonya'ya yonelik ihracatta daha siki inceleme uygulaniyor",
+        "10 Kasim 2026 kritik takvim noktasi",
+        "Kalici miknatis, ozel alasim ve katalizorde tedarik riski"
+      ],
+      "entities": {
+        "kurum": [
+          "MOFCOM",
+          "Cin Gumruk Idaresi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Elektrikli Motor",
+          "Beyaz Esya",
+          "Otomotiv",
+          "Savunma",
+          "Yenilenebilir Enerji",
+          "Kimya"
+        ]
+      },
+      "region": "ASYA",
+      "category": "tedarik-zinciri",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin",
+        "nadir-toprak",
+        "ihracat-kontrolu",
+        "tedarik-zinciri",
+        "kritik-hammadde",
+        "miknatis"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 88,
+        "keyword": 88,
+        "recency": 88,
+        "corroboration": 75,
+        "reach": 62
+      }
+    }
+  ]
+}

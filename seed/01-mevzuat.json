@@ -1,0 +1,1087 @@
+{
+  "collector": "mevzuat",
+  "collected_at": "2026-09-12T18:30:00+03:00",
+  "sources": [
+    {
+      "slug": "resmi-gazete",
+      "name": "T.C. Resmî Gazete",
+      "homepage_url": "https://www.resmigazete.gov.tr",
+      "source_type": "mevzuat",
+      "authority_weight": 100,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "mevzuat"
+    },
+    {
+      "slug": "alomaliye",
+      "name": "Alomaliye — Mevzuat ve Uygulama Portalı",
+      "homepage_url": "https://www.alomaliye.com",
+      "source_type": "mevzuat",
+      "authority_weight": 70,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "mevzuat"
+    },
+    {
+      "slug": "turkiye-gazetesi",
+      "name": "Türkiye Gazetesi Ekonomi",
+      "homepage_url": "https://www.turkiyegazetesi.com.tr",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260906M1.htm",
+      "title": "Orta Vadeli Program (2027-2029) Onaylandı: Büyüme %4,2, Enflasyon %21 Hedefi",
+      "body": "6 Eylül 2026 tarihli ve 33362 mükerrer sayılı Resmî Gazete'de yayımlanan 11752 sayılı Cumhurbaşkanı Kararı ile 2027-2029 dönemini kapsayan Orta Vadeli Program (OVP) onaylanarak yürürlüğe girdi. Program, önümüzdeki üç yıl boyunca maliye politikası, kamu yatırım programı, bütçe hazırlıkları, teşvik sistemi ve kamu alımları dahil tüm ekonomi politikası araçlarının çerçevesini belirleyen temel referans belgesidir; 12. Kalkınma Planı ile uyumlu olarak hazırlanmıştır.\n\nProgramda açıklanan temel makro hedefler şöyle: Büyüme oranının 2027'de yüzde 4,2, 2028'de yüzde 4,6 ve 2029'da yüzde 5,0 olması öngörülüyor. 2026 yılı sonunda toplam millî gelirin 1,8 trilyon doları, kişi başına düşen millî gelirin ise 20 bin doları aşması bekleniyor. Enflasyon tarafında 2026 yıl sonu beklentisi yüzde 28,4 olarak güncellenirken, tüketici enflasyonunun 2027'de yüzde 21, 2028'de yüzde 13,5 ve 2029'da yüzde 9 seviyesine gerilemesi hedefleniyor. Böylece program dönemi sonunda enflasyonun tek haneye indirilmesi amaçlanıyor.\n\nİşgücü piyasasına ilişkin olarak işsizlik oranının 2026'da yüzde 8,1, 2027'de yüzde 8, 2028'de yüzde 7,8 ve 2029'da yüzde 7,6 olması bekleniyor; program döneminde ekonomiye toplam 2,1 milyon ilave istihdam kazandırılması planlanıyor. Programın temel öncelikleri arasında makroekonomik istikrarın güçlendirilmesi, enflasyonun kalıcı olarak düşürülmesi, sürdürülebilir büyümenin sağlanması ve istihdamın artırılması yer alıyor.\n\nOVP'nin yayımlanmasının hemen ardından 12 Eylül 2026'da 2027-2029 Dönemi Kamu Yatırım Programı Hazırlıkları Genelgesi ile Bütçe Çağrısı ve Bütçe Hazırlama Rehberi de Resmî Gazete'de yayımlandı. Bu üç belge birlikte, 2027 bütçesinin ve kamu yatırım portföyünün hangi varsayımlar üzerine kurulacağını gösteriyor. Sanayiciler açısından OVP'nin enflasyon patikası, asgari ücret pazarlıkları, ücret ve fiyat sözleşmelerinin endekslenmesi, uzun vadeli yatırım fizibiliteleri, kur ve faiz beklentileri ile teşvik bütçelerinin büyüklüğü konusunda doğrudan bağlayıcı bir çerçeve oluşturması bekleniyor.",
+      "published_at": "2026-09-06T09:00:00+03:00",
+      "language": "tr",
+      "summary": "OVP 2027-2029, sanayicinin önümüzdeki üç yıllık yatırım fizibilitelerini, fiyatlama ve ücret varsayımlarını kuracağı resmî çerçeveyi belirliyor. Enflasyonun 2027'de %21, 2029'da %9'a inmesi ve yıllık ortalama %4,6 büyüme varsayımı, hem uzun vadeli sözleşmelerde endeksleme hem de asgari ücret ve toplu sözleşme müzakerelerinde referans olacak. Programın öngördüğü mali disiplin, teşvik ve destek bütçelerinin sınırlı kalacağına işaret ediyor.",
+      "key_points": [
+        "Büyüme hedefi: 2027 %4,2 — 2028 %4,6 — 2029 %5,0",
+        "Enflasyon patikası: 2026 %28,4 — 2027 %21 — 2028 %13,5 — 2029 %9",
+        "İşsizlik oranının 2029'da %7,6'ya gerilemesi, dönem boyunca 2,1 milyon ilave istihdam",
+        "2026 sonunda millî gelirin 1,8 trilyon doları, kişi başı gelirin 20 bin doları aşması bekleniyor",
+        "11752 sayılı Cumhurbaşkanı Kararı ile onaylandı; 2027 bütçesi ve kamu yatırım programı bu çerçeveye göre hazırlanacak"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Strateji ve Bütçe Başkanlığı",
+          "Hazine ve Maliye Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Genel Ekonomi",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "orta-vadeli-program",
+        "makroekonomi",
+        "enflasyon",
+        "buyume",
+        "butce",
+        "istihdam"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 88,
+        "keyword": 80,
+        "recency": 49,
+        "corroboration": 45,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-1.pdf",
+      "title": "Reeskont Kredilerinde Vergi, Resim ve Harç İstisnasının Kapsamı Genişletildi (Karar Sayısı: 11723)",
+      "body": "5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan 11723 sayılı Cumhurbaşkanı Kararı ile \"İhracat, Transit Ticaret, İhracat Sayılan Satış ve Teslimler ile Döviz Kazandırıcı Hizmet ve Faaliyetlerde Vergi, Resim ve Harç İstisnası Hakkında Karar\"da değişiklik yapıldı.\n\nDeğişiklikle, istisna kapsamındaki kredilere ilişkin ibare \"Türkiye Cumhuriyet Merkez Bankasınca Türk Eximbank'a açılan kısa vadeli senet reeskont kredileri\" ifadesinden \"Türkiye Cumhuriyet Merkez Bankasınca Türk Eximbank'a ve diğer bankalara açılan senet reeskont kredileri\" ifadesine dönüştürüldü. Böylece iki önemli sınırlama kaldırılmış oldu: birincisi, istisnanın yalnızca Türk Eximbank kanalıyla kullandırılan kredilerle sınırlı olması; ikincisi, yalnızca kısa vadeli kredileri kapsaması.\n\nYeni düzenleme ile TCMB reeskont penceresinden ticari bankalar aracılığıyla kullandırılan senet reeskont kredileri de vergi, resim ve harç istisnasından yararlanabilecek; ayrıca orta ve uzun vadeli reeskont kredileri de istisna kapsamına girecek. Kararla eş zamanlı olarak Ticaret Bakanlığı tarafından İhracat: 2026/3 sayılı Tebliğ yayımlanarak uygulama tebliği (İhracat: 2017/4) de aynı doğrultuda güncellendi.\n\nKarar yayımı tarihinde yürürlüğe girdi ve 5 Eylül 2026 tarihinden itibaren kullandırılan veya yenilenen krediler bakımından uygulanacak. Düzenlemenin pratik sonucu, ihracatçı ve döviz kazandırıcı faaliyette bulunan firmaların reeskont kredisi kullanımında katlandığı BSMV (banka ve sigorta muameleleri vergisi), damga vergisi ve harç yüklerinin ortadan kalkması, dolayısıyla efektif finansman maliyetinin düşmesidir. Özellikle ticari bankalarla çalışan ve Eximbank limiti sınırlı olan KOBİ ölçekli ihracatçılar ile uzun vadeli yatırım ve ihracat finansmanına ihtiyaç duyan imalatçı-ihracatçılar açısından kredi kanalının genişlemesi anlamına geliyor.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "İhracatçının reeskont kredisi maliyetini doğrudan düşüren bir düzenleme. Daha önce sadece Eximbank üzerinden kullanılan kısa vadeli reeskont kredilerinde geçerli olan BSMV/damga vergisi/harç istisnası, artık tüm bankalar üzerinden kullandırılan ve orta-uzun vadeli reeskont kredilerini de kapsıyor. Eximbank limiti yetersiz kalan KOBİ ihracatçılar için finansman kanalı fiilen genişliyor.",
+      "key_points": [
+        "İstisna artık yalnızca Türk Eximbank'la sınırlı değil; TCMB'nin diğer bankalara açtığı reeskont kredileri de kapsamda",
+        "\"Kısa vadeli\" sınırlaması kaldırıldı; orta ve uzun vadeli senet reeskont kredileri de istisnadan yararlanacak",
+        "BSMV, damga vergisi ve harç yükünün kalkması ihracat finansmanı maliyetini düşürüyor",
+        "5 Eylül 2026 itibarıyla kullandırılan/yenilenen krediler için geçerli",
+        "Uygulama tebliği İhracat: 2017/4 de aynı gün İhracat: 2026/3 ile güncellendi"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "TCMB",
+          "Türk Eximbank",
+          "Ticaret Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Ihracat",
+          "Bankacilik",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "vergi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ihracat",
+        "reeskont-kredisi",
+        "vergi-istisnasi",
+        "bsmv",
+        "finansman-maliyeti",
+        "kobi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 92,
+        "keyword": 88,
+        "recency": 40,
+        "corroboration": 40,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-27.htm",
+      "title": "İhracat: 2026/3 Sayılı Tebliğ — Döviz Kazandırıcı Faaliyetlerde İstisna Uygulaması Bankalara Açıldı",
+      "body": "Ticaret Bakanlığı, 5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de \"İhracat, Transit Ticaret, İhracat Sayılan Satış ve Teslimler ile Döviz Kazandırıcı Hizmet ve Faaliyetlerde Vergi, Resim ve Harç İstisnası Hakkında Tebliğ (İhracat: 2017/4)'de Değişiklik Yapılmasına Dair Tebliğ\"i (İhracat: 2026/3) yayımladı.\n\nTebliğin 1 inci maddesi ile 18/5/2017 tarihli ve 30070 sayılı Resmî Gazete'de yayımlanan İhracat: 2017/4 sayılı Tebliğin 4 üncü maddesinin birinci fıkrasının (a) bendinde yer alan \"Türkiye Cumhuriyet Merkez Bankasınca Türk Eximbank'a açılan kısa vadeli senet reeskont kredileri\" ibaresi, \"Türkiye Cumhuriyet Merkez Bankasınca Türk Eximbank'a ve diğer bankalara açılan senet reeskont kredileri\" şeklinde değiştirildi. Tebliğ yayımı tarihinde yürürlüğe girdi ve hükümlerini Ticaret Bakanı yürütüyor.\n\nBu tebliğ, aynı gün yayımlanan 11723 sayılı Cumhurbaşkanı Kararının uygulama ayağını oluşturuyor. Karar istisnanın hukuki çerçevesini genişletirken, tebliğ bu genişlemenin vergi, resim ve harç istisnası belgesi (VRHİB) süreçlerinde nasıl uygulanacağını netleştiriyor. İhracatçılar, transit ticaret yapanlar, ihracat sayılan satış ve teslimlerde bulunan imalatçılar ile döviz kazandırıcı hizmet ihracatçıları, bankalarından temin ettikleri senet reeskont kredilerinde bundan böyle damga vergisi ve harç ödemeyecek, kredi üzerinden BSMV tahakkuk etmeyecek.\n\nUygulamada, ihracat taahhüdüne bağlı istisna belgesi kapsamındaki işlemlerde bankaların istisna uygulamasını doğrudan yapabilmesi bekleniyor. Firmaların mevcut kredi sözleşmelerini ve yenileme takvimlerini gözden geçirerek, 5 Eylül 2026 sonrası kullandırılacak veya yenilenecek reeskont kredilerinde istisnadan yararlanmayı sağlamaları önem taşıyor. Tebliğ, ihracat finansmanının Eximbank tekelinden çıkarılıp ticari banka kanalına yayılması yönündeki politika tercihinin somut bir adımı olarak değerlendiriliyor.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "11723 sayılı Kararın uygulama tebliği. İhracatçı firmanın kendi çalıştığı ticari bankadan aldığı senet reeskont kredisinde artık damga vergisi, harç ve BSMV doğmayacak. Mali işler birimlerinin mevcut kredi sözleşmelerini ve yenileme takvimini gözden geçirip 5 Eylül sonrası kullanımları istisna kapsamına taşıması gerekiyor.",
+      "key_points": [
+        "İhracat: 2017/4 Tebliğinin 4/1-(a) bendi değiştirildi",
+        "İstisna, TCMB'nin diğer bankalara açtığı senet reeskont kredilerini de kapsıyor",
+        "Vade sınırlaması kaldırıldı (kısa vadeli ibaresi metinden çıkarıldı)",
+        "Tebliğ yayımı tarihinde yürürlüğe girdi",
+        "Vergi, Resim ve Harç İstisnası Belgesi süreçlerinde doğrudan uygulanabilecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "TCMB",
+          "Türk Eximbank"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Ihracat",
+          "Bankacilik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ihracat",
+        "teblig",
+        "vergi-istisnasi",
+        "damga-vergisi",
+        "reeskont-kredisi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 85,
+        "keyword": 82,
+        "recency": 40,
+        "corroboration": 30,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-12.pdf",
+      "title": "Para Piyasası Fonlarında Stopaj %10'a Çıkarıldı (Karar Sayısı: 11734)",
+      "body": "5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan 11734 sayılı Cumhurbaşkanı Kararı ile 193 sayılı Gelir Vergisi Kanununun geçici 67 nci maddesinde yer alan tevkifat (stopaj) oranları yeniden belirlendi.\n\nKarar kapsamında, 5520 sayılı Kurumlar Vergisi Kanununun 2 nci maddesinin birinci fıkrası kapsamındaki mükellefler ile 6362 sayılı Sermaye Piyasası Kanununa göre kurulan yatırım fonları ve yatırım ortaklıklarının, para piyasası fonlarından ve unvanında \"para piyasası\" ibaresi bulunan serbest fonlardan elde ettikleri kazançlara uygulanacak stopaj oranı yüzde 10 olarak belirlendi. Bu mükelleflerin kapsam dışındaki diğer fon kazançlarında oran yüzde 0 olarak uygulanmaya devam ediyor.\n\nKararda bir geçiş hükmü de yer alıyor: 5 Eylül 2026 tarihinden sonra satın alınan fon katılma payları için yeni oran tam olarak uygulanacak; bu tarihten önce iktisap edilmiş paylarda ise kazancın 5 Eylül 2026'dan payların elden çıkarıldığı tarihe kadar geçen süreye isabet eden kısmı yüzde 10 tevkifata tabi olacak. Karar yayımı tarihinde yürürlüğe girdi.\n\nDüzenlemenin arka planında, kurumların atıl nakdini üretim veya yatırım yerine para piyasası fonlarında vergi avantajlı biçimde değerlendirmesinin sınırlanması hedefi bulunuyor. Sanayi şirketleri açısından bu, işletme sermayesi ve nakit yönetimi stratejilerinin yeniden gözden geçirilmesini gerektiriyor: para piyasası fonlarında tutulan kurumsal nakit portföylerinin net getirisi düşerken, mevduat, hazine bonosu, kısa vadeli borçlanma araçları ve diğer fon türleri arasındaki vergi sonrası getiri karşılaştırması değişiyor. Karar ayrıca dönem sonu vergi hesaplamaları, geçici vergi beyanları ve finansal tablolarda ertelenmiş vergi hesaplamalarını da etkileyecek nitelikte.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Şirketlerin atıl nakdini park ettiği para piyasası fonlarının vergi avantajı büyük ölçüde kalkıyor: kurumların bu fonlardan elde ettiği kazançta stopaj %0'dan %10'a çıktı. Sanayi şirketlerinin hazine/nakit yönetimi masalarının vergi sonrası getiri hesaplarını yeniden kurması, 5 Eylül öncesi alınan paylarda ise kıst dönem hesaplaması yapması gerekiyor.",
+      "key_points": [
+        "Kurumlar ve yatırım fonları için para piyasası fonu kazançlarında stopaj %0'dan %10'a çıkarıldı",
+        "Unvanında \"para piyasası\" geçen serbest fonlar da kapsamda",
+        "Kapsam dışı diğer fon kazançlarında %0 oran korunuyor",
+        "5 Eylül 2026 öncesi alınan paylarda kıst dönem esası uygulanacak",
+        "Karar yayımı tarihinde yürürlüğe girdi"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Hazine ve Maliye Bakanlığı",
+          "Gelir İdaresi Başkanlığı",
+          "SPK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Finans",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "vergi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "stopaj",
+        "gelir-vergisi",
+        "para-piyasasi-fonu",
+        "nakit-yonetimi",
+        "vergi-orani"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 40,
+        "corroboration": 45,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-26.htm",
+      "title": "VUK Genel Tebliği (Sıra No: 595): Dijital Ortamlarda Bildirim Yükümlülüğü Genişletildi",
+      "body": "Hazine ve Maliye Bakanlığı (Gelir İdaresi Başkanlığı) tarafından 5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan 595 Sıra No.lu Vergi Usul Kanunu Genel Tebliği ile, e-ticarette vergi güvenliğini düzenleyen 538 Sıra No.lu Genel Tebliğ önemli ölçüde genişletildi.\n\nTebliğin 1 inci maddesiyle, 538 No.lu Tebliğin 2 nci maddesinin birinci fıkrasının (b) bendindeki hüküm değiştirildi. Eski metin yalnızca \"elektronik ticarette\" faaliyette bulunan hizmet sağlayıcılar ile aracı hizmet sağlayıcıları kapsıyordu. Yeni metin ise kapsamı \"elektronik ticarette ve internet dâhil olmak üzere her türlü dijital ortamın alım, satım, kiralama, ilan ve reklam gibi iktisadi ve ticari amaçlarla kullanıldığı haller\" şeklinde genişletti. Bildirim yükümlülüğü getirilebilecek muhataplar arasına elektronik ticaret hizmet sağlayıcıları, elektronik ticaret aracı hizmet sağlayıcıları, erişim sağlayıcılar, içerik sağlayıcılar, yer sağlayıcılar ve sosyal ağ sağlayıcılar da eklendi.\n\nDüzenleme ile İdare; bildirimin içerik, format, standart, verilme süresi ve yöntemini belirleme; bildirim verme yükümlülüğünü iş hacmi, sektör, mükellef grupları, alış-satış tutarı ile alım, satım, kiralama, ilan ve reklama konu mal ve hizmet türleri itibarıyla farklılaştırma; içerik sağlayıcılar tarafından üretilen bilgilerin aracı hizmet sağlayıcıları, erişim sağlayıcılar, yer sağlayıcılar ve sosyal ağ sağlayıcılar tarafından alınması zorunluluğunu getirme yetkilerine sahip oldu. Bilgi ve bildirimlerin elektronik ortamda muhafaza ve ibraz edilmesi yükümlülüğü de getirilebilecek.\n\nTebliğin 2 nci maddesiyle 538 No.lu Tebliğin 4 üncü maddesinde de değişiklikler yapıldı; \"sosyal ağ sağlayıcıları ile yer sağlayıcılar\" ibaresi ilgili fıkradan çıkarılırken, mükellefiyet tespitine ilişkin bilgi setinin kapsamı yeniden tanımlandı.\n\nSanayi ve ticaret şirketleri açısından tebliğ, kendi e-ticaret sitesi, pazaryeri mağazası, ikinci el makine-ekipman ilanları, dijital reklam ve kiralama işlemleri üzerinden GİB'e akacak veri setinin genişlediği anlamına geliyor. Bu da beyan ile platform verisi arasındaki çapraz kontrollerin sıklaşmasını beraberinde getiriyor.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "GİB'in dijital ortamlardan topladığı veri seti e-ticaretin çok ötesine taşınıyor: ilan, reklam ve kiralama işlemleri ile erişim/yer/içerik/sosyal ağ sağlayıcıları da bildirim yükümlüsü yapılabilecek. Pazaryerlerinde satış yapan, ikinci el makine-ekipman ilanı veren veya dijital reklam kullanan şirketler için beyan-platform verisi çapraz kontrolü sıkılaşıyor.",
+      "key_points": [
+        "538 Sıra No.lu VUK Genel Tebliği'nin kapsamı \"her türlü dijital ortam\"a genişletildi",
+        "Alım, satım, kiralama, ilan ve reklam işlemleri bildirim kapsamına alınabilecek",
+        "Erişim sağlayıcı, içerik sağlayıcı, yer sağlayıcı ve sosyal ağ sağlayıcılar da muhatap",
+        "İdare bildirim yükümlülüğünü iş hacmi, sektör ve tutar bazında farklılaştırabilecek",
+        "Bilgilerin elektronik ortamda muhafaza ve ibraz zorunluluğu getirilebilecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Hazine ve Maliye Bakanlığı",
+          "Gelir İdaresi Başkanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "E-ticaret",
+          "Perakende",
+          "Imalat Sanayi",
+          "Bilisim"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "vergi",
+      "sentiment": "NOTR",
+      "tags": [
+        "vergi-usul-kanunu",
+        "e-ticaret",
+        "dijital-ortam",
+        "bildirim-yukumlulugu",
+        "vergi-denetimi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 75,
+        "keyword": 72,
+        "recency": 40,
+        "corroboration": 35,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-7.pdf",
+      "title": "Ford Otomotiv'in Eskişehir İnönü Arazisi Özel Endüstri Bölgesi İlan Edildi (Karar Sayısı: 11729)",
+      "body": "5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan 11729 sayılı Cumhurbaşkanı Kararı ile Eskişehir ili İnönü ilçesinde bulunan ve sınırları ekli krokide gösterilen alan, 4737 sayılı Endüstri Bölgeleri Kanununun 4/Ç maddesi uyarınca \"Ford Otomotiv Sanayi Anonim Şirketi Eskişehir Özel Endüstri Bölgesi\" olarak ilan edildi. Karar 4 Eylül 2026 tarihinde alınmış, 5 Eylül 2026'da yayımlanarak yürürlüğe girmiştir. Karara ekli haritaya göre bölgenin toplam yüzölçümü yaklaşık 109,41 hektardır.\n\nÖzel endüstri bölgesi statüsü, 4737 sayılı Kanun kapsamında yatırımcıya önemli avantajlar sağlıyor. Bu statüde imar planları ve parselasyon işlemleri Sanayi ve Teknoloji Bakanlığı tarafından yürütülüyor, ruhsat ve izin süreçleri tek elden ve kısaltılmış sürelerde tamamlanabiliyor, kamulaştırma işlemleri hızlandırılıyor ve yatırım teşvik mevzuatı bakımından ayrıcalıklı bir çerçeve uygulanabiliyor.\n\nDüzenleme, Ford Otosan'ın Eskişehir'deki üretim kapasitesini artırmayı, yatırımlarını hızlandırmayı ve bölgenin ekonomik katkısını güçlendirmeyi hedefliyor. Aynı Resmî Gazete nüshasında Sakarya Ferizli ve Sakarya Kaynarca endüstri bölgeleri de ilan edildi; bu da hükümetin endüstri bölgesi enstrümanını büyük ölçekli sanayi yatırımlarını hızlandırmak için yoğun biçimde kullandığını gösteriyor.\n\nOtomotiv ana sanayi yatırımının bu ölçekte hızlandırılması, yan sanayi ve tedarikçi ekosistemi açısından doğrudan sonuç doğuruyor: kalıp, pres, plastik enjeksiyon, kablo demeti, döküm ve elektronik komponent üreticileri için orta vadede yeni sipariş ve lokalizasyon fırsatları anlamına geliyor. Aynı zamanda Eskişehir-Bilecik-Bursa hattında nitelikli işgücü talebini, lojistik altyapı ihtiyacını ve OSB dışı sanayi arsa fiyatlarını etkileyebilecek bir gelişme olarak izlenmesi gerekiyor.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Ford Otosan'ın İnönü'deki yaklaşık 109,41 hektarlık alanı özel endüstri bölgesi statüsü kazandı; imar, ruhsat ve kamulaştırma süreçleri Sanayi ve Teknoloji Bakanlığı üzerinden hızlanacak. Otomotiv yan sanayi için Eskişehir-Bursa hattında yeni kapasite ve lokalizasyon fırsatı doğuyor; aynı bölgede nitelikli işgücü ve sanayi arsası rekabetinin sertleşmesi bekleniyor.",
+      "key_points": [
+        "11729 sayılı Karar ile Eskişehir İnönü'deki alan Özel Endüstri Bölgesi ilan edildi",
+        "Toplam alan yaklaşık 109,41 hektar",
+        "4737 sayılı Endüstri Bölgeleri Kanunu md. 4/Ç dayanak alındı",
+        "İmar, ruhsat ve kamulaştırma süreçleri hızlandırılmış rejime tabi olacak",
+        "Aynı gün Sakarya'da iki ayrı endüstri bölgesi daha ilan edildi"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Sanayi ve Teknoloji Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Yan Sanayi",
+          "Lojistik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "endustri-bolgesi",
+        "otomotiv",
+        "yatirim",
+        "eskisehir",
+        "sanayi-yatirimi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 78,
+        "keyword": 75,
+        "recency": 40,
+        "corroboration": 50,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-8.pdf",
+      "title": "Sakarya Ferizli ve Kaynarca'da 585,96 Hektarlık İki Yeni Endüstri Bölgesi (Karar Sayıları: 11730-11731)",
+      "body": "5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan 11730 ve 11731 sayılı Cumhurbaşkanı Kararları ile Sakarya'nın Ferizli ve Kaynarca ilçelerinde bulunan alanlar endüstri bölgesi ilan edildi. 11730 sayılı Karar ile Ferizli ilçesindeki yaklaşık 179,22 hektarlık alan \"Sakarya Ferizli Endüstri Bölgesi\", 11731 sayılı Karar ile Kaynarca ilçesindeki yaklaşık 406,74 hektarlık alan \"Sakarya Kaynarca Endüstri Bölgesi\" olarak tanımlandı. İki bölgenin toplam büyüklüğü 585,96 hektara ulaşıyor. Kararlar 4 Eylül 2026 tarihinde alınmış ve Resmî Gazete'de yayımlandıkları tarihte yürürlüğe girmiştir.\n\nKararlarda, bu bölgelerde yatırım yapacak yatırımcıların kullanacakları sabit yatırım tutarı üzerinden binde bir (‰1) oranında Sanayi ve Teknoloji Bakanlığı Merkez Saymanlık Müdürlüğü hesabına ödeme yapacağı hükmü yer alıyor.\n\nEndüstri bölgesi statüsü, organize sanayi bölgesinden farklı olarak daha büyük ölçekli ve stratejik yatırımlar için tasarlanmış bir enstrüman. Bu statüde altyapı yatırımları, imar planı onayı, parselasyon ve tahsis süreçleri Sanayi ve Teknoloji Bakanlığı koordinasyonunda tek elden yürütülüyor; çevresel etki değerlendirmesi ve ruhsatlandırma süreçleri kısaltılıyor.\n\nSakarya, otomotiv ana ve yan sanayii, beyaz eşya, makine ve metal işleme sektörlerinde yoğunlaşmış bir sanayi merkezi. Mevcut OSB'lerde parsel doluluk oranlarının yüksek olması nedeniyle yeni sanayi arsası arzı kritik bir darboğaz oluşturuyordu. 585,96 hektarlık ilave alan, bölgede kapasite artırımı ya da yeni tesis yatırımı planlayan firmalar için orta vadede arsa arzını rahatlatacak. Ancak kararın yerel düzeyde tarım arazilerinin sanayiye dönüşümü açısından tartışma yarattığı da haberlere yansıdı. Yatırımcıların bölge yönetici şirketinin kuruluşu, altyapı takvimi ve tahsis şartlarını yakından izlemesi gerekiyor.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Sakarya'da OSB parsellerinin dolduğu bir dönemde 585,96 hektarlık yeni sanayi alanı arzı açıldı. Otomotiv, beyaz eşya ve metal işleme yoğunluklu bölgede kapasite artırımı planlayan firmalar için arsa darboğazını hafifletecek bir gelişme; yatırımcıdan sabit yatırım tutarı üzerinden binde 1 katkı payı alınacak.",
+      "key_points": [
+        "Ferizli'de 179,22 hektar, Kaynarca'da 406,74 hektar endüstri bölgesi ilan edildi",
+        "Toplam ilave sanayi alanı 585,96 hektar",
+        "Yatırımcıdan sabit yatırım tutarı üzerinden ‰1 katkı payı alınacak",
+        "İmar, parselasyon ve altyapı süreçleri Sanayi ve Teknoloji Bakanlığı koordinasyonunda",
+        "Kararlar yayımı tarihinde yürürlüğe girdi"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Sanayi ve Teknoloji Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Beyaz Esya",
+          "Makine",
+          "Metal"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "endustri-bolgesi",
+        "sanayi-arsasi",
+        "sakarya",
+        "yatirim",
+        "organize-sanayi-bolgesi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 72,
+        "keyword": 70,
+        "recency": 40,
+        "corroboration": 45,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-10.pdf",
+      "title": "Adana Yumurtalık Serbest Bölgesi 3,77 Milyon m² Büyütüldü (Karar Sayısı: 11732)",
+      "body": "5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan 11732 sayılı Cumhurbaşkanı Kararı ile Adana Yumurtalık Serbest Bölgesinin sınırları, 3218 sayılı Serbest Bölgeler Kanununun 2 nci maddesi gereğince ekli kroki ve listede gösterildiği şekilde yeniden belirlendi.\n\nAdana'nın Ceyhan ilçesi Sarımazı Mahallesi sınırları içerisinde yer alan serbest bölgeye toplam 3 milyon 767 bin 317 metrekarelik yeni alan dahil edildi. Bölgenin 3 milyon 582 bin 697 metrekare olan kara alanına 1 milyon 54 bin 494 metrekare eklenerek toplam kara alanı 4 milyon 637 bin 192 metrekareye yükseldi. Mevcut 6 milyon 614 bin 389 metrekarelik deniz alanına ise 2 milyon 712 bin 822 metrekare ilave edilerek toplam deniz alanı 9 milyon 327 bin 212 metrekareye çıktı. Serbest bölgenin toplam alanında yaklaşık yüzde 36,9 oranında artış gerçekleşti.\n\nYumurtalık Serbest Bölgesi, Ceyhan Enerji İhtisas Endüstri Bölgesi, İskenderun Körfezi limanları ve BTC ham petrol boru hattı terminaliyle birlikte Doğu Akdeniz'in en önemli sanayi-lojistik kümelenmesinin merkezinde yer alıyor. Bölgede demir-çelik, petrokimya, enerji ve ağır sanayi yatırımları yoğunlaşıyor.\n\nSerbest bölge statüsü; gümrük vergisi ve eş etkili yüklerden muafiyet, üretim ruhsatı sahibi kullanıcılar için kurumlar vergisi istisnası, ihracat amaçlı üretimde ücretlerde gelir vergisi istisnası ve KDV istisnası gibi avantajlar sunuyor. Alanın genişletilmesi, özellikle transit ticaret, katma değerli lojistik, depolama ve ihracata dönük montaj/işleme faaliyetleri planlayan sanayiciler için yeni parsel ve iskele kapasitesi anlamına geliyor. Deniz alanının 2,7 milyon m² genişletilmesi ise liman ve iskele altyapısının büyütüleceğine, dolayısıyla dökme yük ve konteyner elleçleme kapasitesinin artacağına işaret ediyor. Aynı Resmî Gazete'de Çukurova bölgesi endüstri bölgeleri ile İskenderun Körfezi limanları için demiryolu iltisak hattı yapımına yönelik acele kamulaştırma kararı da yayımlandı.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Doğu Akdeniz'in sanayi-lojistik merkezinde serbest bölge kapasitesi yüzde 36,9 büyüdü; kara alanına 1,05 milyon m², deniz alanına 2,71 milyon m² eklendi. Transit ticaret, katma değerli lojistik ve ihracata dönük işleme faaliyeti planlayan firmalar için yeni parsel ve iskele kapasitesi doğuyor; serbest bölgenin kurumlar vergisi ve KDV istisnaları bu alanlarda da geçerli olacak.",
+      "key_points": [
+        "Serbest bölgeye toplam 3.767.317 m² yeni alan eklendi (%36,9 büyüme)",
+        "Kara alanı 4.637.192 m²'ye, deniz alanı 9.327.212 m²'ye yükseldi",
+        "Dayanak: 3218 sayılı Serbest Bölgeler Kanunu md. 2",
+        "Ceyhan Sarımazı'daki bölge BTC terminali ve İskenderun Körfezi limanlarına komşu",
+        "Aynı gün Çukurova endüstri bölgeleri için demiryolu iltisak hattı kamulaştırması da kararlaştırıldı"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Ticaret Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Demir-Celik",
+          "Petrokimya",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "serbest-bolge",
+        "lojistik",
+        "ihracat",
+        "adana",
+        "liman"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 74,
+        "keyword": 72,
+        "recency": 40,
+        "corroboration": 40,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-28.pdf",
+      "title": "EPDK 14846 Sayılı Kurul Kararı: Elektrik ve Doğal Gaz Dağıtımında AR-GE Mevzuatı Güncellendi",
+      "body": "Enerji Piyasası Düzenleme Kurulunun 3 Eylül 2026 tarihli ve 14846 sayılı Kararı, 5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlandı. Kararla elektrik ve doğal gaz dağıtım sektörlerinde yürütülen AR-GE faaliyetlerine ilişkin usul ve esaslarda değişiklik yapıldı.\n\nEPDK'nın dağıtım şirketleri için uyguladığı AR-GE mekanizması, dağıtım tarifeleri içinde tanımlanan bir AR-GE bütçesi üzerinden çalışıyor. Dağıtım şirketleri, Kurul tarafından onaylanan projeler kapsamında yaptıkları AR-GE harcamalarını gelir gereksinimlerine yansıtabiliyor; buna karşılık proje çıktıları, raporlama ve denetim yükümlülüklerine tabi oluyor. Mevzuat değişikliği; proje başvuru ve değerlendirme süreçlerini, bütçe tavanlarını, harcama kalemlerinin kabul edilebilirliğini, proje çıktılarının ticarileştirilmesini ve raporlama takvimini ilgilendiriyor.\n\nDüzenlemenin sanayi tarafındaki karşılığı iki yönlü. Birincisi, dağıtım şirketlerinin AR-GE bütçeleri Türkiye'de şebeke teknolojileri alanında faaliyet gösteren yerli ekipman, yazılım ve mühendislik firmaları için önemli bir talep kaynağı; akıllı sayaç, şebeke otomasyonu, kayıp-kaçak analitiği, dijital ikiz, enerji depolama entegrasyonu, dağıtık üretim yönetimi ve elektrikli araç şarj altyapısı gibi başlıklarda proje ortaklığı ve tedarikçilik fırsatları yaratıyor. İkincisi, dağıtım tarifeleri içinde yer alan AR-GE bileşeni nihai olarak sanayi abonesinin elektrik ve doğal gaz faturasına yansıdığı için, bütçe tavanlarındaki değişiklikler enerji maliyetleri üzerinde dolaylı bir etki yaratıyor.\n\nEnerji yoğun sektörlerde (demir-çelik, çimento, cam, seramik, kimya, kâğıt) faaliyet gösteren üyelerin, EPDK'nın dağıtım tarifesi bileşenlerindeki değişiklikleri ve AR-GE projelerinin kapsamını, kendi şebeke bağlantı ve enerji verimliliği yatırımlarıyla birlikte değerlendirmesi öneriliyor. Üniversite-sanayi işbirliği modelleriyle çalışan teknoloji firmaları için de dağıtım şirketi AR-GE çağrıları izlenmesi gereken bir kanal.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "EPDK, elektrik ve doğal gaz dağıtım şirketlerinin AR-GE mekanizmasını yeniden düzenledi. Bu bütçeler şebeke teknolojisi üreten yerli firmalar için doğrudan bir talep kaynağı; aynı zamanda dağıtım tarifesi bileşeni olarak sanayi abonesinin faturasına yansıdığı için enerji maliyeti tarafında da izlenmesi gerekiyor.",
+      "key_points": [
+        "EPDK Kurulunun 03/09/2026 tarihli ve 14846 sayılı Kararı 5 Eylül'de yayımlandı",
+        "Elektrik ve doğal gaz dağıtım sektörü AR-GE mevzuatında değişiklik yapıldı",
+        "Dağıtım şirketi AR-GE bütçeleri şebeke teknolojisi tedarikçileri için talep yaratıyor",
+        "AR-GE bileşeni dağıtım tarifesi üzerinden sanayi abonesinin faturasına yansıyor",
+        "Akıllı şebeke, depolama ve EV şarj altyapısı projelerinde iş birliği fırsatı"
+      ],
+      "entities": {
+        "kurum": [
+          "EPDK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Elektrik Dagitim",
+          "Dogal Gaz",
+          "Bilisim"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "epdk",
+        "enerji-piyasasi",
+        "ar-ge-tesviki",
+        "elektrik-dagitim",
+        "dogal-gaz",
+        "enerji-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 66,
+        "keyword": 74,
+        "recency": 40,
+        "corroboration": 25,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-24.htm",
+      "title": "Sulak Alanların Korunması Yönetmeliğinde Değişiklik: Su Alımına İzin Belgesi ve Çevresel Akış Zorunluluğu",
+      "body": "Tarım ve Orman Bakanlığı tarafından 5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan yönetmelik ile 4/4/2014 tarihli Sulak Alanların Korunması Yönetmeliğinde kapsamlı değişiklikler yapıldı.\n\nEn önemli değişiklik, sanayi ve enerji tesislerini doğrudan ilgilendiren su alımı rejimine ilişkin. Yönetmeliğin 8 inci maddesine eklenen fıkra ile sulak alanların su aynasından veya sulak alan sınırı içerisinde sulak alanı besleyen kaynak, akarsu ve derelerden su alımı faaliyetleri için \"izin belgesi\" alınması zorunlu hale getirildi. Ayrıca sulak alanlar ile daimî veya mevsimsel akarsular üzerinde planlanan ve işletilen enerji, sulama ve içme suyu maksatlı su yapılarında, Doğa Koruma ve Milli Parklar Genel Müdürlüğünce belirlenen usul ve esaslar çerçevesinde hesaplanacak \"çevresel akış miktarı\"nın akarsu yatağına bırakılması zorunlu kılındı. Hesaplanan çevresel akış miktarı, Elektrik Piyasasında Üretim Faaliyetinde Bulunmak Üzere Su Kullanım Hakkı Anlaşması İmzalanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik çerçevesinde belirlenen miktardan az olamayacak. Yönetim planlarında belirlenen sürdürülebilir su seviyesini korumak amacıyla sulama mevsimi dışında ekosistem değerlendirme raporunda belirtilen miktarda ilave su bırakılması da öngörüldü.\n\nYönetmeliğin tanımlar maddesinde de önemli eklemeler yapıldı: \"çevresel akış miktarı\", \"suni su çukuru\" (maden çıkarımı, hafriyat, kum veya malzeme alımı gibi insan faaliyetleri sonucu oluşan su dolu çukurlar), \"suni sulak alan\" (rekreasyon, içme, kullanma, arıtma, tarımsal sulama suyu temini veya elektrik üretimi maksadıyla yapılan depolama tesisleri) ve \"milli sulak alan stratejisi\" tanımları mevzuata girdi. Tescilsiz suni sulak alanların yönetiminin işleten kurum tarafından, suni su çukurlarının yönetiminin ise alanı oluşturan ve/veya sorumlu kurum tarafından yapılacağı hükme bağlandı.\n\nYönetmelik ayrıca özel mülkiyete konu parsellerde sulak alan koruma bölgeleri onayından sonra tarımsal kullanım taleplerinde drenaj yapılmaması ve organik üretim şartlarını da yeniden düzenledi. İzin belgesi türleri Sulak Alan Faaliyet İzin Belgesi, Saz Kesim İzin Belgesi ve Turba Çıkarım İzin Belgesi olarak netleştirildi.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Sulak alan sınırı içindeki kaynak, akarsu ve derelerden su çeken tesisler için artık izin belgesi zorunlu; HES ve sulama/içme suyu yapılarında çevresel akış miktarı bırakma yükümlülüğü mevzuata bağlandı. Suyu proses girdisi olarak kullanan tesisler ile maden ve hafriyat faaliyeti yürüten firmalar için yeni izin, raporlama ve denetim yükü doğuyor.",
+      "key_points": [
+        "Sulak alan ve besleyen su kaynaklarından su alımı için izin belgesi zorunlu hale geldi",
+        "Enerji, sulama ve içme suyu amaçlı su yapılarında çevresel akış miktarı bırakma zorunluluğu",
+        "Çevresel akış, su kullanım hakkı anlaşması mevzuatındaki miktardan az olamaz",
+        "\"Suni su çukuru\" ve \"suni sulak alan\" tanımları mevzuata girdi; maden ve hafriyat sahaları kapsamda",
+        "Sulama mevsimi dışında ekosistem raporuna göre ilave su bırakılacak"
+      ],
+      "entities": {
+        "kurum": [
+          "Tarım ve Orman Bakanlığı",
+          "Doğa Koruma ve Milli Parklar Genel Müdürlüğü",
+          "Çevre Şehircilik ve İklim Değişikliği Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Madencilik",
+          "Tarim",
+          "Gida"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "cevre-mevzuati",
+        "su-yonetimi",
+        "izin-belgesi",
+        "hes",
+        "madencilik",
+        "surdurulebilirlik"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 68,
+        "keyword": 62,
+        "recency": 40,
+        "corroboration": 25,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260905-18.pdf",
+      "title": "Çukurova Endüstri Bölgeleri ve İskenderun Limanları İçin Demiryolu İltisak Hattı Acele Kamulaştırması (Karar Sayısı: 11740)",
+      "body": "5 Eylül 2026 tarihli ve 33361 sayılı Resmî Gazete'de yayımlanan 11740 sayılı Cumhurbaşkanı Kararı ile \"Çukurova Bölgesi Endüstri Bölgeleri ve İskenderun Körfezi Deniz Limanları İçin Demiryolu İltisak Hattı Bağlantısı Yapım İşi\" kapsamında bazı taşınmazların Ulaştırma ve Altyapı Bakanlığı (Altyapı Yatırımları Genel Müdürlüğü) tarafından acele kamulaştırılmasına karar verildi.\n\nAynı Resmî Gazete nüshasında enerji altyapısına yönelik bir dizi acele kamulaştırma kararı daha yayımlandı: 400/154 kV Yeşilhisar TM irtibat hatları (11735), 380 kV Altınkaya-Sinop enerji iletim hattı (11736), 154 kV Nizip OSB transformatör merkezi sahası (11737), Trakya petrol ve doğal gaz arama-üretim projesi kapsamında lokasyon alanı, boru hattı, enerji nakil hattı ve depolama tesisleri (11738), 154 kV Çekerek Havza-Turhal enerji iletim hattı (11739) ile GAP Aşağı Fırat 2. Merhale Mardin Depolaması sulama yatırımı (11741).\n\nDemiryolu iltisak hattı, sanayi tesislerini ve limanları ana demiryolu şebekesine bağlayan bağlantı hattı anlamına geliyor. Çukurova bölgesinde demir-çelik, petrokimya, enerji, çimento ve gübre gibi ağır yük üreten sektörlerin yoğunlaştığı düşünüldüğünde, endüstri bölgelerinin ve İskenderun Körfezi limanlarının demiryoluna bağlanması ton-km başına lojistik maliyetlerinde önemli bir düşüş potansiyeli taşıyor. Karayolu taşımacılığına kıyasla demiryolu, dökme yük ve ağır tonajlı ürünlerde hem maliyet hem de karbon ayak izi avantajı sağlıyor; bu da AB Sınırda Karbon Düzenleme Mekanizması (SKDM) kapsamındaki ihracatçılar için kapsam 3 emisyonlarının azaltılması bakımından ayrıca önem taşıyor.\n\nNizip OSB transformatör merkezi kararı ise organize sanayi bölgelerinin enerji arz güvenliği ve bağlantı kapasitesi sorunlarının çözümüne yönelik bir adım olarak öne çıkıyor. Enerji iletim hattı yatırımlarının hızlandırılması, özellikle yeni kapasite kuran enerji yoğun tesislerin şebeke bağlantı bekleme sürelerini kısaltıcı etki yapıyor.",
+      "published_at": "2026-09-05T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Çukurova endüstri bölgeleri ve İskenderun Körfezi limanlarını demiryoluna bağlayacak iltisak hattı için acele kamulaştırma kararı çıktı; aynı gün beş ayrı enerji iletim hattı ve Nizip OSB trafo merkezi için de kamulaştırma kararları yayımlandı. Ağır yük üreten sanayici için demiryolu bağlantısı hem lojistik maliyetini hem de SKDM kapsamındaki taşıma kaynaklı karbon ayak izini düşürme potansiyeli taşıyor.",
+      "key_points": [
+        "11740 sayılı Karar ile demiryolu iltisak hattı için acele kamulaştırma yapılacak",
+        "Aynı gün 5 ayrı enerji iletim hattı projesi için kamulaştırma kararı çıktı (11735-11739)",
+        "154 kV Nizip OSB transformatör merkezi sahası da kapsamda",
+        "Trakya petrol ve doğal gaz arama-üretim altyapısı için TPAO kamulaştırması (11738)",
+        "GAP Aşağı Fırat 2. Merhale Mardin Depolaması için DSİ kamulaştırması (11741)"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Ulaştırma ve Altyapı Bakanlığı",
+          "TEİAŞ",
+          "TPAO",
+          "DSİ"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Enerji",
+          "Demir-Celik",
+          "Petrokimya"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "kamulastirma",
+        "demiryolu",
+        "lojistik",
+        "enerji-iletim-hatti",
+        "altyapi",
+        "organize-sanayi-bolgesi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 64,
+        "keyword": 66,
+        "recency": 40,
+        "corroboration": 20,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260906-2.htm",
+      "title": "MYK'dan Yeni Ulusal Meslek Standartları: Tebliğ No 2026/9 ve 2026/10 Yayımlandı",
+      "body": "Meslekî Yeterlilik Kurumu (MYK) tarafından hazırlanan iki tebliğ, 6 Eylül 2026 tarihli ve 33362 sayılı Resmî Gazete'de yayımlandı.\n\n2026/9 sayılı Tebliğ ile 26/2/2013 tarihli ve 28571 mükerrer sayılı Resmî Gazete'de yayımlanan Ulusal Meslek Standartlarına Dair Tebliğin Ek-2'si değiştirildi; böylece mevcut ulusal meslek standartları listesi güncellendi. 2026/10 sayılı Tebliğ ise ekinde yer alan yeni meslek standartlarının yürürlüğe konulmasını sağlıyor. Tebliğin Ek-1'inde \"Süt İşleme Elemanı (Seviye 3)\" Ulusal Meslek Standardı yer alıyor. Her iki tebliğ de yayımı tarihinde yürürlüğe girdi ve hükümlerini Meslekî Yeterlilik Kurumu Başkanı yürütüyor.\n\nTebliğler, 4 sayılı Cumhurbaşkanlığı Kararnamesinin 252 nci maddesi ile Ulusal Meslek Standartlarının ve Ulusal Yeterliliklerin Hazırlanması Hakkında Yönetmeliğin 10 uncu maddesine dayanılarak hazırlandı.\n\nUlusal meslek standartları, Türkiye Yeterlilikler Çerçevesi içinde bir mesleğin başarıyla icra edilebilmesi için gereken bilgi, beceri, tutum ve davranışları tanımlayan referans dokümanlardır. Bu standartlar üzerine ulusal yeterlilikler inşa edilir ve MYK Mesleki Yeterlilik Belgesi sınavları bu yeterliliklere göre yapılır.\n\nSanayiciler açısından meslek standartlarının pratik önemi büyük. 6645 sayılı Kanunla yapılan düzenleme uyarınca, tehlikeli ve çok tehlikeli işler kapsamındaki mesleklerde MYK Mesleki Yeterlilik Belgesi olmayan kişilerin çalıştırılması yasak ve ihlal halinde işverene her bir çalışan için idari para cezası uygulanıyor. Yeni bir meslek standardının yayımlanması, o meslek için ileride ulusal yeterlilik ve belgelendirme zorunluluğu getirilmesinin ilk adımını oluşturuyor. Gıda sanayii tarafında \"Süt İşleme Elemanı (Seviye 3)\" standardının yayımlanması, süt ve süt ürünleri işleyen tesisler için orta vadede personel belgelendirme, eğitim planlaması ve işe alım kriterlerinin yeniden düzenlenmesi anlamına geliyor. İnsan kaynakları birimlerinin güncellenen Ek-2 listesini kendi NACE kodları ve görev tanımlarıyla karşılaştırması öneriliyor.",
+      "published_at": "2026-09-06T08:00:00+03:00",
+      "language": "tr",
+      "summary": "MYK'nın meslek standartları listesi güncellendi ve gıda sanayii için \"Süt İşleme Elemanı (Seviye 3)\" standardı yürürlüğe girdi. Yeni bir meslek standardı, o meslekte ileride MYK belgesi zorunluluğunun önünü açtığı için İK birimlerinin güncel Ek-2 listesini kendi görev tanımlarıyla karşılaştırıp belgelendirme ve eğitim planı yapması gerekiyor.",
+      "key_points": [
+        "2026/9 sayılı Tebliğ ile Ulusal Meslek Standartları listesi (Ek-2) güncellendi",
+        "2026/10 sayılı Tebliğ ile yeni meslek standartları yürürlüğe girdi",
+        "Ek-1: Süt İşleme Elemanı (Seviye 3) Ulusal Meslek Standardı",
+        "Tehlikeli ve çok tehlikeli işlerde MYK belgesi olmayan çalışan istihdamı idari para cezasına tabi",
+        "Tebliğler yayımı tarihinde yürürlüğe girdi"
+      ],
+      "entities": {
+        "kurum": [
+          "Meslekî Yeterlilik Kurumu",
+          "Çalışma ve Sosyal Güvenlik Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Gida",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "istihdam",
+      "sentiment": "NOTR",
+      "tags": [
+        "meslek-standardi",
+        "myk",
+        "belgelendirme",
+        "istihdam",
+        "insan-kaynaklari"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 58,
+        "keyword": 60,
+        "recency": 49,
+        "corroboration": 20,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260908-5.pdf",
+      "title": "COP31 Antalya Ev Sahibi Ülke Anlaşması Onaylandı (Karar Sayıları: 11779-11780)",
+      "body": "8 Eylül 2026 tarihli ve 33364 sayılı Resmî Gazete'de yayımlanan 11779 sayılı Cumhurbaşkanı Kararı ile Türkiye Cumhuriyeti Hükümeti ile Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi (BMİDÇS), Kyoto Protokolü ve Paris Anlaşması Sekretaryası arasında imzalanan ev sahibi ülke anlaşması onaylandı. Anlaşma; BMİDÇS Taraflar Konferansının 31 inci Oturumu (COP31), Kyoto Protokolü Taraflar Toplantısı olarak düzenlenen Taraflar Konferansının 21 inci Oturumu, Paris Anlaşması Taraflar Toplantısı olarak düzenlenen Taraflar Konferansının 8 inci Oturumu, bağlı organların oturumları ve diğer BMİDÇS toplantılarını kapsıyor. Aynı gün yayımlanan 11780 sayılı Karar ile de Türkiye ile BMİDÇS Sekretaryası arasındaki \"Verilere İlişkin Mutabakat Zaptı\" onaylandı.\n\nCOP31 ve kapsamındaki oturumlar 9-20 Kasım 2026 tarihlerinde, oturum öncesi toplantılar ise 3-8 Kasım 2026 tarihlerinde Antalya'da yapılacak. Anlaşmanın onaylanmasını uygun bulan 7591 sayılı Kanun 9 Ağustos 2026 tarihli Resmî Gazete'de yayımlanmıştı. Konferansın Bonn yerine Antalya'da yapılmasından kaynaklanan ek maliyet geçici olarak 7 milyon 715 bin 200 dolar olarak hesaplandı ve bu tutarın Türkiye tarafından karşılanması öngörülüyor.\n\nCOP31 ev sahipliği, Türkiye'nin iklim politikası gündemini önümüzdeki aylarda hızlandıracak bir çerçeve oluşturuyor. 27 Ağustos 2026 tarihli Resmî Gazete'de yayımlanan Türkiye Emisyon Ticaret Sistemi (TR ETS) Yönetmeliği ile 2026-2027 pilot dönemi başlamış durumda; pilot dönemde 50.000 ton CO2 eşdeğeri üzerindeki tesisler kapsama alınıyor ve kıyas yöntemine göre yüzde 100 ücretsiz tahsisat uygulanıyor. İlk aşamada elektrik üretimi, çimento, demir-çelik, alüminyum ve gübre sektörleri kapsamda bulunuyor.\n\nSanayiciler açısından COP31'in Antalya'da yapılacak olması iki yönlü sonuç doğuruyor. Birincisi, Türkiye'nin Ulusal Katkı Beyanı (NDC) güncellemesi, ETS takvimi ve yeşil finansman taahhütleri konusunda uluslararası görünürlük ve baskı artacak. İkincisi, düşük karbonlu teknoloji, yenilenebilir enerji, enerji verimliliği ve döngüsel ekonomi alanlarında yatırım, iş birliği ve ihracat fırsatları için önemli bir platform oluşacak.",
+      "published_at": "2026-09-08T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Türkiye'nin 9-20 Kasım 2026'da Antalya'da ev sahipliği yapacağı COP31'in hukuki çerçevesi tamamlandı. Bu, TR ETS pilot dönemi ve NDC güncellemesiyle birleşince sanayicinin karbon yükümlülüklerinin hızlanacağına işaret ediyor; aynı zamanda düşük karbonlu teknoloji ve yeşil finansman alanında ihracat ve iş birliği fırsatları doğuruyor.",
+      "key_points": [
+        "COP31 ev sahibi ülke anlaşması 11779 sayılı Karar ile onaylandı",
+        "Verilere İlişkin Mutabakat Zaptı 11780 sayılı Karar ile onaylandı",
+        "COP31 oturumları 9-20 Kasım 2026, ön toplantılar 3-8 Kasım 2026 tarihlerinde Antalya'da",
+        "Bonn yerine Antalya'da yapılmasının ek maliyeti geçici olarak 7,72 milyon dolar",
+        "TR ETS pilot dönemi 2026-2027; 50.000 tCO2e üzeri tesisler kapsamda"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Çevre Şehircilik ve İklim Değişikliği Bakanlığı",
+          "BMİDÇS Sekretaryası"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Cimento",
+          "Demir-Celik",
+          "Aluminyum",
+          "Gubre",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "cop31",
+        "iklim-degisikligi",
+        "emisyon-ticaret-sistemi",
+        "karbon",
+        "yesil-mutabakat",
+        "paris-anlasmasi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 66,
+        "corroboration": 55,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260908-1.pdf",
+      "title": "AB Katılım Öncesi Yardım Aracı (IPA II) Finansman Anlaşmalarında Değişiklik Onaylandı",
+      "body": "8 Eylül 2026 tarihli ve 33364 sayılı Resmî Gazete'nin Milletlerarası Andlaşmalar bölümünde AB fonlarına ilişkin iki karar yayımlandı.\n\n11777 sayılı Cumhurbaşkanı Kararı ile, Katılım Öncesi Yardım Aracı (IPA II) kapsamında akdedilen 2020 Yılı Türkiye İçin Yıllık Eylem Programına ait Finansman Anlaşmasında değişiklik yapılmasına ilişkin olarak Türkiye Cumhuriyeti Hükümeti ile Avrupa Komisyonu arasında 23/6/2026 ve 24/7/2026 tarihli mektupların teatisi yoluyla imzalanan Değişiklik Protokolü onaylandı. 11778 sayılı Karar ile de Türkiye Cumhuriyeti adına 15 Mayıs 2026 tarihinde Ankara'da imzalanan, 2016 Yılı İçin IPA II Altında Türkiye'ye Yönelik Yıllık Eylem Programına ait Finansman Anlaşmasına 4 No'lu Zeyilname ilişik notalarla birlikte onaylandı.\n\nIPA II, Avrupa Birliği'nin aday ülkelere sağladığı katılım öncesi mali yardım aracı. Türkiye'de bu fonlar; rekabetçilik ve yenilik, istihdam ve sosyal politikalar, çevre ve iklim eylemi, ulaştırma altyapısı, tarım ve kırsal kalkınma (IPARD) ile sivil toplum ve kurumsal kapasite başlıklarında kullanılıyor. Yıllık eylem programlarına ait finansman anlaşmalarındaki değişiklikler ve zeyilnameler genellikle uygulama sürelerinin uzatılması, bütçe kalemleri arasında aktarım yapılması veya proje kapsamlarının revize edilmesi amacıyla yapılıyor.\n\nSanayiciler açısından IPA fonları; KOBİ rekabetçiliği, kümelenme, mesleki eğitim, enerji verimliliği ve çevresel altyapı projelerinde eş finansmanlı destek imkânı sunuyor. Özellikle Rekabetçi Sektörler Programı gibi araçlar üzerinden organize sanayi bölgeleri, teknoloji geliştirme bölgeleri, ihtisas OSB'leri ve sektörel kümeler doğrudan yararlanıcı olabiliyor. IPARD programı ise gıda işleme ve tarımsal ürün işleme tesisleri için yatırım hibesi sağlıyor.\n\nUygulama sürelerinin uzatılması, halihazırda yürüyen projelerin tamamlanması ve harcanamayan tahsisatların iade edilmemesi bakımından önem taşıyor. İlgili programlardan yararlanan veya başvuru hazırlığında olan üyelerin, revize takvimleri ve uygunluk kriterlerini Dışişleri Bakanlığı AB Başkanlığı ve ilgili program otoriteleri üzerinden takip etmesi gerekiyor.",
+      "published_at": "2026-09-08T08:00:00+03:00",
+      "language": "tr",
+      "summary": "AB'nin IPA II fonlarına ait 2016 ve 2020 yıllık eylem programı finansman anlaşmaları revize edildi; bu tür değişiklikler genellikle uygulama süresi uzatımı ve bütçe aktarımı anlamına geliyor. KOBİ rekabetçiliği, kümelenme, enerji verimliliği ve IPARD gıda işleme yatırımlarında eş finansmanlı hibelerden yararlanan firmalar için revize takvim ve uygunluk kriterlerinin izlenmesi kritik.",
+      "key_points": [
+        "11777 sayılı Karar: 2020 Yıllık Eylem Programı Finansman Anlaşması Değişiklik Protokolü onaylandı",
+        "11778 sayılı Karar: 2016 Yıllık Eylem Programı Finansman Anlaşmasına 4 No'lu Zeyilname onaylandı",
+        "Değişiklikler mektup teatisi ve Ankara'da imzalanan zeyilname yoluyla yapıldı",
+        "IPA fonları KOBİ rekabetçiliği, kümelenme, enerji verimliliği ve IPARD gıda işleme yatırımlarını kapsıyor",
+        "Süre uzatımı yürüyen projelerin tamamlanması açısından kritik"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Avrupa Komisyonu",
+          "Dışişleri Bakanlığı AB Başkanlığı",
+          "Sanayi ve Teknoloji Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "KOBI",
+          "Gida",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ab-fonlari",
+        "ipa",
+        "hibe",
+        "kobi",
+        "proje-destegi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 60,
+        "keyword": 64,
+        "recency": 66,
+        "corroboration": 20,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260908-7.pdf",
+      "title": "Bitkisel Üretim Desteklerinde Katsayı 310 TL'den 367 TL'ye Çıkarıldı (Karar Sayısı: 11781)",
+      "body": "8 Eylül 2026 tarihli ve 33364 sayılı Resmî Gazete'de yayımlanan 11781 sayılı Cumhurbaşkanı Kararı ile \"2025-2027 Yıllarında Yapılacak Bitkisel Üretime Yönelik Desteklemeler ile Diğer Bazı Tarımsal Desteklemelere İlişkin Karar\"da değişiklik yapıldı.\n\nKararla, 2026 üretim yılı için dekar başına belirlenen destek katsayı değeri 310 TL'den 367 TL'ye yükseltildi. Bu, 2025 üretim yılındaki 244 TL'lik katsayıya kıyasla yüzde 50,4'lük bir artışa karşılık geliyor. Düzenleme; bitkisel üretim destekleri yanında arıcılık, ipek böcekçiliği, tiftik üretimi, su ürünleri yetiştiriciliği ve hayvan gen kaynakları gibi alanlardaki destek kalemlerinde de artışlar içeriyor.\n\nBitkisel üretim destekleri, Türkiye'de tarımsal destekleme bütçesinin en büyük kalemlerinden birini oluşturuyor ve mazot-gübre desteği, fark ödemesi, sertifikalı tohum kullanımı, organik tarım ve iyi tarım uygulamaları gibi başlıklar üzerinden çiftçiye aktarılıyor. Katsayı değerindeki artış, doğrudan hektar başına ödenecek destek tutarını yükseltiyor.\n\nGıda ve tarıma dayalı sanayi açısından bu düzenlemenin birkaç boyutu var. Birincisi, destek artışı çiftçinin girdi maliyetlerini kısmen karşılayarak üretim alanlarının daralmasını önlemeye yönelik; bu da hammadde arz güvenliği anlamına geliyor. Un, yem, şeker, bitkisel yağ, konserve, meyve suyu, salça ve süt sanayii gibi sektörler için tarımsal hammadde arzının istikrarı doğrudan kapasite kullanım oranını etkiliyor. İkincisi, sözleşmeli üretim modeliyle çalışan sanayiciler açısından destek katsayısı, çiftçiyle yapılacak fiyat müzakerelerinde bir referans oluşturuyor. Üçüncüsü, sertifikalı tohum ve iyi tarım uygulamaları desteklerindeki artışlar, ihracata yönelik üretim yapan gıda işletmelerinin izlenebilirlik ve kalite standartlarına uyum maliyetlerini dolaylı olarak azaltıyor.\n\nÜretim yılı bazlı uygulandığı için desteklerin ödeme takvimi ve başvuru süreçlerinin Tarım ve Orman Bakanlığı duyuruları üzerinden izlenmesi gerekiyor.",
+      "published_at": "2026-09-08T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Dekar başı destek katsayısı 310 TL'den 367 TL'ye çıkarıldı; 2025'e göre artış yüzde 50,4. Tarıma dayalı sanayi (un, yem, şeker, yağ, süt, konserve) için bu, ekim alanlarının korunması ve hammadde arz güvenliği anlamına geliyor; sözleşmeli üretim yapan firmalar için de fiyat müzakerelerinde yeni bir referans oluşturuyor.",
+      "key_points": [
+        "2026 üretim yılı destek katsayısı dekar başına 310 TL'den 367 TL'ye yükseldi",
+        "2025 yılındaki 244 TL'ye göre yüzde 50,4 artış",
+        "Arıcılık, ipek böcekçiliği, tiftik, su ürünleri ve hayvan gen kaynakları destekleri de artırıldı",
+        "2025-2027 dönemi destekleme kararında değişiklik yapıldı",
+        "Tarıma dayalı sanayide hammadde arz güvenliğini destekleyici etki bekleniyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Tarım ve Orman Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Tarim",
+          "Gida",
+          "Yem",
+          "Seker",
+          "Bitkisel Yag"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "tarimsal-destek",
+        "bitkisel-uretim",
+        "hammadde-arzi",
+        "gida-sanayi",
+        "destekleme"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 62,
+        "keyword": 68,
+        "recency": 66,
+        "corroboration": 45,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260908-8.pdf",
+      "title": "Hayvancılık Desteklerinde %43 Artış: Buzağı Desteği 2.000 TL'ye Yükseldi (Karar Sayısı: 11782)",
+      "body": "8 Eylül 2026 tarihli ve 33364 sayılı Resmî Gazete'de yayımlanan 11782 sayılı Cumhurbaşkanı Kararı ile \"2024-2026 Yıllarında Yapılacak Hayvancılık Desteklemelerine İlişkin Karar\"da değişiklik yapıldı.\n\nKararla 2026 yılı için büyükbaş hayvan başına buzağı temel desteği 1.400 TL'den 2.000 TL'ye, malak desteği ise 2.800 TL'den 4.000 TL'ye yükseltildi; her iki kalemde de artış oranı yüzde 43 düzeyinde. Küçükbaş tarafında hayvan başına kuzu ve oğlak temel desteği 300 TL'den 430 TL'ye çıkarıldı. Çoban desteği ise 81.000 TL'den 116.100 TL'ye yükseltilerek yüzde 43 oranında artırıldı.\n\nHayvancılık destekleri, Türkiye'de kırmızı et ve süt arzının sürdürülebilirliği açısından kritik bir politika aracı. Yem maliyetlerindeki artış, sürü büyüklüklerinin korunmasını zorlaştırıyor ve damızlık hayvan varlığının erken kesime gitmesine yol açabiliyor. Destek tutarlarındaki artış, üreticinin yem ve işletme maliyetlerini kısmen telafi ederek sürü varlığının korunmasını amaçlıyor.\n\nSanayi tarafında bu düzenleme doğrudan süt ve süt ürünleri, et ve et ürünleri, yem, deri ve yan ürün işleme sektörlerini ilgilendiriyor. Süt sanayii için çiğ süt arzının istikrarı ve referans çiğ süt fiyatı; et sanayii için kesimlik hayvan arzı ve karkas fiyatları; yem sanayii için ise hayvan varlığına bağlı talep hacmi belirleyici. Sürü varlığının korunması, ithal besilik ve kasaplık hayvan ihtiyacını azaltarak sektörün döviz maliyetini de sınırlıyor.\n\nÇoban desteğindeki yüksek oranlı artış, küçükbaş hayvancılıkta en büyük darboğazlardan biri olan işgücü teminine yönelik. Deri sanayii açısından küçükbaş sürü varlığının korunması, yerli ham deri arzı bakımından önem taşıyor.\n\nDesteklerden yararlanma şartları, başvuru takvimi ve ödeme dönemleri Tarım ve Orman Bakanlığı tebliğleriyle belirleniyor; sözleşmeli üretim ve entegre tesis modeliyle çalışan firmaların üretici sözleşmelerini bu yeni destek düzeyine göre gözden geçirmesi öneriliyor.",
+      "published_at": "2026-09-08T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Buzağı desteği 2.000 TL, malak 4.000 TL, kuzu-oğlak 430 TL, çoban desteği 116.100 TL'ye çıkarıldı; artışlar yüzde 43 düzeyinde. Süt, et, yem ve deri sanayii için bu, sürü varlığının korunması ve çiğ süt/kesimlik hayvan arzının istikrarı anlamına geliyor; entegre tesisler ve sözleşmeli üretim yapan firmaların üretici sözleşmelerini güncellemesi gerekiyor.",
+      "key_points": [
+        "Buzağı temel desteği 1.400 TL'den 2.000 TL'ye (%43 artış)",
+        "Malak desteği 2.800 TL'den 4.000 TL'ye yükseltildi",
+        "Kuzu ve oğlak temel desteği 300 TL'den 430 TL'ye çıkarıldı",
+        "Çoban desteği 81.000 TL'den 116.100 TL'ye yükseltildi",
+        "2024-2026 dönemi hayvancılık destekleme kararında değişiklik yapıldı"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Tarım ve Orman Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Hayvancilik",
+          "Sut Urunleri",
+          "Et Urunleri",
+          "Yem",
+          "Deri"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "hayvancilik-destegi",
+        "tarimsal-destek",
+        "gida-sanayi",
+        "hammadde-arzi",
+        "destekleme"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 60,
+        "keyword": 66,
+        "recency": 66,
+        "corroboration": 45,
+        "reach": 58
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260910-1.htm",
+      "title": "Borsa İstanbul Repo ve Ters Repo Pazarında Takas Bildirimi Yapılmayan İşlemler Geçersiz Sayılacak",
+      "body": "Sermaye Piyasası Kurulu tarafından 10 Eylül 2026 tarihli ve 33366 sayılı Resmî Gazete'de yayımlanan yönetmelik ile 19/10/2014 tarihli ve 29150 sayılı Resmî Gazete'de yayımlanan Borsa İstanbul A.Ş. Borsacılık Faaliyetlerine İlişkin Esaslar Yönetmeliğinde değişiklik yapıldı.\n\nYönetmeliğin 33 üncü maddesinin üçüncü fıkrasından sonra gelmek üzere yeni bir fıkra eklendi. Buna göre: \"Borsa Repo ve Ters Repo Pazarında merkezi takas hizmeti verilmeyen işlemler, söz konusu repo işlemlerine konu menkul kıymetlerin işlem tarihinde Takasbank tarafından belirlenen saate kadar bildiriminin yapılmaması ve fon adına ilgili hesapta bloke edilmemesi durumunda geçersiz sayılır ve Takasbank'ın bildirimi çerçevesinde Borsa tarafından iptal edilir.\" Yönetmelik yayımı tarihinde yürürlüğe girdi ve hükümlerini Borsa İstanbul A.Ş. Yönetim Kurulu yürütüyor.\n\nDüzenleme, merkezi takas hizmeti verilmeyen repo işlemlerinde karşı taraf riskini ve teslimat riskini azaltmayı amaçlıyor. Repo işlemine konu menkul kıymetin işlem günü içinde Takasbank'a bildirilmemesi ve ilgili hesapta bloke edilmemesi halinde işlem geçersiz sayılacak ve iptal edilecek. Bu, özellikle yatırım fonları adına gerçekleştirilen repo işlemlerinde operasyonel disiplini artıran bir tedbir niteliğinde.\n\nSanayi şirketleri açısından düzenlemenin doğrudan bir yükümlülük getirmediği, ancak kurumsal nakit yönetimi bakımından dolaylı sonuçları olduğu değerlendiriliyor. Şirketlerin atıl nakdini kısa vadede değerlendirmek için kullandığı repo/ters repo ve para piyasası fonu kanallarında operasyonel kuralların sıkılaşması, aracı kurum ve portföy yönetim şirketlerinin bu ürünlerdeki işlem akışını ve kesinleşme saatlerini yeniden düzenlemesine yol açabilir. Düzenleme, 5 Eylül 2026'da yayımlanan ve para piyasası fonu kazançlarındaki stopajı yüzde 10'a çıkaran 11734 sayılı Karar ile birlikte değerlendirildiğinde, kurumsal kısa vadeli nakit yönetimi araçlarının hem vergi hem de operasyon tarafında yeniden şekillendiğini gösteriyor. Hazine birimlerinin bankalarıyla kesinleşme saatleri ve teminat süreçlerini teyit etmesi öneriliyor.",
+      "published_at": "2026-09-10T08:00:00+03:00",
+      "language": "tr",
+      "summary": "Merkezi takas hizmeti verilmeyen repo işlemlerinde menkul kıymet bildirimi ve blokajı Takasbank'ın belirlediği saate kadar yapılmazsa işlem iptal edilecek. Şirket hazine birimleri için doğrudan bir yükümlülük değil ama kısa vadeli nakit yönetiminde kesinleşme saatleri ve operasyonel akışın bankalarla yeniden teyit edilmesini gerektiriyor.",
+      "key_points": [
+        "Borsa İstanbul Borsacılık Faaliyetlerine İlişkin Esaslar Yönetmeliği'nin 33 üncü maddesine fıkra eklendi",
+        "Merkezi takas hizmeti verilmeyen repo işlemleri için bildirim ve blokaj zorunluluğu",
+        "Takasbank'ın belirlediği saate kadar bildirim yapılmazsa işlem geçersiz sayılacak",
+        "İptal işlemi Takasbank bildirimi çerçevesinde Borsa tarafından yapılacak",
+        "Yönetmelik yayımı tarihinde yürürlüğe girdi"
+      ],
+      "entities": {
+        "kurum": [
+          "Sermaye Piyasası Kurulu",
+          "Borsa İstanbul",
+          "Takasbank"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Finans",
+          "Sermaye Piyasasi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "sermaye-piyasasi",
+        "borsa-istanbul",
+        "repo",
+        "nakit-yonetimi",
+        "takas"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 45,
+        "keyword": 52,
+        "recency": 83,
+        "corroboration": 20,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260911-5.pdf",
+      "title": "BM Güvenlik Konseyi Yaptırım Listesinde Değişiklik: Malvarlığı Dondurma Kararı Güncellendi (Karar Sayısı: 11785)",
+      "body": "11 Eylül 2026 tarihli ve 33367 sayılı Resmî Gazete'de yayımlanan 11785 sayılı Cumhurbaşkanı Kararı ile Birleşmiş Milletler Güvenlik Konseyinin 1267 (1999), 1988 (2011), 1989 (2011) ve 2253 (2015) sayılı kararlarıyla listelenen kişi, kuruluş veya organizasyonların tasarrufunda bulunan malvarlığının dondurulması hakkındaki 30/9/2013 tarihli ve 2013/5428 sayılı Bakanlar Kurulu Kararının eki (1) sayılı listede değişiklik yapıldı.\n\nAynı konudaki bir önceki güncelleme 5 Eylül 2026 tarihli Resmî Gazete'de 11733 sayılı Karar ile yayımlanmıştı. Bir hafta içinde iki kez liste güncellemesi yapılmış olması, uluslararası yaptırım rejimlerinin dinamik biçimde işletildiğini gösteriyor.\n\nSöz konusu kararlar, 6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun ve MASAK mevzuatı çerçevesinde yükümlü sıfatını haiz tüm kuruluşlar için bağlayıcı. Bankalar, finansal kuruluşlar, sigorta şirketleri ve finansal olmayan belirli meslek grupları, listede yer alan kişi ve kuruluşlarla işlem yapılmasını engellemek, mevcut varlıkları dondurmak ve şüpheli işlem bildiriminde bulunmakla yükümlü.\n\nİhracat ve ithalat yapan sanayi şirketleri açısından bu güncellemeler operasyonel bir uyum yükümlülüğü doğuruyor. Müşteri ve tedarikçi tarama (screening) süreçlerinde kullanılan yaptırım listesi veri tabanlarının güncel tutulması, akreditif ve havale işlemlerinde bankaların yaptırım kontrollerine takılmamak için karşı taraf kontrollerinin yapılması gerekiyor. Yaptırım listelerine takılan bir işlem, ödemenin bloke edilmesi, sevkiyatın durması ve muhabir banka ilişkilerinin zarar görmesi gibi ciddi sonuçlar doğurabiliyor.\n\nÖzellikle çift kullanımlı ürün ihracatı yapan makine, kimya, elektronik ve savunma sanayii tedarikçilerinin; ihracat kontrol mevzuatı, son kullanıcı beyanları ve yaptırım taraması süreçlerini iç kontrol sistemlerine entegre etmeleri öneriliyor. Uyum birimlerinin (1) sayılı listenin güncel halini takip etmesi gerekiyor.",
+      "published_at": "2026-09-11T08:00:00+03:00",
+      "language": "tr",
+      "summary": "BM yaptırım listesi bir hafta içinde ikinci kez güncellendi (5 ve 11 Eylül). İhracat/ithalat yapan firmaların müşteri ve tedarikçi tarama veri tabanlarını güncel tutması gerekiyor; yaptırım listesine takılan bir işlem ödemenin bloke olmasına, sevkiyatın durmasına ve muhabir banka ilişkisinin zarar görmesine yol açabiliyor.",
+      "key_points": [
+        "11785 sayılı Karar ile BM yaptırım listesine bağlı (1) sayılı liste güncellendi",
+        "5 Eylül'de 11733 sayılı Karar ile de aynı listede değişiklik yapılmıştı",
+        "Dayanak: BMGK 1267, 1988, 1989 ve 2253 sayılı kararları",
+        "6415 sayılı Kanun ve MASAK mevzuatı kapsamında yükümlüler için bağlayıcı",
+        "İhracatçıların karşı taraf tarama ve uyum süreçlerini güncellemesi gerekiyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "MASAK",
+          "Hazine ve Maliye Bakanlığı",
+          "Birleşmiş Milletler"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Ihracat",
+          "Bankacilik",
+          "Makine",
+          "Kimya",
+          "Savunma"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "yaptirim",
+        "masak",
+        "ihracat",
+        "uyum",
+        "malvarligi-dondurma"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 58,
+        "keyword": 58,
+        "recency": 91,
+        "corroboration": 20,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260912-1.pdf",
+      "title": "2027-2029 Kamu Yatırım Programı Genelgesi (2026/10): Zorunlu Haller Dışında Yeni Proje Alınmayacak",
+      "body": "12 Eylül 2026 tarihli ve 33368 sayılı Resmî Gazete'de yayımlanan 2026/10 sayılı Cumhurbaşkanlığı Genelgesi ile 2027-2029 Dönemi Kamu Yatırım Programı hazırlıklarının usul ve esasları belirlendi. Genelge, bakanlıklar ve tüm kamu kurumlarının üç yıllık dönem için yatırım tekliflerini hazırlarken uyacakları kuralları ve mali disiplin ilkelerini ortaya koyuyor. Genelgeye \"2027-2029 Dönemi Kamu Yatırım Programı Hazırlama Rehberi\" eşlik ediyor.\n\nGenelgenin en dikkat çekici hükmü tasarruf tedbirlerine ilişkin: zorunlu haller dışında 2027 Kamu Yatırım Programına yeni proje alınmayacak. Mevcut kaynaklar, fiziki gerçekleşme oranı yüksek ve hızlı tamamlanabilir projelere tahsis edilecek. Yatırım teklifleri; 12. Kalkınma Planı ilkeleri, 2027-2029 Orta Vadeli Program hedefleri ve belirlenen bütçe büyüklükleriyle uyumlu olmak zorunda. Harcamalarda etkinliğin artırılması, verimsiz alanların tasfiye edilmesi ve kamu taşıt kullanımının sistematik biçimde gözden geçirilmesi de genelgede yer alan başlıklar arasında. Proje teklifleri Kamu Yatırımları Bilgi Sistemi üzerinden dijital olarak iletilecek; rehberde proje tekliflerinin sisteme girişi ve yatırım tekliflerinin sunulması için takvim belirlendi.\n\nSanayiciler açısından kamu yatırım programı, doğrudan iş hacmi yaratan bir kalem. Enerji iletim ve dağıtım altyapısı, ulaştırma, demiryolu, liman, baraj ve sulama, organize sanayi bölgesi altyapıları, teknoloji geliştirme bölgeleri ve kamu Ar-Ge yatırımları bu program üzerinden finanse ediliyor. Yeni proje alınmaması yönündeki kısıt, taahhüt sektörü, inşaat malzemesi, çelik konstrüksiyon, elektrik-elektronik ekipman ve makine tedarikçileri için 2027'de kamu kaynaklı yeni ihale hacminin sınırlı kalacağına işaret ediyor. Buna karşılık devam eden projelerin hızlandırılması, mevcut sözleşmeleri olan yükleniciler ve onların tedarikçileri için nakit akışı bakımından olumlu.\n\nOSB altyapı yatırımları, sanayi sicil ve dijital dönüşüm projeleri gibi sanayiye dönük kamu yatırım kalemlerinin 2027 programındaki yerinin yakından izlenmesi öneriliyor.",
+      "published_at": "2026-09-12T08:00:00+03:00",
+      "language": "tr",
+      "summary": "2027 Kamu Yatırım Programına zorunlu haller dışında yeni proje alınmayacak; kaynak, fiziki gerçekleşmesi yüksek ve hızlı biten projelere yönlendirilecek. Taahhüt, inşaat malzemesi, çelik konstrüksiyon ve makine tedarikçileri için 2027'de kamu kaynaklı yeni ihale hacminin daralacağı, buna karşılık devam eden projelerde tahsilat hızının artacağı anlamına geliyor.",
+      "key_points": [
+        "2026/10 sayılı Cumhurbaşkanlığı Genelgesi 12 Eylül 2026'da yürürlüğe girdi",
+        "Zorunlu haller dışında 2027 programına yeni proje alınmayacak",
+        "Kaynaklar fiziki gerçekleşmesi yüksek ve hızlı tamamlanabilir projelere tahsis edilecek",
+        "Teklifler 12. Kalkınma Planı ve OVP 2027-2029 hedefleriyle uyumlu olacak",
+        "Proje teklifleri Kamu Yatırımları Bilgi Sistemi üzerinden dijital olarak iletilecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Strateji ve Bütçe Başkanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Insaat",
+          "Taahhut",
+          "Makine",
+          "Celik",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "kamu-yatirim-programi",
+        "butce",
+        "tasarruf-tedbirleri",
+        "ihale",
+        "altyapi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 76,
+        "keyword": 72,
+        "recency": 100,
+        "corroboration": 45,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260912-2.pdf",
+      "title": "2027-2029 Dönemi Bütçe Çağrısı ve Bütçe Hazırlama Rehberi Yayımlandı",
+      "body": "12 Eylül 2026 tarihli ve 33368 sayılı Resmî Gazete'de \"2027-2029 Dönemi Bütçe Çağrısı ve Eki Bütçe Hazırlama Rehberi\" tebliğ olarak yayımlandı. Bütçe Çağrısı, 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu çerçevesinde merkezî yönetim kapsamındaki kamu idarelerinin bütçe tekliflerini hazırlarken esas alacakları ilkeleri, standartları ve takvimi belirleyen temel belgedir.\n\nÇağrı; 2027-2029 Orta Vadeli Program hedefleri, 12. Kalkınma Planı öncelikleri ve makroekonomik varsayımlar doğrultusunda hazırlandı. Rehber, kurumların personel giderleri, mal ve hizmet alımları, cari transferler, sermaye giderleri ve sermaye transferleri kalemlerini hangi varsayımlarla projekte edeceklerini, hangi tavanlara uyacaklarını ve tekliflerini hangi formatta sunacaklarını ayrıntılı biçimde düzenliyor.\n\nAynı gün yayımlanan 2026/10 sayılı Kamu Yatırım Programı Genelgesi ile birlikte değerlendirildiğinde, 2027 bütçesinin belirgin bir mali disiplin ve tasarruf yaklaşımıyla hazırlanacağı anlaşılıyor. Harcamalarda etkinlik artırımı, verimsiz alanların tasfiyesi ve yeni proje kısıtı bu yaklaşımın temel unsurları.\n\nSanayiciler için bütçe çağrısının önemi birkaç kanaldan geliyor. Birincisi, kamu alımları: merkezî yönetim bütçesindeki mal ve hizmet alımı ile sermaye giderleri kalemleri, kamuya satış yapan üreticiler için doğrudan talep anlamına geliyor ve bu kalemlerin reel olarak daralması sipariş hacmini etkiliyor. İkincisi, teşvik ve destek bütçeleri: KOSGEB, TÜBİTAK, Sanayi ve Teknoloji Bakanlığı destek programları, ihracat destekleri ve tarımsal destekler cari transferler ile sermaye transferleri içinde yer aldığından, bu kalemlerdeki tavanlar destek programlarının 2027 kapasitesini belirliyor. Üçüncüsü, vergi tarafı: bütçe gelir hedeflerinin nasıl kurgulandığı, 2027'de vergi oranlarına ve istisnalara yönelik düzenleme ihtiyacının ölçüsünü gösteriyor.\n\nBütçe sürecinin ilerleyen aşamalarında kurum bütçe tekliflerinin Hazine ve Maliye Bakanlığı ile Strateji ve Bütçe Başkanlığı görüşmelerinde şekilleneceği, nihai bütçe kanunu teklifinin ise Ekim ayında TBMM'ye sunulacağı hatırlatılıyor.",
+      "published_at": "2026-09-12T08:00:00+03:00",
+      "language": "tr",
+      "summary": "2027 bütçesinin hazırlık kuralları ve takvimi belirlendi; belge, OVP 2027-2029 hedefleri ve sıkı mali disiplin yaklaşımı üzerine kurulu. Sanayici için kritik olan, kamu alımları ile KOSGEB/TÜBİTAK/ihracat destekleri gibi teşvik bütçelerinin 2027 tavanlarının bu süreçte belirlenecek olması; destek programlarına bağımlı yatırım planlarının buna göre kurgulanması gerekiyor.",
+      "key_points": [
+        "2027-2029 Bütçe Çağrısı ve Bütçe Hazırlama Rehberi 12 Eylül 2026'da yayımlandı",
+        "5018 sayılı Kanun çerçevesinde kurum bütçe tekliflerinin ilke ve takvimini belirliyor",
+        "OVP 2027-2029 hedefleri ve 12. Kalkınma Planı öncelikleriyle uyumlu hazırlandı",
+        "Aynı gün yayımlanan Kamu Yatırım Programı Genelgesi ile birlikte sıkı mali disiplin çerçevesi oluşturuyor",
+        "Teşvik ve destek bütçelerinin 2027 tavanları bu süreçte şekillenecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Hazine ve Maliye Bakanlığı",
+          "Strateji ve Bütçe Başkanlığı",
+          "KOSGEB",
+          "TÜBİTAK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Genel Ekonomi",
+          "Imalat Sanayi",
+          "KOBI"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "butce",
+        "kamu-maliyesi",
+        "tesvik",
+        "kamu-alimlari",
+        "mali-disiplin"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 70,
+        "keyword": 70,
+        "recency": 100,
+        "corroboration": 40,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/07/sgk-genelgesi-2026-21-turizm-ucret-destegi/",
+      "title": "SGK Genelgesi 2026/21: Konaklama Tesislerine Sigortalı Başına Günlük 116,67 TL Ücret Desteği",
+      "body": "Sosyal Güvenlik Kurumu'nun 4 Eylül 2026 tarihli ve 2026/21 sayılı Genelgesi, konaklama tesisi işyerlerine sağlanacak ücret desteğinin usul ve esaslarını düzenliyor. Genelge 1 Mayıs 2026 tarihinden itibaren geçerli olmak üzere yürürlüğe girdi.\n\nDestek, 2634 sayılı Turizmi Teşvik Kanunu kapsamında turizm işletmesi belgesine sahip özel sektöre ait konaklama tesisi işyerlerinde çalışan sigortalılar için uygulanıyor. Destek tutarı, uzun vadeli sigorta kollarına tabi sigortalıların prim ödeme gün sayısının 116,67 TL ile çarpılması suretiyle hesaplanıyor. Destek kapsamına malullük, yaşlılık ve ölüm sigortasına tabi olan sigortalılar giriyor; 1, 4, 5, 6, 13, 14, 20, 24, 28-37, 47 ve 51-55 numaralı belge türleriyle bildirilen sigortalılar kapsamda yer alıyor.\n\nİşverenlerin destekten yararlanabilmesi için muhtasar ve prim hizmet beyannamelerini yasal süresinde vermesi, tahakkuk eden primleri yasal süresi içinde ödemesi, Kuruma vadesi geçmiş borcunun bulunmaması (varsa yapılandırılmış veya taksitlendirilmiş olması ve düzenli ödenmesi), çalıştırılan kişilerin eksiksiz bildirilmesi ve prime esas kazançların doğru beyan edilmesi gerekiyor. 2026 Mayıs-Aralık döneminde yapılan denetimlerde kayıt dışı sigortalı çalıştırma veya eksik bildirim tespit edilmesi halinde destek kaybediliyor.\n\nUygulamada işyerlerinin ayrıca başvuru yapması gerekmiyor; Kültür ve Turizm Bakanlığı tarafından SGK'ya gönderilen turizm işletme belgeli tesis listeleri üzerinden sistem destek tutarını otomatik olarak hesaplıyor ve tahakkuk eden primlerden mahsup ediyor.\n\nGenelge doğrudan turizm sektörünü hedeflese de, prim teşvik sistemi bakımından tüm işverenleri ilgilendiren bir çerçeve sunuyor. Türkiye'de halen uygulaması devam eden 14 adet sigorta primi teşviki bulunuyor ve bunların 13'ü 4/a sigortalı çalıştıran işyerlerine yönelik. Sanayi işletmelerinin, kendi NACE kodları ve sigortalı profilleri üzerinden yararlanabilecekleri teşvikleri (asgari ücret desteği, 5 puanlık indirim, ilave istihdam teşviki, engelli ve genç istihdamı teşvikleri) düzenli olarak gözden geçirmesi, teşviklerden yararlanma şartlarının ortak olması nedeniyle bu genelgede sayılan uyum koşullarının genel bir kontrol listesi işlevi görmesi bekleniyor.",
+      "published_at": "2026-09-07T09:00:00+03:00",
+      "language": "tr",
+      "summary": "Turizm işletme belgeli konaklama tesislerine sigortalı prim gün sayısı başına 116,67 TL ücret desteği veriliyor; başvuru gerekmiyor, sistem otomatik mahsup ediyor. Genelgede sayılan yararlanma şartları (beyannamenin süresinde verilmesi, borçsuzluk, kayıt dışı çalıştırmama) tüm prim teşvikleri için ortak olduğundan sanayi işletmelerinin de kendi teşvik uygunluklarını bu kontrol listesiyle gözden geçirmesi gerekiyor.",
+      "key_points": [
+        "Genelge 4 Eylül 2026 tarihli ve 2026/21 sayılı; 1 Mayıs 2026'dan itibaren geçerli",
+        "Destek tutarı = prim ödeme gün sayısı x 116,67 TL",
+        "Kapsam: 2634 sayılı Kanuna göre turizm işletme belgeli özel sektör konaklama tesisleri",
+        "İşyerlerinin ayrıca başvurusu gerekmiyor; Kültür ve Turizm Bakanlığı listeleri üzerinden otomatik hesaplanıyor",
+        "Kayıt dışı sigortalı tespiti veya süresinde beyan verilmemesi halinde destek kaybediliyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Sosyal Güvenlik Kurumu",
+          "Kültür ve Turizm Bakanlığı",
+          "Çalışma ve Sosyal Güvenlik Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Turizm",
+          "Konaklama",
+          "Imalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "istihdam",
+      "sentiment": "POZITIF",
+      "tags": [
+        "sgk",
+        "prim-tesviki",
+        "istihdam",
+        "ucret-destegi",
+        "turizm"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 55,
+        "keyword": 72,
+        "recency": 57,
+        "corroboration": 30,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "turkiye-gazetesi",
+      "url": "https://www.turkiyegazetesi.com.tr/ekonomi/zincir-marketlere-acilan-sorusturmada-karar-iste-bim-migros-ve-soka-kesilen-cezalar-1813747",
+      "title": "Rekabet Kurulu Zincir Market Soruşturmasını Sonuçlandırdı: BİM, Migros ve ŞOK'a 155,6 Milyon TL Ceza",
+      "body": "Rekabet Kurulu, 4 Eylül 2026 tarihli kararıyla zincir marketler ve tedarikçileri hakkında yürüttüğü soruşturmaları sonuçlandırdı. Soruşturmalar 10 Mart 2025 tarihinde BİM, Migros ve ŞOK dahil olmak üzere perakende şirketleri ile tedarikçiler hakkında iki ayrı dosya olarak başlatılmıştı. Şirketler kararı Kamuyu Aydınlatma Platformu üzerinden yatırımcılarına duyurdu.\n\nKarar kapsamında BİM'e 67 milyon 217 bin 829,62 TL, Migros'a 48,4 milyon TL ve ŞOK Marketler'e 39,9 milyon TL idari para cezası uygulandı. Toplam ceza tutarı yaklaşık 155,6 milyon TL seviyesinde. Cezaların erken ödenmesi halinde yüzde 25 indirim uygulanacak; bu durumda BİM için tutar 50 milyon 413 bin 372 TL'ye, Migros için 36,3 milyon TL'ye ve ŞOK için 29,9 milyon TL'ye düşüyor.\n\nSoruşturmanın konusu, şirketlerin 4054 sayılı Rekabetin Korunması Hakkında Kanun'un 4 üncü maddesini (teşebbüsler arası rekabeti sınırlayıcı anlaşma, uyumlu eylem ve kararlar) ihlal edip etmedikleriydi. Dosyalar uzlaşma usulüyle sonlandırıldı; uzlaşma usulü, teşebbüsün ihlali kabul etmesi karşılığında cezada indirim sağlayan ve soruşturma süresini kısaltan bir mekanizma. BİM hakkındaki soruşturmalardan birinde 4 üncü maddenin ihlal edilmediği sonucuna varılarak idari para cezası uygulanmadı, diğeri ise uzlaşma ile sonuçlandı.\n\nRekabet Kurumu'nun 2026'nın ilk yarısında rekabet ihlali tespit ettiği 209 teşebbüse yaklaşık 17 milyar TL idari para cezası uyguladığı, halen 47 soruşturmanın devam ettiği bildirildi.\n\nBu kararlar, perakendeye ürün veren gıda, temizlik, kozmetik, ambalaj ve dayanıklı tüketim malı üreticileri açısından önemli bir uyarı niteliği taşıyor. Özellikle tedarikçi-perakendeci ilişkilerinde fiyat bilgisi paylaşımı, yeniden satış fiyatının belirlenmesi (RPM), bölge ve müşteri paylaşımı ile rakipler arasında hassas ticari bilgi değişimi Kurumun yoğun denetim alanında bulunuyor. Sanayi şirketlerinin satış ve kategori yönetimi ekipleri için rekabet hukuku uyum programlarının, dokümantasyon disiplininin ve eğitim süreçlerinin gözden geçirilmesi öneriliyor.",
+      "published_at": "2026-09-07T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Rekabet Kurulu zincir market dosyalarını uzlaşma usulüyle kapattı; BİM, Migros ve ŞOK'a toplam 155,6 milyon TL ceza kesildi. Perakendeye ürün veren gıda, temizlik, kozmetik ve ambalaj üreticileri için asıl mesaj, tedarikçi-perakendeci ilişkilerinde fiyat bilgisi paylaşımı ve yeniden satış fiyatı belirlemenin sıkı denetim altında olduğu; satış ekiplerinin rekabet hukuku uyum programlarını güncellemesi gerekiyor.",
+      "key_points": [
+        "Rekabet Kurulu kararı 4 Eylül 2026 tarihli; soruşturmalar 10 Mart 2025'te açılmıştı",
+        "BİM 67,2 milyon TL, Migros 48,4 milyon TL, ŞOK 39,9 milyon TL ceza aldı",
+        "Erken ödeme halinde %25 indirim uygulanıyor",
+        "Dosyalar 4054 sayılı Kanun'un 4 üncü maddesi kapsamında uzlaşma usulüyle sonuçlandırıldı",
+        "Kurum 2026'nın ilk yarısında 209 teşebbüse yaklaşık 17 milyar TL ceza uyguladı; 47 soruşturma sürüyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Rekabet Kurumu",
+          "Rekabet Kurulu",
+          "KAP"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Perakende",
+          "Gida",
+          "Ambalaj",
+          "Temizlik Urunleri"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "rekabet-hukuku",
+        "idari-para-cezasi",
+        "perakende",
+        "uyum",
+        "tedarik-zinciri"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 66,
+        "keyword": 68,
+        "recency": 57,
+        "corroboration": 60,
+        "reach": 70
+      }
+    }
+  ]
+}
