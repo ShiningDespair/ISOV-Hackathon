@@ -1,0 +1,26 @@
+# deps
+node_modules/
+*/node_modules/
+
+# env
+.env
+.env.local
+*.env
+!.env.example
+
+# build
+.next/
+out/
+dist/
+build/
+
+# runtime
+*.log
+npm-debug.log*
+.DS_Store
+data/
+volumes/
+
+# ide
+.vscode/
+.idea/
