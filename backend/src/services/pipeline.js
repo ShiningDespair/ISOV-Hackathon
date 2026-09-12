@@ -7,9 +7,13 @@
 // IDEMPOTENT: ayni veri uzerinde iki kez kosarsa ayni cluster_key'ler
 // uretilir, upsert edilir ve skorlar ayni cikar.
 // ---------------------------------------------------------------------
-import { articleSimhash, clusterArticles, contentHash } from '../lib/dedup.js';
+import {
+  articleSimhash, clusterArticles, clusterKeyOf, contentHash, pickRepresentative, urlHash,
+} from '../lib/dedup.js';
 import { buildFactors, computeImportance } from '../lib/importance.js';
 import { toMysqlDateTime } from '../lib/http.js';
+import { buildEmbeddingText, embed } from './embeddings.js';
+import * as vectorStore from './vectorStore.js';
 
 /**
  * Parmak izlerini (content_hash + simhash) baslik/govdeden yeniden uretir.
@@ -43,7 +47,7 @@ export async function refreshFingerprints(conn) {
  */
 export async function recomputeClusters(conn, opts = {}) {
   const [rows] = await conn.query(
-    `SELECT a.id, a.source_id, a.url_hash, a.title, a.body, a.content_hash, a.simhash,
+    `SELECT a.id, a.source_id, a.url_hash, a.title, a.body, a.summary, a.content_hash, a.simhash,
             a.published_at, s.authority_weight
        FROM articles a
        JOIN sources s ON s.id = a.source_id
@@ -54,7 +58,13 @@ export async function recomputeClusters(conn, opts = {}) {
     return { clusters: 0, duplicates: 0, multiSource: 0 };
   }
 
-  const clusters = clusterArticles(rows, opts);
+  // 1) Mevcut (sozcuksel) kumeleme — davranisi DEGISMEDI.
+  const lexicalClusters = clusterArticles(rows, opts);
+  // 2) EK katman: diller arasi semantik birlestirme. Basarisiz olursa
+  //    sozcuksel sonuc oldugu gibi kullanilir.
+  const semanticResult = await semanticMerge(lexicalClusters, rows, opts);
+  const clusters = semanticResult.clusters;
+
   const usedClusterIds = [];
   let duplicates = 0;
   let multiSource = 0;
@@ -119,7 +129,7 @@ export async function recomputeClusters(conn, opts = {}) {
     await conn.execute(`DELETE FROM clusters WHERE id NOT IN (${ph})`, usedClusterIds);
   }
 
-  return { clusters: clusters.length, duplicates, multiSource };
+  return { clusters: clusters.length, duplicates, multiSource, semantic: semanticResult.stats };
 }
 
 /**
@@ -193,6 +203,257 @@ function safeJson(value) {
   try { return JSON.parse(value) || {}; } catch { return {}; }
 }
 
+// =====================================================================
+// SEMANTIK (DILLER ARASI) TEKILLESTIRME — EK KATMAN
+//
+// Sozcuksel kumeleme bittikten SONRA calisir ve sonucunun UZERINE YAZMAZ;
+// yalnizca yeni birlestirmeler ekler. Kapaliysa ya da model/Qdrant yoksa
+// hic devreye girmez ve sistem eskisi gibi calisir.
+//
+// Iki haber SADECE su kosullarin HEPSI saglanirsa birlestirilir:
+//   1) kosinus benzerligi >= SEMANTIC_SIMILARITY_THRESHOLD
+//   2) FARKLI kaynak — kumeleme "kac bagimsiz kaynak dogruladi" sorusunu
+//      yanitlar; ayni kaynagin iki yazisini birlestirmek bu sayiyi sisirir
+//   3) published_at farki <= SEMANTIC_MAX_DAY_GAP gun
+//   4) sayisal uyum siniri (asagida) — ayni olay ayni mansetteki rakamlari
+//      tasir; hicbir rakami ortusmeyen iki metin ayni olay degildir
+// =====================================================================
+
+/** Varsayilanlar canli veri uzerinde kalibre edildi (bkz. docs/CONTRACT.md). */
+export const DEFAULT_SEMANTIC_THRESHOLD = 0.935;
+export const DEFAULT_SEMANTIC_MAX_DAY_GAP = 4;
+/** Her haber icin Qdrant'tan istenecek komsu sayisi. */
+const SEMANTIC_NEIGHBOR_LIMIT = 12;
+
+/**
+ * Metindeki anlamli sayilarin kanonik kumesi.
+ *
+ * NEDEN: "4.476 dolar" ile "$4,476", "yuzde 2,50" ile "2.5%" ayni sayidir
+ * ama farkli yazilir. Binlik ayraci atilir, ondalik virgul noktaya cevrilir.
+ * Yillar (1900-2100) ve 0,1'den kucuk degerler ayirt edici olmadigi icin atilir.
+ */
+export function numericSignature(text) {
+  const out = new Set();
+  const str = String(text ?? '');
+  const re = /\d[\d.,]*/g;
+  let m;
+  while ((m = re.exec(str)) !== null) {
+    let v = m[0].replace(/[.,]+$/, '');
+    // 1.234,56 / 1,234.56 / 4.476 -> binlik ayraclarini kaldir
+    if (/^\d{1,3}([.,]\d{3})+([.,]\d+)?$/.test(v)) {
+      v = v.replace(/[.,](?=\d{3}(\D|$))/g, '');
+    }
+    v = v.replace(',', '.');
+    const n = Number(v);
+    if (!Number.isFinite(n)) continue;
+    if (Number.isInteger(n) && n >= 1900 && n <= 2100) continue; // yil
+    if (n < 0.1) continue;
+    out.add(String(Math.round(n * 1000) / 1000));
+  }
+  return out;
+}
+
+/**
+ * Sayisal uyum siniri.
+ * Iki metinde de rakam varsa EN AZ BIRI ortusmeli. Taraflardan biri
+ * rakamsizsa (yorum/analiz yazilari) sinir uygulanmaz — o durumda karari
+ * tek basina semantik benzerlik verir.
+ */
+function numericAgreement(sigA, sigB) {
+  if (sigA.size === 0 || sigB.size === 0) return true;
+  for (const v of sigA) if (sigB.has(v)) return true;
+  return false;
+}
+
+/** Semantik katman ayarlarini ortamdan okur. */
+export function semanticOptionsFromEnv(overrides = {}) {
+  const flag = String(process.env.SEMANTIC_DEDUP_ENABLED ?? 'true').toLowerCase();
+  const enabled = !['0', 'false', 'off', 'no', 'hayir'].includes(flag);
+
+  const thr = Number(process.env.SEMANTIC_SIMILARITY_THRESHOLD);
+  const gap = Number(process.env.SEMANTIC_MAX_DAY_GAP);
+  const guardFlag = String(process.env.SEMANTIC_REQUIRE_NUMERIC_AGREEMENT ?? 'true').toLowerCase();
+
+  return {
+    semanticEnabled: enabled,
+    semanticThreshold: Number.isFinite(thr) && thr > 0 && thr <= 1 ? thr : DEFAULT_SEMANTIC_THRESHOLD,
+    semanticMaxDayGap: Number.isFinite(gap) && gap >= 0 ? gap : DEFAULT_SEMANTIC_MAX_DAY_GAP,
+    semanticNumericGuard: !['0', 'false', 'off', 'no', 'hayir'].includes(guardFlag),
+    ...overrides,
+  };
+}
+
+/** Basit union-find (dedup.js'teki ile ayni fikir, kume indeksleri uzerinde). */
+function makeUnionFind(n) {
+  const parent = Array.from({ length: n }, (_, i) => i);
+  const find = (x) => {
+    let r = x;
+    while (parent[r] !== r) r = parent[r];
+    while (parent[x] !== r) { const nx = parent[x]; parent[x] = r; x = nx; }
+    return r;
+  };
+  return {
+    find,
+    union(a, b) {
+      const ra = find(a); const rb = find(b);
+      if (ra === rb) return false;
+      parent[rb] = ra;
+      return true;
+    },
+  };
+}
+
+/**
+ * Sozcuksel kumelerin uzerine semantik birlestirmeleri ekler.
+ *
+ * @param {Array} lexicalClusters clusterArticles() ciktisi
+ * @param {Array} rows makale satirlari (summary DAHIL)
+ * @param {object} opts
+ * @returns {Promise<{clusters:Array, stats:object}>}
+ */
+export async function semanticMerge(lexicalClusters, rows, opts = {}) {
+  const cfg = semanticOptionsFromEnv(opts);
+  const stats = {
+    enabled: cfg.semanticEnabled,
+    threshold: cfg.semanticThreshold,
+    maxDayGap: cfg.semanticMaxDayGap,
+    model: null,
+    embedded: 0,
+    edges: 0,
+    merged: 0,
+    skipped: null,
+  };
+
+  if (!cfg.semanticEnabled) {
+    stats.skipped = 'SEMANTIC_DEDUP_ENABLED=false';
+    return { clusters: lexicalClusters, stats };
+  }
+  if (!Array.isArray(rows) || rows.length < 2) {
+    stats.skipped = 'yeterli veri yok';
+    return { clusters: lexicalClusters, stats };
+  }
+
+  try {
+    // --- 1) Embedding -------------------------------------------------
+    const texts = rows.map((r) => buildEmbeddingText(r));
+    const emb = await embed(texts);
+    stats.model = emb.model;
+    if (!emb.available || emb.vectors.length !== rows.length) {
+      stats.skipped = `embedding yok: ${emb.error || 'bilinmeyen'}`;
+      return { clusters: lexicalClusters, stats };
+    }
+    stats.embedded = emb.vectors.length;
+
+    // --- 2) Vektor deposu ---------------------------------------------
+    const ready = await vectorStore.ensureCollection(emb.dim);
+    if (!ready.ok) {
+      stats.skipped = `qdrant yok: ${ready.error || 'bilinmeyen'}`;
+      return { clusters: lexicalClusters, stats };
+    }
+
+    const points = rows.map((r, i) => ({
+      id: Number(r.id),
+      vector: emb.vectors[i],
+      payload: {
+        article_id: Number(r.id),
+        source_id: Number(r.source_id ?? 0),
+        title: String(r.title || '').slice(0, 400),
+        published_at: r.published_at ? new Date(r.published_at).toISOString() : null,
+      },
+    }));
+    const wrote = await vectorStore.upsertArticles(points);
+    if (!wrote.ok) {
+      stats.skipped = `qdrant yazilamadi: ${wrote.error || 'bilinmeyen'}`;
+      return { clusters: lexicalClusters, stats };
+    }
+    // NOT: DB'den dusmus haberlerin eski vektorleri koleksiyonda kalabilir;
+    // komsu sonuclari `byId` uzerinden suzuldugu icin kumelemeyi etkilemezler.
+
+    // --- 3) Komsu sorgulari -> aday kenarlar ---------------------------
+    const byId = new Map(rows.map((r, i) => [Number(r.id), i]));
+    const sigs = rows.map((r) => numericSignature(`${r.title || ''} ${r.summary || ''}`));
+    const times = rows.map((r) => (r.published_at ? new Date(r.published_at).getTime() : NaN));
+    const maxGapMs = cfg.semanticMaxDayGap * 86400000;
+
+    // Makale id -> kume indeksi
+    const clusterOf = new Map();
+    lexicalClusters.forEach((c, ci) => {
+      for (const m of c.members) clusterOf.set(Number(m.id), ci);
+    });
+
+    const uf = makeUnionFind(lexicalClusters.length);
+    const seen = new Set();
+    let merged = 0;
+    let edges = 0;
+
+    for (let i = 0; i < rows.length; i++) {
+      const res = await vectorStore.searchNeighbors(emb.vectors[i], {
+        limit: SEMANTIC_NEIGHBOR_LIMIT,
+        scoreThreshold: cfg.semanticThreshold,
+      });
+      if (!res.ok) {
+        stats.skipped = `qdrant sorgusu basarisiz: ${res.error || 'bilinmeyen'}`;
+        return { clusters: lexicalClusters, stats };
+      }
+
+      for (const hit of res.hits) {
+        const j = byId.get(hit.id);
+        if (j === undefined || j === i) continue;
+        const pairKey = i < j ? `${i}-${j}` : `${j}-${i}`;
+        if (seen.has(pairKey)) continue;
+        seen.add(pairKey);
+
+        // KOSUL 1: benzerlik (score_threshold zaten uyguladi, yine de dogrula)
+        if (!(hit.score >= cfg.semanticThreshold)) continue;
+        // KOSUL 2: farkli kaynak
+        const sa = rows[i].source_id ?? null;
+        const sb = rows[j].source_id ?? null;
+        if (sa !== null && sb !== null && Number(sa) === Number(sb)) continue;
+        // KOSUL 3: yayin tarihi yakinligi
+        if (!Number.isNaN(times[i]) && !Number.isNaN(times[j])
+          && Math.abs(times[i] - times[j]) > maxGapMs) continue;
+        // KOSUL 4: sayisal uyum
+        if (cfg.semanticNumericGuard && !numericAgreement(sigs[i], sigs[j])) continue;
+
+        edges += 1;
+        const ca = clusterOf.get(Number(rows[i].id));
+        const cb = clusterOf.get(Number(rows[j].id));
+        if (ca === undefined || cb === undefined) continue;
+        if (uf.union(ca, cb)) merged += 1;
+      }
+    }
+
+    stats.edges = edges;
+    stats.merged = merged;
+    if (merged === 0) return { clusters: lexicalClusters, stats };
+
+    // --- 4) Kumeleri yeniden kur (anahtar + temsilci bastan hesaplanir) --
+    const groups = new Map();
+    lexicalClusters.forEach((c, ci) => {
+      const root = uf.find(ci);
+      if (!groups.has(root)) groups.set(root, []);
+      groups.get(root).push(...c.members);
+    });
+
+    const rebuilt = [];
+    for (const members of groups.values()) {
+      const key = clusterKeyOf(members.map((m) => m.url_hash || urlHash(m.url)));
+      rebuilt.push({
+        cluster_key: key,
+        members,
+        representative: pickRepresentative(members),
+        member_count: members.length,
+      });
+    }
+    rebuilt.sort((a, b) => (a.cluster_key < b.cluster_key ? -1 : 1));
+    return { clusters: rebuilt, stats };
+  } catch (err) {
+    // Her turlu beklenmeyen hata: sozcuksel sonuca don, sistemi durdurma.
+    stats.skipped = `hata: ${err?.message || String(err)}`;
+    return { clusters: lexicalClusters, stats };
+  }
+}
+
 /**
  * Dedup esiklerini ortamdan okur (.env ile ince ayar yapilabilsin diye);
  * gecersiz/eksik degerlerde dedup.js varsayilanlari gecerli kalir.
@@ -217,7 +478,7 @@ export function thresholdsFromEnv(overrides = {}) {
 
 /** Parmak izi tazeleme + kumeleme + skorlama tek adimda. */
 export async function runPipeline(conn, opts = {}) {
-  const options = thresholdsFromEnv(opts);
+  const options = { ...thresholdsFromEnv(opts), ...semanticOptionsFromEnv(opts) };
   const refreshed = await refreshFingerprints(conn);
   const clustering = await recomputeClusters(conn, options);
   const scoring = await recomputeImportance(conn, options);

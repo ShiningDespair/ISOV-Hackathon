@@ -4,3 +4,5 @@ npm-debug.log*
 .env.local
 *.log
 .git
+# Embedding modeli onbellegi (~1 GB) build context'e girmesin
+.cache

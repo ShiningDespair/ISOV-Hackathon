@@ -76,13 +76,31 @@ services:
       DB_NAME: ${DB_NAME:-isov}
       DB_USER: ${DB_USER:-isov}
       DB_PASSWORD: ${DB_PASSWORD:-isov_pass}
+      # Seed dosyalari konteynerde /app/seed'e baglanir (asagidaki volume).
+      # Varsayilan host yolu oldugu icin acikca verilmeli; aksi halde
+      # `docker compose exec backend npm run seed` klasoru bulamiyor.
+      SEED_DIR: /app/seed
       QDRANT_URL: http://qdrant:6333
+      QDRANT_COLLECTION: ${QDRANT_COLLECTION:-isov_articles}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      # --- Semantik (diller arasi) tekillestirme ---------------------
+      # Sozcuksel dedup'in USTUNE calisan ek katman. Model ya da Qdrant
+      # yoksa sistem eskisi gibi calisir, sadece semantik kume olusmaz.
+      SEMANTIC_DEDUP_ENABLED: ${SEMANTIC_DEDUP_ENABLED:-true}
+      SEMANTIC_SIMILARITY_THRESHOLD: ${SEMANTIC_SIMILARITY_THRESHOLD:-0.935}
+      SEMANTIC_MAX_DAY_GAP: ${SEMANTIC_MAX_DAY_GAP:-4}
+      SEMANTIC_REQUIRE_NUMERIC_AGREEMENT: ${SEMANTIC_REQUIRE_NUMERIC_AGREEMENT:-true}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-Xenova/multilingual-e5-base}
+      # Model dosyalari named volume'da; her baslatmada yeniden inmez.
+      EMBEDDING_CACHE_DIR: /app/.cache/models
+      EMBEDDING_LOAD_TIMEOUT_MS: ${EMBEDDING_LOAD_TIMEOUT_MS:-300000}
     ports:
       - "127.0.0.1:${BACKEND_PORT:-5005}:5005"
     volumes:
       # Seed dosyalari salt-okunur baglanir; `npm run seed` bunlari okur.
       - ./seed:/app/seed:ro
+      # Embedding modeli onbellegi — ~1,1 GB, konteyner yeniden kurulsa da kalir.
+      - model_cache:/app/.cache/models
     # Docker'in gomulu DNS'i dis cozumlemede flake edebiliyor; sabit upstream
     # verildiginde servis kesfi (db/qdrant) yine 127.0.0.11 uzerinden calisir.
     dns:
@@ -118,6 +136,8 @@ services:
 volumes:
   db_data:
   qdrant_data:
+  # Embedding modeli onbellegi (HuggingFace indirmeleri)
+  model_cache:
 
 networks:
   isov:
