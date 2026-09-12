@@ -1,0 +1,129 @@
+# =====================================================================
+# ISO / ISOV - Dis Kaynak Izleme ve Ozet Botu
+# Port haritasi docs/CONTRACT.md ile ayni tutulmali.
+# =====================================================================
+services:
+
+  # ------------------------------------------------------------------
+  # Veri katmani - MySQL 8
+  # Not: --default-time-zone=+03:00 -> NOW() ve DEFAULT CURRENT_TIMESTAMP
+  # degerleri uygulamanin kullandigi TRT ile ayni olsun; "her yer GMT+3".
+  # ------------------------------------------------------------------
+  db:
+    image: mysql:8.0
+    container_name: isov-db
+    restart: unless-stopped
+    command: >
+      --default-time-zone=+03:00
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --innodb-ft-min-token-size=2
+    environment:
+      TZ: Europe/Istanbul
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-isov_root}
+      MYSQL_DATABASE: ${DB_NAME:-isov}
+      MYSQL_USER: ${DB_USER:-isov}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-isov_pass}
+    ports:
+      - "127.0.0.1:${DB_PORT:-3312}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      # Sirali calisir: 01 sema, 02 etiket sozlugu
+      - ./backend/db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-p${DB_ROOT_PASSWORD:-isov_root}"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
+    networks:
+      - isov
+
+  # ------------------------------------------------------------------
+  # Vektor deposu - semantik tekillestirme icin (opsiyonel katman)
+  # simhash + jaccard yeterli olmadiginda embedding tabanli kumeleme.
+  # ------------------------------------------------------------------
+  qdrant:
+    image: qdrant/qdrant:v1.12.1
+    container_name: isov-qdrant
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${QDRANT_PORT:-6335}:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - isov
+
+  # ------------------------------------------------------------------
+  # Backend - Express.js REST API
+  # ------------------------------------------------------------------
+  backend:
+    build:
+      context: ./backend
+    container_name: isov-backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+    environment:
+      TZ: Europe/Istanbul
+      NODE_ENV: production
+      PORT: 5005
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-isov}
+      DB_USER: ${DB_USER:-isov}
+      DB_PASSWORD: ${DB_PASSWORD:-isov_pass}
+      QDRANT_URL: http://qdrant:6333
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-5005}:5005"
+    volumes:
+      # Seed dosyalari salt-okunur baglanir; `npm run seed` bunlari okur.
+      - ./seed:/app/seed:ro
+    # Docker'in gomulu DNS'i dis cozumlemede flake edebiliyor; sabit upstream
+    # verildiginde servis kesfi (db/qdrant) yine 127.0.0.11 uzerinden calisir.
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    networks:
+      - isov
+      - proxy
+
+  # ------------------------------------------------------------------
+  # Frontend - Next.js 15 (standalone cikti)
+  # ------------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+    container_name: isov-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      TZ: Europe/Istanbul
+      NODE_ENV: production
+      # Sunucu tarafi (RSC) cagrilari konteyner agi uzerinden
+      API_BASE_URL: http://backend:5005/api
+      # Tarayici tarafi cagrilar Next rewrite'i uzerinden -> /api
+      NEXT_PUBLIC_API_BASE_URL: /api
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-3005}:3000"
+    networks:
+      - isov
+      - proxy
+
+volumes:
+  db_data:
+  qdrant_data:
+
+networks:
+  isov:
+    name: isov
+  # Nginx Proxy Manager'in bulundugu mevcut ag; hackathon.dhsyazilim.com
+  # yonlendirmesi bu ag uzerinden isov-frontend:3000'e baglanir.
+  proxy:
+    name: proxy_default
+    external: true
