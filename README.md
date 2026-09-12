@@ -37,7 +37,12 @@ gösterilmez**; API yalnızca `?reveal=1` ile döndürür. Kullanıcı yalnızca
 
 Bileşenlerin ham hâli `importance_factors` JSON kolonunda saklanır — skor her
 zaman **açıklanabilir**. Bant, `importance_band` generated column'u ile üretilir:
-`KRİTİK ≥80 · YÜKSEK ≥60 · ORTA ≥35 · DÜŞÜK <35`.
+`KRİTİK ≥78 · YÜKSEK ≥70 · ORTA ≥62 · DÜŞÜK <62`.
+
+Eşikler tahminle değil, ilk korpusun gerçek dağılımına göre kalibre edildi
+(131 haber, skor aralığı 50,8–84,9, ortalama 68,1). Başlangıçtaki 80/60/35
+değerleri haberlerin %80'ini tek banda yığıyor, alt bandı hiç kullanmıyordu —
+her şey "yüksek önemli" ise bant bilgi taşımaz.
 
 ## Mimari
 

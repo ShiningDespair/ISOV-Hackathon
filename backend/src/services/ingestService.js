@@ -108,6 +108,10 @@ export async function upsertSources(conn, sources = []) {
  * @param {Array<string|object>} tags
  * @returns {Map<string,{id,weight}>}
  */
+/** Kuratorlu sozlukte bulunmayan etiketin notr on-degeri. Semadaki
+ *  tags.weight DEFAULT 40 ile ayni tutulmali. */
+const UNCURATED_TAG_WEIGHT = 40;
+
 export async function upsertTags(conn, tags = []) {
   const map = new Map();
   for (const tag of tags) {
@@ -117,7 +121,15 @@ export async function upsertTags(conn, tags = []) {
 
     const label = String((isObject && tag.label) || labelFromSlug(slug)).slice(0, 120);
     const kind = isObject && TAG_KINDS.has(tag.kind) ? tag.kind : 'konu';
-    const weight = clampByte(isObject ? tag.weight : undefined, 10);
+    // Sozlukte tanimli olmayan etiket icin NOTR ON-DEGER (40), dusuk deger degil.
+    // Seed'den gelen etiketler duz string oldugu icin bu yol neredeyse her
+    // zaman calisiyor: onceki 10 degeri 402 etiketin 304'unu "onemsiz"
+    // damgaliyor, "orta-vadeli-program" ve "sanayi-politikasi" gibi gercekten
+    // kritik konulari keyword bileseninde tabana cakiyordu. Tanimsizlik kanit
+    // yoklugudur, onemsizlik kaniti degil.
+    // Not: yukaridaki ON DUPLICATE KEY ... GREATEST(...) sayesinde bu deger
+    // 02_tags.sql'deki kuratorlu agirliklari asla asagi cekmez.
+    const weight = clampByte(isObject ? tag.weight : undefined, UNCURATED_TAG_WEIGHT);
 
     await conn.execute(
       `INSERT INTO tags (slug, label, kind, weight)

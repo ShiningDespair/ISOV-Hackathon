@@ -90,12 +90,22 @@ CREATE TABLE IF NOT EXISTS articles (
   importance_score  DECIMAL(5,2) NOT NULL DEFAULT 0.00,
   -- skorun bilesenleri: {"authority":x,"recency":x,"reach":x,"impact":x,"keyword":x,"corroboration":x}
   importance_factors JSON NULL,
+  -- Esikler GERCEK DAGILIMA GORE KALIBRE EDILDI. Ilk degerler (80/60/35)
+  -- elimizde hic veri yokken tahminle konmustu; 131 haberlik ilk korpusta
+  -- skorlar 50,8-84,9 araliginda cikti (ortalama 68,1) ve bu esikler
+  -- haberlerin %80'ini tek banda (YUKSEK) yigip alt bandi hic kullanmadi.
+  -- Her sey "yuksek onemli" ise band bilgi tasimaz.
+  -- 78/70/62 yaklasik p87/p59/p25'e denk gelir: ust %13 KRITIK, sonraki
+  -- %28 YUKSEK, sonraki %34 ORTA, alt %25 DUSUK.
+  -- NOT: sabit esikler korpus buyudukce kayar. Kalici cozum, kayan pencere
+  -- uzerinden yuzdelik bantlar olurdu; generated column ile ifade
+  -- edilemedigi icin simdilik kalibre sabitler kullaniliyor.
   importance_band   ENUM('KRITIK','YUKSEK','ORTA','DUSUK')
                     GENERATED ALWAYS AS (
                       CASE
-                        WHEN importance_score >= 80 THEN 'KRITIK'
-                        WHEN importance_score >= 60 THEN 'YUKSEK'
-                        WHEN importance_score >= 35 THEN 'ORTA'
+                        WHEN importance_score >= 78 THEN 'KRITIK'
+                        WHEN importance_score >= 70 THEN 'YUKSEK'
+                        WHEN importance_score >= 62 THEN 'ORTA'
                         ELSE 'DUSUK'
                       END
                     ) STORED,

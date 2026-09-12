@@ -11,7 +11,6 @@ import { getArticles, getStatsOverview, getTags } from "@/lib/api";
 import {
   formatNumber,
   regionLabel,
-  sortByImportance,
   toBuckets,
 } from "@/lib/format";
 import type { Article } from "@/lib/types";
@@ -77,7 +76,14 @@ export default async function HomePage({
     );
   }
 
-  const all = sortByImportance(articlesRes.data.data);
+  // Backend zaten gizli onem skoruna gore siralayip donuyor (importance_score
+  // DESC, published_at DESC). Burada YENIDEN SIRALAMIYORUZ: istemci skoru
+  // goremedigi icin elindeki en ince olcut band; band+tarihe gore sirlamak
+  // skor siralamasini yok ediyordu. Somut sonuc: manset, en yuksek skorlu
+  // haber (AB'nin Turkiye mensei celige anti-damping kaydi, 84,9) yerine
+  // ayni bandin en yeni tarihlisi (Butce Cagrisi, 78,2) oluyordu - yani
+  // gizli metrigin tum amaci kayboluyordu. API sirasi korunur.
+  const all = articlesRes.data.data;
   const total = articlesRes.data.total || all.length;
   const lead = all[0];
   const secondary = all.slice(1, 7);
