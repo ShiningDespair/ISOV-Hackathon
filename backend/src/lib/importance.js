@@ -77,13 +77,32 @@ export function computeCorroboration(memberCount) {
 
 /**
  * Etiket agirliklarindan keyword bileseni.
- * tags.weight 0..100; toplam 100'de tavanlanir ki 10 zayif etiket
- * tek bir kritik etiketi golgede birakmasin.
+ *
+ * ONCEKI SURUM HATALIYDI: agirliklari toplayip 100'de kirpiyordu. Uc ya da
+ * daha fazla etiketi olan her haber 200'u asip 100'e kirpildigi icin bilesen
+ * doyuma ulasmisti - gercek veride ortalamasi 93,4 cikti ve hicbir ayirt etme
+ * gucu kalmamisti. Bir metrigin her habere ayni puani vermesi, o metrigi
+ * agirlikli toplamda sabit terime dondurur.
+ *
+ * Yerine azalan getirili harman: baskin etiket agirligin cogunu tasir, kalan
+ * etiketler katki verir ama doyurmaz. En guclu uc etiketin ortalamasi
+ * kullanilir ki bir yigin zayif etiket tek bir kritik etiketi golgelemesin
+ * (asil amac buydu) - ama tersi de olmasin, tek kritik etiket tek basina
+ * tavana vurmasin.
+ *
+ * Aralik: en zayif etiket agirligi .. en guclu etiket agirligi (10..95).
  */
 export function computeKeyword(tagWeights = []) {
   if (!Array.isArray(tagWeights) || tagWeights.length === 0) return DEFAULT_FACTOR;
-  const total = tagWeights.reduce((acc, w) => acc + (Number.isFinite(Number(w)) ? Number(w) : 0), 0);
-  return clamp100(total, DEFAULT_FACTOR);
+  const weights = tagWeights
+    .map(Number)
+    .filter(Number.isFinite)
+    .sort((a, b) => b - a);
+  if (weights.length === 0) return DEFAULT_FACTOR;
+
+  const top = weights.slice(0, 3);
+  const topMean = top.reduce((a, w) => a + w, 0) / top.length;
+  return clamp100(0.65 * weights[0] + 0.35 * topMean, DEFAULT_FACTOR);
 }
 
 /**

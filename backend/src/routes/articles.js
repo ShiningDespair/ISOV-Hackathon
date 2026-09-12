@@ -1,0 +1,219 @@
+// ---------------------------------------------------------------------
+// GET /api/articles       — filtreli, sayfali liste
+// GET /api/articles/:id   — detay + kume uyeleri + etiketler
+//
+// Guvenlik notu: tum kullanici degerleri `?` ile parametrelenir.
+// Tek istisna LIMIT/OFFSET; onlar da Number.parseInt'ten gecip 1..100
+// araligina sikistirildigi icin string birlestirme guvenli.
+// ---------------------------------------------------------------------
+import { Router } from 'express';
+import { query } from '../lib/db.js';
+import {
+  ApiError, asyncHandler, parsePagination, pickFromAllowList,
+  parseDateParam, placeholders, qs, qsList, toMysqlDateTime,
+} from '../lib/http.js';
+import { serializeList, serializeArticle, wantsReveal } from '../lib/serialize.js';
+import {
+  ARTICLE_COLUMNS, ARTICLE_FROM, findArticleRow, findClusterMemberRows,
+  serializeArticleRows, tagsByArticleIds,
+} from '../services/articleService.js';
+
+const router = Router();
+
+/** ENUM degerleri — sema ile birebir, allow-list olarak kullaniliyor. */
+export const REGIONS = ['KURESEL', 'TURKIYE', 'AMERIKA', 'AVRUPA', 'ASYA', 'DIGER'];
+export const BANDS = ['KRITIK', 'YUKSEK', 'ORTA', 'DUSUK'];
+export const SENTIMENTS = ['POZITIF', 'NOTR', 'NEGATIF'];
+
+/**
+ * Siralama allow-list'i. Anahtar disaridan gelir, DEGER sabittir —
+ * bu sayede `sort=; DROP TABLE` gibi bir girdi SQL'e ulasamaz.
+ */
+const SORTS = {
+  importance: 'a.importance_score DESC, a.published_at DESC, a.id DESC',
+  recent: 'a.published_at DESC, a.importance_score DESC, a.id DESC',
+  oldest: 'a.published_at ASC, a.id ASC',
+  title: 'a.title ASC, a.id ASC',
+  relevance: null, // q varsa MATCH skoruna gore; yoksa importance'a duser
+};
+const DEFAULT_SORT = 'importance';
+
+/** FULLTEXT indeksinin anlamli calismasi icin asgari sorgu uzunlugu. */
+const FULLTEXT_MIN_LENGTH = 4;
+
+/**
+ * Filtreleri WHERE parcalarina cevirir.
+ * @param {object} q  req.query
+ * @param {'fulltext'|'like'|'none'} searchMode
+ */
+function buildFilters(reqQuery, searchMode) {
+  const where = [];
+  const params = [];
+
+  // Varsayilan: tekrarlar gizli. ?include_duplicates=1 ile hepsi gelir.
+  const includeDuplicates = ['1', 'true', 'yes', 'evet']
+    .includes(String(qs(reqQuery.include_duplicates) || '').toLowerCase());
+  if (!includeDuplicates) where.push('a.is_duplicate = 0');
+
+  const region = pickFromAllowList(reqQuery.region, REGIONS);
+  if (region) { where.push('a.region = ?'); params.push(region); }
+
+  const band = pickFromAllowList(reqQuery.band, BANDS);
+  if (band) { where.push('a.importance_band = ?'); params.push(band); }
+
+  const sentiment = pickFromAllowList(reqQuery.sentiment, SENTIMENTS);
+  if (sentiment) { where.push('a.sentiment = ?'); params.push(sentiment); }
+
+  const categories = qsList(reqQuery.category);
+  if (categories.length) {
+    where.push(`a.category IN (${placeholders(categories.length)})`);
+    params.push(...categories);
+  }
+
+  const sources = qsList(reqQuery.source);
+  if (sources.length) {
+    where.push(`s.slug IN (${placeholders(sources.length)})`);
+    params.push(...sources);
+  }
+
+  // Etiket filtresi EXISTS ile: JOIN kullanilsa sayfalama satir cogaltirdi.
+  const tags = qsList(reqQuery.tag);
+  if (tags.length) {
+    where.push(`EXISTS (
+      SELECT 1 FROM article_tags at2
+        JOIN tags t2 ON t2.id = at2.tag_id
+       WHERE at2.article_id = a.id AND t2.slug IN (${placeholders(tags.length)})
+    )`);
+    params.push(...tags);
+  }
+
+  const from = parseDateParam(reqQuery.from);
+  if (from) { where.push('a.published_at >= ?'); params.push(toMysqlDateTime(from)); }
+
+  const to = parseDateParam(reqQuery.to);
+  if (to) {
+    // Gun bazli 'to' verildiginde o gunun tamami dahil olsun.
+    const end = String(qs(reqQuery.to)).length === 10
+      ? new Date(to.getTime() + 24 * 60 * 60 * 1000 - 1000)
+      : to;
+    where.push('a.published_at <= ?');
+    params.push(toMysqlDateTime(end));
+  }
+
+  const search = qs(reqQuery.q);
+  if (search && searchMode === 'fulltext') {
+    where.push('MATCH (a.title, a.summary, a.body) AGAINST (? IN NATURAL LANGUAGE MODE)');
+    params.push(search);
+  } else if (search && searchMode === 'like') {
+    // Kisa sorgular FULLTEXT'te (min token uzunlugu) kaybolur -> LIKE yedegi.
+    where.push('(a.title LIKE ? OR a.summary LIKE ? OR a.category LIKE ?)');
+    const like = `%${search.replace(/[%_\\]/g, (m) => `\\${m}`)}%`;
+    params.push(like, like, like);
+  }
+
+  return {
+    whereSql: where.length ? `WHERE ${where.join(' AND ')}` : '',
+    params,
+    search,
+  };
+}
+
+/** Tek turda sayim + sayfa verisi. */
+async function runListQuery(reqQuery, searchMode, { limit, offset, orderBy }) {
+  const { whereSql, params, search } = buildFilters(reqQuery, searchMode);
+
+  const countRows = await query(
+    `SELECT COUNT(*) AS total ${ARTICLE_FROM} ${whereSql}`,
+    params,
+  );
+  const total = Number(countRows[0]?.total ?? 0);
+  if (total === 0) return { rows: [], total, search };
+
+  // relevance siralamasi ancak fulltext modunda anlamli.
+  const order = orderBy ?? (searchMode === 'fulltext'
+    ? 'relevance_score DESC, a.importance_score DESC'
+    : SORTS[DEFAULT_SORT]);
+
+  const scoreCol = searchMode === 'fulltext'
+    ? ', MATCH (a.title, a.summary, a.body) AGAINST (? IN NATURAL LANGUAGE MODE) AS relevance_score'
+    : '';
+  const scoreParams = searchMode === 'fulltext' ? [search] : [];
+
+  const rows = await query(
+    `SELECT ${ARTICLE_COLUMNS}${scoreCol}
+     ${ARTICLE_FROM} ${whereSql}
+     ORDER BY ${order}
+     LIMIT ${limit} OFFSET ${offset}`,
+    [...scoreParams, ...params],
+  );
+
+  return { rows, total, search };
+}
+
+router.get('/', asyncHandler(async (req, res) => {
+  const { page, limit, offset } = parsePagination(req.query);
+  const reveal = wantsReveal(req);
+
+  const sortKey = pickFromAllowList(req.query.sort, Object.keys(SORTS), DEFAULT_SORT);
+  const search = qs(req.query.q);
+
+  // relevance sadece arama varken; degilse varsayilan siralamaya duser.
+  const orderBy = sortKey === 'relevance' ? null : (SORTS[sortKey] || SORTS[DEFAULT_SORT]);
+
+  let searchMode = 'none';
+  if (search) searchMode = search.length >= FULLTEXT_MIN_LENGTH ? 'fulltext' : 'like';
+
+  let result = await runListQuery(req.query, searchMode, { limit, offset, orderBy });
+
+  // FULLTEXT hic sonuc vermediyse (stopword, ekli kelime, kisa token)
+  // sessizce LIKE yedegine dusuyoruz — kullanici bos ekran gormesin.
+  if (result.total === 0 && searchMode === 'fulltext') {
+    result = await runListQuery(req.query, 'like', {
+      limit, offset, orderBy: orderBy || SORTS[DEFAULT_SORT],
+    });
+  }
+
+  const data = await serializeArticleRows(result.rows, { reveal });
+  res.json(serializeList(data, { page, limit, total: result.total }));
+}));
+
+router.get('/:id', asyncHandler(async (req, res) => {
+  const id = Number.parseInt(req.params.id, 10);
+  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Gecersiz haber id');
+
+  const row = await findArticleRow(id);
+  if (!row) throw ApiError.notFound('Haber bulunamadi');
+
+  const reveal = wantsReveal(req);
+  const tagMap = await tagsByArticleIds([id]);
+
+  // Kume uyeleri: kendisi haric diger kaynaklarin ayni olayi anlatan haberleri.
+  let cluster = null;
+  if (row.cluster_id) {
+    const memberRows = await findClusterMemberRows(row.cluster_id);
+    const members = await serializeArticleRows(memberRows, { reveal });
+    const clusterRow = await query(
+      'SELECT id, cluster_key, headline, member_count, first_seen_at, last_seen_at, representative_article_id FROM clusters WHERE id = ? LIMIT 1',
+      [row.cluster_id],
+    );
+    const c = clusterRow[0];
+    cluster = {
+      id: Number(row.cluster_id),
+      member_count: Number(c?.member_count ?? members.length),
+      headline: c?.headline ?? null,
+      representative_article_id: c?.representative_article_id
+        ? Number(c.representative_article_id) : null,
+      members,
+    };
+  }
+
+  const article = serializeArticle(row, {
+    reveal,
+    tags: tagMap.get(id) || [],
+    cluster,
+  });
+
+  res.json(article);
+}));
+
+export default router;

@@ -134,8 +134,12 @@ CREATE TABLE IF NOT EXISTS tags (
   label       VARCHAR(120) NOT NULL,
   -- etiket ailesi: konu / sektor / kurum / mevzuat / cografya
   kind        ENUM('konu','sektor','kurum','mevzuat','cografya') NOT NULL DEFAULT 'konu',
-  -- bu etiketin onem skoruna katkisi (keyword bileseni)
-  weight      TINYINT UNSIGNED NOT NULL DEFAULT 10,
+  -- Bu etiketin onem skoruna katkisi (keyword bileseni).
+  -- Varsayilan 40 = NOTR ON-DEGER. Sozlukte tanimli olmayan bir etiket
+  -- ("hormuz-bogazi", "reeskont-kredisi" gibi gercekten onemli ama listeye
+  -- girmemis konular) "kanit yok" demektir, "onemsiz" demek degil. Dusuk bir
+  -- varsayilan (10) bu haberleri haksiz yere asagi cekerdi.
+  weight      TINYINT UNSIGNED NOT NULL DEFAULT 40,
   created_at  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   UNIQUE KEY uq_tags_slug (slug),

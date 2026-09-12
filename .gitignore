@@ -24,3 +24,6 @@ volumes/
 # ide
 .vscode/
 .idea/
+
+# model onbellegi (embedding modelleri repoya girmez)
+backend/.cache/
