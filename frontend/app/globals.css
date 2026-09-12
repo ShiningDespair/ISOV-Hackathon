@@ -1,0 +1,526 @@
+@import "tailwindcss";
+
+/* ================================================================
+   ISO · İSOV — Tasarım jetonları (New York Times esinli)
+   Renk paleti kasıtlı olarak minimaldir: kağıt, mürekkep, kural
+   çizgisi ve tek bir bordo vurgu.
+   ================================================================ */
+@theme {
+  /* Yüzeyler */
+  --color-paper: #f7f7f5;
+  --color-surface: #ffffff;
+  --color-paper-deep: #efeeea;
+
+  /* Mürekkep */
+  --color-ink: #121212;
+  --color-ink-soft: #5a5a5a;
+  --color-ink-faint: #8b8b8b;
+
+  /* Kural çizgileri */
+  --color-rule: #e2e2e0;
+  --color-rule-strong: #121212;
+
+  /* Tek vurgu rengi */
+  --color-accent: #8b0000;
+
+  /* Tipografi aileleri — next/font değişkenlerine bağlı */
+  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-libre-franklin), "Helvetica Neue", Arial, sans-serif;
+
+  /* Ölçek */
+  --text-kicker: 0.6875rem;
+  --text-kicker--line-height: 1rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* Temel                                                             */
+/* ---------------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  /* Yatay kaydırma asla olmasın */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Tipografi yardımcıları                                            */
+/* ---------------------------------------------------------------- */
+
+/* Kicker / meta / etiket — Libre Franklin, geniş harf aralığı */
+.u-kicker {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--color-ink-soft);
+}
+
+.u-kicker-accent {
+  color: var(--color-accent);
+}
+
+/* Manşet ve başlıklar — Source Serif 4 */
+.u-headline {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+  color: var(--color-ink);
+  text-wrap: balance;
+}
+
+.u-headline-xl {
+  font-weight: 900;
+  font-size: clamp(2rem, 5.2vw, 3.5rem);
+  line-height: 1.03;
+  letter-spacing: -0.022em;
+}
+
+.u-headline-lg {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.u-headline-md {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.u-headline-sm {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.25;
+}
+
+/* Gövde metni */
+.u-body {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.58;
+  color: var(--color-ink);
+}
+
+.u-body-soft {
+  color: var(--color-ink-soft);
+}
+
+/* Bağlantı üzerine ince alt çizgi — NYT davranışı */
+.u-link-underline {
+  background-image: linear-gradient(var(--color-rule), var(--color-rule));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.18s ease;
+}
+.u-link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Kural çizgileri (rules)                                           */
+/* ---------------------------------------------------------------- */
+.u-rule {
+  border-top: 1px solid var(--color-rule);
+}
+
+.u-rule-strong {
+  border-top: 1px solid var(--color-ink);
+}
+
+/* NYT masthead altındaki çift çizgi */
+.u-rule-double {
+  border-top: 3px double var(--color-ink);
+}
+
+/* Dikey kolon ayracı */
+.u-rule-left {
+  border-left: 1px solid var(--color-rule);
+}
+
+/* ---------------------------------------------------------------- */
+/* Önem bandı rozetleri — ince çerçeve, minik uppercase sans         */
+/* ---------------------------------------------------------------- */
+.u-band {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.625rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.4rem 0.2rem;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.u-band-kritik {
+  color: var(--color-accent);
+}
+.u-band-yuksek {
+  color: var(--color-ink);
+}
+.u-band-orta {
+  color: var(--color-ink-soft);
+}
+.u-band-dusuk {
+  color: var(--color-ink-faint);
+}
+
+/* ---------------------------------------------------------------- */
+/* GAZETE GÖRÜNÜMÜ                                                   */
+/* ---------------------------------------------------------------- */
+
+/* Çok hafif kağıt dokusu — yalnızca CSS gradient, resim dosyası yok */
+.paper-texture {
+  background-color: #faf8f3;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(18, 18, 18, 0.014) 0px,
+      rgba(18, 18, 18, 0.014) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(18, 18, 18, 0.01) 0px,
+      rgba(18, 18, 18, 0.01) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    radial-gradient(
+      ellipse at 15% 10%,
+      rgba(140, 120, 80, 0.05) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 85% 85%,
+      rgba(140, 120, 80, 0.045) 0%,
+      transparent 55%
+    );
+}
+
+/* Gazete akışlı sütunlar */
+.newspaper-columns {
+  column-count: 1;
+  column-gap: 1.75rem;
+  column-rule: 1px solid var(--color-rule);
+  orphans: 3;
+  widows: 3;
+}
+
+@media (min-width: 640px) {
+  .newspaper-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .newspaper-columns {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1536px) {
+  .newspaper-columns {
+    column-count: 4;
+  }
+}
+
+/* Sütun içinde bölünmemesi gereken bloklar */
+.newspaper-item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 1.15rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+/* Sütunları aşan tam genişlik blok (manşet) */
+.newspaper-span {
+  column-span: all;
+  -webkit-column-span: all;
+}
+
+/* Damla harf (drop cap) */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: 4.15em;
+  line-height: 0.78;
+  padding-right: 0.07em;
+  padding-top: 0.04em;
+  margin-bottom: -0.06em;
+  color: var(--color-ink);
+}
+
+/* Gazete görünümünde metni iki yana yasla */
+.newspaper-justify {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Gazete künye satırı */
+.newspaper-folio {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+/* ---------------------------------------------------------------- */
+/* Etiket bulutu                                                     */
+/* ---------------------------------------------------------------- */
+.tag-chip {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-rule);
+  padding: 0.3rem 0.55rem;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+  display: inline-block;
+}
+.tag-chip:hover {
+  border-color: var(--color-ink);
+  background: var(--color-paper-deep);
+}
+.tag-chip[data-active="true"] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+}
+
+/* ---------------------------------------------------------------- */
+/* YAZDIRMA — A4 gazete çıktısı                                      */
+/* ---------------------------------------------------------------- */
+@page {
+  size: A4 portrait;
+  margin: 14mm 12mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+
+  /* Arka planları ve dokuları kaldır */
+  *,
+  *::before,
+  *::after {
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  .paper-texture {
+    background: #ffffff !important;
+  }
+
+  /* Ekranda kalması gereken, kağıda basılmayacak öğeler */
+  .print-hidden,
+  nav[data-print="hide"],
+  .no-print {
+    display: none !important;
+  }
+
+  /* Yazdırmada gazete mizanpajını zorla */
+  .newspaper-columns {
+    column-count: 3 !important;
+    column-gap: 6mm;
+    column-rule: 0.5pt solid #999;
+  }
+
+  .newspaper-item {
+    border-bottom: 0.5pt solid #bbb;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  article {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Bağlantı hedeflerini metne bas */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-family: var(--font-sans);
+    font-size: 7.5pt;
+    font-weight: 400;
+    color: #444;
+    word-break: break-all;
+  }
+
+  /* İç bağlantılar için URL basma */
+  a[href^="/"]::after,
+  a[href^="#"]::after {
+    content: "";
+  }
+
+  .u-band {
+    border-color: #000 !important;
+    color: #000 !important;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Erişilebilirlik / hareket tercihi                                 */
+/* ---------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Görsel olarak gizli ama ekran okuyucuya açık */
+.sr-only-custom {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Görünüm geçişi sırasında yanıp sönmeyi engelle */
+[data-view-pending="true"] {
+  visibility: hidden;
+}
+
+/* ---------------------------------------------------------------- */
+/* GÖRÜNÜM ANAHTARI — Panel ↔ Gazete                                 */
+/* Her iki mizanpaj da DOM'a basılır; hangisinin görüneceğini         */
+/* <html data-view="..."> belirler. Öznitelik, hidrasyondan ÖNCE      */
+/* çalışan satır içi betikle atandığı için görünüm sıçraması olmaz.   */
+/* ---------------------------------------------------------------- */
+html[data-view="gazete"] [data-view-slot="panel"] {
+  display: none !important;
+}
+
+html:not([data-view="gazete"]) [data-view-slot="gazete"] {
+  display: none !important;
+}
+
+/* Gazete görünümünde gövde kağıt dokusunu alır */
+html[data-view="gazete"] body {
+  background-color: #faf8f3;
+}
+
+/* Yazdırırken daima gazete mizanpajı basılsın */
+@media print {
+  [data-view-slot="panel"] {
+    display: none !important;
+  }
+  [data-view-slot="gazete"] {
+    display: block !important;
+  }
+}
+
+/* Görünüm anahtarı düğmeleri */
+.view-switch {
+  display: inline-flex;
+  border: 1px solid var(--color-ink);
+  overflow: hidden;
+}
+
+.view-switch button {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem 0.25rem;
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  border: 0;
+  line-height: 1.4;
+}
+
+.view-switch button[aria-pressed="true"] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.view-switch button + button {
+  border-left: 1px solid var(--color-ink);
+}
+
+/* ---------------------------------------------------------------- */
+/* Taşma güvenliği — uzun URL ve kelimeler sütunu aşmasın            */
+/* ---------------------------------------------------------------- */
+.newspaper-item,
+.newspaper-columns p,
+.u-headline,
+.u-body {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Tablolar, diyagramlar ve kod blokları kendi kaydırma kabında kalsın */
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}

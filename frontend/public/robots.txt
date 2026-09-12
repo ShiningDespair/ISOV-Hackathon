@@ -1,0 +1,3 @@
+# İç kullanım paneli — dizine eklenmesin.
+User-agent: *
+Disallow: /
