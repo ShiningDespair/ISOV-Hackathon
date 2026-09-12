@@ -91,3 +91,15 @@ SSL iki yoldan biriyle:
 | Şema yüklenmemiş | Init scriptleri yalnız boş volume'de çalışır → `docker compose down -v` |
 | 502 Bad Gateway | Konteynerler `proxy_default` ağında mı: `docker network inspect proxy_default` |
 | Türkçe karakterler bozuk | DB `utf8mb4`, bağlantı `charset: utf8mb4` |
+| Çok kaynaklı küme oluşmuyor | Qdrant ayakta mı, model indi mi: `docker compose logs backend \| grep -i embed`. Ağ yoksa sistem sözcüksel kümelemeye düşer, bu beklenen davranıştır. |
+
+## Semantik tekilleştirme notu
+
+İlk `npm run seed` çalışmasında çok dilli embedding modeli (~1,1 GB)
+HuggingFace'ten indirilir ve `model_cache` volume'una yazılır; sonraki
+çalışmalar önbellekten okur. Bu adım **ağ erişimi ister**. Ağ yoksa veya
+Qdrant kapalıysa seeder hata vermez — yalnızca sözcüksel kümeleme yapar ve
+diller arası eşleşmeler oluşmaz (`stats.skipped` alanına yazılır).
+
+Tam hat 131 haber için ~50 saniye sürer (model yükleme + embedding +
+komşu sorguları, CPU üzerinde).
