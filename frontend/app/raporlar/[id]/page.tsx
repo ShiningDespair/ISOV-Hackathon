@@ -16,7 +16,7 @@ import {
   sortByImportance,
   truncate,
 } from "@/lib/format";
-import type { Article, Report, ReportSection } from "@/lib/types";
+import type { Article, Report, ReportItem, ReportSection } from "@/lib/types";
 
 import { StandardArticle, NewspaperArticle } from "@/components/ArticleCard";
 import { NewspaperMasthead } from "@/components/Masthead";
@@ -53,18 +53,43 @@ function titleOf(report: Report): string {
 }
 
 /** Bölümleri normalize eder; bölüm yoksa haberleri bölgeye göre grupla. */
+/**
+ * Rapor kalemlerini tek bicime indirger.
+ * Backend {rank_order, section, article} sarmalayicisi donduruyor; duz Article
+ * dizisi gelme ihtimaline karsi ikisi de destekleniyor. Siralama backend'in
+ * verdigi rank_order'a birakilir - istemci gizli onem skorunu goremedigi icin
+ * yeniden siralarsa raporun editoryel sirasini bozar.
+ */
+function unwrapItems(list: (Article | ReportItem)[]): Article[] {
+  return list
+    .map((entry) =>
+      entry && typeof entry === "object" && "article" in entry
+        ? ((entry as ReportItem).article ?? null)
+        : (entry as Article),
+    )
+    .filter((a): a is Article => Boolean(a && a.id));
+}
+
 function sectionsOf(report: Report): { title: string; articles: Article[] }[] {
   const raw = report.sections ?? [];
 
   if (raw.length > 0) {
     return raw
       .map((s: ReportSection) => ({
+        // Backend bolum adini `key` alaninda donduruyor. Onceki surum yalnizca
+        // title/region/band'e bakiyordu, hicbiri tutmadigi icin BES BOLUMUN DE
+        // basligi "Bolum" cikiyordu.
         title:
           s.title?.trim() ||
+          (s.key ? regionLabel(s.key) : "") ||
           (s.region ? regionLabel(s.region) : "") ||
           (s.band ? `${s.band} Bandı` : "") ||
           "Bölüm",
-        articles: sortByImportance(s.articles ?? s.items ?? []),
+        // Kalemler {rank_order, section, article} olarak sarmalanmis geliyor.
+        // Onceki surum sarmalayiciyi dogrudan karta veriyordu; kartin
+        // bekledigi id/title alanlari olmadigi icin rapor BOMBOS basiliyordu
+        // (PDF ciktisinin bos gorunmesinin CSS'ten bagimsiz ikinci sebebi).
+        articles: unwrapItems(s.articles ?? s.items ?? []),
       }))
       .filter((s) => s.articles.length > 0);
   }
@@ -145,7 +170,7 @@ export default async function ReportDetailPage({ params }: { params: Params }) {
               ) : null}
             </p>
             <div className="mt-4">
-              <PrintButton label="Raporu Yazdır" />
+              <PrintButton label="Raporu PDF Yap" />
             </div>
           </header>
 
@@ -205,7 +230,7 @@ export default async function ReportDetailPage({ params }: { params: Params }) {
               <Link href="/raporlar" className="u-kicker u-link-underline">
                 ← Rapor Arşivi
               </Link>
-              <PrintButton label="Raporu Yazdır (A4)" />
+              <PrintButton label="Raporu PDF Yap (A4)" />
             </div>
 
             <h2 className="u-headline mx-auto max-w-4xl text-center text-[clamp(1.5rem,4.5vw,3rem)] font-black leading-tight">

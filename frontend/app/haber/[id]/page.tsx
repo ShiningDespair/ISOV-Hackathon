@@ -273,7 +273,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
 
               <div className="mt-7 flex flex-wrap items-center gap-3 border-t border-ink pt-4">
                 {sourceLink}
-                <PrintButton label="Yazdır" />
+                <PrintButton label="PDF" />
               </div>
 
               {clusterSection}

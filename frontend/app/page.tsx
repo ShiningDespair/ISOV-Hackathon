@@ -62,7 +62,7 @@ export default async function HomePage({
 
   // Paralel veri çekimi — hiçbiri fırlatmaz, hata ApiResult içinde döner.
   const [articlesRes, tagsRes, statsRes] = await Promise.all([
-    getArticles({ ...state, limit: 40 }),
+    getArticles({ ...state, limit: 60 }),
     getTags(),
     getStatsOverview(),
   ]);
@@ -85,9 +85,11 @@ export default async function HomePage({
   // gizli metrigin tum amaci kayboluyordu. API sirasi korunur.
   const all = articlesRes.data.data;
   const total = articlesRes.data.total || all.length;
-  const lead = all[0];
-  const secondary = all.slice(1, 7);
-  const rest = all.slice(7);
+  // Kesismeyen bolumleme: her haber TEK bir bolumde gorunur.
+  const lead = all[0];                    // SOL  — manset
+  const secondary = all.slice(1, 7);      // ORTA — One Cikanlar
+  const brief = all.slice(7, 19);         // SOL  — mansetin altinda Kisa Kisa
+  const continuation = all.slice(19);     // SAG  — Raporlar'in altinda Bultenin Devami
 
   const tags = tagsRes.ok ? tagsRes.data : [];
   const topTags = [...tags]
@@ -136,14 +138,14 @@ export default async function HomePage({
               <div className="lg:col-span-5 lg:pr-8 xl:col-span-5">
                 {lead ? <LeadArticle article={lead} /> : null}
 
-                {rest.length > 0 ? (
+                {brief.length > 0 ? (
                   <section className="mt-6">
                     <SectionRule
-                      title="Bültenin Devamı"
-                      right={`${formatNumber(rest.length)} haber`}
+                      title="Kısa Kısa"
+                      right={`${formatNumber(brief.length)} haber`}
                     />
                     <div className="space-y-0">
-                      {rest.slice(0, 8).map((a) => (
+                      {brief.map((a) => (
                         <CompactArticle key={a.id} article={a} />
                       ))}
                     </div>
@@ -160,16 +162,6 @@ export default async function HomePage({
                   ))}
                 </div>
 
-                {rest.length > 8 ? (
-                  <section className="mt-7">
-                    <SectionRule title="Kısa Kısa" />
-                    <div>
-                      {rest.slice(8, 20).map((a) => (
-                        <CompactArticle key={a.id} article={a} />
-                      ))}
-                    </div>
-                  </section>
-                ) : null}
               </div>
 
               {/* SAĞ — dar kolon: künye, etiketler, bölge dağılımı */}
@@ -251,6 +243,24 @@ export default async function HomePage({
                     Rapor Arşivi →
                   </Link>
                 </section>
+
+                {/* Bültenin devamı: kalan haberlerin TAMAMI burada listelenir.
+                    Onceki surum baslikta "33 haber" yazip yalnizca 8'ini
+                    basiyordu; asagi kaydiran kullaniciya soz verilen basliklar
+                    hic gelmiyordu. Artik sayac ile basilan liste birebir ayni. */}
+                {continuation.length > 0 ? (
+                  <section className="mt-7">
+                    <SectionRule
+                      title="Bültenin Devamı"
+                      right={`${formatNumber(continuation.length)} haber`}
+                    />
+                    <div className="space-y-0">
+                      {continuation.map((a) => (
+                        <CompactArticle key={a.id} article={a} />
+                      ))}
+                    </div>
+                  </section>
+                ) : null}
               </aside>
             </div>
           )}

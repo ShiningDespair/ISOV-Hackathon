@@ -467,13 +467,35 @@ html[data-view="gazete"] body {
   background-color: #faf8f3;
 }
 
-/* Yazdırırken daima gazete mizanpajı basılsın */
+/* Yazdırırken daima gazete mizanpajı basılsın.
+ *
+ * DİKKAT — ÖNCELİK (specificity) TUZAĞI: yukarıdaki gizleme kuralı
+ * `html:not([data-view="gazete"]) [data-view-slot="gazete"]` (0,2,1)
+ * önceliğinde. İki bildirim de `!important` taşıdığında kazananı önceliğe
+ * göre belirlenir, bu yüzden sade `[data-view-slot="gazete"]` (0,1,0)
+ * kuralı KAYBEDİYORDU. Sonuç: Panel görünümündeyken yazdırınca panel
+ * yuvası print kuralıyla, gazete yuvası da gizleme kuralıyla saklanıyor
+ * ve sayfa TAMAMEN BOŞ çıkıyordu (PDF'e kaydetmek de boş dosya veriyordu).
+ * Yalnızca kullanıcı önceden Gazete görünümüne geçtiyse çalışıyordu.
+ *
+ * Çözüm: print kurallarını aynı öncelik desenine çıkar. Eşit öncelikte
+ * sonra gelen kazanır, bu blok dosyada daha sonra yer aldığı için artık
+ * her iki görünümde de doğru çıktı üretiliyor.
+ */
 @media print {
-  [data-view-slot="panel"] {
+  html[data-view="gazete"] [data-view-slot="panel"],
+  html:not([data-view="gazete"]) [data-view-slot="panel"] {
     display: none !important;
   }
-  [data-view-slot="gazete"] {
+
+  html[data-view="gazete"] [data-view-slot="gazete"],
+  html:not([data-view="gazete"]) [data-view-slot="gazete"] {
     display: block !important;
+  }
+
+  /* Hidrasyon bekleme perdesi yazdırmayı da gizlemesin. */
+  [data-view-pending="true"] {
+    visibility: visible !important;
   }
 }
 

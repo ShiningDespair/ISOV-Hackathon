@@ -125,12 +125,22 @@ export interface ArticleDetail extends Article {
   members?: ClusterMember[] | null;
 }
 
+/** Rapor kalemi: backend haberi `article` altinda sarmalayip dondurur. */
+export interface ReportItem {
+  rank_order?: number | null;
+  section?: string | null;
+  article?: Article | null;
+}
+
 export interface ReportSection {
+  /** Backend bolum anahtarini `key` alaninda dondurur (or. "TURKIYE"). */
+  key?: string | null;
   title?: string | null;
   region?: Region | string | null;
   band?: ImportanceBand | string | null;
-  articles?: Article[] | null;
-  items?: Article[] | null;
+  /** Duz Article dizisi de, sarmalanmis ReportItem dizisi de gelebilir. */
+  articles?: (Article | ReportItem)[] | null;
+  items?: (Article | ReportItem)[] | null;
 }
 
 export interface Report {
