@@ -85,11 +85,41 @@ export default async function HomePage({
   // gizli metrigin tum amaci kayboluyordu. API sirasi korunur.
   const all = articlesRes.data.data;
   const total = articlesRes.data.total || all.length;
-  // Kesismeyen bolumleme: her haber TEK bir bolumde gorunur.
-  const lead = all[0];                    // SOL  — manset
-  const secondary = all.slice(1, 7);      // ORTA — One Cikanlar
-  const brief = all.slice(7, 19);         // SOL  — mansetin altinda Kisa Kisa
-  const continuation = all.slice(19);     // SAG  — Raporlar'in altinda Bultenin Devami
+
+  // --- KOLON DENGELEME ------------------------------------------------
+  // Kesismeyen bolumleme: her haber TEK bir bolumde gorunur. Ama sol ve orta
+  // kolonun DOLULUGU sabit dilimlerle degil, haber sayisindan hesaplanir.
+  //
+  // Sabit 6/12 bolmesi solu ortanin iki kati uzunlukta birakiyordu: sol kolon
+  // manset + 12 tam kart tasirken orta yalnizca 6 kart tasiyordu, sayfa tek
+  // tarafa yigilmis gorunuyordu.
+  //
+  // Denge hesabi: bir kart dar kolonda daha cok satira sarar, yani yuksekligi
+  // kabaca kolon genisligiyle ters orantilidir. Sol 5, orta 4 birim genis.
+  //   sol yukseklik  = (MANSET_AGIRLIGI + nSol) / 5
+  //   orta yukseklik = nOrta / 4
+  // Ikisini esitleyip nSol + nOrta = T koyunca:
+  //   nSol = (5T - 4 * MANSET_AGIRLIGI) / 9
+  const LEAD_WEIGHT = 2.6;   // manset karti ~2.6 standart kart yuksekliginde
+  const LEFT_UNITS = 5;
+  const MID_UNITS = 4;
+  const MAIN_POOL_MAX = 18;  // ana govdede tam kart olarak gosterilecek ust sinir
+
+  const rest = all.slice(1);
+  const mainCount = Math.min(rest.length, MAIN_POOL_MAX);
+  const leftCount = Math.max(
+    0,
+    Math.min(
+      mainCount,
+      Math.round((LEFT_UNITS * mainCount - MID_UNITS * LEAD_WEIGHT) / (LEFT_UNITS + MID_UNITS)),
+    ),
+  );
+  const midCount = mainCount - leftCount;
+
+  const lead = all[0];                                  // SOL  — manset
+  const secondary = rest.slice(0, midCount);            // ORTA — One Cikanlar
+  const brief = rest.slice(midCount, mainCount);        // SOL  — mansetin altinda Gundem
+  const continuation = rest.slice(mainCount);           // SAG  — Bultenin Devami
 
   const tags = tagsRes.ok ? tagsRes.data : [];
   const topTags = [...tags]
