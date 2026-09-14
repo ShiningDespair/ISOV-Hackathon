@@ -70,7 +70,7 @@ export async function isAvailable() {
 export async function ensureCollection(size, { distance = 'Cosine' } = {}) {
   const dim = Number(size);
   if (!Number.isFinite(dim) || dim <= 0) {
-    return { ok: false, created: false, error: 'gecersiz vektor boyutu' };
+    return { ok: false, created: false, error: 'geçersiz vektör boyutu' };
   }
   const name = collectionName();
 

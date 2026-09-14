@@ -179,10 +179,10 @@ router.get('/', asyncHandler(async (req, res) => {
 
 router.get('/:id', asyncHandler(async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
-  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Gecersiz haber id');
+  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Geçersiz haber kimliği');
 
   const row = await findArticleRow(id);
-  if (!row) throw ApiError.notFound('Haber bulunamadi');
+  if (!row) throw ApiError.notFound('Haber bulunamadı');
 
   const reveal = wantsReveal(req);
   const tagMap = await tagsByArticleIds([id]);

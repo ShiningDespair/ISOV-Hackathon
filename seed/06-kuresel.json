@@ -54,7 +54,7 @@
     },
     {
       "slug": "iea",
-      "name": "International Energy Agency (IEA)",
+      "name": "Uluslararası Enerji Ajansı (IEA)",
       "homepage_url": "https://www.iea.org",
       "source_type": "uluslararasi",
       "authority_weight": 95,
@@ -104,7 +104,7 @@
     },
     {
       "slug": "iso-org",
-      "name": "ISO - International Organization for Standardization",
+      "name": "ISO - Uluslararası Standardizasyon Örgütü",
       "homepage_url": "https://www.iso.org",
       "source_type": "uluslararasi",
       "authority_weight": 95,
@@ -197,22 +197,22 @@
     {
       "source_slug": "oilprice-com",
       "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Fall-as-Iran-Oman-Talks-Fuel-Hopes-of-Strait-Reopening.html",
-      "title": "Oil Prices Fall as Iran-Oman Talks Fuel Hopes of Strait Reopening",
-      "body": "Petrol fiyatlari 11 Eylul 2026 Cuma gunu, Iran devlet medyasinin Tahran'in Korfez ulkeleriyle Umman'da Hormuz Bogazi'ni gorusecegini duyurmasinin ardindan geriledi. Brent tipi ham petrol yuzde 2,9 dususerek varil basina 104,52 dolara indi; bu, bes gunluk yukselis serisini sonlandirdi. West Texas Intermediate (WTI) ise sekiz gunluk kazanc serisini kirdi.\n\nHaberin ozunde, Korfez Isbirligi Konseyi (Suudi Arabistan, BAE, Katar, Kuveyt, Bahreyn ve Umman) disisleri bakanlarinin 13 Eylul Pazartesi gunu Iranli mevkidaslariyla bir araya gelecek olmasi var. Piyasa bu temasi, aylardir kapali ya da yari kapali durumda olan Hormuz Bogazi'nin yeniden acilabilecegine dair ilk somut diplomatik sinyal olarak fiyatladi. Bogaz uzerinden normal kosullarda kuresel ham petrol ticaretinin yaklasik besde biri ve kuresel LNG hacminin buyuk bolumu gecmektedir.\n\nBuna ragmen haftalik bazda tablo hala sert bir yukselis gosteriyor: Brent haftayi yuzde 8,7 artisla ve kritik 100 dolar esiginin uzerinde kapatti, WTI'daki haftalik kazanc yuzde 9,4 oldu. Yani Cuma gunku geri cekilme, hafta boyunca yasanan tirmanmanin yarattigi primi ancak kismen geri verdi.\n\nAnalistler, gorusmelerden somut bir gecis guvenligi mekanizmasi cikmadigi surece fiyatlarin 100 dolarin altina kalici olarak inmesinin zor oldugunu vurguluyor. Savas riski sigorta primleri, gemi tekne degerinin yuzde 7,5-10'u seviyesinde seyrediyor; bu, savas oncesi yuzde 0,25 seviyesinin cok uzerinde ve tasima maliyetine dogrudan yansiyor. Turkiye gibi enerji ithalatcisi ve enerji yogun sanayi tabanina sahip ulkeler icin bogazin acilmasi, hem ham petrol hem de LNG faturasinda dogrudan indirim anlamina gelecek.",
+      "title": "İran-Umman görüşmeleri Hürmüz'ün yeniden açılma umudunu artırdı, petrol fiyatları geriledi",
+      "body": "Petrol fiyatları 11 Eylül 2026 Cuma günü, İran devlet medyasının Tahran'ın Körfez ülkeleriyle Umman'da Hürmüz Boğazı'nı görüşeceğini duyurmasının ardından geriledi. Brent tipi ham petrol yüzde 2,9 düşerek varil başına 104,52 dolara indi; bu, beş günlük yükseliş serisini sonlandırdı. West Texas Intermediate (WTI) ise sekiz günlük kazanç serisini kırdı.\n\nHaberin özünde, Körfez İşbirliği Konseyi (Suudi Arabistan, BAE, Katar, Kuveyt, Bahreyn ve Umman) dışişleri bakanlarının 13 Eylül Pazartesi günü İranlı mevkidaşlarıyla bir araya gelecek olması var. Piyasa bu teması, aylardır kapalı ya da yarı kapalı durumda olan Hürmüz Boğazı'nın yeniden açılabileceğine dair ilk somut diplomatik sinyal olarak fiyatladı. Boğaz üzerinden normal koşullarda küresel ham petrol ticaretinin yaklaşık beşte biri ve küresel LNG hacminin büyük bölümü geçmektedir.\n\nBuna rağmen haftalık bazda tablo hâlâ sert bir yükseliş gösteriyor: Brent haftayı yüzde 8,7 artışla ve kritik 100 dolar eşiğinin üzerinde kapattı, WTI'daki haftalık kazanç yüzde 9,4 oldu. Yani Cuma günkü geri çekilme, hafta boyunca yaşanan tırmanmanın yarattığı primi ancak kısmen geri verdi.\n\nAnalistler, görüşmelerden somut bir geçiş güvenliği mekanizması çıkmadığı sürece fiyatların 100 doların altına kalıcı olarak inmesinin zor olduğunu vurguluyor. Savaş riski sigorta primleri, gemi tekne değerinin yüzde 7,5-10'u seviyesinde seyrediyor; bu, savaş öncesi yüzde 0,25 seviyesinin çok üzerinde ve taşıma maliyetine doğrudan yansıyor. Türkiye gibi enerji ithalatçısı ve enerji yoğun sanayi tabanına sahip ülkeler için boğazın açılması, hem ham petrol hem de LNG faturasında doğrudan indirim anlamına gelecek.",
       "published_at": "2026-09-11T20:15:00+03:00",
       "language": "tr",
-      "summary": "Iran ile Korfez ulkelerinin Umman'da Hormuz Bogazi'ni gorusecegi haberi uzerine Brent yuzde 2,9 dususerek 104,52 dolara geriledi; ancak haftalik kazanc yuzde 8,7 ile 100 dolarin uzerinde kalindi. Sanayici icin bu, enerji maliyetlerinde kalici bir rahatlamadan cok, diplomasiye bagli kirilgan bir nefes molasi anlamina geliyor. Bogazin acilmasi halinde hem ham petrol hem LNG ve navlun maliyetlerinde hizli bir gerileme beklenmeli; gorusmelerin cikmaza girmesi durumunda ise 110-120 dolar bandi yeniden gundeme gelir.",
+      "summary": "İran ile Körfez ülkelerinin Umman'da Hürmüz Boğazı'nı görüşeceği haberi üzerine Brent yüzde 2,9 düşerek 104,52 dolara geriledi; ancak haftalık kazanç yüzde 8,7 ile 100 doların üzerinde kalındı. Sanayici için bu, enerji maliyetlerinde kalıcı bir rahatlamadan çok, diplomasiye bağlı kırılgan bir nefes molası anlamına geliyor. Boğazın açılması halinde hem ham petrol hem LNG ve navlun maliyetlerinde hızlı bir gerileme beklenmeli; görüşmelerin çıkmaza girmesi durumunda ise 110-120 dolar bandı yeniden gündeme gelir.",
       "summary_en": "Brent fell 2.9% to $104.52 after Iran announced talks with Gulf states in Oman on the Strait of Hormuz, though it still closed the week 8.7% higher above $100. GCC foreign ministers meet their Iranian counterpart on 13 September.",
       "key_points": [
-        "Brent 11 Eylul'de yuzde 2,9 dususle 104,52 dolara geriledi",
-        "Korfez Isbirligi Konseyi ve Iran 13 Eylul'de Umman'da bulusuyor",
-        "Haftalik bazda Brent yuzde 8,7, WTI yuzde 9,4 yukseldi",
-        "Savas riski sigorta primleri tekne degerinin yuzde 7,5-10'u seviyesinde",
-        "Hormuz normalde kuresel ham petrol ticaretinin besde birini tasiyor"
+        "Brent 11 Eylül'de yüzde 2,9 düşüşle 104,52 dolara geriledi",
+        "Körfez İşbirliği Konseyi ve İran 13 Eylül'de Umman'da buluşuyor",
+        "Haftalık bazda Brent yüzde 8,7, WTI yüzde 9,4 yükseldi",
+        "Savaş riski sigorta primleri tekne değerinin yüzde 7,5-10'u seviyesinde",
+        "Hürmüz normalde küresel ham petrol ticaretinin beşte birini taşıyor"
       ],
       "entities": {
         "kurum": [
-          "Korfez Isbirligi Konseyi",
+          "Körfez İşbirliği Konseyi",
           "IEA"
         ],
         "kisi": [],
@@ -244,18 +244,18 @@
     {
       "source_slug": "cnbc",
       "url": "https://www.cnbc.com/2026/09/11/oil-price-today-iran-brent-wti-trump.html",
-      "title": "Oil prices fall Friday, but post sharp weekly gains as tensions in the Middle East rise",
-      "body": "CNBC'nin 11 Eylul tarihli degerlendirmesine gore petrol piyasasi haftayi ikili bir goruntuyle kapatti: Cuma gunu sert bir geri cekilme, ancak haftalik bazda yilin en guclu yukselislerinden biri.\n\nHaftanin ilk dort gununde Orta Dogu'daki tirmanma fiyatlari yukari itti. ABD kuvvetlerinin Devrim Muhafizlari ile baglantili tankerleri hedef almasi, Iran'in BAE bayrakli supertankerlere yonelik saldirilari ve Hormuz gecislerinin ciddi olcude azalmasi, Brent'i 100 dolarin uzerine tasidi. Cuma gunu ise diplomasi sinyali fiyatlari asagi cekti.\n\nCNBC'nin aktardigi verilere gore Brent haftayi yuzde 8,7, WTI yuzde 9,4 kazancla tamamladi. Gecen bir ay icinde Brent'in artisi yuzde 17'yi, yillik bazda artisi ise yuzde 55'i asti. Bu, sanayi icin sadece akaryakit degil; elektrik, dogal gaz, petrokimya hammaddesi, plastik, gubre ve deniz navlunu kalemlerinin tumunu birden yukari iten bir maliyet soku anlamina geliyor.\n\nArz tarafinda tablo hala kirilgan. Agustos ayinda Korfez'de 10 milyon varil/gunun uzerinde uretim guvenlik riskleri nedeniyle kapali kaldi; kuresel uretim aylik bazda 1,6 milyon varil/gun dususe gecti. Talep tarafinda ise IEA 2026 icin tarihi bir daralma ongoruyor.\n\nTurk sanayicisi acisindan onemli olan nokta, fiyat seviyesinden cok volatilitenin kendisi. Haftalik yuzde 9'luk salinimlar, enerji yogun sektorlerde (cimento, cam, seramik, demir-celik, kagit, tekstil terbiye) sabit fiyatli uzun vadeli satis sozlesmelerini riskli hale getiriyor; hedge ve fiyat eskalasyon maddeleri sozlesmelerde standart hale gelmeli.",
+      "title": "Petrol fiyatları Cuma günü düştü, ancak Orta Doğu'daki gerilimle haftayı sert yükselişle kapattı",
+      "body": "CNBC'nin 11 Eylül tarihli değerlendirmesine göre petrol piyasası haftayı ikili bir görüntüyle kapattı: Cuma günü sert bir geri çekilme, ancak haftalık bazda yılın en güçlü yükselişlerinden biri.\n\nHaftanın ilk dört gününde Orta Doğu'daki tırmanma fiyatları yukarı itti. ABD kuvvetlerinin Devrim Muhafızları ile bağlantılı tankerleri hedef alması, İran'ın BAE bayraklı süpertankerlere yönelik saldırıları ve Hürmüz geçişlerinin ciddi ölçüde azalması, Brent'i 100 doların üzerine taşıdı. Cuma günü ise diplomasi sinyali fiyatları aşağı çekti.\n\nCNBC'nin aktardığı verilere göre Brent haftayı yüzde 8,7, WTI yüzde 9,4 kazançla tamamladı. Geçen bir ay içinde Brent'in artışı yüzde 17'yi, yıllık bazda artışı ise yüzde 55'i aştı. Bu, sanayi için sadece akaryakıt değil; elektrik, doğal gaz, petrokimya hammaddesi, plastik, gübre ve deniz navlunu kalemlerinin tümünü birden yukarı iten bir maliyet şoku anlamına geliyor.\n\nArz tarafında tablo hâlâ kırılgan. Ağustos ayında Körfez'de 10 milyon varil/günün üzerinde üretim güvenlik riskleri nedeniyle kapalı kaldı; küresel üretim aylık bazda 1,6 milyon varil/gün düşüşe geçti. Talep tarafında ise IEA 2026 için tarihi bir daralma öngörüyor.\n\nTürk sanayicisi açısından önemli olan nokta, fiyat seviyesinden çok volatilitenin kendisi. Haftalık yüzde 9'luk salınımlar, enerji yoğun sektörlerde (çimento, cam, seramik, demir-çelik, kâğıt, tekstil terbiye) sabit fiyatlı uzun vadeli satış sözleşmelerini riskli hale getiriyor; hedge ve fiyat eskalasyon maddeleri sözleşmelerde standart hale gelmeli.",
       "published_at": "2026-09-11T22:40:00+03:00",
       "language": "tr",
-      "summary": "Petrol Cuma gunu geriledi ama haftayi Brent'te yuzde 8,7, WTI'da yuzde 9,4 kazancla kapatti; Brent'in aylik artisi yuzde 17'yi buldu. Korfez'de 10 milyon varil/gunun uzerinde uretim hala kapali. Sanayici icin asil risk fiyat seviyesinden cok haftalik yuzde 9'luk volatilite; enerji yogun sektorlerde sabit fiyatli uzun vadeli sozlesmelere fiyat eskalasyon maddesi konulmasi kritik hale geldi.",
+      "summary": "Petrol Cuma günü geriledi ama haftayı Brent'te yüzde 8,7, WTI'da yüzde 9,4 kazançla kapattı; Brent'in aylık artışı yüzde 17'yi buldu. Körfez'de 10 milyon varil/günün üzerinde üretim hâlâ kapalı. Sanayici için asıl risk fiyat seviyesinden çok haftalık yüzde 9'luk volatilite; enerji yoğun sektörlerde sabit fiyatlı uzun vadeli sözleşmelere fiyat eskalasyon maddesi konulması kritik hale geldi.",
       "summary_en": "Oil slipped Friday but ended the week up 8.7% (Brent) and 9.4% (WTI) amid Middle East escalation; more than 10 mb/d of Gulf output remains shut in.",
       "key_points": [
-        "Brent haftalik yuzde 8,7, WTI yuzde 9,4 yukseldi",
-        "Brent'in aylik artisi yuzde 17, yillik artisi yuzde 55 uzerinde",
-        "Korfez'de 10 milyon varil/gun uzeri uretim kapali",
-        "Volatilite enerji yogun sanayide sozlesme riski yaratiyor",
-        "ABD-Iran gerilimi tanker saldirilariyla tirmandi"
+        "Brent haftalık yüzde 8,7, WTI yüzde 9,4 yükseldi",
+        "Brent'in aylık artışı yüzde 17, yıllık artışı yüzde 55 üzerinde",
+        "Körfez'de 10 milyon varil/gün üzeri üretim kapalı",
+        "Volatilite enerji yoğun sanayide sözleşme riski yaratıyor",
+        "ABD-İran gerilimi tanker saldırılarıyla tırmandı"
       ],
       "entities": {
         "kurum": [
@@ -265,9 +265,9 @@
         "kisi": [],
         "sektor": [
           "Enerji",
-          "Cimento",
+          "Çimento",
           "Cam",
-          "Demir-Celik",
+          "Demir-Çelik",
           "Kimya"
         ]
       },
@@ -293,22 +293,22 @@
     {
       "source_slug": "fortune",
       "url": "https://fortune.com/2026/09/11/oil-prices-hormuz-diplomacy-saudi-arabia-houthis-pakistan-us-bab-al-mandab/",
-      "title": "Oil prices dive on signs of Hormuz diplomacy while Saudi Arabia is left hanging on crude's other chokepoint",
-      "body": "Fortune, 11 Eylul tarihli analizinde petrol piyasasinin iki ayri bogaz arasinda sikistigini yaziyor. Bir yanda Hormuz'da diplomasi sinyali fiyatlari asagi cekerken, diger yanda Bab el-Mendep'te Husilerin karadaki ilerleyisi yeni bir risk katmani yaratiyor.\n\nEylul ayinda Husi hareketi Bab el-Mendep Bogazi'ni cevreleyen Yemen topraklarinda ilerledi ve bolge uzerinde ilk kez dogrudan kontrol sagladi. Bu, Kizildeniz-Suveys hattini kullanan gemiler icin ikinci bir kritik darbogaz anlamina geliyor. Suudi Arabistan'in Kizildeniz kiyisindaki ihracat altyapisi ve Suveys uzerinden Avrupa'ya giden yuk trafigi dogrudan etkileniyor.\n\nFortune'un vurguladigi asimetri su: Hormuz acilsa bile Bab el-Mendep kapanirsa, Asya-Avrupa hattindaki gemiler Umit Burnu rotasina yonelmeye devam edecek. Bu rota, Asya-Avrupa seferinde yaklasik 10-14 gun ek transit suresi ve buna bagli olarak daha yuksek yakit, kiralama ve sigorta maliyeti demek.\n\nTurkiye acisindan bu iki bogazin durumu dogrudan ihracat rekabetciligi meselesi. Suveys hattinin calisir olmasi, Turk ihracatcisina Uzak Dogu menseli rakiplere karsi teslim suresi avantaji sagliyor; Umit Burnu rotasi ise Asya menseli mallarin Avrupa'ya ulasma suresini uzatarak Turkiye'nin 'yakin kaynak' (nearshoring) konumunu guclendiriyor. Ancak ayni rota, Turk ihracatcisinin Uzak Dogu'dan ithal ettigi ara mal ve hammaddenin de gec ve pahali gelmesi anlamina geliyor. Net etki sektorden sektore degisiyor; ara mal ithalat yogunlugu yuksek olan sektorler daha fazla zarar goruyor.\n\nKisa vadede izlenmesi gereken gostergeler sunlar: Bab el-Mendep haftalik gecis sayilari, Kizildeniz savas riski sigorta primleri, Umit Burnu rotasindaki gemi sayisi ve Asya-Avrupa konteyner navlunlarindaki haftalik degisim. Bu dort gosterge birlikte hareket ettiginde, ihracat teslim programlarinda iki ila uc haftalik tampon planlanmasi gerekiyor. Firmalarin alicilara karsi teslim taahhutlerinde bogaz kapanmasini kapsayan mucbir sebep tanimlarini guncellemesi, olasi gecikme cezalarina karsi en dusuk maliyetli korunma yontemi.",
+      "title": "Hürmüz'de diplomasi sinyali petrol fiyatlarını geriletti, Suudi Arabistan ikinci darboğazla baş başa kaldı",
+      "body": "Fortune, 11 Eylül tarihli analizinde petrol piyasasının iki ayrı boğaz arasında sıkıştığını yazıyor. Bir yanda Hürmüz'de diplomasi sinyali fiyatları aşağı çekerken, diğer yanda Bab el-Mendep'te Husilerin karadaki ilerleyişi yeni bir risk katmanı yaratıyor.\n\nEylül ayında Husi hareketi Bab el-Mendep Boğazı'nı çevreleyen Yemen topraklarında ilerledi ve bölge üzerinde ilk kez doğrudan kontrol sağladı. Bu, Kızıldeniz-Süveyş hattını kullanan gemiler için ikinci bir kritik darboğaz anlamına geliyor. Suudi Arabistan'ın Kızıldeniz kıyısındaki ihracat altyapısı ve Süveyş üzerinden Avrupa'ya giden yük trafiği doğrudan etkileniyor.\n\nFortune'un vurguladığı asimetri şu: Hürmüz açılsa bile Bab el-Mendep kapanırsa, Asya-Avrupa hattındaki gemiler Ümit Burnu rotasına yönelmeye devam edecek. Bu rota, Asya-Avrupa seferinde yaklaşık 10-14 gün ek transit süresi ve buna bağlı olarak daha yüksek yakıt, kiralama ve sigorta maliyeti demek.\n\nTürkiye açısından bu iki boğazın durumu doğrudan ihracat rekabetçiliği meselesi. Süveyş hattının çalışır olması, Türk ihracatçısına Uzak Doğu menşeli rakiplere karşı teslim süresi avantajı sağlıyor; Ümit Burnu rotası ise Asya menşeli malların Avrupa'ya ulaşma süresini uzatarak Türkiye'nin 'yakın kaynak' (nearshoring) konumunu güçlendiriyor. Ancak aynı rota, Türk ihracatçısının Uzak Doğu'dan ithal ettiği ara mal ve hammaddenin de geç ve pahalı gelmesi anlamına geliyor. Net etki sektörden sektöre değişiyor; ara mal ithalat yoğunluğu yüksek olan sektörler daha fazla zarar görüyor.\n\nKısa vadede izlenmesi gereken göstergeler şunlar: Bab el-Mendep haftalık geçiş sayıları, Kızıldeniz savaş riski sigorta primleri, Ümit Burnu rotasındaki gemi sayısı ve Asya-Avrupa konteyner navlunlarındaki haftalık değişim. Bu dört gösterge birlikte hareket ettiğinde, ihracat teslim programlarında iki ila üç haftalık tampon planlanması gerekiyor. Firmaların alıcılara karşı teslim taahhütlerinde boğaz kapanmasını kapsayan mücbir sebep tanımlarını güncellemesi, olası gecikme cezalarına karşı en düşük maliyetli korunma yöntemi.",
       "published_at": "2026-09-11T19:05:00+03:00",
       "language": "tr",
-      "summary": "Hormuz'da diplomasi umudu petrolu asagi cekerken, Husilerin Bab el-Mendep cevresinde ilk kez kara kontrolu saglamasi ikinci bir darbogaz riski yaratiyor. Suveys hattinin kapanmasi Asya-Avrupa seferinde 10-14 gun ek transit ve yuksek navlun demek. Turk sanayicisi icin bu, Uzak Dogu rakiplerine karsi teslim suresi avantaji ama ayni zamanda ithal ara mallarda gecikme ve maliyet artisi anlamina geliyor.",
+      "summary": "Hürmüz'de diplomasi umudu petrolü aşağı çekerken, Husilerin Bab el-Mendep çevresinde ilk kez kara kontrolü sağlaması ikinci bir darboğaz riski yaratıyor. Süveyş hattının kapanması Asya-Avrupa seferinde 10-14 gün ek transit ve yüksek navlun demek. Türk sanayicisi için bu, Uzak Doğu rakiplerine karşı teslim süresi avantajı ama aynı zamanda ithal ara mallarda gecikme ve maliyet artışı anlamına geliyor.",
       "summary_en": "While Hormuz diplomacy pushed oil down, Houthi advances gave them direct control around Bab al-Mandab for the first time, creating a second chokepoint risk for Red Sea/Suez traffic.",
       "key_points": [
-        "Husiler Eylul'de Bab el-Mendep cevresinde ilk kez kara kontrolu sagladi",
-        "Suveys yerine Umit Burnu rotasi 10-14 gun ek transit demek",
-        "Iki bogazin durumu Asya-Avrupa navlununu belirliyor",
-        "Turkiye'nin nearshoring avantaji guclenirken ithal ara mal maliyeti artiyor",
-        "Suudi Arabistan'in Kizildeniz ihracat altyapisi risk altinda"
+        "Husiler Eylül'de Bab el-Mendep çevresinde ilk kez kara kontrolü sağladı",
+        "Süveyş yerine Ümit Burnu rotası 10-14 gün ek transit demek",
+        "İki boğazın durumu Asya-Avrupa navlununu belirliyor",
+        "Türkiye'nin nearshoring avantajı güçlenirken ithal ara mal maliyeti artıyor",
+        "Suudi Arabistan'ın Kızıldeniz ihracat altyapısı risk altında"
       ],
       "entities": {
         "kurum": [
-          "Suveys Kanali Idaresi"
+          "Süveyş Kanalı İdaresi"
         ],
         "kisi": [],
         "sektor": [
@@ -341,29 +341,29 @@
     {
       "source_slug": "cnbc",
       "url": "https://www.cnbc.com/2026/09/10/ecb-interest-rate-hike-lagarde-iran.html",
-      "title": "European Central Bank hikes interest rates to 2.5% as policymakers see risk of higher inflation, weaker growth",
-      "body": "Avrupa Merkez Bankasi (ECB) 10 Eylul 2026'da politika faizini 25 baz puan artirarak mevduat faizini yuzde 2,25'ten yuzde 2,50'ye cikardi. Bu, 2026 yilinin ikinci faiz artisi oldu; Haziran'daki artisin ardindan Temmuz'da verilen aranin sonu anlamina geliyor. Karar 16 Eylul itibariyla yururluge giriyor.\n\nArtisin arkasindaki temel neden, Iran savasinin tetikledigi enerji kaynakli enflasyon. Avro Bolgesi'nde Agustos enflasyonu Temmuz'daki yuzde 2,9'dan yuzde 3,3'e cikti; bu, Eylul 2023'ten bu yana gorulen en yuksek seviye. Artisin neredeyse tamami enerji kaleminden geldi: enerji enflasyonu yuzde 10,3'ten yuzde 14,3'e sicradi.\n\nECB Baskani Christine Lagarde, kararin oybirligiyle alindigini ve bankanin ciziverdigi uc senaryonun hepsine karsi 'saglam' oldugunu soyledi. Lagarde ayrica politikanin toplanti bazinda belirlenecegini ve herhangi bir faiz patikasina onceden baglanilmadigini vurguladi.\n\nBuyume projeksiyonlari ise beklenenden dirençli: Avro Bolgesi GSYH'sinin 2026'da yuzde 0,9, 2027'de yuzde 1,4 ve 2028'de yuzde 1,5 buyumesi ongoruluyor; ilk iki yil yukari yonlu revize edildi.\n\nTurk sanayicisi icin sonuclari uc baslikta toplanabilir. Birincisi, Avrupa'daki finansman maliyetinin artmasi Avrupali alicilarin yatirim ve stok kararlarini geciktirebilir; siparis dongusunde yavaslama riski var. Ikincisi, euro'nun goreli olarak guclenmesi Turk ihracatcisinin euro bazli gelirlerini TL karsiliginda destekleyebilir. Ucuncusu, Avrupa'daki yuksek enerji maliyeti, enerji yogun Avrupali ureticilerin rekabet gucunu zayiflatarak Turkiye gibi alternatif tedarik merkezlerine kapi aralayabilir.\n\nECB'nin bir sonraki toplantisi ve guncellenmis projeksiyonlari, Avrupa talebinin 2027'ye nasil girecegini belirleyecek. Sanayici acisindan somut eylem maddesi, euro cinsi finansman maliyetinin artacagi varsayimiyla 2027 butcelerinin yeniden kurulmasi ve Avrupali alicilardan alinan siparislerde odeme vadelerinin yakindan izlenmesidir. Ozellikle Almanya ve Italya pazarina calisan makine, kalip, dokum ve otomotiv yan sanayi firmalarinin siparis defteri gorunurlugunu aylik bazda takip etmesi oneriliyor.",
+      "title": "Avrupa Merkez Bankası (ECB) faizi yüzde 2,50'ye çıkardı: yüksek enflasyon, zayıf büyüme riski",
+      "body": "Avrupa Merkez Bankası (ECB) 10 Eylül 2026'da politika faizini 25 baz puan artırarak mevduat faizini yüzde 2,25'ten yüzde 2,50'ye çıkardı. Bu, 2026 yılının ikinci faiz artışı oldu; Haziran'daki artışın ardından Temmuz'da verilen aranın sonu anlamına geliyor. Karar 16 Eylül itibarıyla yürürlüğe giriyor.\n\nArtışın arkasındaki temel neden, İran savaşının tetiklediği enerji kaynaklı enflasyon. Avro Bölgesi'nde Ağustos enflasyonu Temmuz'daki yüzde 2,9'dan yüzde 3,3'e çıktı; bu, Eylül 2023'ten bu yana görülen en yüksek seviye. Artışın neredeyse tamamı enerji kaleminden geldi: enerji enflasyonu yüzde 10,3'ten yüzde 14,3'e sıçradı.\n\nECB Başkanı Christine Lagarde, kararın oybirliğiyle alındığını ve bankanın çizdiği üç senaryonun hepsine karşı 'sağlam' olduğunu söyledi. Lagarde ayrıca politikanın toplantı bazında belirleneceğini ve herhangi bir faiz patikasına önceden bağlanılmadığını vurguladı.\n\nBüyüme projeksiyonları ise beklenenden dirençli: Avro Bölgesi GSYH'sinin 2026'da yüzde 0,9, 2027'de yüzde 1,4 ve 2028'de yüzde 1,5 büyümesi öngörülüyor; ilk iki yıl yukarı yönlü revize edildi.\n\nTürk sanayicisi için sonuçları üç başlıkta toplanabilir. Birincisi, Avrupa'daki finansman maliyetinin artması Avrupalı alıcıların yatırım ve stok kararlarını geciktirebilir; sipariş döngüsünde yavaşlama riski var. İkincisi, euro'nun göreli olarak güçlenmesi Türk ihracatçısının euro bazlı gelirlerini TL karşılığında destekleyebilir. Üçüncüsü, Avrupa'daki yüksek enerji maliyeti, enerji yoğun Avrupalı üreticilerin rekabet gücünü zayıflatarak Türkiye gibi alternatif tedarik merkezlerine kapı aralayabilir.\n\nECB'nin bir sonraki toplantısı ve güncellenmiş projeksiyonları, Avrupa talebinin 2027'ye nasıl gireceğini belirleyecek. Sanayici açısından somut eylem maddesi, euro cinsi finansman maliyetinin artacağı varsayımıyla 2027 bütçelerinin yeniden kurulması ve Avrupalı alıcılardan alınan siparişlerde ödeme vadelerinin yakından izlenmesidir. Özellikle Almanya ve İtalya pazarına çalışan makine, kalıp, döküm ve otomotiv yan sanayi firmalarının sipariş defteri görünürlüğünü aylık bazda takip etmesi öneriliyor.",
       "published_at": "2026-09-10T16:30:00+03:00",
       "language": "tr",
-      "summary": "ECB 10 Eylul'de faizi 25 baz puan artirarak mevduat faizini yuzde 2,50'ye cikardi; Agustos enflasyonu yuzde 3,3'e, enerji enflasyonu ise yuzde 14,3'e yukseldigi icin karar oybirligiyle alindi. Turk ihracatcisi icin bu, Avrupali alicilarda finansman maliyeti artisi ve siparis ertelemesi riski demek; ancak Avrupa'nin enerji maliyeti dezavantaji Turkiye'yi alternatif tedarik merkezi olarak one cikarabilir.",
+      "summary": "ECB 10 Eylül'de faizi 25 baz puan artırarak mevduat faizini yüzde 2,50'ye çıkardı; Ağustos enflasyonu yüzde 3,3'e, enerji enflasyonu ise yüzde 14,3'e yükseldiği için karar oybirliğiyle alındı. Türk ihracatçısı için bu, Avrupalı alıcılarda finansman maliyeti artışı ve sipariş ertelemesi riski demek; ancak Avrupa'nın enerji maliyeti dezavantajı Türkiye'yi alternatif tedarik merkezi olarak öne çıkarabilir.",
       "summary_en": "The ECB raised its deposit rate 25bp to 2.50% on 10 September as euro area inflation hit 3.3% in August, driven by 14.3% energy inflation from the Iran war.",
       "key_points": [
-        "ECB mevduat faizi yuzde 2,25'ten yuzde 2,50'ye cikti",
-        "Avro Bolgesi Agustos enflasyonu yuzde 3,3 ile Eylul 2023'ten beri en yuksek",
-        "Enerji enflasyonu yuzde 10,3'ten yuzde 14,3'e sicradi",
-        "Karar oybirligiyle alindi, 16 Eylul'de yururluge giriyor",
-        "Avro Bolgesi 2026 buyumesi yuzde 0,9 olarak ongoruluyor"
+        "ECB mevduat faizi yüzde 2,25'ten yüzde 2,50'ye çıktı",
+        "Avro Bölgesi Ağustos enflasyonu yüzde 3,3 ile Eylül 2023'ten beri en yüksek",
+        "Enerji enflasyonu yüzde 10,3'ten yüzde 14,3'e sıçradı",
+        "Karar oybirliğiyle alındı, 16 Eylül'de yürürlüğe giriyor",
+        "Avro Bölgesi 2026 büyümesi yüzde 0,9 olarak öngörülüyor"
       ],
       "entities": {
         "kurum": [
-          "Avrupa Merkez Bankasi"
+          "Avrupa Merkez Bankası"
         ],
         "kisi": [
           "Christine Lagarde"
         ],
         "sektor": [
           "Finans",
-          "Ihracat",
+          "İhracat",
           "Makine",
           "Otomotiv"
         ]
@@ -390,22 +390,22 @@
     {
       "source_slug": "bloomberg",
       "url": "https://www.bloomberg.com/news/articles/2026-09-10/ecb-lifts-rates-for-second-time-as-iran-war-drives-inflation",
-      "title": "Lagarde Calls ECB Hike 'No Brainer' as Markets Bet on More Ahead",
-      "body": "Bloomberg'in aktardigina gore ECB Baskani Christine Lagarde, 10 Eylul'deki 25 baz puanlik faiz artisini 'dusunmeye gerek bile olmayan bir karar' (no brainer) olarak nitelendirdi. Lagarde'in bu ifadesi piyasalarda, ECB'nin siki para politikasi donguse devam edecegi beklentisini guclendirdi.\n\nBloomberg'in vurguladigi nokta, faiz vadeli islem piyasalarinin artik 2026 sonuna kadar ek artislari fiyatlamaya baslamis olmasi. Iran savasinin enerji fiyatlarina yansimasi kalici gorundukce, ECB'nin 'gecici sok' yaklasimindan uzaklastigi degerlendiriliyor. Banka, enflasyonun hedefin uzerinde uzun bir sure kalmasini bekliyor.\n\nLagarde ayrica Avrupa'nin kis aylarina yonelik dogal gaz durumu konusunda guvenli oldugunu, yuzde 2 enflasyon hedefine donusun orta vadede saglanacagini soyledi. Ancak piyasa katilimcilari, depolama seviyelerinin tarihi ortalamanin altinda olmasi nedeniyle bu iyimserlige temkinli yaklasiyor.\n\nBu karar Turk sanayicisi icin iki yonlu okunmali. Birincisi, euro cinsi borclanma maliyeti artiyor; Avrupa bankalarindan kredi kullanan veya euro cinsi ihracat kredisi olan firmalar icin finansman gideri yukseliyor. Ikincisi, EUR/USD paritesindeki hareket, dolar bazli hammadde alip euro bazli satis yapan firmalarda kur marjini dogrudan etkiliyor. Makine, otomotiv yan sanayi, tekstil ve beyaz esya gibi Avrupa agirlikli ihracat yapan sektorlerde 2026 son ceyregi ve 2027 ilk ceyregi siparis planlamasinda ihtiyatli senaryo calisilmasi oneriliyor.\n\nBloomberg'in aktardigi bir diger onemli ayrinti, ECB'nin uc farkli senaryo (temel, olumsuz, ciddi) uzerinden calisiyor olmasi ve faiz artisinin her uc senaryoda da gerekcelendirilebilir bulunmasi. Bu, bankanin enerji sokunun kaliciligina dair varsayimini yukselttigini gosteriyor. Turk firmalari icin pratik cikarim, euro cinsi kredi yenilemelerinde sabit faiz secenegini degerlendirmek ve ihracat alacaklarinda vade kisaltmaya calismaktir. Ayrica Avrupa Yatirim Bankasi ve kalkinma bankalari uzerinden saglanan uzun vadeli yesil donusum kredilerinin goreli cazibesi bu ortamda artiyor.",
+      "title": "Lagarde: ECB'nin faiz artışı 'düşünmeye bile gerek yoktu' — piyasalar yeni artışlara oynuyor",
+      "body": "Bloomberg'in aktardığına göre ECB Başkanı Christine Lagarde, 10 Eylül'deki 25 baz puanlık faiz artışını 'düşünmeye gerek bile olmayan bir karar' (no brainer) olarak nitelendirdi. Lagarde'ın bu ifadesi piyasalarda, ECB'nin sıkı para politikası döngüsüne devam edeceği beklentisini güçlendirdi.\n\nBloomberg'in vurguladığı nokta, faiz vadeli işlem piyasalarının artık 2026 sonuna kadar ek artışları fiyatlamaya başlamış olması. İran savaşının enerji fiyatlarına yansıması kalıcı göründükçe, ECB'nin 'geçici şok' yaklaşımından uzaklaştığı değerlendiriliyor. Banka, enflasyonun hedefin üzerinde uzun bir süre kalmasını bekliyor.\n\nLagarde ayrıca Avrupa'nın kış aylarına yönelik doğal gaz durumu konusunda güvenli olduğunu, yüzde 2 enflasyon hedefine dönüşün orta vadede sağlanacağını söyledi. Ancak piyasa katılımcıları, depolama seviyelerinin tarihi ortalamanın altında olması nedeniyle bu iyimserliğe temkinli yaklaşıyor.\n\nBu karar Türk sanayicisi için iki yönlü okunmalı. Birincisi, euro cinsi borçlanma maliyeti artıyor; Avrupa bankalarından kredi kullanan veya euro cinsi ihracat kredisi olan firmalar için finansman gideri yükseliyor. İkincisi, EUR/USD paritesindeki hareket, dolar bazlı hammadde alıp euro bazlı satış yapan firmalarda kur marjını doğrudan etkiliyor. Makine, otomotiv yan sanayi, tekstil ve beyaz eşya gibi Avrupa ağırlıklı ihracat yapan sektörlerde 2026 son çeyreği ve 2027 ilk çeyreği sipariş planlamasında ihtiyatlı senaryo çalışılması öneriliyor.\n\nBloomberg'in aktardığı bir diğer önemli ayrıntı, ECB'nin üç farklı senaryo (temel, olumsuz, ciddi) üzerinden çalışıyor olması ve faiz artışının her üç senaryoda da gerekçelendirilebilir bulunması. Bu, bankanın enerji şokunun kalıcılığına dair varsayımını yükselttiğini gösteriyor. Türk firmaları için pratik çıkarım, euro cinsi kredi yenilemelerinde sabit faiz seçeneğini değerlendirmek ve ihracat alacaklarında vade kısaltmaya çalışmaktır. Ayrıca Avrupa Yatırım Bankası ve kalkınma bankaları üzerinden sağlanan uzun vadeli yeşil dönüşüm kredilerinin göreli cazibesi bu ortamda artıyor.",
       "published_at": "2026-09-10T20:10:00+03:00",
       "language": "tr",
-      "summary": "Lagarde ECB'nin 25 baz puanlik artisini 'dusunmeye gerek olmayan bir karar' olarak tanimladi; piyasalar artik 2026 sonuna kadar ek faiz artislari fiyatliyor. Euro cinsi borclanma maliyeti yukseliyor ve EUR/USD paritesi kur marjlarini dogrudan etkiliyor. Avrupa agirlikli ihracat yapan makine, otomotiv yan sanayi ve beyaz esya firmalarinin 2027 ilk ceyrek siparis planlamasinda ihtiyatli senaryo calismasi gerekiyor.",
+      "summary": "Lagarde ECB'nin 25 baz puanlık artışını 'düşünmeye gerek olmayan bir karar' olarak tanımladı; piyasalar artık 2026 sonuna kadar ek faiz artışları fiyatlıyor. Euro cinsi borçlanma maliyeti yükseliyor ve EUR/USD paritesi kur marjlarını doğrudan etkiliyor. Avrupa ağırlıklı ihracat yapan makine, otomotiv yan sanayi ve beyaz eşya firmalarının 2027 ilk çeyrek sipariş planlamasında ihtiyatlı senaryo çalışması gerekiyor.",
       "summary_en": "Lagarde called the 25bp hike a 'no brainer' and markets are now pricing additional increases through end-2026, raising euro-denominated financing costs.",
       "key_points": [
-        "Lagarde artisi 'no brainer' olarak niteledi",
-        "Piyasalar 2026 sonuna kadar ek artis fiyatliyor",
-        "ECB enflasyonun hedef uzerinde uzun sure kalmasini bekliyor",
-        "Euro cinsi borclanma ve ihracat kredisi maliyeti artiyor",
-        "EUR/USD paritesi kur marjlarini etkiliyor"
+        "Lagarde artışı 'düşünmeye bile gerek yok' (no brainer) olarak niteledi",
+        "Piyasalar 2026 sonuna kadar ek artış fiyatlıyor",
+        "ECB enflasyonun hedef üzerinde uzun süre kalmasını bekliyor",
+        "Euro cinsi borçlanma ve ihracat kredisi maliyeti artıyor",
+        "EUR/USD paritesi kur marjlarını etkiliyor"
       ],
       "entities": {
         "kurum": [
-          "Avrupa Merkez Bankasi"
+          "Avrupa Merkez Bankası"
         ],
         "kisi": [
           "Christine Lagarde"
@@ -413,7 +413,7 @@
         "sektor": [
           "Finans",
           "Makine",
-          "Beyaz Esya",
+          "Beyaz Eşya",
           "Tekstil"
         ]
       },
@@ -439,30 +439,30 @@
     {
       "source_slug": "euronews",
       "url": "https://www.euronews.com/business/2026/09/10/ecb-hikes-rates-to-25-as-energy-shock-pushes-eurozone-inflation-higher",
-      "title": "ECB hikes rates to 2.5% as energy shock pushes eurozone inflation higher",
-      "body": "Euronews Business, ECB'nin 10 Eylul'deki faiz artisini Avrupa sanayisi acisindan degerlendiriyor. Haberin merkezinde, enflasyon artisinin neredeyse tamaminin enerji kaleminden gelmesi var: Agustos'ta enerji enflasyonu yuzde 14,3'e cikarken, cekirdek kalemlerdeki artis cok daha ilimli seyretti.\n\nBu tablo, ECB acisindan klasik bir arz soku ikilemi yaratiyor. Faiz artisi enerji arzini artirmiyor; ancak ikincil etkilerin (ucret-fiyat sarmali, beklentilerin bozulmasi) onune gecmeyi amacliyor. Lagarde'in vurgusu tam da bu noktada: enflasyon beklentilerinin capasi korunmali.\n\nAvrupa sanayisi icin sonuclar agir. Enerji yogun sektorlerde (alüminyum, cimento, gubre, cam, kimya) Avrupali ureticiler hem yuksek enerji maliyeti hem yukselen finansman maliyetiyle ayni anda karsi karsiya. Bazi tesislerde uretim kisintilari ve gecici duruslar gundemde. Avro Bolgesi GSYH buyumesi 2026 icin yuzde 0,9 gibi zayif bir seviyede ongoruluyor.\n\nTurk sanayicisi icin bu, ikili bir firsat-risk denklemi. Risk tarafinda: Avrupa'da talep zayifliyor, Turkiye'nin en buyuk ihracat pazarinda siparis hacmi baski altinda. Firsat tarafinda: Avrupali enerji yogun ureticilerin maliyet dezavantaji, Turkiye'yi ara mal ve yari mamul tedariginde cazip kiliyor. Ozellikle dokum, metal isleme, seramik, cam ve kimya ara urunlerinde Avrupali alicilarin tedarik cesitlendirme arayislari artabilir. Ancak bu firsatin degerlendirilebilmesi, CBAM karbon maliyeti ve AB celik korunma onlemleri gibi duzenleyici engellerin asilmasina bagli.\n\nEuronews'in vurguladigi bir diger nokta, Avrupa sanayisinde kapasite kullanim oranlarinin gerilemesi ve bazi sektorlerde uretimin dusuk enerji maliyetli cografyalara kaydirilmasi tartismasinin yeniden acilmis olmasi. Bu tartisma, Turkiye icin dogrudan yatirim cekme potansiyeli tasiyor. Ancak Avrupali yatirimcinin karar kriterlerinde enerji maliyeti kadar karbon yogunlugu, yenilenebilir enerji erisimi ve tedarik zinciri izlenebilirligi de belirleyici; bu nedenle yesil elektrik tedarik anlasmalari ve karbon ayak izi hesaplamasi yatirim cekmenin on kosulu haline geliyor.",
+      "title": "ECB faizi yüzde 2,50'ye yükseltti: enerji şoku Avro Bölgesi enflasyonunu yukarı itti",
+      "body": "Euronews Business, ECB'nin 10 Eylül'deki faiz artışını Avrupa sanayisi açısından değerlendiriyor. Haberin merkezinde, enflasyon artışının neredeyse tamamının enerji kaleminden gelmesi var: Ağustos'ta enerji enflasyonu yüzde 14,3'e çıkarken, çekirdek kalemlerdeki artış çok daha ılımlı seyretti.\n\nBu tablo, ECB açısından klasik bir arz şoku ikilemi yaratıyor. Faiz artışı enerji arzını artırmıyor; ancak ikincil etkilerin (ücret-fiyat sarmalı, beklentilerin bozulması) önüne geçmeyi amaçlıyor. Lagarde'ın vurgusu tam da bu noktada: enflasyon beklentilerinin çapası korunmalı.\n\nAvrupa sanayisi için sonuçlar ağır. Enerji yoğun sektörlerde (alüminyum, çimento, gübre, cam, kimya) Avrupalı üreticiler hem yüksek enerji maliyeti hem yükselen finansman maliyetiyle aynı anda karşı karşıya. Bazı tesislerde üretim kısıntıları ve geçici duruşlar gündemde. Avro Bölgesi GSYH büyümesi 2026 için yüzde 0,9 gibi zayıf bir seviyede öngörülüyor.\n\nTürk sanayicisi için bu, ikili bir fırsat-risk denklemi. Risk tarafında: Avrupa'da talep zayıflıyor, Türkiye'nin en büyük ihracat pazarında sipariş hacmi baskı altında. Fırsat tarafında: Avrupalı enerji yoğun üreticilerin maliyet dezavantajı, Türkiye'yi ara mal ve yarı mamul tedariğinde cazip kılıyor. Özellikle döküm, metal işleme, seramik, cam ve kimya ara ürünlerinde Avrupalı alıcıların tedarik çeşitlendirme arayışları artabilir. Ancak bu fırsatın değerlendirilebilmesi, CBAM karbon maliyeti ve AB çelik korunma önlemleri gibi düzenleyici engellerin aşılmasına bağlı.\n\nEuronews'in vurguladığı bir diğer nokta, Avrupa sanayisinde kapasite kullanım oranlarının gerilemesi ve bazı sektörlerde üretimin düşük enerji maliyetli coğrafyalara kaydırılması tartışmasının yeniden açılmış olması. Bu tartışma, Türkiye için doğrudan yatırım çekme potansiyeli taşıyor. Ancak Avrupalı yatırımcının karar kriterlerinde enerji maliyeti kadar karbon yoğunluğu, yenilenebilir enerji erişimi ve tedarik zinciri izlenebilirliği de belirleyici; bu nedenle yeşil elektrik tedarik anlaşmaları ve karbon ayak izi hesaplaması yatırım çekmenin on koşulu haline geliyor.",
       "published_at": "2026-09-10T18:00:00+03:00",
       "language": "tr",
-      "summary": "ECB faizi yuzde 2,50'ye cikardi; Avro Bolgesi enflasyonundaki artisin neredeyse tamami yuzde 14,3'e ulasan enerji enflasyonundan geldi. Avrupali enerji yogun ureticiler yuksek enerji ve yuksek finansman maliyetiyle ayni anda bogusuyor, bazi tesislerde uretim kisintisi gundemde. Turk sanayicisi icin bu, Avrupa'da zayiflayan talep riski ile ara mal tedariginde pay kapma firsatini ayni anda getiriyor.",
+      "summary": "ECB faizi yüzde 2,50'ye çıkardı; Avro Bölgesi enflasyonundaki artışın neredeyse tamamı yüzde 14,3'e ulaşan enerji enflasyonundan geldi. Avrupalı enerji yoğun üreticiler yüksek enerji ve yüksek finansman maliyetiyle aynı anda boğuşuyor, bazı tesislerde üretim kısıntısı gündemde. Türk sanayicisi için bu, Avrupa'da zayıflayan talep riski ile ara mal tedariğinde pay kapma fırsatını aynı anda getiriyor.",
       "summary_en": "The ECB hiked to 2.5% as eurozone inflation was driven almost entirely by a 14.3% surge in energy prices, squeezing Europe's energy-intensive manufacturers.",
       "key_points": [
-        "Enflasyon artisinin neredeyse tamami enerji kaleminden geldi",
-        "Avrupa'da enerji yogun sektorlerde uretim kisintilari gundemde",
-        "Avro Bolgesi 2026 buyumesi yuzde 0,9 ile zayif",
-        "Turkiye ara mal tedariginde pay kapma firsati yakalayabilir",
-        "CBAM ve AB celik korunma onlemleri bu firsatin onunde engel"
+        "Enflasyon artışının neredeyse tamamı enerji kaleminden geldi",
+        "Avrupa'da enerji yoğun sektörlerde üretim kısıntıları gündemde",
+        "Avro Bölgesi 2026 büyümesi yüzde 0,9 ile zayıf",
+        "Türkiye ara mal tedariğinde pay kapma fırsatı yakalayabilir",
+        "CBAM ve AB çelik korunma önlemleri bu fırsatın önünde engel"
       ],
       "entities": {
         "kurum": [
-          "Avrupa Merkez Bankasi",
+          "Avrupa Merkez Bankası",
           "Avrupa Komisyonu"
         ],
         "kisi": [
           "Christine Lagarde"
         ],
         "sektor": [
-          "Aluminyum",
-          "Cimento",
+          "Alüminyum",
+          "Çimento",
           "Kimya",
           "Cam",
           "Seramik"
@@ -490,18 +490,18 @@
     {
       "source_slug": "cnbc",
       "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html",
-      "title": "CPI inflation report August 2026: Consumer prices rise 0.4%, annual rate at 3.4%",
-      "body": "ABD Calisma Istatistikleri Burosu'nun (BLS) 11 Eylul'de acikladigi verilere gore Agustos 2026'da tuketici fiyat endeksi (TUFE) aylik yuzde 0,4 artti; yillik enflasyon yuzde 3,4 seviyesinde gerceklesti. Gida ve enerji harici cekirdek TUFE aylik yuzde 0,3, yillik yuzde 2,4 arti gosterdi.\n\nHer iki veri de Dow Jones konsensusuyla uyumlu cikti; ancak cekirdekteki aylik artis beklentinin biraz uzerindeydi. Alt kalemlerde ulasim hizmetleri yuzde 0,5, ikinci el arac ve kamyon fiyatlari yuzde 0,4, yeni arac fiyatlari yuzde 0,3 artti. Motorlu tasit sigortasi ise yuzde 0,8 geriledi.\n\nVerinin en onemli sonucu para politikasi tarafinda. Yatirimcilar, Fed'in 15-16 Eylul toplantisinda faiz artirma ihtimalini yukseltti. J.P. Morgan Wealth Management stratejistleri Eylul toplantisinda 25 baz puanlik bir artis bekliyor. Bu, uzun bir gevseme donemi bekleyen piyasa icin ciddi bir donus anlamina geliyor: Fed politika faizi Aralik 2025'ten bu yana yuzde 3,50-3,75 araliginda sabit tutulmustu. Jackson Hole'da 12 aylik PCE enflasyonunun yuzde 3,7'ye isaret edilmesi de sikilasma sinyalini guclendirmisti.\n\nTurk sanayicisi icin bu verinin uc dolayli etkisi var. Birincisi, Fed'in sikilasmasi dolar endeksini guclendirerek gelismekte olan ulke para birimleri ve emtia fiyatlari uzerinde baski yaratir. Ikincisi, yuksek ABD faizi kuresel risk istahini azaltarak Turkiye'ye yonelik portfoy ve dogrudan yatirim akimlarini yavaslatabilir. Ucuncusu, ABD'ye ihracat yapan sektorlerde (hazir giyim, makine, celik urunleri, halici) tuketici talebinin zayiflamasi riski var.",
+      "title": "Ağustos 2026 TÜFE raporu: tüketici fiyatları yüzde 0,4 arttı, yıllık enflasyon yüzde 3,4",
+      "body": "ABD Çalışma İstatistikleri Bürosu'nun (BLS) 11 Eylül'de açıkladığı verilere göre Ağustos 2026'da tüketici fiyat endeksi (TÜFE) aylık yüzde 0,4 arttı; yıllık enflasyon yüzde 3,4 seviyesinde gerçekleşti. Gıda ve enerji harici çekirdek TÜFE aylık yüzde 0,3, yıllık yüzde 2,4 artış gösterdi.\n\nHer iki veri de Dow Jones konsensüsüyle uyumlu çıktı; ancak çekirdekteki aylık artış beklentinin biraz üzerindeydi. Alt kalemlerde ulaşım hizmetleri yüzde 0,5, ikinci el araç ve kamyon fiyatları yüzde 0,4, yeni araç fiyatları yüzde 0,3 arttı. Motorlu taşıt sigortası ise yüzde 0,8 geriledi.\n\nVerinin en önemli sonucu para politikası tarafında. Yatırımcılar, Fed'in 15-16 Eylül toplantısında faiz artırma ihtimalini yükseltti. J.P. Morgan Wealth Management stratejistleri Eylül toplantısında 25 baz puanlık bir artış bekliyor. Bu, uzun bir gevşeme dönemi bekleyen piyasa için ciddi bir dönüş anlamına geliyor: Fed politika faizi Aralık 2025'ten bu yana yüzde 3,50-3,75 aralığında sabit tutulmuştu. Jackson Hole'da 12 aylık PCE enflasyonunun yüzde 3,7'ye işaret edilmesi de sıkılaşma sinyalini güçlendirmişti.\n\nTürk sanayicisi için bu verinin üç dolaylı etkisi var. Birincisi, Fed'in sıkılaşması dolar endeksini güçlendirerek gelişmekte olan ülke para birimleri ve emtia fiyatları üzerinde baskı yaratır. İkincisi, yüksek ABD faizi küresel risk iştahını azaltarak Türkiye'ye yönelik portföy ve doğrudan yatırım akımlarını yavaşlatabilir. Üçüncüsü, ABD'ye ihracat yapan sektörlerde (hazır giyim, makine, çelik ürünleri, halıcı) tüketici talebinin zayıflaması riski var.",
       "published_at": "2026-09-11T15:45:00+03:00",
       "language": "tr",
-      "summary": "ABD'de Agustos TUFE aylik yuzde 0,4, yillik yuzde 3,4 artti; cekirdek enflasyon aylik yuzde 0,3 ile beklentinin uzerinde cikti. Veri sonrasi piyasalar Fed'in 15-16 Eylul toplantisinda faiz artirma ihtimalini yukseltti. Turk sanayicisi icin bu, guclenen dolar, zayiflayan kuresel risk istahi ve ABD'ye ihracatta talep riski anlamina geliyor.",
+      "summary": "ABD'de Ağustos TÜFE aylık yüzde 0,4, yıllık yüzde 3,4 arttı; çekirdek enflasyon aylık yüzde 0,3 ile beklentinin üzerinde çıktı. Veri sonrası piyasalar Fed'in 15-16 Eylül toplantısında faiz artırma ihtimalini yükseltti. Türk sanayicisi için bu, güçlenen dolar, zayıflayan küresel risk iştahı ve ABD'ye ihracatta talep riski anlamına geliyor.",
       "summary_en": "US August CPI rose 0.4% m/m and 3.4% y/y, with core at 0.3% m/m, lifting market odds of a Fed rate hike at the 15-16 September meeting.",
       "key_points": [
-        "ABD Agustos TUFE aylik yuzde 0,4, yillik yuzde 3,4",
-        "Cekirdek TUFE aylik yuzde 0,3, yillik yuzde 2,4",
-        "Piyasalar Fed'in 16 Eylul'de faiz artirmasini fiyatliyor",
-        "Fed faizi Aralik 2025'ten beri yuzde 3,50-3,75 araliginda",
-        "Guclenen dolar emtia ve gelismekte olan ulke kurlari uzerinde baski yaratir"
+        "ABD Ağustos TÜFE aylık yüzde 0,4, yıllık yüzde 3,4",
+        "Çekirdek TÜFE aylık yüzde 0,3, yıllık yüzde 2,4",
+        "Piyasalar Fed'in 16 Eylül'de faiz artırmasını fiyatlıyor",
+        "Fed faizi Aralık 2025'ten beri yüzde 3,50-3,75 aralığında",
+        "Güçlenen dolar emtia ve gelişmekte olan ülke kurları üzerinde baskı yaratır"
       ],
       "entities": {
         "kurum": [
@@ -512,7 +512,7 @@
         "kisi": [],
         "sektor": [
           "Finans",
-          "Hazir Giyim",
+          "Hazır Giyim",
           "Makine",
           "Otomotiv"
         ]
@@ -539,29 +539,29 @@
     {
       "source_slug": "bloomberg",
       "url": "https://www.bloomberg.com/news/articles/2026-09-11/us-cpi-report-august-2026-key-takeaways-on-inflation-consumer-price-index",
-      "title": "US CPI Report August 2026: Key Takeaways on Inflation, Consumer Price Index",
-      "body": "Bloomberg'in Agustos 2026 ABD enflasyon verisi degerlendirmesi, manset rakamin otesinde bilesenlere odaklaniyor. Yillik yuzde 3,4'luk manset enflasyon, Fed'in yuzde 2 hedefinin belirgin sekilde uzerinde kalmaya devam ediyor ve bu, ikinci yila giren bir sapma anlamina geliyor.\n\nBloomberg'in altini cizdigi kritik nokta, enerji kaynakli maliyet baskisinin cekirdek mal ve hizmet fiyatlarina sizmaya baslamasi. Ulasim hizmetlerindeki yuzde 0,5'lik artis bunun en acik gostergesi; yakit maliyeti kargo, lojistik ve toplu tasimacilik fiyatlarina yansiyor. Bu, merkez bankalari icin en tehlikeli senaryo: gecici arz sokunun kalici cekirdek enflasyona donusmesi.\n\nBu cerceve, ABD Merkez Bankasi'nin Eylul toplantisini son yillarin en cekismeli toplantilarindan biri haline getiriyor. Temmuz'da bolunmus bir kurul faizi sabit tutmustu; enerji soklari ve enflasyon beklentilerindeki bozulma, Eylul'de artis yonunde bir hareketin esigini dusurdu.\n\nSanayici perspektifinden bakildiginda, ABD ve Avrupa merkez bankalarinin es zamanli olarak siki para politikasina donmesi kuresel talep icin ciddi bir daraltici etki demek. Bu, 2026'nin son ceyreginde ihracat siparislerinde yavaslama, stok eritme davranisi ve odeme vadelerinde uzama riski yaratiyor. Ihracatci firmalar icin alacak sigortasi ve akreditif kullaniminin gozden gecirilmesi, vade riskinin yonetilmesi bu donemde one cikan onlemler arasinda. Ayni zamanda guclenen dolar, dolar cinsi borclu Turk firmalari icin kur riski yonetimini kritik hale getiriyor.\n\nBloomberg'in analizinde one cikan son bir baslik, enflasyon beklentilerinin uzun vadeli anket olcumlerinde yukari kaymasi. Beklentilerin capadan kopmasi, merkez bankalarinin faizi daha uzun sure yuksek tutmasini gerektirir ve bu, kuresel yatirim dongusunu 2027'ye sarkitir. Sermaye yogun yatirim planlari olan sanayi firmalarinin, finansman maliyetinin hizla dusecegi varsayimina dayanan fizibiliteleri gozden gecirmesi ve yatirim kararlarini asamalandirmasi bu ortamda ihtiyatli bir strateji olacaktir.",
+      "title": "ABD Ağustos 2026 TÜFE raporu: enflasyon ve tüketici fiyat endeksinde öne çıkanlar",
+      "body": "Bloomberg'in Ağustos 2026 ABD enflasyon verisi değerlendirmesi, manşet rakamın ötesinde bileşenlere odaklanıyor. Yıllık yüzde 3,4'lük manşet enflasyon, Fed'in yüzde 2 hedefinin belirgin şekilde üzerinde kalmaya devam ediyor ve bu, ikinci yıla giren bir sapma anlamına geliyor.\n\nBloomberg'in altını çizdiği kritik nokta, enerji kaynaklı maliyet baskısının çekirdek mal ve hizmet fiyatlarına sızmaya başlaması. Ulaşım hizmetlerindeki yüzde 0,5'lik artış bunun en açık göstergesi; yakıt maliyeti kargo, lojistik ve toplu taşımacılık fiyatlarına yansıyor. Bu, merkez bankaları için en tehlikeli senaryo: geçici arz şokunun kalıcı çekirdek enflasyona dönüşmesi.\n\nBu çerçeve, ABD Merkez Bankası'nın Eylül toplantısını son yılların en çekişmeli toplantılarından biri haline getiriyor. Temmuz'da bölünmüş bir kurul faizi sabit tutmuştu; enerji şokları ve enflasyon beklentilerindeki bozulma, Eylül'de artış yönünde bir hareketin eşiğini düşürdü.\n\nSanayici perspektifinden bakıldığında, ABD ve Avrupa merkez bankalarının eş zamanlı olarak sıkı para politikasına dönmesi küresel talep için ciddi bir daraltıcı etki demek. Bu, 2026'nın son çeyreğinde ihracat siparişlerinde yavaşlama, stok eritme davranışı ve ödeme vadelerinde uzama riski yaratıyor. İhracatçı firmalar için alacak sigortası ve akreditif kullanımının gözden geçirilmesi, vade riskinin yönetilmesi bu dönemde öne çıkan önlemler arasında. Aynı zamanda güçlenen dolar, dolar cinsi borçlu Türk firmaları için kur riski yönetimini kritik hale getiriyor.\n\nBloomberg'in analizinde öne çıkan son bir başlık, enflasyon beklentilerinin uzun vadeli anket ölçümlerinde yukarı kayması. Beklentilerin çapadan kopması, merkez bankalarının faizi daha uzun süre yüksek tutmasını gerektirir ve bu, küresel yatırım döngüsünü 2027'ye sarkıtır. Sermaye yoğun yatırım planları olan sanayi firmalarının, finansman maliyetinin hızla düşeceği varsayımına dayanan fizibiliteleri gözden geçirmesi ve yatırım kararlarını aşamalandırması bu ortamda ihtiyatlı bir strateji olacaktır.",
       "published_at": "2026-09-11T17:20:00+03:00",
       "language": "tr",
-      "summary": "Bloomberg'e gore ABD'de yillik yuzde 3,4'luk enflasyon Fed hedefinin belirgin uzerinde kaliyor ve enerji kaynakli maliyet baskisi cekirdek hizmet fiyatlarina siziyor. Fed ile ECB'nin es zamanli sikilasmasi kuresel talep icin daraltici etki yaratacak. Ihracatci firmalar icin son ceyrekte siparis yavaslamasi, vade uzamasi ve dolar cinsi borc kur riski one cikan basliklar.",
+      "summary": "Bloomberg'e göre ABD'de yıllık yüzde 3,4'lük enflasyon Fed hedefinin belirgin üzerinde kalıyor ve enerji kaynaklı maliyet baskısı çekirdek hizmet fiyatlarına sızıyor. Fed ile ECB'nin eş zamanlı sıkılaşması küresel talep için daraltıcı etki yaratacak. İhracatçı firmalar için son çeyrekte sipariş yavaşlaması, vade uzaması ve dolar cinsi borç kur riski öne çıkan başlıklar.",
       "summary_en": "Bloomberg notes US inflation at 3.4% remains well above the Fed's target as energy costs seep into core services, setting up a contentious September FOMC.",
       "key_points": [
-        "Yillik yuzde 3,4 enflasyon Fed hedefinin belirgin uzerinde",
-        "Enerji maliyeti cekirdek hizmet fiyatlarina siziyor",
-        "Ulasim hizmetleri aylik yuzde 0,5 artti",
-        "Fed ve ECB'nin es zamanli sikilasmasi kuresel talebi daraltiyor",
-        "Ihracatcilar icin vade riski ve kur riski yonetimi kritiklesiyor"
+        "Yıllık yüzde 3,4 enflasyon Fed hedefinin belirgin üzerinde",
+        "Enerji maliyeti çekirdek hizmet fiyatlarına sızıyor",
+        "Ulaşım hizmetleri aylık yüzde 0,5 arttı",
+        "Fed ve ECB'nin eş zamanlı sıkılaşması küresel talebi daraltıyor",
+        "İhracatçılar için vade riski ve kur riski yönetimi kritikleşiyor"
       ],
       "entities": {
         "kurum": [
           "Federal Reserve",
-          "Avrupa Merkez Bankasi"
+          "Avrupa Merkez Bankası"
         ],
         "kisi": [],
         "sektor": [
           "Finans",
           "Lojistik",
-          "Ihracat"
+          "İhracat"
         ]
       },
       "region": "KURESEL",
@@ -586,18 +586,18 @@
     {
       "source_slug": "iea",
       "url": "https://www.iea.org/reports/oil-market-report-september-2026",
-      "title": "IEA Oil Market Report - September 2026: World oil demand to fall 2.5 mb/d",
-      "body": "Uluslararasi Enerji Ajansi'nin (IEA) Eylul 2026 Petrol Piyasasi Raporu, kuresel petrol talebinde pandemiden bu yana gorulen en sert daralmayi ongoruyor. Rapora gore 2026'da dunya petrol talebi 2,5 milyon varil/gun gerileyecek; bu, Agustos raporundaki tahmine gore 940 bin varil/gun daha derin bir dusus anlamina geliyor.\n\nRevizyonun temel nedeni, ABD-Iran muzakerelerindeki tikanikligin Korfez akislarinin normallesmesini gelecek yila ertelemesi. Kayiplar ozellikle orta distilatlar (motorin, gazyagi) ve petrokimya hammaddelerinde yogunlasiyor ve cografi olarak Asya'da toplaniyor. IEA, motorin ve gazyaginin tek basina kuresel petrol talebinin yaklasik yuzde 30'unu olusturdugunu hatirlatiyor.\n\nArz tarafinda tablo daha da carpici. Agustos ayinda kuresel petrol uretimi aylik bazda 1,6 milyon varil/gun dususerek 100,1 milyon varil/gune indi; Korfez'de 10 milyon varil/gunun uzerinde uretim guvenlik riskleri nedeniyle kapali kaldi. Toplam arzin 2026'da 5,7 milyon varil/gun azalarak 100,7 milyon varil/gune inmesi bekleniyor. Korfez'de beklenen toparlanma 2027'ye ertelendi. IEA, 2027'de talebin 2,6 milyon varil/gun toparlanarak bu yilki kayiplari ancak telafi edecegini ongoruyor.\n\nTurk sanayicisi acisindan raporun en kritik mesaji, arz daralmasinin talep daralmasindan daha sert olmasi. Bu, fiyatlarin talep zayifligina ragmen yuksek kalacagi anlamina geliyor. Ozellikle motorin fiyatindaki yukselis, karayolu tasimaciligi, insaat makineleri, tarim makineleri ve jeneratör kullanan uretim tesisleri icin dogrudan maliyet artisi demek. Petrokimya hammaddesi (nafta) fiyatlarindaki artis ise plastik, ambalaj, boya, tekstil elyafi ve kompozit sektorlerini vuruyor.",
+      "title": "IEA Petrol Piyasası Raporu - Eylül 2026: dünya petrol talebi 2,5 mb/g düşecek",
+      "body": "Uluslararası Enerji Ajansı'nın (IEA) Eylül 2026 Petrol Piyasası Raporu, küresel petrol talebinde pandemiden bu yana görülen en sert daralmayı öngörüyor. Rapora göre 2026'da dünya petrol talebi 2,5 milyon varil/gün gerileyecek; bu, Ağustos raporundaki tahmine göre 940 bin varil/gün daha derin bir düşüş anlamına geliyor.\n\nRevizyonun temel nedeni, ABD-İran müzakerelerindeki tıkanıklığın Körfez akışlarının normalleşmesini gelecek yıla ertelemesi. Kayıplar özellikle orta distilatlar (motorin, gazyağı) ve petrokimya hammaddelerinde yoğunlaşıyor ve coğrafi olarak Asya'da toplanıyor. IEA, motorin ve gazyağının tek başına küresel petrol talebinin yaklaşık yüzde 30'unu oluşturduğunu hatırlatıyor.\n\nArz tarafında tablo daha da çarpıcı. Ağustos ayında küresel petrol üretimi aylık bazda 1,6 milyon varil/gün düşerek 100,1 milyon varil/güne indi; Körfez'de 10 milyon varil/günün üzerinde üretim güvenlik riskleri nedeniyle kapalı kaldı. Toplam arzın 2026'da 5,7 milyon varil/gün azalarak 100,7 milyon varil/güne inmesi bekleniyor. Körfez'de beklenen toparlanma 2027'ye ertelendi. IEA, 2027'de talebin 2,6 milyon varil/gün toparlanarak bu yılki kayıpları ancak telafi edeceğini öngörüyor.\n\nTürk sanayicisi açısından raporun en kritik mesajı, arz daralmasının talep daralmasından daha sert olması. Bu, fiyatların talep zayıflığına rağmen yüksek kalacağı anlamına geliyor. Özellikle motorin fiyatındaki yükseliş, karayolu taşımacılığı, inşaat makineleri, tarım makineleri ve jeneratör kullanan üretim tesisleri için doğrudan maliyet artışı demek. Petrokimya hammaddesi (nafta) fiyatlarındaki artış ise plastik, ambalaj, boya, tekstil elyafı ve kompozit sektörlerini vuruyor.",
       "published_at": "2026-09-10T12:00:00+03:00",
       "language": "tr",
-      "summary": "IEA, 2026'da kuresel petrol talebinin 2,5 milyon varil/gun daralacagini ongoruyor; bu pandemiden bu yana en sert dusus. Ancak arz daha da sert daraliyor: toplam arzin 5,7 milyon varil/gun azalmasi bekleniyor ve Korfez'de 10 milyon varil/gun uretim kapali. Sanayici icin bu, talep zayif olsa bile yuksek kalacak motorin ve nafta fiyatlari, dolayisiyla lojistik ve petrokimya hammadde maliyetlerinde kalici baski demek.",
+      "summary": "IEA, 2026'da küresel petrol talebinin 2,5 milyon varil/gün daralacağını öngörüyor; bu pandemiden bu yana en sert düşüş. Ancak arz daha da sert daralıyor: toplam arzın 5,7 milyon varil/gün azalması bekleniyor ve Körfez'de 10 milyon varil/gün üretim kapalı. Sanayici için bu, talep zayıf olsa bile yüksek kalacak motorin ve nafta fiyatları, dolayısıyla lojistik ve petrokimya hammadde maliyetlerinde kalıcı baskı demek.",
       "summary_en": "The IEA's September report forecasts world oil demand falling 2.5 mb/d in 2026 - the steepest since the pandemic - while supply contracts even faster, by 5.7 mb/d.",
       "key_points": [
-        "2026 kuresel petrol talebi 2,5 milyon varil/gun daralacak",
-        "Onceki aya gore 940 bin varil/gun asagi revizyon",
-        "Kayiplar orta distilat ve petrokimya hammaddesinde yogunlasiyor",
-        "Toplam arz 5,7 milyon varil/gun azalarak 100,7 milyon varil/gune inecek",
-        "Korfez'de toparlanma 2027'ye ertelendi"
+        "2026 küresel petrol talebi 2,5 milyon varil/gün daralacak",
+        "Önceki aya göre 940 bin varil/gün aşağı revizyon",
+        "Kayıplar orta distilat ve petrokimya hammaddesinde yoğunlaşıyor",
+        "Toplam arz 5,7 milyon varil/gün azalarak 100,7 milyon varil/güne inecek",
+        "Körfez'de toparlanma 2027'ye ertelendi"
       ],
       "entities": {
         "kurum": [
@@ -634,18 +634,18 @@
     {
       "source_slug": "argus-media",
       "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2826224-iea-sees-big-oil-demand-fall-but-still-2026-deficit",
-      "title": "IEA sees big oil demand fall, but still 2026 deficit",
-      "body": "Argus Media, IEA'nin Eylul raporunu piyasa dengesi acisindan ele aliyor. Raporun temel paradoksu su: IEA tarihi bir talep daralmasi ongordugu halde 2026 icin hala bir arz acigi (deficit) hesapliyor.\n\nBunun nedeni, arz tarafindaki kaybin talep tarafindaki kayiptan daha buyuk olmasi. Talep 2,5 milyon varil/gun gerilerken, arz 5,7 milyon varil/gun geriliyor. Aradaki fark stoklardan karsilaniyor; bu da ticari petrol stoklarinin hizla erimesi anlamina geliyor. Stok seviyeleri dustukce piyasanin yeni bir arz sokuna tolerans kapasitesi azaliyor ve fiyat volatilitesi artiyor.\n\nArgus'un fiyat degerlendirmesi, orta distilat kraklarindaki (rafineri marjlari) genislemeye dikkat cekiyor. Motorin ve jet yakiti marjlari tarihsel ortalamalarin cok uzerinde seyrediyor. Bu, rafinerilerin ham petrolden ziyade urun tarafinda fiyat belirledigi bir donem anlamina geliyor: yani ham petrol fiyati gerilese bile motorin fiyati ayni oranda gerilemeyebilir.\n\nTurk sanayicisi icin buradaki teknik ayrinti onemli. Ham petrol fiyatinin 105 dolardan 95 dolara inmesi, motorin veya nafta maliyetinde ayni oranda bir dusus getirmeyebilir; cunku rafineri marji genislemis durumda. Dolayisiyla lojistik maliyeti ve petrokimya ara mal maliyeti butcelerinde ham petrol fiyati yerine dogrudan urun fiyatlarinin (ULSD, nafta, LPG) takip edilmesi gerekiyor. Ayrica dusuk stok seviyeleri, kis aylarinda beklenmedik bir kesintide fiyatlarin cok hizli sicrayabilecegi anlamina geliyor; stok politikalarinin buna gore ayarlanmasi oneriliyor.\n\nArgus ayrica LPG ve nafta gibi petrokimya hammaddelerinde Asya talebinin zayiflamasina ragmen fiyatlarin arz kisiti nedeniyle yuksek kalmaya devam ettigine dikkat cekiyor. Bu, Turkiye'nin plastik hammaddesi, kaucuk, boya cozucusu ve sentetik elyaf ithalatinda maliyet baskisinin surecegi anlamina geliyor. Ithalat yogun bu zincirlerde alternatif tedarikci havuzunun genisletilmesi ve uzun vadeli formul fiyatli sozlesmelerin gozden gecirilmesi oneriliyor.",
+      "title": "IEA sert petrol talebi düşüşü öngörüyor, ancak 2026'da arz açığı sürüyor",
+      "body": "Argus Media, IEA'nın Eylül raporunu piyasa dengesi açısından ele alıyor. Raporun temel paradoksu şu: IEA tarihi bir talep daralması öngördüğü halde 2026 için hâlâ bir arz açığı (deficit) hesaplıyor.\n\nBunun nedeni, arz tarafındaki kaybın talep tarafındaki kayıptan daha büyük olması. Talep 2,5 milyon varil/gün gerilerken, arz 5,7 milyon varil/gün geriliyor. Aradaki fark stoklardan karşılanıyor; bu da ticari petrol stoklarının hızla erimesi anlamına geliyor. Stok seviyeleri düştükçe piyasanın yeni bir arz şokuna tolerans kapasitesi azalıyor ve fiyat volatilitesi artıyor.\n\nArgus'un fiyat değerlendirmesi, orta distilat kraklarındaki (rafineri marjları) genişlemeye dikkat çekiyor. Motorin ve jet yakıtı marjları tarihsel ortalamaların çok üzerinde seyrediyor. Bu, rafinerilerin ham petrolden ziyade ürün tarafında fiyat belirlediği bir dönem anlamına geliyor: yani ham petrol fiyatı gerilese bile motorin fiyatı aynı oranda gerilemeyebilir.\n\nTürk sanayicisi için buradaki teknik ayrıntı önemli. Ham petrol fiyatının 105 dolardan 95 dolara inmesi, motorin veya nafta maliyetinde aynı oranda bir düşüş getirmeyebilir; çünkü rafineri marjı genişlemiş durumda. Dolayısıyla lojistik maliyeti ve petrokimya ara mal maliyeti bütçelerinde ham petrol fiyatı yerine doğrudan ürün fiyatlarının (ULSD, nafta, LPG) takip edilmesi gerekiyor. Ayrıca düşük stok seviyeleri, kış aylarında beklenmedik bir kesintide fiyatların çok hızlı sıçrayabileceği anlamına geliyor; stok politikalarının buna göre ayarlanması öneriliyor.\n\nArgus ayrıca LPG ve nafta gibi petrokimya hammaddelerinde Asya talebinin zayıflamasına rağmen fiyatların arz kısıtı nedeniyle yüksek kalmaya devam ettiğine dikkat çekiyor. Bu, Türkiye'nin plastik hammaddesi, kauçuk, boya çözücüsü ve sentetik elyaf ithalatında maliyet baskısının süreceği anlamına geliyor. İthalat yoğun bu zincirlerde alternatif tedarikçi havuzunun genişletilmesi ve uzun vadeli formül fiyatlı sözleşmelerin gözden geçirilmesi öneriliyor.",
       "published_at": "2026-09-10T14:30:00+03:00",
       "language": "tr",
-      "summary": "Argus'a gore IEA tarihi talep daralmasi ongormesine ragmen 2026'da hala arz acigi hesapliyor; cunku arz kaybi talep kaybindan cok daha buyuk. Rafineri marjlari genisledigi icin ham petrol fiyati gerilese bile motorin ve nafta fiyatlari ayni oranda dusmeyebilir. Sanayici butcelerinde ham petrol yerine dogrudan urun fiyatlarinin (motorin, nafta, LPG) izlenmesi ve dusuk stoklar nedeniyle kis donemine yonelik stok politikasi gozden gecirilmeli.",
+      "summary": "Argus'a göre IEA tarihi talep daralması öngörmesine rağmen 2026'da hâlâ arz açığı hesaplıyor; çünkü arz kaybı talep kaybından çok daha büyük. Rafineri marjları genişlediği için ham petrol fiyatı gerilese bile motorin ve nafta fiyatları aynı oranda düşmeyebilir. Sanayici bütçelerinde ham petrol yerine doğrudan ürün fiyatlarının (motorin, nafta, LPG) izlenmesi ve düşük stoklar nedeniyle kış dönemine yönelik stok politikası gözden geçirilmeli.",
       "summary_en": "Argus highlights that despite the IEA's record demand cut, the 2026 market is still in deficit because supply losses exceed demand losses, keeping product cracks wide.",
       "key_points": [
-        "Arz kaybi (5,7 mb/g) talep kaybindan (2,5 mb/g) cok daha buyuk",
-        "2026 piyasasi arz acigi veriyor, stoklar eriyor",
-        "Orta distilat rafineri marjlari tarihsel ortalamanin cok uzerinde",
-        "Ham petrol dususu motorin fiyatina ayni oranda yansimayabilir",
-        "Dusuk stoklar kis aylarinda sert fiyat sicramasi riski yaratiyor"
+        "Arz kaybı (5,7 mb/g) talep kaybından (2,5 mb/g) çok daha büyük",
+        "2026 piyasası arz açığı veriyor, stoklar eriyor",
+        "Orta distilat rafineri marjları tarihsel ortalamanın çok üzerinde",
+        "Ham petrol düşüşü motorin fiyatına aynı oranda yansımayabilir",
+        "Düşük stoklar kış aylarında sert fiyat sıçraması riski yaratıyor"
       ],
       "entities": {
         "kurum": [
@@ -682,18 +682,18 @@
     {
       "source_slug": "investing-com",
       "url": "https://www.investing.com/news/commodities-news/opec-further-lowers-2026-global-oil-demand-growth-forecast-4895797",
-      "title": "OPEC further lowers 2026 global oil demand growth forecast",
-      "body": "OPEC, 11 Eylul'de yayimladigi Aylik Petrol Piyasasi Raporu'nda (MOMR) 2026 icin kuresel petrol talep artisi tahminini 380 bin varil/gune indirdi. Bu, ust uste besinci asagi yonlu revizyon anlamina geliyor.\n\nDagilima bakildiginda OECD ulkelerinde talebin yaklasik 0,1 milyon varil/gun gerilemesi, OECD disi ulkelerde ise 0,5 milyon varil/gun artmasi bekleniyor. OECD ulkelerinin 2026 talebi 46,14 milyon varil/gun olarak ongoruluyor; yillik bazda 110 bin varil/gunluk bir dusus.\n\n2027 icin OPEC daha iyimser: kuresel petrol talebinin 2,4 milyon varil/gun artmasini bekliyor ve bu tahminini onceki aya gore yukari revize etti.\n\nRaporun en dikkat cekici yonu, OPEC ile IEA arasindaki keskin ayrisma. OPEC savasin tuketim uzerindeki etkisini rakiplerine kiyasla cok daha ilimli degerlendiriyor; IEA 2026'da talebin mutlak olarak dusecegini soylerken OPEC hala pozitif (ancak cok zayif) bir buyume ongoruyor. Bu ayrisma, piyasa katilimcilari icin onemli bir belirsizlik kaynagi.\n\nTurk sanayicisi acisindan bu ayrismanin pratik anlami su: 2026'nin kalan bolumu ve 2027 icin enerji maliyeti butcelemesinde tek bir senaryoya yaslanmak riskli. IEA senaryosunda (sert talep daralmasi + sert arz daralmasi) fiyatlar yuksek ve oynak; OPEC senaryosunda ise arz normallestiginde daha hizli bir gerileme mumkun. Firmalarin en az uc senaryolu (iyimser / temel / kotumser) bir enerji maliyeti butcesi kurmasi, ozellikle cok yillik sabit fiyatli ihracat sozlesmelerinde kritik onem tasiyor.",
+      "title": "OPEC 2026 küresel petrol talebi artışı tahminini yeniden aşağı çekti",
+      "body": "OPEC, 11 Eylül'de yayımladığı Aylık Petrol Piyasası Raporu'nda (MOMR) 2026 için küresel petrol talep artışı tahminini 380 bin varil/güne indirdi. Bu, üst üste beşinci aşağı yönlü revizyon anlamına geliyor.\n\nDağılıma bakıldığında OECD ülkelerinde talebin yaklaşık 0,1 milyon varil/gün gerilemesi, OECD dışı ülkelerde ise 0,5 milyon varil/gün artması bekleniyor. OECD ülkelerinin 2026 talebi 46,14 milyon varil/gün olarak öngörülüyor; yıllık bazda 110 bin varil/günlük bir düşüş.\n\n2027 için OPEC daha iyimser: küresel petrol talebinin 2,4 milyon varil/gün artmasını bekliyor ve bu tahminini önceki aya göre yukarı revize etti.\n\nRaporun en dikkat çekici yönü, OPEC ile IEA arasındaki keskin ayrışma. OPEC savaşın tüketim üzerindeki etkisini rakiplerine kıyasla çok daha ılımlı değerlendiriyor; IEA 2026'da talebin mutlak olarak düşeceğini söylerken OPEC hâlâ pozitif (ancak çok zayıf) bir büyüme öngörüyor. Bu ayrışma, piyasa katılımcıları için önemli bir belirsizlik kaynağı.\n\nTürk sanayicisi açısından bu ayrışmanın pratik anlamı şu: 2026'nın kalan bölümü ve 2027 için enerji maliyeti bütçelemesinde tek bir senaryoya yaslanmak riskli. IEA senaryosunda (sert talep daralması + sert arz daralması) fiyatlar yüksek ve oynak; OPEC senaryosunda ise arz normalleştiğinde daha hızlı bir gerileme mümkün. Firmaların en az üç senaryolu (iyimser / temel / kötümser) bir enerji maliyeti bütçesi kurması, özellikle çok yıllık sabit fiyatlı ihracat sözleşmelerinde kritik önem taşıyor.",
       "published_at": "2026-09-11T13:10:00+03:00",
       "language": "tr",
-      "summary": "OPEC 2026 kuresel petrol talep artisi tahminini 380 bin varil/gune indirerek ust uste besinci asagi revizyonu yapti. OPEC savasin talebe etkisini IEA'ya gore cok daha ilimli degerlendiriyor; iki kurum arasindaki bu ayrisma piyasada ciddi belirsizlik yaratiyor. Sanayicinin enerji maliyeti butcesini tek senaryoya degil, en az uc senaryoya dayandirmasi ve cok yilli sabit fiyatli sozlesmelerde bu belirsizligi fiyatlamasi gerekiyor.",
+      "summary": "OPEC 2026 küresel petrol talep artışı tahminini 380 bin varil/güne indirerek üst üste beşinci aşağı revizyonu yaptı. OPEC savaşın talebe etkisini IEA'ya göre çok daha ılımlı değerlendiriyor; iki kurum arasındaki bu ayrışma piyasada ciddi belirsizlik yaratıyor. Sanayicinin enerji maliyeti bütçesini tek senaryoya değil, en az üç senaryoya dayandırması ve çok yıllı sabit fiyatlı sözleşmelerde bu belirsizliği fiyatlaması gerekiyor.",
       "summary_en": "OPEC cut its 2026 oil demand growth forecast to 380,000 b/d - a fifth straight downgrade - but remains far more benign than the IEA, which sees demand contracting outright.",
       "key_points": [
-        "OPEC 2026 talep artisini 380 bin varil/gune indirdi",
-        "Ust uste besinci asagi yonlu revizyon",
-        "OECD talebi 46,14 milyon varil/gune geriliyor",
-        "2027 icin 2,4 milyon varil/gun artis bekleniyor",
-        "OPEC ile IEA tahminleri arasinda keskin ayrisma var"
+        "OPEC 2026 talep artışını 380 bin varil/güne indirdi",
+        "Üst üste beşinci aşağı yönlü revizyon",
+        "OECD talebi 46,14 milyon varil/güne geriliyor",
+        "2027 için 2,4 milyon varil/gün artış bekleniyor",
+        "OPEC ile IEA tahminleri arasında keskin ayrışma var"
       ],
       "entities": {
         "kurum": [
@@ -728,18 +728,18 @@
     {
       "source_slug": "daily-cargo-news",
       "url": "https://www.thedcn.com.au/news/world-container-index-10-september-2026",
-      "title": "World Container Index - 10 September 2026: rates stable at $4,476 per 40ft",
-      "body": "Drewry'nin Dunya Konteyner Endeksi (WCI), 10 Eylul 2026 itibariyla ust uste ikinci hafta 40 futluk konteyner basina 4.476 dolar seviyesinde yatay seyretti.\n\nHat bazinda tablo ayrisiyor. Transpasifik hatta yukselis var: Sanghay-Los Angeles navlunu yuzde 2 artisla 7.352 dolara, Sanghay-New York yuzde 1 artisla 9.726 dolara cikti. Asya-Avrupa hattinda ise geri cekilme goruluyor: Sanghay-Cenova yuzde 3 dususle 4.216 dolara, Sanghay-Rotterdam yuzde 2 dususle 3.997 dolara indi.\n\nDrewry, talepteki gevseme ve tasiyicilarin kapasite yonetimini surdurmesi nedeniyle onumuzdeki hafta da navlunlarin istikrarli kalmasini bekliyor.\n\nBu tablo Turk sanayicisi icin birkac acidan onemli. Birincisi, Asya-Avrupa hattindaki navlun gerilemesi, Uzak Dogu menseli urunlerin Avrupa pazarinda maliyet avantajini bir miktar artiriyor; bu, Turk ihracatcisinin Avrupa'daki fiyat rekabetciligini nispeten baski altina alabilir. Ikincisi, ayni gerileme Turk uretici acisindan Uzak Dogu'dan ithal edilen hammadde ve ara mal maliyetinde kucuk bir rahatlama demek.\n\nUcuncu ve belki en onemlisi, transpasifik ile Asya-Avrupa arasindaki makasin acilmasi. Sanghay-New York navlununun 9.726 dolara cikmasi, ABD pazarina Asya'dan mal getirmenin giderek pahalilastigini gosteriyor. Bu, ABD alicilarinin tedarik cesitlendirmesinde Turkiye gibi nispeten yakin ve sertifikali uretim yapabilen ulkelere yonelmesi icin bir firsat penceresi yaratabilir; ozellikle hazir giyim, ev tekstili, mobilya, makine parcalari ve kimya ara urunlerinde.\n\nSon olarak, navlunlarin yatay seyretmesi tasiyicilarin kapasite yonetimindeki disiplinini surdurdugunu gosteriyor; yani talep zayifladiginda tasiyicilar sefer iptali (blank sailing) ile arzi kisarak fiyati koruyor. Bu, ihracatcilar icin navlunda beklenen bir dususun gerceklesmeyebilecegi anlamina geliyor. Yillik navlun sozlesmesi muzakerelerine giren firmalarin spot piyasadaki gerilemeyi otomatik bir pazarlik kozu saymamasi, bunun yerine hacim taahhudu karsiliginda kapasite garantisi almaya odaklanmasi daha gercekci bir yaklasim olacaktir.",
+      "title": "Dünya Konteyner Endeksi - 10 Eylül 2026: navlun 40 futluk konteynerde 4.476 dolarda sabit",
+      "body": "Drewry'nin Dünya Konteyner Endeksi (WCI), 10 Eylül 2026 itibarıyla üst üste ikinci hafta 40 futluk konteyner başına 4.476 dolar seviyesinde yatay seyretti.\n\nHat bazında tablo ayrışıyor. Transpasifik hatta yükseliş var: Şanghay-Los Angeles navlunu yüzde 2 artışla 7.352 dolara, Şanghay-New York yüzde 1 artışla 9.726 dolara çıktı. Asya-Avrupa hattında ise geri çekilme görülüyor: Şanghay-Cenova yüzde 3 düşüşle 4.216 dolara, Şanghay-Rotterdam yüzde 2 düşüşle 3.997 dolara indi.\n\nDrewry, talepteki gevşeme ve taşıyıcıların kapasite yönetimini sürdürmesi nedeniyle önümüzdeki hafta da navlunların istikrarlı kalmasını bekliyor.\n\nBu tablo Türk sanayicisi için birkaç açıdan önemli. Birincisi, Asya-Avrupa hattındaki navlun gerilemesi, Uzak Doğu menşeli ürünlerin Avrupa pazarında maliyet avantajını bir miktar artırıyor; bu, Türk ihracatçısının Avrupa'daki fiyat rekabetçiliğini nispeten baskı altına alabilir. İkincisi, aynı gerileme Türk üretici açısından Uzak Doğu'dan ithal edilen hammadde ve ara mal maliyetinde küçük bir rahatlama demek.\n\nÜçüncü ve belki en önemlisi, transpasifik ile Asya-Avrupa arasındaki makasın açılması. Şanghay-New York navlununun 9.726 dolara çıkması, ABD pazarına Asya'dan mal getirmenin giderek pahalılaştığını gösteriyor. Bu, ABD alıcılarının tedarik çeşitlendirmesinde Türkiye gibi nispeten yakın ve sertifikalı üretim yapabilen ülkelere yönelmesi için bir fırsat penceresi yaratabilir; özellikle hazır giyim, ev tekstili, mobilya, makine parçaları ve kimya ara ürünlerinde.\n\nSon olarak, navlunların yatay seyretmesi taşıyıcıların kapasite yönetimindeki disiplinini sürdürdüğünü gösteriyor; yani talep zayıfladığında taşıyıcılar sefer iptali (blank sailing) ile arzı kısarak fiyatı koruyor. Bu, ihracatçılar için navlunda beklenen bir düşüşün gerçekleşmeyebileceği anlamına geliyor. Yıllık navlun sözleşmesi müzakerelerine giren firmaların spot piyasadaki gerilemeyi otomatik bir pazarlık kozu saymaması, bunun yerine hacim taahhüdü karşılığında kapasite garantisi almaya odaklanması daha gerçekçi bir yaklaşım olacaktır.",
       "published_at": "2026-09-10T09:00:00+03:00",
       "language": "tr",
-      "summary": "Drewry Dunya Konteyner Endeksi 10 Eylul'de ikinci hafta ust uste 4.476 dolar/40ft seviyesinde sabit kaldi. Transpasifik navlunlari artarken (Sanghay-New York 9.726 dolar) Asya-Avrupa hattinda navlun geriledi (Sanghay-Rotterdam 3.997 dolar). Turk ihracatcisi icin Asya-Avrupa'daki ucuzlama Avrupa'da rekabet baskisi, ABD hattindaki pahalilanma ise ABD pazarinda tedarik cesitlendirme firsati anlamina geliyor.",
+      "summary": "Drewry Dünya Konteyner Endeksi 10 Eylül'de ikinci hafta üst üste 4.476 dolar/40ft seviyesinde sabit kaldı. Transpasifik navlunları artarken (Şanghay-New York 9.726 dolar) Asya-Avrupa hattında navlun geriledi (Şanghay-Rotterdam 3.997 dolar). Türk ihracatçısı için Asya-Avrupa'daki ucuzlama Avrupa'da rekabet baskısı, ABD hattındaki pahalılanma ise ABD pazarında tedarik çeşitlendirme fırsatı anlamına geliyor.",
       "summary_en": "Drewry's WCI held flat at $4,476/40ft for a second week; transpacific rates rose while Asia-Europe rates fell, widening the gap between the two trades.",
       "key_points": [
         "WCI 4.476 dolar/40ft ile ikinci hafta yatay",
-        "Sanghay-Los Angeles yuzde 2 artisla 7.352 dolar",
-        "Sanghay-New York yuzde 1 artisla 9.726 dolar",
-        "Sanghay-Rotterdam yuzde 2 dususle 3.997 dolar",
-        "Drewry onumuzdeki hafta da istikrar bekliyor"
+        "Şanghay-Los Angeles yüzde 2 artışla 7.352 dolar",
+        "Şanghay-New York yüzde 1 artışla 9.726 dolar",
+        "Şanghay-Rotterdam yüzde 2 düşüşle 3.997 dolar",
+        "Drewry önümüzdeki hafta da istikrar bekliyor"
       ],
       "entities": {
         "kurum": [
@@ -749,7 +749,7 @@
         "sektor": [
           "Lojistik",
           "Denizcilik",
-          "Hazir Giyim",
+          "Hazır Giyim",
           "Mobilya"
         ]
       },
@@ -775,29 +775,29 @@
     {
       "source_slug": "lloyds-list-intelligence",
       "url": "https://www.lloydslistintelligence.com/resources/blog/red-sea-brief-3-september-2026",
-      "title": "Red Sea Brief: Suez transits at highest level since early 2024",
-      "body": "Lloyd's List Intelligence'in Kizildeniz raporuna gore Suveys Kanali gecisleri ust uste ikinci hafta yuksek seviyede kaldi. Haftalik gecis sayilari, gemilerin Kizildeniz'den toplu cikisinin basladigi 2024 basindan bu yana gorulmeyen duzeylere ulasti.\n\nVeriye gore 17-23 Agustos arasinda Bab el-Mendep'ten en az 302 gecis kaydedildi; bu, Suudi yasagindan bu yana en yuksek seviye. Gecisleri dokme yuk gemileri, urun tankerleri ve konteyner gemileri surukledi. 24-30 Agustos doneminde ise 202 izlenebilir gecis kaydedildi; haftadan haftaya dalgalanma devam ediyor. Ayni donemde Kizildeniz'in kuzey darbogazindan (Suveys) 290 gemi gecti.\n\nRaporun vurguladigi onemli bulgu, yenilenen Husi tehditlerinin Suveys trafigindeki toparlanmayi henuz raydan cikarmamis olmasi. Savas, kesinti ve rota degisikliklerine ragmen konteyner talebi ayakta kaldi.\n\nTurkiye acisindan Suveys hattinin calisir durumda olmasi kritik onemde. Turk ihracatcisinin Uzak Dogu, Hindistan ve Korfez pazarlarina erisimi buyuk olcude bu hattan gecer; ayni sekilde Asya'dan gelen hammadde, ara mal ve makine ithalati da. Suveys'in kapanmasi veya sigorta primlerinin yasaklayici seviyeye cikmasi, Turk sanayicisinin hem ihracat teslim surelerini hem de ithal girdi tedarikini dogrudan vurur.\n\nBununla birlikte trafigin haftadan haftaya 302'den 202'ye inmesi, normallesmenin hala kirilgan oldugunu gosteriyor. Firmalarin alternatif rota (Umit Burnu) senaryosunu teslim programlarinda yedek olarak tutmasi, sozlesmelerde mucbir sebep ve teslim suresi esneklik maddelerini korumasi oneriliyor.\n\nTasiyici davranisi acisindan onemli bir gozlem, dokme yuk ve urun tankerlerinin Kizildeniz'e konteyner gemilerinden daha hizli donmesi. Konteyner hatlari, musteri taahhutleri ve sigorta maliyeti nedeniyle rota kararlarini daha temkinli veriyor. Bu, Turk ihracatcisinin konteyner yukunde Umit Burnu kaynakli gecikmelerle bir sure daha karsilasabilecegi anlamina geliyor. Suveys gecis ucretlerindeki olasi indirim kampanyalari ve hat bazli servis duyurularinin haftalik takip edilmesi, teslim planlamasi icin en pratik erken uyari mekanizmasi.",
+      "title": "Kızıldeniz Bülteni: Süveyş geçişleri 2024 başından bu yana en yüksek seviyede",
+      "body": "Lloyd's List Intelligence'ın Kızıldeniz raporuna göre Süveyş Kanalı geçişleri üst üste ikinci hafta yüksek seviyede kaldı. Haftalık geçiş sayıları, gemilerin Kızıldeniz'den toplu çıkışının başladığı 2024 başından bu yana görülmeyen düzeylere ulaştı.\n\nVeriye göre 17-23 Ağustos arasında Bab el-Mendep'ten en az 302 geçiş kaydedildi; bu, Suudi yasağından bu yana en yüksek seviye. Geçişleri dökme yük gemileri, ürün tankerleri ve konteyner gemileri sürükledi. 24-30 Ağustos döneminde ise 202 izlenebilir geçiş kaydedildi; haftadan haftaya dalgalanma devam ediyor. Aynı dönemde Kızıldeniz'in kuzey darboğazından (Süveyş) 290 gemi geçti.\n\nRaporun vurguladığı önemli bulgu, yenilenen Husi tehditlerinin Süveyş trafiğindeki toparlanmayı henüz raydan çıkarmamış olması. Savaş, kesinti ve rota değişikliklerine rağmen konteyner talebi ayakta kaldı.\n\nTürkiye açısından Süveyş hattının çalışır durumda olması kritik önemde. Türk ihracatçısının Uzak Doğu, Hindistan ve Körfez pazarlarına erişimi büyük ölçüde bu hattan geçer; aynı şekilde Asya'dan gelen hammadde, ara mal ve makine ithalatı da. Süveyş'in kapanması veya sigorta primlerinin yasaklayıcı seviyeye çıkması, Türk sanayicisinin hem ihracat teslim sürelerini hem de ithal girdi tedarikini doğrudan vurur.\n\nBununla birlikte trafiğin haftadan haftaya 302'den 202'ye inmesi, normalleşmenin hâlâ kırılgan olduğunu gösteriyor. Firmaların alternatif rota (Ümit Burnu) senaryosunu teslim programlarında yedek olarak tutması, sözleşmelerde mücbir sebep ve teslim süresi esneklik maddelerini koruması öneriliyor.\n\nTaşıyıcı davranışı açısından önemli bir gözlem, dökme yük ve ürün tankerlerinin Kızıldeniz'e konteyner gemilerinden daha hızlı dönmesi. Konteyner hatları, müşteri taahhütleri ve sigorta maliyeti nedeniyle rota kararlarını daha temkinli veriyor. Bu, Türk ihracatçısının konteyner yükünde Ümit Burnu kaynaklı gecikmelerle bir süre daha karşılaşabileceği anlamına geliyor. Süveyş geçiş ücretlerindeki olası indirim kampanyaları ve hat bazlı servis duyurularının haftalık takip edilmesi, teslim planlaması için en pratik erken uyarı mekanizması.",
       "published_at": "2026-09-05T11:00:00+03:00",
       "language": "tr",
-      "summary": "Lloyd's List Intelligence verilerine gore Suveys Kanali gecisleri 2024 basindan bu yana en yuksek seviyede; Bab el-Mendep'ten 17-23 Agustos arasinda 302 gecis kaydedildi. Ancak takip eden hafta 202'ye gerileyen trafik normallesmenin kirilgan oldugunu gosteriyor. Turk sanayicisi icin Suveys hattinin acik kalmasi hem Asya'ya ihracat hem de ithal girdi tedariki acisindan kritik; sozlesmelerde teslim suresi esnekligi ve alternatif rota senaryolari korunmali.",
+      "summary": "Lloyd's List Intelligence verilerine göre Süveyş Kanalı geçişleri 2024 başından bu yana en yüksek seviyede; Bab el-Mendep'ten 17-23 Ağustos arasında 302 geçiş kaydedildi. Ancak takip eden hafta 202'ye gerileyen trafik normalleşmenin kırılgan olduğunu gösteriyor. Türk sanayicisi için Süveyş hattının açık kalması hem Asya'ya ihracat hem de ithal girdi tedariki açısından kritik; sözleşmelerde teslim süresi esnekliği ve alternatif rota senaryoları korunmalı.",
       "summary_en": "Suez transits hit their highest level since early 2024 with 302 Bab al-Mandab crossings in one week, though traffic fell back to 202 the following week - recovery remains fragile.",
       "key_points": [
-        "Suveys gecisleri 2024 basindan beri en yuksek seviyede",
-        "17-23 Agustos'ta Bab el-Mendep'ten 302 gecis",
-        "24-30 Agustos'ta 202 gecise geriledi",
-        "Suveys kuzey darbogazindan 290 gemi gecti",
-        "Husi tehditleri toparlanmayi henuz raydan cikarmadi"
+        "Süveyş geçişleri 2024 başından beri en yüksek seviyede",
+        "17-23 Ağustos'ta Bab el-Mendep'ten 302 geçiş",
+        "24-30 Ağustos'ta 202 geçişe geriledi",
+        "Süveyş kuzey darboğazından 290 gemi geçti",
+        "Husi tehditleri toparlanmayı henüz raydan çıkarmadı"
       ],
       "entities": {
         "kurum": [
           "Lloyd's List Intelligence",
-          "Suveys Kanali Idaresi"
+          "Süveyş Kanalı İdaresi"
         ],
         "kisi": [],
         "sektor": [
           "Lojistik",
           "Denizcilik",
-          "Ihracat"
+          "İhracat"
         ]
       },
       "region": "KURESEL",
@@ -822,18 +822,18 @@
     {
       "source_slug": "iso-org",
       "url": "https://www.iso.org/news/2026/09/iso-45010-launch",
-      "title": "World-first International Standard launched as demand grows for better workplace support during menstruation and menopause",
-      "body": "Uluslararasi Standardizasyon Orgutu (ISO), 7 Eylul 2026'da ISO 45010 standardini yayimladi: 'Is sagligi ve guvenligi yonetimi - Isyerinde adet ve menopoz - Rehber'. Bu, konuyu ele alan dunyadaki ilk uluslararasi standart.\n\nStandart, kuruluslara adet doneminde ve menopoz surecinde calisanlarini nasil destekleyeceklerine dair rehberlik sunuyor. Kapsaminda isyeri fiziksel kosullari (havalandirma, sicaklik kontrolu, tuvalet ve dinlenme alanlari), esnek calisma duzenlemeleri, yonetici farkindaligi ve egitimi, gizlilik politikalari ve risk degerlendirmesine bu faktorlerin dahil edilmesi yer aliyor.\n\nISO 45010, ISO 45001 Is Sagligi ve Guvenligi Yonetim Sistemi standardiyla uyumlu bir rehber dokuman olarak tasarlandi; yani sertifikasyona tabi bir sartname degil, uygulama rehberi niteliginde. Buna ragmen, kurumsal musterilerin tedarikci denetimlerinde ve surdurulebilirlik raporlamasinda (ozellikle sosyal boyut, 'S' basligi altinda) referans alinmasi bekleniyor.\n\nTurk sanayicisi acisindan bu standardin iki pratik sonucu var. Birincisi, kadin istihdaminin yogun oldugu sektorlerde (tekstil, hazir giyim, gida, elektronik montaj, ilac, kozmetik) isgucu devir hizini ve devamsizligi dusurmeye yonelik somut bir cerceve sunuyor. Ikincisi ve daha acil olani, Avrupali marka ve perakendecilerin tedarikci denetim protokollerine bu tur rehberleri hizla dahil etme egilimi. AB'nin Kurumsal Surdurulebilirlik Ozen Yukumlulugu Direktifi (CSDDD) kapsaminda tedarik zincirinde sosyal kosullarin belgelenmesi zorunlulugu artarken, ISO 45010'a uyum gelistiren firmalarin denetim skorlarinda avantaj saglamasi bekleniyor. ISO 45001 sertifikasi olan Turk firmalarinin mevcut ISG yonetim sistemlerine bu rehberi entegre etmesi gorece dusuk maliyetli bir iyilestirme firsati.",
+      "title": "Dünyanın ilk uluslararası standardı yayımlandı: işyerinde adet ve menopoz döneminde çalışan desteği",
+      "body": "Uluslararası Standardizasyon Örgütü (ISO), 7 Eylül 2026'da ISO 45010 standardını yayımladı: 'İş sağlığı ve güvenliği yönetimi - İşyerinde adet ve menopoz - Rehber'. Bu, konuyu ele alan dünyadaki ilk uluslararası standart.\n\nStandart, kuruluşlara adet döneminde ve menopoz sürecinde çalışanlarını nasıl destekleyeceklerine dair rehberlik sunuyor. Kapsamında işyeri fiziksel koşulları (havalandırma, sıcaklık kontrolü, tuvalet ve dinlenme alanları), esnek çalışma düzenlemeleri, yönetici farkındalığı ve eğitimi, gizlilik politikaları ve risk değerlendirmesine bu faktörlerin dahil edilmesi yer alıyor.\n\nISO 45010, ISO 45001 İş Sağlığı ve Güvenliği Yönetim Sistemi standardıyla uyumlu bir rehber doküman olarak tasarlandı; yani sertifikasyona tabi bir şartname değil, uygulama rehberi niteliğinde. Buna rağmen, kurumsal müşterilerin tedarikçi denetimlerinde ve sürdürülebilirlik raporlamasında (özellikle sosyal boyut, 'S' başlığı altında) referans alınması bekleniyor.\n\nTürk sanayicisi açısından bu standardın iki pratik sonucu var. Birincisi, kadın istihdamının yoğun olduğu sektörlerde (tekstil, hazır giyim, gıda, elektronik montaj, ilaç, kozmetik) işgücü devir hızını ve devamsızlığı düşürmeye yönelik somut bir çerçeve sunuyor. İkincisi ve daha acil olanı, Avrupalı marka ve perakendecilerin tedarikçi denetim protokollerine bu tür rehberleri hızla dahil etme eğilimi. AB'nin Kurumsal Sürdürülebilirlik Özen Yükümlülüğü Direktifi (CSDDD) kapsamında tedarik zincirinde sosyal koşulların belgelenmesi zorunluluğu artarken, ISO 45010'a uyum geliştiren firmaların denetim skorlarında avantaj sağlaması bekleniyor. ISO 45001 sertifikası olan Türk firmalarının mevcut İSG yönetim sistemlerine bu rehberi entegre etmesi görece düşük maliyetli bir iyileştirme fırsatı.",
       "published_at": "2026-09-07T10:00:00+03:00",
       "language": "tr",
-      "summary": "ISO, 7 Eylul'de dunyanin ilk uluslararasi standardi olan ISO 45010'u yayimladi: isyerinde adet ve menopoz donemlerinde calisan destegi icin rehber. ISO 45001 ile uyumlu, sertifikasyona tabi olmayan bir rehber dokuman. Kadin istihdaminin yogun oldugu tekstil, gida ve elektronik montaj sektorlerindeki Turk firmalari icin devamsizlik ve isgucu devir hizini dusurme araci; ayrica Avrupali markalarin tedarikci denetimlerinde referans alinmasi bekleniyor.",
+      "summary": "ISO, 7 Eylül'de dünyanın ilk uluslararası standardı olan ISO 45010'u yayımladı: işyerinde adet ve menopoz dönemlerinde çalışan desteği için rehber. ISO 45001 ile uyumlu, sertifikasyona tabi olmayan bir rehber doküman. Kadın istihdamının yoğun olduğu tekstil, gıda ve elektronik montaj sektörlerindeki Türk firmaları için devamsızlık ve işgücü devir hızını düşürme aracı; ayrıca Avrupalı markaların tedarikçi denetimlerinde referans alınması bekleniyor.",
       "summary_en": "ISO published ISO 45010 on 7 September 2026, the world's first international standard guiding workplace support for menstruation and menopause, aligned with ISO 45001.",
       "key_points": [
-        "ISO 45010 7 Eylul 2026'da yayimlandi",
-        "Konuyu ele alan dunyadaki ilk uluslararasi standart",
-        "ISO 45001 ile uyumlu rehber dokuman, sertifikasyona tabi degil",
-        "Avrupali markalarin tedarikci denetimlerinde referans olmasi bekleniyor",
-        "Kadin istihdami yogun sektorlerde devamsizlik ve devir hizini dusurme potansiyeli"
+        "ISO 45010 7 Eylül 2026'da yayımlandı",
+        "Konuyu ele alan dünyadaki ilk uluslararası standart",
+        "ISO 45001 ile uyumlu rehber doküman, sertifikasyona tabi değil",
+        "Avrupalı markaların tedarikçi denetimlerinde referans olması bekleniyor",
+        "Kadın istihdamı yoğun sektörlerde devamsızlık ve devir hızını düşürme potansiyeli"
       ],
       "entities": {
         "kurum": [
@@ -842,10 +842,10 @@
         "kisi": [],
         "sektor": [
           "Tekstil",
-          "Hazir Giyim",
-          "Gida",
+          "Hazır Giyim",
+          "Gıda",
           "Elektronik",
-          "Ilac"
+          "İlaç"
         ]
       },
       "region": "KURESEL",
@@ -870,18 +870,18 @@
     {
       "source_slug": "ansi-blog",
       "url": "https://blog.ansi.org/ansi/iso-9001-2026-qms-revision-updates/",
-      "title": "ISO 9001:2026 - Quality Management Systems Requirements revision published this month",
-      "body": "ISO 9001'in yeni surumu ISO 9001:2026, 16 Eylul 2026'da yayimlaniyor. Dunyada bir milyondan fazla kurulus tarafindan kullanilan ve kalite yonetim sistemlerinin uluslararasi referansi olan standardin bu revizyonu, 2015 surumunden bu yana yapilan ilk kapsamli guncelleme.\n\nRevizyonun one cikan basliklari sunlar: kalite kulturunun standarda acikca dahil edilmesi, etik davranis beklentilerinin tanimlanmasi, risk ve firsat yonetiminin daha net bir yapiya kavusturulmasi ve iklim degisikligi hususlarinin resmi olarak standarda entegre edilmesi. Iklim maddesi ozellikle dikkat cekici: kuruluslarin baglamini degerlendirirken iklim degisikliginin ilgili bir konu olup olmadigini belirlemesi isteniyor.\n\nYayim sonrasi sertifikali kuruluslara yaklasik uc yillik bir gecis suresi taniniyor; yani mevcut ISO 9001:2015 sertifikalarinin gecerliligi tahminen Eylul 2029'a kadar surecek. Bu sure zarfinda kuruluslarin yeni surume gecis yapmasi gerekiyor.\n\nTurkiye acisindan bu revizyon genis bir kitleyi ilgilendiriyor. ISO 9001, Turk sanayisinde en yaygin sertifika; ozellikle ihracatci KOBI'ler icin Avrupa ve ABD pazarlarina girisin fiili on kosulu. Uc yillik gecis suresi rahat gibi gorunse de, dokumantasyon guncellemesi, ic denetci egitimleri, risk metodolojisinin yeniden kurgulanmasi ve iklim baglamli analiz eklenmesi ciddi bir hazirlik gerektiriyor.\n\nPratik oneri: firmalarin 2027 yilinin ilk yarisinda bosluk analizi (gap analysis) yaptirmasi, ozellikle iklim degisikligi ve etik davranis maddeleri icin mevcut surdurulebilirlik ve uyum (compliance) calismalariyla entegrasyon kurmasi. CBAM raporlamasi ve CSRD/CSDDD hazirliklari yapan firmalar icin bu maddeler zaten mevcut calismalarla ortusuyor; tekrar is yapmamak icin bu calismalarin birlestirilmesi maliyeti dusurecek.",
+      "title": "ISO 9001:2026 - Kalite Yönetim Sistemleri Şartları revizyonu bu ay yayımlanıyor",
+      "body": "ISO 9001'in yeni sürümü ISO 9001:2026, 16 Eylül 2026'da yayımlanıyor. Dünyada bir milyondan fazla kuruluş tarafından kullanılan ve kalite yönetim sistemlerinin uluslararası referansı olan standardın bu revizyonu, 2015 sürümünden bu yana yapılan ilk kapsamlı güncelleme.\n\nRevizyonun öne çıkan başlıkları şunlar: kalite kültürünün standarda açıkça dahil edilmesi, etik davranış beklentilerinin tanımlanması, risk ve fırsat yönetiminin daha net bir yapıya kavuşturulması ve iklim değişikliği hususlarının resmi olarak standarda entegre edilmesi. İklim maddesi özellikle dikkat çekici: kuruluşların bağlamını değerlendirirken iklim değişikliğinin ilgili bir konu olup olmadığını belirlemesi isteniyor.\n\nYayım sonrası sertifikalı kuruluşlara yaklaşık üç yıllık bir geçiş süresi tanınıyor; yani mevcut ISO 9001:2015 sertifikalarının geçerliliği tahminen Eylül 2029'a kadar sürecek. Bu süre zarfında kuruluşların yeni sürüme geçiş yapması gerekiyor.\n\nTürkiye açısından bu revizyon geniş bir kitleyi ilgilendiriyor. ISO 9001, Türk sanayisinde en yaygın sertifika; özellikle ihracatçı KOBİ'ler için Avrupa ve ABD pazarlarına girişin fiili on koşulu. Üç yıllık geçiş süresi rahat gibi görünse de, dokümantasyon güncellemesi, iç denetçi eğitimleri, risk metodolojisinin yeniden kurgulanması ve iklim bağlamlı analiz eklenmesi ciddi bir hazırlık gerektiriyor.\n\nPratik öneri: firmaların 2027 yılının ilk yarısında boşluk analizi (gap analysis) yaptırması, özellikle iklim değişikliği ve etik davranış maddeleri için mevcut sürdürülebilirlik ve uyum (compliance) çalışmalarıyla entegrasyon kurması. CBAM raporlaması ve CSRD/CSDDD hazırlıkları yapan firmalar için bu maddeler zaten mevcut çalışmalarla örtüşüyor; tekrar iş yapmamak için bu çalışmaların birleştirilmesi maliyeti düşürecek.",
       "published_at": "2026-09-08T10:00:00+03:00",
       "language": "tr",
-      "summary": "Kalite yonetiminin uluslararasi referansi ISO 9001'in yeni surumu ISO 9001:2026 bu ay yayimlaniyor; 2015'ten bu yana ilk kapsamli revizyon. Yenilikler arasinda kalite kulturu, etik davranis, daha net risk yonetimi ve iklim degisikligi hususlarinin resmen entegre edilmesi var. Sertifikali kuruluslara yaklasik uc yillik gecis suresi taniniyor; ihracatci Turk KOBI'lerinin 2027 basinda bosluk analizi yaptirarak CBAM ve CSRD calismalariyla entegre bir gecis planlamasi oneriliyor.",
+      "summary": "Kalite yönetiminin uluslararası referansı ISO 9001'in yeni sürümü ISO 9001:2026 bu ay yayımlanıyor; 2015'ten bu yana ilk kapsamlı revizyon. Yenilikler arasında kalite kültürü, etik davranış, daha net risk yönetimi ve iklim değişikliği hususlarının resmen entegre edilmesi var. Sertifikalı kuruluşlara yaklaşık üç yıllık geçiş süresi tanınıyor; ihracatçı Türk KOBİ'lerinin 2027 başında boşluk analizi yaptırarak CBAM ve CSRD çalışmalarıyla entegre bir geçiş planlaması öneriliyor.",
       "summary_en": "ISO 9001:2026, the first major revision since 2015, publishes this month with new emphasis on quality culture, ethical behaviour, risk management and climate change, with a three-year transition period.",
       "key_points": [
-        "ISO 9001:2026 16 Eylul 2026'da yayimlaniyor",
-        "2015 surumunden bu yana ilk kapsamli revizyon",
-        "Iklim degisikligi hususlari standarda resmen entegre edildi",
-        "Kalite kulturu ve etik davranis yeni vurgu alanlari",
-        "Sertifikali kuruluslara yaklasik uc yillik gecis suresi (Eylul 2029)"
+        "ISO 9001:2026 16 Eylül 2026'da yayımlanıyor",
+        "2015 sürümünden bu yana ilk kapsamlı revizyon",
+        "İklim değişikliği hususları standarda resmen entegre edildi",
+        "Kalite kültürü ve etik davranış yeni vurgu alanları",
+        "Sertifikalı kuruluşlara yaklaşık üç yıllık geçiş süresi (Eylül 2029)"
       ],
       "entities": {
         "kurum": [
@@ -891,10 +891,10 @@
         ],
         "kisi": [],
         "sektor": [
-          "Tum Imalat Sanayi",
+          "Tüm İmalat Sanayi",
           "Makine",
           "Otomotiv",
-          "Gida"
+          "Gıda"
         ]
       },
       "region": "KURESEL",
@@ -919,22 +919,22 @@
     {
       "source_slug": "cnbc",
       "url": "https://www.cnbc.com/2026/09/08/china-exports-imports-august-trade-rebalance-demand-surplus-.html",
-      "title": "China's imports in August miss estimates as calls for rebalancing trade grow",
-      "body": "Cin Gumruk Idaresi'nin 8 Eylul'de acikladigi verilere gore Agustos 2026'da Cin ihracati yillik bazda yuzde 25 artarak 401,44 milyar dolara ulasti; Temmuz'daki yaklasik yuzde 24'luk artisin ardindan ivme korundu. Ithalat yuzde 28,2 arttti. Dis ticaret fazlasi Temmuz'daki 112,5 milyar dolardan 119,1 milyar dolara yukseldi.\n\nUrun kiriliminda otomotiv ihracati yillik yuzde 43, yariiletken ihracati ise carpici bir sekilde yuzde 129,8 artti. Makine ve elektrikli urunler Cin'in ana ihracat kalemi olmaya devam ediyor; ana ithalat kalemleri ise ham petrol, demir cevheri ve ileri teknoloji bilesenleri.\n\nBolgesel dagilimda ABD'ye sevkiyatlar yuzde 34,4 firlayarak Cin'in ABD ile ticaret fazlasini 29 milyar dolarin uzerine tasidi; bu, Donald Trump'in Ocak 2025'te Beyaz Saray'a donusunden bu yana en genis fark.\n\nBu tablo Turk sanayicisi icin uc basliga isaret ediyor. Birincisi, Cin'in otomotiv ihracatindaki yuzde 43'luk artis, Avrupa ve Turkiye pazarlarinda Cinli elektrikli arac ve yedek parca rekabetinin sertlesecegini gosteriyor; otomotiv yan sanayi icin fiyat baskisi kacinilmaz.\n\nIkincisi, Cin'in yariiletken ihracatindaki yuzde 130'a yakin sicrama, elektronik ara mal tedariginde Cin'e bagimliligin daha da artabilecegini gosteriyor.\n\nUcuncusu ve belki en onemlisi, 119 milyar dolarlik rekor aylik ticaret fazlasi kuresel olarak yeni korumaci onlemleri tetikleyecek bir baski unsuru. AB ve ABD'nin telafi edici vergi, anti-damping ve korunma sorusturmalarini artirmasi bekleniyor; bu sorusturmalarda Turkiye'nin de zaman zaman 'etrafindan dolanma' (circumvention) iddialariyla kapsama alinabilecegi gozden kacirilmamali.",
+      "title": "Çin'in Ağustos ithalatı beklentilerin altında kaldı, ticarette yeniden dengelenme çağrıları artıyor",
+      "body": "Çin Gümrük İdaresi'nin 8 Eylül'de açıkladığı verilere göre Ağustos 2026'da Çin ihracatı yıllık bazda yüzde 25 artarak 401,44 milyar dolara ulaştı; Temmuz'daki yaklaşık yüzde 24'lük artışın ardından ivme korundu. İthalat yüzde 28,2 arttı. Dış ticaret fazlası Temmuz'daki 112,5 milyar dolardan 119,1 milyar dolara yükseldi.\n\nÜrün kırılımında otomotiv ihracatı yıllık yüzde 43, yarı iletken ihracatı ise çarpıcı bir şekilde yüzde 129,8 arttı. Makine ve elektrikli ürünler Çin'in ana ihracat kalemi olmaya devam ediyor; ana ithalat kalemleri ise ham petrol, demir cevheri ve ileri teknoloji bileşenleri.\n\nBölgesel dağılımda ABD'ye sevkiyatlar yüzde 34,4 fırlayarak Çin'in ABD ile ticaret fazlasını 29 milyar doların üzerine taşıdı; bu, Donald Trump'ın Ocak 2025'te Beyaz Saray'a dönüşünden bu yana en geniş fark.\n\nBu tablo Türk sanayicisi için üç başlığa işaret ediyor. Birincisi, Çin'in otomotiv ihracatındaki yüzde 43'lük artış, Avrupa ve Türkiye pazarlarında Çinli elektrikli araç ve yedek parça rekabetinin sertleşeceğini gösteriyor; otomotiv yan sanayi için fiyat baskısı kaçınılmaz.\n\nİkincisi, Çin'in yarı iletken ihracatındaki yüzde 130'a yakın sıçrama, elektronik ara mal tedariğinde Çin'e bağımlılığın daha da artabileceğini gösteriyor.\n\nÜçüncüsü ve belki en önemlisi, 119 milyar dolarlık rekor aylık ticaret fazlası küresel olarak yeni korumacı önlemleri tetikleyecek bir baskı unsuru. AB ve ABD'nin telafi edici vergi, anti-damping ve korunma soruşturmalarını artırması bekleniyor; bu soruşturmalarda Türkiye'nin de zaman zaman 'etrafından dolanma' (circumvention) iddialarıyla kapsama alınabileceği gözden kaçırılmamalı.",
       "published_at": "2026-09-08T08:30:00+03:00",
       "language": "tr",
-      "summary": "Cin'in Agustos ihracati yillik yuzde 25 artarak 401 milyar dolara, ticaret fazlasi 119 milyar dolara ulasti; otomotiv ihracati yuzde 43, yariiletken ihracati yuzde 130 artti. ABD'ye sevkiyatlar yuzde 34 sicradi. Turk sanayicisi icin bu, otomotiv yan sanayi ve elektronikte sertlesen Cin rekabeti ve ayni zamanda AB/ABD tarafinda yeni korumaci onlem dalgasi riski anlamina geliyor.",
+      "summary": "Çin'in Ağustos ihracatı yıllık yüzde 25 artarak 401 milyar dolara, ticaret fazlası 119 milyar dolara ulaştı; otomotiv ihracatı yüzde 43, yarı iletken ihracatı yüzde 130 arttı. ABD'ye sevkiyatlar yüzde 34 sıçradı. Türk sanayicisi için bu, otomotiv yan sanayi ve elektronikte sertleşen Çin rekabeti ve aynı zamanda AB/ABD tarafında yeni korumacı önlem dalgası riski anlamına geliyor.",
       "summary_en": "China's August exports jumped 25% to $401bn with a record $119bn trade surplus; auto exports rose 43% and semiconductor exports 130%, intensifying calls for trade rebalancing.",
       "key_points": [
-        "Cin Agustos ihracati yuzde 25 artisla 401,44 milyar dolar",
-        "Ticaret fazlasi 119,1 milyar dolara yukseldi",
-        "Otomotiv ihracati yuzde 43, yariiletken ihracati yuzde 129,8 artti",
-        "ABD'ye sevkiyatlar yuzde 34,4 firladi",
-        "Yeni korumaci onlem ve anti-damping dalgasi riski artiyor"
+        "Çin Ağustos ihracatı yüzde 25 artışla 401,44 milyar dolar",
+        "Ticaret fazlası 119,1 milyar dolara yükseldi",
+        "Otomotiv ihracatı yüzde 43, yarı iletken ihracatı yüzde 129,8 arttı",
+        "ABD'ye sevkiyatlar yüzde 34,4 fırladı",
+        "Yeni korumacı önlem ve anti-damping dalgası riski artıyor"
       ],
       "entities": {
         "kurum": [
-          "Cin Gumruk Idaresi",
+          "Çin Gümrük İdaresi",
           "Avrupa Komisyonu"
         ],
         "kisi": [],
@@ -967,18 +967,18 @@
     {
       "source_slug": "lng-global",
       "url": "https://www.lngglobal.com/europe-regional-gas-security-signals-september-11-2026/",
-      "title": "Europe Regional Gas-Security Signals - September 11, 2026",
-      "body": "Avrupa'nin kis oncesi dogal gaz guvenligi tablosu 11 Eylul itibariyla endise verici. TTF vadeli fiyatlari 2023 basindan bu yana ilk kez 80 avro/MWh seviyesinin uzerini gordu; referans fiyatlar 73-78 avro/MWh bandinda dalgalaniyor. Fiyat, yil basina gore iki katindan fazla artmis durumda.\n\nDepolama tarafinda tablo daha kritik. Avrupa gaz depolari, yilin bu donemi icin tarihsel ortalamanin belirgin altinda; doluluk orani yaklasik yuzde 67 seviyesinde. AB'nin 1 Kasim itibariyla yuzde 90 doluluk hedefine ulasabilmesi icin gunluk 4.753 GWh'in uzerinde surekli bir enjeksiyon hizi gerekiyor. Bu hizin surdurulmesi, Asya ile LNG kargolari icin rekabeti keskinlestiriyor.\n\nArz tarafinda ana sorun, Iran savasinin Orta Dogu LNG akislarini kesintiye ugratmasi. Devam eden ablukanin kuresel LNG akislarinin yaklasik yuzde 20'sini etkiledigi, en buyuk darbeyi Katar sevkiyatlarinin aldigi belirtiliyor. Bosluk buyuk olcude ABD LNG'si ile kapatilmaya calisiliyor.\n\nPiyasa beklentisi, Avrupa'nin Asya ile rekabetinin fiyatlari bu kis 100 avro/MWh'in uzerine tasiyabilecegi yonunde; bu, dort yil onceki enerji krizinden bu yana gorulmemis bir seviye olur.\n\nTurk sanayicisi icin bu tablo iki katmanli. Birincisi dogrudan maliyet: Turkiye'nin dogal gaz ithalatinin onemli bolumu spot ve LNG bagimlisi; Avrupa fiyatlarindaki artis Turkiye'ye gecikmeli olarak yansiyor ve ozellikle cam, seramik, cimento, gubre, kagit ve demir-celik gibi gaz yogun sektorlerde birim maliyeti dogrudan yukseltiyor. Ikincisi rekabet: Avrupali rakiplerin de ayni soku yasamasi, Turk uretici icin goreli bir denge unsuru. Ancak elektrik uretiminde dogal gaz payi yuksek oldugundan Turkiye'de elektrik maliyeti de ayni kanaldan etkilenecek.",
+      "title": "Avrupa bölgesel gaz arz güvenliği sinyalleri - 11 Eylül 2026",
+      "body": "Avrupa'nın kış öncesi doğal gaz güvenliği tablosu 11 Eylül itibarıyla endişe verici. TTF vadeli fiyatları 2023 başından bu yana ilk kez 80 avro/MWh seviyesinin üzerini gördü; referans fiyatlar 73-78 avro/MWh bandında dalgalanıyor. Fiyat, yıl başına göre iki katından fazla artmış durumda.\n\nDepolama tarafında tablo daha kritik. Avrupa gaz depoları, yılın bu dönemi için tarihsel ortalamanın belirgin altında; doluluk oranı yaklaşık yüzde 67 seviyesinde. AB'nin 1 Kasım itibarıyla yüzde 90 doluluk hedefine ulaşabilmesi için günlük 4.753 GWh'in üzerinde sürekli bir enjeksiyon hızı gerekiyor. Bu hızın sürdürülmesi, Asya ile LNG kargoları için rekabeti keskinleştiriyor.\n\nArz tarafında ana sorun, İran savaşının Orta Doğu LNG akışlarını kesintiye uğratması. Devam eden ablukanın küresel LNG akışlarının yaklaşık yüzde 20'sini etkilediği, en büyük darbeyi Katar sevkiyatlarının aldığı belirtiliyor. Boşluk büyük ölçüde ABD LNG'si ile kapatılmaya çalışılıyor.\n\nPiyasa beklentisi, Avrupa'nın Asya ile rekabetinin fiyatları bu kış 100 avro/MWh'in üzerine taşıyabileceği yönünde; bu, dört yıl önceki enerji krizinden bu yana görülmemiş bir seviye olur.\n\nTürk sanayicisi için bu tablo iki katmanlı. Birincisi doğrudan maliyet: Türkiye'nin doğal gaz ithalatının önemli bölümü spot ve LNG bağımlısı; Avrupa fiyatlarındaki artış Türkiye'ye gecikmeli olarak yansıyor ve özellikle cam, seramik, çimento, gübre, kâğıt ve demir-çelik gibi gaz yoğun sektörlerde birim maliyeti doğrudan yükseltiyor. İkincisi rekabet: Avrupalı rakiplerin de aynı şoku yaşaması, Türk üretici için göreli bir denge unsuru. Ancak elektrik üretiminde doğal gaz payı yüksek olduğundan Türkiye'de elektrik maliyeti de aynı kanaldan etkilenecek.",
       "published_at": "2026-09-11T09:30:00+03:00",
       "language": "tr",
-      "summary": "Avrupa TTF gaz fiyatlari 2023 basindan bu yana ilk kez 80 avro/MWh uzerini gordu ve depolar yuzde 67 doluluk ile tarihsel ortalamanin altinda. Iran savasi kuresel LNG akislarinin yaklasik yuzde 20'sini etkiliyor, Katar sevkiyatlari en buyuk darbeyi aliyor. Bu kis fiyatlarin 100 avro/MWh uzerine cikmasi bekleniyor; cam, seramik, cimento, gubre ve demir-celik gibi gaz yogun Turk sanayisinde birim maliyet ve elektrik fiyati dogrudan baski altinda.",
+      "summary": "Avrupa TTF gaz fiyatları 2023 başından bu yana ilk kez 80 avro/MWh üzerini gördü ve depolar yüzde 67 doluluk ile tarihsel ortalamanın altında. İran savaşı küresel LNG akışlarının yaklaşık yüzde 20'sini etkiliyor, Katar sevkiyatları en büyük darbeyi alıyor. Bu kış fiyatların 100 avro/MWh üzerine çıkması bekleniyor; cam, seramik, çimento, gübre ve demir-çelik gibi gaz yoğun Türk sanayisinde birim maliyet ve elektrik fiyatı doğrudan baskı altında.",
       "summary_en": "European TTF gas topped EUR 80/MWh for the first time since early 2023 with storage only 67% full; the Iran blockade has disrupted about 20% of global LNG flows.",
       "key_points": [
-        "TTF 2023 basindan beri ilk kez 80 avro/MWh uzerini gordu",
-        "Avrupa gaz depolari yaklasik yuzde 67 dolu, hedef 1 Kasim'da yuzde 90",
-        "Kuresel LNG akislarinin yaklasik yuzde 20'si kesintiye ugradi",
-        "Katar sevkiyatlari en buyuk darbeyi aldi, ABD LNG'si bosluk dolduruyor",
-        "Bu kis fiyatlarin 100 avro/MWh uzerine cikmasi bekleniyor"
+        "TTF 2023 başından beri ilk kez 80 avro/MWh üzerini gördü",
+        "Avrupa gaz depoları yaklaşık yüzde 67 dolu, hedef 1 Kasım'da yüzde 90",
+        "Küresel LNG akışlarının yaklaşık yüzde 20'si kesintiye uğradı",
+        "Katar sevkiyatları en büyük darbeyi aldı, ABD LNG'si boşluk dolduruyor",
+        "Bu kış fiyatların 100 avro/MWh üzerine çıkması bekleniyor"
       ],
       "entities": {
         "kurum": [
@@ -989,10 +989,10 @@
         "sektor": [
           "Cam",
           "Seramik",
-          "Cimento",
-          "Gubre",
-          "Demir-Celik",
-          "Kagit"
+          "Çimento",
+          "Gübre",
+          "Demir-Çelik",
+          "Kâğıt"
         ]
       },
       "region": "KURESEL",
@@ -1017,18 +1017,18 @@
     {
       "source_slug": "mining-com",
       "url": "https://www.mining.com/copper-price-holds-near-record-as-london-warehouse-bidding-war-looms/",
-      "title": "Copper price holds near record as London warehouse bidding war looms",
-      "body": "Bakir fiyatlari rekor seviyelere yakin seyrini surduruyor ve Londra Metal Borsasi (LME) stoklarindaki erime piyasada bir sikisma senaryosunu gundeme getiriyor.\n\nLME bakir stoklari ust uste 42. gun geriledi; bu, 2014'ten bu yana gorulen en uzun dusus serisi. Stoklar 204.975 tona kadar indi ve kalan miktarin neredeyse yarisi cekim icin onceden rezerve edilmis (cancelled warrant) durumda. Yani fiilen piyasaya verilebilecek serbest stok cok daha dusuk. Yil ortasinda 306.500 ton olan stok seviyesiyle karsilastirildiginda erimenin hizi daha net goruluyor.\n\nArz tarafinda yapisal sorunlar var: yeni maden devreye alinmamasi ve geleneksel olarak en buyuk uretici bolge olan Guney Amerika'da uretimin gerilemesi. J.P. Morgan Global Research 2026 icin yaklasik 330 bin tonluk rafine bakir acigi ongoruyor; piyasa beklentileri acigin 200 bin tonun uzerinde kalici olacagi yonunde. UBS ise bakirin Eylul 2026 civarinda ton basina 14.000 dolara, arz kisitlari devam ederse yil sonunda 14.500 dolara ulasabilecegini degerlendiriyor.\n\nTurk sanayicisi icin bakir, cok genis bir sektor yelpazesinde kritik girdi: kablo ve iletken uretimi, elektrik motorlari, transformator, beyaz esya, otomotiv elektrigi, iklimlendirme (HVAC), insaat tesisati ve yenilenebilir enerji ekipmanlari. Ton basina 14.000 dolar seviyesi, kablo ve motor ureticileri icin hammadde maliyetinin toplam maliyetteki payini kritik esiklere tasiyor.\n\nPratik oneri: bakir yogun urun gruplarinda sabit fiyatli uzun vadeli sozlesmelerden kacinilmasi, LME endeksli fiyat formullerinin (metal eskalasyon maddesi) sozlesmelere konulmasi ve mumkun oldugunca vadeli islem veya swap ile hedge edilmesi. Ayrica hurda bakir tedarikinin ve geri donusum oraninin artirilmasi, maliyet baskisini azaltan onemli bir kaldirac.",
+      "title": "Bakır fiyatı rekora yakın seyrediyor: Londra'da stok kapma yarışı kapıda",
+      "body": "Bakır fiyatları rekor seviyelere yakın seyrini sürdürüyor ve Londra Metal Borsası (LME) stoklarındaki erime piyasada bir sıkışma senaryosunu gündeme getiriyor.\n\nLME bakır stokları üst üste 42. gün geriledi; bu, 2014'ten bu yana görülen en uzun düşüş serisi. Stoklar 204.975 tona kadar indi ve kalan miktarın neredeyse yarısı çekim için önceden rezerve edilmiş (cancelled warrant) durumda. Yani fiilen piyasaya verilebilecek serbest stok çok daha düşük. Yıl ortasında 306.500 ton olan stok seviyesiyle karşılaştırıldığında erimenin hızı daha net görülüyor.\n\nArz tarafında yapısal sorunlar var: yeni maden devreye alınmaması ve geleneksel olarak en büyük üretici bölge olan Güney Amerika'da üretimin gerilemesi. J.P. Morgan Global Research 2026 için yaklaşık 330 bin tonluk rafine bakır açığı öngörüyor; piyasa beklentileri açığın 200 bin tonun üzerinde kalıcı olacağı yönünde. UBS ise bakırın Eylül 2026 civarında ton başına 14.000 dolara, arz kısıtları devam ederse yıl sonunda 14.500 dolara ulaşabileceğini değerlendiriyor.\n\nTürk sanayicisi için bakır, çok geniş bir sektör yelpazesinde kritik girdi: kablo ve iletken üretimi, elektrik motorları, transformatör, beyaz eşya, otomotiv elektriği, iklimlendirme (HVAC), inşaat tesisatı ve yenilenebilir enerji ekipmanları. Ton başına 14.000 dolar seviyesi, kablo ve motor üreticileri için hammadde maliyetinin toplam maliyetteki payını kritik eşiklere taşıyor.\n\nPratik öneri: bakır yoğun ürün gruplarında sabit fiyatlı uzun vadeli sözleşmelerden kaçınılması, LME endeksli fiyat formüllerinin (metal eskalasyon maddesi) sözleşmelere konulması ve mümkün olduğunca vadeli işlem veya swap ile hedge edilmesi. Ayrıca hurda bakır tedarikinin ve geri dönüşüm oranının artırılması, maliyet baskısını azaltan önemli bir kaldıraç.",
       "published_at": "2026-09-09T14:00:00+03:00",
       "language": "tr",
-      "summary": "LME bakir stoklari ust uste 42. gun gerileyerek 204.975 tona indi; bu 2014'ten bu yana en uzun dusus serisi ve kalan stogun neredeyse yarisi cekim icin rezerve edilmis durumda. J.P. Morgan 2026'da 330 bin tonluk arz acigi, UBS ise ton basina 14.000 dolar fiyat ongoruyor. Kablo, elektrik motoru, beyaz esya, HVAC ve otomotiv elektrigi ureten Turk firmalari icin sozlesmelere LME endeksli fiyat formulu konulmasi ve hurda/geri donusum oraninin artirilmasi kritik.",
+      "summary": "LME bakır stokları üst üste 42. gün gerileyerek 204.975 tona indi; bu 2014'ten bu yana en uzun düşüş serisi ve kalan stoğun neredeyse yarısı çekim için rezerve edilmiş durumda. J.P. Morgan 2026'da 330 bin tonluk arz açığı, UBS ise ton başına 14.000 dolar fiyat öngörüyor. Kablo, elektrik motoru, beyaz eşya, HVAC ve otomotiv elektriği üreten Türk firmaları için sözleşmelere LME endeksli fiyat formülü konulması ve hurda/geri dönüşüm oranının artırılması kritik.",
       "summary_en": "Copper holds near record highs as LME stocks fell for a 42nd straight day to 204,975 tonnes, the longest run since 2014, with a 2026 refined deficit of about 330,000 tonnes forecast.",
       "key_points": [
-        "LME bakir stoklari 42 gundur dusuyor, 204.975 tona indi",
-        "Kalan stogun neredeyse yarisi cekim icin rezerve edilmis",
-        "J.P. Morgan 2026 icin 330 bin ton rafine bakir acigi ongoruyor",
-        "UBS ton basina 14.000-14.500 dolar seviyesi bekliyor",
-        "Guney Amerika uretimindeki gerileme yapisal arz sorunu"
+        "LME bakır stokları 42 gündür düşüyor, 204.975 tona indi",
+        "Kalan stoğun neredeyse yarısı çekim için rezerve edilmiş",
+        "J.P. Morgan 2026 için 330 bin ton rafine bakır açığı öngörüyor",
+        "UBS ton başına 14.000-14.500 dolar seviyesi bekliyor",
+        "Güney Amerika üretimindeki gerileme yapısal arz sorunu"
       ],
       "entities": {
         "kurum": [
@@ -1039,10 +1039,10 @@
         "kisi": [],
         "sektor": [
           "Kablo",
-          "Elektrik Ekipmanlari",
-          "Beyaz Esya",
+          "Elektrik Ekipmanları",
+          "Beyaz Eşya",
           "Otomotiv",
-          "Iklimlendirme"
+          "İklimlendirme"
         ]
       },
       "region": "KURESEL",
@@ -1067,27 +1067,27 @@
     {
       "source_slug": "investing-news-network",
       "url": "https://investingnews.com/daily/resource-investing/precious-metals-investing/gold-investing/highest-price-for-gold/",
-      "title": "Gold breaks past its inflation-adjusted 1980 record as ETF inflows hit all-time high",
-      "body": "Altin, 2026'daki rekor serisini surduruyor. 11 Eylul itibariyla ons fiyati 4.347,78 dolar seviyesinde; gunluk bazda yuzde 0,71 artis kaydedildi. 7 Eylul'de altin, Ocak 1980'de 850 dolar ile kurulan enflasyona gore duzeltilmis tum zamanlarin rekorunu da resmen geride birakti.\n\nDunya Altin Konseyi'nin 9 Eylul'de yayimladigi verilere gore, kuresel altin destekli ETF'ler Agustos ayinda 18 milyar dolarlik giris cekti; bu, tarihin ikinci en buyuk aylik girisi. ETF varliklari 121 ton artarak 4.189 ton ile tum zamanlarin zirvesine ulasti.\n\nYukselisin arkasindaki etkenler: Orta Dogu savasinin yarattigi jeopolitik belirsizlik, ABD'de yapiskan enflasyon, zayiflayan dolar ve merkez bankalarinin surdurdugu alimlar. Altin, klasik guvenli liman islevini bu donemde cok belirgin sekilde ustlenmis durumda.\n\nTurk sanayicisi acisindan altinin anlami cift yonlu. Dogrudan etki, kuyumculuk ve muicevher sektorunde: Turkiye dunyanin onde gelen isleme ve ihracat merkezlerinden biri. Rekor fiyatlar bir yandan stok degerini yukseltirken, diger yandan islenmis urun talebini baski altina aliyor ve isletme sermayesi ihtiyacini ciddi olcude artiriyor. Ayni fiyat seviyesi hurda altin donusumunu ve geri kazanimi tesvik ediyor.\n\nDolayli etki ise makro tarafta: altina bu olcekte bir kacis, yatirimcilarin risk istahinin dustugunun gostergesi. Bu, gelismekte olan ulkelere yonelik sermaye akimlarini, yatirim finansmani kosullarini ve kur oynakligini olumsuz etkileyen bir sinyal. Ayrica gumus, platin ve paladyum gibi sanayi kullanimi olan degerli metallerdeki paralel yukselis, elektronik, otomotiv katalizor ve kaplama sektorlerinde girdi maliyetini yukseltiyor.",
+      "title": "Altın, 1980'in enflasyona göre düzeltilmiş rekorunu aştı; ETF girişleri tüm zamanların zirvesinde",
+      "body": "Altın, 2026'daki rekor serisini sürdürüyor. 11 Eylül itibarıyla ons fiyatı 4.347,78 dolar seviyesinde; günlük bazda yüzde 0,71 artış kaydedildi. 7 Eylül'de altın, Ocak 1980'de 850 dolar ile kurulan enflasyona göre düzeltilmiş tüm zamanların rekorunu da resmen geride bıraktı.\n\nDünya Altın Konseyi'nin 9 Eylül'de yayımladığı verilere göre, küresel altın destekli ETF'ler Ağustos ayında 18 milyar dolarlık giriş çekti; bu, tarihin ikinci en büyük aylık girişi. ETF varlıkları 121 ton artarak 4.189 ton ile tüm zamanların zirvesine ulaştı.\n\nYükselişin arkasındaki etkenler: Orta Doğu savaşının yarattığı jeopolitik belirsizlik, ABD'de yapışkan enflasyon, zayıflayan dolar ve merkez bankalarının sürdürdüğü alımlar. Altın, klasik güvenli liman işlevini bu dönemde çok belirgin şekilde üstlenmiş durumda.\n\nTürk sanayicisi açısından altının anlamı çift yönlü. Doğrudan etki, kuyumculuk ve mücevher sektöründe: Türkiye dünyanın önde gelen işleme ve ihracat merkezlerinden biri. Rekor fiyatlar bir yandan stok değerini yükseltirken, diğer yandan işlenmiş ürün talebini baskı altına alıyor ve işletme sermayesi ihtiyacını ciddi ölçüde artırıyor. Aynı fiyat seviyesi hurda altın dönüşümünü ve geri kazanımı teşvik ediyor.\n\nDolaylı etki ise makro tarafta: altına bu ölçekte bir kaçış, yatırımcıların risk iştahının düştüğünün göstergesi. Bu, gelişmekte olan ülkelere yönelik sermaye akımlarını, yatırım finansmanı koşullarını ve kur oynaklığını olumsuz etkileyen bir sinyal. Ayrıca gümüş, platin ve paladyum gibi sanayi kullanımı olan değerli metallerdeki paralel yükseliş, elektronik, otomotiv katalizör ve kaplama sektörlerinde girdi maliyetini yükseltiyor.",
       "published_at": "2026-09-09T16:00:00+03:00",
       "language": "tr",
-      "summary": "Altin 11 Eylul'de 4.347 dolar/ons seviyesinde islem gordu ve 7 Eylul'de 1980'in enflasyona gore duzeltilmis rekorunu asti; Agustos'ta altin ETF'lerine 18 milyar dolar giris oldu. Turkiye'nin kuyumculuk ve muicevher sektorunde bu, artan stok degeri ama ayni zamanda islenmis urun talebinde baski ve ciddi isletme sermayesi ihtiyaci demek. Makro tarafta ise risk istahindaki dususun ve sermaye akimlarindaki zayiflamanin gostergesi.",
+      "summary": "Altın 11 Eylül'de 4.347 dolar/ons seviyesinde işlem gördü ve 7 Eylül'de 1980'in enflasyona göre düzeltilmiş rekorunu aştı; Ağustos'ta altın ETF'lerine 18 milyar dolar giriş oldu. Türkiye'nin kuyumculuk ve mücevher sektöründe bu, artan stok değeri ama aynı zamanda işlenmiş ürün talebinde baskı ve ciddi işletme sermayesi ihtiyacı demek. Makro tarafta ise risk iştahındaki düşüşün ve sermaye akımlarındaki zayıflamanın göstergesi.",
       "summary_en": "Gold traded at $4,347/oz on 11 September after passing its inflation-adjusted 1980 record, with $18bn flowing into gold ETFs in August - the second-largest monthly inflow on record.",
       "key_points": [
-        "Altin 11 Eylul'de 4.347,78 dolar/ons seviyesinde",
-        "7 Eylul'de 1980'in enflasyona gore duzeltilmis rekoru asildi",
-        "Agustos'ta altin ETF'lerine 18 milyar dolar giris",
-        "ETF varliklari 4.189 ton ile tum zamanlarin zirvesinde",
-        "Kuyumculuk sektorunde isletme sermayesi ihtiyaci artiyor"
+        "Altın 11 Eylül'de 4.347,78 dolar/ons seviyesinde",
+        "7 Eylül'de 1980'in enflasyona göre düzeltilmiş rekoru aşıldı",
+        "Ağustos'ta altın ETF'lerine 18 milyar dolar giriş",
+        "ETF varlıkları 4.189 ton ile tüm zamanların zirvesinde",
+        "Kuyumculuk sektöründe işletme sermayesi ihtiyacı artıyor"
       ],
       "entities": {
         "kurum": [
-          "Dunya Altin Konseyi"
+          "Dünya Altın Konseyi"
         ],
         "kisi": [],
         "sektor": [
           "Kuyumculuk",
-          "Muicevher",
+          "Mücevher",
           "Elektronik",
           "Otomotiv"
         ]
@@ -1114,18 +1114,18 @@
     {
       "source_slug": "ec-trade-policy",
       "url": "https://policy.trade.ec.europa.eu/news/commission-sets-type-evidence-be-provided-importers-prove-country-melt-and-pour-steel-products-2026-08-31_en",
-      "title": "Commission sets type of evidence to be provided by importers to prove country of 'melt and pour' of steel products",
-      "body": "Avrupa Komisyonu, AB Celik Duzenlemesi kapsaminda ithalatcilarin celik urunlerinin 'eritme ve dokum' (melt and pour) ulkesini nasil kanitlayacagina dair kurallari belirledi. Kural 1 Ekim 2026'dan itibaren uygulanacak.\n\n1 Ekim'den itibaren, Celik Duzenlemesi kapsamindaki urunleri AB pazarina sokmak isteyen ithalatcilar, gumruk beyannamesinde celigin hangi ulkede eritilip dokuldugunu beyan etmek zorunda. Kanit olarak oncelikle fabrika test sertifikasi (mill test certificate) isteniyor. Sertifikada eritme/dokum ulkesi veya dokum numarasi (heat number) yer almiyorsa ya da sertifika hic saglanamiyorsa; faturalar, irsaliyeler, kalite sertifikalari, satin alma sozlesmelerindeki maddeler, tedarikcilerin uzun donemli beyanlari, maliyet muhasebesi ve uretim belgeleri, ihracatci ulkenin gumruk belgeleri, ticari yazismalar veya uretim tanimlari tamamlayici ya da bagimsiz kanit olarak kabul edilebiliyor.\n\nBu kural, 1 Temmuz 2026'da yururluge giren yeni AB celik korunma rejiminin bir parcasi. Yeni rejimde gumruk vergisiz ithalat kotasi yilda 18,3 milyon tona indirildi (2024 seviyesine gore yuzde 47 kesinti) ve kota disi vergi tum kategorilerde yuzde 50'ye cikarildi. Kotalar artik yillik degil ceyreklik yonetiliyor ve 26 celik urun kategorisini kapsiyor.\n\nTurkiye bu duzenlemenin en fazla etkilenen ulkelerinden biri. Kendi birincil (ham) celik uretim kapasitesi sinirli olan, slab veya sicak rulo sac ithal edip isleyerek AB'ye yeniden ihrac eden 're-rolling' merkezleri hedefte. Turkiye, Vietnam, Tayland ve Malezya bu grupta aciklca zikrediliyor. Cunku melt-and-pour kurali, urunun menseini isleme yerine degil, celigin ilk doküldugu ulkeye bagliyor; bu da ithal slab ile uretim yapan tesislerin AB kotasinda farkli bir ulkenin hanesine yazilmasi anlamina geliyor.\n\nSanayici icin acil eylem maddeleri: tedarikcilerden dokum numarali fabrika test sertifikasi talebinin sozlesmelere yazilmasi, izlenebilirlik kayitlarinin 1 Ekim oncesi hazir hale getirilmesi ve AB'li alicilarla kota/vergi riskinin paylasimi konusunda yeniden pazarlik yapilmasi.",
+      "title": "Avrupa Komisyonu, çelik ürünlerinde 'eritme ve döküm' ülkesini kanıtlamak için ithalatçılardan istenecek belgeleri belirledi",
+      "body": "Avrupa Komisyonu, AB Çelik Düzenlemesi kapsamında ithalatçıların çelik ürünlerinin 'eritme ve döküm' (melt and pour) ülkesini nasıl kanıtlayacağına dair kuralları belirledi. Kural 1 Ekim 2026'dan itibaren uygulanacak.\n\n1 Ekim'den itibaren, Çelik Düzenlemesi kapsamındaki ürünleri AB pazarına sokmak isteyen ithalatçılar, gümrük beyannamesinde çeliğin hangi ülkede eritilip döküldüğünü beyan etmek zorunda. Kanıt olarak öncelikle fabrika test sertifikası (mill test certificate) isteniyor. Sertifikada eritme/döküm ülkesi veya döküm numarası (heat number) yer almıyorsa ya da sertifika hiç sağlanamıyorsa; faturalar, irsaliyeler, kalite sertifikaları, satın alma sözleşmelerindeki maddeler, tedarikçilerin uzun dönemli beyanları, maliyet muhasebesi ve üretim belgeleri, ihracatçı ülkenin gümrük belgeleri, ticari yazışmalar veya üretim tanımları tamamlayıcı ya da bağımsız kanıt olarak kabul edilebiliyor.\n\nBu kural, 1 Temmuz 2026'da yürürlüğe giren yeni AB çelik korunma rejiminin bir parçası. Yeni rejimde gümrük vergisiz ithalat kotası yılda 18,3 milyon tona indirildi (2024 seviyesine göre yüzde 47 kesinti) ve kota dışı vergi tüm kategorilerde yüzde 50'ye çıkarıldı. Kotalar artık yıllık değil çeyreklik yönetiliyor ve 26 çelik ürün kategorisini kapsıyor.\n\nTürkiye bu düzenlemenin en fazla etkilenen ülkelerinden biri. Kendi birincil (ham) çelik üretim kapasitesi sınırlı olan, slab veya sıcak rulo sac ithal edip işleyerek AB'ye yeniden ihraç eden 're-rolling' merkezleri hedefte. Türkiye, Vietnam, Tayland ve Malezya bu grupta açıkça zikrediliyor. Çünkü melt-and-pour kuralı, ürünün menşeini işleme yerine değil, çeliğin ilk döküldüğü ülkeye bağlıyor; bu da ithal slab ile üretim yapan tesislerin AB kotasında farklı bir ülkenin hanesine yazılması anlamına geliyor.\n\nSanayici için acil eylem maddeleri: tedarikçilerden döküm numaralı fabrika test sertifikası talebinin sözleşmelere yazılması, izlenebilirlik kayıtlarının 1 Ekim öncesi hazır hale getirilmesi ve AB'li alıcılarla kota/vergi riskinin paylaşımı konusunda yeniden pazarlık yapılması.",
       "published_at": "2026-08-31T12:00:00+03:00",
       "language": "tr",
-      "summary": "Avrupa Komisyonu, 1 Ekim 2026'dan itibaren celik ithalatcilarinin gumruk beyaninda celigin 'eritme ve dokum' ulkesini kanitlamasini zorunlu kilan kanit kurallarini yayimladi. Kural, yeni AB celik korunma rejiminin (18,3 milyon ton kota, kota disi yuzde 50 vergi) bir parcasi. Kendi ham celik kapasitesi sinirli olup ithal slab isleyen Turkiye gibi re-rolling merkezleri dogrudan hedefte; firmalar 1 Ekim oncesi dokum numarali test sertifikasi ve izlenebilirlik altyapisini kurmali.",
+      "summary": "Avrupa Komisyonu, 1 Ekim 2026'dan itibaren çelik ithalatçılarının gümrük beyanında çeliğin 'eritme ve döküm' ülkesini kanıtlamasını zorunlu kılan kanıt kurallarını yayımladı. Kural, yeni AB çelik korunma rejiminin (18,3 milyon ton kota, kota dışı yüzde 50 vergi) bir parçası. Kendi ham çelik kapasitesi sınırlı olup ithal slab işleyen Türkiye gibi re-rolling merkezleri doğrudan hedefte; firmalar 1 Ekim öncesi döküm numaralı test sertifikası ve izlenebilirlik altyapısını kurmalı.",
       "summary_en": "The European Commission set out the evidence importers must provide from 1 October 2026 to prove the country of 'melt and pour' for steel, part of the new safeguard regime with an 18.3 Mt quota and 50% out-of-quota duty; re-rolling hubs like Turkey are most exposed.",
       "key_points": [
-        "1 Ekim 2026'dan itibaren melt-and-pour ulkesi beyani zorunlu",
-        "Oncelikli kanit dokum numarali fabrika test sertifikasi",
-        "Yeni korunma rejimi: yillik 18,3 milyon ton kota, yuzde 47 kesinti",
-        "Kota disi vergi tum kategorilerde yuzde 50",
-        "Turkiye gibi ithal slab isleyen re-rolling merkezleri hedefte"
+        "1 Ekim 2026'dan itibaren melt-and-pour ülkesi beyanı zorunlu",
+        "Öncelikli kanıt döküm numaralı fabrika test sertifikası",
+        "Yeni korunma rejimi: yıllık 18,3 milyon ton kota, yüzde 47 kesinti",
+        "Kota dışı vergi tüm kategorilerde yüzde 50",
+        "Türkiye gibi ithal slab işleyen re-rolling merkezleri hedefte"
       ],
       "entities": {
         "kurum": [
@@ -1134,10 +1134,10 @@
         ],
         "kisi": [],
         "sektor": [
-          "Demir-Celik",
-          "Metal Isleme",
+          "Demir-Çelik",
+          "Metal İşleme",
           "Boru-Profil",
-          "Insaat"
+          "İnşaat"
         ]
       },
       "region": "KURESEL",
@@ -1162,23 +1162,23 @@
     {
       "source_slug": "climate-home-news",
       "url": "https://www.climatechangenews.com/2026/09/11/turkiye-says-it-has-final-decision-at-cop31-despite-australia-running-negotiations/",
-      "title": "Turkiye says it has 'final decision' on COP31 despite Australia role",
-      "body": "COP31'in yonetim yapisina iliskin belirsizlik 11 Eylul'de yeniden gundeme geldi. Turkiye'nin Cevre, Sehircilik ve Iklim Degisikligi Bakani, ulkesinin BM iklim konferansinda 'son sozu soyleyecegini' belirtti; bu, Avustralya'ya muzakerelerin baskanligini veren anlasmaya ragmen yapilan bir aciklama.\n\nMevcut duzenlemeye gore Turkiye Cevre Bakani Murat Kurum COP31 Baskan Adayi (President-Designate) konumunda; Avustralya'nin iklim bakani Chris Bowen ise Muzakereler Baskani olarak gorev yapiyor. Turkiye genis Eylem Gundemi'ni (Action Agenda) ve konferans organizasyonunu yonetiyor.\n\nCOP31, 9-20 Kasim 2026 tarihleri arasinda Antalya EXPO Merkezi'nde yapilacak. Hazirliklar hiz kazanmis durumda: Cevre, Sehircilik ve Iklim Degisikligi Bakanligi ile UNFCCC Sekretaryasi temsilcileri Antalya EXPO alaninda ilk resmi hazirlik oturumunu gerceklestirdi. Toplam 1,5 milyon metrekarelik bir etkinlik alani hazirlandi; Mavi Bolge'de genel kurul salonlari, muzakere salonlari, medya merkezi, COP31 Baskanlik ofisi, BM ofisleri, yan etkinlik alanlari, pavyonlar ve delegasyon ofisleri yer alacak. Eylul ayi itibariyla surec delege teyitleri ve uygulama programi asamasina gecti.\n\nGundemin merkezinde 2035 iklim planlari, iklim finansmani hedefinin teslimi ve fosil yakitlar, kayip-zarar, adil gecis, elektrifikasyon ile Paris Anlasmasi'nin 6. Maddesi kapsamindaki karbon piyasalari konusundaki tamamlanmamis kararlar var.\n\nTurk sanayicisi icin COP31 sadece diplomatik bir etkinlik degil. Birincisi, karbon piyasalari basliginda alinacak kararlar Turkiye'nin kurmakta oldugu ulusal Emisyon Ticaret Sistemi'nin (ETS) uluslararasi baglantililigi ve AB CBAM ile mahsuplasma imkani acisindan belirleyici. Ikincisi, ev sahipligi Turk firmalarina yesil teknoloji, yenilenebilir enerji ekipmani ve dongusel ekonomi cozumlerini kuresel alicilara tanitma icin essiz bir vitrin sunuyor. Ucuncusu, iklim finansmani basliginda alinacak kararlar sanayide dekarbonizasyon yatirimlarina erisilebilir fon yaratabilir.",
+      "title": "Türkiye, Avustralya'nın rolüne rağmen COP31'de 'son sözün' kendisinde olduğunu söyledi",
+      "body": "COP31'in yönetim yapısına ilişkin belirsizlik 11 Eylül'de yeniden gündeme geldi. Türkiye'nin Çevre, Şehircilik ve İklim Değişikliği Bakanı, ülkesinin BM iklim konferansında 'son sözü söyleyeceğini' belirtti; bu, Avustralya'ya müzakerelerin başkanlığını veren anlaşmaya rağmen yapılan bir açıklama.\n\nMevcut düzenlemeye göre Türkiye Çevre Bakanı Murat Kurum COP31 Başkan Adayı (President-Designate) konumunda; Avustralya'nın iklim bakanı Chris Bowen ise Müzakereler Başkanı olarak görev yapıyor. Türkiye geniş Eylem Gündemi'ni (Action Agenda) ve konferans organizasyonunu yönetiyor.\n\nCOP31, 9-20 Kasım 2026 tarihleri arasında Antalya EXPO Merkezi'nde yapılacak. Hazırlıklar hız kazanmış durumda: Çevre, Şehircilik ve İklim Değişikliği Bakanlığı ile UNFCCC Sekretaryası temsilcileri Antalya EXPO alanında ilk resmi hazırlık oturumunu gerçekleştirdi. Toplam 1,5 milyon metrekarelik bir etkinlik alanı hazırlandı; Mavi Bölge'de genel kurul salonları, müzakere salonları, medya merkezi, COP31 Başkanlık ofisi, BM ofisleri, yan etkinlik alanları, pavyonlar ve delegasyon ofisleri yer alacak. Eylül ayı itibarıyla süreç delege teyitleri ve uygulama programı aşamasına geçti.\n\nGündemin merkezinde 2035 iklim planları, iklim finansmanı hedefinin teslimi ve fosil yakıtlar, kayıp-zarar, adil geçiş, elektrifikasyon ile Paris Anlaşması'nın 6. Maddesi kapsamındaki karbon piyasaları konusundaki tamamlanmamış kararlar var.\n\nTürk sanayicisi için COP31 sadece diplomatik bir etkinlik değil. Birincisi, karbon piyasaları başlığında alınacak kararlar Türkiye'nin kurmakta olduğu ulusal Emisyon Ticaret Sistemi'nin (ETS) uluslararası bağlantılılığı ve AB CBAM ile mahsuplaşma imkânı açısından belirleyici. İkincisi, ev sahipliği Türk firmalarına yeşil teknoloji, yenilenebilir enerji ekipmanı ve döngüsel ekonomi çözümlerini küresel alıcılara tanıtma için eşsiz bir vitrin sunuyor. Üçüncüsü, iklim finansmanı başlığında alınacak kararlar sanayide dekarbonizasyon yatırımlarına erişilebilir fon yaratabilir.",
       "published_at": "2026-09-11T14:00:00+03:00",
       "language": "tr",
-      "summary": "Turkiye Cevre Bakani, Avustralya'ya muzakere baskanligi veren anlasmaya ragmen COP31'de son sozun Turkiye'de olacagini soyledi; yonetim belirsizligi surüyor. COP31 9-20 Kasim 2026'da Antalya EXPO'da yapilacak ve gundeminde Paris Anlasmasi 6. Madde karbon piyasalari var. Turk sanayicisi icin bu, ulusal ETS'nin uluslararasi baglantililigi ve CBAM mahsuplasmasi acisindan belirleyici; ayni zamanda yesil teknoloji ihracatı icin essiz bir vitrin.",
+      "summary": "Türkiye Çevre Bakanı, Avustralya'ya müzakere başkanlığı veren anlaşmaya rağmen COP31'de son sözün Türkiye'de olacağını söyledi; yönetim belirsizliği sürüyor. COP31 9-20 Kasım 2026'da Antalya EXPO'da yapılacak ve gündeminde Paris Anlaşması 6. Madde karbon piyasaları var. Türk sanayicisi için bu, ulusal ETS'nin uluslararası bağlantılılığı ve CBAM mahsuplaşması açısından belirleyici; aynı zamanda yeşil teknoloji ihracatı için eşsiz bir vitrin.",
       "summary_en": "Turkiye's environment minister said his country will have the final say at COP31 despite Australia chairing negotiations; the summit runs 9-20 November 2026 in Antalya with Article 6 carbon markets on the agenda.",
       "key_points": [
-        "COP31 9-20 Kasim 2026'da Antalya EXPO Merkezi'nde",
-        "Murat Kurum Baskan Adayi, Avustralya muzakereleri yonetiyor",
-        "Yonetim yapisi konusunda belirsizlik suruyor",
-        "Gundemde Paris 6. Madde karbon piyasalari ve iklim finansmani var",
-        "1,5 milyon metrekarelik etkinlik alani hazirlandi"
+        "COP31 9-20 Kasım 2026'da Antalya EXPO Merkezi'nde",
+        "Murat Kurum Başkan Adayı, Avustralya müzakereleri yönetiyor",
+        "Yönetim yapısı konusunda belirsizlik sürüyor",
+        "Gündemde Paris 6. Madde karbon piyasaları ve iklim finansmanı var",
+        "1,5 milyon metrekarelik etkinlik alanı hazırlandı"
       ],
       "entities": {
         "kurum": [
           "UNFCCC",
-          "Cevre Sehircilik ve Iklim Degisikligi Bakanligi"
+          "Çevre Şehircilik ve İklim Değişikliği Bakanlığı"
         ],
         "kisi": [
           "Murat Kurum",
@@ -1186,8 +1186,8 @@
         ],
         "sektor": [
           "Yenilenebilir Enerji",
-          "Cimento",
-          "Demir-Celik",
+          "Çimento",
+          "Demir-Çelik",
           "Kimya"
         ]
       },
@@ -1213,22 +1213,22 @@
     {
       "source_slug": "tariffstool",
       "url": "https://www.tariffstool.com/guides/section-232-drone-uas-tariff-2026",
-      "title": "Section 232 drone tariffs take effect: 100% duty on larger UAS, 25% on consumer drones",
-      "body": "ABD'nin insansiz hava araclari (UAS) ve bilesenlerine yonelik Ticaret Genisletme Yasasi 232. Madde kapsaminda uyguladigi gumruk vergileri 3 Eylul 2026 saat 00:01 ET itibariyla yururluge girdi.\n\nBaskan Trump'in 13 Agustos 2026'da imzaladigi bildiri, Ticaret Bakanligi'nin ABD'nin yabanci menseli drone'lara bagimliliginin tedarik zinciri, siber guvenlik ve ulusal guvenlik riski yarattigi yonundeki bulgusuna dayaniyor. Vergi orani kademeli: daha buyuk, daha agir veya termal goruntuleme kapasitesine sahip drone'lar ile bazi kritik bilesenlerde yuzde 100; tuketici ve hobi amacli kucuk drone'larda yuzde 25.\n\nBu, 2026 boyunca genisleyen 232. Madde uygulamalarinin son halkasi. Yil icinde celik, aluminyum ve bakirda vergi tabani tam gumruk degerine genisletildi; patentli ilac ithalatinda 31 Temmuz'dan itibaren kademeli vergi uygulamasi basladi (Annex III disindaki ithalatcilar icin tarih 29 Eylul). Bakir tarafinda ise 14 Eylul 2026'dan itibaren ABD Gumruk Idaresi (CBP), eritme ve dokum ulkesi bilgisi eksik ACE giris ozetlerini reddedecek.\n\nTurk sanayicisi acisindan bu gelismelerin uc dersi var. Birincisi, ABD'nin 232. Madde araci artik celik-aluminyum ile sinirli degil; savunma ve ileri teknoloji baglantili her urun grubu potansiyel kapsamda. Turkiye'nin buyuyen insansiz hava araci ve alt bilesen ekosistemi bu duzenlemenin dogrudan muhatabi haline gelebilir.\n\nIkincisi, ABD'nin bakirda eritme-dokum ulkesi beyanini zorunlu kilmasi, AB'nin celikte getirdigi melt-and-pour kuraliyla ayni mantiga dayaniyor: mense kurallarinin sikilasmasi ve izlenebilirligin zorunlu hale gelmesi. Bu artik kuresel bir egilim.\n\nUcuncusu, ihracatci firmalarin urun bazinda HS kodu, mense ve izlenebilirlik dosyalarini proaktif olarak hazirlamasi gerekiyor. Vergi kapsamina alinma riskini erken gorup alternatif pazar ve tedarik yapilari kurmak, sonradan reaksiyon gostermekten cok daha ucuz.",
+      "title": "232. Madde drone vergileri yürürlükte: büyük İHA'larda yüzde 100, tüketici drone'larında yüzde 25",
+      "body": "ABD'nin insansız hava araçları (UAS) ve bileşenlerine yönelik Ticaret Genişletme Yasası 232. Madde kapsamında uyguladığı gümrük vergileri 3 Eylül 2026 saat 00:01 ET itibarıyla yürürlüğe girdi.\n\nBaşkan Trump'ın 13 Ağustos 2026'da imzaladığı bildiri, Ticaret Bakanlığı'nın ABD'nin yabancı menşeli drone'lara bağımlılığının tedarik zinciri, siber güvenlik ve ulusal güvenlik riski yarattığı yönündeki bulgusuna dayanıyor. Vergi oranı kademeli: daha büyük, daha ağır veya termal görüntüleme kapasitesine sahip drone'lar ile bazı kritik bileşenlerde yüzde 100; tüketici ve hobi amaçlı küçük drone'larda yüzde 25.\n\nBu, 2026 boyunca genişleyen 232. Madde uygulamalarının son halkası. Yıl içinde çelik, alüminyum ve bakırda vergi tabanı tam gümrük değerine genişletildi; patentli ilaç ithalatında 31 Temmuz'dan itibaren kademeli vergi uygulaması başladı (Annex III dışındaki ithalatçılar için tarih 29 Eylül). Bakır tarafında ise 14 Eylül 2026'dan itibaren ABD Gümrük İdaresi (CBP), eritme ve döküm ülkesi bilgisi eksik ACE giriş özetlerini reddedecek.\n\nTürk sanayicisi açısından bu gelişmelerin üç dersi var. Birincisi, ABD'nin 232. Madde aracı artık çelik-alüminyum ile sınırlı değil; savunma ve ileri teknoloji bağlantılı her ürün grubu potansiyel kapsamda. Türkiye'nin büyüyen insansız hava aracı ve alt bileşen ekosistemi bu düzenlemenin doğrudan muhatabı haline gelebilir.\n\nİkincisi, ABD'nin bakırda eritme-döküm ülkesi beyanını zorunlu kılması, AB'nin çelikte getirdiği melt-and-pour kuralıyla aynı mantığa dayanıyor: menşe kurallarının sıkılaşması ve izlenebilirliğin zorunlu hale gelmesi. Bu artık küresel bir eğilim.\n\nÜçüncüsü, ihracatçı firmaların ürün bazında HS kodu, menşe ve izlenebilirlik dosyalarını proaktif olarak hazırlaması gerekiyor. Vergi kapsamına alınma riskini erken görüp alternatif pazar ve tedarik yapıları kurmak, sonradan reaksiyon göstermekten çok daha ucuz.",
       "published_at": "2026-09-05T10:00:00+03:00",
       "language": "tr",
-      "summary": "ABD'nin insansiz hava araclarina yonelik 232. Madde vergileri 3 Eylul'de yururluge girdi: buyuk/termal kameralı drone'larda yuzde 100, tuketici drone'larinda yuzde 25. Bakirda 14 Eylul'den itibaren eritme-dokum ulkesi beyani zorunlu hale geliyor. Turk sanayicisi icin ders acik: 232. Madde artik celik-aluminyumla sinirli degil, mense kurallari ve izlenebilirlik kuresel olarak sikilasiyor; HS kodu ve mense dosyalarinin proaktif hazirlanmasi sart.",
+      "summary": "ABD'nin insansız hava araçlarına yönelik 232. Madde vergileri 3 Eylül'de yürürlüğe girdi: büyük/termal kameralı drone'larda yüzde 100, tüketici drone'larında yüzde 25. Bakırda 14 Eylül'den itibaren eritme-döküm ülkesi beyanı zorunlu hale geliyor. Türk sanayicisi için ders açık: 232. Madde artık çelik-alüminyumla sınırlı değil, menşe kuralları ve izlenebilirlik küresel olarak sıkılaşıyor; HS kodu ve menşe dosyalarının proaktif hazırlanması şart.",
       "summary_en": "US Section 232 drone tariffs took effect 3 September 2026 - 100% on larger/thermal-capable UAS and key components, 25% on consumer drones - as origin and traceability rules tighten globally.",
       "key_points": [
-        "Drone 232 vergileri 3 Eylul 2026'da yururluge girdi",
-        "Buyuk ve termal kameralı drone'larda yuzde 100 vergi",
-        "Tuketici ve hobi drone'larinda yuzde 25 vergi",
-        "Bakirda 14 Eylul'den itibaren eritme-dokum beyani zorunlu",
-        "Mense kurallari ve izlenebilirlik kuresel olarak sikilasiyor"
+        "Drone 232 vergileri 3 Eylül 2026'da yürürlüğe girdi",
+        "Büyük ve termal kameralı drone'larda yüzde 100 vergi",
+        "Tüketici ve hobi drone'larında yüzde 25 vergi",
+        "Bakırda 14 Eylül'den itibaren eritme-döküm beyanı zorunlu",
+        "Menşe kuralları ve izlenebilirlik küresel olarak sıkılaşıyor"
       ],
       "entities": {
         "kurum": [
-          "ABD Ticaret Bakanligi",
+          "ABD Ticaret Bakanlığı",
           "CBP",
           "Beyaz Saray"
         ],
@@ -1237,9 +1237,9 @@
         ],
         "sektor": [
           "Savunma Sanayi",
-          "Havacilik",
+          "Havacılık",
           "Elektronik",
-          "Bakir"
+          "Bakır"
         ]
       },
       "region": "KURESEL",
@@ -1264,31 +1264,31 @@
     {
       "source_slug": "rio-times",
       "url": "https://www.riotimesonline.com/afcfta-status-2026/",
-      "title": "AfCFTA Trade Hits $220 Billion as Tariffs Split Africa",
-      "body": "Afrika Kitasal Serbest Ticaret Alani (AfCFTA) kapsamindaki ticaret hacmi 220 milyar dolara ulasti; ancak kita ici gumruk vergisi uygulamalarindaki ayrisma entegrasyon surecini yavaslatiyor.\n\nAfCFTA, Temmuz 2025 itibariyla 54 Afrika Birligi uye devletinden 49'undan resmi onay almis durumda. Rehberli Ticaret Girisimi (Guided Trade Initiative) kapsaminda tercihli ticaret yapilan urun gruplari genisliyor ve mense kurallari urun kategorilerinin cogunlugunu kapsiyor. Ancak tekstil, islenmis gida ve bazi sanayi urunleri gibi hassas sektorlerde bosluklar devam ediyor.\n\nAnlasmanin beyan edilen hedefi 'rekabetci bir imalat sektoru gelistirmek ve ekonomik cesitlendirmeyi tesvik etmek'. Halihazirda Afrika, kuresel imalat sektorunun sadece yuzde 1,9'unu olusturuyor; bu, buyume potansiyelinin ne kadar buyuk oldugunu gosteriyor. Imalat, tarimsal isleme, kimya ve makine, yakin vadede tercihli ticaret icin en guclu sektorler olarak one cikiyor.\n\nTurk sanayicisi acisindan AfCFTA stratejik bir konu. Turkiye'nin Afrika ile ticareti son on yilda katlanarak buyudu ve kitada onemli bir muteahhitlik ve sanayi yatirimi varligi olustu. AfCFTA'nin tam isler hale gelmesi, kita ici gumruk vergilerinin kalkmasi anlamina geliyor; bu, bir Afrika ulkesinde uretim tesisi kuran Turk yatirimcisinin 54 ulkelik bir pazara tercihli erisim elde etmesi demek.\n\nBurada kritik nokta mense kurallari. Fas ornegi carpici: Fas'in AfCFTA uyeligi ona tum kitaya yapisal tercihli erisim sagliyor ve bu, disaridan ihracat yapan ulkelerin (Turkiye dahil) esleyemeyecegi bir avantaj. Dolayisiyla Turk firmalari icin salt ihracat yerine, kitada uretim ortakligi veya montaj/isleme tesisi kurma modeli giderek daha mantikli hale geliyor. Ozellikle beyaz esya, insaat malzemeleri, tarim makineleri, ambalaj ve ilac sektorlerinde bu modelin degerlendirilmesi oneriliyor.",
+      "title": "AfCFTA ticareti 220 milyar dolara ulaştı, gümrük vergileri Afrika'yı bölüyor",
+      "body": "Afrika Kıtasal Serbest Ticaret Alanı (AfCFTA) kapsamındaki ticaret hacmi 220 milyar dolara ulaştı; ancak kıta içi gümrük vergisi uygulamalarındaki ayrışma entegrasyon sürecini yavaşlatıyor.\n\nAfCFTA, Temmuz 2025 itibarıyla 54 Afrika Birliği üye devletinden 49'undan resmi onay almış durumda. Rehberli Ticaret Girişimi (Guided Trade Initiative) kapsamında tercihli ticaret yapılan ürün grupları genişliyor ve menşe kuralları ürün kategorilerinin çoğunluğunu kapsıyor. Ancak tekstil, işlenmiş gıda ve bazı sanayi ürünleri gibi hassas sektörlerde boşluklar devam ediyor.\n\nAnlaşmanın beyan edilen hedefi 'rekabetçi bir imalat sektörü geliştirmek ve ekonomik çeşitlendirmeyi teşvik etmek'. Halihazırda Afrika, küresel imalat sektörünün sadece yüzde 1,9'unu oluşturuyor; bu, büyüme potansiyelinin ne kadar büyük olduğunu gösteriyor. İmalat, tarımsal işleme, kimya ve makine, yakın vadede tercihli ticaret için en güçlü sektörler olarak öne çıkıyor.\n\nTürk sanayicisi açısından AfCFTA stratejik bir konu. Türkiye'nin Afrika ile ticareti son on yılda katlanarak büyüdü ve kıtada önemli bir müteahhitlik ve sanayi yatırımı varlığı oluştu. AfCFTA'nın tam işler hale gelmesi, kıta içi gümrük vergilerinin kalkması anlamına geliyor; bu, bir Afrika ülkesinde üretim tesisi kuran Türk yatırımcısının 54 ülkelik bir pazara tercihli erişim elde etmesi demek.\n\nBurada kritik nokta menşe kuralları. Fas örneği çarpıcı: Fas'ın AfCFTA üyeliği ona tüm kıtaya yapısal tercihli erişim sağlıyor ve bu, dışarıdan ihracat yapan ülkelerin (Türkiye dahil) eşleyemeyeceği bir avantaj. Dolayısıyla Türk firmaları için salt ihracat yerine, kıtada üretim ortaklığı veya montaj/işleme tesisi kurma modeli giderek daha mantıklı hale geliyor. Özellikle beyaz eşya, inşaat malzemeleri, tarım makineleri, ambalaj ve ilaç sektörlerinde bu modelin değerlendirilmesi öneriliyor.",
       "published_at": "2026-09-09T12:00:00+03:00",
       "language": "tr",
-      "summary": "AfCFTA kapsamindaki ticaret 220 milyar dolara ulasti; 54 ulkeden 49'u anlasmayi onaylamis durumda ancak tekstil ve islenmis gida gibi hassas sektorlerde mense kurali bosluklari suruyor. Afrika halen kuresel imalatin sadece yuzde 1,9'unu olusturuyor. Turk sanayicisi icin ders: kitaya salt ihracat yerine bir AfCFTA uyesi ulkede uretim/montaj tesisi kurmak, 54 ulkelik pazara tercihli erisim sagliyor; beyaz esya, insaat malzemesi ve tarim makinelerinde bu model degerlendirilmeli.",
+      "summary": "AfCFTA kapsamındaki ticaret 220 milyar dolara ulaştı; 54 ülkeden 49'u anlaşmayı onaylamış durumda ancak tekstil ve işlenmiş gıda gibi hassas sektörlerde menşe kuralı boşlukları sürüyor. Afrika halen küresel imalatın sadece yüzde 1,9'unu oluşturuyor. Türk sanayicisi için ders: kıtaya salt ihracat yerine bir AfCFTA üyesi ülkede üretim/montaj tesisi kurmak, 54 ülkelik pazara tercihli erişim sağlıyor; beyaz eşya, inşaat malzemesi ve tarım makinelerinde bu model değerlendirilmeli.",
       "summary_en": "AfCFTA trade reached $220 billion with 49 of 54 states ratifying, though rules-of-origin gaps persist in sensitive sectors; Africa still accounts for only 1.9% of global manufacturing.",
       "key_points": [
-        "AfCFTA kapsamindaki ticaret 220 milyar dolara ulasti",
-        "54 Afrika Birligi uyesinden 49'u anlasmayi onayladi",
-        "Tekstil ve islenmis gidada mense kurali bosluklari suruyor",
-        "Afrika kuresel imalatin sadece yuzde 1,9'unu olusturuyor",
-        "Kitada uretim tesisi kurmak 54 ulkelik tercihli pazara erisim sagliyor"
+        "AfCFTA kapsamındaki ticaret 220 milyar dolara ulaştı",
+        "54 Afrika Birliği üyesinden 49'u anlaşmayı onayladı",
+        "Tekstil ve işlenmiş gıdada menşe kuralı boşlukları sürüyor",
+        "Afrika küresel imalatın sadece yüzde 1,9'unu oluşturuyor",
+        "Kıtada üretim tesisi kurmak 54 ülkelik tercihli pazara erişim sağlıyor"
       ],
       "entities": {
         "kurum": [
-          "Afrika Birligi",
-          "AfCFTA Sekretaryasi"
+          "Afrika Birliği",
+          "AfCFTA Sekretaryası"
         ],
         "kisi": [],
         "sektor": [
-          "Beyaz Esya",
-          "Insaat Malzemeleri",
-          "Tarim Makineleri",
+          "Beyaz Eşya",
+          "İnşaat Malzemeleri",
+          "Tarım Makineleri",
           "Ambalaj",
-          "Ilac"
+          "İlaç"
         ]
       },
       "region": "DIGER",

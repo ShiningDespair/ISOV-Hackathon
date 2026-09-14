@@ -8,7 +8,6 @@
 // ---------------------------------------------------------------------
 import { pool } from '../lib/db.js';
 import { toMysqlDate } from '../lib/http.js';
-import { bandOf } from '../lib/importance.js';
 import { toDateOnly, toIso, parseJsonColumn } from '../lib/serialize.js';
 import { isAvailable, summarizeArticle } from './llm.js';
 
@@ -18,11 +17,12 @@ export const SECTION_ORDER = ['TURKIYE', 'AVRUPA', 'KURESEL', 'AMERIKA', 'ASYA',
 const DEFAULT_TOTAL_LIMIT = 40;
 const DEFAULT_SECTION_LIMIT = 12;
 
+// Kullaniciya gorunen basliklar - duzgun Turkce imla ile.
 const PERIOD_LABELS = {
-  gunluk: 'Gunluk Bulten',
-  haftalik: 'Haftalik Bulten',
-  aylik: 'Aylik Bulten',
-  ozel: 'Ozel Rapor',
+  gunluk: 'Günlük Bülten',
+  haftalik: 'Haftalık Bülten',
+  aylik: 'Aylık Bülten',
+  ozel: 'Özel Rapor',
 };
 
 function fmtDate(d) {
@@ -40,15 +40,15 @@ export function buildTemplateSummary({ scanned, clusters, duplicates, topTitles,
   const dateRange = `${fmtDate(periodStart)} - ${fmtDate(periodEnd)}`;
   const parts = [];
   parts.push(
-    `${dateRange} doneminde ${scanned} haber tarandi, ` +
-    `${clusters} kumede toplandi ve ${duplicates} tekrar eden kayit elendi.`,
+    `${dateRange} döneminde ${scanned} haber tarandı, ` +
+    `${clusters} kümede toplandı ve ${duplicates} tekrar eden kayıt elendi.`,
   );
   if (topTitles.length) {
-    parts.push(`En kritik basliklar: ${topTitles.slice(0, 5).map((t) => `"${t}"`).join('; ')}.`);
+    parts.push(`En kritik başlıklar: ${topTitles.slice(0, 5).map((t) => `“${t}”`).join('; ')}.`);
   } else {
-    parts.push('Bu donemde one cikan kritik baslik tespit edilmedi.');
+    parts.push('Bu dönemde öne çıkan kritik başlık tespit edilmedi.');
   }
-  parts.push('Ayrintili liste ve kaynak dagilimi raporun devamindadir.');
+  parts.push('Ayrıntılı liste ve kaynak dağılımı raporun devamındadır.');
   return parts.join(' ');
 }
 
@@ -58,14 +58,14 @@ async function buildExecutiveSummary(context) {
   if (!isAvailable()) return template;
 
   const body = [
-    `Donem: ${fmtDate(context.periodStart)} - ${fmtDate(context.periodEnd)}`,
-    `Taranan haber: ${context.scanned}, kume: ${context.clusters}, elenen tekrar: ${context.duplicates}`,
-    'One cikan basliklar:',
+    `Dönem: ${fmtDate(context.periodStart)} - ${fmtDate(context.periodEnd)}`,
+    `Taranan haber: ${context.scanned}, küme: ${context.clusters}, elenen tekrar: ${context.duplicates}`,
+    'Öne çıkan başlıklar:',
     ...context.topTitles.map((t, i) => `${i + 1}. ${t}`),
   ].join('\n');
 
   const result = await summarizeArticle({
-    title: 'ISO/ISOV donem raporu yonetici ozeti',
+    title: 'İSO/İSOV dönem raporu yönetici özeti',
     body,
     language: 'tr',
   });
@@ -94,7 +94,7 @@ export async function generateReport(params = {}) {
     const periodStart = toMysqlDate(params.period_start);
     const periodEnd = toMysqlDate(params.period_end);
     if (!periodStart || !periodEnd) {
-      throw new Error('Gecersiz donem araligi');
+      throw new Error('Geçersiz dönem aralığı');
     }
 
     const periodType = PERIOD_LABELS[params.period_type] ? params.period_type : 'haftalik';
@@ -103,7 +103,7 @@ export async function generateReport(params = {}) {
 
     // 1) Donemdeki TEKILLESTIRILMIS haberler, onem sirasiyla.
     const [rows] = await conn.execute(
-      `SELECT a.id, a.title, a.region, a.category, a.importance_score, a.cluster_id,
+      `SELECT a.id, a.title, a.region, a.category, a.importance_score, a.importance_band, a.cluster_id,
               a.published_at, s.slug AS source_slug
          FROM articles a
          JOIN sources s ON s.id = a.source_id
@@ -156,7 +156,7 @@ export async function generateReport(params = {}) {
     const stats = buildStats({ rows, items, scanned, duplicates, clusterCount });
 
     const title = params.title
-      || `ISO/ISOV ${PERIOD_LABELS[periodType]} — ${fmtDate(periodStart)} - ${fmtDate(periodEnd)}`;
+      || `İSO/İSOV ${PERIOD_LABELS[periodType]} — ${fmtDate(periodStart)} - ${fmtDate(periodEnd)}`;
 
     // 6) Upsert: ayni donem + tip icin tek rapor.
     const [existing] = await conn.execute(
@@ -215,7 +215,10 @@ function buildStats({ rows, items, scanned, duplicates, clusterCount }) {
 
   for (const row of rows) {
     byRegion[row.region] = (byRegion[row.region] || 0) + 1;
-    byBand[bandOf(row.importance_score)] += 1;
+    // Band artik yuzdelik tabanli ve korpus geneli hesaplaniyor; tek dogruluk
+    // kaynagi DB'deki deger. Burada skordan yeniden turetmek YANLIS sonuc verir
+    // (bandOf cutoffs olmadan her zaman DUSUK doner).
+    if (row.importance_band in byBand) byBand[row.importance_band] += 1;
     if (row.category) byCategory[row.category] = (byCategory[row.category] || 0) + 1;
     if (row.source_slug) sources.add(row.source_slug);
   }

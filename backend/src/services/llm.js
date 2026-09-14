@@ -145,21 +145,35 @@ export function slugifyTag(value) {
 
 // --- LLM yolu ----------------------------------------------------------
 
-const SYSTEM_PROMPT = `Sen Istanbul Sanayi Odasi (ISO) ve ISOV icin calisan bir haber analistisin.
-Sana verilen haberi Turkce ozetle ve siniflandir.
-Ozet, bir sanayiciye "bu haber beni nasil etkiler" sorusunu yanitlamali.
-YALNIZCA gecerli JSON dondur, kod bloku veya aciklama ekleme.
+// Istem duzgun Turkce imla ile yazilir: modele hangi dilde yazmasini
+// istiyorsak ornegi o dilde vermek ciktinin imlasini da belirliyor.
+// ASCII'ye katlanmis Turkce ile yazilmis bir istem, katlanmis ozetler uretir.
+// ENUM degerleri (KURESEL, TURKIYE, tesvik ...) sema kodu oldugu icin
+// ASCII kalir - bunlar ekranda gosterilen metin degil, veritabani degeri.
+const SYSTEM_PROMPT = `Sen İstanbul Sanayi Odası (İSO) ve İSOV için çalışan bir haber analistisin.
+Sana verilen haberi Türkçe özetle ve sınıflandır.
+Özet, bir sanayiciye "bu haber beni nasıl etkiler" sorusunu yanıtlamalı.
 
-JSON semasi:
+Türkçe imla kurallarına harfiyen uy: ç, ğ, ı, İ, ö, ş, ü harflerini doğru kullan.
+Kurum adlarını tam yaz (Türkiye İstatistik Kurumu, Avrupa Komisyonu, Resmî Gazete).
+Sayılarda ondalık ayracı virgül, binlik ayracı noktadır: 4,2 ve 1.250.
+
+YALNIZCA geçerli JSON döndür, kod bloğu veya açıklama ekleme.
+
+JSON şeması:
 {
-  "summary": "2-4 cumlelik Turkce ozet",
+  "summary": "2-4 cümlelik Türkçe özet",
   "key_points": ["madde", "madde", "madde"],
   "entities": {"kurum": [], "kisi": [], "sektor": []},
   "category": "mevzuat|tesvik|ihracat|enerji|vergi|istihdam|surdurulebilirlik|finans|gundem",
   "sentiment": "POZITIF|NOTR|NEGATIF",
   "tags": ["slug-formatinda", "en-fazla-5"],
   "region": "KURESEL|TURKIYE|AMERIKA|AVRUPA|ASYA|DIGER"
-}`;
+}
+
+Not: category, sentiment, tags ve region alanlari sema kodudur; yukaridaki
+listelerden birebir secilir ve Turkce karakter icermez. Metin alanlari
+(summary, key_points, entities) tam Turkce imla ile yazilir.`;
 
 const VALID_REGIONS = new Set(['KURESEL', 'TURKIYE', 'AMERIKA', 'AVRUPA', 'ASYA', 'DIGER']);
 const VALID_SENTIMENTS = new Set(['POZITIF', 'NOTR', 'NEGATIF']);

@@ -11,7 +11,7 @@ const router = Router();
 
 router.get('/:id', asyncHandler(async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
-  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Gecersiz kume id');
+  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Geçersiz küme kimliği');
 
   const cluster = await queryOne(
     `SELECT id, cluster_key, representative_article_id, member_count,
@@ -19,7 +19,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
        FROM clusters WHERE id = ? LIMIT 1`,
     [id],
   );
-  if (!cluster) throw ApiError.notFound('Kume bulunamadi');
+  if (!cluster) throw ApiError.notFound('Küme bulunamadı');
 
   const reveal = wantsReveal(req);
   const memberRows = await findClusterMemberRows(id);

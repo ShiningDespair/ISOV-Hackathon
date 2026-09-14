@@ -52,7 +52,7 @@ router.get('/', asyncHandler(async (req, res) => {
 
 router.get('/:id', asyncHandler(async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
-  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Gecersiz rapor id');
+  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Geçersiz rapor kimliği');
 
   const row = await queryOne(
     `SELECT id, title, period_start, period_end, period_type,
@@ -60,7 +60,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
        FROM reports WHERE id = ? LIMIT 1`,
     [id],
   );
-  if (!row) throw ApiError.notFound('Rapor bulunamadi');
+  if (!row) throw ApiError.notFound('Rapor bulunamadı');
 
   const itemRows = await query(
     `SELECT article_id, rank_order, section FROM report_items
