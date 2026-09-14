@@ -90,25 +90,22 @@ CREATE TABLE IF NOT EXISTS articles (
   importance_score  DECIMAL(5,2) NOT NULL DEFAULT 0.00,
   -- skorun bilesenleri: {"authority":x,"recency":x,"reach":x,"impact":x,"keyword":x,"corroboration":x}
   importance_factors JSON NULL,
-  -- Esikler GERCEK DAGILIMA GORE KALIBRE EDILDI. Ilk degerler (80/60/35)
-  -- elimizde hic veri yokken tahminle konmustu; 131 haberlik ilk korpusta
-  -- skorlar 50,8-84,9 araliginda cikti (ortalama 68,1) ve bu esikler
-  -- haberlerin %80'ini tek banda (YUKSEK) yigip alt bandi hic kullanmadi.
-  -- Her sey "yuksek onemli" ise band bilgi tasimaz.
-  -- 78/70/62 yaklasik p87/p59/p25'e denk gelir: ust %13 KRITIK, sonraki
-  -- %28 YUKSEK, sonraki %34 ORTA, alt %25 DUSUK.
-  -- NOT: sabit esikler korpus buyudukce kayar. Kalici cozum, kayan pencere
-  -- uzerinden yuzdelik bantlar olurdu; generated column ile ifade
-  -- edilemedigi icin simdilik kalibre sabitler kullaniliyor.
-  importance_band   ENUM('KRITIK','YUKSEK','ORTA','DUSUK')
-                    GENERATED ALWAYS AS (
-                      CASE
-                        WHEN importance_score >= 78 THEN 'KRITIK'
-                        WHEN importance_score >= 70 THEN 'YUKSEK'
-                        WHEN importance_score >= 62 THEN 'ORTA'
-                        ELSE 'DUSUK'
-                      END
-                    ) STORED,
+  -- BANT — YUZDELIK TABANLI, uygulama katmaninda yazilir.
+  --
+  -- Onceden generated column'du ve sabit esikler kullaniyordu. Esikler IKI KEZ
+  -- kaydi: once ilk korpusta haberlerin %80'i tek banda yigildi (80/60/35),
+  -- kalibre edildikten iki gun sonra ise sadece takvim ilerledigi icin recency
+  -- bileseni tum skorlari asagi cekti (ortalama 71,7 -> 65,6) ve KRITIK 15'ten
+  -- 2'ye dustu. Sabit esik, skor dagilimi zamanla kaydigi icin yapisal olarak
+  -- kirilgan; ayrica esikler uc ayri yerde (sema, pipeline, importance.js)
+  -- kopyalanip birbirinden kaymisti.
+  --
+  -- Artik bant korpus icindeki SIRALAMADAN turetiliyor (ust %12 KRITIK,
+  -- sonraki %28 YUKSEK, sonraki %35 ORTA, alt %25 DUSUK) ve tek yerde
+  -- hesaplaniyor: lib/importance.js -> bandCutoffs()/bandOf().
+  -- Skorun kendisi mutlak ve aciklanabilir kalir; bant "bu donemin en
+  -- onemlileri" sorusunu yanitlar.
+  importance_band   ENUM('KRITIK','YUKSEK','ORTA','DUSUK') NOT NULL DEFAULT 'DUSUK',
 
   -- --- islem durumu -------------------------------------------------
   status            ENUM('HAM','ISLENDI','HATA') NOT NULL DEFAULT 'HAM',

@@ -10,7 +10,7 @@
 import {
   articleSimhash, clusterArticles, clusterKeyOf, contentHash, pickRepresentative, urlHash,
 } from '../lib/dedup.js';
-import { buildFactors, computeImportance } from '../lib/importance.js';
+import { buildFactors, computeImportance, bandCutoffs, bandOf } from '../lib/importance.js';
 import { toMysqlDateTime } from '../lib/http.js';
 import { buildEmbeddingText, embed } from './embeddings.js';
 import * as vectorStore from './vectorStore.js';
@@ -161,9 +161,11 @@ export async function recomputeImportance(conn, { now = new Date() } = {}) {
     tagWeights.get(key).push(Number(r.weight));
   }
 
-  const bands = { KRITIK: 0, YUKSEK: 0, ORTA: 0, DUSUK: 0 };
-  let updated = 0;
-
+  // --- 1. GECIS: tum skorlari hesapla ------------------------------
+  // Bant yuzdelik tabanli oldugu icin once KORPUSUN TAMAMI bilinmeli.
+  // Tek gecisli yazim mumkun degil: ilk haberin bandi, son haberin skoruna
+  // da baglidir.
+  const scored = [];
   for (const row of rows) {
     const base = typeof row.importance_factors === 'string'
       ? safeJson(row.importance_factors)
@@ -177,26 +179,28 @@ export async function recomputeImportance(conn, { now = new Date() } = {}) {
       tagWeights: tagWeights.get(Number(row.id)),
       now,
     });
-    const score = computeImportance(factors);
-
-    await conn.execute(
-      `UPDATE articles
-          SET importance_score = ?, importance_factors = ?,
-              status = 'ISLENDI', processed_at = NOW()
-        WHERE id = ?`,
-      [score, JSON.stringify(factors), row.id],
-    );
-    updated += 1;
-
-    // Band dagilimini rapor/ozet ciktisi icin sayiyoruz (DB'deki generated
-    // kolonla ayni esikler importance.js'te tanimli).
-    if (score >= 80) bands.KRITIK += 1;
-    else if (score >= 60) bands.YUKSEK += 1;
-    else if (score >= 35) bands.ORTA += 1;
-    else bands.DUSUK += 1;
+    scored.push({ id: row.id, score: computeImportance(factors), factors });
   }
 
-  return { updated, bands };
+  // --- 2. GECIS: esikleri cikar ve yaz -----------------------------
+  const cutoffs = bandCutoffs(scored.map((r) => r.score));
+  const bands = { KRITIK: 0, YUKSEK: 0, ORTA: 0, DUSUK: 0 };
+  let updated = 0;
+
+  for (const r of scored) {
+    const band = bandOf(r.score, cutoffs);
+    await conn.execute(
+      `UPDATE articles
+          SET importance_score = ?, importance_factors = ?, importance_band = ?,
+              status = 'ISLENDI', processed_at = NOW()
+        WHERE id = ?`,
+      [r.score, JSON.stringify(r.factors), band, r.id],
+    );
+    updated += 1;
+    bands[band] += 1;
+  }
+
+  return { updated, bands, cutoffs };
 }
 
 function safeJson(value) {

@@ -132,16 +132,56 @@ export function computeImportance(factors = {}) {
 }
 
 /**
- * Bandi hesaplar. DB'de generated column var; burasi API/seed tarafinda
- * yazmadan once onizleme ve rapor istatistikleri icin kullanilir.
- * Esikler CONTRACT.md ve 01_schema.sql ile birebir ayni olmak ZORUNDA.
+ * BANT ATAMA — YUZDELIK TABANLI
+ *
+ * Sabit esikler (once 80/60/35, sonra 78/70/62) iki kez kaydi ve iki kez
+ * bandi ise yaramaz hale getirdi:
+ *  - Ilk korpusta haberlerin %80'i tek banda yigildi, alt bant hic kullanilmadi.
+ *  - Esikler kalibre edildikten iki gun sonra, sadece takvim ilerledigi icin
+ *    recency bileseni tum skorlari asagi cekti (ortalama 71,7 -> 65,6) ve
+ *    bu kez KRITIK 15'ten 2'ye dustu.
+ * Sabit esik, skor dagilimi zamanla kaydigi icin yapisal olarak kirilgan.
+ *
+ * Cozum: bant, korpus icindeki SIRALAMADAN turetilir. Skorun kendisi mutlak
+ * ve aciklanabilir kalir (importance_factors degismiyor); bant ise "bu
+ * donemin en onemlileri" sorusunu yanitlar. Bir haber bulteni icin dogru
+ * soru zaten budur - editor mutlak bir barajin ustundekileri degil, bu
+ * haftanin one cikanlarini arar.
+ *
+ * Bedeli: bant GORECELIdir. Sakin bir haftada da KRITIK haber cikar.
+ * Mutlak siddet gerektiginde importance_score okunmali (?reveal=1).
  */
-export function bandOf(score) {
+export const BAND_QUANTILES = Object.freeze({
+  KRITIK: 0.12,   // ust %12
+  YUKSEK: 0.40,   // sonraki %28
+  ORTA: 0.75,     // sonraki %35, kalan %25 DUSUK
+});
+
+/**
+ * Korpusun skorlarindan bant esiklerini cikarir.
+ * Esit skorlar ayni banda duser (esik skor degeriyle karsilastirilir).
+ */
+export function bandCutoffs(scores = []) {
+  const sorted = scores.map(Number).filter(Number.isFinite).sort((a, b) => b - a);
+  if (sorted.length === 0) {
+    return { KRITIK: Infinity, YUKSEK: Infinity, ORTA: Infinity };
+  }
+  const at = (q) => sorted[Math.min(sorted.length - 1, Math.max(0, Math.ceil(sorted.length * q) - 1))];
+  return { KRITIK: at(BAND_QUANTILES.KRITIK), YUKSEK: at(BAND_QUANTILES.YUKSEK), ORTA: at(BAND_QUANTILES.ORTA) };
+}
+
+/**
+ * Bandi verir. `cutoffs` bandCutoffs() ciktisidir.
+ * Cutoffs verilmezse tek basina anlamli bir bant uretilemez (yuzdelik icin
+ * korpus gerekir) - bu durumda DUSUK doner; cagiran taraf DB'deki
+ * articles.importance_band degerini okumalidir.
+ */
+export function bandOf(score, cutoffs) {
   const s = Number(score);
-  if (!Number.isFinite(s)) return 'DUSUK';
-  if (s >= 80) return 'KRITIK';
-  if (s >= 60) return 'YUKSEK';
-  if (s >= 35) return 'ORTA';
+  if (!Number.isFinite(s) || !cutoffs) return 'DUSUK';
+  if (s >= cutoffs.KRITIK) return 'KRITIK';
+  if (s >= cutoffs.YUKSEK) return 'YUKSEK';
+  if (s >= cutoffs.ORTA) return 'ORTA';
   return 'DUSUK';
 }
 
