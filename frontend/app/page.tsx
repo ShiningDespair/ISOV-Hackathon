@@ -138,15 +138,22 @@ export default async function HomePage({
               <div className="lg:col-span-5 lg:pr-8 xl:col-span-5">
                 {lead ? <LeadArticle article={lead} /> : null}
 
+                {/* Mansetin altindaki blok. Onceden CompactArticle ile "Kisa Kisa"
+                    olarak basiliyordu: yalnizca baslik + kaynak adi vardi, ozet
+                    ve tarih yoktu. Okuyucu bu haberlerin ne oldugunu anlamak
+                    icin tiklamak zorunda kaliyordu. Artik One Cikanlar ile ayni
+                    StandardArticle formatinda: band rozeti, baslik, kaynak -
+                    bolge - tarih satiri ve ozet. Bolum adi da buna gore
+                    degisti - kartlar artik "kisa" degil. */}
                 {brief.length > 0 ? (
                   <section className="mt-6">
                     <SectionRule
-                      title="Kısa Kısa"
+                      title="Gündem"
                       right={`${formatNumber(brief.length)} haber`}
                     />
-                    <div className="space-y-0">
+                    <div className="grid grid-cols-1 gap-5">
                       {brief.map((a) => (
-                        <CompactArticle key={a.id} article={a} />
+                        <StandardArticle key={a.id} article={a} />
                       ))}
                     </div>
                   </section>
