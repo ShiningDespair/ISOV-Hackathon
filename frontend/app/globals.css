@@ -449,17 +449,28 @@ a {
 }
 
 /* ---------------------------------------------------------------- */
-/* GÖRÜNÜM ANAHTARI — Panel ↔ Gazete                                 */
-/* Her iki mizanpaj da DOM'a basılır; hangisinin görüneceğini         */
-/* <html data-view="..."> belirler. Öznitelik, hidrasyondan ÖNCE      */
-/* çalışan satır içi betikle atandığı için görünüm sıçraması olmaz.   */
+/* GÖRÜNÜM ANAHTARI — panel / gazete / gorsel / kart                 */
+/*                                                                   */
+/* Dört mizanpaj da DOM'a basılır; hangisinin görüneceğini            */
+/* <html data-view="..."> belirler. Öznitelik hem sunucuda            */
+/* (layout.tsx) hem hidrasyondan ÖNCE çalışan satır içi betikle       */
+/* yazılır, bu yüzden HER ZAMAN mevcuttur — CSS'te :not() zinciriyle  */
+/* yedek kural kurmaya gerek yok. Bu önemli: yüksek öncelikli bir     */
+/* yedek kural, aşağıdaki yazdırma kurallarını yenerek boş çıktı      */
+/* üretirdi (bkz. yazdırma bloğundaki not).                           */
 /* ---------------------------------------------------------------- */
-html[data-view="gazete"] [data-view-slot="panel"] {
+
+/* Varsayılan: hepsi kapalı (0,1,0) */
+[data-view-slot] {
   display: none !important;
 }
 
-html:not([data-view="gazete"]) [data-view-slot="gazete"] {
-  display: none !important;
+/* Seçili olan açılır (0,2,1) — öncelik gizleme kuralını yener */
+html[data-view="panel"] [data-view-slot="panel"],
+html[data-view="gazete"] [data-view-slot="gazete"],
+html[data-view="gorsel"] [data-view-slot="gorsel"],
+html[data-view="kart"] [data-view-slot="kart"] {
+  display: block !important;
 }
 
 /* Gazete görünümünde gövde kağıt dokusunu alır */
@@ -469,27 +480,23 @@ html[data-view="gazete"] body {
 
 /* Yazdırırken daima gazete mizanpajı basılsın.
  *
- * DİKKAT — ÖNCELİK (specificity) TUZAĞI: yukarıdaki gizleme kuralı
- * `html:not([data-view="gazete"]) [data-view-slot="gazete"]` (0,2,1)
- * önceliğinde. İki bildirim de `!important` taşıdığında kazananı önceliğe
- * göre belirlenir, bu yüzden sade `[data-view-slot="gazete"]` (0,1,0)
- * kuralı KAYBEDİYORDU. Sonuç: Panel görünümündeyken yazdırınca panel
- * yuvası print kuralıyla, gazete yuvası da gizleme kuralıyla saklanıyor
- * ve sayfa TAMAMEN BOŞ çıkıyordu (PDF'e kaydetmek de boş dosya veriyordu).
- * Yalnızca kullanıcı önceden Gazete görünümüne geçtiyse çalışıyordu.
+ * DİKKAT — ÖNCELİK (specificity) TUZAĞI: bu kurallar, yukarıdaki
+ * "seçili olanı aç" kuralıyla AYNI öncelikte (0,2,1) olmak zorunda.
+ * İki bildirim de `!important` taşıdığında kazananı öncelik belirler;
+ * daha düşük öncelikli bir print kuralı kaybeder. Daha önce print
+ * bloğu sade `[data-view-slot="gazete"]` (0,1,0) kullanıyordu ve
+ * panel görünümünde yazdırınca sayfa TAMAMEN BOŞ çıkıyordu — PDF'e
+ * kaydetmek de boş dosya veriyordu.
  *
- * Çözüm: print kurallarını aynı öncelik desenine çıkar. Eşit öncelikte
- * sonra gelen kazanır, bu blok dosyada daha sonra yer aldığı için artık
- * her iki görünümde de doğru çıktı üretiliyor.
+ * Eşit öncelikte sonra gelen kazanır ve bu blok dosyada en sonda yer
+ * aldığı için artık dört görünümün hepsinde doğru çıktı üretiliyor.
  */
 @media print {
-  html[data-view="gazete"] [data-view-slot="panel"],
-  html:not([data-view="gazete"]) [data-view-slot="panel"] {
+  html[data-view] [data-view-slot] {
     display: none !important;
   }
 
-  html[data-view="gazete"] [data-view-slot="gazete"],
-  html:not([data-view="gazete"]) [data-view-slot="gazete"] {
+  html[data-view] [data-view-slot="gazete"] {
     display: block !important;
   }
 
@@ -545,4 +552,274 @@ table {
   display: block;
   max-width: 100%;
   overflow-x: auto;
+}
+
+/* ================================================================
+   ERİŞİLEBİLİRLİK
+   Ayarlar <html> üzerine data-a11y-* öznitelikleri ve CSS değişkenleri
+   olarak yazılır (components/A11yProvider.tsx). Görsel karşılıkları
+   yalnızca burada tanımlıdır; hiçbir bileşenin erişilebilirlik durumunu
+   bilmesi gerekmez.
+
+   Bu blok dosyanın SONUNDA durmalı: @theme jetonlarını ve bileşen
+   sınıflarını ezmesi gerekiyor.
+   ================================================================ */
+
+/* --- Yazı boyutu ------------------------------------------------- */
+/* rem tabanlı tüm ölçüler kök boyuta bağlı olduğu için tek değişkenle
+   tüm arayüz ölçeklenir. text-size-adjust:100% ile çakışmaz. */
+html {
+  font-size: calc(100% * var(--a11y-font-scale, 1));
+}
+
+/* --- Satır / harf / kelime aralığı ------------------------------- */
+/* Gövde metni ve başlıklar. Kicker'lar kendi sıkı aralığını korur:
+   uppercase 11px etiketlerde geniş aralık okunabilirliği bozar. */
+body,
+.u-body,
+.u-headline {
+  line-height: var(--a11y-line, 1.55);
+  letter-spacing: var(--a11y-letter, 0);
+  word-spacing: var(--a11y-word, 0);
+}
+
+/* --- Yazı tipi aileleri ----------------------------------------- */
+/* Atkinson Hyperlegible: Braille Institute, az görenler için.
+   Lexend: okuma akıcılığını artırmak için tasarlandı (disleksi desteği).
+   İkisi de next/font ile self-host edilir, CDN'e gitmez. */
+html[data-a11y-font="okunabilir"] {
+  --font-serif: var(--font-atkinson), Verdana, sans-serif;
+  --font-sans: var(--font-atkinson), Verdana, sans-serif;
+}
+
+html[data-a11y-font="disleksi"] {
+  --font-serif: var(--font-lexend), Verdana, sans-serif;
+  --font-sans: var(--font-lexend), Verdana, sans-serif;
+}
+
+/* Okunabilirlik yazı tiplerinde italik ve çok ağır kesimler kaçınılır:
+   ikisi de harf ayırt edilebilirliğini düşürür. */
+html[data-a11y-font="okunabilir"] em,
+html[data-a11y-font="okunabilir"] i,
+html[data-a11y-font="disleksi"] em,
+html[data-a11y-font="disleksi"] i {
+  font-style: normal;
+  font-weight: 600;
+}
+
+html[data-a11y-font="disleksi"] .u-headline {
+  font-weight: 700;
+}
+
+/* --- Kontrast / tema -------------------------------------------- */
+html[data-a11y-contrast="yuksek"] {
+  --color-paper: #ffffff;
+  --color-surface: #ffffff;
+  --color-paper-deep: #f2f2f2;
+  --color-ink: #000000;
+  --color-ink-soft: #2b2b2b;
+  --color-ink-faint: #3f3f3f;
+  --color-rule: #000000;
+}
+
+html[data-a11y-contrast="koyu"] {
+  --color-paper: #121212;
+  --color-surface: #1b1b1b;
+  --color-paper-deep: #0d0d0d;
+  --color-ink: #f2f0ec;
+  --color-ink-soft: #b9b6b0;
+  --color-ink-faint: #8f8c86;
+  --color-rule: #3a3a38;
+  --color-rule-strong: #f2f0ec;
+}
+
+/* Koyu temada kağıt dokusu ve gazete zemini de dönmeli, yoksa
+   gazete görünümü beyaz kalıp tema ile çelişir. */
+html[data-a11y-contrast="koyu"][data-view="gazete"] body,
+html[data-a11y-contrast="koyu"] .paper-texture {
+  background-color: #121212 !important;
+  background-image: none !important;
+}
+
+/* --- Renk körlüğü paletleri ------------------------------------- */
+/* Vurgu rengi tek ayırt edici renk olduğu için yalnızca onu değiştiriyoruz.
+   Bordo (#8b0000) kırmızı-yeşil eksikliğinde siyahtan ayırt edilemiyor. */
+html[data-a11y-palette="protanopi"],
+html[data-a11y-palette="deuteranopi"] {
+  --color-accent: #0b4f9e; /* mavi — kırmızı-yeşil eksikliğinde güvenli */
+}
+
+html[data-a11y-palette="tritanopi"] {
+  --color-accent: #a3005c; /* magenta — mavi-sarı eksikliğinde güvenli */
+}
+
+html[data-a11y-palette="monokrom"] {
+  --color-accent: #1a1a1a;
+}
+
+/* Renk tek başına bilgi taşımasın: KRİTİK bandı monokromda kalın çerçeve
+   ve dolgu ile de ayrışır (WCAG 1.4.1 — renkten bağımsız ayırt edilebilirlik). */
+html[data-a11y-palette="monokrom"] .u-band-kritik {
+  border-width: 2px;
+  font-weight: 700;
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* --- Bağlantı altı çizgisi -------------------------------------- */
+html[data-a11y-underline="1"] a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* --- Hareketi azalt --------------------------------------------- */
+html[data-a11y-motion="azalt"] *,
+html[data-a11y-motion="azalt"] *::before,
+html[data-a11y-motion="azalt"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* İşletim sistemi tercihi de saygı görür — kullanıcı ayar yapmasa bile. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* --- Okuma cetveli ---------------------------------------------- */
+/* İmleç hizasında yatay kılavuz; satır takibini kolaylaştırır. */
+html[data-a11y-ruler="1"] .a11y-ruler {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2.2rem;
+  pointer-events: none;
+  z-index: 60;
+  border-top: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  background-color: color-mix(in srgb, var(--color-accent) 8%, transparent);
+}
+
+html:not([data-a11y-ruler="1"]) .a11y-ruler {
+  display: none;
+}
+
+/* --- Görselleri gizle ------------------------------------------- */
+html[data-a11y-images="gizli"] [data-a11y-image] {
+  display: none !important;
+}
+
+/* Yazdırmada erişilebilirlik temaları devre dışı: kağıt her zaman beyaz,
+   mürekkep siyah. Koyu tema ile yazdırmak toner yakar ve okunmaz. */
+@media print {
+  html[data-a11y-contrast] {
+    --color-paper: #ffffff;
+    --color-surface: #ffffff;
+    --color-ink: #000000;
+    --color-ink-soft: #222222;
+    --color-rule: #999999;
+  }
+
+  .a11y-ruler,
+  .a11y-widget {
+    display: none !important;
+  }
+}
+
+/* --- Erişilebilirlik widget'ı ------------------------------------ */
+.a11y-widget {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.a11y-widget-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.875rem;
+  height: 2.875rem;
+  border: 1px solid var(--color-ink);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.a11y-widget-button:hover,
+.a11y-widget-button:focus-visible {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Varsayılandan sapma varsa küçük işaret — renk tek gösterge değil,
+   aria-label da sayıyı söylüyor. */
+.a11y-widget-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid var(--color-surface);
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+.a11y-widget-panel {
+  width: min(22rem, calc(100vw - 2rem));
+  max-height: min(34rem, calc(100vh - 6rem));
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid var(--color-ink);
+  background-color: var(--color-surface);
+}
+
+/* Kaydırıcılar — gazete estetiğine uygun, kalın ve dokunmatikte rahat */
+.a11y-range {
+  appearance: none;
+  height: 1.5rem;
+  background: transparent;
+}
+
+.a11y-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background-color: var(--color-rule-strong);
+}
+
+.a11y-range::-moz-range-track {
+  height: 2px;
+  background-color: var(--color-rule-strong);
+}
+
+.a11y-range::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -0.4375rem;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-ink);
+  background-color: var(--color-accent);
+}
+
+.a11y-range::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-ink);
+  border-radius: 0;
+  background-color: var(--color-accent);
+}
+
+.a11y-range:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }

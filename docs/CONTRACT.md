@@ -185,6 +185,18 @@ Taban: `/api`
 | GET    | `/reports/:id`           | Rapor + icindeki haberler |
 | POST   | `/reports/generate`      | Body: `{period_start, period_end, period_type}` |
 | POST   | `/collect/run`           | Toplama calistir (demo: idempotent) |
+| PATCH  | `/sources/:id`           | Kaynagi guncelle. Body: `{is_active?, authority_weight?, name?}` |
+| POST   | `/sources`               | Yeni kaynak ekle. Body: `{slug?, name, homepage_url, source_type, authority_weight?, country_code?, language?}` |
+| GET    | `/source-suggestions`    | Onerilen kaynaklar. Query: `status` |
+| POST   | `/source-suggestions`    | Kaynak oner. Body: `{name, url, reason?, submitted_by?, source_type?}` |
+| PATCH  | `/source-suggestions/:id`| Durum degistir. Body: `{status: 'beklemede'\|'kabul'\|'red'}` |
+| POST   | `/articles/fetch-images` | Eksik `image_url` alanlarini og:image ile doldurur |
+
+`articles` yaniti yeni alan tasir: `image_url` (string \| null).
+Gorsel bulunamayan haberlerde `null` doner; frontend tipografik bir
+yer tutucuya duser, bos kutu gostermez.
+
+`sources` yaniti `is_active` ve `article_count` tasir.
 
 Liste yaniti:
 ```json
@@ -204,6 +216,52 @@ Haber objesi (API cikti sekli):
 }
 ```
 > `importance_score` sadece `?reveal=1` ile doner; normalde `null`.
+
+## Gorunum varyantlari (4)
+
+`<html data-view="...">` belirler. Dordu de DOM'a basilir, CSS birini gosterir.
+
+| deger | ad | amac |
+|---|---|---|
+| `panel` | Panel | Filtreli, okunabilir liste (varsayilan) |
+| `gazete` | Gazete | Basili gazete mizanpaji, yazdirmaya hazir |
+| `gorsel` | Gorsel | Ana tasarim + haber gorselleri (thumbnail) |
+| `kart` | Kart | Az metin, yalnizca konu ozetleri |
+
+Yuvalar: `<div data-view-slot="panel|gazete|gorsel|kart">`.
+Yazdirmada DAIMA `gazete` yuvasi basilir (hangi gorunum secili olursa olsun).
+
+**Oncelik kurali (kritik):** "sec ve gorunur yap" kurallari `(0,2,1)`
+ozgullukte. `@media print` kurallari AYNI ozgullukte olmak ve dosyada
+DAHA SONRA gelmek zorunda; daha dusuk ozgullukte bir print kurali kaybeder
+ve sayfa bos cikar. Bu hata bir kez yasandi, `frontend/app/globals.css`
+icindeki yazdirma blogunun yorumuna bakin.
+
+## Erisilebilirlik sozlesmesi
+
+Ayarlar `<html>` uzerine yazilir; gorsel karsiliklari yalnizca
+`globals.css` sonundaki ERISILEBILIRLIK blogunda tanimli.
+
+| oznitelik / degisken | degerler |
+|---|---|
+| `data-a11y-font` | `varsayilan` \| `okunabilir` (Atkinson Hyperlegible) \| `disleksi` (Lexend) |
+| `data-a11y-contrast` | `normal` \| `yuksek` \| `koyu` |
+| `data-a11y-palette` | `normal` \| `protanopi` \| `deuteranopi` \| `tritanopi` \| `monokrom` |
+| `data-a11y-underline` | `0` \| `1` |
+| `data-a11y-motion` | `normal` \| `azalt` |
+| `data-a11y-ruler` | `0` \| `1` |
+| `data-a11y-images` | `acik` \| `gizli` |
+| `--a11y-font-scale` | 0.9–1.6 |
+| `--a11y-line` | 1.4–2.1 |
+| `--a11y-letter` | 0–0.12em |
+| `--a11y-word` | 0–0.4em |
+
+Saklama: `localStorage` anahtari `isov:a11y` (JSON). Tek uygulama noktasi
+`components/A11yProvider.tsx`; denetimler `components/A11yControls.tsx`
+(widget ve /ayarlar ayni bileseni kullanir).
+
+Gorsel gizlenebilir olsun diye her haber gorseli `data-a11y-image`
+ozniteligi tasimali.
 
 ## Frontend
 
