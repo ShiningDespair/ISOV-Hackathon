@@ -17,14 +17,25 @@ import type {
   Paginated,
   Report,
   Source,
+  SourceCreate,
+  SourcePatch,
+  SourceSuggestion,
+  SourceSuggestionCreate,
+  SourceWatchBulk,
   StatsOverview,
+  SuggestionStatus,
   Tag,
 } from "./types";
 
-/** Başarılı ya da hatalı sonucu taşıyan sarmalayıcı. */
+/**
+ * Başarılı ya da hatalı sonucu taşıyan sarmalayıcı.
+ * Hata durumunda `status` varsa HTTP kodudur (ör. 409 = çakışma); ağ hatası
+ * ya da zaman aşımında tanımsız kalır. Çağıran taraf mesajı doğrudan
+ * kullanıcıya gösterebilir — hepsi Türkçe ve tam cümledir.
+ */
 export type ApiResult<T> =
   | { ok: true; data: T }
-  | { ok: false; error: string; data: null };
+  | { ok: false; error: string; status?: number; data: null };
 
 /** İstek zaman aşımı (ms) — demo sırasında sayfa asılı kalmasın. */
 const TIMEOUT_MS = 8000;
@@ -72,6 +83,7 @@ async function request<T>(path: string): Promise<ApiResult<T>> {
     if (!res.ok) {
       return {
         ok: false,
+        status: res.status,
         error: `Sunucu ${res.status} yanıtı döndürdü.`,
         data: null,
       };
@@ -218,4 +230,218 @@ export async function getReport(
     return { ok: false, error: "Rapor bulunamadı.", data: null };
   }
   return { ok: true, data: report };
+}
+
+/* ------------------------------------------------------------------ */
+/* Yazma işlemleri                                                     */
+/*                                                                     */
+/* Bu uç noktalar tarayıcıdan çağrılır ve `NEXT_PUBLIC_API_BASE_URL`   */
+/* (varsayılan `/api`) tabanını kullanır. Ters vekil (proxy) `/api`    */
+/* yolunu backend'e yönlendirmiyorsa istek 404 döner; o durumda        */
+/* kullanıcıya "Sunucuya ulaşılamadı." denir — sessizce başarısız      */
+/* olunmaz. Okuma fonksiyonları gibi bunlar da ASLA fırlatmaz.         */
+/* ------------------------------------------------------------------ */
+
+/** Backend hata gövdesinden okunur mesaj çıkarır: {error:{code,message}}. */
+function errorMessageFrom(payload: unknown): string | null {
+  if (!payload || typeof payload !== "object") return null;
+  const obj = payload as Record<string, unknown>;
+  const err = obj.error;
+  if (typeof err === "string" && err.trim()) return err.trim();
+  if (err && typeof err === "object") {
+    const msg = (err as Record<string, unknown>).message;
+    if (typeof msg === "string" && msg.trim()) return msg.trim();
+  }
+  if (typeof obj.message === "string" && obj.message.trim()) {
+    return obj.message.trim();
+  }
+  return null;
+}
+
+/** Yazma isteği — timeout'lu, JSON gövdeli, asla fırlatmaz. */
+async function mutate<T>(
+  method: "POST" | "PATCH" | "PUT",
+  path: string,
+  body: unknown,
+  messages: { conflict?: string } = {},
+): Promise<ApiResult<T>> {
+  const url = `${apiBase().replace(/\/+$/, "")}${path}`;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+
+  try {
+    const res = await fetch(url, {
+      method,
+      cache: "no-store",
+      signal: controller.signal,
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(body ?? {}),
+    });
+
+    let payload: unknown = null;
+    try {
+      payload = await res.json();
+    } catch {
+      payload = null;
+    }
+
+    if (!res.ok) {
+      const detail = errorMessageFrom(payload);
+
+      // 404: uç nokta yok ya da /api vekili tanımlı değil. Kaydın kendisi
+      // bulunamadıysa backend anlamlı bir mesaj gönderir, onu öne alırız.
+      if (res.status === 404) {
+        return {
+          ok: false,
+          status: 404,
+          error:
+            "Sunucuya ulaşılamadı. Bu işlem için gereken uç nokta yayında değil.",
+          data: null,
+        };
+      }
+      if (res.status === 409) {
+        return {
+          ok: false,
+          status: 409,
+          error: messages.conflict ?? detail ?? "Bu kayıt zaten mevcut.",
+          data: null,
+        };
+      }
+      if (res.status === 400 || res.status === 422) {
+        return {
+          ok: false,
+          status: res.status,
+          error: detail ?? "Gönderilen bilgiler geçersiz.",
+          data: null,
+        };
+      }
+      return {
+        ok: false,
+        status: res.status,
+        error: detail ?? `Sunucu ${res.status} yanıtı döndürdü.`,
+        data: null,
+      };
+    }
+
+    // Backend {data:{...}} sarmalayabilir ya da düz obje döndürebilir.
+    const raw = (payload ?? {}) as Record<string, unknown>;
+    const value = (
+      raw && typeof raw === "object" && "data" in raw && raw.data ? raw.data : raw
+    ) as T;
+    return { ok: true, data: value };
+  } catch (err) {
+    return {
+      ok: false,
+      error:
+        err instanceof Error && err.name === "AbortError"
+          ? "Sunucu zaman aşımına uğradı. Lütfen tekrar deneyin."
+          : "Sunucuya ulaşılamadı.",
+      data: null,
+    };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * PATCH /sources/:id — kaynağın adını ya da otorite ağırlığını güncelle.
+ * İzleme durumu buradan DEĞİŞTİRİLMEZ; `setSourceWatched` kullanılır.
+ */
+export function patchSource(
+  id: string | number,
+  patch: SourcePatch,
+): Promise<ApiResult<Source>> {
+  return mutate<Source>(
+    "PATCH",
+    `/sources/${encodeURIComponent(String(id))}`,
+    patch,
+  );
+}
+
+/**
+ * PUT /sources/:id/watch — kaynağı bu kurumun panelinde izle / izleme.
+ *
+ * ÇOK KİRACILI DAVRANIŞ: izlemeyi bırakmak toplamayı durdurmaz ve hiçbir
+ * haberi silmez. Yalnızca bu kiracının panelinde o kaynağın haberleri
+ * gizlenir; aynı kaynağı izleyen diğer kurumlar etkilenmez.
+ */
+export function setSourceWatched(
+  id: string | number,
+  isWatched: boolean,
+): Promise<ApiResult<Source>> {
+  return mutate<Source>(
+    "PUT",
+    `/sources/${encodeURIComponent(String(id))}/watch`,
+    { is_watched: isWatched },
+  );
+}
+
+/**
+ * PUT /sources/watch/bulk — birden çok kaynağın izleme durumunu tek istekte
+ * değiştirir (81 kaynakta "tümünü seç" gibi işlemler için).
+ *
+ * Backend güncellenen kayıtları `{data:[...]}` içinde döndürür; `mutate`
+ * sarmalayıcıyı açtığı için burada doğrudan dizi gelir. Dizi gelmezse
+ * çağıran taraf yerel durumu kendi bilgisiyle güncellemeye devam eder.
+ */
+export function setSourcesWatchedBulk(
+  sourceIds: number[],
+  isWatched: boolean,
+): Promise<ApiResult<Source[]>> {
+  const body: SourceWatchBulk = { source_ids: sourceIds, is_watched: isWatched };
+  return mutate<Source[]>("PUT", "/sources/watch/bulk", body);
+}
+
+/** POST /sources — yeni kaynak ekle. */
+export function createSource(input: SourceCreate): Promise<ApiResult<Source>> {
+  return mutate<Source>("POST", "/sources", input, {
+    conflict: "Bu kaynak zaten kayıtlı.",
+  });
+}
+
+/** GET /source-suggestions — önerilen kaynaklar (opsiyonel durum filtresi). */
+export async function getSourceSuggestions(
+  status?: SuggestionStatus | "TUMU",
+): Promise<ApiResult<SourceSuggestion[]>> {
+  const res = await request<unknown>(
+    `/source-suggestions${buildQuery({ status })}`,
+  );
+  if (!res.ok) {
+    // Uç nokta henüz yayında değilse 404 döner; ham kodu kullanıcıya
+    // göstermek yerine ne olduğunu açıkça söyleriz.
+    if (res.status === 404) {
+      return {
+        ok: false,
+        status: 404,
+        error: "Kaynak önerileri servisine ulaşılamadı.",
+        data: null,
+      };
+    }
+    return res;
+  }
+  return {
+    ok: true,
+    data: normalizeList<SourceSuggestion>(res.data, 200).data,
+  };
+}
+
+/** POST /source-suggestions — kaynak öner. Aynı adres ikinci kez gelirse 409. */
+export function createSourceSuggestion(
+  input: SourceSuggestionCreate,
+): Promise<ApiResult<SourceSuggestion>> {
+  return mutate<SourceSuggestion>("POST", "/source-suggestions", input, {
+    conflict: "Bu kaynak zaten önerilmiş.",
+  });
+}
+
+/** PATCH /source-suggestions/:id — öneri durumunu değiştir. */
+export function patchSourceSuggestion(
+  id: string | number,
+  status: SuggestionStatus,
+): Promise<ApiResult<SourceSuggestion>> {
+  return mutate<SourceSuggestion>(
+    "PATCH",
+    `/source-suggestions/${encodeURIComponent(String(id))}`,
+    { status },
+  );
 }

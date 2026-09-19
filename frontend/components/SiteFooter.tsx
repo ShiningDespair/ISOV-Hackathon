@@ -41,6 +41,11 @@ export function SiteFooter() {
                   İstatistik
                 </Link>
               </li>
+              <li>
+                <Link href="/ayarlar" className="u-kicker u-link-underline">
+                  Ayarlar
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

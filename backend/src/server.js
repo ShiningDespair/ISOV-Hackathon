@@ -37,7 +37,9 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
     return cb(null, false);
   },
-  methods: ['GET', 'POST', 'OPTIONS'],
+  // PATCH: kaynak ve oneri guncelleme uclari icin zorunlu; yoksa tarayici
+  // on-kontrolu (preflight) istegi daha sunucuya gelmeden reddeder.
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'OPTIONS'],
   maxAge: 86400,
 }));
 
@@ -66,6 +68,14 @@ app.get('/', (req, res) => {
       'GET  /api/reports/:id',
       'POST /api/reports/generate',
       'POST /api/collect/run',
+      'POST /api/articles/fetch-images',
+      'PATCH /api/sources/:id',
+      'PUT  /api/sources/:id/watch',
+      'PUT  /api/sources/watch/bulk',
+      'POST /api/sources',
+      'GET  /api/source-suggestions',
+      'POST /api/source-suggestions',
+      'PATCH /api/source-suggestions/:id',
     ],
   });
 });

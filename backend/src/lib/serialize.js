@@ -106,6 +106,9 @@ export function serializeArticle(row, { reveal = false, tags = [], cluster } = {
     entities: parseJsonColumn(row.entities, {}),
     region: row.region,
     category: row.category ?? null,
+    // Kapak gorseli (og:image / twitter:image). Bulunamayan haberde null;
+    // frontend tipografik yer tutucuya duser, bos kutu gostermez.
+    image_url: row.image_url ?? null,
     sentiment: row.sentiment,
     importance_band: row.importance_band,
     // GIZLI METRIK — reveal yoksa asla sizdirma.

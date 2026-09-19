@@ -13,6 +13,7 @@ const NAV = [
   { href: "/etiketler", label: "Etiketler" },
   { href: "/raporlar", label: "Raporlar" },
   { href: "/istatistik", label: "İstatistik" },
+  { href: "/ayarlar", label: "Ayarlar" },
 ];
 
 export function Masthead() {

@@ -175,7 +175,7 @@ Taban: `/api`
 | Method | Yol                      | Aciklama |
 |--------|--------------------------|----------|
 | GET    | `/health`                | `{ok:true, db:true}` |
-| GET    | `/articles`              | Liste. Query: `region, band, category, tag, q, from, to, source, page, limit, sort` |
+| GET    | `/articles`              | Liste. Query: `region, band, category, tag, q, from, to, source, watched_only, tenant_key, page, limit, sort` |
 | GET    | `/articles/:id`          | Detay + kume uyeleri + etiketler |
 | GET    | `/clusters/:id`          | Kume ve tum uyeleri |
 | GET    | `/tags`                  | Etiketler + kullanim sayisi |
@@ -185,7 +185,9 @@ Taban: `/api`
 | GET    | `/reports/:id`           | Rapor + icindeki haberler |
 | POST   | `/reports/generate`      | Body: `{period_start, period_end, period_type}` |
 | POST   | `/collect/run`           | Toplama calistir (demo: idempotent) |
-| PATCH  | `/sources/:id`           | Kaynagi guncelle. Body: `{is_active?, authority_weight?, name?}` |
+| PATCH  | `/sources/:id`           | Yonetici alanlari. Body: `{authority_weight?, name?}` — `is_active` KABUL EDILMEZ |
+| PUT    | `/sources/:id/watch`     | Kiraci izleme tercihi. Body: `{is_watched, tenant_key?}` |
+| PUT    | `/sources/watch/bulk`    | Toplu izleme tercihi. Body: `{source_ids:number[], is_watched, tenant_key?}` |
 | POST   | `/sources`               | Yeni kaynak ekle. Body: `{slug?, name, homepage_url, source_type, authority_weight?, country_code?, language?}` |
 | GET    | `/source-suggestions`    | Onerilen kaynaklar. Query: `status` |
 | POST   | `/source-suggestions`    | Kaynak oner. Body: `{name, url, reason?, submitted_by?, source_type?}` |
@@ -196,7 +198,42 @@ Taban: `/api`
 Gorsel bulunamayan haberlerde `null` doner; frontend tipografik bir
 yer tutucuya duser, bos kutu gostermez.
 
-`sources` yaniti `is_active` ve `article_count` tasir.
+`sources` yaniti `is_active`, `is_watched` ve `article_count` tasir.
+
+### Kaynak izleme modeli — COK KIRACILI (iki katman)
+
+Sistem cok kiracili dusunulmustur. **Gerekce: bir kiracinin izlemek istemedigi
+kaynagi baska bir kiraci izliyor olabilir**, bu yuzden veri paylasilan ve kalicidir.
+
+**1) Global katman — paylasilan, kalici.** `sources` tablosu ve toplama tum
+kiracilar arasinda PAYLASILIR. **Toplama HICBIR ZAMAN durmaz** ve haber verisi
+HICBIR KOSULDA silinmez. `sources.is_active` yalnizca YONETICI duzeyinde
+"bu kaynak artik hic taranmiyor" (or. site kapandi) anlamina gelir; panel
+arayuzunden degistirilmez ve `PATCH /sources/:id` govdesinden **kabul edilmez**
+(gonderilirse 400 doner). Varsayilan 1 kalir.
+
+**2) Kiraci katmani — panelde izleme.** `tenant_source_prefs
+(tenant_key, source_id, is_watched)` tablosu. Tabloya yalnizca **sapmalar**
+yazilir: kayit YOKSA varsayilan `is_watched = true`, yani hicbir sey secmemis
+bir kiraci tum kaynaklari gorur. Izlemeyi birakmak yalnizca o kiracinin
+gorunumunu degistirir; toplama devam eder, haberler veritabaninda kalir.
+
+Kimlik dogrulama henuz yok: `tenant_key` istekten gelir (query parametresi,
+govde alani veya `X-Tenant-Key` basligi), yoksa `'isov'` kullanilir. Kimlik
+eklendiginde sema degismeden gercek kiraciya baglanir.
+
+**Haber listesi:** `GET /articles` varsayilan davranisi degismez (tum haberler).
+`GET /articles?watched_only=1&tenant_key=isov` yalnizca o kiracinin izledigi
+kaynaklarin haberlerini dondurur. Izlenmeyen kaynagin haberleri SILINMEZ,
+yalnizca bu suzgecle gizlenir.
+
+`POST /sources` ve `POST /source-suggestions` uclari cakisma durumunda 409 doner;
+govde hata zarfinin yaninda mevcut kaydi da tasir:
+`{"error":{"code":"CONFLICT","message":"..."}, "data":{...}}`.
+
+`POST /articles/fetch-images` govdesi `{limit?}` alir (HTTP yolunda ust sinir 100)
+ve ozet dondurur: `{attempted, found, not_found, errors, failing_hosts, top_sources, ...}`.
+Daha buyuk toplu is icin backend'de `npm run images` kullanilir.
 
 Liste yaniti:
 ```json

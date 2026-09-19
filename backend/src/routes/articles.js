@@ -10,13 +10,15 @@ import { Router } from 'express';
 import { query } from '../lib/db.js';
 import {
   ApiError, asyncHandler, parsePagination, pickFromAllowList,
-  parseDateParam, placeholders, qs, qsList, toMysqlDateTime,
+  parseDateParam, placeholders, qs, qsList, toBool, toMysqlDateTime,
 } from '../lib/http.js';
 import { serializeList, serializeArticle, wantsReveal } from '../lib/serialize.js';
 import {
   ARTICLE_COLUMNS, ARTICLE_FROM, findArticleRow, findClusterMemberRows,
   serializeArticleRows, tagsByArticleIds,
 } from '../services/articleService.js';
+import { runFetchImages } from '../jobs/fetch-images.js';
+import { DEFAULT_TENANT } from './sources.js';
 
 const router = Router();
 
@@ -74,6 +76,26 @@ function buildFilters(reqQuery, searchMode) {
   if (sources.length) {
     where.push(`s.slug IN (${placeholders(sources.length)})`);
     params.push(...sources);
+  }
+
+  // KIRACI IZLEME SUZGECI — VARSAYILAN: TUM HABERLER GOSTERILIR.
+  //
+  // Veri katmani tum kiracilar arasinda paylasilir ve hicbir haber
+  // silinmez; bir kiracinin izlemeyi biraktigi kaynagi baska bir kiraci
+  // izliyor olabilir. ?watched_only=1 verildiginde yalnizca o kiracinin
+  // izledigi kaynaklarin haberleri doner.
+  //
+  // `tenant_source_prefs`te kayit YOKSA varsayilan "izleniyor" oldugu icin
+  // kosul NOT EXISTS ile yazildi: yalnizca ACIKCA is_watched=0 isaretlenmis
+  // kaynaklar dislanir.
+  if (toBool(qs(reqQuery.watched_only)) === true) {
+    where.push(`NOT EXISTS (
+      SELECT 1 FROM tenant_source_prefs tsp
+       WHERE tsp.source_id = a.source_id
+         AND tsp.tenant_key = ?
+         AND tsp.is_watched = 0
+    )`);
+    params.push(qs(reqQuery.tenant_key) || DEFAULT_TENANT);
   }
 
   // Etiket filtresi EXISTS ile: JOIN kullanilsa sayfalama satir cogaltirdi.
@@ -175,6 +197,31 @@ router.get('/', asyncHandler(async (req, res) => {
 
   const data = await serializeArticleRows(result.rows, { reveal });
   res.json(serializeList(data, { page, limit, total: result.total }));
+}));
+
+/**
+ * POST /api/articles/fetch-images
+ * Eksik `image_url` alanlarini og:image/twitter:image ile doldurur.
+ * Body: {limit?} — HTTP yolunda ust sinir 100 (istek zaman asimina ugramasin;
+ * daha buyuk toplu is icin `npm run images` kullanilir).
+ */
+const IMAGE_HTTP_MAX_LIMIT = 100;
+
+router.post('/fetch-images', asyncHandler(async (req, res) => {
+  const body = req.body && typeof req.body === 'object' ? req.body : {};
+
+  let limit = 25;
+  if (body.limit !== undefined && body.limit !== null && body.limit !== '') {
+    const n = Number(body.limit);
+    if (!Number.isFinite(n) || n <= 0) {
+      throw ApiError.badRequest('limit pozitif bir sayı olmalıdır');
+    }
+    limit = Math.min(IMAGE_HTTP_MAX_LIMIT, Math.floor(n));
+  }
+
+  const retryFailed = toBool(body.retry_failed) === true;
+  const ozet = await runFetchImages({ limit, retryFailed });
+  res.json(ozet);
 }));
 
 router.get('/:id', asyncHandler(async (req, res) => {

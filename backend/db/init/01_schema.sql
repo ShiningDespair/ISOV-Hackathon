@@ -107,6 +107,17 @@ CREATE TABLE IF NOT EXISTS articles (
   -- onemlileri" sorusunu yanitlar.
   importance_band   ENUM('KRITIK','YUKSEK','ORTA','DUSUK') NOT NULL DEFAULT 'DUSUK',
 
+  -- --- HABER GORSELI ------------------------------------------------
+  -- og:image / twitter:image ile toplanan kapak gorseli. Bulunamazsa NULL
+  -- kalir; frontend tipografik yer tutucuya duser, bos kutu gostermez.
+  image_url         VARCHAR(1000) NULL,
+  -- Gorselin nereden bulundugu (izlenebilirlik): og / twitter / link etiketi,
+  -- 'yok' = denendi ama hicbir yerde gorsel bulunamadi.
+  image_source      ENUM('og','twitter','link','yok') NULL,
+  -- Son deneme zamani. NULL = hic denenmedi. Toplu is yalnizca NULL olanlari
+  -- alir; boylece ayni basarisiz URL her kosumda tekrar denenmez.
+  image_checked_at  DATETIME NULL,
+
   -- --- islem durumu -------------------------------------------------
   status            ENUM('HAM','ISLENDI','HATA') NOT NULL DEFAULT 'HAM',
   processed_at      DATETIME NULL,
@@ -123,6 +134,7 @@ CREATE TABLE IF NOT EXISTS articles (
   KEY ix_articles_band (importance_band, published_at),
   KEY ix_articles_dup (is_duplicate, published_at),
   KEY ix_articles_content_hash (content_hash),
+  KEY ix_articles_image_checked (image_checked_at),
   FULLTEXT KEY ft_articles_text (title, summary, body),
   CONSTRAINT fk_articles_source  FOREIGN KEY (source_id)  REFERENCES sources (id)  ON DELETE CASCADE,
   CONSTRAINT fk_articles_cluster FOREIGN KEY (cluster_id) REFERENCES clusters (id) ON DELETE SET NULL
@@ -161,6 +173,54 @@ CREATE TABLE IF NOT EXISTS article_tags (
   KEY ix_article_tags_tag (tag_id),
   CONSTRAINT fk_at_article FOREIGN KEY (article_id) REFERENCES articles (id) ON DELETE CASCADE,
   CONSTRAINT fk_at_tag     FOREIGN KEY (tag_id)     REFERENCES tags (id)     ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ---------------------------------------------------------------------
+-- tenant_source_prefs : KIRACI BASINA kaynak izleme tercihleri
+--
+-- NEDEN AYRI TABLO: `sources` ve toplanan haber verisi TUM KIRACILAR
+-- arasinda PAYLASILIR ve hicbir kosulda silinmez — bir kiracinin izlemek
+-- istemedigi kaynagi baska bir kiraci izliyor olabilir. Bu yuzden "panelde
+-- gosterme" karari global `sources.is_active` ile degil, kiraci basina
+-- burada tutulur.
+--
+-- `sources.is_active` YONETICI duzeyindedir ("site kapandi, artik hic
+-- taranmiyor") ve panel arayuzunden degistirilmez.
+--
+-- Tabloya yalnizca SAPMALAR yazilir: kayit YOKSA varsayilan "izleniyor".
+-- Boylece hicbir sey secmemis bir kiraci tum kaynaklari gorur.
+--
+-- Kimlik dogrulama henuz yok; `tenant_key` istekten gelir, yoksa 'isov'.
+-- Kimlik eklendiginde sema degismeden gercek kiraciya baglanir.
+-- ---------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS tenant_source_prefs (
+  tenant_key  VARCHAR(64)  NOT NULL DEFAULT 'isov',
+  source_id   INT UNSIGNED NOT NULL,
+  is_watched  TINYINT(1)   NOT NULL DEFAULT 1,
+  updated_at  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (tenant_key, source_id),
+  CONSTRAINT fk_tsp_source FOREIGN KEY (source_id) REFERENCES sources (id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ---------------------------------------------------------------------
+-- source_suggestions : kullanicilarin onerdigi yeni kaynaklar
+--   Oneri kabul edilirse `sources` tablosuna da islenir (PATCH ucu, tek
+--   transaction). Ayni URL iki kez onerilemez -> uq_source_sug_url.
+-- ---------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS source_suggestions (
+  id            INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name          VARCHAR(190) NOT NULL,
+  url           VARCHAR(500) NOT NULL,
+  reason        TEXT NULL,                          -- neden izlenmeli
+  submitted_by  VARCHAR(190) NULL,                  -- oneren kisi / birim
+  -- sources.source_type ile AYNI ENUM; oneride bos birakilabilir.
+  source_type   ENUM('mevzuat','kurum','acik_veri','basin','uluslararasi','diger') NULL,
+  status        ENUM('beklemede','kabul','red') NOT NULL DEFAULT 'beklemede',
+  created_at    DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  reviewed_at   DATETIME NULL,                      -- durum degistirilme zamani
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_source_sug_url (url),
+  KEY ix_source_sug_status (status, created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ---------------------------------------------------------------------

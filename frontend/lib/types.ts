@@ -48,17 +48,141 @@ export const BAND_RANK: Record<ImportanceBand, number> = {
   DUSUK: 1,
 };
 
+/** Kaynak türü ENUM — sources.source_type ile birebir aynı. */
+export const SOURCE_TYPES = [
+  "mevzuat",
+  "kurum",
+  "acik_veri",
+  "basin",
+  "uluslararasi",
+  "diger",
+] as const;
+export type SourceType = (typeof SOURCE_TYPES)[number];
+
+/** Kaynak türlerinin Türkçe görünen adları ve kısa açıklamaları. */
+export const SOURCE_TYPE_LABEL: Record<SourceType, string> = {
+  mevzuat: "Mevzuat",
+  kurum: "Kurum Duyurusu",
+  acik_veri: "Açık Veri",
+  basin: "Basın",
+  uluslararasi: "Uluslararası",
+  diger: "Diğer",
+};
+
+export const SOURCE_TYPE_HINT: Record<SourceType, string> = {
+  mevzuat: "Resmî gazeteler, tüzük ve yönetmelik yayınları",
+  kurum: "Bakanlık, oda ve kamu kurumu duyuruları",
+  acik_veri: "İstatistik kurumları ve açık veri portalları",
+  basin: "Haber ajansları ve gazeteler",
+  uluslararasi: "AB, OECD, IMF gibi uluslararası kuruluşlar",
+  diger: "Yukarıdakilerin dışında kalan kaynaklar",
+};
+
+/** Bilinmeyen tür değerini güvenli biçimde "diger"e düşürür. */
+export function normalizeSourceType(value?: string | null): SourceType {
+  const v = String(value ?? "").toLowerCase();
+  return (SOURCE_TYPES as readonly string[]).includes(v)
+    ? (v as SourceType)
+    : "diger";
+}
+
+export function sourceTypeLabel(value?: string | null): string {
+  return SOURCE_TYPE_LABEL[normalizeSourceType(value)];
+}
+
 export interface Source {
   id?: number;
   slug: string;
   name: string;
   homepage_url?: string | null;
+  feed_url?: string | null;
   source_type?: string | null;
   authority_weight?: number | null;
   country_code?: string | null;
   language?: string | null;
+  /**
+   * Yönetici alanı: kaynak sistem genelinde toplanıyor mu. Panelden
+   * DEĞİŞTİRİLMEZ — toplama her kiracı için ortaktır.
+   */
+  is_active?: boolean | null;
+  /**
+   * Bu kiracının panelinde izleniyor mu. Kapatmak yalnızca bu kurumun
+   * görünümünü etkiler; veri toplanmaya ve saklanmaya devam eder.
+   */
+  is_watched?: boolean | null;
   /** /sources uç noktası kullanım sayısı döndürebilir. */
   article_count?: number | null;
+  /** Tekilleştirme sonrası benzersiz haber sayısı. */
+  unique_count?: number | null;
+  last_fetched_at?: string | null;
+  last_published_at?: string | null;
+}
+
+/**
+ * PATCH /sources/:id gövdesi.
+ * İzleme durumu BURADAN değiştirilmez — `PUT /sources/:id/watch` kullanılır.
+ */
+export interface SourcePatch {
+  authority_weight?: number;
+  name?: string;
+}
+
+/** PUT /sources/watch/bulk gövdesi. */
+export interface SourceWatchBulk {
+  source_ids: number[];
+  is_watched: boolean;
+}
+
+/** POST /sources gövdesi. */
+export interface SourceCreate {
+  slug?: string;
+  name: string;
+  homepage_url: string;
+  source_type: SourceType;
+  authority_weight?: number;
+  country_code?: string;
+  language?: string;
+}
+
+/** Kaynak önerisi durumları. */
+export const SUGGESTION_STATUSES = ["beklemede", "kabul", "red"] as const;
+export type SuggestionStatus = (typeof SUGGESTION_STATUSES)[number];
+
+export const SUGGESTION_STATUS_LABEL: Record<SuggestionStatus, string> = {
+  beklemede: "Beklemede",
+  kabul: "Kabul",
+  red: "Red",
+};
+
+export function normalizeSuggestionStatus(
+  value?: string | null,
+): SuggestionStatus {
+  const v = String(value ?? "").toLowerCase();
+  return (SUGGESTION_STATUSES as readonly string[]).includes(v)
+    ? (v as SuggestionStatus)
+    : "beklemede";
+}
+
+/** GET /source-suggestions kaydı. */
+export interface SourceSuggestion {
+  id: number;
+  name: string;
+  url: string;
+  reason?: string | null;
+  submitted_by?: string | null;
+  source_type?: string | null;
+  status?: SuggestionStatus | string | null;
+  created_at?: string | null;
+  reviewed_at?: string | null;
+}
+
+/** POST /source-suggestions gövdesi. */
+export interface SourceSuggestionCreate {
+  name: string;
+  url: string;
+  reason?: string;
+  submitted_by?: string;
+  source_type?: SourceType;
 }
 
 export interface Tag {
@@ -98,6 +222,12 @@ export interface Article {
   source?: Source | null;
   tags?: Tag[] | null;
   cluster?: ClusterRef | null;
+  /**
+   * Haber görseli (og:image). Backend paralel geliştiriliyor; bulunamayan
+   * haberlerde `null` döner, alan hiç gelmeyebilir de. Görsel görünümü
+   * bu durumda tipografik yer tutucuya düşer, boş kutu göstermez.
+   */
+  image_url?: string | null;
 }
 
 /** Küme üyesi — tekilleştirmenin görünür kanıtı. */
@@ -172,7 +302,37 @@ export interface CountBucket {
   value?: number | null;
 }
 
+/** Backend'in `totals` altında döndürdüğü toplamlar. */
+export interface StatsTotals {
+  articles?: number | null;
+  unique_articles?: number | null;
+  duplicates?: number | null;
+  sources?: number | null;
+  active_sources?: number | null;
+  clusters?: number | null;
+  multi_source_clusters?: number | null;
+  avg_cluster_size?: number | null;
+  dedup_ratio?: number | null;
+  last_published_at?: string | null;
+}
+
+/** Son toplama çalışmasının kaydı (`collection_runs`). */
+export interface CollectionRun {
+  id?: number | null;
+  trigger_type?: string | null;
+  started_at?: string | null;
+  finished_at?: string | null;
+  fetched_count?: number | null;
+  new_count?: number | null;
+  duplicate_count?: number | null;
+  error_count?: number | null;
+}
+
 export interface StatsOverview {
+  /** Güncel backend toplamları buradan gelir; düz alanlar geriye dönük. */
+  totals?: StatsTotals | null;
+  last_run?: CollectionRun | null;
+  top_categories?: CountBucket[] | Record<string, number> | null;
   total_articles?: number | null;
   total_sources?: number | null;
   total_clusters?: number | null;

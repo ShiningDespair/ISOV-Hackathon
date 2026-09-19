@@ -11,6 +11,7 @@ import { serializeArticle } from '../lib/serialize.js';
 /** articles + sources + clusters ortak SELECT govdesi. */
 export const ARTICLE_COLUMNS = `
   a.id, a.title, a.url, a.summary, a.key_points, a.entities,
+  a.image_url,
   a.region, a.category, a.sentiment,
   a.importance_band, a.importance_score, a.published_at,
   a.cluster_id, a.is_duplicate, a.duplicate_of_id,

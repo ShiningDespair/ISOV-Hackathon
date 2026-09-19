@@ -97,8 +97,20 @@ export async function upsertSources(conn, sources = []) {
       ],
     );
 
-    const [rows] = await conn.execute('SELECT id, authority_weight FROM sources WHERE slug = ? LIMIT 1', [slug]);
-    if (rows[0]) map.set(slug, { id: rows[0].id, authority_weight: Number(rows[0].authority_weight) });
+    // is_active KASITLI olarak upsert edilmiyor: yoneticinin "bu site artik
+    // hic taranmiyor" karari seed dosyasindaki deger tarafindan ezilmemeli.
+    // NOT: is_active toplamayi DURDURMAZ — veri katmani tum kiracilar
+    // arasinda paylasilir (bkz. routes/sources.js izleme notu).
+    const [rows] = await conn.execute(
+      'SELECT id, authority_weight, is_active FROM sources WHERE slug = ? LIMIT 1', [slug],
+    );
+    if (rows[0]) {
+      map.set(slug, {
+        id: rows[0].id,
+        authority_weight: Number(rows[0].authority_weight),
+        is_active: Boolean(rows[0].is_active),
+      });
+    }
   }
   return map;
 }

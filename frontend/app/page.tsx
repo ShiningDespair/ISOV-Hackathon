@@ -2,6 +2,7 @@
  * ANA SAYFA — bülten.
  * Panel görünümü: gazete gridi (manşet + ikincil kolonlar + sağ dar kolon).
  * Gazete görünümü: tam genişlik basılı gazete mizanpajı.
+ * Görsel görünümü: ana tasarım + haber görselleri (manşet bloğu, ızgara, liste).
  */
 
 import { Suspense } from "react";
@@ -29,8 +30,11 @@ import {
 } from "@/components/ArticleCard";
 import { BarList } from "@/components/Charts";
 import { NewspaperFront } from "@/components/NewspaperFront";
+import { VisualFront } from "@/components/VisualFront";
 import { DataUnavailable, EmptyState, SectionRule } from "@/components/States";
-import { NewspaperView, PanelView } from "@/components/ViewSlot";
+import { NewspaperView, PanelView, VisualView } from "@/components/ViewSlot";
+import { DigestView } from "@/components/ViewSlot";
+import { DigestFront } from "@/components/DigestFront";
 
 // Demo: veri daima taze, derleme sırasında backend'e istek atılmaz.
 export const dynamic = "force-dynamic";
@@ -319,6 +323,19 @@ export default async function HomePage({
           />
         )}
       </NewspaperView>
+
+      {/* ---------------- GÖRSEL GÖRÜNÜMÜ ---------------- */}
+      {/* Aynı veri, aynı sıra (backend'in gizli skor sıralaması korunur);
+          tek fark haber görsellerinin mizanpaja katılması. */}
+      <VisualView>
+        <VisualFront articles={all} total={total} state={state} />
+      </VisualView>
+
+      {/* ---------------- KART GÖRÜNÜMÜ ---------------- */}
+      {/* Az metin, yalnızca konu özetleri. Aynı veri, API sırası korunur. */}
+      <DigestView>
+        <DigestFront articles={all} total={total} state={state} />
+      </DigestView>
     </>
   );
 }

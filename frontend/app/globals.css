@@ -823,3 +823,831 @@ html[data-a11y-images="gizli"] [data-a11y-image] {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
+
+/* ================================================================
+   GÖRSEL GÖRÜNÜMÜ — html[data-view="gorsel"]
+   Ana tasarımın devamı: aynı tipografi, aynı kural çizgileri, aynı
+   minimal palet. Tek fark, haber görsellerinin metnin içine oturması.
+   Kutu gölgesi / yuvarlak köşe / dolu renk zemin KULLANILMAZ.
+
+   Sınıflar `gorsel-` önekli: aynı dosyada çalışan diğer görünümlerle
+   (panel / gazete / kart) çakışma olmasın.
+
+   Bu blok dosyanın SONUNA eklendi ve bilinçli olarak `!important`
+   İÇERMEZ — özellikle `display` bildirimleri. Sebebi: yukarıdaki
+   ERİŞİLEBİLİRLİK bloğundaki
+     html[data-a11y-images="gizli"] [data-a11y-image] { display:none !important }
+   kuralının "Görselleri gizle" ayarında kazanması gerekiyor. Buraya
+   `display: ... !important` yazan biri o ayarı sessizce bozar.
+   ================================================================ */
+
+/* --- Manşet bloğu ----------------------------------------------- */
+/* Mobil: görsel üstte, metin altta (DOM sırası). Geniş ekran: iki kolon. */
+.gorsel-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .gorsel-lead {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+/* --- Görsel ızgara: mobil 1, tablet 2, geniş 3 kolon -------------- */
+/* minmax(0,1fr): uzun başlık/URL kolonu şişirip yatay kaydırma açamaz. */
+.gorsel-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .gorsel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gorsel-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --- Kalan haberler: görselsiz kompakt liste ---------------------- */
+.gorsel-tail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .gorsel-tail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gorsel-tail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --- Kart gövdesi ------------------------------------------------ */
+.gorsel-card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 1rem;
+}
+
+.gorsel-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+}
+
+/* --- Görsel çerçevesi ------------------------------------------- */
+/* aspect-ratio ile oran sabit: görsel inerken mizanpaj kaymaz. */
+.gorsel-frame,
+.gorsel-ph {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border: 1px solid var(--color-rule);
+  background-color: var(--color-paper-deep);
+}
+
+.gorsel-ratio-lead {
+  aspect-ratio: 16 / 9;
+}
+
+.gorsel-ratio-card {
+  aspect-ratio: 4 / 3;
+}
+
+.gorsel-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Gazete estetiği: doygunluk bir tık kısılır, kâğıt tonuna yakınsar. */
+  filter: saturate(0.92) contrast(1.02);
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.gorsel-media-link:hover .gorsel-img {
+  filter: saturate(1) contrast(1.05);
+  opacity: 0.92;
+}
+
+.gorsel-media-link {
+  display: block;
+}
+
+/* --- Tipografik yer tutucu -------------------------------------- */
+/* Görsel yoksa BOŞ KUTU gösterilmez: kicker + kaynak baş harfleri +
+   not'tan oluşan gazete bloğu basılır. İnce iç çerçeve, kâğıt zemin. */
+.gorsel-ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px var(--color-rule);
+}
+
+.gorsel-ph-kicker,
+.gorsel-ph-note {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.625rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-ink-soft);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gorsel-ph-note {
+  color: var(--color-ink-faint);
+}
+
+.gorsel-ph-mark {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(2.25rem, 8vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+
+/* Deterministik tonlar — `article.id`den türetilir (ArticleImage.toneOf).
+   Renk kullanımı minimal: yalnızca kâğıt tonuna mürekkep/vurgu karışımı,
+   yeni bir renk tanıtılmıyor. Palet jetonları a11y temalarıyla birlikte
+   değiştiği için koyu/yüksek kontrast temalarda da tutarlı kalır. */
+.gorsel-tone-0 {
+  background-color: var(--color-paper-deep);
+}
+
+.gorsel-tone-1 {
+  background-color: color-mix(in srgb, var(--color-ink) 6%, var(--color-paper-deep));
+}
+
+.gorsel-tone-2 {
+  background-color: color-mix(in srgb, var(--color-ink) 11%, var(--color-paper-deep));
+}
+
+.gorsel-tone-3 {
+  background-color: color-mix(in srgb, var(--color-accent) 7%, var(--color-paper-deep));
+}
+
+/* ================================================================
+   KART GÖRÜNÜMÜ (data-view="kart") — "az metin, konu özetleri"
+   Tüm sınıflar `kart-` önekli; başka görünümlerin kurallarına
+   dokunulmaz. Renkler yalnızca mevcut jetonlardan gelir
+   (--color-paper / -surface / -paper-deep / -ink* / -rule / -accent),
+   böylece renk körlüğü paletleri ve koyu tema olduğu gibi çalışır.
+
+   Bu blok dosyanın sonunda, ERİŞİLEBİLİRLİK bloğundan SONRA duruyor
+   ama onu ezmez: satır yüksekliği, yazı tipi ve renkler CSS
+   değişkenleri üzerinden tüketilir, sabitlenmez.
+   ================================================================ */
+
+/* --- Başlık alanı ------------------------------------------------ */
+.kart-head {
+  padding-block: 1.75rem 1.25rem;
+}
+
+.kart-page-title {
+  font-size: clamp(1.75rem, 4.4vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-top: 0.35rem;
+}
+
+.kart-lede {
+  max-width: 44ch;
+  margin-top: 0.6rem;
+  font-size: 1rem;
+}
+
+/* --- Sayısal özet şeridi ----------------------------------------- */
+/* Mobilde 2x2, sm'den sonra tek satır. 1px'lik boşluk ızgara zemininden
+   geldiği için ayrım çizgileri ayrı border'a gerek kalmadan oluşur. */
+.kart-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background-color: var(--color-rule);
+  border: 1px solid var(--color-rule);
+}
+
+@media (min-width: 640px) {
+  .kart-summary {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.kart-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.15rem 1.05rem;
+  background-color: var(--color-surface);
+}
+
+.kart-stat-label {
+  color: var(--color-ink-soft);
+}
+
+.kart-stat-value {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+}
+
+.kart-stat-value[data-accent="true"] {
+  color: var(--color-accent);
+}
+
+/* --- Bölge şeridi ------------------------------------------------ */
+/* Dokunma hedefi en az 44px (2.75rem); rem olduğu için erişilebilirlik
+   yazı ölçeğiyle birlikte büyür. */
+.kart-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 1.5rem;
+}
+
+.kart-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-rule);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.kart-filter-chip:hover {
+  border-color: var(--color-ink);
+  background-color: var(--color-paper-deep);
+}
+
+.kart-filter-chip[data-active="true"] {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* --- Kart ızgarası ---------------------------------------------- */
+/* minmax(0, 1fr): uzun başlık/URL ızgara kolonunu genişletip sayfayı
+   yatay kaydırmaya zorlayamaz. */
+.kart-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.15rem;
+}
+
+@media (min-width: 640px) {
+  .kart-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .kart-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+}
+
+/* --- Kart ------------------------------------------------------- */
+.kart-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-top: 3px solid var(--color-rule);
+  transition:
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+/* Band, üst kenar kalınlığı ile de okunur — ama rozetteki metin asıl
+   göstergedir, yani renk tek başına bilgi taşımıyor (WCAG 1.4.1). */
+.kart-card[data-band="KRITIK"] {
+  border-top-color: var(--color-accent);
+}
+
+.kart-card[data-band="YUKSEK"] {
+  border-top-color: var(--color-ink);
+}
+
+.kart-card[data-band="ORTA"] {
+  border-top-color: var(--color-ink-faint);
+}
+
+.kart-card:hover {
+  border-color: var(--color-ink);
+  transform: translateY(-2px);
+}
+
+.kart-card:focus-within {
+  border-color: var(--color-ink);
+}
+
+/* Kartın tamamı bağlantı: dokunma hedefi kart kadar büyük. */
+.kart-card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: 100%;
+  min-height: 11rem;
+  padding: 1.2rem 1.25rem 1.1rem;
+}
+
+.kart-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Bölge / kategori rozetleri — u-band'ın nötr, çerçevesi soluk çeşidi. */
+.kart-chip {
+  border-color: var(--color-rule);
+  color: var(--color-ink-soft);
+}
+
+.kart-chip-soft {
+  color: var(--color-ink-faint);
+}
+
+/* Sıra numarası: API'nin (gizli önem skoru) sırasını gösteren sessiz
+   işaret. Ham skor DEĞİL, yalnızca listedeki konum. */
+.kart-order {
+  margin-left: auto;
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-faint);
+}
+
+.kart-title {
+  font-size: clamp(1.15rem, 2.1vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -0.011em;
+  /* line-height bilinçli olarak tanımsız: .u-headline üzerinden
+     --a11y-line değerini miras alır, ferah kalır ve ayarla ölçeklenir. */
+}
+
+.kart-card-link:hover .kart-title {
+  color: var(--color-accent);
+}
+
+.kart-sentence {
+  margin-top: -0.1rem;
+  font-size: 1rem;
+  color: var(--color-ink-soft);
+}
+
+.kart-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.6rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--color-rule);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.kart-source {
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.kart-verify {
+  padding: 0.15rem 0.4rem;
+  border: 1px solid var(--color-rule);
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+
+/* --- Satır tabanlı kırpma --------------------------------------- */
+/* SATIR sayısı ile kırpıyoruz, max-height ile DEĞİL: kutu yüksekliği
+   satır yüksekliğinden türediği için --a11y-line ve --a11y-font-scale
+   büyüdüğünde kutu da büyür, metin ortadan kesilmez. */
+.kart-clamp-2,
+.kart-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.kart-clamp-3 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.kart-clamp-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* Okunabilir/disleksi yazı tipleri daha geniş kurulduğu için aynı metin
+   bir satır daha yer kaplar; kırpma sınırı buna göre gevşetilir. */
+html[data-a11y-font="okunabilir"] .kart-clamp-3,
+html[data-a11y-font="disleksi"] .kart-clamp-3 {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+html[data-a11y-font="okunabilir"] .kart-clamp-2,
+html[data-a11y-font="disleksi"] .kart-clamp-2 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* Hareket azaltıldığında kartlar yerinden oynamaz. */
+html[data-a11y-motion="azalt"] .kart-card:hover {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kart-card:hover {
+    transform: none;
+  }
+}
+
+/* ================================================================
+   AYARLAR SAYFASI (/ayarlar)
+   Tüm sınıflar `ayar-` önekli; başka hiçbir sayfayı etkilemez.
+   Gazete estetiği: yalnızca kural çizgileri, kare köşeler, gölge yok,
+   yeni renk yok — hepsi mevcut jetonlardan (@theme) türetiliyor.
+
+   Bu blok dosyanın SONUNDA: erişilebilirlik bloğu tema jetonlarını
+   ezdiği için (koyu tema, yüksek kontrast, renk paletleri) buradaki
+   kurallar da o jetonları okuyarak otomatik uyum sağlar.
+   ================================================================ */
+
+/* --- Bölüm kabuğu ------------------------------------------------ */
+.ayar-section {
+  border-top: 1px solid var(--color-ink);
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+/* --- Form alanları ---------------------------------------------- */
+.ayar-field {
+  display: block;
+}
+
+.ayar-input,
+.ayar-select,
+.ayar-textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--color-rule-strong);
+  border-radius: 0;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.ayar-textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+}
+
+.ayar-select {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+}
+
+.ayar-input::placeholder,
+.ayar-textarea::placeholder {
+  color: var(--color-ink-faint);
+}
+
+.ayar-input[aria-invalid="true"],
+.ayar-textarea[aria-invalid="true"],
+.ayar-select[aria-invalid="true"] {
+  border-width: 2px;
+  border-color: var(--color-accent);
+}
+
+/* Alan altındaki hata satırı — renk tek gösterge değil, "•" işareti var */
+.ayar-error {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  margin-top: 0.25rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.ayar-error::before {
+  content: "• ";
+}
+
+/* --- Düğmeler ---------------------------------------------------- */
+.ayar-btn {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--color-ink);
+  background-color: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.ayar-btn:hover:not(:disabled) {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.ayar-btn-primary {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.ayar-btn-primary:hover:not(:disabled) {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-paper);
+}
+
+.ayar-btn:disabled {
+  cursor: not-allowed;
+  border-color: var(--color-rule);
+  background-color: transparent;
+  color: var(--color-ink-faint);
+}
+
+/* --- Filtre çipleri --------------------------------------------- */
+.ayar-chip {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-rule);
+  background-color: transparent;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+}
+
+.ayar-chip[aria-pressed="true"],
+.ayar-chip[aria-checked="true"] {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* --- Aç/kapa anahtarı ------------------------------------------- */
+/* role="switch" taşıyan <button>; klavyeyle Enter/Space ile çalışır.
+   Durum renkle DEĞİL, kaydırma konumu + metin etiketiyle de belirtilir. */
+.ayar-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.ayar-switch-track {
+  position: relative;
+  display: inline-block;
+  width: 2.25rem;
+  height: 1.125rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-rule-strong);
+  background-color: var(--color-surface);
+  transition: background-color 0.15s;
+}
+
+.ayar-switch-track::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 0.875rem;
+  height: calc(1.125rem - 4px);
+  background-color: var(--color-rule-strong);
+  transition: transform 0.15s;
+}
+
+.ayar-switch[aria-checked="true"] {
+  color: var(--color-ink);
+}
+
+.ayar-switch[aria-checked="true"] .ayar-switch-track {
+  background-color: var(--color-ink);
+}
+
+.ayar-switch[aria-checked="true"] .ayar-switch-track::after {
+  transform: translateX(1.0625rem);
+  background-color: var(--color-paper);
+}
+
+.ayar-switch:disabled {
+  cursor: progress;
+  opacity: 0.55;
+}
+
+.ayar-switch:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* --- Kaynak tablosu --------------------------------------------- */
+/* globals.css'te `table { display:block; overflow-x:auto }` var; tablo
+   düzenini geri kazanmak için burada açıkça display:table diyoruz ve
+   kaydırmayı saran kaba bırakıyoruz. */
+.ayar-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.ayar-table {
+  display: table;
+  width: 100%;
+  overflow-x: visible;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.ayar-table th,
+.ayar-table td {
+  padding: 0.45rem 0.6rem 0.45rem 0;
+  text-align: left;
+  vertical-align: baseline;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.ayar-table thead th {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  border-bottom: 1px solid var(--color-rule-strong);
+  white-space: nowrap;
+}
+
+.ayar-table tbody tr[data-inactive="true"] td {
+  color: var(--color-ink-faint);
+}
+
+/* Sıralanabilir başlık — yön okla da belirtilir, renkle değil */
+.ayar-sort {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.ayar-table th[aria-sort="ascending"] .ayar-sort,
+.ayar-table th[aria-sort="descending"] .ayar-sort {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+/* Grup başlığı satırı (kaynak türüne göre) */
+.ayar-group-row th {
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--color-rule-strong);
+  color: var(--color-ink);
+}
+
+/* --- Otorite ağırlığı ölçeği ------------------------------------ */
+.ayar-meter {
+  display: inline-block;
+  width: 3.25rem;
+  height: 0.375rem;
+  border: 1px solid var(--color-rule);
+  vertical-align: middle;
+}
+
+.ayar-meter-fill {
+  display: block;
+  height: 100%;
+  background-color: var(--color-ink-soft);
+}
+
+/* --- Öneri durum etiketi ---------------------------------------- */
+.ayar-durum {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem 0.05rem;
+  border: 1px solid var(--color-rule-strong);
+  color: var(--color-ink);
+}
+
+.ayar-durum[data-durum="kabul"] {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.ayar-durum[data-durum="red"] {
+  border-style: dashed;
+  color: var(--color-ink-soft);
+}
+
+/* --- Bildirim satırı (başarı / hata) ---------------------------- */
+.ayar-bildirim {
+  font-family: var(--font-sans);
+  font-size: 0.78125rem;
+  line-height: 1.4;
+  padding: 0.45rem 0.6rem;
+  border-left: 3px solid var(--color-ink-soft);
+  background-color: var(--color-paper-deep);
+  color: var(--color-ink);
+}
+
+.ayar-bildirim[data-tur="hata"] {
+  border-left-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.ayar-bildirim[data-tur="basari"]::before {
+  content: "✓ ";
+  font-weight: 700;
+}
+
+/* --- Uyarı notu (kapatma davranışı gibi kritik açıklamalar) ----- */
+.ayar-uyari {
+  border: 1px solid var(--color-rule-strong);
+  border-left-width: 3px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+/* Ayarlar sayfası kağıda basılmaz — form ve anahtarların çıktısı anlamsız */
+@media print {
+  .ayar-page {
+    display: none !important;
+  }
+}

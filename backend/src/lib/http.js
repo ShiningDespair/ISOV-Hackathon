@@ -24,6 +24,10 @@ export class ApiError extends Error {
   static internal(message = 'Sunucu hatasi') {
     return new ApiError(500, 'INTERNAL_ERROR', message);
   }
+  /** 409 — kayit zaten var (ayni slug / ayni URL). */
+  static conflict(message = 'Kayıt zaten mevcut', details) {
+    return new ApiError(409, 'CONFLICT', message, details);
+  }
 }
 
 /** async route handler'larinda try/catch tekrarini onler. */
@@ -95,6 +99,46 @@ export function toMysqlDateTime(date) {
 export function toMysqlDate(date) {
   const dt = toMysqlDateTime(date);
   return dt ? dt.slice(0, 10) : null;
+}
+
+/**
+ * Yol parametresinden pozitif tam sayi kimlik okur.
+ * Gecersizse verilen mesajla 400 firlatir.
+ */
+export function parseIdParam(value, message = 'Geçersiz kimlik') {
+  const id = Number.parseInt(String(value ?? ''), 10);
+  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest(message);
+  return id;
+}
+
+/**
+ * Gevsek boolean okuma: true/1/yes/evet/acik -> true,
+ * false/0/no/hayir/kapali -> false, tanimsiz -> undefined.
+ * JSON govdesinden gercek boolean gelirse oldugu gibi kullanilir.
+ */
+export function toBool(value) {
+  if (value === undefined || value === null || value === '') return undefined;
+  if (typeof value === 'boolean') return value;
+  if (typeof value === 'number') return value !== 0;
+  const s = String(value).trim().toLowerCase();
+  if (['1', 'true', 'yes', 'evet', 'acik', 'açık'].includes(s)) return true;
+  if (['0', 'false', 'no', 'hayir', 'hayır', 'kapali', 'kapalı'].includes(s)) return false;
+  return undefined;
+}
+
+/**
+ * Yalnizca http(s) adresi kabul eder; normalize edilmis URL string'i doner.
+ * Gecersizse null. (javascript:, data:, ftp: ve bos deger reddedilir.)
+ */
+export function normalizeHttpUrl(value, { maxLength = 500 } = {}) {
+  const raw = String(value ?? '').trim();
+  if (!raw) return null;
+  let parsed;
+  try { parsed = new URL(raw); } catch { return null; }
+  if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return null;
+  if (!parsed.hostname || !parsed.hostname.includes('.')) return null;
+  const out = parsed.toString();
+  return out.length > maxLength ? null : out;
 }
 
 /** IN (?, ?, ?) icin guvenli yer tutucu uretimi. */

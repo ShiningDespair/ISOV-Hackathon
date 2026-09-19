@@ -11,7 +11,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "seed": "node src/jobs/seed.js"
+    "seed": "node src/jobs/seed.js",
+    "images": "node src/jobs/fetch-images.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.125.0",
