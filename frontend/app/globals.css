@@ -1651,3 +1651,2374 @@ html[data-a11y-motion="azalt"] .kart-card:hover {
     display: none !important;
   }
 }
+
+/* ================================================================== */
+/* DURUM SAYFASI (/durum) ve DURUM ROZETI                             */
+/*                                                                    */
+/* Mevcut palet dışına ÇIKILMAZ: yalnızca --color-ink, --color-ink-soft,*/
+/* --color-ink-faint, --color-rule, --color-paper-deep ve --color-accent*/
+/* kullanılır. Renk körlüğü paletleri yalnızca --color-accent'i        */
+/* değiştirdiği için durum ayrımı RENGE BİNDİRİLMEMİŞTİR (WCAG 1.4.1): */
+/* her durumun metin etiketi, ayrı bir simgesi ve farklı çerçeve       */
+/* kalınlığı/deseni vardır. Kutu/gölge yok, yalnızca kural çizgileri.  */
+/* ================================================================== */
+
+.durum-page {
+  /* 400px'te de yatay kaydırma olmaz: tüm satırlar akışkan. */
+  overflow-wrap: break-word;
+}
+
+.durum-kod {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--color-paper-deep);
+  padding: 0.05em 0.3em;
+  border-bottom: 1px solid var(--color-rule);
+  word-break: break-all;
+}
+
+/* --- Durum etiketi (liste satırlarında) -------------------------- */
+.durum-etiket {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  flex: none;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.25;
+  padding: 0.22rem 0.5rem;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.durum-etiket-simge {
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+/* Dört durum = dört farklı çerçeve. Renk değil, kalınlık ve desen. */
+.durum-etiket[data-durum="calisiyor"] {
+  border: 2px solid var(--color-ink);
+}
+
+.durum-etiket[data-durum="kismi"] {
+  border: 1px solid var(--color-ink-soft);
+  border-left: 4px solid var(--color-accent);
+}
+
+.durum-etiket[data-durum="arayuz"] {
+  border: 1px dashed var(--color-ink-soft);
+  color: var(--color-ink-soft);
+}
+
+.durum-etiket[data-durum="yok"] {
+  border: 1px dotted var(--color-ink-faint);
+  color: var(--color-ink-soft);
+  font-weight: 400;
+}
+
+/* --- Filtre şeridi ---------------------------------------------- */
+.durum-filtre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.durum-filtre-liste {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.4rem 0.5rem;
+  min-width: 0;
+}
+
+.durum-filtre-oge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.55rem;
+  color: var(--color-ink-soft);
+  border: 1px solid var(--color-rule);
+  text-decoration: none;
+}
+
+.durum-filtre-oge:hover {
+  color: var(--color-ink);
+  border-color: var(--color-ink-soft);
+}
+
+.durum-filtre-oge[data-aktif="1"] {
+  color: var(--color-ink);
+  border: 1px solid var(--color-ink);
+  border-bottom-width: 3px;
+  font-weight: 700;
+}
+
+/* Klavye odağı görünür olmalı — şerit Tab ile geziliyor. */
+.durum-filtre-oge:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+.durum-filtre-simge {
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+.durum-filtre-sayi {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-faint);
+  font-weight: 400;
+}
+
+.durum-filtre-oge[data-aktif="1"] .durum-filtre-sayi {
+  color: var(--color-ink);
+}
+
+/* --- Alan grupları ve özellik satırları -------------------------- */
+.durum-gruplar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.durum-liste {
+  border-top: 0;
+}
+
+.durum-satir {
+  padding: 0.85rem 0 0.95rem 0.85rem;
+  border-bottom: 1px solid var(--color-rule);
+  /* Sol kenar çizgisi durumu tekrar eder — simge ve metne ek üçüncü kanal. */
+  border-left: 3px solid var(--color-ink);
+}
+
+.durum-satir[data-durum="calisiyor"] {
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: var(--color-ink);
+}
+
+.durum-satir[data-durum="kismi"] {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: var(--color-accent);
+}
+
+.durum-satir[data-durum="arayuz"] {
+  border-left-width: 2px;
+  border-left-style: dashed;
+  border-left-color: var(--color-ink-soft);
+}
+
+.durum-satir[data-durum="yok"] {
+  border-left-width: 1px;
+  border-left-style: dotted;
+  border-left-color: var(--color-ink-faint);
+}
+
+.durum-satir-bas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+}
+
+.durum-satir-ad {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.25;
+  color: var(--color-ink);
+  min-width: 0;
+}
+
+.durum-satir[data-durum="yok"] .durum-satir-ad {
+  font-weight: 400;
+  color: var(--color-ink-soft);
+}
+
+.durum-satir-kimlik {
+  margin-top: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  color: var(--color-ink-faint);
+  word-break: break-all;
+}
+
+/* --- Kanıt / eksik / neden notları ------------------------------- */
+.durum-notlar {
+  margin-top: 0.6rem;
+  display: grid;
+  gap: 0.15rem 0.75rem;
+}
+
+.durum-not-baslik {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.durum-not-baslik[data-tur="kanit"] {
+  color: var(--color-ink);
+}
+
+.durum-not-metin {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+  margin-bottom: 0.45rem;
+  padding-left: 0.6rem;
+}
+
+/* Kanıt (nasıl doğrulandı) ayrı okunsun: koyu metin, düz kenar çizgisi. */
+.durum-not-metin[data-tur="kanit"] {
+  color: var(--color-ink);
+  border-left: 2px solid var(--color-ink-soft);
+  background-color: var(--color-paper-deep);
+  padding: 0.35rem 0.6rem;
+}
+
+.durum-not-metin[data-tur="eksik"] {
+  border-left: 2px dashed var(--color-ink-soft);
+}
+
+.durum-not-metin[data-tur="neden"] {
+  border-left: 1px dotted var(--color-ink-faint);
+  font-style: italic;
+}
+
+/* --- NACE kapsamı ----------------------------------------------- */
+.durum-bolum {
+  min-width: 0;
+}
+
+.durum-ince-liste {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.durum-ince-liste > li {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+  border-left: 2px dashed var(--color-ink-soft);
+  padding-left: 0.6rem;
+}
+
+.durum-ince-kod {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--color-ink);
+}
+
+.durum-ince-ad {
+  color: var(--color-ink);
+}
+
+.durum-ince-not {
+  color: var(--color-ink-faint);
+}
+
+/* --- Arayüz rozeti (diğer sayfalarda yarım özelliklerin yanında) -- */
+.durum-rozet-sarmal {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  vertical-align: baseline;
+}
+
+.durum-rozet {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 0.1rem 0.35rem;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+  cursor: help;
+}
+
+.durum-rozet-simge {
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+.durum-rozet[data-durum="kismi"] {
+  border: 1px solid var(--color-ink-soft);
+  border-left: 3px solid var(--color-accent);
+  color: var(--color-ink);
+}
+
+.durum-rozet[data-durum="arayuz"] {
+  border: 1px dashed var(--color-ink-soft);
+}
+
+.durum-rozet[data-durum="yok"] {
+  border: 1px dotted var(--color-ink-faint);
+}
+
+.durum-rozet-not {
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Dar ekran: 400px'te başlık ve etiket alt alta geçsin, taşma olmasın. */
+@media (max-width: 480px) {
+  .durum-satir {
+    padding-left: 0.6rem;
+  }
+
+  .durum-satir-ad {
+    font-size: 1rem;
+  }
+
+  .durum-filtre-liste {
+    gap: 0.35rem;
+  }
+
+  /* 400px güvencesi: uzun etiket ("Arayüz hazır, işlev yok") satır atlasın,
+     nowrap yüzünden yatay kaydırma çıkmasın. */
+  .durum-etiket {
+    white-space: normal;
+  }
+}
+
+/* Yazdırma: durum listesi kağıda basılabilir, filtre şeridi anlamsız. */
+@media print {
+  .durum-filtre {
+    display: none !important;
+  }
+
+  .durum-satir {
+    break-inside: avoid;
+  }
+
+  .durum-not-metin[data-tur="kanit"] {
+    background-color: transparent;
+  }
+}
+
+/* ================================================================
+   KİŞİSEL PANEL (/panelim) — sınıf öneki `pano-`
+   
+   Renkler YALNIZCA mevcut jetonlardan alınır. Sebep: erişilebilirlik
+   renk körlüğü paletleri yalnızca `--color-accent` değişkenini yeniden
+   tanımlıyor; palet dışı sabit bir renk (ör. #c00) o desteği sessizce
+   bozar ve protanopi kullanıcısında aciliyet çipi ayırt edilemez hale
+   gelirdi.
+   
+   Yatay kaydırma YALNIZCA `.pano-serit` kabının içindedir; sayfa gövdesi
+   400 piksel genişlikte de yatay kaymaz.
+   ================================================================ */
+
+.pano-page {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: 0 3rem;
+}
+
+@media (min-width: 40rem) {
+  .pano-page {
+    padding-inline: 1.5rem;
+  }
+}
+
+.pano-header {
+  border-bottom: 1px solid var(--color-ink);
+  padding-block: 1.25rem;
+}
+
+/* --- Bilgi / uyarı notu ------------------------------------------ */
+.pano-bilgi {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-ink);
+  background-color: var(--color-paper-deep);
+  border-left: 3px solid var(--color-ink-soft);
+  padding: 0.5rem 0.7rem;
+  margin: 0;
+}
+
+.pano-bilgi[data-ton="uyari"] {
+  border-left-color: var(--color-accent);
+}
+
+.pano-bilgi-yigin {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+/* --- Bölüm ------------------------------------------------------- */
+.pano-bolum {
+  padding-top: 1.6rem;
+}
+
+/* --- Gösterge (KPI) ızgarası ------------------------------------- */
+.pano-kpi {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .pano-kpi[data-adet="3"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .pano-kpi[data-adet="4"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Özet düzenindeki TEK küçük grafik */
+.pano-egilim {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--color-rule);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+}
+
+/* --- Yatay önemli konular şeridi --------------------------------- */
+.pano-serit-kap {
+  margin-top: 1.6rem;
+  border-top: 1px solid var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
+  padding-block: 0.35rem;
+}
+
+.pano-serit-baslik {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin: 0 0 0.25rem;
+}
+
+.pano-serit {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Kaydırma bu kabın içinde kalır */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* Kap klavyeyle gezilebilir: ok tuşlarıyla kaydırılır */
+.pano-serit:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Otomatik kaydırma YOK; yalnızca kullanıcı kaydırınca yumuşak geçiş,
+   o da hareket azaltma tercihinde kapalı. */
+@media (prefers-reduced-motion: no-preference) {
+  .pano-serit {
+    scroll-behavior: smooth;
+  }
+}
+
+html[data-a11y-motion="azalt"] .pano-serit {
+  scroll-behavior: auto;
+}
+
+.pano-serit-oge {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-left: 1px solid var(--color-rule);
+}
+
+.pano-serit-oge:first-child {
+  border-left: 0;
+}
+
+.pano-serit-baglanti {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  max-width: min(26rem, 82vw);
+}
+
+.pano-serit-metin {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.25;
+  color: var(--color-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pano-serit-baglanti:hover .pano-serit-metin,
+.pano-serit-baglanti:focus-visible .pano-serit-metin {
+  color: var(--color-accent);
+}
+
+/* --- Geri sayım çipi -------------------------------------------- */
+/* Aciliyet renge DEĞİL metne yazılıdır ("Son 6 gün" / "Süre doldu");
+   renk yalnızca ikincil ipucu. */
+.pano-gerisayim {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.45rem 0.2rem;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+  color: var(--color-ink);
+}
+
+.pano-gerisayim[data-aciliyet="yakin"] {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.pano-gerisayim[data-aciliyet="gecti"] {
+  color: var(--color-ink-faint);
+  border-style: dashed;
+}
+
+/* --- Yapılacaklar listesi (aksiyon düzeni) ---------------------- */
+/* Kasıtlı olarak haber kartından FARKLI: çerçeveli, numaralı, geri
+   sayım çipi başta. "Haber" değil "yapılacak" gibi okunmalı. */
+.pano-is-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.pano-is {
+  border: 1px solid var(--color-rule);
+  border-left: 3px solid var(--color-ink);
+  background-color: var(--color-surface);
+  padding: 0.7rem 0.85rem 0.75rem;
+}
+
+.pano-is-ust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pano-is-sira {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.pano-is-tarih {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.pano-is-kanit {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.4rem;
+  overflow-wrap: anywhere;
+}
+
+/* --- Mevzuat takvimi (takip düzeni) ----------------------------- */
+.pano-takvim {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pano-takvim-oge {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.35rem;
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+@media (min-width: 30rem) {
+  .pano-takvim-oge {
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 0.9rem;
+  }
+}
+
+.pano-takvim-tarih {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.pano-takvim-govde {
+  min-width: 0;
+}
+
+/* --- Değişiklik akışı ------------------------------------------- */
+.pano-degisiklik {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pano-degisiklik-oge {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.pano-degisiklik-tur {
+  flex: 0 0 auto;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.25rem 0.4rem 0.2rem;
+  color: var(--color-ink);
+}
+
+/* --- Dağılım ızgarası (operasyon düzeni) ------------------------ */
+.pano-dagilim {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .pano-dagilim {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+/* --- Haber akışı ------------------------------------------------ */
+.pano-akis {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pano-akis-oge {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.pano-akis-oge:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Tam özet kalemi kendi alt çizgisini ArticleCard'dan alır */
+.pano-akis-tam {
+  min-width: 0;
+}
+
+/* --- Altlık ve düzen önizleme ----------------------------------- */
+.pano-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-top: 1px solid var(--color-ink);
+  margin-top: 2rem;
+  padding-top: 0.9rem;
+}
+
+.pano-onizleme {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pano-onizleme-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pano-onizleme-baglanti {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.25rem 0.5rem 0.2rem;
+  color: var(--color-ink);
+}
+
+.pano-onizleme-baglanti[aria-current="page"] {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* --- Yazdırma ---------------------------------------------------- */
+/* Şerit ve önizleme bağlantıları kağıtta anlamsız; kaldırılır.
+   ÖNCELİK NOTU: bu kurallar yalnızca `.pano-*` sınıflarını hedefler, yani
+   görünüm anahtarının print bloğuyla (o blok `html[data-view]
+   [data-view-slot]` seçiyor) yarışmazlar — /panelim sayfasında görünüm
+   yuvası yok. Bu yüzden dosyadaki SIRALARI önemsiz; başka bir blok bunun
+   ardına eklenirse de davranış değişmez. */
+@media print {
+  .pano-serit-kap,
+  .pano-onizleme,
+  .pano-egilim {
+    display: none !important;
+  }
+
+  .pano-is {
+    border-color: #000 !important;
+    background: #ffffff !important;
+  }
+
+  .pano-gerisayim {
+    color: #000 !important;
+    border-color: #000 !important;
+  }
+}
+
+/* ================================================================
+   TARİH ARALIĞI · DEĞİŞİKLİKLER PANELİ  (önek: degis-)
+   HABER EYLEMLERİ: paylaş / gizle      (önek: eylem-)
+
+   Yeni renk üretilmedi: yalnızca mevcut jetonlar (kağıt, mürekkep,
+   kural çizgisi, tek bordo vurgu). Kutu ve gölge yok; ayrım ince
+   kural çizgileriyle kurulur. Diyalogda tek bir 1px mürekkep çerçeve
+   var — örtünün üstünde sınır olmadan okunmuyordu.
+   ================================================================ */
+
+/* --- Tarih aralığı şeridi ---------------------------------------- */
+.degis-tarih {
+  min-width: 0;
+}
+
+/* Sağ üste yerleşim: geniş ekranda sağa yapışır, 400px'te sola akar. */
+.degis-tarih-sag {
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .degis-tarih-sag {
+    text-align: right;
+  }
+  .degis-tarih-sag .degis-tarih-satir,
+  .degis-tarih-sag .degis-tarih-form {
+    justify-content: flex-end;
+  }
+}
+
+.degis-tarih-baslik {
+  color: var(--color-ink-faint);
+  margin-bottom: 0.35rem;
+}
+
+.degis-tarih-satir {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.4rem;
+  align-items: center;
+}
+
+.degis-tarih-ozel {
+  margin-top: 0.5rem;
+}
+
+.degis-tarih-ozet {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-ink-soft);
+  list-style: none;
+}
+
+.degis-tarih-ozet::-webkit-details-marker {
+  display: none;
+}
+
+.degis-tarih-ozet::after {
+  content: "+";
+  font-weight: 700;
+}
+
+.degis-tarih-ozel[open] > .degis-tarih-ozet::after {
+  content: "–";
+}
+
+.degis-tarih-ozet:hover {
+  color: var(--color-ink);
+}
+
+.degis-tarih-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.degis-tarih-alan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-align: left;
+  min-width: 0;
+}
+
+.degis-tarih-girdi {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  padding: 0.28rem 0.4rem;
+  border: 1px solid var(--color-rule-strong);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  border-radius: 0;
+  max-width: 100%;
+  /* iOS Safari tarih girdisini daraltıp metni kırpıyor */
+  min-height: 2rem;
+}
+
+.degis-tarih-buton {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.7rem;
+  border: 1px solid var(--color-rule-strong);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  cursor: pointer;
+}
+
+.degis-tarih-buton:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.degis-tarih-ipucu {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.35;
+  color: var(--color-ink-faint);
+  margin-top: 0.35rem;
+  text-align: left;
+}
+
+.degis-tarih-cip {
+  margin-top: 0.5rem;
+}
+
+.degis-tarih-not {
+  margin-top: 0.5rem;
+}
+
+/* --- "Bu aralıkta değişenler" satırı ----------------------------- */
+.degis-aralik {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.4rem;
+  text-align: left;
+}
+
+.degis-aralik-etiket {
+  color: var(--color-accent);
+}
+
+.degis-aralik-govde {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.degis-aralik-bag {
+  color: var(--color-ink-soft);
+}
+
+/* --- Son ziyaretten beri ----------------------------------------- */
+.degis-ziyaret {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.degis-ziyaret-etiket {
+  color: var(--color-ink-faint);
+}
+
+.degis-ziyaret-sayi {
+  color: var(--color-ink);
+}
+
+.degis-ziyaret-tarih {
+  color: var(--color-ink-faint);
+}
+
+/* --- Değişiklikler sayfası: filtre bloğu ------------------------- */
+.degis-filtre-blok {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--color-rule);
+  padding: 0.85rem 0;
+}
+
+@media (min-width: 768px) {
+  .degis-filtre-blok {
+    /* Tür şeridi solda, tarih sağ üstte */
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "tur tarih"
+      "cip cip";
+    align-items: start;
+    column-gap: 1.5rem;
+  }
+  .degis-filtre-blok > .degis-tur-seridi {
+    grid-area: tur;
+  }
+  .degis-filtre-blok > .degis-tarih {
+    grid-area: tarih;
+  }
+  .degis-filtre-blok > .degis-cipler {
+    grid-area: cip;
+  }
+}
+
+.degis-tur-seridi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.4rem;
+  min-width: 0;
+}
+
+.degis-tur-sayi {
+  color: var(--color-ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.degis-cipler {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.5rem;
+}
+
+.degis-toplam {
+  color: var(--color-ink-faint);
+  padding: 0.7rem 0 0.3rem;
+}
+
+.degis-dipnot {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  color: var(--color-ink-faint);
+  border-top: 1px solid var(--color-rule);
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+/* --- Gün grupları ------------------------------------------------ */
+.degis-grup {
+  margin-top: 1.2rem;
+}
+
+.degis-grup-baslik {
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 0.2rem;
+}
+
+.degis-grup-sayi {
+  color: var(--color-ink-faint);
+  font-weight: 400;
+}
+
+.degis-satirlar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Tek satırlık değişiklik kaydı ------------------------------- */
+.degis-satir {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.degis-satir[data-cekinceli="true"] {
+  border-bottom-style: dashed;
+}
+
+.degis-ozet {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.45rem;
+  padding: 0.45rem 1.1rem 0.45rem 0;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+
+.degis-ozet::-webkit-details-marker {
+  display: none;
+}
+
+/* Açılır kapanır göstergesi — satırın sağ ucunda, metne karışmaz */
+.degis-ozet::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0.45rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-ink-faint);
+}
+
+.degis-detay[open] > .degis-ozet::after {
+  content: "–";
+}
+
+.degis-ozet:hover .degis-baslik {
+  color: var(--color-accent);
+}
+
+/* Tür etiketi: sabit genişlikli küçük kicker, satırlar hizalı dursun */
+.degis-tur {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.05rem 0.3rem;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.degis-satir[data-tur="yeni"] .degis-tur {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.degis-satir[data-tur="band-yukseldi"] .degis-tur {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.degis-satir[data-cekinceli="true"] .degis-tur {
+  border-style: dashed;
+}
+
+.degis-baslik {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  color: var(--color-ink);
+  min-width: 0;
+}
+
+.degis-ne {
+  color: var(--color-ink-faint);
+}
+
+.degis-ne-metin {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.degis-cekince {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-style: italic;
+  color: var(--color-accent);
+  border-bottom: 1px dashed var(--color-accent);
+}
+
+.degis-zaman {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  color: var(--color-ink-faint);
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  /* Zaman sağa yapışır; 400px'te satır sonuna doğal akar */
+  .degis-zaman {
+    margin-left: auto;
+    padding-right: 0.2rem;
+  }
+}
+
+/* --- Genişletilmiş detay ---------------------------------------- */
+.degis-detay-govde {
+  padding: 0 0 0.7rem 0;
+  border-left: 2px solid var(--color-rule);
+  padding-left: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.degis-detay-satir {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+  margin-bottom: 0.35rem;
+}
+
+.degis-detay-cekince {
+  color: var(--color-ink);
+  border-left: 2px solid var(--color-accent);
+  padding-left: 0.5rem;
+  margin-left: -0.7rem;
+}
+
+.degis-detay-liste {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.1rem 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.degis-detay-liste dt {
+  color: var(--color-ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.625rem;
+  padding-top: 0.12rem;
+}
+
+.degis-detay-liste dd {
+  margin: 0;
+  color: var(--color-ink);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Yazdırma: detaylar açık basılsın, artı/eksi göstergesi gereksiz */
+@media print {
+  .degis-detay-govde {
+    display: block !important;
+  }
+  .degis-ozet::after {
+    content: "";
+  }
+  .degis-filtre-blok,
+  .degis-dipnot {
+    display: none !important;
+  }
+}
+
+/* ================================================================
+   HABER EYLEMLERİ (eylem-)
+   ================================================================ */
+
+.eylem-kok {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.3rem 0.4rem;
+  min-width: 0;
+}
+
+.eylem-sarmal {
+  position: relative;
+  min-width: 0;
+}
+
+.eylem-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  background: transparent;
+  border: 1px solid var(--color-rule);
+  padding: 0.2rem 0.42rem;
+  cursor: pointer;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.eylem-btn:hover:not(:disabled) {
+  color: var(--color-ink);
+  border-color: var(--color-rule-strong);
+}
+
+.eylem-btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.eylem-btn-birincil {
+  background-color: var(--color-ink);
+  border-color: var(--color-rule-strong);
+  color: var(--color-paper);
+}
+
+.eylem-btn-birincil:hover:not(:disabled) {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-paper);
+}
+
+.eylem-ikon {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+/* Dar yerleşim: metin görsel olarak gizlenir, erişilebilir ad korunur */
+.eylem-kok[data-compact="true"] .eylem-btn-metin {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Paylaş menüsü ---------------------------------------------- */
+.eylem-menu {
+  position: absolute;
+  right: 0;
+  z-index: 40;
+  min-width: 15rem;
+  max-width: min(20rem, calc(100vw - 2rem));
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.25rem;
+  text-align: left;
+}
+
+.eylem-menu-oge {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: var(--color-ink);
+  background: transparent;
+  border: 0;
+  padding: 0.4rem 0.45rem;
+  cursor: pointer;
+}
+
+.eylem-menu-oge:hover,
+.eylem-menu-oge:focus-visible {
+  background-color: var(--color-paper-deep);
+}
+
+.eylem-menu-ipucu {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--color-ink-faint);
+}
+
+.eylem-menu-ayrac {
+  border-top: 1px solid var(--color-rule);
+  margin: 0.25rem 0;
+}
+
+.eylem-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.4rem;
+  padding: 0.35rem 0.45rem 0.5rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+.eylem-form-alan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1 1 9rem;
+  min-width: 0;
+}
+
+.eylem-girdi {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--color-rule-strong);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.eylem-alan-cok {
+  resize: vertical;
+  font-family: var(--font-serif);
+  line-height: 1.45;
+}
+
+/* --- Bildirimler ------------------------------------------------- */
+.eylem-bildirim {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+  margin-top: 0.2rem;
+  overflow-wrap: anywhere;
+}
+
+/* Boş canlı bölge yer kaplamasın */
+.eylem-bildirim:empty {
+  display: none;
+}
+
+.eylem-bildirim-hata {
+  color: var(--color-accent);
+  font-weight: 600;
+  border-left: 2px solid var(--color-accent);
+  padding-left: 0.4rem;
+}
+
+/* --- Gizlendi / geri al ----------------------------------------- */
+.eylem-gizlendi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
+  padding: 0.5rem 0;
+  min-width: 0;
+}
+
+.eylem-gizlendi-metin {
+  min-width: 0;
+}
+
+.eylem-geri-al {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.eylem-geri-al:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* --- Gizle diyaloğu --------------------------------------------- */
+.eylem-katman {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+  /* Kağıt tonunun yarı saydamı — yeni renk üretmemek için ink kullanılır */
+  background-color: color-mix(in srgb, var(--color-ink) 45%, transparent);
+}
+
+.eylem-diyalog {
+  width: 100%;
+  max-width: 30rem;
+  margin: auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-rule-strong);
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.eylem-diyalog-bas {
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 0.6rem;
+}
+
+.eylem-diyalog-aciklama {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+  margin-top: 0.5rem;
+}
+
+.eylem-diyalog-haber {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  color: var(--color-ink);
+  border-left: 2px solid var(--color-rule-strong);
+  padding-left: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.eylem-diyalog-govde {
+  margin-top: 0.8rem;
+}
+
+.eylem-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 0.7rem;
+  min-width: 0;
+}
+
+.eylem-fieldset > legend {
+  color: var(--color-ink);
+  padding: 0;
+  margin-bottom: 0.35rem;
+}
+
+.eylem-sebepler {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem;
+}
+
+@media (min-width: 480px) {
+  .eylem-sebepler {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.15rem 0.8rem;
+  }
+}
+
+.eylem-sebep {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  padding: 0.18rem 0;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.eylem-sebep input {
+  accent-color: var(--color-accent);
+  flex: 0 0 auto;
+}
+
+.eylem-istege-bagli {
+  color: var(--color-ink-faint);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.eylem-sayac {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  color: var(--color-ink-faint);
+  margin-top: 0.15rem;
+}
+
+.eylem-diyalog-ayak {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.7rem;
+  margin-top: 0.7rem;
+}
+
+/* Eylemler kağıda basılmaz: düğmenin çıktısı anlamsız */
+@media print {
+  .eylem-kok,
+  .eylem-katman {
+    display: none !important;
+  }
+}
+
+/* ================================================================
+   OTURUM ve KAYIT (/giris, /kayit)
+   Tüm sınıflar `otur-` önekli; başka hiçbir sayfayı etkilemez.
+
+   Gazete estetiği: yalnızca kural çizgileri, kare köşeler, gölge yok,
+   YENİ RENK YOK. Her renk mevcut jetonlardan geliyor (--color-ink,
+   --color-rule, --color-accent, --color-paper-deep). Renk körlüğü
+   paletleri yalnızca --color-accent'i değiştirdiği için bu blok da
+   otomatik uyum sağlar.
+
+   Blok dosyanın SONUNDA: erişilebilirlik bloğu (koyu tema, yüksek
+   kontrast, palet) tema jetonlarını ezer; buradaki kurallar o ezilmiş
+   jetonları okur.
+   ================================================================ */
+
+/* --- Sayfa kabuğu ------------------------------------------------ */
+.otur-sayfa {
+  width: 100%;
+  max-width: 42rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: 1.5rem 3rem;
+}
+
+@media (min-width: 640px) {
+  .otur-sayfa {
+    padding-inline: 1.5rem;
+  }
+}
+
+.otur-kart {
+  padding-top: 1.25rem;
+}
+
+/* Programatik odaklanan başlık: fare kullanıcısına halka göstermeyiz,
+   klavye/ekran okuyucu kullanıcısına gösteririz. */
+.otur-odak:focus {
+  outline: none;
+}
+
+.otur-odak:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.otur-yan {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.75rem;
+}
+
+/* --- Metin düğmesi (şifremi unuttum, şifreyi göster) ------------- */
+.otur-mini-btn {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  background: transparent;
+  border: 0;
+  padding: 0.15rem 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.otur-mini-btn:hover {
+  color: var(--color-accent);
+}
+
+/* --- Şifre gücü göstergesi -------------------------------------- */
+/* Renk TEK GÖSTERGE DEĞİL: dolu parça sayısı + metin etiketi birlikte. */
+.otur-guc {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+}
+
+.otur-guc-cubuk {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.otur-guc-parca {
+  display: block;
+  width: 1.4rem;
+  height: 0.3rem;
+  border: 1px solid var(--color-rule-strong);
+}
+
+.otur-guc-parca[data-dolu="1"] {
+  background-color: var(--color-ink);
+}
+
+.otur-guc-metin {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: var(--color-ink-soft);
+}
+
+.otur-guc-ipucu {
+  color: var(--color-ink-faint);
+}
+
+/* --- Seçenek satırı (radio + açıklama) -------------------------- */
+.otur-secenek {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  border-top: 1px solid var(--color-rule);
+  padding: 0.6rem 0.2rem;
+  cursor: pointer;
+}
+
+.otur-secenek:hover {
+  background-color: var(--color-paper-deep);
+}
+
+.otur-secenek input[type="radio"] {
+  margin-top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  accent-color: var(--color-accent);
+}
+
+.otur-secenek-govde {
+  min-width: 0;
+}
+
+.otur-secenek-ad {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  color: var(--color-ink);
+}
+
+.otur-secenek-not {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--color-ink-soft);
+  margin-top: 0.1rem;
+}
+
+/* Sık seçenek: bülten sıklığı gibi iki kısa seçenek yan yana dursun. */
+.otur-secenek-sik {
+  border-top: 0;
+  border: 1px solid var(--color-rule);
+  flex: 1 1 12rem;
+  padding: 0.5rem 0.6rem;
+}
+
+.otur-secenek:focus-within {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+/* --- Sektör listesi --------------------------------------------- */
+.otur-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.otur-sektor {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 0.15rem 0.6rem;
+  align-items: baseline;
+  border-top: 1px solid var(--color-rule);
+  padding: 0.5rem 0.2rem;
+}
+
+.otur-sektor[data-birincil="1"] {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 0.5rem;
+  background-color: color-mix(in srgb, var(--color-accent) 6%, transparent);
+}
+
+.otur-sektor-kod {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-faint);
+}
+
+.otur-sektor-ad {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+.otur-sektor-secim {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin-top: 0.15rem;
+}
+
+.otur-onay {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+}
+
+.otur-onay input {
+  width: 0.95rem;
+  height: 0.95rem;
+  accent-color: var(--color-accent);
+}
+
+.otur-onay:has(input:checked) {
+  color: var(--color-ink);
+}
+
+/* --- İlgi alanı çipleri ----------------------------------------- */
+/* Natif checkbox görsel olarak saklanır, kabuk span çip gibi davranır.
+   Böylece klavye, ekran okuyucu ve form semantiği bedava gelir. */
+.otur-cip {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.otur-cip input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.otur-cip-govde {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--color-rule);
+  color: var(--color-ink-soft);
+}
+
+.otur-cip:hover .otur-cip-govde {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+/* Seçili durum renkle DEĞİL, dolgu + "✓" ile de belli olur. */
+.otur-cip input:checked + .otur-cip-govde {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.otur-cip input:checked + .otur-cip-govde::before {
+  content: "✓ ";
+  font-weight: 700;
+}
+
+.otur-cip input:focus-visible + .otur-cip-govde {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.otur-grup {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- İlerleme göstergesi ---------------------------------------- */
+.otur-ilerleme {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.otur-ilerleme-serit {
+  display: flex;
+  gap: 3px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.otur-ilerleme-serit li {
+  flex: 1 1 0;
+  height: 0.25rem;
+  border: 1px solid var(--color-rule-strong);
+}
+
+.otur-ilerleme-serit li[data-durum="gecildi"] {
+  background-color: var(--color-ink);
+}
+
+.otur-ilerleme-serit li[data-durum="aktif"] {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* --- Adım gezinmesi --------------------------------------------- */
+.otur-gezinme {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--color-ink);
+  padding-top: 0.9rem;
+}
+
+/* --- Son adım özeti --------------------------------------------- */
+.otur-ozet {
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.75rem;
+}
+
+.otur-ozet-satir {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.75rem;
+  border-bottom: 1px solid var(--color-rule);
+  padding: 0.35rem 0;
+}
+
+.otur-ozet-satir dt {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  flex: 0 0 9rem;
+}
+
+.otur-ozet-satir dd {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  color: var(--color-ink);
+  margin: 0;
+  min-width: 0;
+  flex: 1 1 12rem;
+}
+
+/* --- Kayıt sonrası derleme ekranı ------------------------------- */
+/* KOZMETİK ekran: arkada iş yapılmıyor (bkz. DerlemeAnimasyonu.tsx ve
+   feature-status.ts -> onboarding-animasyon). Görsel dil gazeteden
+   kopmuyor: ince kural çizgileri, serif tipografi, tek vurgu rengi. */
+.otur-derleme {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.otur-derleme-kural {
+  margin-top: 0.9rem;
+  border-top: 3px double var(--color-ink);
+}
+
+.otur-derleme-satir {
+  min-height: 3.2rem;
+  margin-top: 0.9rem;
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  color: var(--color-ink);
+}
+
+.otur-derleme-metin {
+  display: inline-block;
+  animation: otur-belir 0.45s ease-out both;
+}
+
+.otur-derleme-serit {
+  position: relative;
+  height: 0.35rem;
+  border: 1px solid var(--color-rule-strong);
+  overflow: hidden;
+}
+
+.otur-derleme-dolgu {
+  display: block;
+  height: 100%;
+  background-color: var(--color-accent);
+  transition: width 0.5s linear;
+}
+
+/* Şeridin üstünde ilerleyen ince bir ışık — hareket hissi, yeni renk yok. */
+.otur-derleme-serit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--color-ink) 22%, transparent) 50%,
+    transparent 100%
+  );
+  animation: otur-kaydir 1.5s linear infinite;
+}
+
+.otur-derleme-adim {
+  margin-top: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.otur-derleme-not {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--color-ink-faint);
+}
+
+@keyframes otur-belir {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes otur-kaydir {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Hareket azaltıldığında animasyon YOK. Bileşen zaten bu durumda ekranı
+   hiç göstermeden devam ediyor; bu kurallar yine de son savunma hattı. */
+html[data-a11y-motion="azalt"] .otur-derleme-metin,
+html[data-a11y-motion="azalt"] .otur-derleme-serit::after {
+  animation: none;
+}
+
+html[data-a11y-motion="azalt"] .otur-derleme-dolgu {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otur-derleme-metin,
+  .otur-derleme-serit::after {
+    animation: none;
+  }
+  .otur-derleme-dolgu {
+    transition: none;
+  }
+}
+
+/* 400 piksel genişlikte yatay kaydırma olmaması için: uzun sektör adları
+   kırılır, seçim satırı alta iner. */
+@media (max-width: 26rem) {
+  .otur-sektor {
+    grid-template-columns: 2.6rem 1fr;
+  }
+  .otur-ozet-satir dt {
+    flex-basis: 100%;
+  }
+  .otur-gezinme > * {
+    flex: 1 1 auto;
+  }
+}
+
+/* Kayıt ve giriş sayfaları kâğıda basılmaz — form çıktısı anlamsız. */
+@media print {
+  .otur-sayfa {
+    display: none !important;
+  }
+}
+
+/* ================================================================
+   YÖNETİM PANELİ (/admin) — sınıf öneki `yon-`
+   Tüm sınıflar `yon-` önekli; başka hiçbir sayfayı etkilemez.
+
+   `ayar-` bloğu YENİDEN KULLANILIR (form alanları, düğmeler, tablo,
+   çipler, anahtar, bildirim). Burada yalnızca ayarlar sayfasında
+   karşılığı olmayan parçalar var: sayı kutusu, rozet, kaydırıcı,
+   kopya kutusu, bölüm gezintisi, tanı listesi, yetki ekranı.
+
+   YENİ RENK ÜRETİLMEZ: hepsi mevcut @theme jetonlarından
+   (--color-ink / --color-rule / --color-accent / --color-paper-deep)
+   türetilir. Bu blok dosyanın SONUNDA olduğu için erişilebilirlik
+   bloğunun ezdiği jetonları okur; koyu tema, yüksek kontrast ve renk
+   körlüğü paletleri kendiliğinden uyar.
+   ================================================================ */
+
+/* --- Bölüm gezintisi -------------------------------------------- */
+.yon-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.yon-nav-baglanti {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 0.1rem;
+  text-decoration: none;
+}
+
+.yon-nav-baglanti:hover,
+.yon-nav-baglanti:focus-visible {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* --- Sayı kutuları ---------------------------------------------- */
+/* Grafik değil gazete kutusu: tek sayı + etiket + alt not. 400px'te
+   tek kolona düşer (auto-fit + minmax, medya sorgusu gerekmez). */
+.yon-kutu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1px;
+  background-color: var(--color-rule);
+  border: 1px solid var(--color-rule);
+}
+
+.yon-kutu {
+  background-color: var(--color-surface);
+  padding: 0.7rem 0.85rem 0.8rem;
+  min-width: 0;
+}
+
+/* Dikkat çekmesi gereken kutu: renk TEK GÖSTERGE DEĞİL, sol kural da var. */
+.yon-kutu[data-vurgu="1"] {
+  border-left: 3px solid var(--color-accent);
+}
+
+.yon-kutu-deger {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-ink);
+  margin-top: 0.15rem;
+}
+
+.yon-kutu-not {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--color-ink-soft);
+  margin-top: 0.25rem;
+}
+
+/* --- Durum rozeti ----------------------------------------------- */
+/* Renk tek gösterge DEĞİL: metin her zaman yazılı ve kenarlık biçimi
+   (düz / kesik / dolgu) türü ayrıca belirtir. */
+.yon-rozet {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem 0.05rem;
+  border: 1px solid var(--color-rule-strong);
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.yon-rozet[data-tur="iyi"] {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.yon-rozet[data-tur="uyari"] {
+  border-style: dashed;
+}
+
+.yon-rozet[data-tur="kotu"] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  border-width: 2px;
+}
+
+.yon-rozet[data-tur="notr"] {
+  border-color: var(--color-rule);
+  color: var(--color-ink-soft);
+}
+
+.yon-rozet[data-tur="vurgu"] {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-paper);
+}
+
+/* --- Süzgeç satırı --------------------------------------------- */
+.yon-filtre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.6rem 0.9rem;
+}
+
+/* --- Tablo ince ayarı ------------------------------------------ */
+/* `ayar-table` tabanı; yönetim tablolarında satırlar iki satırlık alt
+   not taşıyor, hizayı tepeye çekiyoruz. */
+.yon-tablo td,
+.yon-tablo th {
+  vertical-align: top;
+  padding-right: 0.75rem;
+}
+
+.yon-tablo .ayar-select {
+  min-width: 7.5rem;
+}
+
+/* Hata metni: renk + "•" işareti, ikisi birlikte. */
+.yon-hata-metni {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.yon-hata-metni::before {
+  content: "• ";
+}
+
+/* --- Sayfalama ------------------------------------------------- */
+.yon-sayfalama {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 0.9rem;
+  margin-top: 0.9rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+/* --- Alt bölüm (bölüm içinde ayrılmış blok) --------------------- */
+.yon-altbolum {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+/* --- Kaydırıcı -------------------------------------------------- */
+/* Değer GÖRSEL olarak da yazılı (bkz. Kaydirici bileşeni); kaydırıcı
+   konumu tek gösterge değil. */
+.yon-kaydirici {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  accent-color: var(--color-ink);
+}
+
+.yon-kaydirici:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.yon-kaydirici:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* --- Formül / özet kutusu -------------------------------------- */
+.yon-ozet {
+  margin-top: 1.25rem;
+  border-left: 3px solid var(--color-ink-soft);
+  background-color: var(--color-paper-deep);
+  padding: 0.7rem 0.85rem;
+}
+
+/* --- Kopyalanabilir bağlantı kutusu ---------------------------- */
+.yon-kopya {
+  max-width: 44rem;
+}
+
+/* Uzun tek kelimelik URL kutudan taşmasın; tek boşluksuz dize
+   sarılmazsa 400px'te yatay kaydırma üretir. */
+.yon-kopya-girdi {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  word-break: break-all;
+}
+
+/* --- Tanı listesi (SMTP test sonucu) --------------------------- */
+.yon-tani {
+  margin-top: 0.6rem;
+  border: 1px solid var(--color-rule);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+}
+
+.yon-tani > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  justify-content: space-between;
+  padding: 0.35rem 0.6rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.yon-tani > div:last-child {
+  border-bottom: 0;
+}
+
+.yon-tani dt {
+  color: var(--color-ink-soft);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.yon-tani dd {
+  margin: 0;
+  color: var(--color-ink);
+  text-align: right;
+  min-width: 0;
+  word-break: break-word;
+}
+
+/* --- Yetki / oturum ekranı ------------------------------------- */
+/* Boş sayfa ya da çökme YERİNE gösterilen temiz durum ekranı. */
+.yon-kapi {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 3.5rem 1rem 4rem;
+}
+
+/* --- 400px --------------------------------------------------- */
+@media (max-width: 30rem) {
+  .yon-kutu-deger {
+    font-size: 1.25rem;
+  }
+
+  /* Süzgeçler tek kolona düşsün; yan yana sıkışan seçim kutuları
+     dokunmayla kullanılamaz hale geliyordu. */
+  .yon-filtre > * {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .yon-kapi {
+    padding: 2.5rem 1rem 3rem;
+  }
+}
+
+/* Yönetim paneli kağıda basılmaz — form ve tabloların çıktısı anlamsız.
+   `.ayar-page` zaten gizleniyor ama /admin kabuğu ayrıca işaretli ki
+   sınıf ileride ayrışırsa yazdırma davranışı değişmesin. */
+@media print {
+  .yon-page {
+    display: none !important;
+  }
+}

@@ -11,8 +11,13 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
+    "migrate": "node src/jobs/migrate.js",
     "seed": "node src/jobs/seed.js",
-    "images": "node src/jobs/fetch-images.js"
+    "images": "node src/jobs/fetch-images.js",
+    "profile-vectors": "node src/jobs/build-profile-vectors.js",
+    "summaries": "node src/jobs/build-summaries.js",
+    "send-digest": "node src/jobs/send-digest.js",
+    "scheduler": "node src/jobs/scheduler.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.125.0",
@@ -24,6 +29,8 @@
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
     "mysql2": "^3.11.4",
+    "nodemailer": "^6.9.16",
+    "puppeteer-core": "^23.11.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {

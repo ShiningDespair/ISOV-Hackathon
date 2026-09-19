@@ -94,11 +94,59 @@ services:
       # Model dosyalari named volume'da; her baslatmada yeniden inmez.
       EMBEDDING_CACHE_DIR: /app/.cache/models
       EMBEDDING_LOAD_TIMEOUT_MS: ${EMBEDDING_LOAD_TIMEOUT_MS:-300000}
+      # --- SUNUCU TARAFI PDF (Chromium) ------------------------------
+      # Imajda /usr/bin/chromium kurulu (bkz. backend/Dockerfile). Yol
+      # burada da acikca veriliyor: ayni imaj baska bir ortamda paketli
+      # Chromium ile kosarsa tek satir degistirmek yeterli olsun.
+      PUPPETEER_EXECUTABLE_PATH: ${PUPPETEER_EXECUTABLE_PATH:-/usr/bin/chromium}
+      # PDF_ENABLED=false -> pdfService.isAvailable() false doner, uc 503
+      # verir ve sistemin geri kalani etkilenmez (bozulma yolu boyle test edildi).
+      PDF_ENABLED: ${PDF_ENABLED:-true}
+      # Tarayici bosta bu sure sonra kapanir (bellek geri verilir).
+      PDF_IDLE_TIMEOUT_MS: ${PDF_IDLE_TIMEOUT_MS:-300000}
+      PDF_RENDER_TIMEOUT_MS: ${PDF_RENDER_TIMEOUT_MS:-45000}
+
+      # --- SMTP / E-POSTA --------------------------------------------
+      # ONCELIK: app_settings.smtp (admin panelinden, sifre AES-256-GCM)
+      # sonra bu env degiskenleri. Ikisi de yoksa mailService
+      # `available:false` doner ve hicbir yer COKMEZ; gonderim denenmez.
+      # DIKKAT: app_settings'teki sifreli SMTP sifresinin cozulebilmesi
+      # icin SETTINGS_SECRET tanimli olmali (yonetim ayarlari katmani).
+      MAIL_ENABLED: ${MAIL_ENABLED:-true}
+      SMTP_URL: ${SMTP_URL:-}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_SECURE: ${SMTP_SECURE:-false}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM: ${SMTP_FROM:-}
+      # Ayni aliciya dakikada azami e-posta.
+      MAIL_RATE_PER_MINUTE: ${MAIL_RATE_PER_MINUTE:-5}
+      # E-postadaki haber baglantilarinin tabani.
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-https://hackathon.dhsyazilim.com}
+
+      # --- BULTEN ZAMANLAYICISI --------------------------------------
+      # VARSAYILAN KAPALI: demo sirasinda istenmeyen gonderim olmasin.
+      # Zamanlayici AYRI SUREC olarak kosar:
+      #   docker compose exec -e DIGEST_SCHEDULER_ENABLED=true backend npm run scheduler
+      # Elle tek seferlik gonderim: npm run send-digest -- --dry-run
+      DIGEST_SCHEDULER_ENABLED: ${DIGEST_SCHEDULER_ENABLED:-false}
+      DIGEST_TICK_MS: ${DIGEST_TICK_MS:-60000}
+      DIGEST_CONCURRENCY: ${DIGEST_CONCURRENCY:-3}
+      # Bultene gorsel PDF eki eklensin mi (format='tam' kullanicilar icin).
+      DIGEST_ATTACH_PDF: ${DIGEST_ATTACH_PDF:-true}
     ports:
       - "127.0.0.1:${BACKEND_PORT:-5005}:5005"
+    # Chromium'un paylasimli bellegi. `--disable-dev-shm-usage` ile zaten
+    # diske dusuyoruz ama Docker'in 64 MB varsayilani coK sayfali PDF'te
+    # sekmeyi sessizce oldurebiliyor; 256 MB ucuz sigorta.
+    shm_size: 256m
     volumes:
       # Seed dosyalari salt-okunur baglanir; `npm run seed` bunlari okur.
       - ./seed:/app/seed:ro
+      # Uretilen PDF'ler AKISLA donduruldugu icin kalici depo GEREKMIYOR;
+      # yalnizca CLI islerinin diske yazdigi gecici ciktilar icin klasor.
+      - pdf_out:/app/var/pdf
       # Embedding modeli onbellegi — ~1,1 GB, konteyner yeniden kurulsa da kalir.
       - model_cache:/app/.cache/models
     # Docker'in gomulu DNS'i dis cozumlemede flake edebiliyor; sabit upstream
@@ -138,6 +186,8 @@ volumes:
   qdrant_data:
   # Embedding modeli onbellegi (HuggingFace indirmeleri)
   model_cache:
+  # CLI isleri (send-digest --pdf-out gibi) diske PDF yazarsa burada durur.
+  pdf_out:
 
 networks:
   isov:

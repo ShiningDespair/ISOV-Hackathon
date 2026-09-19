@@ -38,18 +38,58 @@ const router = Router();
 /** sources.source_type ENUM'u ile birebir — allow-list olarak kullaniliyor. */
 export const SOURCE_TYPES = ['mevzuat', 'kurum', 'acik_veri', 'basin', 'uluslararasi', 'diger'];
 
-/** Kimlik dogrulama eklenene kadar tek kiraci. */
+/** Oturumu (ve kurumu) olmayan isteklerin dustugu varsayilan kiraci. */
 export const DEFAULT_TENANT = 'isov';
 
-/** Istekten kiraci anahtari: query, govde veya baslik; yoksa 'isov'. */
+/**
+ * Istegin KURUM anahtari.
+ *
+ * ------------------------- GUVENLIK DUZELTMESI -----------------------
+ * Bu fonksiyonun ilk surumu kurum anahtarini dogrudan query/govde/baslik
+ * tan okuyor ve HIC dogrulama yapmiyordu. Kullanicilar var oldugu andan
+ * itibaren bu, `?tenant_key=baskafirma` yazan herkesin BASKA BIR KURUMUN
+ * izleme listesini okuyup degistirmesi anlamina gelirdi — yani kullanici
+ * sistemi mevcut uclari iyilestirmez, KOTULESTIRIRDI.
+ *
+ * Kural (CONTRACT.md):
+ *   1. Oturumun kurumu TERCIH EDILIR. Oturum acmis normal kullanicinin
+ *      istekte gonderdigi tenant_key YOKSAYILIR — panelin kendi
+ *      gonderdigi eski parametreler sessizce yetki yukseltmesine
+ *      donusmesin.
+ *   2. Istekten okuma yalnizca iki durumda kabul edilir:
+ *        - NODE_ENV !== 'production' (oturumsuz arac/otomasyon calissin;
+ *          canli veride etkisi yok cunku production'da kapali)
+ *        - req.user.role === 'admin' (kurumlar arasi denetim gercek bir
+ *          yonetim ihtiyaci)
+ *   3. Hicbiri yoksa oturumun kurumu, o da yoksa 'isov'.
+ *
+ * Not: burada kurum anahtarinin `tenants` tablosunda VAR OLDUGU
+ * dogrulanmaz — fonksiyon senkron ve her liste sorgusunda calisiyor.
+ * Gerek de yok: bilinmeyen bir anahtar `tenant_source_prefs`te hicbir
+ * satirla eslesmez, yani "hicbir sapma" = varsayilan gorunum uretir.
+ * Kayit yolunda (authService.registerUser) kurum ASIL dogrulanan yer.
+ */
 export function tenantKeyOf(req) {
-  const raw = qs(req.query?.tenant_key)
-    || (req.body && typeof req.body === 'object' ? req.body.tenant_key : undefined)
-    || req.get?.('x-tenant-key');
-  const s = String(raw ?? '').trim();
-  if (!s) return DEFAULT_TENANT;
-  if (s.length > 64) throw ApiError.badRequest('Kiracı anahtarı en fazla 64 karakter olabilir');
-  return s;
+  const sessionKey = req.tenant?.tenant_key || null;
+  const isAdmin = req.user?.role === 'admin';
+
+  // (1) Oturum var ve admin degil -> tartisma yok, oturumun kurumu.
+  if (sessionKey && !isAdmin) return sessionKey;
+
+  // (2) Istekten okuma izni.
+  if (process.env.NODE_ENV !== 'production' || isAdmin) {
+    const raw = qs(req.query?.tenant_key)
+      || (req.body && typeof req.body === 'object' ? req.body.tenant_key : undefined)
+      || req.get?.('x-tenant-key');
+    const s = String(raw ?? '').trim();
+    if (s) {
+      if (s.length > 64) throw ApiError.badRequest('Kiracı anahtarı en fazla 64 karakter olabilir');
+      return s;
+    }
+  }
+
+  // (3) Oturumun kurumu, o da yoksa varsayilan.
+  return sessionKey || DEFAULT_TENANT;
 }
 
 /** Kaynak satirinin API sekli. */

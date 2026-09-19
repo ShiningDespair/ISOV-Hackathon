@@ -14,6 +14,7 @@ import { buildFactors, computeImportance, bandCutoffs, bandOf } from '../lib/imp
 import { toMysqlDateTime } from '../lib/http.js';
 import { buildEmbeddingText, embed } from './embeddings.js';
 import * as vectorStore from './vectorStore.js';
+import { recordChanges } from './changeLog.js';
 
 /**
  * Parmak izlerini (content_hash + simhash) baslik/govdeden yeniden uretir.
@@ -480,11 +481,18 @@ export function thresholdsFromEnv(overrides = {}) {
   return { ...out, ...overrides };
 }
 
-/** Parmak izi tazeleme + kumeleme + skorlama tek adimda. */
+/** Parmak izi tazeleme + kumeleme + skorlama + degisiklik kaydi tek adimda. */
 export async function runPipeline(conn, opts = {}) {
   const options = { ...thresholdsFromEnv(opts), ...semanticOptionsFromEnv(opts) };
   const refreshed = await refreshFingerprints(conn);
   const clustering = await recomputeClusters(conn, options);
   const scoring = await recomputeImportance(conn, options);
-  return { refreshed, ...clustering, ...scoring };
+  // 4. ADIM — DEGISIKLIK KAYDI (dosya katmani dahil).
+  // SIRA ZORUNLU: `kume-buyudu` kume uye sayisini, `band-yukseldi` yeni
+  // bandi okuyor; ikisi de yukaridaki iki adimin CIKTISI. Ayri bir gece
+  // isi olsaydi ayni veriyi ikinci kez okuyacak ve iki is arasinda yaris
+  // durumu dogacakti. `recordChanges` hicbir kosulda firlatmaz —
+  // olay akisindaki eksiklik hattı durdurmaz.
+  const changes = await recordChanges(conn, { runId: opts.runId ?? null, ...opts });
+  return { refreshed, ...clustering, ...scoring, changes };
 }

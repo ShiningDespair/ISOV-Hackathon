@@ -1,0 +1,10 @@
+export DB_HOST=127.0.0.1
+export DB_PORT=3312
+export DB_NAME=isov
+export DB_USER=isov
+export DB_PASSWORD=isov_pass
+export QDRANT_URL=http://127.0.0.1:6335
+export QDRANT_COLLECTION=isov_articles
+export EMBEDDING_CACHE_DIR=/srv/projects/hackathon/backend/.cache/models
+export EMBEDDING_MODEL=Xenova/multilingual-e5-base
+export TZ=Europe/Istanbul

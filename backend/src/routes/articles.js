@@ -18,7 +18,8 @@ import {
   serializeArticleRows, tagsByArticleIds,
 } from '../services/articleService.js';
 import { runFetchImages } from '../jobs/fetch-images.js';
-import { DEFAULT_TENANT } from './sources.js';
+import { tenantKeyOf } from './sources.js';
+import { listPersonalized, loadProfile } from '../services/personalize.js';
 
 const router = Router();
 
@@ -37,6 +38,11 @@ const SORTS = {
   oldest: 'a.published_at ASC, a.id ASC',
   title: 'a.title ASC, a.id ASC',
   relevance: null, // q varsa MATCH skoruna gore; yoksa importance'a duser
+  // KISISEL SIRALAMA: SQL'de yapilamaz (skor JS'te hesaplaniyor), bu yuzden
+  // deger null ve istek services/personalize.js'e YONLENDIRILIR. Anahtar
+  // yine de allow-list'te duruyor ki `pickFromAllowList` onu tanisin ve
+  // bilinmeyen bir `sort` degeri gibi sessizce varsayilana dusmesin.
+  kisisel: null,
 };
 const DEFAULT_SORT = 'importance';
 
@@ -45,17 +51,44 @@ const FULLTEXT_MIN_LENGTH = 4;
 
 /**
  * Filtreleri WHERE parcalarina cevirir.
- * @param {object} q  req.query
+ *
+ * DISA ACIK: `services/personalize.js` (sort=kisisel) AYNI WHERE'i kullanmak
+ * zorunda. Filtre mantigini kopyalamak iki yolun birbirinden kaymasi demek
+ * olurdu — `watched_only` bir yolda uygulanip otekinde atlanirsa kullanici
+ * sessizce farkli sonuc gorur ve hata gorunmez.
+ *
+ * @param {object} req       Istek — kurum anahtari ve oturum OTURUMDAN okunur
+ * @param {object} reqQuery  req.query
  * @param {'fulltext'|'like'|'none'} searchMode
  */
-function buildFilters(reqQuery, searchMode) {
+export function buildFilters(req, reqQuery, searchMode) {
   const where = [];
   const params = [];
+  // Oturum orta katmani doldurur; yoksa null gelir ve gizleme suzgeci
+  // hic devreye girmez (oturumsuz davranis DEGISMEZ).
+  const userId = req?.user?.id ?? null;
 
   // Varsayilan: tekrarlar gizli. ?include_duplicates=1 ile hepsi gelir.
   const includeDuplicates = ['1', 'true', 'yes', 'evet']
     .includes(String(qs(reqQuery.include_duplicates) || '').toLowerCase());
   if (!includeDuplicates) where.push('a.is_duplicate = 0');
+
+  // KULLANICININ GIZLEDIGI HABERLER — VARSAYILAN: GIZLI.
+  //
+  // `?include_hidden=1` ile geri gelirler. Gizleme VERIYI SILMEZ:
+  // `user_article_prefs.hidden_at` damgasi kullaniciya OZELDIR; ayni haberi
+  // baska kullanici gorur, kume ve skor degismez. Suzgec yalnizca oturum
+  // varken devreye girer — oturumsuz istek bugunku davranisi aynen alir.
+  const includeHidden = toBool(qs(reqQuery.include_hidden)) === true;
+  if (userId && !includeHidden) {
+    where.push(`NOT EXISTS (
+      SELECT 1 FROM user_article_prefs uap
+       WHERE uap.article_id = a.id
+         AND uap.user_id = ?
+         AND uap.hidden_at IS NOT NULL
+    )`);
+    params.push(userId);
+  }
 
   const region = pickFromAllowList(reqQuery.region, REGIONS);
   if (region) { where.push('a.region = ?'); params.push(region); }
@@ -95,7 +128,12 @@ function buildFilters(reqQuery, searchMode) {
          AND tsp.tenant_key = ?
          AND tsp.is_watched = 0
     )`);
-    params.push(qs(reqQuery.tenant_key) || DEFAULT_TENANT);
+    // KURUM ANAHTARI `tenantKeyOf()`TEN GELIR, req.query'den DEGIL.
+    // Eski hali `?tenant_key=` degerini dogrudan okuyordu ve boylece
+    // sources.js'teki guvenlik kontrolunu tamamen ATLIYORDU: oturum acmis
+    // bir kullanici `?watched_only=1&tenant_key=baskafirma` ile baska bir
+    // kurumun izleme gorunumunu okuyabilirdi.
+    params.push(tenantKeyOf(req));
   }
 
   // Etiket filtresi EXISTS ile: JOIN kullanilsa sayfalama satir cogaltirdi.
@@ -141,8 +179,8 @@ function buildFilters(reqQuery, searchMode) {
 }
 
 /** Tek turda sayim + sayfa verisi. */
-async function runListQuery(reqQuery, searchMode, { limit, offset, orderBy }) {
-  const { whereSql, params, search } = buildFilters(reqQuery, searchMode);
+async function runListQuery(req, searchMode, { limit, offset, orderBy }) {
+  const { whereSql, params, search } = buildFilters(req, req.query, searchMode);
 
   const countRows = await query(
     `SELECT COUNT(*) AS total ${ARTICLE_FROM} ${whereSql}`,
@@ -179,24 +217,44 @@ router.get('/', asyncHandler(async (req, res) => {
   const sortKey = pickFromAllowList(req.query.sort, Object.keys(SORTS), DEFAULT_SORT);
   const search = qs(req.query.q);
 
-  // relevance sadece arama varken; degilse varsayilan siralamaya duser.
-  const orderBy = sortKey === 'relevance' ? null : (SORTS[sortKey] || SORTS[DEFAULT_SORT]);
-
   let searchMode = 'none';
   if (search) searchMode = search.length >= FULLTEXT_MIN_LENGTH ? 'fulltext' : 'like';
 
-  let result = await runListQuery(req.query, searchMode, { limit, offset, orderBy });
+  // --- KISISEL SIRALAMA -------------------------------------------------
+  // Oturum ZORUNLU: kisisel skor profilden hesaplaniyor, profilsiz
+  // "kisisel" siralama yoktur. Sessizce global siralamaya dusmek YANLIS
+  // olurdu — arayuz kisiselestirilmis bir liste gosterdigini sanar ve
+  // kimse fark etmez.
+  if (sortKey === 'kisisel') {
+    if (!req.user?.id) {
+      throw new ApiError(401, 'UNAUTHORIZED', 'Kişisel sıralama için oturum açmanız gerekiyor.');
+    }
+    const { whereSql, params } = buildFilters(req, req.query, searchMode);
+    const profile = await loadProfile(req.user.id, tenantKeyOf(req));
+    const out = await listPersonalized({
+      whereSql, params, profile, page, limit, offset, reveal,
+    });
+    return res.json({
+      ...serializeList(out.data, { page, limit, total: out.total }),
+      meta: out.meta,
+    });
+  }
+
+  // relevance sadece arama varken; degilse varsayilan siralamaya duser.
+  const orderBy = sortKey === 'relevance' ? null : (SORTS[sortKey] || SORTS[DEFAULT_SORT]);
+
+  let result = await runListQuery(req, searchMode, { limit, offset, orderBy });
 
   // FULLTEXT hic sonuc vermediyse (stopword, ekli kelime, kisa token)
   // sessizce LIKE yedegine dusuyoruz — kullanici bos ekran gormesin.
   if (result.total === 0 && searchMode === 'fulltext') {
-    result = await runListQuery(req.query, 'like', {
+    result = await runListQuery(req, 'like', {
       limit, offset, orderBy: orderBy || SORTS[DEFAULT_SORT],
     });
   }
 
   const data = await serializeArticleRows(result.rows, { reveal });
-  res.json(serializeList(data, { page, limit, total: result.total }));
+  return res.json(serializeList(data, { page, limit, total: result.total }));
 }));
 
 /**

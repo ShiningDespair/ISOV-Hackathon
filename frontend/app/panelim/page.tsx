@@ -1,0 +1,558 @@
+/**
+ * PANELİM — pozisyona göre farklılaşan kişisel panel.
+ *
+ * DÖRT DÜZEN, TEK EŞLEME NOKTASI: hangi düzenin gösterileceği
+ * `/auth/me` yanıtındaki türetilmiş `layout` alanından gelir. Pozisyon ->
+ * düzen eşlemesi BURADA TEKRARLANMAZ; `backend/src/lib/positions.js`
+ * POSITION_LAYOUT tek doğruluk kaynağıdır. (`?duzen=` parametresi yalnızca
+ * önizleme/doğrulama içindir, profili değiştirmez.)
+ *
+ * VAKİT BÜTÇESİ BAĞLAYICIDIR: kalem sayısı ve biçim DENSITY'den gelir
+ * (2 dk -> 5 kalem tek cümle, 5 dk -> 12 kalem üç madde, 15 dk -> 30 kalem
+ * kademeli). Özet düzeni ayrıca 5 kalemle sınırlı kalır, çünkü sözleşmesi
+ * "kaydırma gerektirmesin".
+ *
+ * SIRALAMA İSTEMCİDE DEĞİŞTİRİLMEZ. API'den gelen dizi olduğu gibi basılır;
+ * "son başvuru tarihli kalemler önce" gibi bölümleme yalnızca AYIRMA
+ * (partition) yapar, her bölümün içinde API sırası korunur.
+ *
+ * GİZLİ METRİK: `importance_score` hiçbir yerde okunmaz, yalnızca
+ * `importance_band` rozet olarak basılır.
+ *
+ * UÇLAR YOKSA (404/501/401): panel profil olmadan da açılır, `sort`
+ * parametresi gönderilmez ve kullanıcıya "kişiselleştirme henüz etkin
+ * değil" denir. Sayfa ne çöker ne de boş kalır.
+ */
+
+import type { Metadata } from "next";
+import Link from "next/link";
+import { cookies } from "next/headers";
+
+import { getStatsOverview } from "@/lib/api";
+import {
+  densityOf,
+  getPanelArticles,
+  getPanelChanges,
+  getPanelMe,
+  isPanelLayout,
+  normalizeTimeBudget,
+  type PanelAuth,
+  type PanelChanges,
+  type PanelLayout,
+  type TimeBudget,
+} from "@/lib/api-panel";
+import { humanize, regionLabel, toBuckets } from "@/lib/format";
+import type { Article, StatsOverview } from "@/lib/types";
+
+import { BarList, Sparkline } from "@/components/Charts";
+import { DataUnavailable } from "@/components/States";
+import { ArticleFlow, type FlowStyle } from "@/components/dashboard/ArticleFlow";
+import { CalendarList, type CalendarItem } from "@/components/dashboard/CalendarList";
+import { ChangeFeed } from "@/components/dashboard/ChangeFeed";
+import { HeadlineStrip } from "@/components/dashboard/HeadlineStrip";
+import { KpiRow, type Kpi } from "@/components/dashboard/KpiRow";
+import {
+  LayoutPreview,
+  PanoHeader,
+  PanoNotice,
+  PanoSection,
+} from "@/components/dashboard/PanoParts";
+import { TaskList, type TaskItem } from "@/components/dashboard/TaskList";
+import { calendarHitOf, deadlineOf } from "@/components/dashboard/deadline";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "Panelim",
+  description:
+    "Pozisyona ve vakit bütçesine göre farklılaşan kişisel panel: göstergeler, önemli konular şeridi ve haber akışı.",
+};
+
+/** Profil gelmezse gösterilecek düzen. Eşleme DEĞİL, yalnızca varsayılan. */
+const DEFAULT_LAYOUT: PanelLayout = "ozet";
+
+/** Özet düzeninin üst sınırı — tek ekranda bitmesi için. */
+const OZET_MAX_ITEMS = 5;
+
+/** Şeritte gösterilecek başlık sayısı. */
+const STRIP_MAX = 8;
+
+/* ------------------------------------------------------------------ */
+/* Yardımcılar                                                         */
+/* ------------------------------------------------------------------ */
+
+function firstParam(
+  value: string | string[] | undefined,
+): string | undefined {
+  if (Array.isArray(value)) return value[0];
+  return value;
+}
+
+/** Kova listesinden tek anahtarın sayısını okur; yoksa null (KPI'da "—"). */
+function bucketCount(
+  buckets: { key: string; count: number }[],
+  key: string,
+): number | null {
+  const found = buckets.find((b) => b.key === key);
+  return found ? found.count : null;
+}
+
+/** Birden çok sayıyı toplar; hepsi null ise null döner (sıfır uydurmaz). */
+function sumOrNull(values: (number | null)[]): number | null {
+  const real = values.filter((v): v is number => typeof v === "number");
+  return real.length === 0 ? null : real.reduce((a, b) => a + b, 0);
+}
+
+/**
+ * Kategori bazlı gerçek toplam — listenin `total` alanından okunur.
+ * Panelde gösterilen örneklem üzerinden saymak yanıltıcı olurdu; bu
+ * yüzden sayım backend'e bırakılıyor (limit=1, yalnızca toplam gerekiyor).
+ */
+async function countByCategory(
+  category: string,
+  auth: PanelAuth,
+): Promise<number | null> {
+  const res = await getPanelArticles({ category, limit: 1 }, auth);
+  if (!res.ok) return null;
+  return typeof res.data.total === "number" ? res.data.total : null;
+}
+
+/** Tekil (tekilleştirilmiş) haber sayısı. */
+function uniqueArticleCount(stats: StatsOverview | null): number | null {
+  if (!stats) return null;
+  const totals = stats.totals ?? null;
+  const candidates = [
+    totals?.unique_articles,
+    stats.unique_articles,
+    totals?.articles,
+    stats.total_articles,
+  ];
+  for (const value of candidates) {
+    if (typeof value === "number" && !Number.isNaN(value)) return value;
+  }
+  const regions = toBuckets(stats.by_region);
+  return regions.length > 0 ? regions.reduce((s, r) => s + r.count, 0) : null;
+}
+
+function sourceCount(stats: StatsOverview | null): number | null {
+  const value = stats?.totals?.sources ?? stats?.total_sources;
+  return typeof value === "number" ? value : null;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sayfa                                                               */
+/* ------------------------------------------------------------------ */
+
+export default async function PanelimPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const params = await searchParams;
+  const jar = await cookies();
+  const cookieHeader = jar
+    .getAll()
+    .map((c) => `${c.name}=${c.value}`)
+    .join("; ");
+  const auth: PanelAuth = cookieHeader ? { cookie: cookieHeader } : {};
+
+  const [me, statsRes] = await Promise.all([
+    getPanelMe(auth),
+    getStatsOverview(),
+  ]);
+
+  const stats: StatsOverview | null = statsRes.ok ? statsRes.data : null;
+
+  // --- Düzen ve vakit bütçesi ------------------------------------
+  const layoutOverride = firstParam(params.duzen);
+  const previewing = isPanelLayout(layoutOverride);
+  const layout: PanelLayout = previewing
+    ? (layoutOverride as PanelLayout)
+    : (me.layout ?? DEFAULT_LAYOUT);
+
+  const budgetOverride = firstParam(params.vakit);
+  const timeBudget: TimeBudget =
+    budgetOverride !== undefined
+      ? normalizeTimeBudget(budgetOverride)
+      : (me.timeBudget ?? 5);
+
+  const density = densityOf(timeBudget);
+  const itemCount =
+    layout === "ozet" ? Math.min(density.items, OZET_MAX_ITEMS) : density.items;
+
+  // --- Haberler ---------------------------------------------------
+  const wantsPersonal = me.status === "etkin";
+  let listRes = await getPanelArticles(
+    { limit: itemCount, sort: wantsPersonal ? "kisisel" : undefined },
+    auth,
+  );
+  let personalized = wantsPersonal && listRes.ok;
+  let fallbackNote: string | null = null;
+
+  if (!listRes.ok && wantsPersonal) {
+    // Kişisel sıralama reddedildi (ör. oturum düştü) — genel sıralamaya düş.
+    listRes = await getPanelArticles({ limit: itemCount }, auth);
+    personalized = false;
+    fallbackNote =
+      "Kişisel sıralama uygulanamadı, genel önem sıralaması gösteriliyor.";
+  }
+
+  const articles: Article[] = listRes.ok ? listRes.data.data : [];
+
+  // Şerit ayrı bir sorgudan beslenir: en önemli konular = KRİTİK bant.
+  // API sırası korunur; 6 başlık dolmazsa ana listeden tamamlanır.
+  const stripRes = await getPanelArticles(
+    { band: "KRITIK", limit: STRIP_MAX },
+    auth,
+  );
+  const strip: Article[] = [];
+  const seen = new Set<number>();
+  for (const a of stripRes.ok ? stripRes.data.data : []) {
+    if (seen.has(a.id)) continue;
+    seen.add(a.id);
+    strip.push(a);
+  }
+  for (const a of articles) {
+    if (strip.length >= STRIP_MAX) break;
+    if (seen.has(a.id)) continue;
+    seen.add(a.id);
+    strip.push(a);
+  }
+
+  // --- Tarih çıkarımı (aksiyon ve takip) --------------------------
+  const now = new Date();
+  const tasks: TaskItem[] = [];
+  const calendar: CalendarItem[] = [];
+  const dated = new Set<number>();
+
+  if (layout === "aksiyon") {
+    for (const article of articles) {
+      const hit = deadlineOf(article, now);
+      if (hit) {
+        tasks.push({ article, hit });
+        dated.add(article.id);
+      }
+    }
+  } else if (layout === "takip") {
+    for (const article of articles) {
+      const hit = calendarHitOf(article, now);
+      if (hit) {
+        calendar.push({ article, hit });
+        dated.add(article.id);
+      }
+    }
+  }
+
+  // Ayırma: tarihli kalemler kendi bölümünde, kalanlar akışta. Her iki
+  // bölümün İÇİNDE API sırası korunuyor.
+  const flowArticles = articles.filter((a) => !dated.has(a.id));
+
+  // --- Değişiklik akışı (yalnızca takip düzeni ister) -------------
+  const changes: PanelChanges =
+    layout === "takip"
+      ? await getPanelChanges(auth, 8)
+      : { available: false, items: [], note: null };
+
+  // --- İstatistik kovaları ---------------------------------------
+  const regions = toBuckets(stats?.by_region, regionLabel);
+  const categories = toBuckets(
+    stats?.by_category ?? stats?.top_categories,
+    humanize,
+  );
+  const bands = toBuckets(stats?.by_band);
+  const daily = toBuckets(stats?.daily ?? stats?.daily_series);
+  const dailyValues = daily.map((d) => d.count);
+
+  const hasArticles = articles.length > 0;
+  const unique = uniqueArticleCount(stats);
+  const kritik = bucketCount(bands, "KRITIK");
+
+  // --- KPI'lar: her düzende FARKLI küme --------------------------
+  let kpis: Kpi[] = [];
+
+  if (layout === "ozet") {
+    // EN SADE: üç gösterge. Sayı yoksa "—".
+    kpis = [
+      {
+        label: "Gündemdeki Haber",
+        value: unique,
+        note: "Tekilleştirme sonrası tekil kayıt",
+      },
+      {
+        label: "Kritik Başlık",
+        value: kritik,
+        note: "En yüksek önem bandı",
+      },
+      {
+        label: "İzlenen Kaynak",
+        value: sourceCount(stats),
+        note: "Taranan açık kaynak",
+      },
+    ];
+  } else if (layout === "aksiyon") {
+    const yakin = tasks.filter(
+      (t) => t.hit.days >= 0 && t.hit.days <= 7,
+    ).length;
+    const acik = tasks.filter((t) => t.hit.days >= 0).length;
+    const [tesvik, finansman, arge] = await Promise.all([
+      countByCategory("tesvik", auth),
+      countByCategory("finansman", auth),
+      countByCategory("ar-ge", auth),
+    ]);
+    kpis = [
+      {
+        // Haber listesi hiç gelmediyse "0" yazmak veri varmış gibi
+        // görünür; o durumda "—" doğrusu.
+        label: "Son Tarihli Kalem",
+        value: hasArticles ? tasks.length : null,
+        note: "Panelinizde tarih çıkarılabilen kalem",
+      },
+      {
+        label: "Süresi Açık",
+        value: hasArticles ? acik : null,
+        note: "Son başvuru tarihi gelmemiş kalem",
+      },
+      {
+        label: "Bu Hafta Biten",
+        value: hasArticles ? yakin : null,
+        note: "Yedi gün içinde kapanan başvuru",
+      },
+      {
+        label: "Teşvik ve Finansman",
+        value: sumOrNull([tesvik, finansman, arge]),
+        note: "Teşvik, finansman ve Ar-Ge kategorisi toplamı",
+      },
+    ];
+  } else if (layout === "operasyon") {
+    const [tedarik, lojistik, enerji, emtia, sanayi] = await Promise.all([
+      countByCategory("tedarik-zinciri", auth),
+      countByCategory("lojistik", auth),
+      countByCategory("enerji", auth),
+      countByCategory("emtia", auth),
+      countByCategory("sanayi", auth),
+    ]);
+    kpis = [
+      {
+        label: "Tedarik ve Lojistik",
+        value: sumOrNull([tedarik, lojistik]),
+        note: "Tedarik zinciri ve lojistik kategorisi",
+      },
+      {
+        label: "Enerji ve Emtia",
+        value: sumOrNull([enerji, emtia]),
+        note: "Maliyet kalemlerini besleyen kategoriler",
+      },
+      {
+        label: "Sanayi Üretimi",
+        value: sanayi,
+        note: "Üretim ve kapasite haberleri",
+      },
+      {
+        label: "Gündemdeki Haber",
+        value: unique,
+        note: "Tekilleştirme sonrası tekil kayıt",
+      },
+    ];
+  } else {
+    const [mevzuat, vergi] = await Promise.all([
+      countByCategory("mevzuat", auth),
+      countByCategory("vergi", auth),
+    ]);
+    kpis = [
+      {
+        label: "Mevzuat Kalemi",
+        value: mevzuat,
+        note: "Mevzuat kategorisindeki haber",
+      },
+      {
+        label: "Vergi Kalemi",
+        value: vergi,
+        note: "Vergi kategorisindeki haber",
+      },
+      {
+        label: "Takvimdeki Tarih",
+        value: hasArticles ? calendar.length : null,
+        note: "Panelinizde tarih çıkarılabilen kalem",
+      },
+      {
+        label: "Değişiklik",
+        // Uç yayında değilse SIFIR yazılmaz, "—" görünür.
+        value: changes.available ? changes.items.length : null,
+        note: changes.available
+          ? "Son ziyaretten beri kayda geçen değişiklik"
+          : "Değişiklik ucu henüz yayında değil",
+      },
+    ];
+  }
+
+  const flowStyle: FlowStyle =
+    layout === "ozet" ? "tek-cumle" : (density.style as FlowStyle);
+
+  const notices: string[] = [];
+  if (me.note) notices.push(me.note);
+  if (fallbackNote) notices.push(fallbackNote);
+  if (layout === "ozet" && density.items > OZET_MAX_ITEMS) {
+    notices.push(
+      `Özet düzeni tek ekranda bitsin diye ${OZET_MAX_ITEMS} kalemle sınırlı. ${timeBudget} dakikalık bütçenin kalan ${density.items - OZET_MAX_ITEMS} kalemi, sayfa altındaki "Tüm Haber Akışı" bağlantısında duruyor.`,
+    );
+  }
+  if (previewing) {
+    notices.push(
+      "Bu bir düzen önizlemesi. Gerçek düzen profilinizdeki pozisyondan türetilir; önizleme profilinizi değiştirmez.",
+    );
+  }
+
+  const flowTitle =
+    flowStyle === "tek-cumle"
+      ? "Haber Akışı — Tek Cümle"
+      : flowStyle === "kademeli"
+        ? "Haber Akışı — İlk 10 Tam Özet"
+        : "Haber Akışı — Üç Madde";
+
+  const listBroken = !listRes.ok;
+  // `listRes` bir `let` olduğu için daraltma (narrowing) aşağıda kayboluyor;
+  // hata metni burada sabitleniyor.
+  const listError = listRes.ok ? null : listRes.error;
+
+  return (
+    <div className="pano-page">
+      <PanoHeader
+        layout={layout}
+        positionLabel={me.positionLabel}
+        fullName={me.fullName}
+        timeBudget={timeBudget}
+        itemCount={articles.length}
+        personalized={personalized}
+      />
+
+      {notices.length > 0 ? (
+        <div className="pano-bilgi-yigin">
+          {notices.map((note, i) => (
+            <PanoNotice key={i} tone={i === 0 && me.note ? "uyari" : "bilgi"}>
+              {note}
+            </PanoNotice>
+          ))}
+        </div>
+      ) : null}
+
+      {/* -------- Göstergeler -------- */}
+      <section className="pano-bolum" data-pano-bolum="kpi">
+        <KpiRow items={kpis} />
+
+        {/* Özet düzeninde TEK ve KÜÇÜK grafik: günlük eğilim. */}
+        {layout === "ozet" && dailyValues.length > 1 ? (
+          <div className="pano-egilim">
+            <span className="u-kicker text-ink-faint">Günlük Eğilim</span>
+            <Sparkline
+              values={dailyValues}
+              label={`Günlük haber sayısı eğilimi, ${daily.length} gün`}
+            />
+          </div>
+        ) : null}
+      </section>
+
+      {/* -------- Aksiyon: yapılacaklar en üstte -------- */}
+      {layout === "aksiyon" ? (
+        <PanoSection
+          id="yapilacaklar"
+          title="Yapılacaklar — Son Başvuru Tarihli Kalemler"
+          right={tasks.length > 0 ? `${tasks.length} kalem` : undefined}
+        >
+          {tasks.length > 0 ? (
+            <TaskList items={tasks} />
+          ) : (
+            <PanoNotice>
+              Panelinizdeki kalemlerde son başvuru tarihi çıkarılamadı. Tarih
+              uydurulmaz; bu kalemler aşağıdaki haber akışında duruyor.
+            </PanoNotice>
+          )}
+        </PanoSection>
+      ) : null}
+
+      {/* -------- Operasyon: bölge ve kategori dağılımı -------- */}
+      {layout === "operasyon" ? (
+        <PanoSection id="dagilim" title="Bölge ve Kategori Dağılımı">
+          <div className="pano-dagilim">
+            <div>
+              <p className="u-kicker mb-2 text-ink-faint">Bölge</p>
+              <BarList data={regions} />
+            </div>
+            <div>
+              <p className="u-kicker mb-2 text-ink-faint">Kategori</p>
+              <BarList data={categories.slice(0, 8)} />
+            </div>
+          </div>
+        </PanoSection>
+      ) : null}
+
+      {/* -------- Takip: değişiklik akışı, sonra takvim -------- */}
+      {layout === "takip" ? (
+        <>
+          <PanoSection
+            id="degisiklik"
+            title="Değişiklik Akışı"
+            right={changes.available ? `${changes.items.length} kayıt` : undefined}
+          >
+            <ChangeFeed changes={changes} />
+          </PanoSection>
+
+          <PanoSection
+            id="takvim"
+            title="Mevzuat Takvimi"
+            right={calendar.length > 0 ? `${calendar.length} tarih` : undefined}
+          >
+            {calendar.length > 0 ? (
+              <CalendarList items={calendar} />
+            ) : (
+              <PanoNotice>
+                Panelinizdeki kalemlerde takvim tarihi çıkarılamadı. Tarih
+                uydurulmaz; kalemler haber akışında duruyor.
+              </PanoNotice>
+            )}
+          </PanoSection>
+        </>
+      ) : null}
+
+      {/* -------- Önemli konular şeridi -------- */}
+      {strip.length > 0 ? (
+        <HeadlineStrip articles={strip} label="En Önemli Konular" />
+      ) : null}
+
+      {/* -------- Haber akışı -------- */}
+      <PanoSection
+        id="akis"
+        title={flowTitle}
+        right={
+          flowArticles.length > 0 ? `${flowArticles.length} kalem` : undefined
+        }
+      >
+        {listBroken ? (
+          <DataUnavailable
+            message={listError ?? "Veri kaynağına ulaşılamadı."}
+            hint="Göstergeler ve şerit varsa gösterilmeye devam ediyor. Haber akışı, toplama servisi yanıt verdiğinde dolacak."
+          />
+        ) : flowArticles.length > 0 ? (
+          <ArticleFlow
+            articles={flowArticles}
+            style={flowStyle}
+            full={density.full}
+            bullets={density.bullets || 3}
+          />
+        ) : (
+          <PanoNotice>
+            Bu düzende akışa düşen kalem kalmadı; hepsi yukarıdaki bölümlerde
+            listelendi.
+          </PanoNotice>
+        )}
+      </PanoSection>
+
+      <footer className="pano-alt">
+        <Link href="/" className="u-kicker u-link-underline text-ink">
+          Tüm Haber Akışı →
+        </Link>
+        <LayoutPreview active={layout} timeBudget={timeBudget} />
+      </footer>
+    </div>
+  );
+}

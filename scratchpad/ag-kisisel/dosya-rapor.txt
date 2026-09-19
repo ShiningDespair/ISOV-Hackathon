@@ -1,0 +1,290 @@
+kenar sayisi: 142
+
+### GRUP 1 — 44 uye (ASIRI BUYUK, ATLANDI)
+  #1 [resmi-gazete] 2026-09-06 Orta Vadeli Program (2027-2029) Onaylandı: Büyüme %4,2, Enflasyon %21 Hedefi
+      capa=[enflasyon,istihdam] ref=[]
+  #41 [dunya-gazetesi] 2026-09-10 TÜİK: Temmuz 2026'da sanayi üretimi yıllık yüzde 0,3, aylık yüzde 1 azaldı
+      capa=[kapasite-kullanimi,tuik] ref=[]
+  #58 [alomaliye] 2026-09-03 Enflasyon Rakamları (TÜFE) - Ağustos 2026
+      capa=[enflasyon,tuik] ref=[]
+  #59 [finansopia] 2026-09-11 Brent petrol 110 dolara dayandı
+      capa=[enerji-maliyeti,petrol] ref=[]
+  #62 [ekonomim] 2026-09-09 Kimya ihracatı 8 ayda 22,8 milyar dolara ulaştı, hedef 35 milyar dolar
+      capa=[kimya] ref=[]
+  #63 [ekonomim-net] 2026-09-03 Otomotiv ihracatı 8 ayda güçlü performansını sürdürdü
+      capa=[kapasite-kullanimi,otomotiv] ref=[]
+  #66 [cumhuriyet-ekonomi] 2026-08-31 Türkiye'de işsizlik oranı ne kadar oldu? TÜİK verileri açıklandı
+      capa=[istihdam,tuik] ref=[]
+  #67 [eur-lex] 2026-09-11 AB, Türkiye ve Çin menşeli hasır çelik ithalatını kayda aldı (Komisyon Uygulam
+      capa=[anti-damping] ref=[]
+  #68 [eur-lex] 2026-09-11 AB, Çin menşeli çelik raf sistemleri ithalatını kayda aldı (Uygulama Tüzüğü 20
+      capa=[anti-damping] ref=[]
+  #69 [ecb] 2026-09-10 ECB politika faizini 25 baz puan artırdı: mevduat faizi yüzde 2,50
+      capa=[enflasyon] ref=[]
+  #71 [cyprus-mail] 2026-09-11 AB alüminyum hurdasına ihracat vergisi planından vazgeçti
+      capa=[dongusel-ekonomi,aluminyum] ref=[]
+  #72 [borderlex] 2026-09-11 Avrupa alüminyum sanayi, rafa kaldırılan ihracat kısıtlamalarına sert tepki gö
+      capa=[dongusel-ekonomi,aluminyum] ref=[]
+  #73 [envirotec] 2026-09-10 AB, OECD dışı ülkelere atık ihracatında daha geniş bir yasağa hazırlanıyor
+      capa=[yesil-mutabakat,dongusel-ekonomi,aluminyum] ref=[]
+  #74 [eunews] 2026-09-09 AB kamu alımlarını reforme ediyor: tek platform, kalite kriterleri ve üçüncü ü
+      capa=[yesil-mutabakat] ref=[]
+  #77 [destatis] 2026-09-07 Almanya'da sanayi üretimi Temmuz 2026'da yüzde 1,1 geriledi, otomotivde yüzde 
+      capa=[otomotiv,almanya] ref=[]
+  #82 [eurocommerce] 2026-09-07 AB perakende sektörü CBAM'ın alt ürünlere genişletilmesine karşı çıktı
+      capa=[cbam,yesil-mutabakat,tedarik-zinciri,aluminyum] ref=[]
+  #85 [eunews] 2026-09-10 2026 Birliğin Durumu konuşması öncesi Parlamento gruplarından rekabetçilik vur
+      capa=[yesil-mutabakat] ref=[]
+  #87 [ustr] 2026-09-08 ABD, Kanada'ya karşı Tarife Kanunu'nun 338. maddesini devreye soktu: bazı ürün
+      capa=[tarife,otomotiv,abd] ref=[US-SECTION-338]
+  #88 [trade-compliance-hub] 2026-09-10 Kanada'ya yönelik beş yeni başkanlık kararnamesi: ürün listeleri 15 Eylül'de d
+      capa=[tarife,abd] ref=[US-SECTION-338,US-SECTION-232]
+  #89 [globe-and-mail] 2026-09-09 Kanada-ABD ticaret savaşı: Ottawa teması sürdürüyor, misilleme tarifeleri yürü
+      capa=[tarife,otomotiv,abd] ref=[US-SECTION-338,US-SECTION-232]
+  #91 [kiplinger] 2026-09-11 Fed 16 Eylül'de faiz artırabilir: 2026'nin ilk sıkılaşma adımı gündemde
+      capa=[enflasyon,fed,abd] ref=[]
+  #92 [federal-register] 2026-09-09 ABD, Türkiye menşeli oluklu mukavva pizza kutularına anti-damping ve telafi ed
+      capa=[kobi,anti-damping,abd] ref=[]
+  #93 [federal-register] 2026-09-09 ABD, Çin menşeli çelik ızgara ürünlerindeki telafi edici vergiyi bir dönem dah
+      capa=[abd,cin] ref=[US-SECTION-232]
+  #94 [federal-register] 2026-09-10 Ön gerilmeli beton çelik teli halatlarında ABD gözden geçirmeleri: Malezya ön 
+      capa=[anti-damping,abd] ref=[US-SECTION-232]
+  #95 [federal-register] 2026-09-08 ABD, Çin ve Vietnam menşeli çim biçme makinelerindeki anti-damping önlemlerini
+      capa=[anti-damping,makine,abd,cin] ref=[US-SECTION-232]
+  #96 [federal-register] 2026-09-11 Sitrik asit dosyasında nihai aşama başlıyor: ABD kimya ve gıda katkı zincirind
+      capa=[anti-damping,kimya,gida,abd] ref=[US-SECTION-338]
+  #97 [us-eia] 2026-09-09 EIA Kısa Vadeli Enerji Görünümü: Brent 100 doların üzerinde, yıl sonu tahmini 
+      capa=[petrol] ref=[]
+  #98 [cnbc] 2026-09-08 Çin ihracatı Ağustos'ta yüzde 25 arttı, ticaret fazlası 119 milyar dolarla rek
+      capa=[anti-damping,yari-iletken,otomotiv,cin] ref=[]
+  #99 [vantage-markets] 2026-09-09 Çin'de enflasyon toparlanıyor: TÜFE yüzde 0,8, ÜFE beklentiyi aştı
+      capa=[enflasyon,cin] ref=[]
+  #100 [indexbox] 2026-09-09 Çin çelik ihracatı Ağustos'ta 10,15 milyon tona çıktı, ham çelik üretimi geril
+      capa=[korunma-onlemi,cbam,cin] ref=[US-SECTION-232]
+  #101 [drewry] 2026-09-10 Drewry Dünya Konteyner Endeksi 10 Eylül: 4.476 dolarda sabit, Asya-Avrupa geri
+      capa=[tedarik-zinciri,lojistik,navlun] ref=[]
+  #102 [npr] 2026-09-11 Husiler Kızıldeniz'in güney girişinde Mokha limanını ve stratejik adayı ele ge
+      capa=[tedarik-zinciri,lojistik,navlun] ref=[]
+  #103 [bloomberg] 2026-09-10 Husi saldırıları Kızıldeniz taşımacılığını ve Suudi petrol altyapısını tehdit 
+      capa=[petrol,lojistik] ref=[]
+  #104 [korea-herald] 2026-09-11 Güney Kore ihracatı Eylül'ün ilk 10 gününde yüzde 83 arttı: çipler rekor kırıy
+      capa=[tedarik-zinciri,yapay-zeka,yari-iletken,elektronik] ref=[]
+  #106 [rio-times] 2026-09-10 TSMC Ağustos geliri rekor kırdı, ABD ortaklarından 'yapay zekada taraf seçin' 
+      capa=[tedarik-zinciri,yapay-zeka,yari-iletken,cin] ref=[]
+  #107 [asia-times] 2026-09-07 Çin kapasite fazlası mı, Batı korumacılığı mı? Rakamların söylediği
+      capa=[gumruk-birligi,cin] ref=[]
+  #108 [vision-times] 2026-09-04 Tayvan çip tarifelerinde muafiyet peşinde: ABD 'Amerika'da üret ya da öde' mod
+      capa=[tesvik,tarife,yari-iletken,abd] ref=[US-SECTION-232]
+  #110 [china-briefing] 2026-09-08 Çin nadir toprak ihracat kontrollerinde denetim sıkılaşıyor: askıya alma Kasım
+      capa=[tedarik-zinciri,cin] ref=[]
+  #111 [oilprice-com] 2026-09-11 İran-Umman görüşmeleri Hürmüz'ün yeniden açılma umudunu artırdı, petrol fiyatl
+      capa=[enerji-maliyeti] ref=[]
+  #112 [cnbc] 2026-09-11 Petrol fiyatları Cuma günü düştü, ancak Orta Doğu'daki gerilimle haftayı sert 
+      capa=[enerji-maliyeti] ref=[]
+  #113 [fortune] 2026-09-11 Hürmüz'de diplomasi sinyali petrol fiyatlarını geriletti, Suudi Arabistan ikin
+      capa=[tedarik-zinciri,navlun] ref=[]
+  #117 [bloomberg] 2026-09-11 ABD Ağustos 2026 TÜFE raporu: enflasyon ve tüketici fiyat endeksinde öne çıkan
+      capa=[fed] ref=[]
+  #120 [investing-com] 2026-09-11 OPEC 2026 küresel petrol talebi artışı tahminini yeniden aşağı çekti
+      capa=[enerji-maliyeti] ref=[]
+  #122 [lloyds-list-intelligence] 2026-09-05 Kızıldeniz Bülteni: Süveyş geçişleri 2024 başından bu yana en yüksek seviyede
+      capa=[tedarik-zinciri] ref=[]
+  -- kenarlar --
+     #1<->#58 skor=2 kos=0.8813 capa=[enflasyon] ref=[]
+     #1<->#91 skor=2 kos=0.8870 capa=[enflasyon] ref=[]
+     #1<->#99 skor=2 kos=0.8823 capa=[enflasyon] ref=[]
+     #41<->#58 skor=2 kos=0.9050 capa=[tuik] ref=[]
+     #41<->#66 skor=2 kos=0.8834 capa=[tuik] ref=[]
+     #58<->#66 skor=2 kos=0.8825 capa=[tuik] ref=[]
+     #58<->#69 skor=2 kos=0.8952 capa=[enflasyon] ref=[]
+     #58<->#91 skor=2 kos=0.8889 capa=[enflasyon] ref=[]
+     #58<->#99 skor=2 kos=0.9237 capa=[enflasyon] ref=[]
+     #59<->#97 skor=2 kos=0.9168 capa=[petrol] ref=[]
+     #59<->#103 skor=2 kos=0.8943 capa=[petrol] ref=[]
+     #59<->#111 skor=2 kos=0.9083 capa=[enerji-maliyeti] ref=[]
+     #59<->#112 skor=2 kos=0.9082 capa=[enerji-maliyeti] ref=[]
+     #62<->#96 skor=2 kos=0.8803 capa=[kimya] ref=[]
+     #63<->#77 skor=2 kos=0.8852 capa=[otomotiv] ref=[]
+     #63<->#98 skor=2 kos=0.9002 capa=[otomotiv] ref=[]
+     #67<->#68 skor=2 kos=0.9427 capa=[anti-damping] ref=[]
+     #67<->#92 skor=2 kos=0.8933 capa=[anti-damping] ref=[]
+     #67<->#94 skor=2 kos=0.9099 capa=[anti-damping] ref=[]
+     #67<->#96 skor=2 kos=0.8847 capa=[anti-damping] ref=[]
+     #67<->#98 skor=2 kos=0.8841 capa=[anti-damping] ref=[]
+     #68<->#92 skor=2 kos=0.8886 capa=[anti-damping] ref=[]
+     #68<->#94 skor=2 kos=0.9056 capa=[anti-damping] ref=[]
+     #68<->#95 skor=2 kos=0.8813 capa=[anti-damping] ref=[]
+     #68<->#98 skor=2 kos=0.8970 capa=[anti-damping] ref=[]
+     #69<->#99 skor=2 kos=0.8989 capa=[enflasyon] ref=[]
+     #71<->#72 skor=2 kos=0.9129 capa=[aluminyum,dongusel-ekonomi] ref=[]
+     #71<->#73 skor=2 kos=0.9214 capa=[aluminyum,dongusel-ekonomi] ref=[]
+     #72<->#73 skor=2 kos=0.9184 capa=[aluminyum,dongusel-ekonomi] ref=[]
+     #72<->#82 skor=2 kos=0.8878 capa=[aluminyum] ref=[]
+     #73<->#74 skor=2 kos=0.8801 capa=[yesil-mutabakat] ref=[]
+     #73<->#82 skor=2 kos=0.8936 capa=[aluminyum,yesil-mutabakat] ref=[]
+     #77<->#98 skor=2 kos=0.8866 capa=[otomotiv] ref=[]
+     #82<->#85 skor=2 kos=0.9029 capa=[yesil-mutabakat] ref=[]
+     #82<->#110 skor=2 kos=0.8805 capa=[tedarik-zinciri] ref=[]
+     #87<->#88 skor=3 kos=0.9266 capa=[abd,tarife] ref=[US-SECTION-338]
+     #87<->#89 skor=3 kos=0.9264 capa=[abd,otomotiv,tarife] ref=[US-SECTION-338]
+     #87<->#92 skor=2 kos=0.8854 capa=[abd] ref=[]
+     #87<->#93 skor=2 kos=0.9065 capa=[abd] ref=[]
+     #87<->#94 skor=2 kos=0.8849 capa=[abd] ref=[]
+     #87<->#96 skor=3 kos=0.8874 capa=[abd] ref=[US-SECTION-338]
+     #87<->#108 skor=2 kos=0.8987 capa=[abd,tarife] ref=[]
+     #88<->#89 skor=3 kos=0.9182 capa=[abd,tarife] ref=[US-SECTION-232,US-SECTION-338]
+     #88<->#92 skor=2 kos=0.8814 capa=[abd] ref=[]
+     #88<->#93 skor=3 kos=0.8817 capa=[abd] ref=[US-SECTION-232]
+     #88<->#94 skor=3 kos=0.8840 capa=[abd] ref=[US-SECTION-232]
+     #88<->#95 skor=2 kos=- capa=[abd] ref=[US-SECTION-232]
+     #88<->#96 skor=3 kos=0.8935 capa=[abd] ref=[US-SECTION-338]
+     #88<->#108 skor=3 kos=0.8905 capa=[abd,tarife] ref=[US-SECTION-232]
+     #89<->#93 skor=3 kos=0.8985 capa=[abd] ref=[US-SECTION-232]
+     #89<->#94 skor=3 kos=0.8821 capa=[abd] ref=[US-SECTION-232]
+     #89<->#95 skor=2 kos=- capa=[abd] ref=[US-SECTION-232]
+     #89<->#96 skor=3 kos=0.8871 capa=[abd] ref=[US-SECTION-338]
+     #89<->#100 skor=2 kos=0.8805 capa=[] ref=[US-SECTION-232]
+     #89<->#108 skor=3 kos=0.8961 capa=[abd,tarife] ref=[US-SECTION-232]
+     #91<->#99 skor=2 kos=0.8926 capa=[enflasyon] ref=[]
+     #91<->#117 skor=2 kos=0.9110 capa=[fed] ref=[]
+     #92<->#93 skor=2 kos=0.9026 capa=[abd] ref=[]
+     #92<->#94 skor=2 kos=0.9039 capa=[abd,anti-damping] ref=[]
+     #92<->#96 skor=2 kos=0.9131 capa=[abd,anti-damping] ref=[]
+     #92<->#108 skor=2 kos=0.8849 capa=[abd] ref=[]
+     #93<->#94 skor=3 kos=0.8968 capa=[abd] ref=[US-SECTION-232]
+     #93<->#95 skor=3 kos=0.8889 capa=[abd,cin] ref=[US-SECTION-232]
+     #93<->#96 skor=2 kos=0.9011 capa=[abd] ref=[]
+     #93<->#99 skor=2 kos=0.8841 capa=[cin] ref=[]
+     #93<->#100 skor=3 kos=0.8975 capa=[cin] ref=[US-SECTION-232]
+     #93<->#106 skor=2 kos=0.8841 capa=[cin] ref=[]
+     #93<->#108 skor=3 kos=0.8956 capa=[abd] ref=[US-SECTION-232]
+     #94<->#95 skor=3 kos=0.8912 capa=[abd,anti-damping] ref=[US-SECTION-232]
+     #94<->#100 skor=2 kos=0.9096 capa=[] ref=[US-SECTION-232]
+     #94<->#108 skor=3 kos=0.8938 capa=[abd] ref=[US-SECTION-232]
+     #95<->#100 skor=2 kos=- capa=[cin] ref=[US-SECTION-232]
+     #95<->#108 skor=2 kos=- capa=[abd] ref=[US-SECTION-232]
+     #97<->#103 skor=2 kos=0.9033 capa=[petrol] ref=[]
+     #98<->#99 skor=2 kos=0.9154 capa=[cin] ref=[]
+     #98<->#100 skor=2 kos=0.9286 capa=[cin] ref=[]
+     #98<->#104 skor=2 kos=0.9089 capa=[yari-iletken] ref=[]
+     #98<->#106 skor=2 kos=0.9079 capa=[cin,yari-iletken] ref=[]
+     #98<->#107 skor=2 kos=0.9304 capa=[cin] ref=[]
+     #98<->#110 skor=2 kos=0.9010 capa=[cin] ref=[]
+     #99<->#100 skor=2 kos=0.9102 capa=[cin] ref=[]
+     #99<->#106 skor=2 kos=0.8858 capa=[cin] ref=[]
+     #99<->#107 skor=2 kos=0.8980 capa=[cin] ref=[]
+     #100<->#106 skor=2 kos=0.8990 capa=[cin] ref=[]
+     #100<->#107 skor=2 kos=0.9115 capa=[cin] ref=[]
+     #100<->#108 skor=2 kos=0.8849 capa=[] ref=[US-SECTION-232]
+     #100<->#110 skor=2 kos=0.8992 capa=[cin] ref=[]
+     #101<->#103 skor=2 kos=0.8807 capa=[lojistik] ref=[]
+     #101<->#122 skor=2 kos=0.8961 capa=[tedarik-zinciri] ref=[]
+     #102<->#103 skor=2 kos=0.9237 capa=[lojistik] ref=[]
+     #102<->#110 skor=2 kos=0.8854 capa=[tedarik-zinciri] ref=[]
+     #102<->#113 skor=2 kos=0.8946 capa=[navlun,tedarik-zinciri] ref=[]
+     #102<->#122 skor=2 kos=0.9121 capa=[tedarik-zinciri] ref=[]
+     #104<->#106 skor=2 kos=0.8864 capa=[tedarik-zinciri,yapay-zeka,yari-iletken] ref=[]
+     #104<->#108 skor=2 kos=0.8821 capa=[yari-iletken] ref=[]
+     #106<->#107 skor=2 kos=0.8886 capa=[cin] ref=[]
+     #106<->#108 skor=2 kos=0.8849 capa=[yari-iletken] ref=[]
+     #106<->#110 skor=2 kos=0.8858 capa=[cin,tedarik-zinciri] ref=[]
+     #107<->#110 skor=2 kos=0.9044 capa=[cin] ref=[]
+     #111<->#112 skor=2 kos=0.9127 capa=[enerji-maliyeti] ref=[]
+     #111<->#120 skor=2 kos=0.8822 capa=[enerji-maliyeti] ref=[]
+     #112<->#120 skor=2 kos=0.8917 capa=[enerji-maliyeti] ref=[]
+     #113<->#122 skor=2 kos=0.8975 capa=[tedarik-zinciri] ref=[]
+
+### GRUP 2 — 2 uye 
+  #13 [resmi-gazete] 2026-09-08 COP31 Antalya Ev Sahibi Ülke Anlaşması Onaylandı (Karar Sayıları: 11779-11780)
+      capa=[yesil-mutabakat,emisyon-ticaret-sistemi] ref=[]
+  #129 [climate-home-news] 2026-09-11 Türkiye, Avustralya'nın rolüne rağmen COP31'de 'son sözün' kendisinde olduğunu
+      capa=[cbam,emisyon-ticaret-sistemi] ref=[]
+  -- kenarlar --
+     #13<->#129 skor=2 kos=0.9155 capa=[emisyon-ticaret-sistemi] ref=[]
+
+### GRUP 3 — 14 uye (ASIRI BUYUK, ATLANDI)
+  #23 [kosgeb] 2026-09-07 KOSGEB Küresel Rekabetçilik Destek Programı 2026/1 başvuruları açıldı: işletme
+      capa=[tesvik,kobi,kosgeb] ref=[]
+  #24 [kosgeb] 2026-08-22 KOSGEB Kapasite Geliştirme Destek Programı 2026/3 dönemi için son gün 15 Eylül
+      capa=[tesvik,kobi,kosgeb] ref=[]
+  #25 [kosgeb] 2026-09-01 İstihdamı Koruma Destek Programı 2026-2 dönemi açıldı: imalatçıya 50 milyon TL
+      capa=[kobi,istihdam,kosgeb] ref=[]
+  #26 [iso] 2026-09-11 İSO'dan üyelere duyuru: KOSGEB İşletme Değerlendirme Raporu (İDR) e-Devlet üze
+      capa=[kobi,iso,kosgeb] ref=[]
+  #27 [tubitak] 2026-09-02 TÜBİTAK 1707 Sipariş Ar-Ge Programı 2026 yılı 3. çağrısı açıldı, son başvuru 1
+      capa=[kobi,tedarik-zinciri,tubitak] ref=[]
+  #28 [tubitak] 2026-09-02 TÜBİTAK ARDEB 1001 Programı 2026 yılı 2. dönem başvuru süresi 14 Eylül 2026'ya
+      capa=[tubitak] ref=[]
+  #29 [tubitak] 2026-08-31 TÜBİTAK BiGG Yatırım Programı 2026-2 çağrısı açıldı: yüzde 3 hisse karşılığınd
+      capa=[tubitak] ref=[]
+  #30 [tubitak] 2026-07-20 TÜBİTAK 1501 ve 1507 programlarının 2026/2 çağrıları açık: proje başına 20 mil
+      capa=[hibe,ar-ge-tesviki,kobi,tubitak] ref=[]
+  #34 [ticaret-bakanligi] 2026-08-19 Ticaret Bakanlığı İhracat Süreçleri ve Devlet Destekleri Eğitim Programı 22-24
+      capa=[kobi,ticaret-bakanligi] ref=[]
+  #36 [igexx] 2026-09-03 İstanbul Küresel E-İhracat Zirvesi IGEXX 2026, 3-5 Eylül'de Haliç Kongre Merke
+      capa=[ticaret-bakanligi,tim] ref=[]
+  #39 [tobb] 2026-08-27 TOBB Türkiye 100 Programı başvuruları 18 Eylül 2026'ya uzatıldı
+      capa=[kobi,tobb] ref=[]
+  #40 [istka] 2026-09-08 İSTKA 2026 Yaratıcı Ekonominin Güçlendirilmesi Mali Destek Programı ilan edild
+      capa=[hibe] ref=[]
+  #44 [ufuk-avrupa] 2025-11-05 Ufuk Avrupa EIC 2026 Çalışma Programı: 1,42 milyar euro bütçe, EIC Accelerator
+      capa=[kobi,tubitak] ref=[]
+  #75 [eunews] 2026-09-09 Avrupa İnovasyon Yasası açıklandı: yılda 10,2 milyar euroya kadar ilave finans
+      capa=[kobi] ref=[]
+  -- kenarlar --
+     #23<->#24 skor=2 kos=0.9461 capa=[kobi,kosgeb,tesvik] ref=[]
+     #23<->#25 skor=2 kos=0.9241 capa=[kobi,kosgeb] ref=[]
+     #23<->#26 skor=2 kos=0.8967 capa=[kobi,kosgeb] ref=[]
+     #23<->#27 skor=2 kos=0.9017 capa=[kobi] ref=[]
+     #23<->#30 skor=2 kos=0.9125 capa=[kobi] ref=[]
+     #23<->#34 skor=2 kos=0.8850 capa=[kobi] ref=[]
+     #23<->#39 skor=2 kos=0.8966 capa=[kobi] ref=[]
+     #24<->#25 skor=2 kos=0.9233 capa=[kobi,kosgeb] ref=[]
+     #24<->#26 skor=2 kos=0.8922 capa=[kobi,kosgeb] ref=[]
+     #24<->#27 skor=2 kos=0.9067 capa=[kobi] ref=[]
+     #24<->#30 skor=2 kos=0.9164 capa=[kobi] ref=[]
+     #24<->#39 skor=2 kos=0.8944 capa=[kobi] ref=[]
+     #25<->#26 skor=2 kos=0.8821 capa=[kobi,kosgeb] ref=[]
+     #25<->#30 skor=2 kos=0.8905 capa=[kobi] ref=[]
+     #26<->#30 skor=2 kos=0.8814 capa=[kobi] ref=[]
+     #26<->#34 skor=2 kos=0.8947 capa=[kobi] ref=[]
+     #26<->#39 skor=2 kos=0.8903 capa=[kobi] ref=[]
+     #27<->#28 skor=2 kos=0.9024 capa=[tubitak] ref=[]
+     #27<->#29 skor=2 kos=0.9260 capa=[tubitak] ref=[]
+     #27<->#30 skor=2 kos=0.9415 capa=[kobi,tubitak] ref=[]
+     #27<->#44 skor=2 kos=0.8892 capa=[kobi,tubitak] ref=[]
+     #28<->#29 skor=2 kos=0.8832 capa=[tubitak] ref=[]
+     #28<->#30 skor=2 kos=0.9183 capa=[tubitak] ref=[]
+     #28<->#44 skor=2 kos=0.8860 capa=[tubitak] ref=[]
+     #29<->#30 skor=2 kos=0.9193 capa=[tubitak] ref=[]
+     #29<->#44 skor=2 kos=0.8930 capa=[tubitak] ref=[]
+     #30<->#34 skor=2 kos=0.8866 capa=[kobi] ref=[]
+     #30<->#39 skor=2 kos=0.8998 capa=[kobi] ref=[]
+     #30<->#40 skor=2 kos=0.8924 capa=[hibe] ref=[]
+     #30<->#44 skor=2 kos=0.9030 capa=[kobi,tubitak] ref=[]
+     #34<->#36 skor=2 kos=0.8893 capa=[ticaret-bakanligi] ref=[]
+     #39<->#44 skor=2 kos=0.8817 capa=[kobi] ref=[]
+     #44<->#75 skor=2 kos=0.8928 capa=[kobi] ref=[]
+
+### GRUP 4 — 4 uye 
+  #45 [aa-ekonomi] 2026-09-10 Merkez Bankası, politika faizini yüzde 37'de sabit bıraktı
+      capa=[faiz-karari,tcmb] ref=[]
+  #47 [ekonomim] 2026-09-10 TCMB'nin faiz kararına ekonomistlerden ilk yorumlar
+      capa=[faiz-karari,tcmb] ref=[]
+  #55 [isci-haber] 2026-09-11 TCMB: Cari işlemler hesabı 36 milyon dolar fazla verdi
+      capa=[tcmb] ref=[]
+  #115 [bloomberg] 2026-09-10 Lagarde: ECB'nin faiz artışı 'düşünmeye bile gerek yoktu' — piyasalar yeni art
+      capa=[faiz-karari,ecb] ref=[]
+  -- kenarlar --
+     #45<->#47 skor=2 kos=0.9178 capa=[faiz-karari,tcmb] ref=[]
+     #45<->#55 skor=2 kos=0.8863 capa=[tcmb] ref=[]
+     #45<->#115 skor=2 kos=0.8809 capa=[faiz-karari] ref=[]
+     #47<->#55 skor=2 kos=0.8833 capa=[tcmb] ref=[]
+
+### GRUP 5 — 2 uye 
+  #70 [ab-komisyonu-basin] 2026-09-11 Komisyon AB-Hindistan Serbest Ticaret Anlaşması'nı imza için Konsey'e sundu
+      capa=[gumruk-birligi,serbest-ticaret-anlasmasi] ref=[]
+  #83 [ab-komisyonu-ticaret] 2026-09-11 Komisyon AB-Ekvador Sürdürülebilir Yatırım Kolaylaştırma Anlaşması'nı Konsey'e
+      capa=[serbest-ticaret-anlasmasi] ref=[]
+  -- kenarlar --
+     #70<->#83 skor=2 kos=0.8815 capa=[serbest-ticaret-anlasmasi] ref=[]

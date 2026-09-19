@@ -11,6 +11,14 @@
 import {
   TR_STOPWORDS, normalizeText, tokenize,
 } from '../lib/dedup.js';
+// Cumle ayirma TEK EVDE: lib/summarize.js. Buradaki eski surum
+// `split(/(?<=[.!?])\s+(?=[A-ZCGIOSU0-9])/)` ile boluyordu ve korpusun
+// hata kiplerinde yaniliyordu: "Md. 5", "vb.", "2026/2022" gibi diziler
+// cumleyi ortasindan kesiyor, rakamla baslayan devam parcasi yeni cumle
+// sayiliyordu. Ayni metni iki farkli bolucuyle islemek, ozetin frontend'de
+// ve backend'de FARKLI cikmasi demek. DigestCard.tsx'in cozdugu surum
+// lib/summarize.js'e tasindi; bu dosya ona DEVREDIYOR.
+import { splitSentences } from '../lib/summarize.js';
 
 /** Model kimligi — CONTRACT geregi sabit, degistirmeyin. */
 export const MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-5';
@@ -78,15 +86,6 @@ const CATEGORY_RULES = normalizeHints(CATEGORY_HINTS);
 const REGION_RULES = normalizeHints(REGION_HINTS);
 const NEGATIVE_RULES = NEGATIVE_HINTS.map((h) => normalizeText(h));
 const POSITIVE_RULES = POSITIVE_HINTS.map((h) => normalizeText(h));
-
-/** Metni cumlelere ayirir (kisaltmalara karsi kaba ama yeterli). */
-function splitSentences(text) {
-  return String(text || '')
-    .replace(/\s+/g, ' ')
-    .split(/(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ0-9])/)
-    .map((s) => s.trim())
-    .filter(Boolean);
-}
 
 function guessFrom(hints, haystack, fallback) {
   for (const [value, needles] of hints) {

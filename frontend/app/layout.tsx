@@ -10,6 +10,8 @@ import "./globals.css";
 import { Masthead } from "@/components/Masthead";
 import { ViewProvider, VIEW_BOOTSTRAP_SCRIPT } from "@/components/ViewProvider";
 import { A11yProvider, A11Y_BOOTSTRAP_SCRIPT } from "@/components/A11yProvider";
+import { SessionProvider } from "@/components/SessionProvider";
+import { SessionGuard } from "@/components/auth/SessionGuard";
 import { A11yWidget } from "@/components/A11yWidget";
 import { ReadingRuler } from "@/components/ReadingRuler";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -96,6 +98,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-paper text-ink antialiased">
         <A11yProvider>
+          {/* Oturum bir kez cekilir; SessionGuard ve ust bardaki Yonetim
+              baglantisi ayni baglamdan okur (iki /auth/me istegi olmasin). */}
+          <SessionProvider>
           <ViewProvider>
             {/* Klavye kullanıcıları için içeriğe atlama bağlantısı */}
             <a
@@ -111,7 +116,11 @@ export default function RootLayout({
                 okuma cetveli. Yazdırmada ikisi de gizlenir. */}
             <A11yWidget />
             <ReadingRuler />
+            {/* Gecersiz/suresi dolmus cerezi yakalayan ikinci katman.
+                middleware Edge'de cerezin yalnizca VARLIGINA bakabiliyor. */}
+            <SessionGuard />
           </ViewProvider>
+          </SessionProvider>
         </A11yProvider>
       </body>
     </html>

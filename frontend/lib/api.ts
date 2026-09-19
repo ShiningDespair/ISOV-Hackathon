@@ -67,17 +67,44 @@ export function buildQuery(params: Record<string, unknown> = {}): string {
   return qs ? `?${qs}` : "";
 }
 
+/**
+ * Sunucu tarafi render'da gelen istegin oturum cerezini API'ye ILETIR.
+ *
+ * ZORUNLU: panel kapali oldugu icin /articles, /stats, /reports hepsi oturum
+ * istiyor. Sunucu bileseni kendi basina cerez gondermez — tarayicidan gelen
+ * istegin cerezini acikca aktarmak gerekir. Bu olmadan API 401 doner ve
+ * kullanici giris yapmis olsa bile sayfa BOS kalir (olculdu: bulten sayfasi
+ * 0 haber, 25 KB).
+ *
+ * `next/headers` yalnizca sunucuda var; modul tepesinde ice aktarilirsa
+ * istemci paketi kirilir, bu yuzden dinamik import ve window kontrolu.
+ */
+async function serverCookieHeader(): Promise<Record<string, string>> {
+  if (typeof window !== "undefined") return {};
+  try {
+    const { cookies } = await import("next/headers");
+    const jar = await cookies();
+    const raw = jar.toString();
+    return raw ? { cookie: raw } : {};
+  } catch {
+    // Istek baglami yoksa (build sirasi, birim testi) sessizce gec.
+    return {};
+  }
+}
+
 /** Düşük seviye fetch — timeout'lu, no-store, asla fırlatmaz. */
 async function request<T>(path: string): Promise<ApiResult<T>> {
   const url = `${apiBase().replace(/\/+$/, "")}${path}`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  const cookieHeader = await serverCookieHeader();
 
   try {
     const res = await fetch(url, {
       cache: "no-store",
+      credentials: "include",
       signal: controller.signal,
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json", ...cookieHeader },
     });
 
     if (!res.ok) {
@@ -285,7 +312,11 @@ export async function mutate<T>(
       cache: "no-store",
       credentials: "include",
       signal: controller.signal,
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        ...(await serverCookieHeader()),
+      },
       body: method === "DELETE" && body == null ? undefined : JSON.stringify(body ?? {}),
     });
 

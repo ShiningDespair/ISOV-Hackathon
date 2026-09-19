@@ -16,6 +16,7 @@ process.env.TZ = process.env.TZ || 'Europe/Istanbul';
 import apiRouter from './routes/index.js';
 import { ApiError } from './lib/http.js';
 import { closePool, pingDb } from './lib/db.js';
+import { sessionMiddleware } from './middleware/session.js';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 5005;
@@ -40,6 +41,12 @@ app.use(cors({
   // PATCH: kaynak ve oneri guncelleme uclari icin zorunlu; yoksa tarayici
   // on-kontrolu (preflight) istegi daha sunucuya gelmeden reddeder.
   methods: ['GET', 'POST', 'PATCH', 'PUT', 'OPTIONS'],
+  // Oturum httpOnly cerezle tasiniyor ve panel farkli origin'de calisiyor
+  // (localhost:3005 -> localhost:5005). credentials olmadan tarayici
+  // Set-Cookie'yi YOKSAYAR ve sonraki isteklere cerezi eklemez; yani
+  // kimlik dogrulama sessizce hic calismaz. Origin yansitildigi icin
+  // (asla '*') credentials ile birlikte gecerli.
+  credentials: true,
   maxAge: 86400,
 }));
 
@@ -48,6 +55,16 @@ app.use(morgan('tiny'));
 // 2mb: /collect/run gibi uclar buyuk govde almiyor ama seed benzeri
 // yuklemelerde bogulmayalim.
 app.use(express.json({ limit: '2mb' }));
+
+// OTURUM: cerezi ayristirir (cookie-parser YOK — tek cerez icin gereksiz),
+// `req.cookies`, `req.user` ve `req.tenant` alanlarini doldurur.
+// ISTEGI REDDETMEZ; hangi ucun oturum istedigine uc kendisi karar verir
+// (`requireAuth` / `requireRole`).
+//
+// ROUTER'DAN ONCE baglanmasi ZORUNLU: `tenantKeyOf()` kurum sizintisi
+// duzeltmesi `req.tenant`i okuyor ve bu orta katman calismazsa sessizce
+// eski (guvensiz) davranisa duserdi.
+app.use(sessionMiddleware);
 
 app.use('/api', apiRouter);
 

@@ -46,6 +46,13 @@ export function SiteFooter() {
                   Ayarlar
                 </Link>
               </li>
+              {/* Oturumsuz da acik: hangi ozelligin calistigini gormek icin
+                  giris yapmak gerekmesin. */}
+              <li>
+                <Link href="/durum" className="u-kicker u-link-underline">
+                  Durum
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

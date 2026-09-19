@@ -7,14 +7,30 @@
 import Link from "next/link";
 import { formatMasthead, issueNumber } from "@/lib/format";
 import { ViewSwitch } from "./ViewSwitch";
+import { AdminNavLink } from "./AdminNavLink";
 
+/**
+ * Bolum gezintisi.
+ *
+ * "Panelim" ve "Degisiklikler" oturum gerektirir; middleware zaten cerezsiz
+ * istegi /giris'e yonlendirdigi icin baglantiyi gizlemiyoruz - gizlemek,
+ * kullanicinin ozelligin varligini hic ogrenmemesine yol acardi.
+ *
+ * "Yonetim" yalnizca role='admin' icin gorunur (asagida suzuluyor):
+ * yetkisi olmayana gosterip 403 yedirmek kotu bir deneyim.
+ */
 const NAV = [
   { href: "/", label: "Bülten" },
-  { href: "/etiketler", label: "Etiketler" },
+  { href: "/panelim", label: "Panelim" },
+  { href: "/degisiklikler", label: "Değişiklikler" },
   { href: "/raporlar", label: "Raporlar" },
+  { href: "/etiketler", label: "Etiketler" },
   { href: "/istatistik", label: "İstatistik" },
   { href: "/ayarlar", label: "Ayarlar" },
 ];
+
+/** Yalnizca yonetici gezintisinde gorunen bolumler. */
+const ADMIN_NAV = [{ href: "/admin", label: "Yönetim" }];
 
 export function Masthead() {
   const now = new Date();
@@ -63,6 +79,9 @@ export function Masthead() {
                   {item.label}
                 </Link>
               </li>
+            ))}
+            {ADMIN_NAV.map((item) => (
+              <AdminNavLink key={item.href} href={item.href} label={item.label} />
             ))}
           </ul>
         </nav>

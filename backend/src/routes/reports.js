@@ -1,6 +1,7 @@
 // ---------------------------------------------------------------------
 // GET  /api/reports            — rapor listesi
 // GET  /api/reports/:id        — rapor + icindeki haberler (bolumlere ayrilmis)
+// GET  /api/reports/:id/pdf    — sunucu tarafinda uretilmis PDF (oturum sart)
 // POST /api/reports/generate   — donemsel rapor uret
 // ---------------------------------------------------------------------
 import { Router } from 'express';
@@ -10,6 +11,8 @@ import { ApiError, asyncHandler, parsePagination, pickFromAllowList } from '../l
 import { serializeList, wantsReveal } from '../lib/serialize.js';
 import { generateReport, serializeReportRow, SECTION_ORDER } from '../services/reportService.js';
 import { findArticleRowsByIds, serializeArticleRows } from '../services/articleService.js';
+import { isAvailable as pdfAvailable, renderReportPdf } from '../services/pdfService.js';
+import { requireAuth } from '../middleware/session.js';
 
 const router = Router();
 
@@ -95,6 +98,62 @@ router.get('/:id', asyncHandler(async (req, res) => {
     sections,
     items,
   });
+}));
+
+// ---------------------------------------------------------------------
+// GET /api/reports/:id/pdf?tip=gunluk|haftalik
+//
+// OTURUM ZORUNLU: panel tamamen kapali (CONTRACT "Kimlik dogrulama
+// sozlesmesi"). Oturumsuz istek `requireAuth` ile 401 alir.
+//
+// CHROMIUM YOKSA 503: PDF opsiyonel bir bagimlilik. Hata 500 DEGIL 503,
+// cunku istek gecerli — sunucu gecici olarak bu hizmeti veremiyor. Mesaj
+// Turkce ve eyleme donuk; kullanici "bozuldu mu?" diye tahmin etmemeli.
+// ---------------------------------------------------------------------
+const PDF_TEMPLATE_TYPES = ['gunluk', 'haftalik'];
+
+router.get('/:id/pdf', requireAuth, asyncHandler(async (req, res) => {
+  const id = Number.parseInt(req.params.id, 10);
+  if (!Number.isFinite(id) || id <= 0) throw ApiError.badRequest('Geçersiz rapor kimliği');
+
+  // Sablon: ?tip= verilmisse o, yoksa raporun donem tipinden turetilir
+  // (gunluk rapor -> gunluk sablon, digerleri -> haftalik).
+  const tip = pickFromAllowList(req.query.tip, PDF_TEMPLATE_TYPES);
+
+  if (!pdfAvailable()) {
+    return res.status(503).json({
+      error: {
+        code: 'PDF_KULLANILAMIYOR',
+        message: 'PDF üretimi şu anda kullanılamıyor: sunucuda Chromium bulunamadı. '
+          + 'Bu arada raporu tarayıcıdan yazdırarak PDF alabilirsiniz '
+          + '(rapor sayfasında Yazdır düğmesi).',
+      },
+    });
+  }
+
+  const result = await renderReportPdf(id, { tip });
+
+  if (!result.ok) {
+    if (result.reason === 'bulunamadi') throw ApiError.notFound('Rapor bulunamadı');
+    // Uretim hatasi da 503: veri gecerli, hizmet gecici olarak veremiyor.
+    return res.status(503).json({
+      error: { code: 'PDF_URETILEMEDI', message: result.error || 'PDF üretilemedi.' },
+    });
+  }
+
+  // Dosya adi ASCII (reportFilename slug uretiyor); RFC 5987 alani da
+  // yaziliyor ki ileride Turkce ad kullanilirsa istemci dogru okusun.
+  const filename = result.filename || `isov-rapor-${id}.pdf`;
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Length', String(result.bytes));
+  res.setHeader(
+    'Content-Disposition',
+    `inline; filename="${filename}"; filename*=UTF-8''${encodeURIComponent(filename)}`,
+  );
+  // Rapor icerigi degisebilir (generateReport upsert ediyor); onbelleklenmesin.
+  res.setHeader('Cache-Control', 'private, no-store');
+  res.setHeader('X-PDF-Pages', String(result.pages ?? ''));
+  return res.end(result.buffer);
 }));
 
 router.post('/generate', asyncHandler(async (req, res) => {

@@ -1,0 +1,99 @@
+aday kume: 115 (toplam 115)
+
+== SEMANTIK SIRALAMA ==
+{"ust-yonetim":{"ok":true,"ranked":99,"err":null},"strateji":{"ok":true,"ranked":99,"err":null},"tesvik-finansman":{"ok":true,"ranked":100,"err":null},"dis-ticaret":{"ok":true,"ranked":99,"err":null},"uretim-operasyon":{"ok":true,"ranked":99,"err":null},"enerji-surdurulebilirlik":{"ok":true,"ranked":101,"err":null},"mevzuat-hukuk":{"ok":true,"ranked":100,"err":null},"medya-iletisim":{"ok":true,"ranked":100,"err":null}}
+
+== KALIBRASYON: BILESEN STANDART SAPMASI (115 tekil haber) ==
+pozisyon                    position_topic    sector_match        semantic   interest_tags          region source_affinity
+ust-yonetim                          15.55           25.12           17.79           10.57           26.34            0.00
+strateji                             16.84           21.93           17.79           13.75           24.41            0.00
+tesvik-finansman                     19.00           17.98           17.90           12.86           24.97            0.00
+dis-ticaret                          22.97           21.14           17.79           16.71           23.08            0.00
+uretim-operasyon                     18.36           25.18           17.79           14.86           26.34            0.00
+enerji-surdurulebilirlik             16.86           24.38           18.00           13.12           22.34            0.00
+mevzuat-hukuk                        17.64           24.43           17.90            9.40           24.97            1.11
+medya-iletisim                       13.66           20.98           17.90           10.15           26.34            0.00
+--------------------------------------------------------------------------------------------------------------------------
+HAVUZ (8x115)                        18.13           23.28           17.86           13.12           26.25            0.40
+ortalama deger                       61.49           60.96           75.85           25.06           74.80           50.01
+profil-ici medyan sapma              17.64           24.38           17.90           13.12           24.97            0.00
+
+== CIFTLER ARASI ORTUSME — ILK 10 (tam, KRITIK omurga dahil) ==
+pozisyon                  ust-yonet stratejitesvik-fidis-ticaruretim-openerji-sumevzuat-hmedya-ile  GLOBAL
+ust-yonetim                   10/10     9/10     9/10    10/10    10/10    10/10    10/10    10/10  10/10
+strateji                       9/10    10/10    10/10     9/10     9/10     9/10     9/10     9/10  9/10
+tesvik-finansman               9/10    10/10    10/10     9/10     9/10     9/10     9/10     9/10  9/10
+dis-ticaret                   10/10     9/10     9/10    10/10    10/10    10/10    10/10    10/10  10/10
+uretim-operasyon              10/10     9/10     9/10    10/10    10/10    10/10    10/10    10/10  10/10
+enerji-surdurulebilirlik      10/10     9/10     9/10    10/10    10/10    10/10    10/10    10/10  10/10
+mevzuat-hukuk                 10/10     9/10     9/10    10/10    10/10    10/10    10/10    10/10  10/10
+medya-iletisim                10/10     9/10     9/10    10/10    10/10    10/10    10/10    10/10  10/10
+cift sayisi 28  min 9  medyan 10  maks 10  ortalama 9.57
+GLOBAL ile kesisim: min 9 medyan 10 maks 10  (alarm yok)
+
+== CIFTLER ARASI ORTUSME — ILK 10 (omurga HARIC — sadece sabitlenmemis) ==
+pozisyon                  ust-yonet stratejitesvik-fidis-ticaruretim-openerji-sumevzuat-hmedya-ile  GLOBAL
+ust-yonetim                   10/10     1/10     2/10     2/10     1/10     0/10     1/10     5/10  0/10
+strateji                       1/10    10/10     2/10     2/10     3/10     1/10     0/10     3/10  0/10
+tesvik-finansman               2/10     2/10    10/10     1/10     3/10     0/10     1/10     3/10  0/10
+dis-ticaret                    2/10     2/10     1/10    10/10     2/10     1/10     2/10     1/10  0/10
+uretim-operasyon               1/10     3/10     3/10     2/10    10/10     2/10     0/10     3/10  0/10
+enerji-surdurulebilirlik       0/10     1/10     0/10     1/10     2/10    10/10     5/10     0/10  0/10
+mevzuat-hukuk                  1/10     0/10     1/10     2/10     0/10     5/10    10/10     1/10  0/10
+medya-iletisim                 5/10     3/10     3/10     1/10     3/10     0/10     1/10    10/10  0/10
+cift sayisi 28  min 0  medyan 2  maks 5  ortalama 1.71
+GLOBAL ile kesisim: min 0 medyan 0 maks 0  *** ALARM: medyan 3/10 ALTINDA ***
+
+== CIFTLER ARASI ORTUSME — ILK 30 (tam) ==
+pozisyon                  ust-yonet stratejitesvik-fidis-ticaruretim-openerji-sumevzuat-hmedya-ile  GLOBAL
+ust-yonetim                   30/30    16/30    18/30    17/30    17/30    19/30    20/30    21/30  20/30
+strateji                      16/30    30/30    15/30    18/30    20/30    16/30    15/30    20/30  21/30
+tesvik-finansman              18/30    15/30    30/30    14/30    15/30    15/30    17/30    17/30  19/30
+dis-ticaret                   17/30    18/30    14/30    30/30    19/30    15/30    16/30    16/30  18/30
+uretim-operasyon              17/30    20/30    15/30    19/30    30/30    18/30    17/30    15/30  20/30
+enerji-surdurulebilirlik      19/30    16/30    15/30    15/30    18/30    30/30    22/30    15/30  20/30
+mevzuat-hukuk                 20/30    15/30    17/30    16/30    17/30    22/30    30/30    19/30  22/30
+medya-iletisim                21/30    20/30    17/30    16/30    15/30    15/30    19/30    30/30  21/30
+cift sayisi 28  min 14  medyan 17  maks 22  ortalama 17.21
+GLOBAL ile kesisim: min 18 medyan 20 maks 22  (alarm yok)
+
+== FILTRE BALONU KONTROLU ==
+CBAM/anti-damping haberleri: 10 -> 82,95,98,92,100,94,96,67,68,129
+ust-yonetim                ilk10'da 2 tane: #67(omurga) #92(omurga)
+strateji                   ilk10'da 2 tane: #67(omurga) #92(omurga)
+tesvik-finansman           ilk10'da 2 tane: #67(omurga) #92(omurga)
+dis-ticaret                ilk10'da 2 tane: #67(omurga) #92(omurga)
+uretim-operasyon           ilk10'da 2 tane: #67(omurga) #92(omurga)
+enerji-surdurulebilirlik   ilk10'da 2 tane: #67(omurga) #92(omurga)
+mevzuat-hukuk              ilk10'da 2 tane: #67(omurga) #92(omurga)
+medya-iletisim             ilk10'da 2 tane: #67(omurga) #92(omurga)
+
+-- mevzuat-hukuk ilk 8 --
+  P  76.38 k= 70.38 g= 76.38 #1 KRITIK Orta Vadeli Program (2027-2029) Onaylandı: Büyüme %4,2, Enflas
+  P  75.09 k=  78.9 g= 72.76 #32 KRITIK Yatırım yapacak şirketler dikkat: finansmanda yeni dönem, kred
+  P  73.98 k= 54.41 g= 73.98 #45 KRITIK Merkez Bankası, politika faizini yüzde 37'de sabit bıraktı
+  P  73.59 k=  68.8 g= 73.59 #67 KRITIK AB, Türkiye ve Çin menşeli hasır çelik ithalatını kayda aldı (
+  P  72.72 k= 75.04 g= 71.29 #2 KRITIK Reeskont Kredilerinde Vergi, Resim ve Harç İstisnasının Kapsam
+  P  71.45 k= 51.65 g= 71.45 #92 KRITIK ABD, Türkiye menşeli oluklu mukavva pizza kutularına anti-damp
+  P  71.42 k= 53.51 g= 71.42 #23 KRITIK KOSGEB Küresel Rekabetçilik Destek Programı 2026/1 başvuruları
+  P  70.48 k= 56.11 g= 70.48 #24 KRITIK KOSGEB Kapasite Geliştirme Destek Programı 2026/3 dönemi için 
+
+-- tesvik-finansman ilk 8 --
+  P  78.43 k= 89.87 g= 71.42 #23 KRITIK KOSGEB Küresel Rekabetçilik Destek Programı 2026/1 başvuruları
+  P  78.37 k= 91.23 g= 70.48 #24 KRITIK KOSGEB Kapasite Geliştirme Destek Programı 2026/3 dönemi için 
+  P  76.73 k= 88.62 g= 69.44 #30 KRITIK TÜBİTAK 1501 ve 1507 programlarının 2026/2 çağrıları açık: pro
+  P  76.39 k= 82.31 g= 72.76 #32 KRITIK Yatırım yapacak şirketler dikkat: finansmanda yeni dönem, kred
+  P  76.38 k= 54.87 g= 76.38 #1 KRITIK Orta Vadeli Program (2027-2029) Onaylandı: Büyüme %4,2, Enflas
+  P  74.86 k=    83 g= 69.87 #25 KRITIK İstihdamı Koruma Destek Programı 2026-2 dönemi açıldı: imalatç
+  P  73.98 k= 56.11 g= 73.98 #45 KRITIK Merkez Bankası, politika faizini yüzde 37'de sabit bıraktı
+  P  73.59 k= 53.52 g= 73.59 #67 KRITIK AB, Türkiye ve Çin menşeli hasır çelik ithalatını kayda aldı (
+
+-- medya-iletisim ilk 8 --
+  P  76.38 k= 54.64 g= 76.38 #1 KRITIK Orta Vadeli Program (2027-2029) Onaylandı: Büyüme %4,2, Enflas
+  P  73.98 k= 61.94 g= 73.98 #45 KRITIK Merkez Bankası, politika faizini yüzde 37'de sabit bıraktı
+  P  73.59 k= 43.28 g= 73.59 #67 KRITIK AB, Türkiye ve Çin menşeli hasır çelik ithalatını kayda aldı (
+  P  72.76 k= 57.47 g= 72.76 #32 KRITIK Yatırım yapacak şirketler dikkat: finansmanda yeni dönem, kred
+  P  71.45 k=    46 g= 71.45 #92 KRITIK ABD, Türkiye menşeli oluklu mukavva pizza kutularına anti-damp
+  P  71.42 k= 60.51 g= 71.42 #23 KRITIK KOSGEB Küresel Rekabetçilik Destek Programı 2026/1 başvuruları
+  P  71.29 k= 62.44 g= 71.29 #2 KRITIK Reeskont Kredilerinde Vergi, Resim ve Harç İstisnasının Kapsam
+  P  70.48 k= 65.15 g= 70.48 #24 KRITIK KOSGEB Kapasite Geliştirme Destek Programı 2026/3 dönemi için 
