@@ -258,9 +258,19 @@ function errorMessageFrom(payload: unknown): string | null {
   return null;
 }
 
-/** Yazma isteği — timeout'lu, JSON gövdeli, asla fırlatmaz. */
-async function mutate<T>(
-  method: "POST" | "PATCH" | "PUT",
+/**
+ * Yazma isteği — timeout'lu, JSON gövdeli, asla fırlatmaz.
+ *
+ * DISA ACIK: yeni uç grupları (auth, me, admin) kendi istemci dosyalarını
+ * yazarken bu fonksiyonu içe aktarır. Herkesin lib/api.ts'i düzenlemesi
+ * paralel çalışmada çakışma üretiyordu; tek yazma yolu burada durur.
+ *
+ * credentials:"include" — oturum httpOnly çerezle taşınıyor, çerezin
+ * gönderilmesi ZORUNLU. Bu olmadan giriş yapılsa bile sonraki istekler
+ * oturumsuz görünür.
+ */
+export async function mutate<T>(
+  method: "POST" | "PATCH" | "PUT" | "DELETE",
   path: string,
   body: unknown,
   messages: { conflict?: string } = {},
@@ -273,9 +283,10 @@ async function mutate<T>(
     const res = await fetch(url, {
       method,
       cache: "no-store",
+      credentials: "include",
       signal: controller.signal,
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(body ?? {}),
+      body: method === "DELETE" && body == null ? undefined : JSON.stringify(body ?? {}),
     });
 
     let payload: unknown = null;
@@ -304,6 +315,33 @@ async function mutate<T>(
           ok: false,
           status: 409,
           error: messages.conflict ?? detail ?? "Bu kayıt zaten mevcut.",
+          data: null,
+        };
+      }
+      // 401/403: oturum yok ya da yetki yetersiz. Panel tamamen kapalı
+      // olduğu için bu iki durum sık görülecek; çağıran taraf status'a
+      // bakıp giriş sayfasına yönlendirebilsin diye ayrı ele alınıyor.
+      if (res.status === 401) {
+        return {
+          ok: false,
+          status: 401,
+          error: detail ?? "Oturumunuz sona ermiş. Yeniden giriş yapın.",
+          data: null,
+        };
+      }
+      if (res.status === 403) {
+        return {
+          ok: false,
+          status: 403,
+          error: detail ?? "Bu işlem için yetkiniz yok.",
+          data: null,
+        };
+      }
+      if (res.status === 429) {
+        return {
+          ok: false,
+          status: 429,
+          error: detail ?? "Çok fazla deneme yapıldı. Lütfen biraz bekleyin.",
           data: null,
         };
       }
