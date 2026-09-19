@@ -35,50 +35,83 @@ echo "  token alindi"
 
 AUTH=(-H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json')
 
-# --- Proxy host govdesi -------------------------------------------------
-# /api/* isteklerini backend'e yonlendiren ozel location da eklenir; boylece
-# tarayici tarafi NEXT_PUBLIC_API_BASE_URL=/api tek origin uzerinden calisir.
-BODY=$(jq -n \
-  --arg d "$DOMAIN" --arg h "$FORWARD_HOST" --argjson p "$FORWARD_PORT" '
-  {
-    domain_names: [$d],
-    forward_scheme: "http",
-    forward_host: $h,
-    forward_port: $p,
-    access_list_id: 0,
-    certificate_id: 0,
-    ssl_forced: false,
-    http2_support: true,
-    block_exploits: true,
-    caching_enabled: false,
-    allow_websocket_upgrade: true,
-    advanced_config: "",
-    meta: { letsencrypt_agree: false, dns_challenge: false },
-    locations: [
-      {
-        path: "/api",
-        forward_scheme: "http",
-        forward_host: "isov-backend",
-        forward_port: 5005,
-        advanced_config: "proxy_set_header X-Forwarded-Proto $scheme;"
-      }
-    ]
-  }')
+# --- /api location tanimi ----------------------------------------------
+# /api/* isteklerini backend'e yonlendirir; boylece tarayici tarafi
+# NEXT_PUBLIC_API_BASE_URL=/api tek origin uzerinden calisir. Oturum cerezi
+# de ayni origin'de kaldigi icin SameSite=Lax sorun cikarmaz.
+API_LOCATION=$(jq -n '[{
+  path: "/api",
+  forward_scheme: "http",
+  forward_host: "isov-backend",
+  forward_port: 5005,
+  advanced_config: "proxy_set_header X-Forwarded-Proto $scheme;"
+}]')
 
 # --- Ayni domain zaten kayitli mi? -------------------------------------
-EXISTING=$(curl -fsS "${AUTH[@]}" "$NPM_URL/api/nginx/proxy-hosts" \
-  | jq -r --arg d "$DOMAIN" '.[] | select(.domain_names | index($d)) | .id' | head -1)
+EXISTING_JSON=$(curl -fsS "${AUTH[@]}" "$NPM_URL/api/nginx/proxy-hosts" \
+  | jq -c --arg d "$DOMAIN" 'map(select(.domain_names | index($d))) | .[0] // empty')
 
-if [[ -n "$EXISTING" ]]; then
-  echo "→ Mevcut kayit guncelleniyor (id=$EXISTING)"
-  curl -fsS -X PUT "${AUTH[@]}" "$NPM_URL/api/nginx/proxy-hosts/$EXISTING" -d "$BODY" \
-    | jq -r '"  ✓ guncellendi: \(.domain_names[0]) → \(.forward_host):\(.forward_port)"'
+if [[ -n "$EXISTING_JSON" ]]; then
+  ID=$(jq -r '.id' <<<"$EXISTING_JSON")
+  echo "→ Mevcut kayit guncelleniyor (id=$ID)"
+
+  # ------------------------------------------------------------------
+  # OKU-DEGISTIR-YAZ. Bu ONEMLI: NPM'in PUT'u govdeyi TAMAMEN DEGISTIRIR,
+  # birlestirmez. Onceki surum sabit bir govde gonderiyordu ve icinde
+  # certificate_id:0 / ssl_forced:false vardi; bu, mevcut Let's Encrypt
+  # sertifikasinin BAGLANTISINI KOPARDI ve canli site HTTPS'te
+  # "unrecognized name" hatasi vermeye basladi (HTTP calismaya devam
+  # ettigi icin ilk bakista fark edilmiyor).
+  #
+  # Artik mevcut kayit okunur, YALNIZCA locations degistirilir, SSL ve
+  # diger alanlar oldugu gibi korunur.
+  # ------------------------------------------------------------------
+  CERT=$(jq -r '.certificate_id // 0' <<<"$EXISTING_JSON")
+  BODY=$(jq -c --argjson loc "$API_LOCATION" '
+    {
+      domain_names, forward_scheme, forward_host, forward_port,
+      access_list_id, allow_websocket_upgrade, block_exploits,
+      caching_enabled, advanced_config, meta,
+      certificate_id, ssl_forced, http2_support, hsts_enabled, hsts_subdomains,
+      locations: $loc
+    }' <<<"$EXISTING_JSON")
+
+  curl -fsS -X PUT "${AUTH[@]}" "$NPM_URL/api/nginx/proxy-hosts/$ID" -d "$BODY" \
+    | jq -r '"  ✓ guncellendi: \(.domain_names[0]) → \(.forward_host):\(.forward_port)\n    /api → isov-backend:5005\n    sertifika_id: \(.certificate_id)  ssl_forced: \(.ssl_forced)"'
+
+  if [[ "$CERT" == "0" ]]; then
+    echo "  ⚠  Bu kayitta SSL sertifikasi TANIMLI DEGIL. HTTPS calismayacak;"
+    echo "     NPM arayuzunden Let's Encrypt sertifikasi ekleyin."
+  fi
 else
   echo "→ Yeni proxy host olusturuluyor"
+  BODY=$(jq -n --arg d "$DOMAIN" --arg h "$FORWARD_HOST" --argjson p "$FORWARD_PORT" \
+    --argjson loc "$API_LOCATION" '
+    {
+      domain_names: [$d],
+      forward_scheme: "http",
+      forward_host: $h,
+      forward_port: $p,
+      access_list_id: 0,
+      certificate_id: 0,
+      ssl_forced: false,
+      http2_support: true,
+      block_exploits: true,
+      caching_enabled: false,
+      allow_websocket_upgrade: true,
+      advanced_config: "",
+      meta: { letsencrypt_agree: false, dns_challenge: false },
+      locations: $loc
+    }')
   curl -fsS -X POST "${AUTH[@]}" "$NPM_URL/api/nginx/proxy-hosts" -d "$BODY" \
     | jq -r '"  ✓ olusturuldu: \(.domain_names[0]) → \(.forward_host):\(.forward_port)"'
+  echo "  ⓘ Yeni kayitta SSL yok. NPM arayuzunden Let's Encrypt sertifikasi ekleyin."
 fi
 
 echo
-echo "Tamam. Kalan adim: Cloudflare'de $DOMAIN A kaydi bu sunucuya yonlendirilmeli."
-echo "SSL sertifikasi NPM arayuzunden (Let's Encrypt) veya Cloudflare Origin Cert ile eklenebilir."
+echo "Dogrulama:"
+echo "  curl -s -o /dev/null -w '%{http_code}\\n' https://$DOMAIN/api/health   # 200 beklenir"
+echo "  curl -s -o /dev/null -w '%{http_code}\\n' https://$DOMAIN/api/articles  # 401 beklenir (panel kapali)"
+echo
+echo "NOT: HTTPS'i de kontrol edin. HTTP calisip HTTPS'in bozulmasi ilk bakista"
+echo "fark edilmez; 'unrecognized name' hatasi sertifika baglantisinin kopmasi demektir."
