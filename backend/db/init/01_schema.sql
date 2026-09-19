@@ -76,6 +76,14 @@ CREATE TABLE IF NOT EXISTS articles (
   -- --- islenmis alanlar --------------------------------------------
   summary           TEXT NULL,                         -- 2-4 cumle ozet (TR)
   summary_en        TEXT NULL,
+  -- Vakit kademeleri (2/5/15 dk) icin onceden uretilmis kisa varyantlar.
+  -- Bugun heuristik doldurulur; ANTHROPIC_API_KEY geldiginde bir is bu
+  -- kolonlari uretilmis metinle ezer ve summary_source'u 'llm' yapar.
+  -- OKUMA YOLU DEGISMEZ: daima bu kolonlari COALESCE ile okur, bossa
+  -- anlik yardimciya duser.
+  summary_short     VARCHAR(400) NULL,
+  summary_medium    TEXT NULL,
+  summary_source    ENUM('heuristik','llm') NOT NULL DEFAULT 'heuristik',
   key_points        JSON NULL,                         -- ["madde", ...]
   entities          JSON NULL,                         -- {kurum:[], kisi:[], sektor:[]}
 
@@ -253,6 +261,9 @@ CREATE TABLE IF NOT EXISTS reports (
   stats         JSON NULL,
   created_at    DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
+  -- Idempotentlik uygulama katmaninda SELECT-then-UPDATE ile saglaniyordu;
+  -- rapor uretimi zamanlanmis hale gelince bu yaris kosuluna acikti.
+  UNIQUE KEY uq_reports_period (period_start, period_end, period_type),
   KEY ix_reports_period (period_end DESC)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

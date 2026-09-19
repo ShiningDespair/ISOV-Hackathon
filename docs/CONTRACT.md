@@ -306,3 +306,182 @@ ozniteligi tasimali.
 - NYT tipografisi: baslik serif, govde serif, meta/kicker sans-serif kucuk-buyuk harf.
 - **Iki gorunum**: `Panel` (varsayilan) ve `Gazete` (basili gazete mizanpaji) — ust bardaki switch.
 - Renk: kagit `#F7F7F5`, metin `#121212`, kural cizgileri `#E2E2E0`, vurgu `#8B0000`.
+
+---
+
+# KULLANICI SISTEMI ve KISISELLESTIRME (v2)
+
+## Kimlik dogrulama sozlesmesi
+
+**Panel TAMAMEN KAPALI.** Oturumsuz istek korunan uclarda `401` alir.
+Acik kalan tek ucler: `/api/health`, `/api/auth/*`, `/api/meta/*`.
+
+| Method | Yol | Aciklama |
+|---|---|---|
+| POST | `/auth/register` | `{email, password, full_name, title?, tenant_key?}` -> 201 + oturum cerezi |
+| POST | `/auth/login` | `{email, password}` -> 200 + oturum cerezi |
+| POST | `/auth/logout` | Oturumu iptal eder (`sessions.revoked_at`) |
+| GET | `/auth/me` | Oturum sahibi + profil + turetilmis `layout` |
+| POST | `/auth/password` | `{current, next}` sifre degistir |
+| POST | `/auth/password/reset-request` | `{email}` — SMTP yoksa 202 doner, kayit acilir |
+| POST | `/auth/password/reset` | `{token, next}` |
+| GET | `/meta/taxonomy` | Pozisyonlar, duzenler, NACE sektorleri, vakit kademeleri |
+
+**Cerez:** `isov_session`, `httpOnly`, `sameSite=Lax`, `secure` (production),
+`path=/`. Deger = 32 baytlik opak token; DB'de yalnizca `sha256` ozeti durur.
+
+**Sifre ozeti:** `node:crypto` scrypt, biçim `scrypt$N$r$p$salt$hash`.
+Yeni bagimlilik EKLENMEZ.
+
+**Hiz siniri:** `/auth/login` ve `/auth/register` icin IP anahtarli bellek-ici
+sinirlayici (tek konteyner, yeni bagimlilik gerekmez). Ayrica
+`users.failed_login_count` + `locked_until` ile e-posta bazli kalici kilit.
+
+### KRITIK — `tenantKeyOf()` guvenlik duzeltmesi
+
+Bugun `tenantKeyOf(req)` kurum anahtarini query/body/header'dan okuyor ve
+**hic dogrulama yok**. Kullanicilar var oldugu anda `?tenant_key=baskafirma`
+baska bir kurumun izleme listesini okumak demektir.
+
+Zorunlu: `tenantKeyOf()` **oturumun kurumunu TERCIH ETMEK** zorunda.
+Query/baslik bicimi yalnizca `NODE_ENV !== 'production'` **veya**
+`role='admin'` iken kabul edilir. Aksi halde kullanici sistemi mevcut uclari
+IYILESTIRMEZ, KOTULESTIRIR.
+
+Ayrica `articles.js` `tenantKeyOf()`'u ATLIYOR (elle okuyor) — duzeltilmeli.
+
+## Kisiselestirme
+
+`GET /articles` yeni parametreler: `sort=kisisel`, `include_hidden=1`.
+`sort=kisisel` oturum gerektirir.
+
+```
+final = 0.62 * global_normalized + 0.38 * personal
+if (importance_band === 'KRITIK') { final = max(final, global); is_pinned = 1 }
+ORDER BY is_pinned DESC, final_score DESC, published_at DESC, id DESC
+```
+
+`personal` bilesenleri ve agirliklari:
+
+| Bilesen | Agirlik | Taban | Kaynak |
+|---|---|---|---|
+| `position_topic` | 0.30 | 50 | `lib/positions.js` POSITION_TOPIC_WEIGHTS |
+| `sector_match` | 0.22 | 35 | `lib/sectors.js` computeSectorMatch |
+| `semantic` | 0.20 | 50 | Qdrant SIRA tabanli (mutlak kosinus DEGIL) |
+| `interest_tags` | 0.14 | 20 | user_profiles.interest_tag_slugs |
+| `region` | 0.08 | 45 | region_focus |
+| `source_affinity` | 0.06 | 50 | tenant_source_prefs + okuma gecmisi |
+
+**Hicbir bilesenin tabani 0 DEGIL.** Sebep: 0 olan bir bilesen haberi tek
+basina sifirlar ve bileseni fiilen filtreye cevirir. Bu sistem siralar,
+filtrelemez.
+
+**Semantik bilesen MUTLAK KOSINUSLE HESAPLANMAZ.** Olculen makale-makale
+kosinus dagilimi sikisik (medyan 0,8585, p99 0,9175); mutlak degeri 0..100'e
+acmak bileseni **sabit terime** cevirir — `computeKeyword`'un ilk surumunun
+dustugu tuzagin aynisi (ortalama 93,4, sifir ayirt etme gucu). Yerine
+`bandCutoffs()` felsefesi: aday kumesi icindeki SIRA.
+`clamp(100 - 65 * (rank / N), 35, 100)`; listede yok veya Qdrant kapali -> 50.
+
+**KALIBRASYON ZORUNLU, ATLANAMAZ:** her bilesenin 115 tekil haber
+uzerindeki standart sapmasi olculecek. **Sapmasi 8 puanin altindaki bilesen
+agirliklandirilmaz, ATILIR** ve agirligi `position_topic`'e aktarilir.
+Sabit bir bileseni agirliklandirmak, onu gizli bir sabit terim yapmaktir.
+
+**Filtre balonu korumasi ve ALARMI:** her kullanicinin ilk 10'u ile global
+ilk 10'un kesisimi olculur; kullanicilar arasi **medyan ortusme 3/10'un
+altina duserse alarm**. Bu, kisiselestirmenin "siralama"dan "sansure"
+gectiginin erken uyarisidir.
+
+**Profil vektoru KAYIT ISTEGININ ICINDE HESAPLANMAZ:** `embed()`'in ilk
+cagrisi modeli yukluyor (`EMBEDDING_LOAD_TIMEOUT_MS=300000`). Kayit
+`profile_vector_status='bekliyor'` yazip doner; arka plan isi doldurur.
+Qdrant'ta **ikinci koleksiyon acilmaz** — `ensureCollection()` boyut
+uyusmazliginda koleksiyonu silip yeniden yaratiyor, ikinci koleksiyon bu
+riski ikiye katlar. Vektor `user_profiles.profile_vector`'da durur.
+
+## Vakit butcesi -> yogunluk
+
+`lib/positions.js` DENSITY. Sayilar okuma suresi aritmetiginden (Turkce
+~200 kelime/dk), keyfi degil:
+
+| Vakit | Haber | Bicim |
+|---|---|---|
+| 2 dk | 5 | tek cumle (<=150 karakter) |
+| 5 dk | 12 | 3 madde (`key_points[0..2]`) |
+| 15 dk | 30 | ilk 10 tam ozet + sonraki 20 uc madde |
+
+15 dk kademeli, cunku 30 haber x tam ozet = ~23 dk; duz "30 tam ozet"
+vakit butcesi hakkinda YALAN olurdu.
+
+Metin uretimi YOK. `firstSentence()` / `leadSentence()` yardimcilari
+`frontend/components/DigestCard.tsx`'ten `frontend/lib/summary.ts`'e
+tasinir (tek ev, iki cagiran) ve backend'de `lib/summarize.js` ayni
+mantigi tasir — `llm.js:83` `splitSentences()` ona devreder.
+
+`articles.summary_short` / `summary_medium` / `summary_source` kolonlari
+bugun heuristik doldurulur. Anahtar geldiginde bir is bunlari uretilmis
+metinle ezer, `summary_source='llm'` olur; **okuma yolu degismez**
+(COALESCE ile okur, bossa anlik yardimciya duser).
+
+## Kullanici ucları
+
+| Method | Yol | Aciklama |
+|---|---|---|
+| GET/PUT | `/me/profile` | pozisyon, sektorler, ilgi alanlari, vakit, persona |
+| GET/PUT | `/me/newsletter` | bulten aboneligi ve zamanlama |
+| GET | `/me/changes` | son ziyaretten beri degisiklikler |
+| PUT | `/me/articles/:id/hide` | `{hidden, reason, note}` — veriyi SILMEZ |
+| PUT | `/me/articles/:id/read` | okundu isareti |
+| PUT | `/me/articles/:id/share` | `{channel}` — paylasim kaydi |
+
+## Degisiklik takibi
+
+`GET /changes` — `article_changes` tablosundan. Turler: `yeni`,
+`kume-buyudu`, `band-yukseldi`, `dosya-gelismesi`, `ozet-guncellendi`.
+
+`change_key` UNIQUE + `INSERT IGNORE` ile idempotent. `UNIQUE(article_id,
+change_type, thread_id)` ISE YARAMAZ: MySQL'de NULL'lar birbirinden farkli
+sayilir ve `thread_id IS NULL` satirlari cogalir.
+
+**`band-yukseldi` TUZAGI:** bant yuzdelik tabanli ve `recency` her gece her
+skoru degistiriyor; naif bir "skor degisti" olayi **her gece 131 haberin
+TAMAMINDA** tetiklenir. Koruma: `importance_factors`'i **recency HARIC**
+karsilastir, yalnizca YUKARI yonlu degisimi kaydet.
+
+**`clusters` dosya takibi icin YENIDEN KULLANILAMAZ.** `semanticMerge`'un
+dort kosulu da bir dosya kronolojisini engelliyor: kosinus >=0,935 (taslak
+ile nihai tuzuk bu kadar benzemez), FARKLI KAYNAK zorunlu (dosyanin
+asamalarini genelde ayni kaynak yayinlar), <=4 gun ara (dosya aylar surer),
+sayisal uyum (asamalarin rakamlari farklidir). Gevsetmek tekillestirmeyi
+bozar. Ayri `topic_threads` katmani; ama MAKINE yeniden kullanilir.
+
+**Dosyaya katilma: 3'ten 2'si.** (i) kosinus >=0,88, (ii) yuksek agirlikli
+capa etiket ortakligi (jenerik capalar KARA LISTEDE: resmi-gazete,
+mevzuat-degisikligi, ihracat, sanayi-uretimi), (iii) mevzuat referans kodu
+ortakligi (`lib/refCodes.js`). Onaysiz dosya (`is_confirmed=0`) kullaniciya
+cekinceli gosterilir, siralamada +4'ten fazla etki etmez.
+
+## Yonetim ucları (yalnizca `role='admin'`)
+
+| Method | Yol | Aciklama |
+|---|---|---|
+| GET/PUT | `/admin/settings/:key` | `smtp`, `auth`, `personalization`, `digest`, `branding` |
+| POST | `/admin/settings/smtp/test` | Test e-postasi gonderir |
+| GET | `/admin/users` | Kullanici listesi |
+| PATCH | `/admin/users/:id` | `{role, status}` |
+| POST | `/admin/users/:id/reset-link` | SMTP bozukken tek kullanimlik baglanti |
+| POST | `/admin/digest/send` | Elle bulten gonderimi |
+| GET | `/admin/email-log` | Gonderim kaydi |
+
+`is_secret=1` ayarlar API yanitinda **ASLA** donmez, yalnizca
+`{tanimli: true|false}`. SMTP sifresi AES-256-GCM, anahtar
+`process.env.SETTINGS_SECRET`. **`SETTINGS_SECRET` yoksa sifre kaydetmeyi
+REDDET** ve admine soyle — sessizce duz metin yazmak en kotu secenek.
+
+## Ozellik durumu
+
+`frontend/lib/feature-status.ts` TEK dogruluk kaynagi. `/durum` sayfasi onu
+render eder, arayuzdeki rozetler ayni diziden okur.
+**Kural: "calisiyor" demek icin `nasil` alani doldurulmus olmali** — yani
+nasil dogrulandigi yazili olmali. Dogrulanmamis sey calisiyor sayilmaz.
