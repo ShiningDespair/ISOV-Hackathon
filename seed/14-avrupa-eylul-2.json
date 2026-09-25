@@ -1,0 +1,1598 @@
+{
+  "collector": "avrupa",
+  "collected_at": "2026-09-25T18:00:00+03:00",
+  "sources": [
+    {
+      "slug": "ab-komisyonu-ticaret",
+      "name": "Avrupa Komisyonu Ticaret ve Ekonomik Güvenlik Genel Müdürlüğü",
+      "homepage_url": "https://policy.trade.ec.europa.eu",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ab-komisyonu-basin",
+      "name": "Avrupa Komisyonu Basın Odası",
+      "homepage_url": "https://ec.europa.eu/commission/presscorner",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ecb",
+      "name": "Avrupa Merkez Bankası (ECB)",
+      "homepage_url": "https://www.ecb.europa.eu",
+      "source_type": "kurum",
+      "authority_weight": 90,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "eurostat",
+      "name": "Eurostat",
+      "homepage_url": "https://ec.europa.eu/eurostat",
+      "source_type": "acik_veri",
+      "authority_weight": 90,
+      "country_code": "EU",
+      "language": "en",
+      "source_type_raw": "acik_veri"
+    },
+    {
+      "slug": "destatis",
+      "name": "Destatis - Almanya Federal İstatistik Ofisi",
+      "homepage_url": "https://www.destatis.de",
+      "source_type": "acik_veri",
+      "authority_weight": 80,
+      "country_code": "DE",
+      "language": "en",
+      "source_type_raw": "acik_veri"
+    },
+    {
+      "slug": "eunews",
+      "name": "Eunews",
+      "homepage_url": "https://www.eunews.it",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "IT",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "investing-com",
+      "name": "Investing.com",
+      "homepage_url": "https://www.investing.com",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "euronews",
+      "name": "Euronews Business",
+      "homepage_url": "https://www.euronews.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "FR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "indexbox",
+      "name": "IndexBox Market Intelligence",
+      "homepage_url": "https://www.indexbox.io",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "arastirma"
+    },
+    {
+      "slug": "dunya-gazetesi",
+      "name": "Dünya Gazetesi",
+      "homepage_url": "https://www.dunya.com",
+      "source_type": "basin",
+      "authority_weight": 82,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "aa-ekonomi",
+      "name": "Anadolu Ajansı Ekonomi",
+      "homepage_url": "https://www.aa.com.tr/tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ifo",
+      "name": "ifo Ekonomik Araştırmalar Enstitüsü",
+      "homepage_url": "https://www.ifo.de/en",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "DE",
+      "language": "en",
+      "source_type_raw": "arastirma"
+    },
+    {
+      "slug": "bundesbank",
+      "name": "Deutsche Bundesbank",
+      "homepage_url": "https://www.bundesbank.de/en",
+      "source_type": "kurum",
+      "authority_weight": 88,
+      "country_code": "DE",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "baker-mckenzie",
+      "name": "Baker McKenzie Global Import Blog",
+      "homepage_url": "https://globalimportblog.bakermckenzie.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "GB",
+      "language": "en",
+      "source_type_raw": "hukuk-burosu"
+    },
+    {
+      "slug": "kitco-reuters",
+      "name": "Kitco News (Reuters servisi)",
+      "homepage_url": "https://www.kitco.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "CA",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "steelorbis",
+      "name": "SteelOrbis",
+      "homepage_url": "https://www.steelorbis.com",
+      "source_type": "basin",
+      "authority_weight": 58,
+      "country_code": "TR",
+      "language": "en",
+      "source_type_raw": "sektor-yayini"
+    },
+    {
+      "slug": "gmk-center",
+      "name": "GMK Center",
+      "homepage_url": "https://gmk.center/en",
+      "source_type": "basin",
+      "authority_weight": 52,
+      "country_code": "UA",
+      "language": "en",
+      "source_type_raw": "sektor-yayini"
+    },
+    {
+      "slug": "vatupdate",
+      "name": "VATupdate",
+      "homepage_url": "https://www.vatupdate.com",
+      "source_type": "basin",
+      "authority_weight": 50,
+      "country_code": "BE",
+      "language": "en",
+      "source_type_raw": "sektor-yayini"
+    },
+    {
+      "slug": "forbes-turkiye",
+      "name": "Forbes Türkiye",
+      "homepage_url": "https://www.forbes.com.tr",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "investinglive",
+      "name": "investingLive",
+      "homepage_url": "https://investinglive.com",
+      "source_type": "basin",
+      "authority_weight": 50,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "briefs-co",
+      "name": "Briefs Finance",
+      "homepage_url": "https://www.briefs.co",
+      "source_type": "basin",
+      "authority_weight": 42,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "gazete-kalem",
+      "name": "Gazete Kalem (ANKA servisi)",
+      "homepage_url": "https://gazetekalem.com.tr",
+      "source_type": "basin",
+      "authority_weight": 45,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "baker-mckenzie",
+      "url": "https://globalimportblog.bakermckenzie.com/2026/09/22/eu-european-commission-adopts-proposal-for-new-trade-defence-regime-for-steel-imports-with-application-from-1-october-2026/",
+      "title": "EU: European Commission adopts proposal for new trade defence regime for steel imports with application from 1 October 2026",
+      "published_at": "2026-09-22T10:00:00+03:00",
+      "language": "en",
+      "body": "Authors Jennifer F. Revis and Alexandra Lambert (Baker McKenzie) review the EU's new permanent trade defence regime for steel imports. The European Commission's proposal was adopted as Regulation (EU) 2026/1384 on 17 June 2026 and entered into force on 25 June 2026, succeeding the safeguard measures that had been in place since January 2019. The Commission subsequently adopted Implementing Regulation (EU) 2026/1963 on 28 August 2026, setting out the evidence importers must provide on the new \"melt and pour\" transparency obligation, applicable from 1 October 2026.\n\nUnlike the 2019 safeguard, which was temporary emergency legislation extended twice before expiring on 30 June 2026, the Steel Regulation is a permanent, structural instrument addressing global overcapacity, aligned with the Steel and Metals Action Plan of March 2025. Core features: substantially reduced tariff-free volumes and an out-of-quota duty doubled to 50% ad valorem. Phasing: the tariff-rate quota system and 50% duty applied from 1 July 2026; melt and pour transparency obligations begin on 1 October 2026; and melt and pour data will inform country quota allocation from 1 October 2027.\n\n\"Melt and pour\" identifies the country where raw steel or iron was first liquefied in a furnace before casting. From 1 October 2026 it operates purely as transparency and traceability, without affecting quota access, which remains governed by non-preferential origin rules. From 1 October 2027 it becomes a quota distribution criterion; a possible third phase could make it the basis for quota eligibility.\n\nEvidence: Mill Test Certificates (MTCs) naming both the melt and pour country and the heat number are the primary proof. Where MTCs lack these data, customs may accept invoices, delivery notes, quality certificates, purchase orders, contracts or supplier declarations. During a transitional year to 30 September 2027 such alternative documents may stand alone; from 1 October 2027 MTCs become mandatory. Imports lacking adequate proof face rejection.\n\nScope may widen: a stakeholder consultation closing on 30 September 2026 examines adding tubes, pipes and hollow cast-iron profiles, non-alloy and other alloy wire, stainless wire and forged bars. The Commission will finalise its assessment by 31 December 2026. The authors recommend businesses map melt and pour origins, confirm suppliers can provide compliant MTCs and use the transitional year to close gaps.",
+      "summary": "AB'nin kalıcı çelik ithalat rejiminde 1 Ekim 2026'dan itibaren her sevkiyatta eritme ve döküm ülkesi ile döküm (heat) numarasını gösteren belge istenecek; belgesiz sevkiyat gümrükte reddedilebilecek. AB'ye çelik ya da çelik yoğun ürün satan İSO üyeleri, tedarikçilerinden uygun Mill Test Certificate almayı hemen güvenceye almalı. Boru, tel ve dövme çubukları kapsama alma istişaresi 30 Eylül 2026'da kapanıyor.",
+      "key_points": [
+        "Eritme ve döküm şeffaflık yükümlülüğü 1 Ekim 2026'da başlıyor; 1 Ekim 2027'den itibaren ülke kotası dağıtımında kullanılacak.",
+        "Birincil belge Mill Test Certificate (MTC); 30 Eylül 2027'ye kadar fatura, kalite sertifikası, tedarikçi beyanı gibi alternatif belgeler tek başına kabul edilebilir.",
+        "Kota dışı gümrük vergisi yüzde 50; kota sistemi 1 Temmuz 2026'dan beri uygulanıyor.",
+        "Kapsam genişletme istişaresinde son gün: 30 Eylül 2026 (borular, alaşımsız ve paslanmaz tel, dövme çubuklar).",
+        "Komisyon değerlendirmesini 31 Aralık 2026'ya kadar tamamlayacak."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "Baker McKenzie"
+        ],
+        "kisi": [
+          "Jennifer F. Revis",
+          "Alexandra Lambert"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Metal Eşya"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "ab-celik-korunma",
+        "melt-and-pour",
+        "mense-kurali",
+        "celik",
+        "korunma-onlemi",
+        "son-basvuru",
+        "avrupa-birligi"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 85,
+        "keyword": 90,
+        "recency": 90,
+        "corroboration": 55,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "ifo",
+      "url": "https://www.ifo.de/en/facts/2026-09-24/ifo-business-climate-rises-september-2026",
+      "title": "ifo Business Climate Rises (September 2026)",
+      "published_at": "2026-09-24T11:00:00+03:00",
+      "language": "en",
+      "body": "Sentiment among German companies has improved. The ifo Business Climate Index rose to 89.9 points in September, up from 88.8 points in August. Companies assessed their current situation more positively, and their expectations brightened again. The German economy continues its recovery, according to the ifo Institute, whose monthly survey is based on around 9,000 responses from businesses in manufacturing, services, trade and construction, assessing both their current business situation and their expectations for the next six months.\n\nManufacturing: the index rose due to significantly improved expectations, particularly in the electrical equipment industry. However, companies assessed their current situation as somewhat worse and remain dissatisfied with their order backlogs. The automotive industry continues to navigate difficult conditions.\n\nServices: the business climate turned positive again. Companies were more satisfied with their current business and revised their expectations upwards.\n\nTrade: the indicator rose. Firms assessed their current situation more positively and their expectations rose, although retailers remain cautious amid concerns about rising inflation.\n\nConstruction: the index remained largely unchanged. Companies were somewhat more satisfied with current business, while expectations decreased slightly. Civil engineering is performing better than commercial and residential construction.\n\nAccording to market reports, the September reading was the highest since May 2023; the expectations index climbed to 90.4 from 89.0 and the current assessment index to 89.5 from 88.5, above consensus forecasts of around 89.0 for the headline index.",
+      "summary": "Almanya'da ifo iş iklimi endeksi Eylül'de 88,8'den 89,9'a çıktı ve Mayıs 2023'ten bu yana en yüksek seviyeye ulaştı; beklentiler özellikle elektrikli ekipman sanayisinde iyileşti. Ancak imalatçılar mevcut durumu biraz daha kötü değerlendiriyor, sipariş stoklarından memnun değil ve otomotivde zorluklar sürüyor. Almanya'ya ara malı ve yan sanayi ürünü satan Türk sanayicisi için talep tarafında temkinli bir toparlanma işareti.",
+      "key_points": [
+        "ifo iş iklimi endeksi Eylül'de 89,9 puan (Ağustos: 88,8).",
+        "İmalatta beklentiler belirgin iyileşti; mevcut durum değerlendirmesi ise zayıfladı.",
+        "Otomotiv sanayisinde zor koşullar sürüyor; otomotiv yan sanayisi için olumsuz sinyal.",
+        "Hizmetler iklimi yeniden pozitife döndü; perakende enflasyon kaygısıyla temkinli."
+      ],
+      "entities": {
+        "kurum": [
+          "ifo Enstitüsü"
+        ],
+        "kisi": [
+          "Clemens Fuest"
+        ],
+        "sektor": [
+          "Otomotiv",
+          "Elektrikli Ekipman",
+          "İnşaat"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "almanya",
+        "avrupa-sanayisi",
+        "ihracat-pazari",
+        "otomotiv",
+        "ekonomik-gosterge"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 65,
+        "keyword": 60,
+        "recency": 97,
+        "corroboration": 60,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "investinglive",
+      "url": "https://investinglive.com/news/germany-business-sentiment-improves-further-in-september-despite-price-concerns-ifo/",
+      "title": "Germany business sentiment improves further in September despite price concerns - Ifo",
+      "published_at": "2026-09-24T11:01:00+03:00",
+      "language": "en",
+      "body": "Germany's Ifo business climate index for September came in at 89.9, against 89.1 expected and a prior reading of 88.8. The business expectations index rose to 90.4 (expected 89.3, prior 89.1) and the current assessment index to 89.5 (expected 89.0, prior 88.5).\n\nGerman business sentiment thus reached its strongest level since May 2023, with the expectations gauge posting its fifth consecutive monthly increase to the highest level since February.\n\nThe commentary notes: \"The numbers for September are looking good but the outlook remains challenging at best amid higher energy prices and surging rates.\" While sentiment has improved, it remains uncertain how far this translates into actual economic performance. Oil prices near $100 and rising bond yields pose risks: higher energy costs add inflation pressure on companies' input costs, while tighter financial conditions could threaten profit margins and credit availability for businesses.\n\nThe survey results came in the same week as flash PMI data showing German private-sector activity accelerating, and a week after the European Central Bank raised its key interest rates for the second time this year in response to the energy-driven rise in inflation.",
+      "summary": "Piyasa yorumuna göre Alman iş dünyasının beklenti endeksi üst üste beşinci ay yükselerek 90,4'e çıktı; ancak petrolün 100 dolar civarında seyretmesi ve yükselen tahvil faizleri, girdi maliyetleri ve finansman koşulları üzerinden riski büyütüyor. Türk ihracatçı için Alman talebi toparlanıyor gibi görünse de enerji kaynaklı maliyet baskısı iki tarafta da sürüyor.",
+      "key_points": [
+        "ifo beklenti endeksi 90,4 (beklenti 89,3); mevcut durum endeksi 89,5.",
+        "Endeks Mayıs 2023'ten bu yana en yüksek seviyede.",
+        "Petrolün 100 dolar civarında olması ve yükselen faizler kâr marjları ve krediye erişim için risk."
+      ],
+      "entities": {
+        "kurum": [
+          "ifo Enstitüsü",
+          "ECB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "almanya",
+        "enerji-maliyeti",
+        "faiz",
+        "ekonomik-gosterge"
+      ],
+      "importance_factors": {
+        "authority": 50,
+        "impact": 55,
+        "keyword": 55,
+        "recency": 97,
+        "corroboration": 70,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "eurostat",
+      "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-17092026-ap",
+      "title": "Annual inflation up to 3.2% in the euro area",
+      "published_at": "2026-09-17T12:00:00+03:00",
+      "language": "en",
+      "body": "Euro area annual inflation was 3.2% in August 2026, up from 2.9% in July. A year earlier, the rate was 2.0%. European Union annual inflation was 3.2% in August 2026, up from 3.0% in July; a year earlier the rate was 2.4%. These figures are published by Eurostat, the statistical office of the European Union.\n\nIn August 2026, month-on-month inflation was 0.4% in both the euro area and the EU.\n\nThe lowest annual rates were registered in Sweden (0.3%), Estonia (1.3%) and Czechia (1.5%). The highest annual rates were recorded in Romania (6.3%), Lithuania (5.6%) and Cyprus (5.2%). In Germany, annual inflation was 2.9% in August 2026, up from 2.8% in July and 2.0% in August 2025.\n\nIn August, the highest contribution to the annual euro area inflation rate came from services (+1.43 percentage points), followed by energy (+1.29 pp), non-energy industrial goods (+0.30 pp) and food, alcohol and tobacco (+0.22 pp).\n\nThe release confirms that energy has become the second-largest driver of euro area inflation in the wake of the energy price shock linked to the Middle East conflict. The European Central Bank raised its key rates by 25 basis points with effect from 16 September 2026, citing inflation set to remain well above target for an extended period.",
+      "summary": "Euro Bölgesi'nde yıllık enflasyon Ağustos'ta yüzde 2,9'dan yüzde 3,2'ye yükseldi; enerjinin katkısı 1,29 puana çıktı. Almanya'da enflasyon yüzde 2,9. Bu tablo ECB'nin faiz artırımlarını sürdürme ihtimalini güçlendiriyor; euro cinsinden satış yapan Türk ihracatçı için parite ve AB'deki alıcıların finansman maliyeti açısından izlenmesi gereken bir veri.",
+      "key_points": [
+        "Euro Bölgesi yıllık enflasyonu Ağustos 2026'da yüzde 3,2 (Temmuz: yüzde 2,9).",
+        "Enerjinin yıllık enflasyona katkısı 1,29 puan; hizmetler 1,43 puan.",
+        "Almanya'da enflasyon yüzde 2,9; en yüksek oran Romanya'da (yüzde 6,3).",
+        "Aylık enflasyon hem Euro Bölgesi'nde hem AB'de yüzde 0,4."
+      ],
+      "entities": {
+        "kurum": [
+          "Eurostat",
+          "ECB"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "euro-bolgesi",
+        "enflasyon",
+        "enerji-enflasyonu",
+        "ecb",
+        "para-politikasi"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 65,
+        "keyword": 65,
+        "recency": 75,
+        "corroboration": 55,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "eurostat",
+      "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/4-16092026-ap",
+      "title": "Industrial production down by 0.1% in the euro area and by 0.3% in the EU",
+      "published_at": "2026-09-16T12:00:00+03:00",
+      "language": "en",
+      "body": "In July 2026, compared with June 2026, seasonally adjusted industrial production decreased by 0.1% in the euro area and by 0.3% in the EU, according to first estimates from Eurostat, the statistical office of the European Union. In July 2026, compared with July 2025, industrial production was stable (0.0%) in the euro area and increased by 0.3% in the EU.\n\nMonthly comparison by main industrial grouping in the euro area: production of intermediate goods rose by 0.3%, energy by 0.9%, capital goods by 0.5% and durable consumer goods by 0.9%, while non-durable consumer goods fell by 1.6%. In the EU, intermediate goods fell by 0.2%, energy rose by 0.6%, capital goods by 0.3% and durable consumer goods by 0.3%, while non-durable consumer goods fell by 1.3%.\n\nAmong Member States for which data are available, the largest monthly decreases were registered in Denmark (-4.2%), Bulgaria (-2.9%) and Lithuania (-2.4%). The highest increases were observed in Luxembourg (+4.5%), Croatia (+3.9%) and Ireland (+2.6%).\n\nOn an annual basis, the strongest performers were the Netherlands (+8.2%), Croatia (+7.2%) and Lithuania (+6.5%), while the weakest were Bulgaria (-6.8%), Romania (-6.3%) and Belgium (-5.6%).",
+      "summary": "Euro Bölgesi sanayi üretimi Temmuz'da aylık yüzde 0,1 geriledi, yıllık bazda yerinde saydı; sermaye malı üretimi ise yüzde 0,5 arttı. Ara malı üretimindeki sınırlı artış, AB'ye ara malı ve makine aksamı tedarik eden Türk sanayicisi için talebin zayıf ama çökmediğini gösteriyor.",
+      "key_points": [
+        "Temmuz 2026'da sanayi üretimi Euro Bölgesi'nde aylık yüzde 0,1, AB'de yüzde 0,3 düştü.",
+        "Yıllık bazda Euro Bölgesi'nde değişim yüzde 0,0; AB'de yüzde 0,3 artış.",
+        "Sermaye malları aylık yüzde 0,5, ara mallar yüzde 0,3 arttı; dayanıksız tüketim malları yüzde 1,6 düştü.",
+        "En zayıf yıllık performans Bulgaristan, Romanya ve Belçika'da."
+      ],
+      "entities": {
+        "kurum": [
+          "Eurostat"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "sanayi-uretimi",
+        "euro-bolgesi",
+        "avrupa-sanayisi",
+        "ekonomik-gosterge"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 55,
+        "keyword": 60,
+        "recency": 72,
+        "corroboration": 40,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "eurostat",
+      "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/6-15092026-ap",
+      "title": "Euro area international trade in goods surplus €14.2 bn",
+      "published_at": "2026-09-15T12:00:00+03:00",
+      "language": "en",
+      "body": "The first estimate for euro area exports of goods to the rest of the world in July 2026 was €276.0 billion, an increase of 9.0% compared with July 2025. Imports from the rest of the world stood at €261.8 billion, up 7.9%. As a result, the euro area recorded a €14.2 billion surplus in trade in goods with the rest of the world in July 2026, compared with €10.7 billion in July 2025.\n\nIn January to July 2026 the euro area recorded a surplus of €17.0 billion, compared with €92.8 billion in January-July 2025. Exports rose by 1.2% while imports increased by 5.8%.\n\nThe improvement in July reflected a higher surplus in chemicals and related products, in other manufactured goods and in food and drink, partly offset by lower surpluses in machinery and vehicles.\n\nThe EU recorded an €8.0 billion surplus in July 2026, down from €9.8 billion a year earlier. For January-July 2026 the EU recorded a deficit of €13.8 billion, compared with an €84.0 billion surplus in January-July 2025.\n\nIn EU trade with main partners, Türkiye's figures for July 2026 were: EU exports to Türkiye amounted to €9.3 billion (-8.3% year on year) and EU imports from Türkiye to €9.6 billion (+2.8%), giving the EU a balance of -€0.3 billion, compared with +€0.8 billion in July 2025.",
+      "summary": "Eurostat verilerine göre Temmuz 2026'da AB'nin Türkiye'den ithalatı yüzde 2,8 artarak 9,6 milyar euroya çıkarken AB'nin Türkiye'ye ihracatı yüzde 8,3 düşerek 9,3 milyar euroya indi; AB, Türkiye ile ticarette 0,3 milyar euro açık verdi. Bu, çelik kotası ve CBAM'e rağmen Türk sanayicisinin AB pazarındaki payını koruduğunu gösteriyor. AB'nin ocak-temmuz dış ticareti ise 13,8 milyar euro açığa döndü.",
+      "key_points": [
+        "Euro Bölgesi Temmuz 2026'da 14,2 milyar euro dış ticaret fazlası verdi.",
+        "AB'nin Türkiye'den ithalatı Temmuz'da 9,6 milyar euro (+%2,8); Türkiye'ye ihracatı 9,3 milyar euro (-%8,3).",
+        "AB'nin Türkiye ile dengesi -0,3 milyar euro (Temmuz 2025: +0,8 milyar euro).",
+        "AB ocak-temmuz döneminde 13,8 milyar euro açık verdi; geçen yıl aynı dönemde 84,0 milyar euro fazla vardı."
+      ],
+      "entities": {
+        "kurum": [
+          "Eurostat"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Kimya",
+          "Makine",
+          "Otomotiv"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "dis-ticaret",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ab-turkiye",
+        "dis-ticaret",
+        "ihracat",
+        "euro-bolgesi",
+        "ticaret-fazlasi"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 68,
+        "corroboration": 30,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "ab-komisyonu-ticaret",
+      "url": "https://policy.trade.ec.europa.eu/news/commission-imposes-provisional-safeguard-measures-imports-grain-oriented-electrical-steel-2026-09-18_en",
+      "title": "Commission imposes provisional safeguard measures on imports of grain-oriented electrical steel",
+      "published_at": "2026-09-18T13:00:00+03:00",
+      "language": "en",
+      "body": "Brussels, 18 September 2026. The European Commission has imposed provisional safeguard measures on imports of grain-oriented electrical steel (GOES) products, in the form of tariff-rate quotas coupled with price thresholds.\n\nGOES products are used in electrical equipment such as power transformers, which enable electricity to be transmitted across long distances, and are therefore critical components of the EU's energy infrastructure.\n\nThe investigation was launched in March 2026. The Commission found that provisional measures were urgently needed to protect a strategic EU industry that is under threat from high import pressure, fuelled by global overcapacities and the closure of traditional export markets.\n\nThe scope of the measures covers not only GOES itself but also the laminations and cores obtained after further processing of GOES, as well as cores already incorporated into transformers imported into the EU. This protects downstream EU transformer manufacturers as well as GOES producers.\n\nNext steps: safeguard investigations are normally concluded within nine months, which may be extended to 11 months in exceptional circumstances. Definitive measures require a qualified majority vote in the Safeguard Committee, meaning at least 15 EU Member States representing 65% of the EU population must approve the Commission's proposal.\n\nAccording to separately published details, the provisional measures apply from 25 September 2026 until 26 February 2027, with in-quota price thresholds of €2,800-3,400 per tonne and €3,500 per tonne above quota for GOES.",
+      "summary": "Avrupa Komisyonu, tane yönlendirilmiş elektrik çeliği (GOES) ile bundan üretilen laminasyon ve çekirdek ithalatına tarife kotası ve asgari fiyat eşiği şeklinde geçici korunma önlemi getirdi; önlem trafolara monte edilmiş çekirdekleri de kapsıyor. Trafo ve elektrik ekipmanı üreten ya da AB'ye laminasyon, çekirdek ihraç eden Türk sanayicileri doğrudan etkileniyor. Kesin önlem için üye devletlerin nitelikli çoğunluğu gerekecek.",
+      "key_points": [
+        "Geçici önlem 25 Eylül 2026 – 26 Şubat 2027 arasında uygulanacak.",
+        "Kapsam: GOES, laminasyonlar, çekirdekler ve ithal trafolara monte edilmiş çekirdekler.",
+        "GOES için fiyat eşiği kota içinde ton başına 2.800-3.400 euro, kota dışında 3.500 euro.",
+        "Kesin önlem için en az 15 üye devlet ve AB nüfusunun yüzde 65'i gerekli."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik",
+          "Elektrikli Ekipman",
+          "Enerji"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "korunma-onlemi",
+        "elektrik-celigi",
+        "celik",
+        "ticaret-savunmasi",
+        "ab-komisyonu",
+        "tarife"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 78,
+        "corroboration": 85,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "kitco-reuters",
+      "url": "https://www.kitco.com/news/off-the-wire/2026-09-18/eu-impose-provisional-safeguards-protect-electrical-steel-imports",
+      "title": "EU to impose provisional safeguards to protect electrical steel from imports",
+      "published_at": "2026-09-18T17:10:00+03:00",
+      "language": "en",
+      "body": "The European Union announced import quotas and minimum prices for electrical steel and related products on Friday to shield European producers from cheap imports, notably from Asia, Reuters reported.\n\nThe provisional measures, effective from 25 September 2026, set safeguards for grain-oriented electrical steel (GOES), laminations and transformer cores. For the steel itself, the minimum price will be set between €2,800 and €3,400 per metric ton within the quotas and at €3,500 per ton for volumes above them.\n\nThe measures protect major European producers including Thyssenkrupp's steel unit and Poland's Stalprodukt SA. TKSE chief executive Marie Jaroni said that \"for the first time, an entire value chain, from electrical steel to the transformer core, is being protected rather than a single product alone.\"\n\nChina accounted for more than half of EU electrical steel imports in 2025. The European Commission launched its investigation in March at the request of Germany, France and Poland. Definitive measures, at the end of the investigation, would require the approval of a qualified majority of EU members.\n\nGOES is used in power transformers that allow electricity to be transmitted over long distances, making it a strategic input for grid expansion and electrification across Europe.",
+      "summary": "Reuters'a göre AB, elektrik çeliği, laminasyon ve trafo çekirdeklerinde kota ve asgari fiyat uygulamasına geçiyor; thyssenkrupp ve Stalprodukt gibi AB üreticileri korunuyor. Önlemin ilk kez çelikten trafo çekirdeğine kadar bütün değer zincirini kapsaması, AB'ye trafo ve çekirdek satan Türk üreticileri için fiyat tabanı ve kota riski anlamına geliyor.",
+      "key_points": [
+        "Önlemler 25 Eylül 2026'da yürürlüğe giriyor.",
+        "GOES için asgari fiyat kota içinde 2.800-3.400 euro/ton, kota dışında 3.500 euro/ton.",
+        "Çin, 2025'te AB elektrik çeliği ithalatının yarısından fazlasını karşıladı.",
+        "Soruşturma Mart'ta Almanya, Fransa ve Polonya'nın talebiyle açılmıştı."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "thyssenkrupp Steel",
+          "Stalprodukt",
+          "Reuters"
+        ],
+        "kisi": [
+          "Marie Jaroni"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Elektrikli Ekipman"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "korunma-onlemi",
+        "elektrik-celigi",
+        "celik",
+        "cin-rekabeti",
+        "tarife"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 75,
+        "keyword": 80,
+        "recency": 78,
+        "corroboration": 85,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "steelorbis",
+      "url": "https://www.steelorbis.com/steel-news/latest-news/eu-imposes-provisional-safeguard-measures-on-goes-imports-1478742.htm",
+      "title": "EU imposes provisional safeguard measures on GOES imports",
+      "published_at": "2026-09-21T10:00:00+03:00",
+      "language": "en",
+      "body": "The European Commission has announced provisional safeguard measures on imports of grain-oriented electrical steel (GOES) and of steel laminations and cores (SLCs), effective from 25 September 2026 until 26 February 2027, a period of 155 days.\n\nCountry quotas for GOES: China 30,693.68 metric tons, Japan 23,103.61 mt, South Korea 4,789.93 mt, and other eligible countries 5,360.39 mt.\n\nRather than fixed percentage tariffs, the EU has set minimum price thresholds. When import prices fall below these levels, the safeguard duty equals the difference between the threshold and the actual price.\n\nGOES thresholds: €2,800-3,400/mt in-quota, depending on TARIC code, and €3,500/mt out-of-quota.\n\nSteel laminations: €4,000/mt in-quota and €4,550/mt out-of-quota.\n\nSteel cores: €5,000/mt in-quota and €5,600/mt out-of-quota. A flat duty of €1,140/mt applies to cores incorporated into imported transformers.\n\nThe European Steel Association EUROFER welcomed the decision, with its director general saying the measures \"preserve a viable European GOES production base while keeping the market open\" to necessary imports.\n\nSeparately published investigation findings show that between 2021 and 2025 EU consumption of GOES grew by 32%, from 398,000 to 525,000 tonnes, while imports surged by 120% and their share of consumption rose from 34% to 57%. EU producers' market share fell from 66% to 43%, and China's import share increased from 20% to 53%.",
+      "summary": "AB'nin elektrik çeliği korunma önleminde fiyat eşiği laminasyonlarda kota içinde ton başına 4.000 euro, kota dışında 4.550 euro; çekirdeklerde 5.000 ve 5.600 euro. İthal trafolara monte edilmiş çekirdeklere ton başına 1.140 euro sabit vergi uygulanacak. Eşiğin altındaki fiyatla satış yapan Türk laminasyon ve çekirdek ihracatçısı fark kadar vergiyle karşılaşacak.",
+      "key_points": [
+        "Önlem süresi 155 gün: 25 Eylül 2026 – 26 Şubat 2027.",
+        "GOES kotaları: Çin 30.693,68 ton, Japonya 23.103,61 ton, Güney Kore 4.789,93 ton, diğer ülkeler 5.360,39 ton.",
+        "Laminasyonda fiyat eşiği 4.000/4.550 euro, çekirdekte 5.000/5.600 euro (kota içi/dışı).",
+        "İthal trafolardaki çekirdeklere ton başına 1.140 euro sabit vergi.",
+        "2021-2025'te ithalat yüzde 120 arttı, ithalatın tüketimdeki payı yüzde 34'ten 57'ye çıktı."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "EUROFER"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik",
+          "Elektrikli Ekipman"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "korunma-onlemi",
+        "elektrik-celigi",
+        "celik",
+        "tarife",
+        "ihracat-kotasi"
+      ],
+      "importance_factors": {
+        "authority": 58,
+        "impact": 78,
+        "keyword": 85,
+        "recency": 86,
+        "corroboration": 85,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "dunya-gazetesi",
+      "url": "https://www.dunya.com/ekonomi/abden-turk-celigine-yeni-kota-25-eylulde-basliyor-haberi-840918",
+      "title": "AB'den Türk çeliğine yeni kota: 25 Eylül'de başlıyor",
+      "published_at": "2026-09-22T08:26:00+03:00",
+      "language": "tr",
+      "body": "Avrupa Birliği, transformatörlerde kullanılan elektrik çeliği, laminasyon ve çekirdek ithalatına geçici koruma önlemi getiriyor. Düzenleme 18 Eylül'de yayımlandı, 25 Eylül 2026'da yürürlüğe girecek. Önlem 155 takvim günü uygulanacak ve mevcut takvime göre 26 Şubat 2027'ye kadar sürecek. Karar Türkiye'nin bütün çelik ihracatını kapsamıyor; güç transformatörleri ve endüktörlerde kullanılan elektrik çeliği ile bu çelikten işlenen laminasyon ve çekirdek ürünlerine yönelik.\n\nTürkiye'ye 26 Şubat 2027'ye kadar geçerli 14 bin 161,55 tonluk tarife kotası ayrıldı. Bu miktar, aynı ürün grubunda Çin için belirlenen 4 bin 241 tonluk ve Birleşik Arap Emirlikleri'ne ayrılan yaklaşık 2 bin 705 tonluk kotanın üzerinde bulunuyor. Kotalar \"ilk gelen ilk yararlanır\" yöntemiyle uygulanacak.\n\nFiyat eşikleri ürün türüne göre değişiyor: transformatör laminasyonlarında kota içinde ton başına 4 bin euro, kota dışında 4 bin 550 euro; çelik çekirdeklerde ise kota içinde 5 bin euro, kota dışında 5 bin 600 euro. Bu seviyelerin altındaki fiyatla yapılan ithalatta, eşik ile fiyat arasındaki fark kadar ek vergi alınacak.\n\nAB'nin bu ürünlerdeki ithalatı dört yılda yüzde 120 artarak 2021'deki yaklaşık 135 bin tondan 2025'te 297 bin tonun üzerine çıktı. Türkiye toplam ithalatta yüzde 13 payla Çin (yüzde 53) ve Japonya'nın (yüzde 20) ardından üçüncü sırada yer alıyor. Komisyonun soruşturmayı tamamlayarak 2027 başında kalıcı önleme karar vermesi bekleniyor.",
+      "summary": "AB'nin elektrik çeliği korunma önleminde Türkiye'ye laminasyon ve çekirdek ürünlerinde 26 Şubat 2027'ye kadar geçerli 14.161,55 tonluk kota ayrıldı; kotalar ilk gelen ilk yararlanır usulüyle dağıtılacak. Türkiye yüzde 13 payla AB'nin üçüncü büyük tedarikçisi. Trafo laminasyonu ve çekirdeği ihraç eden İSO üyeleri, kotanın hızla dolma riskine ve ton başına 4.000-5.600 euro fiyat eşiklerine göre sevkiyat planı yapmalı.",
+      "key_points": [
+        "Önlem 25 Eylül 2026'da yürürlüğe giriyor, 26 Şubat 2027'ye kadar 155 gün sürecek.",
+        "Türkiye'nin kotası 14.161,55 ton; Çin'e 4.241 ton, BAE'ye yaklaşık 2.705 ton ayrıldı.",
+        "Kotalar ilk gelen ilk yararlanır yöntemiyle kullanılacak.",
+        "Fiyat eşiğinin altındaki satışlarda fark kadar ek vergi alınacak.",
+        "Türkiye bu ürünlerde AB ithalatının yüzde 13'ünü karşılıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [
+          "Murat Ali Oral"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Elektrikli Ekipman"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "elektrik-celigi",
+        "korunma-onlemi",
+        "ihracat-kotasi",
+        "turkiye-mensei",
+        "ab-turkiye",
+        "celik"
+      ],
+      "importance_factors": {
+        "authority": 82,
+        "impact": 85,
+        "keyword": 90,
+        "recency": 90,
+        "corroboration": 85,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "forbes-turkiye",
+      "url": "https://www.forbes.com.tr/ekonomi/ab-turkiye-den-elektrik-celigi-ithalatina-kota-getirdi",
+      "title": "AB Türkiye'den elektrik çeliği ithalatına kota getirdi",
+      "published_at": "2026-09-22T12:14:00+03:00",
+      "language": "tr",
+      "body": "Avrupa Birliği, enerji altyapısında kullanılan elektrik çeliği ve bu ürünlerden elde edilen bazı bileşenlerin ithalatına yönelik geçici koruma önlemlerini devreye alıyor. Avrupa Komisyonu'nun kararı, güç transformatörleri ve endüktörlerde kullanılan ürünleri hedefliyor ve 25 Eylül 2026'da yürürlüğe giriyor.\n\nTürkiye'ye 26 Şubat 2027'ye kadar 14 bin 161,55 tonluk kota tahsis edildi. Kota \"ilk gelen ilk yararlanır\" esasına göre dağıtılacak.\n\nAsgari fiyat eşikleri şöyle belirlendi: transformatör laminasyonlarında kota içinde ton başına 4 bin euro, kota sonrasında 4 bin 550 euro; çelik çekirdeklerde ise sırasıyla 5 bin euro ve 5 bin 600 euro. Bu eşiklerin altındaki fiyatlarla yapılan sevkiyatlar, aradaki farkı karşılayan ek vergiyle karşılaşacak.\n\nElektrik çeliği, laminasyon ve çekirdeklerin AB'ye toplam ithalatı 2021'de yaklaşık 135 bin ton seviyesindeyken 2025'te 297 bin tonu aştı; dört yıldaki artış yüzde 120. Pazarda Çin yüzde 53 payla ilk sırada, Japonya yüzde 20 ile ikinci, Türkiye ise yüzde 13 ile üçüncü.\n\nGeçici koruma 155 gün sürecek. Komisyon soruşturmasını sürdürüyor; kalıcı önlemler için AB üye devletlerinin nitelikli çoğunluk desteği gerekecek. Haberde, Türkiye'ye tahsis edilen kota ile ürün bazındaki minimum fiyat seviyelerinin Türk üreticilerin önümüzdeki dönemdeki AB satışlarında belirleyici olacağı vurgulanıyor.",
+      "summary": "Forbes Türkiye, AB'nin elektrik çeliği, laminasyon ve çekirdek ithalatına getirdiği geçici korunma önleminde Türkiye'ye 14.161,55 tonluk kota ayrıldığını ve asgari fiyat eşiklerinin Türk üreticilerin AB satışlarında belirleyici olacağını aktarıyor. Trafo ve enerji ekipmanı tedarik zincirindeki İSO üyeleri için hem kota hem fiyat tabanı yeni bir rekabet koşulu.",
+      "key_points": [
+        "Türkiye'ye 26 Şubat 2027'ye kadar 14.161,55 tonluk kota ayrıldı.",
+        "Laminasyonda eşik 4.000/4.550 euro, çekirdekte 5.000/5.600 euro (ton başına, kota içi/dışı).",
+        "AB ithalatı 2021'de 135 bin tondan 2025'te 297 bin tonun üzerine çıktı.",
+        "Kalıcı önlem için üye devletlerin nitelikli çoğunluğu gerekiyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [
+          "Meri İstiroti"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Enerji Ekipmanı"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "elektrik-celigi",
+        "korunma-onlemi",
+        "ihracat-kotasi",
+        "turkiye-mensei",
+        "celik"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 90,
+        "corroboration": 85,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "ab-komisyonu-ticaret",
+      "url": "https://policy.trade.ec.europa.eu/news/demand-trade-defence-action-eu-commitment-tackle-unfair-trade-remain-strong-2025-2026-09-18_en",
+      "title": "Demand for trade defence action, EU commitment to tackle unfair trade remain strong in 2025",
+      "published_at": "2026-09-18T12:00:00+03:00",
+      "language": "en",
+      "body": "The European Commission has published its annual report on the EU's trade defence activities in 2025. The Commission initiated 32 new trade defence investigations in 2025, slightly below the record level of 2024, reflecting an ongoing increase in unfair trade practices harming EU industry, with particular pressure in the chemicals and iron and steel sectors.\n\nBy the end of 2025, 232 trade defence measures were in place, protecting approximately 637,000 manufacturing jobs across the EU. The Commission imposed 26 definitive measures during 2025, and 27 provisional anti-dumping duties were imposed; no provisional anti-subsidy measures were adopted. In three cases, duties were applied retroactively, i.e. backdated to before the imposition of provisional measures, demonstrating the Commission's readiness to use all available trade defence tools.\n\nIn June 2025, the Commission set up an import surveillance task force to monitor harmful trade diversion. At the start of 2026, a new exporter reporting and consignment tracking tool was launched to monitor price undertakings on battery electric vehicles.\n\nOn safeguards, the Commission adjusted the functioning of the EU steel safeguard measure on 25 March 2025 and imposed definitive safeguard measures on ferro-alloys on 18 November 2025.\n\nThe Commission also assisted EU exporters facing trade defence investigations in third countries, including Chinese anti-dumping investigations on brandy, pork and dairy products.",
+      "summary": "Komisyonun 2025 ticaret savunması raporuna göre AB 32 yeni soruşturma açtı, yıl sonunda 232 önlem yürürlükteydi ve üç davada vergiler geriye dönük uygulandı. Kimya ve demir-çelik baskının en yoğun olduğu sektörler. Türkiye'nin de sık hedef olduğu bu alanlarda soruşturma ve geriye dönük vergi riskinin yüksek kalacağı, kayıt altına alma kararlarının ciddiye alınması gerektiği anlamına geliyor.",
+      "key_points": [
+        "2025'te 32 yeni ticaret savunması soruşturması açıldı.",
+        "Yıl sonunda 232 önlem yürürlükte; yaklaşık 637 bin imalat işi korunuyor.",
+        "26 kesin önlem ve 27 geçici damping vergisi uygulandı; 3 davada geriye dönük vergi alındı.",
+        "Baskı en çok kimya ve demir-çelikte; ithalat gözetim görev gücü ticaret sapmasını izliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Kimya",
+          "Demir-Çelik",
+          "Ferro Alyaj"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "ticaret-savunmasi",
+        "korumacilik",
+        "ab-komisyonu",
+        "kayit-yukumlulugu"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 55,
+        "keyword": 75,
+        "recency": 78,
+        "corroboration": 30,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "ab-komisyonu-basin",
+      "url": "https://luxembourg.representation.ec.europa.eu/actualites-et-evenements/actualites/2026-state-union-address-president-von-der-leyen-2026-09-16_en",
+      "title": "2026 State of the Union Address by President von der Leyen",
+      "published_at": "2026-09-16T10:00:00+03:00",
+      "language": "en",
+      "body": "On 16 September 2026, European Commission President Ursula von der Leyen delivered her State of the Union address, setting out priorities for the year ahead.\n\nIndustry and energy: \"Europe cannot remain an industrial powerhouse if its energy prices are structurally too high.\" Following Russia's cut-off of gas supplies, Europe diversified its sources and invested in homegrown renewables and nuclear, but the recent closure of the Strait of Hormuz showed continued vulnerability to imported fossil fuels. \"Our goal is to double the share of electricity by 2040. With this, Europe could cut its fossil-fuel import bill by €260 billion a year.\" More than 80 gigawatts of renewable capacity have recently been installed, yet \"six times more capacity is still waiting to be connected\".\n\nTrade: the EU has signed free trade agreements with India, Mercosur, Mexico, Australia and Indonesia and now has trade deals with more than 80 countries. A new international connectivity project will link Central Asia to European markets via the Middle Corridor, targeting €12 billion of investment.\n\nChina: \"Our trade deficit with China is now €1 billion – a day. It has reached a tipping point.\" The \"second China shock\" is already visible in deindustrialisation of Europe's industrial heartlands. Dialogue must \"lead to results\"; \"Words are good. But deeds are better.\"\n\nRaw materials: \"We are more than 80% dependent on China for many critical raw materials. 90% for some rare earths.\" A new European Corporation on Critical Raw Materials will help obtain and stockpile them.\n\nSimplification: \"Our 12 omnibus proposals are reducing the administrative burden by around €17 billion a year.\" She proposed a pact against gold-plating by Member States and pledged proposals to further speed up permitting. A new Banking Package will focus on simplification and tackling fragmentation, and the One Europe, One Market Roadmap aims at a historic overhaul of the Single Market.",
+      "summary": "Von der Leyen Birliğin Durumu konuşmasında Çin ile ticaret açığının günde 1 milyar euroya ulaştığını, 'ikinci Çin şoku'nun başladığını ve Avrupa'nın yapısal olarak yüksek enerji fiyatlarıyla sanayi gücü olarak kalamayacağını söyledi. Orta Koridor üzerinden Orta Asya'yı Avrupa'ya bağlayacak 12 milyar euroluk bağlantısallık projesi, Türkiye'nin lojistik konumu açısından fırsat. Çin'e karşı sertleşen ticaret savunması ise Türk ihracatçı için hem pazar boşluğu hem de ticaret sapması kaynaklı yeni önlem riski demek.",
+      "key_points": [
+        "AB'nin Çin ile ticaret açığı günde 1 milyar euro; Komisyon tüm araçları kullanacağını söylüyor.",
+        "Elektrifikasyon payını 2040'a kadar ikiye katlama hedefi; yıllık 260 milyar euro fosil yakıt tasarrufu.",
+        "Orta Koridor üzerinden 12 milyar euroluk yeni bağlantısallık projesi.",
+        "12 omnibus paketiyle yıllık yaklaşık 17 milyar euro idari yük azaltımı; izin süreçleri hızlandırılacak.",
+        "Kritik hammaddeler için Avrupa Kritik Hammadde Şirketi kurulacak."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [
+          "Ursula von der Leyen"
+        ],
+        "sektor": [
+          "Enerji",
+          "Kritik Hammaddeler",
+          "Otomotiv"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "sanayi-politikasi",
+        "cin-rekabeti",
+        "enerji-maliyeti",
+        "kritik-hammadde",
+        "ab-komisyonu",
+        "avrupa-birligi"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 70,
+        "keyword": 70,
+        "recency": 72,
+        "corroboration": 70,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "steelorbis",
+      "url": "https://www.steelorbis.com/steel-news/latest-news/eu-targets-lower-energy-costs-and-stronger-industrial-competitiveness-eurofer-calls-for-steel-support-1478039.htm",
+      "title": "EU targets lower energy costs and stronger industrial competitiveness, EUROFER calls for steel support",
+      "published_at": "2026-09-17T10:00:00+03:00",
+      "language": "en",
+      "body": "European Commission President Ursula von der Leyen's State of the Union address on 16 September 2026 focused on the challenges facing European industry, including high energy prices, global competition, trade imbalances and dependence on imported critical raw materials.\n\nVon der Leyen stressed that \"Europe cannot remain an industrial powerhouse while facing structurally high energy prices.\" The EU aims to double electricity's share of energy consumption by 2040, which could cut the annual fossil fuel import bill by €260 billion. She noted that imported fossil fuels have cost Europe an additional €90 billion since the conflict began.\n\nOn trade and raw materials, the EU's trade deficit with China has reached around €1 billion per day, and Europe depends on China for more than 80 percent of many critical raw materials, rising to 90 percent for some rare earths. A European Corporation on Critical Raw Materials will be set up for procurement and stockpiling.\n\nThe European Steel Association EUROFER welcomed the focus on competitiveness, affordable energy and a level playing field, but called for additional measures: lower electricity costs, affordable hydrogen, stronger lead markets for low-carbon European steel and full implementation of the Steel and Metals Action Plan. Director General Axel Eggert said steelmakers support climate neutrality but need \"a viable business case\" for investments in low-carbon technology. The reactions came ahead of the European Parliament's plenary vote on changes to the Carbon Border Adjustment Mechanism.",
+      "summary": "EUROFER, von der Leyen'in rekabetçilik ve uygun enerji vurgusunu desteklerken daha düşük elektrik fiyatı, uygun hidrojen ve düşük karbonlu Avrupa çeliği için talep yaratacak 'öncü pazarlar' istedi. Bu talepler, AB kamu alımlarında ve teşviklerde 'Made in EU' ile düşük karbon kriterlerinin sertleşeceğine işaret ediyor; elektrik ark ocaklı Türk çelik üreticisinin karbon verisini belgelemesi avantaj sağlayabilir.",
+      "key_points": [
+        "İthal fosil yakıtlar çatışma başlangıcından bu yana Avrupa'ya 90 milyar euro ek maliyet getirdi.",
+        "EUROFER daha düşük elektrik maliyeti, uygun hidrojen ve düşük karbonlu çelik pazarları istiyor.",
+        "EUROFER Genel Direktörü Axel Eggert düşük karbon yatırımları için 'uygulanabilir iş modeli' gerektiğini söyledi.",
+        "Tepkiler, AP'nin CBAM değişikliği oylaması öncesinde geldi."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "EUROFER"
+        ],
+        "kisi": [
+          "Ursula von der Leyen",
+          "Axel Eggert"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Enerji"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "celik",
+        "enerji-maliyeti",
+        "sanayi-politikasi",
+        "yesil-mutabakat",
+        "avrupa-sanayisi"
+      ],
+      "importance_factors": {
+        "authority": 58,
+        "impact": 60,
+        "keyword": 70,
+        "recency": 75,
+        "corroboration": 70,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "vatupdate",
+      "url": "https://www.vatupdate.com/2026/09/17/european-parliament-backs-expansion-of-cbam-to-downstream-steel-and-aluminium-products/",
+      "title": "European Parliament Backs Expansion of CBAM to Downstream Steel and Aluminium Products",
+      "published_at": "2026-09-17T09:00:00+03:00",
+      "language": "en",
+      "body": "The European Parliament adopted its negotiating position on 15 September 2026, supporting an expanded scope for the Carbon Border Adjustment Mechanism (CBAM). The position was adopted by 464 votes to 50, with 159 abstentions.\n\nProposed scope: Parliament's position extends CBAM coverage to downstream products containing steel or aluminium, including fasteners, wire, springs and household articles. The expansion aims to address carbon-leakage risks further along the value chain.\n\nKey provisions: the proposal includes stronger anti-circumvention measures that lower the thresholds for identifying minor product modifications as circumvention attempts. Parliament also supported a temporary decarbonisation fund for EU producers exposed to carbon leakage in export markets for 2027-2029, extending eligibility to fertiliser producers and downstream users.\n\nAn electricity exemption was added for non-EU grid operators that maintain network stability, while Parliament rejected the Commission's proposed safeguard allowing temporary CBAM exemptions for goods during significant price shocks.\n\nStatus: these remain negotiating positions. The Commission proposed around 180 downstream products, the Council position covers around 200, and Parliament's position covers 457 product lines. The final scope will result from negotiations between Parliament and the Council.",
+      "summary": "Avrupa Parlamentosu, CBAM'in bağlantı elemanı, tel, yay ve ev eşyası gibi çelik ve alüminyum yoğun alt ürünlere genişletilmesini 464 oyla kabul etti ve kapsamı 457 ürün satırına çıkarmayı önerdi; Komisyon teklifi 180, Konsey pozisyonu 200 üründü. AB'ye bağlantı elemanı, tel, yay ve metal ev eşyası satan Türk ihracatçılar, kapsam netleşmeden gömülü emisyon verisi hazırlığına başlamalı.",
+      "key_points": [
+        "AP pozisyonu 15 Eylül 2026'da 464 kabul, 50 ret, 159 çekimser oyla kabul edildi.",
+        "AP 457 ürün satırı öneriyor; Komisyon 180, Konsey yaklaşık 200 ürün önermişti.",
+        "Küçük ürün değişiklikleriyle kaçınmayı hedefleyen daha sıkı dolanma önleme kuralları.",
+        "Fiyat şoklarında geçici CBAM muafiyeti reddedildi.",
+        "Nihai kapsam AP-Konsey üçlü müzakeresiyle belirlenecek."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Parlamentosu",
+          "AB Konseyi",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik",
+          "Alüminyum",
+          "Metal Eşya",
+          "Gübre"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "cevre",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cbam",
+        "karbon",
+        "metal-esya",
+        "aluminyum",
+        "celik",
+        "ab-mevzuati"
+      ],
+      "importance_factors": {
+        "authority": 50,
+        "impact": 85,
+        "keyword": 95,
+        "recency": 75,
+        "corroboration": 85,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "steelorbis",
+      "url": "https://www.steelorbis.com/steel-news/latest-news/european-parliament-backs-cbam-extension-to-cover-downstream-steel-products-1477646.htm",
+      "title": "European Parliament backs CBAM extension to cover downstream steel products",
+      "published_at": "2026-09-16T11:37:00+03:00",
+      "language": "en",
+      "body": "The European Parliament has adopted its position on proposed changes to the EU Carbon Border Adjustment Mechanism (CBAM) with strong support: 464 votes to 50, with 159 abstentions. The position will form Parliament's mandate for negotiations with EU Member States.\n\nMEPs endorsed extending CBAM to downstream steel and aluminium goods with a high steel or aluminium content, including fasteners, wire, springs and household articles, going beyond the Commission's initial proposal covering 180 additional products.\n\nAnti-circumvention: Parliament strengthened safeguards against evasion. It rejected the option of temporarily removing products from the CBAM scope during market volatility, favouring instead a system in which CBAM revenues from the affected products could temporarily be redirected to the sectors concerned. The revised rules target arrangements deliberately designed to circumvent obligations rather than ordinary cost-reduction decisions by companies.\n\nDecarbonisation fund: in a separate vote, Parliament approved the Temporary Decarbonisation Fund by 433 votes to 97, with 146 abstentions, advancing its start date from 2028 to 2027 and extending eligibility to downstream operators using CBAM-covered materials.\n\nThe Parliament is now ready to begin negotiations with EU Member States on the final legislation. The CBAM definitive period started on 1 January 2026 for cement, iron and steel, aluminium, fertilisers, electricity and hydrogen.",
+      "summary": "AP, CBAM alt ürün genişlemesinin yanında Geçici Karbonsuzlaştırma Fonu'nu da 433 oyla onayladı ve fonun başlangıcını 2028'den 2027'ye çekti; fon CBAM kapsamındaki malzemeyi kullanan AB'li alt sektör üreticilerini de destekleyecek. Bu, AB'li rakiplerin sübvansiyonla desteklenirken Türk çelik ve metal eşya ihracatçısının CBAM maliyetini ödemesi anlamına gelebilir.",
+      "key_points": [
+        "CBAM genişlemesi 464-50 (159 çekimser) oyla kabul edildi.",
+        "Geçici Karbonsuzlaştırma Fonu 433-97 oyla onaylandı; başlangıç 2028'den 2027'ye çekildi.",
+        "Dolanma kuralları kasıtlı düzenlemeleri hedefleyecek; olağan maliyet düşürme kararları kapsam dışı.",
+        "AP üye devletlerle müzakereye hazır."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Parlamentosu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik",
+          "Alüminyum"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "cevre",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cbam",
+        "karbon",
+        "celik",
+        "aluminyum",
+        "karbon-fiyatlamasi"
+      ],
+      "importance_factors": {
+        "authority": 58,
+        "impact": 80,
+        "keyword": 95,
+        "recency": 72,
+        "corroboration": 85,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "gmk-center",
+      "url": "https://gmk.center/en/news/eu-countries-have-backed-an-increase-in-free-emission-allowances-for-industry/",
+      "title": "EU countries have backed an increase in free emission allowances for industry",
+      "published_at": "2026-09-17T12:00:00+03:00",
+      "language": "en",
+      "body": "EU Member States have agreed to grant additional free carbon emission allowances to heavy industry. According to the Council of the EU, an additional 121 million free CO2 allowances will be allocated to industrial sectors between 2026 and 2030.\n\nThe arrangement will help businesses reduce carbon-related costs by approximately €8.25 billion ($9.52 billion) over the period. The main beneficiaries are companies in chemicals, metalworking, ceramics and glass manufacturing.\n\nUnder the EU Emissions Trading System, industrial installations must buy carbon allowances for their emissions, which is meant to encourage emission reductions. A free allocation mechanism exists to shield European businesses from a competitive disadvantage against foreign competitors that do not face similar costs.\n\nWhile the ETS framework normally foresees a gradual reduction of free allowances to meet climate objectives, the EU is temporarily reversing this trend. According to reports on the decision, the additional allowances will be allocated on the basis of installations' heat production and fuel use, combining around 88 million allowances available for free allocation with some 33 million that had previously remained unallocated.\n\nMember States are preparing fast-tracked talks with the European Parliament to finalise the benchmark rules before the end of the year, while broader ETS reform discussions are expected to conclude in 2027.",
+      "summary": "AB üye devletleri, 2026-2030 döneminde ağır sanayiye 121 milyon ek ücretsiz emisyon izni verilmesini destekledi; bu, kimya, metal işleme, seramik ve cam üreticilerine yaklaşık 8,25 milyar euro maliyet avantajı sağlayacak. Ücretsiz tahsis CBAM'deki yükümlülüğü azaltma yönünde de etki ettiğinden Türk ihracatçı için CBAM yükünün hesaplanmasında izlenmesi gereken bir gelişme; ancak AB'li rakiplerin maliyeti de düşüyor.",
+      "key_points": [
+        "2026-2030 için 121 milyon ek ücretsiz CO2 izni.",
+        "AB sanayisine tahmini 8,25 milyar euro karbon maliyeti tasarrufu.",
+        "Başlıca yararlananlar: kimya, metal işleme, seramik ve cam.",
+        "Kıyaslama kuralları AP ile yıl sonuna kadar hızlandırılmış müzakereyle netleşecek; kapsamlı ETS reformu 2027'de."
+      ],
+      "entities": {
+        "kurum": [
+          "AB Konseyi",
+          "Avrupa Parlamentosu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Kimya",
+          "Metal",
+          "Seramik",
+          "Cam"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "emisyon-ticaret-sistemi",
+        "karbon-piyasasi",
+        "cbam",
+        "kimya",
+        "avrupa-sanayisi",
+        "ucretsiz-tahsis"
+      ],
+      "importance_factors": {
+        "authority": 52,
+        "impact": 65,
+        "keyword": 80,
+        "recency": 75,
+        "corroboration": 70,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "gmk-center",
+      "url": "https://gmk.center/en/news/the-eu-steel-industry-s-carbon-emissions-costs-could-rise-to-e8-2-billion-a-year-eurofer/",
+      "title": "The EU steel industry's carbon emissions costs could rise to €8.2 billion a year — EUROFER",
+      "published_at": "2026-09-24T12:00:00+03:00",
+      "language": "en",
+      "body": "According to the European Steel Association (EUROFER), the EU steel industry faces a significant rise in costs under proposed revisions to the EU Emissions Trading System (ETS). Annual expenditure on carbon allowances could rise from the current €3.4 billion in 2026 to €8.2 billion in 2031.\n\nFor traditional blast furnace production, carbon costs are projected to roughly double to €100 per tonne by 2030 and to exceed €200 per tonne from 2031 onwards. EUROFER argues that this trajectory would render the industry economically unviable.\n\nThe association calls for a gradual transition to the Carbon Border Adjustment Mechanism (CBAM), requesting a five-year phase-out of free allowances. A particular concern is competitive disadvantage in exports: foreign manufacturers pay the EU carbon levy only on products supplied to the European market, whilst EU companies bear these costs for all their goods.\n\nEUROFER notes that the industry has committed to climate neutrality by 2050 and has already invested in approximately 35 million tonnes of low-carbon steel capacity. However, projects representing 10 million tonnes remain suspended due to the deterioration of economic conditions.\n\nThe article also recalls that in mid-September the EU decided to grant additional free carbon emission allowances to heavy industry, which is expected to save businesses around €8.25 billion.",
+      "summary": "EUROFER, AB çelik sektörünün karbon izni harcamasının 2026'daki 3,4 milyar eurodan 2031'de 8,2 milyar euroya çıkabileceğini, yüksek fırın üretiminde karbon maliyetinin 2031'den itibaren ton başına 200 euroyu aşacağını açıkladı. AB'deki karbon maliyeti yükseldikçe CBAM'in AB'ye çelik satan Türk üreticiye yansıyan fiyatı da artacak; elektrik ark ocaklı düşük emisyonlu üretim ise görece avantaj sağlayabilir.",
+      "key_points": [
+        "AB çeliğinin yıllık karbon izni maliyeti 2026'da 3,4 milyar euro, 2031'de 8,2 milyar euro olabilir.",
+        "Yüksek fırında karbon maliyeti 2030'da ton başına 100 euro, 2031'den sonra 200 euronun üzerinde.",
+        "EUROFER ücretsiz tahsisin beş yılda aşamalı kaldırılmasını istiyor.",
+        "10 milyon tonluk düşük karbonlu kapasite projesi askıda."
+      ],
+      "entities": {
+        "kurum": [
+          "EUROFER"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "cevre",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "emisyon-ticaret-sistemi",
+        "cbam",
+        "celik",
+        "karbon-fiyatlamasi",
+        "maliyet-baskisi"
+      ],
+      "importance_factors": {
+        "authority": 52,
+        "impact": 65,
+        "keyword": 85,
+        "recency": 97,
+        "corroboration": 40,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "destatis",
+      "url": "https://www.destatis.de/EN/Press/2026/09/PE26_328_61241.html",
+      "title": "Producer prices in August 2026: +4.6% on August 2025",
+      "published_at": "2026-09-18T09:00:00+03:00",
+      "language": "en",
+      "body": "Press release No. 328 of 18 September 2026. The producer prices of industrial products were 4.6% higher in August 2026 than in August 2025, as reported by the Federal Statistical Office (Destatis). Compared with July 2026, producer prices rose by 1.1%.\n\nEnergy was the main price driver: energy prices were up 8.3% year on year, mainly as a result of the geopolitical situation in the Middle East. Mineral oil products cost 40.5% more than in August 2025; light heating oil was up 65.3% and motor fuels 37.7%.\n\nPrices of intermediate goods rose by 6.1% year on year. Metals were 14.8% more expensive, with precious metals and copper and semi-finished copper products each up 34.6%. Steel prices increased by 6.9%, and basic chemicals by 11.2%.\n\nCapital goods prices were 2.4% higher and durable consumer goods 2.1% higher than a year earlier. By contrast, prices of non-durable consumer goods fell by 2.0%, mainly because food prices were down 4.3%; butter was 40.5% cheaper, pork 16.3% and beef 9.3%.\n\nExcluding energy, producer prices were 3.1% higher than in August 2025.",
+      "summary": "Almanya'da sanayi üretici fiyatları Ağustos'ta yıllık yüzde 4,6, aylık yüzde 1,1 arttı; enerji yüzde 8,3, ara mallar yüzde 6,1, metaller yüzde 14,8, çelik yüzde 6,9, temel kimyasallar yüzde 11,2 pahalandı. Alman rakiplerin maliyetlerinin hızla artması Türk ara malı ihracatçısına fiyat rekabeti alanı açarken, bakır ve kimyasal girdi kullanan Türk sanayicisi için de Avrupa kaynaklı girdi maliyeti baskısı anlamına geliyor.",
+      "key_points": [
+        "Alman ÜFE Ağustos 2026'da yıllık yüzde 4,6, aylık yüzde 1,1 arttı.",
+        "Enerji yüzde 8,3, akaryakıt ürünleri yüzde 40,5 arttı.",
+        "Ara mallar yüzde 6,1; bakır yüzde 34,6, çelik yüzde 6,9, temel kimyasallar yüzde 11,2.",
+        "Enerji hariç ÜFE yüzde 3,1."
+      ],
+      "entities": {
+        "kurum": [
+          "Destatis"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Metal",
+          "Kimya",
+          "Demir-Çelik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "almanya",
+        "uretici-fiyatlari",
+        "ufe",
+        "enerji-maliyeti",
+        "bakir-fiyati",
+        "girdi-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 60,
+        "keyword": 65,
+        "recency": 78,
+        "corroboration": 45,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "destatis",
+      "url": "https://www.destatis.de/EN/Press/2026/09/PE26_327_421.html",
+      "title": "Stock of orders in manufacturing in July 2026: +1.5% on the previous month",
+      "published_at": "2026-09-17T09:00:00+03:00",
+      "language": "en",
+      "body": "Press release No. 327 of 17 September 2026. The real (price-adjusted) stock of orders in manufacturing in Germany rose by 1.5% in July 2026 compared with June 2026, after seasonal and calendar adjustment, according to the Federal Statistical Office (Destatis). Compared with July 2025, the stock of orders was 10.9% higher. The stock of orders in manufacturing therefore reached a new all-time high once again.\n\nThe increase was mainly due to the manufacture of other transport equipment, which includes aircraft, ships, trains and military vehicles with long production times; here the stock of orders rose by 3.9% on the previous month. In machinery and equipment, the stock of orders rose by 0.8%, whereas it fell by 1.7% in the automotive industry.\n\nUnfilled orders from domestic customers increased by 3.0% on the previous month, while foreign orders rose by 0.6%.\n\nThe range of orders, i.e. the number of months that manufacturing companies would theoretically need to process the existing orders if new orders stayed at the current level, rose to 9.0 months, the highest value since the time series began in 2015.",
+      "summary": "Almanya'da imalat sanayi sipariş stoku Temmuz'da aylık yüzde 1,5, yıllık yüzde 10,9 artarak yeniden rekor kırdı; sipariş karşılama süresi 9 aya çıktı. Artış ağırlıkla uçak, gemi ve raylı sistemlerden gelirken otomotivde sipariş stoku yüzde 1,7 düştü. Türk savunma, raylı sistem ve makine tedarikçileri için fırsat, otomotiv yan sanayi için ise zayıf talep sinyali.",
+      "key_points": [
+        "Alman imalat sipariş stoku Temmuz 2026'da aylık yüzde 1,5, yıllık yüzde 10,9 arttı.",
+        "Diğer ulaşım araçlarında (uçak, gemi, tren) artış yüzde 3,9; makinede yüzde 0,8.",
+        "Otomotivde sipariş stoku yüzde 1,7 azaldı.",
+        "Sipariş karşılama süresi 9,0 ay ile 2015'ten bu yana en yüksek."
+      ],
+      "entities": {
+        "kurum": [
+          "Destatis"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makine",
+          "Otomotiv",
+          "Savunma Sanayi",
+          "Raylı Sistemler"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "sanayi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "almanya",
+        "siparis",
+        "imalat-sanayi",
+        "otomotiv",
+        "makine",
+        "savunma-sanayi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 55,
+        "keyword": 60,
+        "recency": 75,
+        "corroboration": 30,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "ecb",
+      "url": "https://www.ecb.europa.eu/press/inter/date/2026/html/ecb.in260922~5f89d300ee.en.html",
+      "title": "Interview with Le Temps",
+      "published_at": "2026-09-22T09:00:00+03:00",
+      "language": "en",
+      "body": "Interview with Philip R. Lane, Member of the Executive Board of the ECB, conducted by Sébastien Ruche and published on 22 September 2026.\n\nLane described a two-wave energy shock. After the initial spike in March and April, there was optimism following the June agreement between the United States and Iran, but renewed geopolitical tensions have pushed prices up again. \"We are now witnessing a second wave of price rises, not only in oil but also in gas.\" As a result, \"this second wave of energy price increases should lead to higher and more persistent inflation, before it recedes towards our target starting in mid-2027.\" Inflation is likely to be higher for longer before falling back towards the target from mid-2027 onwards.\n\nThe good news is that services inflation has remained contained between February and September. The concern is that the second wave is likely to put upward pressure on food prices, energy prices more broadly including electricity, and goods prices in general.\n\nOn growth, Lane pointed to government spending in Germany and the Next Generation EU programme as supporting factors. The ECB's baseline is that the European economy should continue to grow at a steady but modest pace, provided the energy shock does not become more severe. Artificial intelligence offers longer-term upside, though with employment disruption risks.\n\nOn fiscal policy, he said Germany has the fiscal space it needs for its spending, and Next Generation EU does not raise the same debt sustainability concerns, but government spending provides a temporary boost that will fade over time. Lane added that futures curves for oil and gas point to a resolution of the crisis later this year, though significant risks surround this baseline.",
+      "summary": "ECB Baş Ekonomisti Lane, petrol ve doğalgazda ikinci bir fiyat dalgası yaşandığını, bunun enflasyonu daha yüksek ve kalıcı kılacağını ve hedefe dönüşün ancak 2027 ortasından itibaren başlayacağını söyledi; gıda, elektrik ve mal fiyatlarına yayılma riski var. ECB'nin sıkı duruşunu sürdürme ihtimali, Avrupalı alıcıların finansman maliyetini ve euro/dolar paritesini etkileyerek Türk ihracatçının fiyatlamasını doğrudan ilgilendiriyor.",
+      "key_points": [
+        "Lane: enerjide ikinci dalga enflasyonu daha yüksek ve kalıcı kılacak; hedefe dönüş 2027 ortasından itibaren.",
+        "Hizmet enflasyonu Şubat-Eylül arasında sınırlı kaldı; gıda, elektrik ve mal fiyatlarında baskı riski.",
+        "Enerji şoku ağırlaşmazsa Avrupa ekonomisinin istikrarlı ama ılımlı büyümesi bekleniyor.",
+        "Almanya'nın harcama için mali alanı var; kamu harcaması etkisi geçici."
+      ],
+      "entities": {
+        "kurum": [
+          "ECB",
+          "Le Temps"
+        ],
+        "kisi": [
+          "Philip R. Lane",
+          "Sébastien Ruche"
+        ],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "ecb",
+        "enflasyon",
+        "enerji-enflasyonu",
+        "para-politikasi",
+        "euro-bolgesi",
+        "dogal-gaz"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 60,
+        "keyword": 65,
+        "recency": 90,
+        "corroboration": 70,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "investing-com",
+      "url": "https://www.investing.com/news/economy-news/ecbs-lane-sees-inflation-returning-to-target-from-mid2027paper-4909871",
+      "title": "ECB's Lane sees inflation returning to target from mid-2027-paper",
+      "published_at": "2026-09-22T04:12:00+03:00",
+      "language": "en",
+      "body": "A new wave of high energy prices means euro zone inflation will stay elevated for longer than initially anticipated by the European Central Bank, ECB chief economist Philip Lane told Swiss newspaper Le Temps, Reuters reported on 22 September 2026.\n\nLane said the ECB had signalled on 10 September that it expected the energy shock to last longer than it had anticipated in March, with geopolitical tensions elevated. \"We are now witnessing a second wave of price rises, not only in oil but also in gas,\" he said. \"As a result, we believe this second wave of energy price increases should lead to higher and more persistent inflation, before it recedes towards our target starting in mid-2027.\"\n\nSo far, spillover effects from energy to other prices have been limited, Lane said. However, he warned that the current energy pressures are likely to push up food prices, energy prices more broadly including electricity, and goods prices in general. By contrast, he expects that \"pressures on services should remain relatively contained,\" suggesting an uneven inflationary impact across the economy.\n\nThe ECB raised its three key interest rates by 25 basis points at its September meeting, taking the deposit facility rate to 2.50% with effect from 16 September 2026, in its second hike since the energy shock linked to the conflict involving Iran began.",
+      "summary": "Reuters'ın aktardığına göre Lane, enerji fiyatlarındaki ikinci dalganın euro bölgesinde enflasyonu beklenenden uzun süre yüksek tutacağını, hedefe dönüşün 2027 ortasından itibaren olacağını söyledi. Mevduat faizi yüzde 2,50'ye yükselmişken bu açıklamalar ek sıkılaşma ihtimalini canlı tutuyor; euro cinsinden alacağı ve kredisi olan Türk sanayicisi için kur ve faiz riski yönetimi önem kazanıyor.",
+      "key_points": [
+        "Lane: petrol ve gazda ikinci fiyat dalgası yaşanıyor.",
+        "Enflasyonun hedefe dönüşü 2027 ortasından itibaren bekleniyor.",
+        "Gıda, elektrik ve mal fiyatlarında yukarı yönlü baskı; hizmetlerde baskı sınırlı.",
+        "ECB mevduat faizi 16 Eylül 2026'dan itibaren yüzde 2,50."
+      ],
+      "entities": {
+        "kurum": [
+          "ECB",
+          "Reuters",
+          "Le Temps"
+        ],
+        "kisi": [
+          "Philip R. Lane"
+        ],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "ecb",
+        "enflasyon",
+        "politika-faizi",
+        "enerji-enflasyonu",
+        "euro"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 55,
+        "keyword": 60,
+        "recency": 90,
+        "corroboration": 70,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "briefs-co",
+      "url": "https://www.briefs.co/news/ecb-s-isabel-schnabel-flags-energy-price-jitters-as-rate-ris/",
+      "title": "ECB's Schnabel Warns on Energy Risks to Inflation",
+      "published_at": "2026-09-14T14:00:00+03:00",
+      "language": "en",
+      "body": "ECB Executive Board member Isabel Schnabel expressed serious concern about energy price movements during remarks in Berlin on 14 September 2026, calling recent developments \"quite concerning\" as officials weigh further interest-rate increases after last week's move. The remarks were made at a symposium on European competitiveness hosted by Germany's Federal Ministry for Economic Affairs and Energy.\n\nEnergy price concerns: Schnabel stressed that the problem extends beyond crude oil to diesel supplies. \"It's not just oil, but also diesel,\" she said, noting that \"refining capacities have reduced drastically and can't be rebuilt quickly,\" limiting Europe's ability to respond to supply disruptions.\n\nGas market pressures: natural gas is another vulnerability. Schnabel pointed to low storage levels in Europe and competition with Asia for LNG supplies. The ECB has warned that European gas prices have risen sharply, with limited time to rebuild reserves before the winter months.\n\nMonetary policy response: the ECB raised interest rates the previous week, only the second increase since the Iran conflict pushed up energy costs. Officials anticipate additional tightening, with December seen as the likely timing for another quarter-point rise, although October remains possible. Schnabel described the rate increase as a logical response to prevent inflation from deviating from target, while emphasising the central bank's data-dependent approach rather than pre-committing to a fixed path.",
+      "summary": "ECB Yönetim Kurulu üyesi Schnabel, Berlin'de yaptığı konuşmada enerji fiyatlarındaki gelişmeleri 'oldukça endişe verici' bulduğunu, sorunun petrolle sınırlı kalmayıp dizel ve doğalgaza yayıldığını söyledi; piyasalar Aralık'ta yeni bir faiz artışı fiyatlıyor. Avrupa'da dizel ve LNG arz sıkışıklığı, AB'ye kara yoluyla ihracat yapan Türk sanayicinin navlun ve enerji maliyetini de yukarı itiyor.",
+      "key_points": [
+        "Schnabel: enerji fiyatlarındaki gelişmeler 'oldukça endişe verici'.",
+        "Rafineri kapasitesi azaldı; dizel arzı hızla artırılamıyor.",
+        "Avrupa'da gaz depoları düşük, LNG'de Asya ile rekabet sürüyor.",
+        "Piyasa bir sonraki 25 baz puan artışını Aralık'ta, ihtimal olarak Ekim'de bekliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "ECB",
+          "Almanya Ekonomi ve Enerji Bakanlığı"
+        ],
+        "kisi": [
+          "Isabel Schnabel"
+        ],
+        "sektor": [
+          "Enerji",
+          "Rafineri"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "ecb",
+        "enerji-maliyeti",
+        "motorin",
+        "lng",
+        "faiz",
+        "para-politikasi"
+      ],
+      "importance_factors": {
+        "authority": 45,
+        "impact": 55,
+        "keyword": 60,
+        "recency": 65,
+        "corroboration": 55,
+        "reach": 35
+      }
+    },
+    {
+      "source_slug": "euronews",
+      "url": "https://www.euronews.com/2026/09/23/rebalancing-of-trade-with-china-existential-for-eu-commissioner-sejourne-tells-euronews",
+      "title": "Rebalancing of trade with China 'existential' for EU, Commissioner Séjourné tells Euronews",
+      "published_at": "2026-09-23T10:00:00+03:00",
+      "language": "en",
+      "body": "In an interview for Euronews' The Europe Conversation, European Commission Executive Vice-President Stéphane Séjourné said rebalancing trade with China is \"existential for Europeans\". The EU's trade deficit with China exceeds €1 billion a day as of July 2026.\n\nSéjourné said the bloc is losing \"thousands of jobs every week\" because of Chinese trade practices, and that the EU shed 250,000 industrial jobs in the previous year, concentrated in energy-intensive sectors and automotive supply chains.\n\nTimeline and strategy: the EU wants \"credible\" outcomes from Beijing by October 2026. EU Trade Commissioner Maroš Šefčovič travels to Beijing on 8-9 October, and discussions are being conducted sector by sector to identify rebalancing opportunities.\n\nIf negotiations falter, Brussels will deploy trade defence instruments, including anti-dumping duties and countervailing tariffs against unfair subsidies, with electric vehicles and solar panels cited as examples. \"Trade defence tools are on the table,\" Séjourné warned, adding that the Commission will not hesitate to use them.\n\nThe EU is also watching Chinese President Xi Jinping's summit with US President Donald Trump, recognising that an escalation of US-China trade tensions could redirect Chinese exports towards Europe and further destabilise EU markets.",
+      "summary": "Komisyon Başkan Yardımcısı Séjourné, Çin ile ticaretin dengelenmesini AB için 'varoluşsal' olarak niteledi; AB geçen yıl 250 bin sanayi işi kaybetti ve Ekim'de somut sonuç alınamazsa yeni damping ve sübvansiyon önlemleri gündemde. Çin'e yönelik sert AB önlemleri, AB pazarında Türk üreticiye alan açabilir; ancak ticaret sapması endişesiyle alınan geniş kapsamlı önlemler (çelikte olduğu gibi) Türkiye'yi de vurabiliyor.",
+      "key_points": [
+        "AB'nin Çin ile ticaret açığı günde 1 milyar euroyu aşıyor.",
+        "AB geçen yıl 250 bin sanayi işi kaybetti; enerji yoğun sektörler ve otomotiv tedarik zinciri en çok etkilenen.",
+        "Šefčovič 8-9 Ekim'de Pekin'de; Ekim sonuna kadar 'inandırıcı' sonuç bekleniyor.",
+        "Başarısızlık halinde anti-damping ve telafi edici vergiler devreye girebilir."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "Euronews"
+        ],
+        "kisi": [
+          "Stéphane Séjourné",
+          "Maroš Šefčovič",
+          "Xi Jinping",
+          "Donald Trump"
+        ],
+        "sektor": [
+          "Otomotiv",
+          "Güneş Paneli",
+          "Enerji Yoğun Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin-rekabeti",
+        "ticaret-savunmasi",
+        "anti-damping",
+        "telafi-edici-vergi",
+        "ab-komisyonu"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 60,
+        "keyword": 70,
+        "recency": 93,
+        "corroboration": 65,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "eunews",
+      "url": "https://www.eunews.it/en/2026/09/22/sefcovic-the-future-of-the-eu-economy-is-at-stake-in-the-negotiations-with-beijing/",
+      "title": "Šefčovič: \"The future of the EU economy is at stake in talks with Beijing\"",
+      "published_at": "2026-09-22T15:00:00+03:00",
+      "language": "en",
+      "body": "EU Trade Commissioner Maroš Šefčovič said discussions with China go far beyond traditional trade balance concerns, addressing \"the future of our economy, the future of our industry\" given the scale and speed of the growth of the EU's trade deficit with Beijing, Eunews reported (author: Giulia Torbidoni).\n\nŠefčovič plans to visit China on 8-9 October for the second session of the EU-China Trade and Investment Consultation Mechanism. He said the EU needs \"progress and agreements at a political level\" and must show that the dialogue \"delivers concrete results\".\n\nThe upcoming discussions will address measures to rebalance trade, the management of Chinese exports to the EU, expanding European market access in China, and Chinese export controls on materials such as rare earths.\n\nŠefčovič expressed cautious optimism, noting \"a genuine commitment on the part of our Chinese counterparts,\" while stressing that the dialogue must \"move from rhetoric to concrete results\" to produce meaningful outcomes for Europe.\n\nHis comments came in the same week that the Commission announced substantial agreement on a free trade agreement with the Philippines and a week after Commission President Ursula von der Leyen described the €1 billion-a-day trade deficit with China as a \"tipping point\" in her State of the Union address.",
+      "summary": "Ticaret Komiseri Šefčovič, Çin ile müzakerelerde 'AB ekonomisinin ve sanayisinin geleceğinin' söz konusu olduğunu söyledi; 8-9 Ekim'deki Pekin ziyaretinde Çin ihracatının yönetimi ve nadir toprak ihracat kontrolleri ele alınacak. Nadir toprak ve kritik hammadde erişimi, AB tedarik zincirine mıknatıs, elektrik motoru ve elektronik aksam veren Türk sanayicisi için de belirleyici.",
+      "key_points": [
+        "Šefčovič 8-9 Ekim'de AB-Çin Ticaret ve Yatırım İstişare Mekanizması için Pekin'de olacak.",
+        "Gündem: ticaretin dengelenmesi, Çin ihracatının yönetimi, pazar erişimi ve nadir toprak ihracat kontrolleri.",
+        "AB siyasi düzeyde somut anlaşma ve sonuç istiyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Komisyonu",
+          "Eunews"
+        ],
+        "kisi": [
+          "Maroš Šefčovič",
+          "Giulia Torbidoni"
+        ],
+        "sektor": [
+          "Kritik Hammaddeler"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "cin-rekabeti",
+        "nadir-toprak",
+        "kritik-hammadde",
+        "ticaret-politikasi",
+        "ab-komisyonu"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 50,
+        "keyword": 60,
+        "recency": 90,
+        "corroboration": 65,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "bundesbank",
+      "url": "https://www.bundesbank.de/en/tasks/topics/german-economy-recovery-slowing-temporarily-energy-prices-driving-inflation-1008384",
+      "title": "German economy: recovery slowing temporarily; energy prices driving inflation",
+      "published_at": "2026-09-21T12:00:00+03:00",
+      "language": "en",
+      "body": "According to the Deutsche Bundesbank's September 2026 Monthly Report, the German economy is likely to grow only a little in the third quarter of 2026 in seasonally adjusted terms, after real GDP had increased significantly in the two preceding quarters. The slowdown is attributed mainly to temporary factors, after which the recovery is expected to resume towards the end of the year.\n\nLow water levels on the Rhine have disrupted the transport of goods and raised costs significantly, affecting in particular the chemicals, metals and petroleum industries; output and sales declined noticeably in July. Exports are also expected to make a smaller contribution to growth in the third quarter, and private consumption is likely to remain subdued.\n\nEnergy commodity prices picked up again sharply in August and September due to escalating tensions in the Middle East. European energy prices reached their highest level since the start of the Iran conflict, with wholesale electricity, diesel and petrol costs surging.\n\nHICP inflation in Germany rose from 2.8% in July to 2.9% in August, while core inflation remained at 2.6%. Inflation is set to remain elevated for some time due to higher energy costs and a planned health reform in 2027. Persistently high prices for crude oil, gas and electricity could amplify direct and indirect effects and delay the return to 2%.\n\nOn the labour market, registered unemployment stood at 2.996 million, an unemployment rate of 6.4%, and employment fell by 14,000 to 45.66 million persons (seasonally adjusted).",
+      "summary": "Bundesbank, Alman ekonomisinin üçüncü çeyrekte yalnızca hafif büyüyeceğini, Ren nehrindeki düşük su seviyesinin özellikle kimya, metal ve petrol sanayisinde taşımacılığı aksattığını ve maliyetleri artırdığını bildirdi. Enerji fiyatları Ağustos-Eylül'de yeniden sert yükseldi. Almanya'ya ihracat yapan Türk sanayicisi için yıl sonuna doğru toparlanma beklentisi olumlu, ancak üçüncü çeyrekte talep zayıf seyredecek.",
+      "key_points": [
+        "Alman GSYH'si üçüncü çeyrekte yalnızca hafif artacak; toparlanma yıl sonuna doğru sürecek.",
+        "Ren'deki düşük su seviyesi kimya, metal ve petrol sanayisinde üretim ve satışları düşürdü.",
+        "Almanya'da HICP enflasyonu Ağustos'ta yüzde 2,9; çekirdek yüzde 2,6.",
+        "İşsizlik oranı yüzde 6,4; istihdam 14 bin kişi azaldı."
+      ],
+      "entities": {
+        "kurum": [
+          "Deutsche Bundesbank"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Kimya",
+          "Metal",
+          "Petrol"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "almanya",
+        "buyume",
+        "enerji-maliyeti",
+        "lojistik",
+        "enflasyon"
+      ],
+      "importance_factors": {
+        "authority": 88,
+        "impact": 60,
+        "keyword": 55,
+        "recency": 86,
+        "corroboration": 55,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "investinglive",
+      "url": "https://investinglive.com/news/germany-september-flash-manufacturing-pmi-xx-vs-54-0-expected/",
+      "title": "Germany September flash manufacturing PMI 53.8 vs 54.0 expected",
+      "published_at": "2026-09-23T10:30:00+03:00",
+      "language": "en",
+      "body": "Germany's September flash PMI data, released on 23 September 2026 at 07:30 GMT:\n\nManufacturing PMI: 53.8 (expected 54.0, prior 54.3).\nServices PMI: 52.9 (expected 50.0, prior 49.7).\nComposite PMI: 53.8 (expected 51.8, prior 51.8).\n\nGerman economic activity accelerated despite energy cost pressures. According to S&P Global, business output growth strengthened to the strongest rise in business activity for almost a year, with the service sector recovering after the impact of the Middle East conflict.\n\nThe report points to rising employment and accumulating backlogs of work, suggesting that capacity constraints are building. Manufacturing remained firmly in expansion territory, although the headline index eased slightly from August.\n\nMarket reaction was subdued, with the euro continuing to weaken against the US dollar. The commentary notes that the European Central Bank's focus is on controlling inflation rather than on growth data, which explains the muted response; future guidance will depend on energy price trends and geopolitical developments.",
+      "summary": "Almanya'da Eylül öncü imalat PMI'ı 53,8 ile genişleme bölgesinde kaldı, bileşik PMI 51,8'den 53,8'e sıçradı ve iş hacmi yaklaşık bir yılın en güçlü artışını gösterdi. Bekleyen işlerin birikmesi kapasite sıkışmasına işaret ediyor; bu, Alman sanayisine parça ve ara malı tedarik eden Türk üreticiler için ek sipariş fırsatı anlamına gelebilir.",
+      "key_points": [
+        "Almanya imalat PMI (öncü) 53,8; beklenti 54,0, önceki 54,3.",
+        "Hizmet PMI 49,7'den 52,9'a, bileşik PMI 51,8'den 53,8'e yükseldi.",
+        "İstihdam artıyor, bekleyen iş birikiyor; kapasite kısıtı işaretleri var.",
+        "Euro dolar karşısında zayıflamayı sürdürdü."
+      ],
+      "entities": {
+        "kurum": [
+          "S&P Global",
+          "HCOB",
+          "ECB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi",
+          "Hizmetler"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "sanayi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "almanya",
+        "pmi",
+        "imalat-pmi",
+        "yeni-siparis",
+        "parite"
+      ],
+      "importance_factors": {
+        "authority": 50,
+        "impact": 55,
+        "keyword": 65,
+        "recency": 93,
+        "corroboration": 55,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "indexbox",
+      "url": "https://www.indexbox.io/blog/eurozone-manufacturing-pmi-holds-at-527-in-september-2026/",
+      "title": "Eurozone Manufacturing PMI Steady at 52.7 in September 2026",
+      "published_at": "2026-09-23T13:00:00+03:00",
+      "language": "en",
+      "body": "The flash HCOB Eurozone Manufacturing PMI remained unchanged at 52.7 in September 2026, slightly above analyst expectations of 52.6, according to S&P Global data via Trading Economics.\n\nOutput: the manufacturing Output Index strengthened to 53.4 from 53.3, its strongest reading in 55 months.\n\nProduction drivers: manufacturing expansion was supported by renewed growth in new export orders, while employment levels remained broadly stable.\n\nInventories: companies increased their purchasing activity for the second consecutive month, allowing them to stabilise stocks of inputs after a consistent decline since February 2023. Stocks of finished goods also stabilised.\n\nSupply chains: supplier delivery times lengthened again, although at the mildest pace since February.\n\nPrices: input cost inflation accelerated and output prices rose at a faster rate.\n\nOutlook: business confidence weakened, as manufacturers expressed diminished optimism about the year ahead.\n\nAcross the wider economy, market reports on the same flash release put the eurozone composite PMI at 53.1, up from 52.0 in August, and the services PMI at 53.0, against expectations of 51.7, with order book growth gaining momentum in both manufacturing and services heading into the fourth quarter.",
+      "summary": "Euro Bölgesi öncü imalat PMI'ı Eylül'de 52,7'de sabit kaldı; üretim endeksi 55 ayın zirvesinde, yeni ihracat siparişleri yeniden büyüdü ve firmalar ikinci ay üst üste stok için alım yaptı. Girdi maliyeti enflasyonu hızlanırken güven zayıfladı. Avrupa'daki stok yenileme döngüsü, AB'ye ara malı satan Türk sanayicisi için sipariş fırsatı; teslim sürelerinin uzaması ise yakın tedarikçi avantajını güçlendiriyor.",
+      "key_points": [
+        "Euro Bölgesi imalat PMI Eylül'de 52,7 (beklenti 52,6).",
+        "İmalat üretim endeksi 53,4 ile 55 ayın en yüksek seviyesinde.",
+        "Firmalar Şubat 2023'ten beri eriyen girdi stoklarını yeniden oluşturmaya başladı.",
+        "Girdi ve satış fiyatı enflasyonu hızlandı; iş güveni zayıfladı.",
+        "Bileşik PMI 53,1'e yükseldi."
+      ],
+      "entities": {
+        "kurum": [
+          "S&P Global",
+          "HCOB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "sanayi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "pmi",
+        "imalat-pmi",
+        "euro-bolgesi",
+        "stok-yonetimi",
+        "ihracat-siparisi"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 60,
+        "keyword": 65,
+        "recency": 93,
+        "corroboration": 60,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "gazete-kalem",
+      "url": "https://gazetekalem.com.tr/ticaret-bakani-bolat-italya-basbakan-yardimcisi-tajani-ile-gorustu/",
+      "title": "Ticaret Bakanı Bolat, İtalya Başbakan Yardımcısı Tajani ile görüştü",
+      "published_at": "2026-09-18T18:16:00+03:00",
+      "language": "tr",
+      "body": "Ticaret Bakanı Ömer Bolat, Roma'da İtalya Başbakan Yardımcısı ve Dışişleri Bakanı Antonio Tajani ile görüştü. Bolat, iki ülke arasındaki ekonomik ilerlemeye dikkat çekerek \"2026'nın ilk 8 ayında ticaret hacmimiz 19 milyar doları aştı\" dedi.\n\nGörüşmede iki ülke arasındaki ticari ve ekonomik ilişkilerin güçlendirilmesi, karşılıklı yatırımların artırılması ve Türk ve İtalyan firmalarının üçüncü ülkelerde ortak projeler üstlenmesi ele alındı. Uzay teknolojileri, savunma, kritik hammaddeler, enerji, telekomünikasyon, ulaştırma ve altyapı işbirliği alanları arasında sayıldı.\n\nBolat, Gümrük Birliği'nin güncellenmesinin ve ekonomik entegrasyonun kamu alımları, dijital ticaret ve hizmetler gibi alanlara genişletilmesinin önemini vurguladı. Bakan Bolat ayrıca Avrupa Birliği'nin sanayi politikaları ve \"Made in Europe\" yaklaşımına ilişkin Türkiye'nin görüşlerini aktararak Türkiye'nin başta otomotiv olmak üzere Avrupa tedarik zincirlerinin ayrılmaz bir parçası olduğunu vurguladı.\n\nCumhurbaşkanı Recep Tayyip Erdoğan ile İtalya Başbakanı Giorgia Meloni'nin belirlediği ikili ticaret hedefi 40 milyar dolar; 2025'te ticaret hacmi 30 milyar dolara yaklaşmıştı. Ziyaret kapsamında İtalyan iş dünyası temsilcileriyle de bir araya gelindi.",
+      "summary": "Ticaret Bakanı Bolat, Roma'da Tajani ile görüşerek Gümrük Birliği'nin kamu alımları, dijital ticaret ve hizmetleri kapsayacak şekilde güncellenmesini ve AB'nin 'Made in Europe' kurallarında Türkiye'nin, özellikle otomotivde, Avrupa tedarik zincirinin parçası sayılmasını talep etti. AB kamu alımları ve teşviklerinde yerli üretim şartının Türk otomotiv yan sanayisini dışlamaması, İSO üyeleri için kritik bir pazar erişimi meselesi.",
+      "key_points": [
+        "Türkiye-İtalya ticareti 2026'nın ilk 8 ayında 19 milyar doları aştı; hedef 40 milyar dolar.",
+        "Bolat Gümrük Birliği'nin kamu alımları, dijital ticaret ve hizmetlere genişletilmesini istedi.",
+        "Türkiye, 'Made in Europe' yaklaşımında otomotiv başta olmak üzere AB tedarik zincirinin parçası sayılmayı talep ediyor.",
+        "Uzay, savunma, kritik hammadde, enerji ve altyapıda işbirliği ele alındı."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "İtalya Dışişleri Bakanlığı"
+        ],
+        "kisi": [
+          "Ömer Bolat",
+          "Antonio Tajani",
+          "Recep Tayyip Erdoğan",
+          "Giorgia Meloni"
+        ],
+        "sektor": [
+          "Otomotiv",
+          "Savunma Sanayi",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ticaret-politikasi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "gumruk-birligi",
+        "ab-turkiye",
+        "made-in-eu",
+        "otomotiv",
+        "italya",
+        "kamu-alimlari"
+      ],
+      "importance_factors": {
+        "authority": 45,
+        "impact": 65,
+        "keyword": 80,
+        "recency": 78,
+        "corroboration": 50,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "aa-ekonomi",
+      "url": "https://www.aa.com.tr/tr/ekonomi/ab-gumruk-sisteminde-degisiklige-gidiyor/4063288",
+      "title": "AB gümrük sisteminde değişikliğe gidiyor",
+      "published_at": "2026-09-21T10:00:00+03:00",
+      "language": "tr",
+      "body": "Avrupa Birliği, gümrük işlemlerini modernize etmek amacıyla kapsamlı bir reform sürecine giriyor. Avrupa Parlamentosu ve AB Konseyi tarafından kabul edilerek AB Resmi Gazetesi'nde yayımlanan reformla AB gümrük işlemlerinin dijitalleştirilmesi ve sadeleştirilmesi, üye ülkeler arasındaki uygulama farklılıklarının azaltılması, idari yükün hafifletilmesi ve sınır kontrollerinde risk yönetiminin güçlendirilmesi hedefleniyor. Reform kademeli olarak uygulamaya konuluyor.\n\nReformun ana unsurlarını, gümrük işlemlerine ilişkin kuralları yeniden düzenleyen AB Gümrük Kodu ile merkezi Fransa'nın Lille kentinde olacak AB Gümrük İdaresi oluşturuyor. AB Gümrük İdaresi'nin 2027'de faaliyete başlaması ve üye ülkeler arasındaki koordinasyonu güçlendirmesi planlanıyor.\n\nUlusal gümrük sistemlerinin yerini alacak bir AB Gümrük Veri Merkezi kurulacak. Veri merkezinin kullanımı e-ticaret işletmeleri için 1 Temmuz 2028'den itibaren zorunlu olacak; diğer işletmeler 2031'de sisteme dahil edilecek.\n\nKüçük paketlere ilişkin olarak, 150 avroyu aşmayan gönderilere tanınan gümrük vergisi muafiyeti kaldırılıyor. Bunun yerine Temmuz 2026-2028 döneminde her ürün türü için 3 avroluk geçici gümrük vergisi uygulanıyor. Kasım ayından itibaren ayrıca ek bir işlem ücreti alınacak.",
+      "summary": "AB, Lille merkezli AB Gümrük İdaresi (2027) ve ulusal sistemlerin yerini alacak AB Gümrük Veri Merkezi ile gümrük sistemini baştan düzenliyor; veri merkezi e-ticaret için 1 Temmuz 2028'den, diğer işletmeler için 2031'den itibaren zorunlu olacak. 150 avroluk küçük paket muafiyetinin kalkması Türkiye'den AB'ye e-ihracat yapan firmaları doğrudan etkiliyor; Gümrük Birliği içindeki Türk ihracatçı yeni veri gereksinimlerine uyum planı yapmalı.",
+      "key_points": [
+        "AB Gümrük İdaresi Lille'de kurulacak ve 2027'de faaliyete başlayacak.",
+        "AB Gümrük Veri Merkezi: e-ticaret için 1 Temmuz 2028'den, diğer işletmeler için 2031'den itibaren zorunlu.",
+        "150 avro altı gönderi muafiyeti kaldırıldı; Temmuz 2026-2028 arasında ürün türü başına 3 avro geçici vergi.",
+        "Kasım ayından itibaren küçük paketlere ek işlem ücreti alınacak."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Parlamentosu",
+          "AB Konseyi",
+          "AB Gümrük İdaresi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "E-ticaret",
+          "Lojistik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "gumruk",
+        "e-ihracat",
+        "e-ticaret",
+        "ab-mevzuati",
+        "gumruk-birligi",
+        "dijitallesme"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 65,
+        "keyword": 70,
+        "recency": 86,
+        "corroboration": 35,
+        "reach": 70
+      }
+    }
+  ]
+}

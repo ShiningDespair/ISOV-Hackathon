@@ -1,0 +1,1474 @@
+{
+  "collector": "kuresel",
+  "collected_at": "2026-09-25T18:00:00+03:00",
+  "sources": [
+    {
+      "slug": "oilprice-com",
+      "name": "OilPrice.com",
+      "homepage_url": "https://oilprice.com",
+      "source_type": "basin",
+      "authority_weight": 75,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "euronews",
+      "name": "Euronews Business",
+      "homepage_url": "https://www.euronews.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "FR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "iea",
+      "name": "Uluslararası Enerji Ajansı (IEA)",
+      "homepage_url": "https://www.iea.org",
+      "source_type": "uluslararasi",
+      "authority_weight": 95,
+      "country_code": "FR",
+      "language": "en",
+      "source_type_raw": "uluslararasi"
+    },
+    {
+      "slug": "daily-cargo-news",
+      "name": "Daily Cargo News (DCN)",
+      "homepage_url": "https://www.thedcn.com.au",
+      "source_type": "basin",
+      "authority_weight": 75,
+      "country_code": "AU",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "climate-home-news",
+      "name": "Climate Home News",
+      "homepage_url": "https://www.climatechangenews.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "GB",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "rio-times",
+      "name": "The Rio Times",
+      "homepage_url": "https://www.riotimesonline.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "BR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "indexbox",
+      "name": "IndexBox Market Intelligence",
+      "homepage_url": "https://www.indexbox.io",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "arastirma"
+    },
+    {
+      "slug": "al-jazeera",
+      "name": "Al Jazeera English",
+      "homepage_url": "https://www.aljazeera.com",
+      "source_type": "basin",
+      "authority_weight": 72,
+      "country_code": "QA",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "maersk",
+      "name": "A.P. Moller - Maersk",
+      "homepage_url": "https://www.maersk.com",
+      "source_type": "kurum",
+      "authority_weight": 80,
+      "country_code": "DK",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "the-loadstar",
+      "name": "The Loadstar",
+      "homepage_url": "https://theloadstar.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "GB",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "gcaptain",
+      "name": "gCaptain",
+      "homepage_url": "https://gcaptain.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "wto",
+      "name": "Dünya Ticaret Örgütü (WTO)",
+      "homepage_url": "https://www.wto.org",
+      "source_type": "uluslararasi",
+      "authority_weight": 92,
+      "country_code": "CH",
+      "language": "en",
+      "source_type_raw": "uluslararasi"
+    },
+    {
+      "slug": "eurometal",
+      "name": "EUROMETAL",
+      "homepage_url": "https://eurometal.net",
+      "source_type": "kurum",
+      "authority_weight": 75,
+      "country_code": "BE",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "semafor",
+      "name": "Semafor",
+      "homepage_url": "https://www.semafor.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "business-recorder",
+      "name": "Business Recorder",
+      "homepage_url": "https://www.brecorder.com",
+      "source_type": "basin",
+      "authority_weight": 50,
+      "country_code": "PK",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "fiinews",
+      "name": "FII News",
+      "homepage_url": "https://www.fiinews.com",
+      "source_type": "basin",
+      "authority_weight": 45,
+      "country_code": "IT",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "kuwait-times",
+      "name": "Kuwait Times",
+      "homepage_url": "https://kuwaittimes.com",
+      "source_type": "basin",
+      "authority_weight": 50,
+      "country_code": "KW",
+      "language": "en",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "al-jazeera",
+      "url": "https://www.aljazeera.com/news/2026/9/14/us-says-its-clearing-hormuz-traffic-why-are-oil-futures-beyond-100",
+      "title": "ABD Hürmüz trafiğini açtığını söylüyor; petrol neden hâlâ 100 doların üzerinde?",
+      "body": "ABD yönetimi Hürmüz Boğazı'ndaki trafiği başarıyla yönettiğini açıklasa da ham petrol fiyatları yükselmeye devam ediyor. Al Jazeera'nın 14 Eylül 2026 tarihli analizine göre Brent tipi ham petrol 3,21 dolar artışla varil başına 107,82 dolara çıktı.\n\nABD Enerji Bakanı Chris Wright, \"geçen hafta ortalama günde 10 milyon varil petrolün\" Hürmüz'den geçtiğini söyledi; bu, savaş öncesi akışların yaklaşık üçte ikisine denk geliyor. Başkan Trump da ABD'nin boğazda \"tam kontrol\" sahibi olduğunu ve her gün milyonlarca varilin eskortla geçirildiğini öne sürdü. Küresel petrol ve gaz ticaretinin beşte biri bu su yolundan geçiyor.\n\nİran ise boğaza erişimi kendisinin kontrol ettiğini savunuyor ve gemileri izinsiz rotalara karşı uyarıyor. Gemi takip verileri de ABD açıklamalarıyla çelişiyor: geçişler hafta sonu günlük tek haneye düştü; normalde 10 günlük ortalama günde 14 geçiş düzeyindeydi. Şubat'taki çatışma öncesinde her gün 100'den fazla gemi, tahminen 20 milyon varil taşıyarak boğazdan geçiyordu.\n\nSon fiyat sıçramaları İran gemisine yönelik saldırılar ve Suudi Arabistan'ın Doğu-Batı boru hattının insansız hava aracı saldırılarıyla hasar görmesinden kaynaklandı. Boru hattının kapanması küresel petrol arzının yüzde 4'ünü tehdit ediyor. Yemen'deki Husiler de Suudi Arabistan'ın güneyindeki altyapıya saldırılarını yoğunlaştırdı; salı günkü saldırıda 73 kişi yaralandı.\n\nIG Group'tan Chris Beauchamp, \"Hürmüz ABD'nin kontrolünde değil ve petrol serbestçe akmıyor\" dedi. Energy Aspects'ten Christopher Haines ise azalan ABD Stratejik Petrol Rezervi tamponlarının ve kış ısınma talebinin fiyatları yukarıda tutacağını belirtti.\n\nHürmüz geçişleri için savaş riski sigortası, çatışma öncesi tekne değerinin yaklaşık yüzde 0,25'inden şu anda yüzde 3-10'a yükseldi. 100 milyon dolarlık bir tanker için bu, sefer başına 3-10 milyon dolar prim demek. Liverpool John Moores Üniversitesi'nden Abdul Khalique, Husilerin Babülmendep dahil Kızıldeniz kıyı şeridinin tamamını kontrol ettiğini, ABD'nin askerî üstünlüğüne rağmen normal deniz taşımacılığı koşullarının yeniden sağlanamadığını söyledi. Körfez ülkeleri ile İran arasında Umman'da yapılması planlanan Hürmüz görüşmesi de pazartesi günü ertelendi.",
+      "published_at": "2026-09-14T12:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD, Hürmüz Boğazı'ndan günde ortalama 10 milyon varil petrolün geçtiğini açıklasa da Brent 3,21 dolar artışla 107,82 dolara çıktı; gemi verileri geçişlerin hafta sonu tek haneye düştüğünü gösteriyor. Savaş riski sigortası tekne değerinin yüzde 3-10'una ulaştı. Türk sanayicisi için bu, enerji ve navlun maliyetlerinde diplomatik bir çözüm görülmeden kalıcı rahatlama beklenmemesi gerektiği anlamına geliyor.",
+      "key_points": [
+        "Brent, 3,21 dolar yükselişle varil başına 107,82 dolara çıktı.",
+        "ABD Enerji Bakanı Chris Wright'a göre geçen hafta Hürmüz'den günde ortalama 10 milyon varil geçti; bu, savaş öncesi akışın yaklaşık üçte ikisi.",
+        "Gemi verileri geçişlerin hafta sonu günlük tek haneye indiğini gösteriyor; savaş öncesi günde 100'den fazla gemi geçiyordu.",
+        "Savaş riski sigorta primi, savaş öncesi tekne değerinin yüzde 0,25'inden yüzde 3-10'a yükseldi; 100 milyon dolarlık bir tanker için sefer başına 3-10 milyon dolar.",
+        "Körfez ülkeleri ile İran arasında Umman'da yapılması planlanan Hürmüz görüşmesi ertelendi."
+      ],
+      "entities": {
+        "kurum": [
+          "Al Jazeera",
+          "IG Group",
+          "Energy Aspects",
+          "ABD Enerji Bakanlığı"
+        ],
+        "kisi": [
+          "Chris Wright",
+          "Donald Trump",
+          "Chris Beauchamp",
+          "Christopher Haines"
+        ],
+        "sektor": [
+          "Enerji",
+          "Denizcilik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "brent",
+        "petrol-fiyati",
+        "hurmuz-bogazi",
+        "sigorta",
+        "jeopolitik-risk",
+        "enerji-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 72,
+        "impact": 85,
+        "keyword": 85,
+        "recency": 55,
+        "corroboration": 70,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "maersk",
+      "url": "https://www.maersk.com/news/articles/2026/09/14/structural-changes-ae5-ae11-ae12-me2-gemini-services",
+      "title": "Maersk ve Hapag-Lloyd dört Gemini hattını Ümit Burnu'ndan Süveyş'e geri alıyor",
+      "body": "Maersk ve Hapag-Lloyd, Gemini İş Birliği kapsamındaki dört konteyner hattının Ümit Burnu rotasından Süveyş Kanalı geçişine aktarılacağını 14 Eylül 2026'da duyurdu. Böylece bu hatlar, halihazırda Süveyş koridorunu kullanan AE15 ve AE19 hatlarına katılıyor.\n\nYeni rotalar şöyle: AE5 (Asya-Kuzey Avrupa) Qingdao, Ningbo ve Tanjung Pelepas'tan Süveyş üzerinden Londra, Bremerhaven, Hamburg, Rotterdam ve Algeciras'a uzanıyor. AE11 (Asya-Akdeniz) Şanghay, Yantian ve Tanjung Pelepas'tan Süveyş üzerinden Tanca, Valencia, Barselona, La Spezia, Cenova ve Vado Ligure'ye gidiyor. AE12 (Asya-Akdeniz) Ningbo ve Şanghay'dan Algeciras, Koper ve Rijeka'ya; ME2 (Hindistan-Avrupa) ise Ennore ve Kolombo'dan Algeciras, Rotterdam, Londra, Hamburg ve Tanca'ya bağlanıyor.\n\nBatı yönlü ilk seferler: AE11'de Antonia Maersk (635W) 19 Eylül'de, AE5'te Marchen Maersk (635W) 21 Eylül'de Tanjung Pelepas'tan; ME2'de Cornelia Maersk (638W) 24 Eylül'de Kolombo'dan hareket edecek. Doğu yönünde AE5 için Maastricht Maersk 22 Eylül'de Algeciras'tan, AE11 için Maersk Halifax 28 Eylül'de Vado Ligure'den, ME2 için Cornelia Maersk 31 Ekim'de Tanca'dan kalkacak. AE12'nin uygulama ayrıntıları daha sonra açıklanacak.\n\nŞirketler açıklamada, \"Süveyş ve Kızıldeniz üzerinden geçen rota, Asya ile Avrupa arasında müşterilere hizmet vermenin en hızlı, en sürdürülebilir ve en verimli yoludur\" ifadesini kullandı. Ancak hizmet değişikliklerinin \"Kızıldeniz bölgesinde istikrarın sürmesine ve bölgedeki çatışmalarda herhangi bir tırmanma olmamasına\" bağlı olduğu, mürettebat, gemi ve yük güvenliğinin öncelik olmaya devam ettiği vurgulandı.\n\nAkdeniz limanlarına doğrudan bağlanan AE11 ve AE12 hatlarının Süveyş'e dönmesi, Doğu Akdeniz'deki tedarik zincirleri ve Asya'dan ara malı ithal eden üreticiler açısından transit sürelerinin kısalması anlamına geliyor.",
+      "published_at": "2026-09-14T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Maersk ve Hapag-Lloyd, AE5, AE11, AE12 ve ME2 hatlarını Ümit Burnu yerine Süveyş Kanalı üzerinden çalıştırmaya başlıyor; ilk batı yönlü sefer 19 Eylül'de. Asya-Avrupa ve Hindistan-Avrupa arasında transit sürelerinin kısalması, Türk ithalatçı ve ihracatçıları için teslim sürelerinde ve navlunda rahatlama sinyali. Değişiklik Kızıldeniz'de istikrarın sürmesine bağlı.",
+      "key_points": [
+        "AE5 (Asya-Kuzey Avrupa), AE11 ve AE12 (Asya-Akdeniz) ile ME2 (Hindistan-Avrupa) hatları Süveyş'e geçiyor.",
+        "İlk batı yönlü seferler: Antonia Maersk 19 Eylül, Marchen Maersk 21 Eylül (Tanjung Pelepas), Cornelia Maersk 24 Eylül (Kolombo).",
+        "AE11 rotasında Valencia, Barselona, La Spezia, Cenova ve Vado Ligure gibi Akdeniz limanları yer alıyor.",
+        "Şirketler, değişikliğin Kızıldeniz'de istikrarın sürmesine ve çatışmaların tırmanmamasına bağlı olduğunu vurguladı."
+      ],
+      "entities": {
+        "kurum": [
+          "Maersk",
+          "Hapag-Lloyd",
+          "Gemini Cooperation"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Denizcilik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "lojistik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "suveys-kanali",
+        "kizildeniz",
+        "konteyner",
+        "navlun",
+        "tedarik-zinciri",
+        "lojistik"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 75,
+        "keyword": 80,
+        "recency": 55,
+        "corroboration": 75,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "rio-times",
+      "url": "https://www.riotimesonline.com/copper-markets-latam-monday-september-14-2026/",
+      "title": "Bakır, tarife planının askıya alınmasıyla Haziran'dan bu yana ilk haftalık kaybını yaşadı",
+      "body": "Bakır, 11 Eylül 2026 Cuma gününü Londra Metal Borsası'nda (LME) ton başına 14.233 dolardan kapatarak Haziran'dan bu yana ilk haftalık kaybını yaşadı. Yüzde 1,2'lik haftalık düşüş, on haftalık kesintisiz yükseliş serisini sona erdirdi ve hafta içinde görülen rekorun ardından geldi.\n\nDönüşü, Reuters'ın perşembe günü Washington'ın rafine bakır ithalatına tarife uygulama planını rafa kaldırdığını bildirmesi tetikledi. Yetkililerin imalat maliyetleri üzerindeki etkiden endişe ettiği belirtildi. Halihazırda Ağustos 2025'ten bu yana yalnızca boru ve tel gibi yarı mamul bakır ürünlerine yüzde 50 tarife uygulanıyor. Askıya alınan öneri, Ocak 2027'den itibaren rafine bakıra yüzde 15, Ocak 2028'den itibaren yüzde 30 vergi öngörüyordu.\n\nMadencilik hisseleri metalden daha sert tepki verdi: Southern Copper perşembe günü yüzde 7,2, Freeport-McMoRan yüzde 6,6 düştü; her ikisi de cuma günü yatay seyretti.\n\nŞili 2025'te 5,3 milyon ton ile küresel üretimin yaklaşık yüzde 23'ünü sağladı. Demokratik Kongo Cumhuriyeti 3,2 milyon ton (yüzde 13,9) ve Peru 2,7 milyon ton (yüzde 11,7) ile izliyor. Şili'nin payı 2015'teki yaklaşık yüzde 30'dan jeolojik nedenlerle geriledi.\n\nUzun vadede daha önemli sorun cevher kalitesindeki bozulma. Dünyanın en büyük bakır madeni Escondida'da işlenen kayadaki bakır oranı yüzde 1,02'den yüzde 0,90'a indi; BHP gelecek yıl bu oranın yaklaşık yüzde 0,70'e düşmesini bekliyor. Codelco'nun amiral gemisi El Teniente, 2026'nın ilk beş ayında bir önceki yılın aynı dönemine göre yüzde 27 daha az üretti.\n\nHaftanın gündeminde Çin'in Ağustos sanayi üretimi verisi ve Fed'in faiz kararı vardı; piyasalar yüzde 4,00'e faiz artışı olasılığını yaklaşık yüzde 90 olarak fiyatlıyordu. Analize göre tarife haberleri kısa vadeli oynaklık yaratırken, düşen cevher tenörü arz istikrarı için daha kalıcı bir risk oluşturuyor.",
+      "published_at": "2026-09-14T12:00:00+03:00",
+      "language": "tr",
+      "summary": "LME'de bakır 11 Eylül'ü ton başına 14.233 dolardan kapatarak on haftalık yükseliş serisini yüzde 1,2'lik kayıpla sonlandırdı; tetikleyici, ABD'nin rafine bakır ithalatına tarife planını rafa kaldırdığı haberi oldu. Uzun vadede asıl risk, Escondida gibi büyük madenlerde düşen cevher tenörü. Bakır kullanan kablo, elektrik ekipmanı ve makine üreticileri için maliyet baskısı yapısal olarak sürüyor.",
+      "key_points": [
+        "LME bakır 11 Eylül'de ton başına 14.233 dolardan kapandı; haftalık kayıp yüzde 1,2.",
+        "Reuters, Washington'ın rafine bakır ithalatına yüzde 15 (2027) ve yüzde 30 (2028) tarife planını rafa kaldırdığını bildirdi.",
+        "Southern Copper yüzde 7,2, Freeport-McMoRan yüzde 6,6 düştü.",
+        "Escondida'da cevher tenörü yüzde 1,02'den 0,90'a indi; BHP gelecek yıl yüzde 0,70 bekliyor.",
+        "El Teniente 2026'nın ilk beş ayında bir önceki yıla göre yüzde 27 daha az üretti."
+      ],
+      "entities": {
+        "kurum": [
+          "LME",
+          "Codelco",
+          "BHP",
+          "Southern Copper",
+          "Freeport-McMoRan"
+        ],
+        "kisi": [
+          "Diego Fernández"
+        ],
+        "sektor": [
+          "Madencilik",
+          "Metal"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "emtia",
+      "sentiment": "NOTR",
+      "tags": [
+        "bakir-fiyati",
+        "lme",
+        "tarife",
+        "hammadde-arzi",
+        "madencilik"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 55,
+        "corroboration": 55,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "the-loadstar",
+      "url": "https://theloadstar.com/gemini-steps-up-return-to-suez-with-four-more-asia-europe-services/",
+      "title": "Gemini dört Asya-Avrupa hattıyla Süveyş'e dönüşünü hızlandırıyor",
+      "body": "The Loadstar'ın 14 Eylül 2026 tarihli haberine göre Gemini İş Birliği ortakları Maersk ve Hapag-Lloyd, dört Asya-Avrupa hattını daha Ümit Burnu yerine Süveyş Kanalı üzerinden çalıştıracak. Kapsamdaki hatlar Asya-Kuzey Avrupa AE5, Asya-Akdeniz AE11 ve AE12 ile Hindistan-Avrupa ME2. Bu hatlar, Süveyş'i zaten kullanan AE15 ve AE19'a ekleniyor.\n\nTaşıyıcılar, Süveyş ve Kızıldeniz koridorunun \"müşterilere hizmet vermenin en hızlı, en sürdürülebilir ve en verimli yolu\" olduğunu belirtti. İlk seferler de açıklandı: 15.150 TEU'luk Antonia Maersk AE11'de 19 Eylül'de, 18.000 TEU'luk Marchen Maersk AE5'te 21 Eylül'de Tanjung Pelepas'tan; 8.650 TEU'luk Cornelia Maersk ME2'de 24 Eylül'de Kolombo'dan hareket edecek.\n\nSea-Intelligence Consulting verilerine göre batı yönlü Asya-Avrupa ana yük (headhaul) kapasitesinin yüzde 18'i Kızıldeniz-Süveyş rotasına döndü; analistler bunu bir \"normalleşme\" olarak tanımlıyor. Dönüş yönündeki (backhaul) oran yüzde 38 ile daha yüksek; taşıyıcılar son tayfunlar nedeniyle liman sıkışıklığı yaşayan Asya ihracat pazarlarına gemileri yeniden konumlandırıyor. Genel olarak Kızıldeniz krizi Eylül ortası itibarıyla yaklaşık yüzde 27 oranında normalleşmiş durumda.\n\nAncak ciddi güvenlik riskleri sürüyor. Husilerin Yemen'deki son askerî ilerleyişleri, uluslararası gemiciliğe geçiş izni verildiğine dair mevcut açıklamalara rağmen belirsizlik yaratıyor. Sea-Intelligence, durumun \"gemiciliğin başında sallanan Demokles'in kılıcına\" benzediği uyarısında bulunuyor; çatışmalar yeniden başlarsa koşullar hızla değişebilir.\n\nMaersk ve Hapag-Lloyd, Orta Doğu'daki güvenlik durumunu \"çok yakından izlemeye\" devam edeceklerini ve mürettebat, gemi ile müşteri yüklerinin güvenliğinin en yüksek öncelik olduğunu vurguladı. Gelecekteki hizmet değişiklikleri Kızıldeniz'de istikrarın sürmesine bağlı olacak.",
+      "published_at": "2026-09-14T15:00:00+03:00",
+      "language": "tr",
+      "summary": "Sea-Intelligence verilerine göre batı yönlü Asya-Avrupa ana yük kapasitesinin yüzde 18'i Kızıldeniz-Süveyş rotasına döndü; Kızıldeniz krizi yaklaşık yüzde 27 oranında normalleşti. Maersk ve Hapag-Lloyd dört hattı daha Süveyş'e aktarıyor. Sanayici için navlun ve teslim sürelerinde iyileşme işareti var, ancak Husi riski nedeniyle ani geri dönüş ihtimali masada.",
+      "key_points": [
+        "Maersk ve Hapag-Lloyd; AE5, AE11, AE12 ve ME2 hatlarını Süveyş'e aktarıyor.",
+        "Sea-Intelligence: Batı yönlü Asya-Avrupa kapasitesinin yüzde 18'i, dönüş yönündeki kapasitenin yüzde 38'i Süveyş'e döndü.",
+        "Kızıldeniz krizi Eylül ortası itibarıyla yaklaşık yüzde 27 normalleşmiş durumda.",
+        "Sea-Intelligence, Husi ilerleyişini sektör için 'Demokles'in kılıcı' olarak nitelendiriyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Maersk",
+          "Hapag-Lloyd",
+          "Sea-Intelligence Consulting"
+        ],
+        "kisi": [
+          "Gavin van Marle"
+        ],
+        "sektor": [
+          "Lojistik",
+          "Denizcilik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "lojistik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "suveys-kanali",
+        "kizildeniz",
+        "konteyner",
+        "konteyner-navlunu",
+        "tedarik-zinciri"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 70,
+        "keyword": 75,
+        "recency": 55,
+        "corroboration": 80,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "wto",
+      "url": "https://www.wto.org/english/news_e/news26_e/wtr_15sep26_483_e.htm",
+      "title": "DTÖ Dünya Ticaret Raporu: Reform büyümeyi artırır, hareketsizlik küresel GSYH'nin yüzde 10'una mal olabilir",
+      "body": "Dünya Ticaret Örgütü (DTÖ), \"Dünya Ticaret Sistemi İçin Kritik Bir Eşik\" başlıklı 2026 Dünya Ticaret Raporu'nu 15 Eylül 2026'da yayımladı. Rapor, küresel ticaret sisteminin geleceğine ilişkin üç senaryo ve bunların ekonomik sonuçlarını ortaya koyuyor.\n\nGüçlendirilmiş çok taraflı iş birliği senaryosunda küresel GSYH'nin 2050'ye kadar yaklaşık yüzde 2,9 (kabaca 3 trilyon dolar), küresel ihracatın ise yüzde 17,9 artabileceği hesaplanıyor. Bu senaryo; genişletilmiş pazar açılımı taahhütleri, dijital ticaret ve hizmetlerde yeni kurallar, daha geniş üyelik ve ticari açıklık ile güvenlik arasında denge kuran bir çerçeveyle güçlendirilmiş DTÖ kurallarını öngörüyor. En az gelişmiş ülkelerde GSYH artışı yüzde 7,7'ye ulaşırken, yüksek gelirli ekonomiler hizmet ticaret maliyetlerindeki düşüş sayesinde 2050 fiyatlarıyla yaklaşık 1,7 trilyon dolar kazanç elde edebilir.\n\nİki olumsuz senaryo ise çok taraflı iş birliğinden vazgeçmenin bedelini gösteriyor. Jeopolitik bloklar etrafında örgütlenen \"bölünmüş dünya\"da GSYH yüzde 5,1, ihracat yüzde 18,6 geriliyor. Çok taraflı iş birliğinin yerini ikili serbest ticaret anlaşmaları ağının aldığı senaryoda ise düşüş daha sert: GSYH yüzde 6,9, ihracat yüzde 26,9. Bu da seçilen senaryoya göre küresel GSYH'nin yüzde 5 ila 10'u arasında bir fırsat maliyeti anlamına geliyor.\n\nDTÖ Genel Direktörü Ngozi Okonjo-Iweala, \"çok taraflı ticaret sistemi son 80 yılda muazzam faydalar sağladı\" dedi. Küresel mal ticaretinin yaklaşık yüzde 72'si hâlâ DTÖ en çok kayrılan ülke koşullarında gerçekleşiyor. Rapor, iş birliğini zorlaştıran dört gelişmeye dikkat çekiyor: ekonomik güç dengesindeki kaymalar, sanayi politikası gibi artan devlet müdahaleleri, dijitalleşme ve küresel değer zincirlerinin yol açtığı ticaret değişimleri ile yükselen jeopolitik gerilimler. Ticaret engellerinin azaltılması seksen yılda küresel ticaretin yaklaşık 50 kat büyümesini sağladı.\n\nOkonjo-Iweala, \"çok taraflı ticaret sisteminin faydalarını korumak, statükoyu korumak anlamına gelmiyor\" diyerek üyelerin kurallara dayalı iş birliğini daha çok kutuplu bir ekonomiye uyarlaması gerektiğini vurguladı. Rapor, Baş Ekonomist Robert Staiger'in sunumuyla DTÖ Kamu Forumu'nda tanıtıldı.",
+      "published_at": "2026-09-15T12:00:00+03:00",
+      "language": "tr",
+      "summary": "DTÖ'nün 2026 Dünya Ticaret Raporu, güçlendirilmiş çok taraflı sistemin 2050'ye kadar küresel GSYH'yi yaklaşık yüzde 2,9 (3 trilyon dolar) artırabileceğini, blok ya da ikili STA dünyasının ise GSYH'yi yüzde 5,1-6,9 düşürebileceğini hesaplıyor. Küresel mal ticaretinin yaklaşık yüzde 72'si hâlâ DTÖ en çok kayrılan ülke koşullarında yapılıyor. İhracata dayalı Türk sanayisi için kurallara dayalı sistemin aşınması doğrudan pazar erişimi riski demek.",
+      "key_points": [
+        "Güçlendirilmiş çok taraflı senaryoda 2050'ye kadar küresel GSYH yaklaşık yüzde 2,9 (3 trilyon dolar), ihracat yüzde 17,9 artabilir.",
+        "Jeopolitik bloklara bölünmüş dünyada GSYH yüzde 5,1, ihracat yüzde 18,6 düşer.",
+        "İkili STA'lara dayalı dünyada kayıp daha derin: GSYH yüzde 6,9, ihracat yüzde 26,9 azalır.",
+        "Küresel mal ticaretinin yaklaşık yüzde 72'si DTÖ en çok kayrılan ülke (MFN) koşullarında yapılıyor.",
+        "Rapor 15 Eylül'de DTÖ Kamu Forumu'nda açıklandı."
+      ],
+      "entities": {
+        "kurum": [
+          "DTÖ"
+        ],
+        "kisi": [
+          "Ngozi Okonjo-Iweala",
+          "Robert Staiger"
+        ],
+        "sektor": [
+          "Dış Ticaret"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "wto",
+        "dis-ticaret",
+        "ticaret-politikasi",
+        "serbest-ticaret-anlasmasi",
+        "korumacilik"
+      ],
+      "importance_factors": {
+        "authority": 92,
+        "impact": 70,
+        "keyword": 75,
+        "recency": 60,
+        "corroboration": 50,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "wto",
+      "url": "https://www.wto.org/english/news_e/news26_e/pf26_15sep26_487_e.htm",
+      "title": "DTÖ Kamu Forumu 2026: Hizmet ticareti 2026'da yüzde 4,8 büyüyerek mal ticaretini geride bırakacak",
+      "body": "Dünya Ticaret Örgütü'nün (DTÖ) 2026 Kamu Forumu, 15 Eylül'de Cenevre'de \"Geleceğe Güç Vermek\" temasıyla açıldı. İş dünyası, hükümetler, sivil toplum, akademi ve uluslararası kuruluşlardan 4.600'ü aşkın katılımcının yer aldığı üç günlük etkinlik, 113 oturumda rekor sayıda 540 konuşmacıyı ağırladı ve örgütün en büyük yıllık etkinliği oldu.\n\nForumun odağında hizmet ticaretinin ekonomik büyümedeki rolü vardı. Hizmetler küresel GSYH'nin üçte ikisinden fazlasını oluşturuyor ve diğer tüm sektörlerden daha fazla kişiye istihdam sağlıyor. Hizmet ticaretinin 2026'da yüzde 4,8 büyüyerek mal ticaretini belirgin biçimde geride bırakması bekleniyor.\n\nAçılış panelinde teknolojik yenilik, jeopolitik gelişmeler, iklim ve yeni iş modellerinin gelecekteki ticaret sistemini nasıl şekillendireceği tartışıldı. DTÖ Genel Direktörü Ngozi Okonjo-Iweala, dünya ticaretinin yüzde 70'inin DTÖ en çok kayrılan ülke kurallarıyla yürüdüğünü ancak reformun gerekli olduğunu vurguladı: \"Küresel ticaret kuralları sınanıyor, küresel ticaret daha önce hiç görmediği sorunlar yaşıyor.\" Okonjo-Iweala, \"işlemeyeni düzeltelim\" yaklaşımına geçilmesi çağrısında bulundu.\n\nBüyükelçi Guilherme Patriota, sekiz on yılda geliştirilen DTÖ anlaşmalarının küresel ticaretin ve ulusal mevzuatların temeli olmaya devam ettiğini, ancak sisteme \"bir miktar esneklik\" kazandırılması ve kural kitabının güncellenmesi gerektiğini söyledi. Uluslararası Ticaret Odası (ICC) Genel Sekreteri John Denton, iki yıllık ticari belirsizliğin iş dünyasına yaklaşık 600 milyar dolarlık fırsat kaybına yol açtığını belirterek \"ilerleyebilecek olanların ilerlemesine izin verelim\" dedi.\n\nPatricia Fuller ise tarifelerin ve ticaret engellerinin, idari yüklerle baş etmekte zorlanan küçük işletmeleri orantısız biçimde olumsuz etkilediğine dikkat çekti. Forumda DTÖ'nün 2026 Dünya Ticaret Raporu \"Dünya Ticaret Sistemi İçin Kritik Bir Eşik\" de tanıtıldı.",
+      "published_at": "2026-09-15T15:00:00+03:00",
+      "language": "tr",
+      "summary": "DTÖ'nün Cenevre'deki Kamu Forumu 4.600'den fazla katılımcıyla açıldı; hizmet ticaretinin 2026'da yüzde 4,8 büyüyerek mal ticaretini belirgin biçimde geçmesi bekleniyor. ICC'ye göre iki yıllık ticari belirsizlik iş dünyasına yaklaşık 600 milyar dolarlık fırsat kaybı yaşattı. Sanayiciler için mesaj: tarife ve idari engeller özellikle KOBİ'leri vuruyor; hizmet ve dijital ticaret yeni büyüme alanı.",
+      "key_points": [
+        "Forum 15 Eylül'de 'Geleceğe Güç Vermek' temasıyla açıldı; 4.600'den fazla katılımcı, 540 konuşmacı, 113 oturum.",
+        "Hizmetler küresel GSYH'nin üçte ikisinden fazlasını oluşturuyor; hizmet ticaretinin 2026'da yüzde 4,8 büyümesi bekleniyor.",
+        "Okonjo-Iweala: Dünya ticaretinin yüzde 70'i DTÖ MFN kurallarıyla işliyor ama reform şart.",
+        "ICC Genel Sekreteri John Denton: İki yıllık ticari belirsizlik iş dünyasına yaklaşık 600 milyar dolarlık fırsat kaybettirdi."
+      ],
+      "entities": {
+        "kurum": [
+          "DTÖ",
+          "Uluslararası Ticaret Odası (ICC)"
+        ],
+        "kisi": [
+          "Ngozi Okonjo-Iweala",
+          "John Denton",
+          "Guilherme Patriota",
+          "Patricia Fuller"
+        ],
+        "sektor": [
+          "Hizmetler",
+          "Dış Ticaret"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "dis-ticaret",
+      "sentiment": "NOTR",
+      "tags": [
+        "wto",
+        "hizmetler",
+        "dis-ticaret",
+        "kobi",
+        "ticaret-politikasi"
+      ],
+      "importance_factors": {
+        "authority": 92,
+        "impact": 55,
+        "keyword": 65,
+        "recency": 60,
+        "corroboration": 45,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "gcaptain",
+      "url": "https://gcaptain.com/container-shipping-returns-to-suez-despite-rising-red-sea-risks/",
+      "title": "Kızıldeniz riskleri artsa da konteyner taşımacılığı Süveyş'e dönüyor",
+      "body": "Kızıldeniz'deki güvenlik kaygıları artmasına rağmen konteyner taşımacılığının Süveyş Kanalı'na dönüşü hızlanıyor. gCaptain'in 16 Eylül 2026 tarihli haberine göre 24.188 TEU kapasiteli OOCL Portugal, aynı gün kanaldan geçerek COSCO SHIPPING Lines'ın Kızıldeniz krizi başladığından bu yana ilk güney yönlü geçişini gerçekleştirdi. Yaklaşık 400 metre uzunluğundaki gemi, Ocean Alliance'ın Uzak Doğu-Kuzeybatı Avrupa arasındaki NEU2 hattında çalışıyor.\n\nSüveyş Kanalı İdaresi verileri güçlü bir toparlanmaya işaret ediyor: kanaldan geçen konteyner gemisi net tonajı 2026'nın ilk sekiz ayında 72,1 milyon tona ulaştı; bu, 2025'in aynı dönemindeki 46,7 milyon tona göre yüzde 54,2 artış demek. CMA CGM, Maersk, MSC, Hapag-Lloyd ve COSCO gibi büyük taşıyıcılar değişen ölçülerde rotaya geri döndü.\n\nToparlanma bu hafta Maersk ve Hapag-Lloyd'un dört Gemini hattını (AE5, AE11, AE12 ve ME2) Ümit Burnu'ndan Süveyş'e aktaracaklarını açıklamasıyla hız kazandı. Bu hatlar, halihazırda kanalı kullanan AE15 ve AE19'a ekleniyor.\n\nEkonomik gerekçe güçlü: Süveyş rotası, Güney Afrika üzerinden dolaşmaya kıyasla Asya-Avrupa seferlerinden binlerce mil kısaltıyor; transit süresini, yakıt tüketimini ve gereken gemi sayısını azaltıyor. Ancak güvenlik tablosu karmaşık. İran'a yakın Husi güçleri bu ay Yemen'in Kızıldeniz kıyısında hızla toprak kazanarak Muha'yı ele geçirdi ve Kızıldeniz-Süveyş trafiğinin geçmek zorunda olduğu Babülmendep Boğazı yakınındaki adalara doğru ilerledi. Husiler ilan ettikleri deniz ablukasını Suudi gemileriyle sınırladıklarını ve ABD ile ateşkese uyacaklarını, Amerikan ya da İsrail gemilerini hedef almayacaklarını belirtiyor.\n\nBüyük taşıyıcılar koşullar bozulursa rotayı yeniden değiştirme esnekliğini koruyor. Maersk, \"mürettebatın, gemilerin ve müşteri yüklerinin güvenliği en yüksek önceliğimiz olmaya devam ediyor\" açıklamasını yaptı. OOCL Portugal'ın geçtiği gün Süveyş Kanalı İdaresi kayıtlarına göre toplam 2,3 milyon ton net tonajlı 39 gemi kanaldan geçti.",
+      "published_at": "2026-09-16T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Süveyş Kanalı'ndan geçen konteyner gemisi net tonajı 2026'nın ilk sekiz ayında yüzde 54,2 artışla 72,1 milyon tona ulaştı; COSCO kriz başladığından bu yana ilk güney yönlü geçişini yaptı. Husilerin Babülmendep yakınındaki ilerleyişi ise riski canlı tutuyor. Asya'dan girdi ithal eden Türk üreticiler için daha kısa transit süreleri olumlu, ancak rota kararlarının hızla tersine dönebileceği hesaba katılmalı.",
+      "key_points": [
+        "24.188 TEU'luk OOCL Portugal, 16 Eylül'de COSCO'nun kriz sonrası ilk güney yönlü Süveyş geçişini yaptı.",
+        "Süveyş'ten geçen konteyner gemisi net tonajı Ocak-Ağustos 2026'da yüzde 54,2 artışla 72,1 milyon ton oldu.",
+        "CMA CGM, Maersk, MSC, Hapag-Lloyd ve COSCO farklı ölçülerde Süveyş'e döndü.",
+        "Husiler bu ay Muha'yı ele geçirip Babülmendep yakınındaki adalara ilerledi; ablukayı Suudi gemileriyle sınırladıklarını açıkladılar."
+      ],
+      "entities": {
+        "kurum": [
+          "Süveyş Kanalı İdaresi",
+          "COSCO SHIPPING Lines",
+          "Maersk",
+          "Hapag-Lloyd",
+          "CMA CGM",
+          "MSC"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Denizcilik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "lojistik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "suveys-kanali",
+        "kizildeniz",
+        "bab-el-mendep",
+        "konteyner",
+        "gemi-trafigi"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 65,
+        "corroboration": 80,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "al-jazeera",
+      "url": "https://www.aljazeera.com/news/2026/9/17/from-yanbu-to-sohar-tracking-saudi-arabias-alternative-oil-routes",
+      "title": "Yanbu'dan Sohar'a: Suudi Arabistan'ın alternatif petrol rotaları",
+      "body": "Suudi Arabistan'ın petrol ihracat kapasitesi, kritik Doğu-Batı boru hattına yönelik insansız hava aracı saldırılarının ardından ciddi biçimde sarsıldı. Al Jazeera'nın 17 Eylül 2026 tarihli analizine göre günde yaklaşık 4-5 milyon varil taşıyan hat durdu. 1981'de kriz dönemlerinde Hürmüz Boğazı'nı devre dışı bırakmak için inşa edilen 1.200 kilometrelik boru hattı, doğudaki petrol sahalarını Kızıldeniz'deki Yanbu limanına bağlıyor. Onarım tahminleri üç ila beş hafta arasında değişiyor.\n\nToplam Suudi ham petrol yüklemeleri Ocak-Şubat'taki günlük 7,5 milyon varilden Eylül ortasında yaklaşık 2,1 milyon varile, yani yüzde 70'in üzerinde düştü. Birincil alternatif olan Hürmüz Boğazı, 28 Şubat'ta başlayan ABD-İsrail'in İran'a karşı savaşından bu yana büyük ölçüde kapalı. Suudi Arabistan bu rotadan ihracatı, takip sistemlerini kapatan \"karanlık gemiler\" ve Umman'ın Sohar açıklarında gemiden gemiye aktarmalarla artırıyor; ancak bu yöntemler navlun ve sigorta maliyetlerini yükseltiyor ve hacimler savaş öncesinin çok altında kalıyor.\n\nBabülmendep üzerinden güney Kızıldeniz rotası, İran destekli Husilerin Eylül'de Mayyun Adası dahil stratejik noktaları ele geçirmesiyle kapandı. Süveyş Kanalı üzerinden Avrupa'ya giden kuzey rotası ise Mısır terminallerinde kısmi boşaltma ya da uzun seferler gerektiriyor; bu da Hürmüz rotasına kıyasla yaklaşık bir ay ek süre ve önemli ek maliyet demek.\n\nRystad Energy'den Choudhary, boru hattının haftalar içinde yüzde 40-60 kapasiteyle, günde 2,5-3 milyon varil ile yeniden başlamasını, ancak ihracata yalnızca günde 0,5-1 milyon varil kalmasını bekliyor: \"Hürmüz Boğazı ihracatının ayın ikinci yarısında daha da artmasını bekliyoruz.\"\n\nKüresel etkiler büyük. Brent varil başına 105 doların üzerine çıktı ve Suudi ham petrolüne bağımlı Avrupa ve Asya rafinerileri baskı altında. Başlıca alıcılar Çin (yüzde 22), Güney Kore (yüzde 14), Japonya (yüzde 13) ve Hindistan (yüzde 10). Avrupa rafinerileri Kuzey Denizi ve Amerika'dan alternatif ararken, Asyalı rafineriler Suudi Arabistan'ın kendine özgü yüksek kükürtlü ham petrol türlerini ikame etmekte zorlanıyor. Suudi ham petrol satışları 2025'te 606,5 milyar riyal (162 milyar dolar) ile devlet gelirlerinin yarısından fazlasını oluşturmuştu; UBS Research 2026 bütçe açığının hedeflenen yüzde 3,3 yerine GSYH'nin yüzde 5'ine ulaşmasını öngörüyor.",
+      "published_at": "2026-09-17T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Doğu-Batı boru hattına yönelik saldırılar sonrası Suudi ham petrol yüklemeleri Ocak-Şubat'taki günlük 7,5 milyon varilden Eylül ortasında yaklaşık 2,1 milyon varile, yani yüzde 70'ten fazla düştü. Boru hattının onarımı 3-5 hafta sürebilir; Babülmendep rotası da Husiler nedeniyle kapalı. Avrupa ve Asya rafinerileri alternatif ham petrol ararken sanayicinin akaryakıt ve petrokimya girdisi maliyetleri yüksek kalacak.",
+      "key_points": [
+        "Doğu-Batı boru hattı (günde 4-5 milyon varil) saldırılar nedeniyle durdu; onarım tahmini 3-5 hafta.",
+        "Suudi ham petrol yüklemeleri günde 7,5 milyon varilden yaklaşık 2,1 milyon varile indi.",
+        "Rystad Energy: Boru hattı haftalar içinde yüzde 40-60 kapasiteyle yeniden başlayabilir, ihracata yalnızca günde 0,5-1 milyon varil kalır.",
+        "Babülmendep rotası Husilerin Mayyun Adası dahil stratejik noktaları ele geçirmesiyle fiilen kapandı.",
+        "UBS, Suudi bütçe açığının 2026'da GSYH'nin yüzde 5'ine ulaşmasını bekliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Saudi Aramco",
+          "Rystad Energy",
+          "UBS Research"
+        ],
+        "kisi": [
+          "Hanna Duggal"
+        ],
+        "sektor": [
+          "Enerji",
+          "Rafineri",
+          "Denizcilik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "suudi-arabistan",
+        "boru-hatti",
+        "petrol",
+        "hurmuz-bogazi",
+        "bab-el-mendep",
+        "brent"
+      ],
+      "importance_factors": {
+        "authority": 72,
+        "impact": 80,
+        "keyword": 80,
+        "recency": 65,
+        "corroboration": 75,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "daily-cargo-news",
+      "url": "https://www.thedcn.com.au/news/world-container-index-17-september-2026",
+      "title": "Dünya Konteyner Endeksi – 17 Eylül 2026: WCI yüzde 1 artışla 4.500 dolar",
+      "body": "Drewry'nin Dünya Konteyner Endeksi (WCI), 17 Eylül 2026 itibarıyla yüzde 1 artışla 40 ft konteyner başına 4.500 dolara yükseldi. Artışın ana kaynağı Transpasifik hatlar oldu: Şanghay-Los Angeles navlunu yüzde 5 artışla 7.712 dolara, Şanghay-New York navlunu yüzde 7 artışla 10.394 dolara çıktı.\n\nTaşıyıcılar, Çin'deki Altın Hafta tatili öncesinde kapasiteyi boş seferler (blank sailing) aracılığıyla yönetiyor. Bir sonraki hafta için dokuz boş sefer ilan edildi; bu sayı bir önceki hafta sekizdi. Drewry, \"Altın Hafta öncesi talep ve taşıyıcıların süren kapasite yönetimi nedeniyle gelecek hafta navlunların hafifçe yükselmesini bekliyoruz\" değerlendirmesinde bulundu.\n\nAsya-Avrupa hatlarında ise zayıflama sürdü. Şanghay-Cenova navlunu yüzde 5 düşüşle 4.016 dolara, Şanghay-Rotterdam navlunu yüzde 9 düşüşle 3.626 dolara geriledi. Liman sıkışıklığı da arttı; Şanghay'daki bekleme süreleri bir hafta içinde 65 saatten 78 saate çıktı.\n\nPiyasa birden fazla belirsizlik kaynağıyla karşı karşıya: Kızıldeniz'deki güvenlik riskleri Süveyş hizmetlerinin yeniden başlamasını yavaşlatabilir, Alman limanlarındaki grevler Kuzey Avrupa operasyonlarını aksatabilir; Asya'daki sıkışıklık ve Altın Hafta öncesi talep de fiyatlamayı etkileyecek.\n\nAkdeniz yönlü navlunlardaki düşüş, Asya'dan ara malı ve hammadde ithal eden üreticiler açısından maliyet baskısının bir miktar hafiflediğine işaret ediyor.",
+      "published_at": "2026-09-18T09:00:00+03:00",
+      "language": "tr",
+      "summary": "Drewry WCI, Transpasifik hatlardaki artışla yüzde 1 yükselerek 40 ft konteyner başına 4.500 dolara çıktı; Asya-Avrupa'da ise Şanghay-Cenova yüzde 5, Şanghay-Rotterdam yüzde 9 düştü. Akdeniz'e yönelik navlunların gerilemesi Asya'dan ithal girdi kullanan Türk sanayicisi için olumlu; ancak Kızıldeniz riski ve Alman liman grevleri belirsizlik yaratıyor.",
+      "key_points": [
+        "WCI yüzde 1 artışla 40 ft konteyner başına 4.500 dolar oldu.",
+        "Şanghay-Los Angeles yüzde 5 artışla 7.712 dolar, Şanghay-New York yüzde 7 artışla 10.394 dolar.",
+        "Şanghay-Cenova yüzde 5 düşüşle 4.016 dolar, Şanghay-Rotterdam yüzde 9 düşüşle 3.626 dolar.",
+        "Şanghay'da gemi bekleme süreleri 65 saatten 78 saate çıktı; gelecek hafta için 9 boş sefer ilan edildi."
+      ],
+      "entities": {
+        "kurum": [
+          "Drewry"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Denizcilik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "lojistik",
+      "sentiment": "NOTR",
+      "tags": [
+        "drewry",
+        "konteyner-navlunu",
+        "navlun",
+        "transpasifik",
+        "lojistik"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 65,
+        "keyword": 85,
+        "recency": 70,
+        "corroboration": 60,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "eurometal",
+      "url": "https://eurometal.net/eu-steel-industry-calls-for-further-work-as-lawmakers-widen-cbam-scope/",
+      "title": "AB milletvekilleri SKDM kapsamını genişletirken çelik sektörü daha fazlasını istiyor",
+      "body": "Avrupa Parlamentosu, Sınırda Karbon Düzenleme Mekanizması'nın (SKDM/CBAM) kapsamını genişleten düzenlemeyi 15 Eylül 2026'da 464 kabul, 50 ret ve 159 çekimser oyla onayladı. Eurometal'in 18 Eylül tarihli haberine göre genişleme, bağlantı elemanları, tel, yaylar ve ev eşyaları gibi aşağı akış çelik ve alüminyum ürünlerini kapsıyor. Amaç, çelik içeren ithal ürünlerin Avrupalı üreticilerin katlandığı karbon maliyetine eşdeğer bir yük taşımadan AB pazarına girmesiyle ortaya çıkan karbon kaçağını önlemek.\n\nAncak Avrupa çelik sektörünün temsilcileri adımı yetersiz buluyor. Eurometal Başkanı Alexander M. Julius, \"Bugünkü oylama doğru yönde bir adım, ancak Avrupa sanayisi için henüz eşit rekabet ortamı sağlamıyor\" dedi. Julius, \"önerilen kapsamın hâlâ eksik, uygulamanın çok yavaş olduğunu ve karbon maliyeti taşıyan AB ihracatçılarının küresel rekabetine yönelik bir çözüm bulunmadığını\" vurguladı. Ayrıca \"SKDM tek başına, daha yüksek çelik fiyatları ve düzenleyici yükler nedeniyle Avrupalı üreticilerin karşılaştığı geniş maliyet dezavantajını telafi edemez\" diye ekledi. Eurometal, SKDM'nin tüm çelik ve alüminyum yoğun ürünlere hızla genişletilmesini ve AB ihracatçılarına daha fazla destek verilmesini talep ediyor.\n\nAvrupa Çelik Birliği (Eurofer) genişlemeyi desteklemekle birlikte daha güçlü dolanma karşıtı kurallar istedi. Genel Direktör Axel Eggert, \"Avrupa'nın çelik üreticileri daha temiz çelik üretmek için milyarlarca yatırım yapıyor, ancak eşit rekabet ortamı olmadan bu dönüşümü gerçekleştiremezler\" dedi. Alman çelik birliği Wirtschaftsvereinigung Stahl da Avrupa karbon maliyetini taşıyan AB ihracatçılarının korunması ve Parlamento, Komisyon ile Konsey arasında hızlı uygulama koordinasyonu çağrısında bulundu.\n\nÇelik fiyatları 2026'da SKDM'nin uygulamaya girmesi ve korunma önleminin revizyonuyla belirgin biçimde yükseldi. Platts, Kuzey Avrupa'da yerli sıcak haddelenmiş ruloyu (HRC) Ruhr teslim ton başına 730 euro, Güney Avrupa'da İtalya teslim 725 euro olarak değerlendirdi; bu, yıl başından bu yana 110 euroluk artış demek. İthal HRC ise Kuzey Avrupa'da Antwerp CIF 585 euro, Güney Avrupa'da 580 euro ile yıl başına göre 85 euro yukarıda.",
+      "published_at": "2026-09-18T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Avrupa Parlamentosu 15 Eylül'de 464'e karşı 50 oyla SKDM'yi (CBAM) bağlantı elemanları, tel, yay ve ev eşyası gibi aşağı akış çelik ve alüminyum ürünlerine genişletti. Eurometal ve Eurofer adımı yetersiz buluyor. AB'ye çelik içeren mamul ihraç eden Türk metal eşya ve makine üreticileri, karbon maliyetinin artık yalnızca ham çeliğe değil nihai ürünlere de yansıyacağını hesaba katmalı.",
+      "key_points": [
+        "AP, 15 Eylül'de 464 kabul, 50 ret ve 159 çekimserle SKDM'nin aşağı akış çelik ve alüminyum ürünlerine genişletilmesini onayladı.",
+        "Kapsama bağlantı elemanları, tel, yaylar ve ev eşyaları gibi ürünler giriyor.",
+        "Eurometal Başkanı Alexander M. Julius: Kapsam eksik, uygulama yavaş, AB ihracatçılarına çözüm yok.",
+        "Platts: Kuzey Avrupa sıcak haddelenmiş rulo ton başına 730 euro (Ruhr), yıl başından bu yana 110 euro artış."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Parlamentosu",
+          "Eurometal",
+          "Eurofer",
+          "Wirtschaftsvereinigung Stahl",
+          "S&P Global Platts"
+        ],
+        "kisi": [
+          "Alexander M. Julius",
+          "Axel Eggert"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Alüminyum",
+          "Metal Eşya"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cbam",
+        "celik",
+        "aluminyum",
+        "metal-esya",
+        "ab-celik-korunma",
+        "avrupa-birligi"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 85,
+        "keyword": 90,
+        "recency": 70,
+        "corroboration": 60,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "euronews",
+      "url": "https://euronews.com/business/2026/09/19/eu-fuel-prices-hit-records-as-ecb-experts-see-diesel-margins-peak-in-october",
+      "title": "AB'de akaryakıt fiyatları rekorda; ECB uzmanları motorin marjlarının Ekim'de zirve yapmasını bekliyor",
+      "body": "Avrupa Birliği'nde akaryakıt fiyatları, Avrupa Komisyonu'nun yirmi yılı aşkın verilerine göre tüm zamanların en yüksek seviyesine ulaştı. Euronews'in 19 Eylül 2026 tarihli haberine göre 14 Eylül itibarıyla benzin litre başına ortalama 2,063 euro, motorin ise 2,159 euro ile rekor kırdı. 50 litrelik bir depoyu doldurmak benzinde yaklaşık 103, motorinde 108 euroya mal oluyor.\n\nÜye ülkeler arasında büyük farklar var: En ucuz benzin 1,34 euro ile Malta'da, en pahalısı 2,56 euro ile Danimarka'da. Motorin ise Malta'da 1,21 euro, Finlandiya'da 2,51 euro.\n\nFiyatları birden çok etken yukarı itiyor. Şubat sonunda başlayan Orta Doğu çatışması Hürmüz Boğazı'ndaki enerji akışlarını bozdu ve Brent'i çatışmanın zirvesinde yaklaşık 72 dolardan 126 doların üzerine taşıdı. Ham petrol maliyeti ile rafine ürün fiyatı arasındaki fark olan rafineri marjları da belirgin biçimde genişledi.\n\nAvrupa Merkez Bankası (ECB) uzmanları Euronews'e \"motorin marjlarının Ekim'de zirve yapmasının beklendiğini\", benzin marjlarının ise Ağustos'ta zirveye ulaştığını söyledi. Avro bölgesinde rafineri marjları halen motorinde litre başına 0,41 euro (pompa fiyatının yüzde 19'u), benzinde 0,17 euro (yüzde 8) katkı yapıyor.\n\n2026 başından bu yana ağırlıklı AB ortalaması benzin fiyatı yaklaşık yüzde 29, motorin ise yaklaşık yüzde 40 arttı. Avro bölgesinde enerji enflasyonu Temmuz'daki yüzde 10,3'ten Ağustos'ta yüzde 14,3'e yükseldi. Ham petrol, nihai pompa fiyatının dörtte birinden azını oluşturuyor; kalan kısım rafinaj maliyetleri, vergiler ve harçlardan geliyor. Özel tüketim vergisi ve KDV toplamı motorin fiyatının yaklaşık yüzde 44'ünü, benzin fiyatının yüzde 52'sini oluşturuyor.\n\nArz tarafında yeni bir darbe de geldi: Saudi Aramco, boru hattı altyapısına yönelik saldırıların ardından Avrupalı rafinerilere uzun vadeli sözleşmeler kapsamında Ekim ayı için sıfır petrol tahsisi yapılacağını bildirdi. ECB uzmanları \"enerji arzında yeniden yaşanacak bir aksamanın enerji fiyatlarını daha da yükseltebileceği\" uyarısında bulundu. Çatışmanın sona ermesi ve Hürmüz'deki akışların normalleşmesi halinde fiyatlar düşebilir; ancak Rus rafineri kapasitesindeki aksaklıklar bölgesel istikrar sağlansa bile marjları yüksek tutabilir.",
+      "published_at": "2026-09-19T08:00:00+03:00",
+      "language": "tr",
+      "summary": "AB genelinde 14 Eylül itibarıyla benzin litre başına ortalama 2,063 euro, motorin 2,159 euro ile tüm zamanların en yüksek düzeyinde; ECB uzmanları motorin rafineri marjlarının Ekim'de zirve yapmasını bekliyor. Saudi Aramco'nun Avrupa rafinerilerine Ekim için sıfır tahsis bildirmesi arzı daha da daraltıyor. Nakliye ve lojistik maliyetleri motorine bağlı olan Türk ihracatçıları için Avrupa'daki bu tablo navlun ve teslim maliyetlerine yansıyacak.",
+      "key_points": [
+        "14 Eylül itibarıyla AB ortalaması: benzin 2,063 euro/litre, motorin 2,159 euro/litre (rekor).",
+        "Yıl başından bu yana benzin yaklaşık yüzde 29, motorin yaklaşık yüzde 40 arttı.",
+        "Rafineri marjı motorinde litre başına 0,41 euro (pompa fiyatının yüzde 19'u); ECB uzmanlarına göre motorin marjları Ekim'de zirve yapacak.",
+        "Avro bölgesinde enerji enflasyonu Ağustos'ta yüzde 14,3'e çıktı (Temmuz: yüzde 10,3).",
+        "Saudi Aramco, Avrupa rafinerilerine Ekim için uzun vadeli sözleşmelerde sıfır tahsis bildirdi."
+      ],
+      "entities": {
+        "kurum": [
+          "Avrupa Merkez Bankası (ECB)",
+          "Avrupa Komisyonu",
+          "Saudi Aramco"
+        ],
+        "kisi": [
+          "Doloresz Katanich"
+        ],
+        "sektor": [
+          "Enerji",
+          "Lojistik",
+          "Rafineri"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "motorin",
+        "akaryakit",
+        "rafineri-marji",
+        "enerji-enflasyonu",
+        "ecb",
+        "avro-bolgesi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 75,
+        "keyword": 85,
+        "recency": 75,
+        "corroboration": 60,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "indexbox",
+      "url": "https://www.indexbox.io/blog/european-gas-prices-cross-eur80mwh-as-storage-lags-ahead-of-winter/",
+      "title": "Avrupa gaz fiyatları sonbaharda 80 euro/MWh'yi aştı, depolar mevsim ortalamasının altında",
+      "body": "Avrupa doğal gaz fiyatları 2026 sonbaharının başında 80 euro/MWh eşiğini aştı; bu, fiyatların bu mevsimde son üç yılda ilk kez bu seviyeye çıkması anlamına geliyor. IndexBox'ın 20 Eylül 2026 tarihli analizine göre Ekim teslimli TTF vadeli sözleşmesi 10 Eylül'de 82 euro/MWh'ye, 14 Eylül'de ise 82,52 euro/MWh'ye ulaştı. Haziran ayında ön ay TTF ortalaması 44,94 euro/MWh idi.\n\nDepolama tarafındaki tablo endişe verici. Avrupa gaz depoları 15 Eylül itibarıyla yalnızca yüzde 68,49 dolulukta; bu oran geçen yılın aynı dönemindeki yüzde 80,6'nın ve beş yıllık mevsim ortalaması olan yüzde 84'ün belirgin biçimde altında. Mevcut enjeksiyon hızıyla Avrupa'nın ısınma sezonu başlamadan yüzde 75 depolama hedefine ulaşması zor görünüyor.\n\nAnalizde öne çıkan baskı unsurları şunlar: Hürmüz Boğazı üzerinden arz kısıtları; Eylül başındaki sıcak hava dalgası sırasında güçlü Asya LNG talebi; Norveç gaz altyapısındaki bakım çalışmaları; tüccarları depolamadan caydıran dar yaz-kış fiyat farkı ve 1 Ocak 2027'de yürürlüğe girecek Rus LNG ithalatı yasağı.\n\nMorgan Stanley, kış sezonu için ortalama TTF fiyatını 85 euro/MWh olarak öngörüyor; sert soğukların Katar'dan gelecek yeni arz aksamalarıyla çakışması halinde fiyatların 100 euro/MWh'nin üzerine sıçrayabileceğini belirtiyor.\n\nAvrupa gaz fiyatlarındaki bu seyir, boru hattı gazı ve LNG ithalatına bağımlı Türkiye gibi ülkelerde de sanayi için enerji maliyetlerinin kış boyunca baskı altında kalabileceğine işaret ediyor.",
+      "published_at": "2026-09-20T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Ekim vadeli TTF 14 Eylül'de 82,52 euro/MWh'ye çıkarken AB gaz depoları 15 Eylül'de yalnızca yüzde 68,49 dolulukla beş yıllık ortalama olan yüzde 84'ün çok altında kaldı. Morgan Stanley kış ortalamasını 85 euro/MWh, soğuk kış ve Katar aksaması senaryosunda 100 euronun üzerinde görüyor. Doğal gaz ve elektrik maliyeti yüksek sanayi tesisleri için kış öncesi enerji alım ve riskten korunma stratejisini gözden geçirme zamanı.",
+      "key_points": [
+        "Ekim vadeli TTF 10 Eylül'de 82, 14 Eylül'de 82,52 euro/MWh oldu; sonbaharda 80 euronun aşılması üç yıldır ilk kez.",
+        "AB gaz depoları 15 Eylül'de yüzde 68,49 dolu; geçen yıl yüzde 80,6, beş yıllık ortalama yüzde 84.",
+        "Mevcut enjeksiyon hızıyla ısınma sezonu öncesi yüzde 75 hedefine ulaşmak zor.",
+        "Morgan Stanley kış ortalaması beklentisi 85 euro/MWh; soğuk kış ve Katar aksamasında 100 euro üzeri.",
+        "Rus LNG ithalatı yasağı 1 Ocak 2027'de yürürlüğe giriyor."
+      ],
+      "entities": {
+        "kurum": [
+          "IndexBox",
+          "Morgan Stanley",
+          "ICE"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Doğal Gaz"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "dogal-gaz",
+        "ttf-fiyati",
+        "lng",
+        "depolama",
+        "enerji-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 75,
+        "keyword": 85,
+        "recency": 75,
+        "corroboration": 55,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "climate-home-news",
+      "url": "https://www.climatechangenews.com/2026/09/21/cop31-presidency-announces-ai-pledge-as-un-climate-chief-says-big-tech-on-thin-ice/",
+      "title": "COP31 Başkanlığı Yapay Zekâ Taahhüdü'nü duyurdu; BM iklim şefi büyük teknoloji şirketlerini uyardı",
+      "body": "Türkiye'nin COP31 Başkanlığı, yapay zekânın iklim eylemi doğrultusunda nasıl \"tasarlandığı, satın alındığı, enerjiyle beslendiği, konuşlandırıldığı, ölçüldüğü ve yönetildiğine\" ilişkin siyasi bir taahhüt olan Antalya Yapay Zekâ Taahhüdü'nü açıkladı. Climate Home News'in 21 Eylül 2026 tarihli haberine göre COP31 Başkanı Murat Kurum, \"Şirketlerin enerji kullanımları konusunda şeffaf olmasını ve operasyonlarını temiz enerjiyle yürütmesini bekliyoruz\" dedi.\n\nTaahhüdün ayrıntıları Antalya'da Kasım'da yapılacak zirveden önce netleşecek; bir taslak önceden yayımlanacak, ancak temiz enerji taahhütleri ve katılım koşullarının ne olacağı henüz belirsiz. Taahhüt, yapay zekânın hızla artan enerji tüketimi üzerinde hükümet gözetimi oluşturmayı amaçlıyor.\n\nBM İklim Değişikliği Çerçeve Sözleşmesi Sekreteri Simon Stiell ise New York'ta daha sert bir dil kullandı ve yapay zekâ liderlerinin \"ince buz üzerinde\" olduğunu söyledi. Stiell, \"enerji canavarı yapay zekânın gezegeni ısıtan kirliliği artırdığını\" ve aynı zamanda hanehalkı ile işletmelerin enerji maliyetlerini yükselttiğini vurguladı. ABD'de New York'tan Teksas'a kadar pek çok toplulukta veri merkezi projelerine itiraz yükseliyor.\n\nUluslararası Enerji Ajansı (IEA), veri merkezlerinden kaynaklanan sera gazı emisyonlarının 2024-2030 arasında iki katından fazla artmasını bekliyor. On yılın sonunda bu tesislerin, beş ülke dışında dünyadaki tüm ülkelerden daha fazla elektrik tüketeceği öngörülüyor. Microsoft, OpenAI ve Meta gibi şirketler altyapılarını beslemek için büyük fosil yakıt anlaşmaları yaptı; Çin'de veri merkezi elektriğinin yaklaşık yüzde 70'i kömürden geliyor.\n\nBM Genel Sekreteri António Guterres Haziran'da yapay zekâ şirketlerini çevresel etkilerinden sorumlu tutan bir girişim başlatmış ve 2030'a kadar yenilenebilir enerjiyle çalışan veri merkezi taahhüdü çağrısında bulunmuştu. Stiell, teknoloji liderlerinden güvenilir iklim hedefleri, şeffaf enerji raporlaması ve yenilenebilir enerji kullanımı talep etti.\n\nTaahhüdün yanı sıra COP31, akıllı enerji ve yeşil sanayi gibi öncelikli sektörlerde yapay zekâ destekli temiz teknoloji pilotları geliştirecek \"Temiz Teknolojiler için Yapay Zekâ\" girişimini de duyurdu.",
+      "published_at": "2026-09-21T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Türkiye'nin COP31 Başkanlığı, yapay zekânın nasıl tasarlandığı, satın alındığı, enerjiyle beslendiği ve ölçüldüğüne dair siyasi bir 'Antalya Yapay Zekâ Taahhüdü' açıkladı ve akıllı enerji ile yeşil sanayi gibi öncelikli sektörlerde pilot projeler içeren 'Temiz Teknolojiler için Yapay Zekâ' girişimini başlattı. IEA, veri merkezi emisyonlarının 2024-2030 arasında iki katından fazla artacağını öngörüyor. Antalya'daki zirveye hazırlanan Türk sanayisi için veri merkezi ve dijitalleşme yatırımlarında temiz enerji ve şeffaflık beklentisi yükseliyor.",
+      "key_points": [
+        "COP31 Başkanı Murat Kurum: Şirketlerin enerji kullanımında şeffaf olmasını ve operasyonlarını temiz enerjiyle yürütmesini bekliyoruz.",
+        "Antalya Yapay Zekâ Taahhüdü'nün taslağı Kasım'daki zirveden önce yayımlanacak; ayrıntılar henüz belirsiz.",
+        "BM İklim Şefi Simon Stiell, yapay zekâ liderlerinin 'ince buz üzerinde' olduğunu söyledi.",
+        "IEA: Veri merkezi kaynaklı sera gazı emisyonları 2024-2030 arasında iki katından fazla artacak.",
+        "COP31, akıllı enerji ve yeşil sanayi gibi sektörlerde 'Temiz Teknolojiler için Yapay Zekâ' pilotları başlatıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "COP31 Başkanlığı",
+          "BM İklim Değişikliği Çerçeve Sözleşmesi (UNFCCC)",
+          "IEA"
+        ],
+        "kisi": [
+          "Murat Kurum",
+          "Simon Stiell",
+          "António Guterres"
+        ],
+        "sektor": [
+          "Teknoloji",
+          "Enerji"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "cop31",
+        "yapay-zeka",
+        "veri-merkezi",
+        "iklim-degisikligi",
+        "temiz-teknoloji",
+        "turkiye"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 55,
+        "keyword": 75,
+        "recency": 80,
+        "corroboration": 45,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "climate-home-news",
+      "url": "https://www.climatechangenews.com/2026/09/22/cop31-electrification-pledge-leaves-out-clean-power-commitment/",
+      "title": "COP31 elektrifikasyon taahhüdü temiz enerji şartı içermiyor",
+      "body": "COP31'in öncü elektrifikasyon girişimi, temiz enerji üretimini açıkça şart koşmadığı için eleştirilerin hedefinde. Climate Home News'in 22 Eylül 2026 tarihli haberine göre gönüllü taahhüdü imzalayan ülkeler, elektriğin küresel enerji tüketimindeki payını 1,5°C ile uyumlu yollar doğrultusunda 2035'e kadar yüzde 35'e çıkarmayı taahhüt edecek. Ancak belge, bu elektriğin nasıl üretileceğine dair bağlayıcı bir hüküm içermiyor.\n\nTaahhüt metni, elektrifikasyonun \"yenilenebilir enerjiyi yaygınlaştırma çabalarını tamamlayıcı\" olduğunu belirtse de elektrik üretim yöntemlerinin \"ulusal koşullara göre değişebileceğine\" izin veriyor. Fosil yakıtlar metinde adıyla anılmıyor; yalnızca COP28'deki fosil yakıtlardan uzaklaşma çağrısına atıf yapılıyor.\n\nİklim savunucuları bu belirsizlikten endişeli. Beyond Fossil Fuels'tan Claire Smith, \"Elektrifikasyonun, yenilenebilir enerjiyi teşvik etmek yerine yeni fosil yakıt tüketimini gizlemek için kullanılan çağımızın Truva atına dönüşmesine izin vermeyelim\" dedi. E3G'den Alden Meyer de gerçek emisyon azaltımı için taahhüdün \"temiz olması gerektiğini\" vurguladı. COP31 Başkanı Murat Kurum ise elektrifikasyonun fosil yakıt kullanımını \"otomatik olarak\" azaltacağını savundu.\n\nUluslararası Enerji Ajansı'nın (IEA) eşlik eden analizi, yüzde 35 elektrifikasyonun mevcut teknolojilerle maliyet etkin biçimde gerçekleştirilebileceğini ve fosil yakıt ithalatçılarına 2035'e kadar yılda yaklaşık 400 milyar dolar tasarruf sağlayabileceğini ortaya koydu. Ancak IEA, elektrifikasyonun \"tek başına yeterli olmadığı\" uyarısını da yaptı: 1,5°C gereklilikleri için 2035'e kadar kömürlü elektrik üretiminin yaklaşık yüzde 70, gazlı üretimin ise yüzde 60 azaltılması gerekiyor.\n\nCAN International'dan Janet Milongo, başarının yalnızca elektrifikasyon yüzdesiyle değil, \"elektriği neyin ürettiği, kimin erişebildiği, altyapının kime ait olduğu\" ile ölçülmesi gerektiğini söyledi. IEA İcra Direktörü Fatih Birol ise 2026'da inşa edilen yeni santrallerin yaklaşık yüzde 80'inin yenilenebilir kaynak kullandığını, dolayısıyla elektrifikasyonun doğal olarak emisyon azaltımına yol açtığını belirtti.",
+      "published_at": "2026-09-22T12:00:00+03:00",
+      "language": "tr",
+      "summary": "COP31'in amiral gemisi elektrifikasyon taahhüdü, elektriğin nihai enerji tüketimindeki payını 2035'e kadar küresel olarak yüzde 35'e çıkarmayı hedefliyor ancak elektriğin temiz kaynaklardan üretilmesini şart koşmuyor. IEA, yüzde 35 hedefinin fosil yakıt ithalatçılarına 2035'e kadar yılda yaklaşık 400 milyar dolar tasarruf sağlayabileceğini hesaplıyor. Türk sanayisi için süreç, proses ısısı ve üretimde elektrifikasyon yatırımlarının uluslararası gündemin merkezine yerleştiğini gösteriyor.",
+      "key_points": [
+        "Gönüllü taahhüt, elektriğin enerji tüketimindeki payını 2035'e kadar küresel olarak yüzde 35'e çıkarmayı öngörüyor.",
+        "Metin, elektrik üretim yönteminin 'ulusal koşullara göre değişebileceğini' söylüyor; fosil yakıtlardan açıkça söz etmiyor.",
+        "IEA: Yüzde 35 elektrifikasyon, fosil yakıt ithalatçılarına 2035'te yılda yaklaşık 400 milyar dolar tasarruf sağlayabilir.",
+        "1,5°C yolu için 2035'e kadar kömürlü üretimin yaklaşık yüzde 70, gazlı üretimin yüzde 60 azaltılması gerekiyor.",
+        "Fatih Birol: 2026'da kurulan yeni santrallerin yaklaşık yüzde 80'i yenilenebilir."
+      ],
+      "entities": {
+        "kurum": [
+          "COP31 Başkanlığı",
+          "IEA",
+          "Beyond Fossil Fuels",
+          "E3G",
+          "CAN International"
+        ],
+        "kisi": [
+          "Murat Kurum",
+          "Fatih Birol",
+          "Claire Smith",
+          "Alden Meyer",
+          "Janet Milongo"
+        ],
+        "sektor": [
+          "Enerji",
+          "Elektrik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "cop31",
+        "elektrifikasyon",
+        "yenilenebilir-enerji",
+        "iklim-degisikligi",
+        "iea",
+        "turkiye"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 65,
+        "keyword": 80,
+        "recency": 85,
+        "corroboration": 70,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "iea",
+      "url": "https://www.iea.org/reports/electrification",
+      "title": "IEA Özel Raporu: Elektrifikasyon — 'Elektrik Çağı'na giriş",
+      "body": "Uluslararası Enerji Ajansı (IEA), 22 Eylül 2026'da elektrifikasyon üzerine kapsamlı bir özel rapor yayımladı. Rapor, dünyanın \"Elektrik Çağı\"na girdiğini belgeliyor: 2015'ten bu yana elektrik talebi, elektrikli araçlar, ısı pompaları, soğutma sistemleri, sanayi uygulamaları, veri merkezleri ve yapay zekâ teknolojilerinin etkisiyle toplam enerji tüketiminin iki katından fazla hızla büyüdü. Analiz, COP31 müzakerelerine girdi sağlamak üzere Türkiye ve Avustralya'nın talebiyle hazırlandı.\n\nElektrik bugün küresel nihai enerji tüketiminin yaklaşık yüzde 23'ünü oluşturuyor; ancak bu oran önemini tam yansıtmıyor. Rapora göre \"elektrik, GSYH'nin neredeyse yarısını oluşturan ekonomik faaliyetlere güç veriyor\"; bu da ileri imalat ve dijital hizmetler gibi yüksek katma değerli sektörlerdeki yoğunlaşmayı gösteriyor.\n\nUlaştırma, en hızlı elektrifikasyon potansiyelini taşıyor. Elektrikli araçlar 2025'te yeni otomobil satışlarının yaklaşık yüzde 25'ini oluşturdu; 2015'te bu oran yüzde 1'in altındaydı. Buna karşın mevcut araç parkı büyük ölçüde konvansiyonel yakıt kullandığı için ulaştırmada genel elektrifikasyon oranı yüzde 2 düzeyinde. Binalarda ise oran, cihazlar ve klimalar sayesinde yaklaşık yüzde 40.\n\nRekabetçi potansiyel açısından analiz, mevcut teknoloji ve fiyatlarla \"konut yakıt tüketiminin yaklaşık yarısının ve petrole dayalı karayolu taşımacılığının yarısının rekabetçi biçimde elektrikleştirilebileceğini\" gösteriyor. Sanayide ise fosil yakıtla karşılanan düşük ve orta sıcaklıklı ısı uygulamalarının yaklaşık yüzde 40'ı uygulanabilir elektrifikasyon fırsatı sunuyor.\n\nEnerji güvenliği ve karşılanabilirlik boyutu da önemli. Yüksek Elektrifikasyon Senaryosu'nda ithalatçı ülkeler 2035'e kadar petrol ithalatını günde 15 milyon varil azaltabilir ve yılda 120 milyar metreküp doğal gaz ithalatından kaçınabilir. Bu, gelişmiş ekonomiler ve Çin için 2025 fiyatlarıyla yılda yaklaşık 300 milyar dolar tasarruf anlamına geliyor.\n\nElektrifikasyon önemli ön yatırım gerektirse de işletme maliyetleri daha düşük olduğu için \"gerekli altyapı yatırımları hesaba katılsa bile dünya genelinde enerji faturaları 2035'te bugünkünden daha düşük\" oluyor. Elektrifikasyonun düşük emisyonlu elektrik üretiminin hızlandırılmasıyla birleştirilmesi halinde son kullanım emisyonları 2035'e kadar yüzde 40, toplam enerji sektörü emisyonları ise 2025 seviyelerine göre yüzde 50'den fazla azalabilir.",
+      "published_at": "2026-09-22T12:00:00+03:00",
+      "language": "tr",
+      "summary": "IEA'nın Türkiye ve Avustralya'nın talebiyle COP31 için hazırladığı elektrifikasyon raporu, elektriğin nihai enerji tüketimindeki payının bugün yaklaşık yüzde 23 olduğunu, sanayide fosil yakıtla sağlanan düşük ve orta sıcaklıklı ısının yaklaşık yüzde 40'ının rekabetçi biçimde elektrikleştirilebileceğini gösteriyor. Yüksek Elektrifikasyon Senaryosu'nda ithalatçı ülkeler 2035'te günde 15 milyon varil petrol ve yılda 120 milyar m³ gaz ithalatından kaçınabilir. Enerji ithalatçısı Türkiye'nin sanayicisi için proses ısısında elektrifikasyon, hem maliyet hem arz güvenliği fırsatı.",
+      "key_points": [
+        "Elektrik, küresel nihai enerji tüketiminin yaklaşık yüzde 23'ünü oluşturuyor ama GSYH'nin yaklaşık yarısını üreten faaliyetleri besliyor.",
+        "Sanayide fosil yakıtla sağlanan düşük ve orta sıcaklıklı ısının yaklaşık yüzde 40'ı bugünkü teknolojiyle rekabetçi biçimde elektrikleştirilebilir.",
+        "Yüksek Elektrifikasyon Senaryosu: 2035'te ithalatçılar günde 15 milyon varil petrol ve yılda 120 milyar m³ gaz ithalatından kaçınabilir.",
+        "Elektrikli araçlar 2025'te yeni otomobil satışlarının yaklaşık yüzde 25'ini oluşturdu.",
+        "Düşük emisyonlu elektrikle birleştiğinde enerji sektörü emisyonları 2035'te 2025'e göre yüzde 50'den fazla azalabilir."
+      ],
+      "entities": {
+        "kurum": [
+          "IEA"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Elektrik",
+          "İmalat Sanayii",
+          "Otomotiv"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "POZITIF",
+      "tags": [
+        "iea",
+        "elektrifikasyon",
+        "cop31",
+        "enerji-ithalati",
+        "elektrikli-arac",
+        "verimlilik"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 85,
+        "corroboration": 75,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "semafor",
+      "url": "https://www.semafor.com/article/09/22/2026/winter-is-coming-imf-head-issues-warning-over-inflation-and-central-bank-tightening",
+      "title": "'Kış geliyor': IMF Başkanı enflasyon ve merkez bankası sıkılaştırması konusunda uyardı",
+      "body": "Uluslararası Para Fonu (IMF) Başkanı Kristalina Georgieva, Semafor'un New York'ta düzenlediği Next 3 Billion etkinliğinde ekonomik zorluklar konusunda uyarıda bulundu. Semafor'un 22 Eylül 2026 tarihli haberine göre Georgieva \"Kış geliyor\" ifadesini kullanarak küresel fiyatların yükselmeye devam edeceğini söyledi.\n\nİran çatışması ve buna bağlı enerji aksamaları Şubat'tan bu yana enflasyonu yukarı itti ve dünya genelinde merkez bankalarını faiz artırmaya yöneltti. Bu, borçlanma maliyetlerini önemli ölçüde yükseltti; ABD bu yıl ulusal borç faiz ödemelerine askerî harcamalardan daha fazla kaynak ayıracak. Bu durum hükümetlere ekonomik şoklarla başa çıkmak için daha az alan bırakıyor.\n\nYapay zekâ küresel büyümeyi desteklemiş ve Hürmüz Boğazı'nın kapanmasından kaynaklanan enerji aksamalarını kısmen dengelemiş olsa da bu teknoloji enerji arzı kısıtlarını tamamen telafi edemiyor. Georgieva geniş toplumsal etkiler konusunda da endişesini dile getirdi: \"İnsanların daha mutsuz olmasına hazırlanmalıyız. Belki sokaklarda.\"\n\nIMF, yapay zekâ yatırımlarının hükümetlerin borçlanma kapasitesini dışladığına dair şu an bir kanıt görmüyor; ancak Georgieva, \"bunun bir soruna dönüşmesi mümkün, bu yüzden izlememiz gerekiyor\" dedi.\n\nGeorgieva, gelişmekte olan piyasaları etkileyen eşitsizliklere de dikkat çekti. Pek çok gelişmekte olan ekonomi borçlarını önemli ölçüde azaltmış ve mali disiplin uygulamış olsa da son faiz artışları bu kazanımları tehdit ediyor: \"Şimdi olan şu: Faizler yükseliyor ve gelişmekte olan piyasalardaki zor kazanılmış kazanımları silip süpürüyor. Yani bu, para için bir rekabet değil; gelişmekte olan piyasaların, başkasının günahlarının cezasını çekmesi.\"",
+      "published_at": "2026-09-22T12:00:00+03:00",
+      "language": "tr",
+      "summary": "IMF Başkanı Kristalina Georgieva, İran çatışmasının yol açtığı enerji şokunun fiyatları yükseltmeye devam edeceğini söyleyerek 'kış geliyor' uyarısı yaptı. Artan faizlerin gelişmekte olan ülkelerin zor kazanılmış kazanımlarını sildiğini vurguladı. Türkiye gibi gelişmekte olan bir ekonomide faaliyet gösteren sanayici için bu, küresel finansman maliyetlerinin bir süre daha yüksek kalacağı anlamına geliyor.",
+      "key_points": [
+        "Georgieva, Semafor'un New York'taki etkinliğinde küresel fiyatların yükselmeye devam edeceği uyarısında bulundu.",
+        "Şubat'tan bu yana enerji kaynaklı enflasyon merkez bankalarını faiz artırmaya yöneltti.",
+        "ABD'nin bu yıl borç faizine askerî harcamadan daha fazla kaynak ayıracağı belirtildi.",
+        "Georgieva: Yükselen faizler gelişmekte olan ülkelerin zor kazanılmış kazanımlarını siliyor; bu 'başkasının günahlarının cezası'.",
+        "Yapay zekâ büyümeyi destekliyor ancak enerji arz kısıtlarını tam telafi edemiyor."
+      ],
+      "entities": {
+        "kurum": [
+          "IMF",
+          "Semafor"
+        ],
+        "kisi": [
+          "Kristalina Georgieva"
+        ],
+        "sektor": [
+          "Finans"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "imf",
+        "enflasyon",
+        "faiz",
+        "finansman-maliyeti",
+        "enerji-enflasyonu"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 70,
+        "keyword": 70,
+        "recency": 85,
+        "corroboration": 60,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "rio-times",
+      "url": "https://www.riotimesonline.com/copper-markets-latam-wednesday-september-23-2026",
+      "title": "Bakır fiyatları altıncı seansta da yükseldi; arz tarafında Şili öne çıkıyor",
+      "body": "Bakır fiyatları, kısıtlı maden üretimi ve güçlü Çin alımlarının etkisiyle 22 Eylül 2026 salı günü üst üste altıncı seansta yükseldi. The Rio Times'ın 23 Eylül tarihli haberine göre Londra'daki üç aylık bakır kontratı yüzde 0,7 artışla ton başına 14.766 dolara çıkarken, New York COMEX Aralık vadeli bakırı yüzde 1,07 artışla libre başına 6,8348 dolardan kapandı.\n\nMadencilik şirketlerinin hisseleri metalin kendisinden daha güçlü performans gösterdi. Southern Copper yüzde 4,08 artışla 206,14 dolardan, Freeport-McMoRan yüzde 3,03 artışla 74,35 dolardan kapandı. Fiziki metal yerine bakır vadelilerini tutan CPER fonu da yüzde 1,87 artışla 41,43 dolara yükseldi.\n\nYükselişin temelinde spekülatif pozisyonlardan çok fiziki piyasadaki darlık var. Uluslararası Bakır Çalışma Grubu'na göre dünya bakır maden üretimi 2026'nın ilk yarısında bir önceki yılın aynı dönemine göre yüzde 1,1, konsantre üretimi ise yüzde 2,6 düştü. Şanghay depo stokları Haziran 2026 başından bu yana yaklaşık yüzde 70 azalarak 74.800 tona geriledi.\n\nÇin'in tatil öncesi stok yenileme alımları talep tarafında güçlü sinyal verdi. Çin'e teslim edilen metal için ödenen primi gösteren Yangshan ithalat primi geçen hafta ton başına 124 dolarla yaklaşık dört yılın en yüksek seviyesine çıktı, pazartesi günü 119 dolara hafifçe geriledi.\n\nŞili 2025'te 5,3 milyon ton ile dünya arzının yaklaşık yüzde 23'ünü sağladı; Peru 2,7 milyon tonla, 3,2 milyon ton üreten Demokratik Kongo Cumhuriyeti'nin ardından üçüncü sırada. Codelco, El Teniente'deki üretim kayıplarını yönetmeyi sürdürüyor. LME'de salı günü yalnızca 133.725 ton serbestçe erişilebilir durumdaydı; iptal edilen varantlar toplam varant stokunun yüzde 48'ini oluşturuyor.\n\nUzun vadeli temeller de destekleyici. Elektrikli araçlar, şebeke yatırımları ve yenilenebilir enerji ekipmanından gelen enerji dönüşümü talebi tüketimi destekliyor. Çin Devlet Şebeke Şirketi, 2026-2030 döneminde bir önceki beş yıllık plana göre yüzde 40 artışla yaklaşık 574 milyar dolarlık sabit varlık yatırımı açıkladı.",
+      "published_at": "2026-09-23T12:00:00+03:00",
+      "language": "tr",
+      "summary": "LME üç aylık bakır 22 Eylül'de yüzde 0,7 artışla ton başına 14.766 dolara, COMEX Aralık vadeli bakır 6,8348 dolar/libreye çıktı; yükseliş altıncı seansa uzandı. Şanghay stokları Haziran başından bu yana yaklaşık yüzde 70 azaldı, LME'de serbest stok 133.725 tona indi. Kablo, elektrik ekipmanı, beyaz eşya ve otomotiv yan sanayisi için bakır girdi maliyeti rekor seviyelerde kalıcı bir baskı unsuru.",
+      "key_points": [
+        "LME üç aylık bakır yüzde 0,7 artışla ton başına 14.766 dolar; COMEX Aralık vadelisi yüzde 1,07 artışla 6,8348 dolar/libre.",
+        "Uluslararası Bakır Çalışma Grubu: 2026'nın ilk yarısında dünya maden üretimi yüzde 1,1, konsantre üretimi yüzde 2,6 düştü.",
+        "Şanghay depo stokları Haziran başından bu yana yaklaşık yüzde 70 azalarak 74.800 tona indi.",
+        "Çin'e teslim Yangshan ithalat primi yaklaşık dört yılın zirvesi olan ton başına 124 dolara çıktı.",
+        "LME'de serbest stok 133.725 ton; iptal edilen varantlar toplamın yüzde 48'i."
+      ],
+      "entities": {
+        "kurum": [
+          "LME",
+          "COMEX",
+          "Uluslararası Bakır Çalışma Grubu",
+          "Codelco",
+          "Southern Copper",
+          "Freeport-McMoRan",
+          "State Grid Corporation of China"
+        ],
+        "kisi": [
+          "Diego Fernández"
+        ],
+        "sektor": [
+          "Madencilik",
+          "Metal",
+          "Elektrik Ekipmanı"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "emtia",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "bakir-fiyati",
+        "lme",
+        "hammadde-maliyeti",
+        "stok-yonetimi",
+        "cin"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 75,
+        "keyword": 85,
+        "recency": 90,
+        "corroboration": 65,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "business-recorder",
+      "url": "https://www.brecorder.com/news/40440849/oecd-lifts-2026-global-growth-forecast-to-29-despite-mideast-war",
+      "title": "OECD, Orta Doğu savaşına rağmen 2026 küresel büyüme tahminini yüzde 2,9'a çıkardı",
+      "body": "Ekonomik İşbirliği ve Kalkınma Örgütü (OECD), Orta Doğu'daki savaşa rağmen 2026 küresel büyüme tahminini yüzde 2,9'a yükseltti. Business Recorder'ın 23 Eylül 2026 tarihli haberine göre bu, Haziran tahminine göre 0,1 puanlık bir artış. Küresel ekonomi 2025'te yüzde 3,4 büyümüştü. Örgüt, 2027 tahminini ise 0,1 puan düşürerek yüzde 3,0'a indirdi.\n\nBölgesel tahminlerde ABD'nin yüzde 2,2, avro bölgesinin yüzde 1,0 büyümesi bekleniyor; her iki tahmin de 0,2 puan yukarı revize edildi. Japonya için tahmin de 0,2 puan artışla yüzde 0,8'e çıktı. Çin'in büyüme beklentisi yüzde 4,5'te sabit tutuldu. G20 manşet enflasyonunun yüzde 4,1 olması öngörülüyor.\n\nOECD, Orta Doğu'daki gerilimlere rağmen \"geniş finansal koşulların destekleyici olmayı sürdürdüğünü\" belirtti ve büyük petrol stokları ile yapay zekâ kaynaklı yatırım artışını küresel ekonomiyi dengeleyen başlıca unsurlar olarak gösterdi.\n\nRapor, enerji şokunun etkisinin beklenenden sınırlı kaldığını ancak enflasyonun ve faizlerin yüksek seyrettiği bir ortamda büyümenin kırılgan olduğunu ortaya koyuyor. Bu tablo, Avrupa ve ABD pazarlarına ihracat yapan üreticiler açısından talebin sürdüğüne ama finansman maliyetlerinin ve enerji girdilerinin baskı yaratmaya devam edeceğine işaret ediyor.",
+      "published_at": "2026-09-23T12:03:00+03:00",
+      "language": "tr",
+      "summary": "OECD, büyük petrol stokları ve yapay zekâ kaynaklı yatırım artışını dengeleyici unsurlar olarak göstererek 2026 küresel büyüme tahminini yüzde 2,9'a yükseltti; 2027 beklentisi yüzde 3'e indi. G20 enflasyonu yüzde 4,1 olarak öngörülüyor. Haber, aynı raporu aktaran Euronews haberini doğruluyor; sanayici için mesaj, büyümenin sürdüğü ama enflasyon ve faiz baskısının yüksek kaldığı.",
+      "key_points": [
+        "2026 küresel büyüme tahmini yüzde 2,9'a yükseldi (Haziran'a göre +0,1 puan); 2025 büyümesi yüzde 3,4 idi.",
+        "2027 tahmini 0,1 puan düşüşle yüzde 3,0.",
+        "ABD yüzde 2,2, avro bölgesi yüzde 1,0, Japonya yüzde 0,8; Çin yüzde 4,5.",
+        "OECD'ye göre 'geniş finansal koşullar destekleyici olmayı sürdürüyor'."
+      ],
+      "entities": {
+        "kurum": [
+          "OECD"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makroekonomi"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "oecd",
+        "buyume",
+        "enflasyon",
+        "kuresel-talep"
+      ],
+      "importance_factors": {
+        "authority": 50,
+        "impact": 65,
+        "keyword": 75,
+        "recency": 90,
+        "corroboration": 80,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "oilprice-com",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Set-for-Longest-Losing-Streak-Since-August-2025.html",
+      "title": "Petrol, Ağustos 2025'ten bu yana en uzun düşüş serisine hazırlanıyor",
+      "body": "Petrol fiyatları 23 Eylül 2026 çarşamba günü Asya işlemlerinde gerileyerek altıncı günlük kayba yöneldi; bu, Ağustos 2025'ten bu yana en uzun düşüş serisi anlamına geliyor. OilPrice.com'dan Tsvetana Paraskova'nın haberine göre Brent, salı günü 100 doların altına indikten sonra yaklaşık yüzde 1 düşüşle varil başına 98,30 dolara, WTI ise yüzde 1,4 düşüşle 89,49 dolara gerileyerek 90 dolar eşiğinin altına indi.\n\nFiyat baskısı, ABD-İran diplomatik görüşmelerine ilişkin yenilenen iyimserlikten kaynaklanıyor. Başkan Donald Trump, ABD ve İranlı temsilcilerin \"çok iyi, çok verimli bir görüşme yaptığını ve çok yakın bir gelecekte yeni bir görüşmenin planlandığını\" açıkladı. BM Genel Kurulu kenarında New York'ta yürütülen bu görüşmeler, iki ülke arasında aylardır yapılan ilk esaslı temaslar.\n\nKCM Trade Baş Analisti Tim Waterer, \"'Yok etme' tehditleri dahil sert söylem sürse de piyasa görüşme ihtimalini fiyatlamayı tercih ediyor\" dedi.\n\nDüşüşe ek destek, Suudi Arabistan'ın 10 Eylül'deki insansız hava aracı saldırılarının ardından on günden uzun süre kapalı kalan Doğu-Batı petrol boru hattını kısmen yeniden çalıştırma kararından geldi. Kara boru hattı, Krallığın ciddi aksamaların yaşandığı Hürmüz Boğazı'nı devre dışı bırakmasının başlıca yolu. Suudi devlet şirketi Aramco, akışları birkaç hafta içinde günde yaklaşık 4 milyon varile çıkarmayı hedefliyor; ancak operasyonlar şu an için kısıtlı.\n\nDiplomatik gelişmeler ile altyapının onarımına yönelik adımların bir araya gelmesi piyasa algısını değiştirdi. Daha önce bölgesel gerilimlerden kaynaklanan arz kesintisi endişeleri petrolü yüksek tutarken, normalleşen diplomatik ilişkiler ve yeniden işleyen boru hattı ihtimali arz kısıtlarının çözülebileceğine işaret ederek satış baskısını tetikledi.",
+      "published_at": "2026-09-23T13:00:00+03:00",
+      "language": "tr",
+      "summary": "Brent, ABD-İran görüşmelerine dair iyimserlik ve Suudi Doğu-Batı boru hattının kısmen yeniden açılmasıyla yüzde 1 düşerek 98,30 dolara indi ve altıncı günlük kayba yöneldi. Aramco akışları haftalar içinde günde 4 milyon varile çıkarmayı hedefliyor. Sanayici için bu, enerji fiyatlarında diplomasiye bağlı kırılgan bir geri çekilme; kalıcı rahatlama için Hürmüz'de somut bir anlaşma gerekiyor.",
+      "key_points": [
+        "Brent yaklaşık yüzde 1 düşüşle 98,30 dolara, WTI yüzde 1,4 düşüşle 89,49 dolara geriledi.",
+        "Düşüş serisi altıncı güne uzanarak Ağustos 2025'ten bu yana en uzun seri oldu.",
+        "Trump, ABD ve İranlı temsilcilerin BM Genel Kurulu kenarında 'çok verimli' bir görüşme yaptığını söyledi.",
+        "10 Eylül'deki İHA saldırılarından sonra 10 günden uzun kapalı kalan Doğu-Batı boru hattı kısmen yeniden çalışıyor; Aramco haftalar içinde günde 4 milyon varil hedefliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "OilPrice.com",
+          "Saudi Aramco",
+          "KCM Trade"
+        ],
+        "kisi": [
+          "Tsvetana Paraskova",
+          "Donald Trump",
+          "Tim Waterer"
+        ],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "POZITIF",
+      "tags": [
+        "brent",
+        "petrol-fiyati",
+        "boru-hatti",
+        "suudi-arabistan",
+        "hurmuz-bogazi"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 75,
+        "keyword": 85,
+        "recency": 90,
+        "corroboration": 75,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "euronews",
+      "url": "https://www.euronews.com/2026/09/23/oecd-lifts-2026-global-economic-growth-forecast-to-29-despite-iran-war-disruption",
+      "title": "OECD, İran savaşının yarattığı aksamaya rağmen 2026 küresel büyüme tahminini yüzde 2,9'a yükseltti",
+      "body": "Ekonomik İşbirliği ve Kalkınma Örgütü (OECD), 23 Eylül 2026'da yayımladığı Ara Ekonomik Görünüm raporunda 2026 küresel büyüme tahminini Haziran'daki tahmine göre 0,1 puan artırarak yüzde 2,9'a yükseltti. Euronews'in haberine göre örgüt, dünya ekonomisinin \"Orta Doğu'daki çatışmanın tetiklediği enerji arzı şokunu beklenenden daha iyi atlattığı\" değerlendirmesinde bulundu. Bu oran, 2025'teki yüzde 3,4'lük büyümenin belirgin biçimde altında. OECD, 2027 tahminini ise 0,1 puan düşürerek yüzde 3'e indirdi.\n\n2026 bölgesel tahminleri şöyle: ABD yüzde 2,2, avro bölgesi yüzde 1 ve Japonya yüzde 0,8 (her biri 0,2 puan yukarı); Çin yüzde 4,5 (değişmedi); G20 toplamı yüzde 3,1. Avro bölgesi ülkelerinde İspanya 2026'da yüzde 2,6, 2027'de yüzde 1,8; Almanya her iki yılda yüzde 1,1; İtalya yüzde 0,9 ve yüzde 0,6; Fransa yüzde 0,4 ve yüzde 0,7 büyüyecek.\n\nABD ve İsrail'in Şubat'ta İran'a düzenlediği saldırıların ardından enerji fiyatları fırladı; ancak büyük petrol stokları, Körfez dışındaki alternatif arz kaynakları ve hükümet destek önlemleri etkiyi hafifletti. Yükselen hisse senedi piyasaları, sürdürülen kredi erişimi ve güçlü yapay zekâ yatırımları da ekonomik faaliyeti ve ticareti destekledi.\n\nMerkez bankaları, motorini çok yılın zirvesine taşıyan yüksek petrol ve gaz fiyatlarının yol açtığı enflasyonla mücadele için faiz artırdı. G20 manşet enflasyonunun yıllık yüzde 4,1, avro bölgesi enflasyonunun yüzde 3 olması bekleniyor.\n\nAlmanya ve Fransa gibi ülkelerde devlet tahvili getirileri çok yılın zirvesine çıkarak zaten yüksek borç ve bütçe açığı taşıyan ülkelerin borçlanma maliyetlerini artırdı. OECD, yüksek getirilerin \"kamu harcamalarını sınırlama ve yeniden dağıtma çabalarının artırılması ihtiyacını her zamankinden daha fazla\" ortaya koyduğu uyarısını yaptı. Örgüt, büyüme tahminlerine yönelik riskler arasında uzayan askerî çatışmayı, gıda fiyatlarını etkileyen güçlü El Niño kaynaklı tarımsal arz aksamalarını ve yapay zekâ yatırımlarının beklentileri karşılamamasını saydı.",
+      "published_at": "2026-09-23T16:07:00+03:00",
+      "language": "tr",
+      "summary": "OECD Ara Ekonomik Görünüm'de 2026 küresel büyüme tahminini Haziran'a göre 0,1 puan artırarak yüzde 2,9'a çıkardı, 2027 tahminini ise yüzde 3'e düşürdü. Avro bölgesi büyümesi yüzde 1, G20 manşet enflasyonu yüzde 4,1 bekleniyor. Türkiye'nin en büyük ihracat pazarı Avrupa'da zayıf ama pozitif büyüme ile yüksek faiz ve enerji fiyatları, ihracatçı sanayici için talebin sınırlı kalacağına işaret ediyor.",
+      "key_points": [
+        "Küresel büyüme 2026 için yüzde 2,9 (Haziran'a göre +0,1 puan), 2027 için yüzde 3 (−0,1 puan).",
+        "ABD yüzde 2,2, avro bölgesi yüzde 1, Japonya yüzde 0,8 (her biri +0,2 puan); Çin yüzde 4,5 (değişmedi); G20 yüzde 3,1.",
+        "Almanya 2026 ve 2027'de yüzde 1,1; İtalya yüzde 0,9; Fransa yüzde 0,4 büyüyecek.",
+        "G20 manşet enflasyonu yüzde 4,1, avro bölgesi enflasyonu yüzde 3 bekleniyor.",
+        "Riskler: uzayan çatışma, güçlü El Niño kaynaklı tarım aksamaları ve yapay zekâ yatırımlarından hayal kırıklığı."
+      ],
+      "entities": {
+        "kurum": [
+          "OECD"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makroekonomi"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "oecd",
+        "buyume",
+        "enflasyon",
+        "avro-bolgesi",
+        "kuresel-talep",
+        "makroekonomi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 75,
+        "keyword": 80,
+        "recency": 90,
+        "corroboration": 80,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "oilprice-com",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Brent-Holds-Above-102-as-Iran-Talks-Stall-Over-Hormuz-Conditions.html",
+      "title": "İran görüşmeleri Hürmüz şartlarında tıkanırken Brent 102 doların üzerinde tutunuyor",
+      "body": "Orta Doğu'da barış girişimlerine ilişkin haberlerle petrol fiyatları sınırlı gerilese de gösterge fiyatlar yüksek seyrini koruyor. OilPrice.com'dan Irina Slav'ın 24 Eylül 2026 tarihli haberine göre yazının kaleme alındığı saatlerde Brent varil başına 102,20 dolardan, West Texas Intermediate (WTI) 91,43 dolardan işlem görüyordu.\n\nHafta başında Suudi Arabistan'ın Doğu-Batı boru hattını yeniden çalıştırdığı ve Hürmüz Boğazı'ndan geçen petrol akışlarının arttığı haberleriyle fiyatlar 100 doların altına inmişti. Ancak BM Genel Kurulu'ndaki gelişmeler iyimserliği törpüledi.\n\nBaşkan Trump çelişkili sinyaller verdi: İran'ı \"yok etmekle\" tehdit ederken barış görüşmelerinin \"çok verimli\" geçtiğini de öne sürdü. İran Cumhurbaşkanı Mesud Pezeşkiyan ise \"ABD başkanının dün yaptığı açıklamalar zorbalık zihniyetinin göstergesi\" diyerek \"İran halkı baskıya boyun eğmeyecek\" karşılığını verdi.\n\nİran, Hürmüz Boğazı'nın yeniden açılması için somut ön koşullar belirledi: İran limanlarına yönelik deniz ablukasının kaldırılması, yaptırımların sona erdirilmesi ve dondurulmuş İran varlıklarının serbest bırakılması. ABD bu talepleri açıkça reddetmedi, ancak karşılamaya istekli olduğuna dair bir işaret de vermedi.\n\nBu diplomatik tıkanıklık, Suudi boru hattının yeniden devreye girmesine rağmen yüksek petrol fiyatlarını destekliyor. Petrol, altı günlük kesintisiz düşüşün ardından çarşamba günü yüzde 4 yükselerek yön değiştirdi. ING emtia stratejistlerine göre gösterge fiyatlar bir ay öncesinin belirgin biçimde üzerinde ve yılbaşından bu yana yüzde 60 artmış durumda.\n\nTarafların birbiriyle çelişen talepleri ve kırılgan müzakere ortamı düşünüldüğünde barışa giden yol uzak görünüyor; çözülmemiş çatışma fiyatlar üzerindeki baskının süreceğine işaret ediyor.",
+      "published_at": "2026-09-24T08:08:00+03:00",
+      "language": "tr",
+      "summary": "Brent, altı günlük düşüş serisinin ardından çarşamba günü yüzde 4 yükselerek 102,20 dolara çıktı; İran'ın Hürmüz'ü açmak için abluka ve yaptırımların kaldırılması ile varlıkların serbest bırakılması şartları görüşmeleri tıkıyor. ING'ye göre petrol yılbaşından bu yana yüzde 60 yukarıda. Sanayici için enerji maliyet planlamasında 100 dolar üzeri Brent senaryosunun hâlâ temel senaryo olduğu anlaşılıyor.",
+      "key_points": [
+        "Brent varil başına 102,20 dolar, WTI 91,43 dolar.",
+        "Petrol altı günlük düşüşün ardından çarşamba günü yüzde 4 yükseldi.",
+        "İran'ın Hürmüz şartları: İran limanlarına deniz ablukasının ve yaptırımların kaldırılması, dondurulmuş varlıkların serbest bırakılması.",
+        "ING: Gösterge fiyatlar bir ay öncesinin belirgin biçimde üzerinde ve yılbaşından bu yana yüzde 60 yukarıda."
+      ],
+      "entities": {
+        "kurum": [
+          "OilPrice.com",
+          "ING"
+        ],
+        "kisi": [
+          "Irina Slav",
+          "Donald Trump",
+          "Mesud Pezeşkiyan"
+        ],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "brent",
+        "petrol-fiyati",
+        "hurmuz-bogazi",
+        "jeopolitik-risk",
+        "yaptirim"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 75,
+        "keyword": 85,
+        "recency": 95,
+        "corroboration": 75,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "fiinews",
+      "url": "https://www.fiinews.com/2026/09/23/market-india-is-priority-for-opec-says-al-ghais/",
+      "title": "OPEC Genel Sekreteri Al Ghais: Hindistan OPEC için öncelik",
+      "body": "OPEC Genel Sekreteri Haitham Al Ghais, 22 Eylül 2026'da Yeni Delhi'de Hindistan Petrol ve Doğal Gaz Bakanı Hardeep Singh Puri ile bir araya geldi. FII News'in haberine göre Al Ghais, \"Hindistan ile diyalog OPEC için bir önceliktir; çünkü Hindistan'ın mevcut küresel enerji görünümündeki önemini ve bu önemin önümüzdeki on yıllarda daha da artacağını biliyoruz\" dedi.\n\n2015'te başlayan OPEC-Hindistan Enerji Diyaloğu'nun 7. üst düzey toplantısında petrol piyasası istikrarı, enerji güvenliği ve petrol sektörü genelindeki yatırım ihtiyaçları ele alındı. Taraflar kısa, orta ve uzun vadeli enerji görünümlerini de değerlendirdi.\n\nBakan Puri, Hindistan ile OPEC arasında \"doğal olarak tamamlayıcı ve karşılıklı yarar sağlayan bir ilişki\" bulunduğunu belirtti. Hızla büyüyen büyük bir ekonomi olarak Hindistan'ın küresel enerji talebi açısından kritik olmaya devam edeceğini vurgulayan Puri, \"Üreticiler ile tüketiciler arasında sürekli bir diyalog, yatırımı desteklemek ve enerji dayanıklılığını güçlendirmek için şarttır\" dedi.\n\nToplantı, karşılıklı öncelikler üzerinde uzlaşıyla sona erdi; taraflar enerji iş birliğini derinleştirme taahhüdünde bulundu. 8. Üst Düzey Toplantı'nın karşılıklı uygun bir tarihte Viyana'da yapılması kararlaştırıldı.\n\nGörüşme, Körfez arzının Hürmüz Boğazı'ndaki aksamalar nedeniyle kısıtlandığı bir dönemde OPEC'in büyük Asyalı tüketicilerle ilişkilerini güçlendirme çabasının parçası olarak öne çıkıyor.",
+      "published_at": "2026-09-24T12:00:00+03:00",
+      "language": "tr",
+      "summary": "OPEC Genel Sekreteri Haitham Al Ghais, 22 Eylül'de Yeni Delhi'de Hindistan Petrol ve Doğal Gaz Bakanı Hardeep Singh Puri ile 7. OPEC-Hindistan Enerji Diyaloğu toplantısını yaptı. Taraflar piyasa istikrarı, enerji güvenliği ve yatırım ihtiyacını görüştü. Üreticilerin büyük tüketicilerle ilişkilerini güçlendirmesi, Körfez arzının aksadığı dönemde ham petrol akışlarının hangi pazarlara öncelik vereceğine dair sinyal niteliğinde.",
+      "key_points": [
+        "7. Üst Düzey OPEC-Hindistan Enerji Diyaloğu toplantısı 22 Eylül'de Yeni Delhi'de yapıldı; diyalog 2015'te başladı.",
+        "Al Ghais: Hindistan ile diyalog OPEC için bir öncelik; Hindistan'ın küresel enerji görünümündeki önemi artacak.",
+        "Bakan Puri: Üretici ve tüketiciler arasında sürekli diyalog yatırımı desteklemek ve enerji dayanıklılığını güçlendirmek için şart.",
+        "8. toplantı karşılıklı uygun bir tarihte Viyana'da yapılacak."
+      ],
+      "entities": {
+        "kurum": [
+          "OPEC",
+          "Hindistan Petrol ve Doğal Gaz Bakanlığı"
+        ],
+        "kisi": [
+          "Haitham Al Ghais",
+          "Hardeep Singh Puri"
+        ],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "ASYA",
+      "category": "enerji",
+      "sentiment": "NOTR",
+      "tags": [
+        "opec",
+        "hindistan",
+        "petrol",
+        "enerji-piyasasi"
+      ],
+      "importance_factors": {
+        "authority": 45,
+        "impact": 40,
+        "keyword": 60,
+        "recency": 95,
+        "corroboration": 55,
+        "reach": 35
+      }
+    },
+    {
+      "source_slug": "kuwait-times",
+      "url": "https://kuwaittimes.com/article/50370/business/al-ghais-opec-china-partnership-crucial-for-market-stability/",
+      "title": "Al-Ghais: OPEC-Çin ortaklığı piyasa istikrarı için kritik",
+      "body": "OPEC Genel Sekreteri Haitham Al-Ghais, OPEC ile Çin arasındaki ortaklığın küresel petrol piyasalarının istikrarı ve enerji güvenliği açısından stratejik önem taşıdığını vurguladı. Kuwait Times'ın 24 Eylül 2026 tarihli haberine göre 8. Üst Düzey OPEC-Çin Enerji Diyaloğu toplantısı çarşamba günü Pekin'de, Al-Ghais ile Çin Ulusal Enerji İdaresi Başkanı Wang Hongze'nin başkanlığında yapıldı.\n\nAl-Ghais, \"Çin'in küresel ekonomik büyümeyi ve enerji talebini desteklemedeki belirleyici rolü, petrol piyasalarındaki gelişmeler konusunda Çin ile koordinasyonun önemini pekiştiriyor\" dedi. Diyaloğun ortak enerji konularında iş birliğini güçlendirmek, piyasa görüşlerini paylaşmak ve petrol sektörü genelinde yatırımları teşvik etmek için bir fırsat olduğunu belirtti.\n\nWang Hongze ise küresel enerji sektörünün petrol üreten ve tüketen ülkeler arasında daha fazla diyalog gerektiren köklü bir dönüşümden geçtiğini vurguladı.\n\nOPEC'in 2026 Dünya Petrol Görünümü, Çin'in 2050'ye kadar küresel petrol talep artışına en büyük katkıyı yapan ülkeler arasında kalacağını öngörüyor. Yirmi yılı aşkın süredir devam eden ortaklık, arz güvenliği, enerji talebi ve piyasa istikrarı konularını ele alan sürdürülebilir bir çerçeveye dönüştü. Dokuzuncu üst düzey toplantının 2027'de Avusturya'nın başkenti Viyana'da yapılması planlanıyor.\n\nToplantı, OPEC'in aynı hafta Yeni Delhi'de Hindistan ile gerçekleştirdiği enerji diyaloğunun hemen ardından geldi ve örgütün büyük Asyalı tüketicilerle ilişkilere verdiği önemi gösterdi.",
+      "published_at": "2026-09-24T12:00:00+03:00",
+      "language": "tr",
+      "summary": "OPEC Genel Sekreteri Haitham Al-Ghais, Pekin'de Çin Ulusal Enerji İdaresi Başkanı Wang Hongze ile 8. OPEC-Çin Enerji Diyaloğu toplantısına başkanlık etti. OPEC'in 2026 Dünya Petrol Görünümü, Çin'in 2050'ye kadar küresel petrol talep artışına en çok katkı yapan ülkeler arasında kalacağını öngörüyor. Aynı hafta Hindistan ile yapılan toplantıyla birlikte OPEC'in Asya'ya odaklandığını gösteriyor; bu da Avrupa ve Akdeniz alıcıları için ham petrol rekabetinin sürmesi anlamına gelebilir.",
+      "key_points": [
+        "8. Üst Düzey OPEC-Çin Enerji Diyaloğu toplantısı çarşamba günü Pekin'de yapıldı.",
+        "Toplantıya Al-Ghais ve Çin Ulusal Enerji İdaresi Başkanı Wang Hongze başkanlık etti.",
+        "OPEC 2026 Dünya Petrol Görünümü: Çin 2050'ye kadar küresel petrol talep artışına en çok katkı yapanlar arasında kalacak.",
+        "Ortaklık 20 yılda sürdürülebilir bir çerçeveye dönüştü; 9. toplantı 2027'de Viyana'da yapılacak."
+      ],
+      "entities": {
+        "kurum": [
+          "OPEC",
+          "Çin Ulusal Enerji İdaresi"
+        ],
+        "kisi": [
+          "Haitham Al-Ghais",
+          "Wang Hongze"
+        ],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "ASYA",
+      "category": "enerji",
+      "sentiment": "NOTR",
+      "tags": [
+        "opec",
+        "cin",
+        "petrol-talebi",
+        "enerji-piyasasi"
+      ],
+      "importance_factors": {
+        "authority": 50,
+        "impact": 40,
+        "keyword": 60,
+        "recency": 95,
+        "corroboration": 55,
+        "reach": 35
+      }
+    },
+    {
+      "source_slug": "climate-home-news",
+      "url": "https://www.climatechangenews.com/2026/09/24/push-for-cooking-to-be-part-of-cop31s-electrification-agenda/",
+      "title": "Temiz pişirmenin COP31 elektrifikasyon gündemine alınması için baskı artıyor",
+      "body": "Kenya Devlet Başkanı William Ruto, BM Genel Kurulu kapsamında New York'ta düzenlenen bir etkinlikte temiz pişirmenin COP31'in elektrifikasyon gündemine dahil edilmesi çağrısında bulundu. Climate Home News'in 24 Eylül 2026 tarihli haberine göre Kasım'da Türkiye ev sahipliğinde, Avustralya'nın müzakere başkanlığında yapılacak zirve, elektriğin nihai enerji tüketimindeki payını 2035'e kadar yüzde 35'e, 2050'ye kadar yüzde 50'ye çıkarmayı hedefliyor; bu pay bugün yüzde 23.\n\nRuto, \"mutfak, enerji dönüşümünün yaklaşık bir milyar insanın gündelik hayatına girdiği yer\" diyerek iklim eylemi, sağlık ve toplumsal cinsiyet eşitliği açısından faydalara dikkat çekti. Elektrikli pişirme, elektrik altyapısı yatırımlarını daha kârlı hale getirebilir ve şebeke bağlantılarının haneler için değerini artırabilir.\n\nUluslararası Enerji Ajansı'na (IEA) göre 2024'te Sahra Altı Afrika'daki hanelerin yalnızca yüzde 6'sı pişirmede elektrik kullanırken beşte birinden azı sıvılaştırılmış petrol gazı (LPG) kullandı. Fosil kökenli olan ve iç hava kalitesi açısından elektriğin gerisinde kalan LPG, odun ve kömüre kıyasla iklim ve sağlık etkisi daha düşük olduğu için \"temiz pişirme\" kapsamında sayılıyor. IEA araştırması, elektrikli ocakların ömür boyu maliyetinin LPG ocaklardan yüzde 10 daha düşük olduğunu, ancak ön maliyet, elektrik kesintileri, sınırlı erişim ve kültürel tercihlerin yaygınlaşmayı kısıtladığını gösteriyor.\n\nTeknoloji tercihi konusunda tartışma da var. İngiltere'nin iklim temsilcisi Rachel Kyte elektriği \"modern çağa uygun\" ve \"gerçekten temiz\" bulurken hanelerin oynak fosil yakıt piyasalarına bağımlı kalmasına karşı uyardı. Afrika Birliği altyapı komiseri Lerato Mataboge ise \"teknoloji tarafsızlığını\" savunarak ülkelerin elektrik, LPG, biyoenerji ya da diğer çözümler arasında ulusal koşullara göre seçim yapması gerektiğini vurguladı. IEA senaryosuna göre 2040'a kadar temiz pişirmeye erişecek Afrikalıların yüzde 60'tan fazlası LPG, yüzde 17'si elektrik kullanacak.\n\nBM Genel Sekreter Yardımcısı Amina Mohammed, geçmişte kadınların gerçek ihtiyaçları dikkate alınmadan pişirme teknolojileri sağlandığını ve sorunun 25 yıllık uluslararası çabaya rağmen çözülemediğini hatırlattı. Dünya genelinde yaklaşık 2 milyar kişi temiz pişirmeye erişemiyor; bunların yaklaşık yarısı Afrika'da yaşıyor.",
+      "published_at": "2026-09-24T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Kenya Devlet Başkanı William Ruto, Kasım'da Antalya'da yapılacak COP31'in elektrifikasyon gündemine elektrikli pişirmenin eklenmesini istedi; hedef, elektriğin nihai enerji tüketimindeki payını 2035'te yüzde 35'e, 2050'de yüzde 50'ye çıkarmak. IEA'ya göre elektrikli ocaklar ömür boyu LPG ocaklardan yüzde 10 daha ucuz. Beyaz eşya ve elektrikli ev aletleri üreten Türk sanayicisi için Afrika'da elektrikli pişirme dönüşümü yeni bir ihracat pazarı fırsatı olabilir.",
+      "key_points": [
+        "COP31 ev sahipleri, elektriğin nihai enerji tüketimindeki payını 2035'te yüzde 35'e, 2050'de yüzde 50'ye çıkarmayı hedefliyor (bugün yüzde 23).",
+        "IEA: Sahra Altı Afrika'da hanelerin yalnızca yüzde 6'sı 2024'te pişirmede elektrik kullandı.",
+        "IEA: Elektrikli ocaklar ömür boyu LPG ocaklardan yüzde 10 daha ucuz; ancak ön maliyet ve elektrik kesintileri engel.",
+        "Dünyada yaklaşık 2 milyar kişi temiz pişirmeye erişemiyor; bunların yaklaşık yarısı Afrika'da."
+      ],
+      "entities": {
+        "kurum": [
+          "COP31",
+          "IEA",
+          "Afrika Birliği",
+          "Birleşmiş Milletler"
+        ],
+        "kisi": [
+          "William Ruto",
+          "Rachel Kyte",
+          "Lerato Mataboge",
+          "Amina Mohammed"
+        ],
+        "sektor": [
+          "Enerji",
+          "Beyaz Eşya"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "cop31",
+        "elektrifikasyon",
+        "afrika-pazari",
+        "iklim-degisikligi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 40,
+        "keyword": 65,
+        "recency": 95,
+        "corroboration": 55,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "al-jazeera",
+      "url": "https://www.aljazeera.com/economy/2026/9/25/oil-prices-jump-after-yemens-houthis-claim-attacks-on-saudi-facilities",
+      "title": "Husilerin Suudi tesislerine saldırı iddiası sonrası petrol fiyatları sıçradı",
+      "body": "Petrol piyasaları, Yemen'deki Husilerin Suudi Arabistan'ın enerji altyapısına yönelik yeni saldırılarının ardından sert dalgalandı. Al Jazeera'nın 25 Eylül 2026 tarihli haberine göre küresel gösterge Brent, saldırıların ABD-İsrail'in İran ile çatışması nedeniyle zaten gergin olan enerji arzına ilişkin kaygıları artırmasıyla perşembe günü yüzde 3'ün üzerinde yükseldi.\n\nHusiler, Riyad'da \"hassas bir hedef\" olarak tanımladıkları noktaya ve Kızıldeniz kıyısındaki liman kenti Yanbu'daki Aramco tesislerine füze ve insansız hava aracı saldırıları düzenlediklerini üstlendi. Husi yönetimindeki Yemen Haber Ajansı'nın dağıttığı açıklamada her iki operasyonun \"hedeflerine başarıyla ulaştığı\" iddia edildi. Suudi liderliğindeki koalisyon güçleri ise Krallığa yönelen altı balistik füzeyi önlediğini bildirdi; Suudi yetkilileri herhangi bir hasar ya da kayıp doğrulamadı.\n\nKasım vadeli Brent perşembe günü 108 doların üzerini gördükten sonra 106,50 doların üzerinde kapandı. Cuma sabahı Asya'da saat 02.00 GMT itibarıyla fiyat 105,77 dolara hafifçe geriledi. Küresel petrol arzının yaklaşık yüzde 10'unu sağlayan Aramco, mesai saatleri dışında yapılan sorulara yanıt vermedi.\n\nTırmanma, ABD ile İran arasında New York'taki BM Genel Kurulu kenarında süren diplomatik çabalarla eş zamanlı yaşandı. İran Cumhurbaşkanı Mesud Pezeşkiyan, Ağustos ortasında barış sağlanamadan süresi dolan Mutabakat Zaptı'na Washington'ın Kasım'daki ABD ara seçimlerinden önce geri dönmesini umduğunu söyledi.\n\nKCM Trade Baş Piyasa Analisti Tim Waterer, \"kritik arz yollarının ve tesislerin hâlâ savunmasız olduğunu\" belirterek \"BM kenarındaki diplomatik çabalar bir miktar denge sağlıyor, ancak kalıcı bir gerilim azalmasına dair daha net kanıt görülene kadar yukarı yönlü eğilim sürüyor\" dedi. Singapur'daki Sparta Commodities'ten kıdemli petrol piyasası analisti June Goh ise İran'la çatışma sürdükçe petrolün büyük olasılıkla 100 doların üzerinde kalacağını öngördü: \"Ortada net bir çözüm görünmezken küresel petrol stoklarındaki açık giderek büyüyor.\"",
+      "published_at": "2026-09-25T09:00:00+03:00",
+      "language": "tr",
+      "summary": "Husilerin Riyad'da 'hassas bir hedef' ile Yanbu'daki Aramco tesislerine füze ve İHA saldırısı düzenlediğini açıklamasıyla Brent perşembe günü yüzde 3'ün üzerinde yükselip 106,50 doların üzerinde kapandı. Suudi koalisyonu altı balistik füzeyi önlediğini bildirdi. Sanayici için mesaj açık: Kızıldeniz kıyısındaki Yanbu da artık risk altında; enerji ve navlun maliyetlerinde yukarı yönlü risk sürüyor.",
+      "key_points": [
+        "Brent Kasım vadelisi perşembe günü 108 doları görüp 106,50 doların üzerinde kapandı; cuma sabahı 105,77 dolar.",
+        "Husiler Riyad'da 'hassas bir hedef' ile Yanbu'daki Aramco tesislerini vurduklarını iddia etti.",
+        "Suudi liderliğindeki koalisyon altı balistik füzeyi önlediğini açıkladı; hasar doğrulanmadı.",
+        "Sparta Commodities'ten June Goh: İran savaşı sürdükçe petrol 100 doların üzerinde kalacak."
+      ],
+      "entities": {
+        "kurum": [
+          "Saudi Aramco",
+          "Husiler",
+          "KCM Trade",
+          "Sparta Commodities"
+        ],
+        "kisi": [
+          "John Power",
+          "Tim Waterer",
+          "June Goh",
+          "Mesud Pezeşkiyan"
+        ],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "brent",
+        "petrol-fiyati",
+        "suudi-arabistan",
+        "kizildeniz",
+        "jeopolitik-risk"
+      ],
+      "importance_factors": {
+        "authority": 72,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 100,
+        "corroboration": 70,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "daily-cargo-news",
+      "url": "https://www.thedcn.com.au/news/world-container-index-24-september-2026",
+      "title": "Dünya Konteyner Endeksi – 24 Eylül 2026: WCI Asya-Avrupa'daki düşüşle yüzde 1 geriledi",
+      "body": "Drewry'nin Dünya Konteyner Endeksi (WCI), 24 Eylül 2026 itibarıyla yüzde 1 düşüşle 40 ft konteyner başına 4.468 dolara geriledi. Düşüşün ana kaynağı Asya-Avrupa hatlarındaki navlunlar oldu.\n\nTranspasifik hatlarda Şanghay-Los Angeles navlunu yüzde 2 artışla 7.838 dolara çıkarken Şanghay-New York navlunu 10.373 dolarda sabit kaldı. Asya-Avrupa hatlarında ise Şanghay-Cenova yüzde 5 düşüşle 3.835 dolara, Şanghay-Rotterdam yüzde 4 düşüşle 3.485 dolara indi.\n\nKapasite yönetimi tarafında taşıyıcılar bir sonraki hafta için 15 boş sefer ilan etti; bu sayı bir önceki hafta dokuzdu. Bunların yedisi Asya-Avrupa hatlarında. Süveyş Kanalı geçişleri de arttı: 37. haftada 41 olan geçiş sayısı 38. haftada 48'e yükseldi.\n\nDrewry, Çin'deki Altın Hafta tatili öncesinde taşıyıcıların boş seferleri ve dengesiz talep nedeniyle \"navlunların gelecek hafta düşmesini beklediğini\" açıkladı. Asya-Avrupa hattında toparlanan efektif kapasitenin boş seferlerin etkisini aştığı belirtiliyor.\n\nBununla birlikte Kızıldeniz'deki güvenlik riskleri, Panama Kanalı kısıtları, Almanya'daki işçi eylemleri ve Ren Nehri'ndeki düşük su seviyesi Avrupa tedarik zincirleri açısından risk olmaya devam ediyor.\n\nAkdeniz yönlü navlunların art arda ikinci hafta düşmesi ve Süveyş geçişlerindeki artış, Asya'dan ara malı ve hammadde ithal eden üreticiler için navlun maliyetlerinde gevşemeye işaret ediyor.",
+      "published_at": "2026-09-25T09:00:00+03:00",
+      "language": "tr",
+      "summary": "Drewry WCI, Asya-Avrupa navlunlarındaki düşüşle yüzde 1 gerileyerek 40 ft konteyner başına 4.468 dolara indi; Şanghay-Cenova yüzde 5 düşüşle 3.835 dolara, Şanghay-Rotterdam yüzde 4 düşüşle 3.485 dolara geriledi. Süveyş geçişleri 38. haftada 41'den 48'e çıktı. Akdeniz yönlü navlunların iki haftadır düşmesi, Asya'dan girdi ithal eden Türk sanayicisi için maliyet açısından olumlu.",
+      "key_points": [
+        "WCI yüzde 1 düşüşle 40 ft konteyner başına 4.468 dolar.",
+        "Şanghay-Cenova yüzde 5 düşüşle 3.835 dolar, Şanghay-Rotterdam yüzde 4 düşüşle 3.485 dolar.",
+        "Şanghay-Los Angeles yüzde 2 artışla 7.838 dolar; Şanghay-New York 10.373 dolarda sabit.",
+        "Gelecek hafta için 15 boş sefer ilan edildi (önceki hafta 9); Süveyş geçişleri 37. haftadaki 41'den 38. haftada 48'e çıktı.",
+        "Drewry, Altın Hafta öncesinde navlunların gelecek hafta düşmesini bekliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Drewry"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "Denizcilik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "lojistik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "drewry",
+        "konteyner-navlunu",
+        "navlun",
+        "suveys-kanali",
+        "tedarik-zinciri"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 65,
+        "keyword": 85,
+        "recency": 100,
+        "corroboration": 65,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "rio-times",
+      "url": "https://www.riotimesonline.com/iron-ore-markets-latam-friday-september-25-2026/",
+      "title": "Demir cevheri Çin çeliğindeki zayıflıkla geriledi, Vale yüzde 1,88 düştü",
+      "body": "Vale'nin New York'ta işlem gören hisseleri 24 Eylül 2026 perşembe günü yüzde 1,88 düşüşle 13,56 dolara geriledi; bu, büyük demir cevheri madencileri arasındaki en sert kayıp oldu. The Rio Times'ın 25 Eylül tarihli haberine göre emtia piyasasındaki sinyaller ise karışık.\n\nHisse ve vadeli fiyatlar arasındaki ayrışma iki farklı anlatıyı yansıtıyor. Dalian demir cevheri vadelileri, Çinli çelik fabrikalarının Ekim başındaki Ulusal Gün tatili öncesinde ithal cevher stoklarını yenilemesiyle yüzde 0,57 artışla ton başına 712 yuana çıktı. Ancak madencilik hisseleri yatırımcıların temel talebe ilişkin şüphelerini yansıttı.\n\nÇin Demir Çelik Birliği, Eylül'de nihai kullanıcı talebinde \"belirgin bir toparlanma olmadığını\" bildirerek tatil kaynaklı alımlara dayalı iyimser senaryoyu zayıflattı. Çinli çelik üreticilerinin bitmiş çelik stokları üst üste yedinci hafta düşerek sekiz ayın en düşük seviyesine indi; ancak analistler bunu tüketim artışına değil üretim kesintilerine bağlıyor. Çin yüksek fırınlarında günlük ithal cevher tüketimi de azaldı.\n\nDiğer madencilik hisseleri de baskı altındaydı. Brezilyalı çelik üreticisi CSN'nin madencilik birimi CSN Mineração yüzde 2,35 düşüşle 4,98 reale (yaklaşık 0,97 dolar), İngiliz-Avustralyalı Rio Tinto yüzde 0,82 düşüşle 94,47 dolara geriledi.\n\nFiziki piyasada da karışık bir tablo var. Mysteel'in yüzde 61 fines endeksi Qingdao teslim kuru metrik ton başına 0,30 dolar artışla 95,00 dolara çıkarken, yüzde 62 düşük alüminalı fines endeksi 0,05 dolar düşüşle 99,25 dolara indi.\n\nKüresel demir cevheri talebinin yüzde 70'inden fazlası doğrudan Çin'in yüksek fırın çelik üretimine bağlı; bu da dünyanın ikinci büyük ihracatçısı Vale'yi Çin'deki değişimlere özellikle duyarlı kılıyor. Analistler tatil öncesi alımları, çelik fabrikalarının marjlarında iyileşme görülmedikçe fiyatları kalıcı olarak destekleyemeyecek takvimsel bir hareket olarak değerlendiriyor; tatil sonrasında kârlılık düzelmezse stok yenileme rallisinin tersine dönmesi bekleniyor.",
+      "published_at": "2026-09-25T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Dalian demir cevheri vadelileri Çinli çelik üreticilerinin tatil öncesi stok yenilemesiyle ton başına 712 yuana çıksa da Çin Demir Çelik Birliği Eylül'de nihai talepte belirgin bir toparlanma olmadığını bildirdi. Mysteel yüzde 61 fines endeksi 95 dolar/ton. Çin'de zayıf çelik talebi, ihracata yönelen ucuz Çin çeliği yoluyla Türk çelik üreticileri üzerinde fiyat baskısını sürdürebilir.",
+      "key_points": [
+        "Vale'nin New York'taki hisseleri 24 Eylül'de yüzde 1,88 düşüşle 13,56 dolara indi.",
+        "Dalian demir cevheri vadelileri yüzde 0,57 artışla ton başına 712 yuan oldu.",
+        "Çin Demir Çelik Birliği: Eylül'de nihai kullanıcı talebinde 'belirgin bir toparlanma yok'.",
+        "Mysteel yüzde 61 fines endeksi 0,30 dolar artışla 95,00 dolar; yüzde 62 düşük alüminalı fines 99,25 dolar (Qingdao).",
+        "Çin'de bitmiş çelik stokları yedinci haftadır düşerek sekiz ayın en düşüğüne indi; neden üretim kesintileri."
+      ],
+      "entities": {
+        "kurum": [
+          "Vale",
+          "Çin Demir Çelik Birliği",
+          "Mysteel",
+          "Rio Tinto",
+          "CSN Mineração"
+        ],
+        "kisi": [
+          "Diego Fernández"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Madencilik"
+        ]
+      },
+      "region": "ASYA",
+      "category": "emtia",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "demir-cevheri",
+        "celik",
+        "cin",
+        "hammadde",
+        "demir-celik"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 60,
+        "keyword": 75,
+        "recency": 100,
+        "corroboration": 50,
+        "reach": 50
+      }
+    }
+  ]
+}

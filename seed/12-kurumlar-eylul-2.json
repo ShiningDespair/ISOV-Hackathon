@@ -1,0 +1,1483 @@
+{
+  "collector": "kurumlar",
+  "collected_at": "2026-09-25T21:00:00+03:00",
+  "sources": [
+    {
+      "slug": "kosgeb",
+      "name": "KOSGEB - Küçük ve Orta Ölçekli İşletmeleri Geliştirme ve Destekleme İdaresi Başkanlığı",
+      "homepage_url": "https://www.kosgeb.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 90,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "tubitak",
+      "name": "TÜBİTAK - Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
+      "homepage_url": "https://tubitak.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 90,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ticaret-bakanligi",
+      "name": "T.C. Ticaret Bakanlığı",
+      "homepage_url": "https://ticaret.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "iso",
+      "name": "İstanbul Sanayi Odası",
+      "homepage_url": "https://www.iso.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "istka",
+      "name": "İSTKA - İstanbul Kalkınma Ajansı",
+      "homepage_url": "https://www.istka.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 80,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "turkpatent",
+      "name": "Türk Patent ve Marka Kurumu",
+      "homepage_url": "https://www.turkpatent.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "tse",
+      "name": "TSE - Türk Standardları Enstitüsü",
+      "homepage_url": "https://www.tse.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "ufuk-avrupa",
+      "name": "Ufuk Avrupa Türkiye (Horizon Europe Ulusal Koordinasyon - TÜBİTAK)",
+      "homepage_url": "https://ufukavrupa.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 80,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "alomaliye",
+      "name": "Alomaliye",
+      "homepage_url": "https://www.alomaliye.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "isov",
+      "name": "İSOV - İstanbul Sanayi Odası Vakfı",
+      "homepage_url": "https://www.isov.org.tr",
+      "source_type": "kurum",
+      "authority_weight": 80,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "tgrt-haber",
+      "name": "TGRT Haber",
+      "homepage_url": "https://www.tgrthaber.com",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/haberler/otomobil-duzenlemelerimiz-ile-ilgili-yayimlanmis-dto-panel-raporu-hakkinda-kamuoyunu-yaniltmaya-donuk-carpitma-amacli-aciklamalara-iliskin-cevabimiz",
+      "title": "Ticaret Bakanlığı: Otomobil düzenlemelerine ilişkin DTÖ panel raporu Türkiye için tazminat ya da mali borç doğurmuyor",
+      "body": "Söz konusu Panel raporu, yaklaşık iki ay önce DTÖ tarafından 28 Temmuz 2026 tarihinde yayımlanmıştır. Rapora ilişkin değerlendirmeler hem Türkiye hem de Çin tarafından kamuoyuyla paylaşılmıştır. Ticaret Bakanlığımız da 29 Temmuz 2026 tarihinde konu ile ilgili değerlendirmelerini bir basın bildirisi ile kamuoyumuz ile paylaşmıştır.\n\nBu açıklamada da belirtildiği üzere, Panel, ülkemizin uygulamalarını sağlık, çevre ve tüketicinin korunmasına ilişkin hükümler çerçevesinde makul olarak değerlendirmiş, panele taşınan tedbirlerimizin önemli bir kısmına ilişkin olarak ülkemiz lehine değerlendirme ve yorumlara da yer vermiştir. Panelin elektrikli araçlarda ülkemizdeki yatırımları ve yerli sanayimizi korumak amacıyla 4 Mart 2023 tarihinden itibaren uygulanan ilave vergiye ilişkin değerlendirmelerine katılmadığımız, ülkemizin yerli otomotiv sanayisini haksız rekabete karşı koruyan, tüketici güvenliği ve refahını önceleyen tedbirlerimize ilişkin olarak Panel tarafından yöneltilen bazı değerlendirmeleri paylaşmadığımız kamuoyuna açıkça duyurulmuştur.\n\nÖte yandan, 29 Temmuz 2026 tarihli açıklamada da belirtildiği üzere, Dünya Ticaret Örgütü hukuk sistemi kapsamında bir panel raporu kabul edilerek kesinleşmiş nihai bir karar değildir. Türkiye’nin temyiz hakkı bulunmaktadır. Bu kapsamda, ülkemiz, hukuken isabetli bulunmayan hususlara ilişkin olarak, DTÖ mekanizmaları çerçevesinde üye ülkelere tanınan gerekli hukuki gözden geçirme süreçlerini işletmekte, gerekli değerlendirmeleri hukuk mecrasında yapmaktadır.\n\nAçıklamada da ifade edildiği üzere, taraflar arasındaki istişareler sürmektedir. Bu kapsamda, panel raporunun katılmadığımız kısımları için temyize başvurulmasına ilişkin sürelerin karşılıklı mutabakatla uzatılması da değerlendirilmektedir.\n\nSöz konusu DTÖ Panel Raporunun, Türkiye açısından herhangi bir tazminat ödeme yükümlülüğü veya mali borç doğurduğu yönündeki değerlendirmeler gerçeği yansıtmamaktadır. DTÖ uyuşmazlıklarının işleyişi kapsamında, panel kararları ile taraflardan birinin diğer tarafa otomatik olarak tazminat ya da ödeme ifası söz konusu değildir. Bu itibarla, Panel Raporu temelinde Türkiye açısından tahakkuk etmiş herhangi bir borç, mali yükümlülük veya vergi kaybı bulunmamaktadır.\n\nTicaret Bakanlığımız, milli otomotiv sanayimizin üretim kapasitesinin ve yatırımlarının desteklenmesi, sektörümüzün haksız ticaret uygulamalarına karşı korunması ve ülkemizin uluslararası ticaret hukukundan doğan hak ve menfaatlerinin etkin şekilde savunulması amacıyla gerekli politikaları ve tedbirleri kararlılıkla uygulamaktadır. Bu süreçte özel sektörümüzle yakın iş birliği içerisinde hareket edilmekte ve ülkemizin ekonomik menfaatleri uluslararası platformlarda titizlikle gözetilmektedir.\n\nBu kapsamda, DTÖ Panel Raporunun içeriği ve hukuki sonuçları konusunda kamuoyuna yansıtılan, raporun kapsamı ve DTÖ uyuşmazlık çözüm mekanizmasının işleyişiyle bağdaşmayan mesnetsiz değerlendirmelerin gerçeğe dayalı olmadığı, hukuki bazdan yoksun olduğu açıktır. Söz konusu raporun, Türkiye açısından otomatik bir tazminat veya ödeme yükümlülüğü oluşturduğu şeklindeki yorumlar, DTÖ uyuşmazlıklarının tabi olduğu hukuki çerçevenin kasten yanlış aktarılmasından kaynaklanmaktadır.\n\nTicaret Bakanlığımız, ülkemizin yerli ve milli üretim kapasitesinin geliştirilmesi, otomotiv sektörümüzde gerçekleştirilen yatırımların desteklenmesi ve üreticilerimizin haksız ticaret uygulamalarına karşı korunması amacıyla çalışmalarını sürdürecek ve bu kapsamda, ülkemizin ekonomik ve ticari menfaatlerinin korunması doğrultusunda, uluslararası tüm platformlarda gerekli adımlar atılmaya ve Türkiye’nin hakları kararlılıkla savunulmaya devam edilecektir.",
+      "published_at": "2026-09-15T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanlığı, Çin'in açtığı ve 28 Temmuz 2026'da yayımlanan DTÖ panel raporunun Türkiye'ye otomatik tazminat ya da mali yükümlülük getirdiği yorumlarını reddetti; rapor kesinleşmiş değil ve temyiz hakkı saklı. Elektrikli araçlara 4 Mart 2023'ten beri uygulanan ilave vergi dahil otomotiv koruma tedbirlerinin sürdürüleceği vurgulandı. Otomotiv ve yan sanayi üreticileri için ithalata karşı koruma rejiminde kısa vadede değişiklik beklenmediği anlamına geliyor.",
+      "key_points": [
+        "DTÖ panel raporu 28 Temmuz 2026'da yayımlandı; Bakanlığa göre kesinleşmiş nihai karar değil, Türkiye'nin temyiz hakkı var.",
+        "Rapor Türkiye için tazminat, mali borç veya vergi kaybı doğurmuyor; DTÖ'de panel kararıyla otomatik ödeme söz konusu değil.",
+        "Elektrikli araçlara 4 Mart 2023'ten beri uygulanan ilave vergiye ilişkin panel değerlendirmelerine katılınmadığı yinelendi.",
+        "Temyiz sürelerinin karşılıklı mutabakatla uzatılması değerlendiriliyor; taraflar arasındaki istişareler sürüyor.",
+        "Bakanlık yerli otomotiv sanayisini haksız rekabete karşı koruyan tedbirleri sürdüreceğini açıkladı."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "Dünya Ticaret Örgütü"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "wto",
+        "ticaret-bakanligi",
+        "elektrikli-arac",
+        "uyusmazlik-cozumu",
+        "korumacilik",
+        "cin"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 75,
+        "keyword": 80,
+        "recency": 60,
+        "corroboration": 45,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/haberler/ticaret-bakani-bolat-e-ticaret-ve-perakende-zirvesinde-konustu",
+      "title": "Ticaret Bakanı Bolat: E-ticaret hacmi 2025'te yüzde 52,2 artışla 4,5 trilyon lirayı geçti",
+      "body": "Ticaret Bakanı Ömer Bolat, Türkiye'de e-ticaret hacminin 2025 itibarıyla 4,5 trilyon lirayı geçtiğini ifade etti.\n\nTürkMedya'nın düzenlediği E-Ticaret ve Perakende Zirvesi, Ticaret Bakanı Ömer Bolat'ın katılımıyla İstanbul Finans Merkezi'ndeki Halkbank Genel Müdürlüğü'nde gerçekleştirildi.\n\nBolat, burada yaptığı konuşmada, dünya ekonomisinin salgın, savaşlar, enerji krizleri, gıda piyasasındaki krizler, lojistik ağlarındaki kırılmalar, tedarik zincirlerinin kopması gibi çok sayıda önemli sınamalardan geçildiğini söyledi.\n\nDünya ekonomisinin özellikle 2025 yılı başından bu yana da ticaret savaşlarının ve gümrük vergilerindeki büyük artışların yol açtığı korumacılık rüzgarının etkileri altında olumsuz bir dönemden geçtiğini söyleyen Bolat, \"Bu yıl büyüme oranının dünya ekonomisinde yüzde 3'e gerileyeceği tahmin ediliyor. 2024-2025 yıllarında yüzde 3,4 ortalaması vardı. Dünya ticaretinde de geçen yıl yüzde 4,6'lık büyüme varken bu yıl için yüzde 1,6'lık büyüme tahmini var.\" diye konuştu.\n\nBolat, ekonomideki durgunluğun en çok iç ticareti de etkilediğini belirterek, düzenlenen zirvenin ticaretin bugünü ve geleceği açısından önemli tartışmaları ve açıklamaları beraberinde getireceğini dile getirdi.\n\nDijitalleşmenin dev adımlarla ilerlediğine değinen Bolat, e-ticaret ve telekomünikasyondaki devrimlerin de hızlı bir şekilde ülkeye adapte olduğunu söyledi.\n\nBolat, Türkiye'de internet kullanımının 2026 itibarıyla yüzde 92,3 oranında olduğunu belirterek, \"İnternet üzerinden mal ve hizmet sipariş edenlerin oranı da 2026'da yüzde 60'a ulaşmış durumda.\" dedi.\n\nBakanlık olarak perakende ticaret ve e-ticaretle ilgili düzenlemeler konusunda sorumlu ve yetkili bir kuruluş olduğunu söyleyen Bolat, bu yönde yaptıkları çalışmalara ilişkin de bilgi verdi.\n\n- \"Perakende e-ticaret hacmi 2025'te yüzde 52'lik artışla 2,5 trilyon liraya ulaştı\"\n\nBakan Bolat, Elektronik Ticaret Bilgi Sistemi (ETBİS) verilerine göre, Türkiye'deki e-ticaret hacminin 2025 itibarıyla bir önceki yıla göre yüzde 52,2'lik artışla 4,5 trilyon lirayı geçtiğini belirterek, \"Dolar bazında e-ticaret hacmi 2025'te yüzde 29'luk artışla 115,5 milyar dolar oldu. Perakende e-ticaret hacmi de 2025'te yüzde 52'lik artışla 2,5 trilyon liraya ulaştı.\" ifadelerini kullandı.\n\nMilli gelir payına bakıldığında 2019'da e-ticaret hacminin milli gelirdeki payı yüzde 2,7 iken 2025'te yaklaşık yüzde 7'ye yükseldiğini söyleyen Bolat, bu 6 yıl içinde yaşanan Kovid-19 salgını döneminde e-ticaretten alışveriş yapanların sayısının da hızlandığını anlattı.\n\nBolat, 2025'te e-ticaretin genel ticaret içindeki payının yüzde 19,3'e yükseldiğini belirterek, \"Dünyada da benzer bir oran yükseldi. İşlem sayısı e-ticarette 2019'da 1 milyar 360 milyon işlem yapılmışken 2025'te yaklaşık 6 milyar e-ticaret işlemi yapıldı. E-ticaretin içinde perakende e-ticaretin işlem sayısı da 2019'da 380 milyon adet iken 2025'te yaklaşık 2 milyar adete yükseldi.\" ifadelerini kullandı.\n\nTürkiye genelinde 2025 sonu itibarıyla e-ticaret faaliyetinde bulunan işletme sayısının 634 bine ulaştığını bildiren Bolat, bu işletmelerin büyük bir kısmının KOBİ niteliğinde olduğunu aktardı.\n\nBolat, e-ticaret yapan işletmelerin yüzde 75'inin şahıs, yüzde 21'inin limited şirket, yüzde 4'ünün de anonim şirket olduğunu belirterek, e-ticaretin tabana yayıldığını dile getirdi.\n\nBakanlığın e-ticaret alanındaki düzenlemeleri hakkında bilgi veren Bolat, \"Amaç rekabeti bozucu faaliyetlerin, tüketicilerde oluşabilecek refah kaybının önüne geçmek ve çok oyunculu bir pazar yapısını tesis etmek ve satıcıların haksız ticari şartları alıcılara ya da tedarikçilere dayatmalarını engellemek.\" diye konuştu.\n\nBolat, 1 Temmuz'da yürürlüğe giren Avrupa Birliği'nin e-ithalat düzenlemesinde getirilen ek vergilerde, Gümrük Birliği olduğu için yapılan yoğun müzakerelerin sonucunda Türkiye'nin e-ihracat ürünlerine ekstra verginin getirilmediğini belirtti.\n\nBakanlık olarak Ankara ve İstanbul'da e-ihracat zirveleri düzenlendiğinden bahseden Bolat, aralık ayında e-ticaret haftası düzenleyeceklerini söyledi. Bolat, e-ihracatı destekleme noktasında yoğun gayretleri olduklarını belirterek, şunları kaydetti:\n\n\"İstanbul'da IGEXX'i ve Ankara'da e-ihracat zirvesini yapmamızın gayesi dünya pazarlarına e-ihracat rakamlarımızı artırmak. Burada dijital pazar yeri tanıtımı, sipariş karşılama hizmetleri ve pazar yeri komisyonları alanında önemli düzenlemeler getirdik. Bu yıl 134 firma bu desteklerden faydalanmış, 638 milyon lira Ticaret Bakanlığı'ndan e-ihracat konusunda destek almışlar. Şu anda 26 ülkeye yapılan e-ihracat bu destekler kapsamındadır. Amacımız bu rakamı ilk planda 35 ülkeye çıkarmaktır. E-ihracat konsorsiyum modelini getirdik. 15 firma bu konsorsiyum modeline katıldı.\"",
+      "published_at": "2026-09-15T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanı Ömer Bolat, ETBİS verilerine göre e-ticaret hacminin 2025'te yüzde 52,2 artışla 4,5 trilyon lirayı (115,5 milyar dolar) aştığını, e-ticaret yapan işletme sayısının 634 bine ulaştığını açıkladı. Bolat, AB'nin 1 Temmuz'da yürürlüğe giren e-ithalat düzenlemesindeki ek vergilerin Gümrük Birliği sayesinde Türkiye'nin e-ihracat ürünlerine uygulanmadığını söyledi. E-ihracata yönelen imalatçılar için Bakanlık desteklerinden bu yıl 134 firmanın 638 milyon lira aldığı bilgisi de önemli.",
+      "key_points": [
+        "E-ticaret hacmi 2025'te yüzde 52,2 artışla 4,5 trilyon lirayı geçti; dolar bazında 115,5 milyar dolar.",
+        "E-ticaretin genel ticaret içindeki payı 2025'te yüzde 19,3'e, milli gelirdeki payı yaklaşık yüzde 7'ye yükseldi.",
+        "AB'nin 1 Temmuz'da yürürlüğe giren e-ithalat düzenlemesindeki ek vergiler Türkiye'nin e-ihracat ürünlerine getirilmedi.",
+        "Bu yıl 134 firma e-ihracat desteklerinden 638 milyon lira yararlandı; aralık ayında e-ticaret haftası düzenlenecek.",
+        "Bolat, dünya ticaretinde bu yıl yüzde 1,6 büyüme beklendiğini, geçen yıl bu oranın yüzde 4,6 olduğunu hatırlattı."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "ETBİS"
+        ],
+        "kisi": [
+          "Ömer Bolat"
+        ],
+        "sektor": [
+          "Perakende"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "dis-ticaret",
+      "sentiment": "POZITIF",
+      "tags": [
+        "e-ticaret",
+        "e-ihracat",
+        "ihracat-destegi",
+        "ticaret-bakanligi",
+        "gumruk-birligi",
+        "perakende"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 55,
+        "keyword": 60,
+        "recency": 60,
+        "corroboration": 30,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/haberler/ticaret-bakani-omer-bolat-kayseride-60-yil-sanayi-gecesi-programinda-konustu",
+      "title": "Bolat Kayseri'de: 410 milyar dolar mal ve hizmet ihracatı hedefi, reeskont kredisinde günlük limit 5 milyar lira",
+      "body": "Ticaret Bakanı Ömer Bolat, \"Bu yıl 410 milyar dolar mal ve hizmet ihracatını hedefledik. İnşallah buna sizlerin sayesinde ve ihracatlarıyla ulaşacağız.\" dedi.\n\nBakan Bolat, Kayseri'deki temasları kapsamında Vali Gökmen Çiçek'i ziyaret ederek kentteki çalışmalarla ilgili bilgi aldı.\n\nArdından Büyükşehir Belediyesine geçen Bolat, Belediye Başkanı Memduh Büyükkılıç ve personel tarafından karşılandı. Büyükkılıç, ziyarette Bolat'a çalışmalarına ilişkin bilgi verdi.\n\nDaha sonra Kayseri Sanayi Odası tarafından 60. kuruluş yıl dönümü dolayısıyla düzenlenen \"60. Yıl Sanayi Gecesi\" programına katılan Bolat, yaptığı konuşmada, Kayseri'nin ticaretteki başarıları ve ekonomideki gücüyle takdirle yad edildiğini söyledi.\n\nBakan Bolat, son 23 yılda Cumhurbaşkanı Recep Tayyip Erdoğan'ın öncülüğünde Kayseri'ye 500 milyar lira tutarında kamu yatırımlarının yapıldığını ifade ederek, siyasi istikrar, ekonomik reformlar, doğru politikalar, alınması gereken tedbirler ve çalışkan yönetimlerle Türkiye ekonomisinin 7 kattan fazla büyüme gösterdiğini dile getirdi.\n\nTürkiye'nin, dünyanın 21. büyük ekonomisinden 16. büyük ekonomisine yükseldiğine dikkati çeken Bolat, şöyle konuştu:\n\n\"Bu yıl 410 milyar dolar mal ve hizmet ihracatını hedefledik. İnşallah buna sizlerin sayesinde ve ihracatlarıyla ulaşacağız. Bu yıl nisandan itibaren ihracatta gaza bastık. İhracatçılarımızın büyük çabaları, bizlerin hükümet olarak politikalarımız, tedbirlerimiz ve desteklerimizle nisan, haziran, temmuz ve ağustosta aylık rekorlar kırdık. Eylülde de inşallah aylık rekor kıracağız. Yıl sonuna kadar da 282 milyar dolar hedefi, birkaç milyar dolar aşarak inşallah hedeflerimizi aşacağız. Bunları söylüyorum ama şu hatırlatmayı da yapmak istiyorum. 2019'da Kovid'den hemen önce Türk sanayisi 100 birimken şu anda 130 birime ulaştı. Avrupa'daki belli başlı büyük ülkelerde 2019'da 100 birim sanayi üretimi varken 2025 yılı itibarıyla 95-98 birim arasında çaba sarf ediyorlar.\"\n\nBakan Bolat, Kovid'den bugüne kadar Türkiye'nin 6 yıl üst üste 24 çeyrek büyüdüğünü vurgulayarak, \"İhracat, sadece bir kelime değil. Yatırım, üretim, istihdam, ihraç. Onun için her ne suretle olursa olsun ihracat, kırmızı çizgimiz diyoruz.\" şeklinde konuştu.\n\nHükümetin ekonomi, üretim ve sanayiciler için fedakarlıklar yaptığını belirten Bolat, \"Bizim toplam bütçemizin yüzde 60'ını ihracat destekleri olarak sizlerle paylaşıyoruz. Yine Merkez Bankamızın ihracat reeskont kredileri var, maliyeti yüzde 23,95. Günlük limiti 5 milyar liraya çıkarttık. Hazine ve Maliye Bakanlığımız ile Merkez Bankamıza teşekkür ediyoruz. Göreve geldiğimizde 300 milyon liraydı günlük limit. Arkadaşlarla beraber çalışarak bunları artırıyoruz.\" bilgisini paylaştı.\n\nAK Parti Genel Başkanvekili Mustafa Elitaş da \"Ekonomi Koordinasyon Kurulunda Sayın Bakan'ımızla birlikte Türkiye sanayisinin, ticaretinin ve esnafının ne ihtiyacı varsa hepsini gayretle savunmaya çalışıyoruz.\" dedi.\n\n- \"İhracatta rekorlar desteklerin sayesinde sağlandı\"\n\nTürkiye Odalar ve Borsalar Birliği (TOBB) Başkanı Rifat Hisarcıklıoğlu da \"Özellikle KOBİ'lerimize yönelik kredi kısıtlarının kaldırılmasını talep ediyoruz. Finanslara ulaşım imkanlarının kolaylaşması lazım. Mobilya, tekstil başta olmak üzere ilave desteklere ihtiyacımız var. Burada başta Çin olmak üzere dış kaynaklı haksız ve yıkıcı rekabete karşı üreticimize destek verecek sanayi koruma stratejisinin hazırlanması lazım. Sağ olsun Ömer Bolat Bakan'ımızla, ihracatta rekorlar destekler sayesinde sağlandı. Bu sayede mal ve hizmetlerde ihracatımız, tarihimizde rekor bir seviyeye geldi.\" ifadelerini kullandı.\n\nKAYSO Başkanı Mehmet Büyüksimitci de \"Bugün mobilyadan elektrikli ev aletlerine, kablodan tekstile, metalden makineye, savunma sanayisinden havacılığa kadar pek çok alanda üretim yapıyoruz. 190'dan fazla ülkeye 4 milyar dolara yakın ihracat gerçekleştiriyor ve binlerce insanımıza istihdam sağlıyoruz.\" diye konuştu.\n\nBakan Bolat ve protokol üyeleri, konuşmaların ardından sanayicilere ödüllerini verdi.",
+      "published_at": "2026-09-15T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanı Bolat, Kayseri Sanayi Odası'nın 60. Yıl Sanayi Gecesi'nde bu yıl 410 milyar dolar mal ve hizmet ihracatı hedeflediklerini, mal ihracatında 282 milyar dolarlık hedefin aşılmasını beklediklerini söyledi. Merkez Bankası ihracat reeskont kredilerinin maliyetinin yüzde 23,95 olduğunu ve günlük limitin 5 milyar liraya çıkarıldığını belirtti. TOBB Başkanı Hisarcıklıoğlu ise KOBİ'lere yönelik kredi kısıtlarının kaldırılmasını ve Çin kaynaklı haksız rekabete karşı bir sanayi koruma stratejisi hazırlanmasını istedi; bu talepler İSO üyelerinin gündemiyle doğrudan örtüşüyor.",
+      "key_points": [
+        "2026 hedefi 410 milyar dolar mal ve hizmet ihracatı; mal ihracatında 282 milyar dolar hedefinin birkaç milyar dolar aşılması bekleniyor.",
+        "Merkez Bankası ihracat reeskont kredilerinin maliyeti yüzde 23,95; günlük limit 300 milyon liradan 5 milyar liraya çıkarıldı.",
+        "Bolat: Bakanlık bütçesinin yüzde 60'ı ihracat destekleri olarak kullandırılıyor.",
+        "TOBB Başkanı Hisarcıklıoğlu KOBİ kredi kısıtlarının kaldırılmasını, mobilya ve tekstile ilave destek ve Çin'e karşı sanayi koruma stratejisi istedi.",
+        "KAYSO Başkanı Büyüksimitci: Kayseri 190'dan fazla ülkeye 4 milyar dolara yakın ihracat yapıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "TOBB",
+          "Kayseri Sanayi Odası",
+          "TCMB"
+        ],
+        "kisi": [
+          "Ömer Bolat",
+          "Rifat Hisarcıklıoğlu",
+          "Mehmet Büyüksimitci",
+          "Mustafa Elitaş"
+        ],
+        "sektor": [
+          "Mobilya",
+          "Tekstil",
+          "Metal",
+          "Makine"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "dis-ticaret",
+      "sentiment": "NOTR",
+      "tags": [
+        "ihracat",
+        "reeskont-kredisi",
+        "kredi-maliyeti",
+        "cin-rekabeti",
+        "tobb",
+        "ticaret-bakanligi",
+        "kobi-finansmani"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 65,
+        "keyword": 70,
+        "recency": 60,
+        "corroboration": 35,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/haberler/turk-dunyasinda-yesil-donusum-ve-surdurulebilir-kalkinma-icin-ortak-vizyon",
+      "title": "Türk Ekonomileri 2025 Yılı Raporu \"Yeşil Ekonomiye Geçiş\" temasıyla yayımlandı",
+      "body": "Türk Devletleri Teşkilatı (TDT) bünyesinde yürütülen ortak çalışmalar kapsamında hazırlanan “Türk Ekonomileri 2025 Yılı Raporu”, “Yeşil Ekonomiye Geçiş” temasıyla yayımlandı.\n\nTürk Resmi Ekonomi Politikaları Araştırma Merkezleri Ağı (ERCNET), TDT Genel Sekretaryası ve Türk Yatırım Fonu iş birliğinde hazırlanan rapor, Türk Akademisi (Turkic Academy) tarafından kamuoyuna sunuldu.\n\nTÜRK DÜNYASININ YEŞİL DÖNÜŞÜM POTANSİYELİ ANALİZ EDİLDİ\n\nTicaret Bakanlığı Ticaret Araştırmaları ve Risk Değerlendirme Genel Müdürlüğü koordinasyonunda, İhracat Genel Müdürlüğü ile Uluslararası Anlaşmalar ve Avrupa Birliği Genel Müdürlüğünün katkılarıyla hazırlanan rapora; Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı ile Çevre, Şehircilik ve İklim Değişikliği, Dışişleri, Enerji ve Tabii Kaynaklar, Hazine ve Maliye ile Sanayi ve Teknoloji Bakanlıkları da katkı sağladı.\n\nRaporda, TDT üyesi ve gözlemci ülkelerin ekonomik potansiyeli, yeşil enerji dönüşümü, sürdürülebilirlik ve döngüsel ekonomi alanlarındaki fırsatlar kapsamlı şekilde ele alındı.\n\nÇalışma, TDT 2040 Vizyonu doğrultusunda Türk dünyasının sürdürülebilir ve dirençli bir ekonomik yapıya kavuşmasına, bölgesel iş birliğinin güçlendirilmesine ve küresel değer zincirlerindeki rekabet gücünün artırılmasına yönelik stratejik değerlendirmeler ortaya koymaktadır.\n\nTÜRK YEŞİL VİZYONU DOĞRULTUSUNDA ORTAK ADIMLAR\n\nTürkiye, sürdürülebilir kalkınma hedefleri ve Yeşil Mutabakata Uyum vizyonu doğrultusunda, 6 Kasım 2024 tarihinde Bişkek’te gerçekleştirilen 11. TDT Devlet Başkanları Zirvesi’nde kabul edilen “Türk Yeşil Vizyonu” çerçevesinde Türk dünyasında yeşil dönüşüm çalışmalarına öncülük etmektedir.\n\nBu kapsamda; çevre dostu üretim ve ticaretin geliştirilmesi, yeşil enerji kaynaklarının etkin kullanılması, döngüsel ekonomi uygulamalarının yaygınlaştırılması ve Türk dünyasının küresel değer zincirlerindeki konumunun güçlendirilmesi hedeflenmektedir.\n\nTicaret Bakanlığı olarak Türk dünyasının ortak ekonomik geleceğine katkı sağlayacak çalışmaları, sürdürülebilirlik ve yeşil dönüşüm ekseninde kararlılıkla sürdürmeye devam edeceğiz.\n\nRaporun hazırlanmasına katkı sunan Türk Akademisi, TDT Genel Sekretaryası, ERCNET üyesi araştırma merkezleri, Türk Yatırım Fonu ve ilgili tüm kurumlara teşekkür ederiz.",
+      "published_at": "2026-09-16T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanlığı koordinasyonunda hazırlanan Türk Ekonomileri 2025 Yılı Raporu, Türk Devletleri Teşkilatı üyesi ve gözlemci ülkelerin yeşil enerji dönüşümü, sürdürülebilirlik ve döngüsel ekonomi alanlarındaki fırsatlarını ele aldı. Rapor, Türk dünyasının küresel değer zincirlerindeki rekabet gücünü artırmaya yönelik stratejik değerlendirmeler içeriyor. Orta Asya pazarlarına açılan ve yeşil dönüşüm yatırımı planlayan imalatçılar için bölgesel iş birliği fırsatlarına dair bir çerçeve sunuyor.",
+      "key_points": [
+        "Rapor ERCNET, TDT Genel Sekretaryası ve Türk Yatırım Fonu iş birliğinde hazırlandı, Türk Akademisi tarafından yayımlandı.",
+        "Ticaret Bakanlığı Ticaret Araştırmaları ve Risk Değerlendirme Genel Müdürlüğü koordinasyonunda, altı bakanlık ve SBB katkısıyla hazırlandı.",
+        "Yeşil enerji dönüşümü, sürdürülebilirlik ve döngüsel ekonomi fırsatları TDT 2040 Vizyonu çerçevesinde değerlendirildi.",
+        "Türkiye, 6 Kasım 2024'te Bişkek'te kabul edilen Türk Yeşil Vizyonu çerçevesinde yeşil dönüşüm çalışmalarına öncülük ediyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "Türk Devletleri Teşkilatı",
+          "Türk Akademisi",
+          "Türk Yatırım Fonu"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "ASYA",
+      "category": "cevre",
+      "sentiment": "POZITIF",
+      "tags": [
+        "yesil-donusum",
+        "dongusel-ekonomi",
+        "surdurulebilirlik",
+        "ticaret-bakanligi",
+        "yesil-mutabakat"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 35,
+        "keyword": 50,
+        "recency": 64,
+        "corroboration": 20,
+        "reach": 40
+      }
+    },
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/haberler/ticaret-bakani-omer-bolat-italya-basbakan-yardimcisi-tajani-ve-italyan-is-dunyasinin-temsilcileriyle-gorustu",
+      "title": "Bolat Roma'da Tajani ile görüştü: Türkiye-İtalya ticareti 8 ayda 19 milyar doları aştı, hedef 40 milyar dolar",
+      "body": "Ticaret Bakanı Ömer Bolat, İtalya’da dış ticaretten sorumlu Başbakan Yardımcısı ve Dışişleri Bakanı Antonio Tajani ile görüşmesinin yanı sıra İtalyan iş dünyasından temsilcilerle bir araya geldi.\n\nResmi temaslarda bulunmak üzere bu sabah İtalya’nın başkenti Roma’ya gelen Bakan Bolat, burada ilk olarak dış ticaretten sorumlu Başbakan Yardımcısı ve Dışişleri Bakanı Tajani ile bakanlıkta bir araya geldi.\n\nİki bakan burada heyetler arası görüşmeye başkanlık ettiler.\n\nBakan Bolat ve Tajani, görüşmelerinin ardından Türkiye-İtalya iş insanları toplantısına katıldı.\n\nTicaret Bakanı Bolat'a, Roma'daki temaslarında Ticaret Bakan Yardımcısı Mustafa Tuzcu, Türkiye'nin Roma Büyükelçisi Elif Çomoğlu Ülgen eşlik etti.\n\nBakan Bolat, X platformundaki hesabından Roma'daki temaslarına ilişkin bir paylaşımda bulundu.\n\nİtalyan mevkidaşı Tajani ile verimli bir görüşme gerçekleştirdiklerini belirten Bolat, \"İkili ticari ve ekonomik ilişkilerimizi, karşılıklı yatırımlarımızı, üçüncü ülkelerde Türk ve İtalyan firmalarının işbirliği imkânlarını ele aldık. Kapsamlı ve derin Türkiye-İtalya ilişkilerini, uzay ve savunma teknolojileri, kritik ham maddeler, enerji, telekomünikasyon, ulaştırma ve altyapı gibi önemli işbirliği alanlarında daha da ileriye taşıyabilmek için atacağımız adımları istişare ettik.\" ifadelerini kullandı.\n\nBolat, Tajani ile AB'nin son dönem ticaret, sanayi ve rekabet politikalarını da değerlendirdiklerini ifade ederek, \"AB ülkeleri arasında ikinci büyük ticaret ortağımız olan İtalya’nın Türkiye-AB ilişkileri bakımından önemini vurguladık ve güçlü ikili ilişkilerimizin güçlü Türkiye-AB ilişkilerinin de temelini oluşturduğunu birlikte teyit ettik. Bu anlayışla Gümrük Birliği'nin düzgün işleyişinin ve ekonomik entegrasyonumuzu kamu alımları, dijital ticaret, hizmetler gibi alanları kapsayarak genişletilmesinin kritik önemde olduğunu değerlendirdik.\" yorumunu yaptı.\n\n\"Tajani ile görüşmemizde özellikle AB'nin yeni sanayi politikaları ve ‘Made in EU’ yaklaşımına ilişkin Türkiye'nin görüş ve beklentilerini de paylaştık; karşılıklı son derece verimli görüş alışverişinde bulunduk. Türkiye’nin hem Gümrük Birliği ortağı ve aday ülke olarak hem de NATO müttefiki olarak Avrupa sanayi ve tedarik zincirlerinin ayrılmaz bir parçası olduğunu, özellikle otomotiv sektöründe yıllar içinde oluşan güçlü üretim ve tedarik ağlarının korunmasının hem Türkiye hem Avrupa'nın rekabet gücü açısından önem taşıdığını vurguladık.\"\n\nTicaret Bakanı Bolat ayrıca Türkiye ile İtalya arasında 2025 yılında 30 milyar dolara yaklaşan ikili ticaret hacmini, Cumhurbaşkanı Recep Tayyip Erdoğan ve İtalya Başbakanı Giorgia Meloni tarafından belirlenen 40 milyar dolarlık hedef doğrultusunda daha da ileri taşımak için çalışmalarını sürdürdüklerini belirterek, \"2026 yılının ilk 8 ayında ticaret hacmimiz 19 milyar doların üzerine çıkmıştır. Türkiye ve İtalya arasındaki güçlü ekonomik entegrasyonumuzu ortak projelerimizle daha da geliştirmeye ve hem Türkiye-AB ilişkilerine hem de Akdeniz başta olmak üzere bölgemizde ve dünyada istikrara katkı sağlamaya devam edeceğiz.\" değerlendirmesinde bulundu.",
+      "published_at": "2026-09-18T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanı Bolat, İtalya Başbakan Yardımcısı Tajani ile Roma'da görüşerek AB'nin yeni sanayi politikaları ve 'Made in EU' yaklaşımına ilişkin Türkiye'nin beklentilerini iletti; özellikle otomotivde oluşmuş üretim ve tedarik ağlarının korunmasının önemini vurguladı. Türkiye-İtalya ticaret hacmi 2025'te 30 milyar dolara yaklaşmış, 2026'nın ilk 8 ayında 19 milyar doları aşmıştı; hedef 40 milyar dolar. Avrupa tedarik zincirine entegre İSO üyeleri için 'Made in EU' kurallarının kapsamı kritik bir risk başlığı.",
+      "key_points": [
+        "2026'nın ilk 8 ayında Türkiye-İtalya ticaret hacmi 19 milyar doları aştı; 2025'te 30 milyar dolara yaklaşmıştı.",
+        "Erdoğan ve Meloni'nin belirlediği ikili ticaret hedefi 40 milyar dolar.",
+        "AB'nin yeni sanayi politikaları ve 'Made in EU' yaklaşımına ilişkin Türkiye'nin görüş ve beklentileri paylaşıldı.",
+        "Bolat, otomotivde yıllar içinde oluşan üretim ve tedarik ağlarının korunmasının hem Türkiye hem Avrupa'nın rekabet gücü için önemli olduğunu vurguladı.",
+        "Gümrük Birliği'nin kamu alımları, dijital ticaret ve hizmetleri kapsayacak şekilde genişletilmesi gündemde."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "Avrupa Birliği"
+        ],
+        "kisi": [
+          "Ömer Bolat",
+          "Antonio Tajani",
+          "Mustafa Tuzcu"
+        ],
+        "sektor": [
+          "Otomotiv",
+          "Savunma Sanayi",
+          "Enerji"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ticaret-politikasi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "italya",
+        "gumruk-birligi",
+        "ab-turkiye",
+        "sanayi-politikasi",
+        "tedarik-zinciri",
+        "ticaret-bakanligi"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 60,
+        "keyword": 65,
+        "recency": 72,
+        "corroboration": 30,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/haberler/ticaret-bakanligi-2026-yilinin-ilk-8-ayinda-gerceklestirdigi-ikincil-kontrol-beyanname-incelemeleri-ve-sonradan-kontrol-firma-denetimleri-sonucunda-gecen-yila-gore-32-artisla-toplam-10-1-milyar-tl-ek-tahakkuk-ve-ceza-karari-duzenleyerek-durust-ticaret-erbabi",
+      "title": "Ticaret Bakanlığı: İlk 8 ayda gümrük sonradan kontrollerinde yüzde 32 artışla 10,1 milyar TL ek tahakkuk ve ceza",
+      "body": "Ticaret Bakanlığı, dış ticaret işlemlerinde vergi kayıp ve kaçağının önlenmesi ve gümrük işlemlerini mevzuata uygun şekilde gerçekleştiren dış ticaret erbabının haklarının gözetilmesi amacıyla geçmiş dönemlere ilişkin gümrük ve dış ticaret işlemlerinin denetimini etkin ve kararlı bir şekilde sürdürüyor.\n\nBu kapsamda, Ticaret Araştırmaları ve Risk Değerlendirme Genel Müdürlüğü koordinasyonunda yürütülen kontrol çalışmaları sonucunda, 2026 yılının ilk 8 ayında toplam 10,1 milyar TL ek tahakkuk ve ceza kararı düzenlendi.\n\nTİCARET BAKANLIĞI’NIN İKİNCİL KONTROL BEYANNAME İNCELEMELERİNDE %37 ARTIŞLA 8,3 MİLYAR TL EK TAHAKKUK VE CEZA KARARI DÜZENLENDİ\n\n18 Gümrük ve Dış Ticaret Bölge Müdürlüğü bünyesindeki Kontrol Şubeleri tarafından gerçekleştirilen İkincil Kontrol Beyanname İncelemeleri kapsamında;\n\n717 İkincil Kontrol Raporu kapsamında 142.768 gümrük beyannamesi ikinci kez incelendi.\n\n3.606 firma tarafından tescil edilen ve usulsüzlük tespit edilen 23.132 gümrük beyannamesine 8,3 milyar TL ek tahakkuk ve ceza kararı düzenlendi.\n\nGerçekleştirilen incelemeler sonucunda toplam 8 ,3 milyar TL ek tahakkuk ve ceza kararı düzenlendi ve geçen yılın aynı dönemine göre yüzde 37 artış sağlandı.\n\nTİCARET BAKANLIĞI’NIN SONRADAN KONTROL DENETİMLERİ SONUCU %12 ARTIŞLA 1,8 MİLYAR TL EK TAHAKKUK VE CEZA KARARI DÜZENLENDİ\n\nTicaret Araştırmaları ve Risk Değerlendirme Genel Müdürlüğünce kullanılan ileri veri analitiği tekniklerinden faydalanılarak belirlenen riskli firmalar üzerinde Ticaret Bakanlığı Müfettişleri tarafından gerçekleştirilen Sonradan Kontrol Firma Denetimleri kapsamında 160 firma denetlendi.\n\nSöz konusu denetimler sonucunda toplam 1,8 milyar TL ek tahakkuk ve ceza kararı düzenlendi ve geçen yılın aynı dönemine göre yüzde 12 artış sağlandı.\n\nBöylece, 2026 yılının ilk 8 ayında gerçekleştirilen İkincil Kontrol Beyanname İncelemeleri ile Sonradan Kontrol Firma Denetimleri sonucunda toplam 10,1 milyar TL ek tahakkuk ve ceza kararı düzenlenmiş oldu.\n\nSöz konusu tutar, bir önceki yılın aynı dönemine göre yüzde 32 artış gösterdi.\n\nTicaret Bakanlığı, dış ticaret işlemlerinin mevzuata uygun şekilde gerçekleştirilmesini sağlamak, vergi kayıp ve kaçağını önlemek ve kurallara uygun faaliyet gösteren firmaların haklarını korumak amacıyla geçmiş dönem gümrük ve dış ticaret işlemlerine yönelik kontrollerini etkin şekilde yürütmeye devam edecektir.",
+      "published_at": "2026-09-21T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanlığı, 2026'nın ilk 8 ayında ikincil kontrol beyanname incelemeleri ve sonradan kontrol firma denetimleri sonucunda geçen yılın aynı dönemine göre yüzde 32 artışla toplam 10,1 milyar TL ek tahakkuk ve ceza kararı düzenledi. 3.606 firmanın 23.132 beyannamesinde usulsüzlük tespit edildi; riskli firmalar ileri veri analitiğiyle belirleniyor. İthalat yapan imalatçılar için geçmiş dönem gümrük beyannamelerindeki kıymet, menşe ve GTİP uyumunun gözden geçirilmesi gerektiğine işaret ediyor.",
+      "key_points": [
+        "İlk 8 ayda toplam 10,1 milyar TL ek tahakkuk ve ceza kararı düzenlendi; artış yüzde 32.",
+        "717 ikincil kontrol raporu kapsamında 142.768 beyanname yeniden incelendi; 3.606 firmanın 23.132 beyannamesine 8,3 milyar TL (yüzde 37 artış) tahakkuk ve ceza.",
+        "İleri veri analitiğiyle belirlenen 160 riskli firma denetlendi; 1,8 milyar TL (yüzde 12 artış) ek tahakkuk ve ceza.",
+        "Kontroller 18 Gümrük ve Dış Ticaret Bölge Müdürlüğü bünyesindeki kontrol şubelerince yürütülüyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "Ticaret Araştırmaları ve Risk Değerlendirme Genel Müdürlüğü"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "mevzuat",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "gumruk",
+        "vergi-denetimi",
+        "idari-para-cezasi",
+        "ithalat",
+        "ticaret-bakanligi",
+        "veri-analizi"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 60,
+        "keyword": 65,
+        "recency": 84,
+        "corroboration": 25,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "ticaret-bakanligi",
+      "url": "https://ticaret.gov.tr/haberler/ticaret-bakani-omer-bolat-4-turk-amerikan-is-dunyasi-bulusmasinda-konustu",
+      "title": "Bolat New York'ta: Ağustos itibarıyla yıllık ihracat 405 milyar dolar, ABD ile ticaret hacmi 38 milyar dolar",
+      "body": "Ticaret Bakanı Ömer Bolat, Türkiye ekonomisinin ihracatın artırılması ve ödemeler dengesinin iyileştirilmesiyle daha da güçleneceğini belirtti.\n\nBirleşmiş Milletler (BM) 81. Genel Kurulu'na katılmak üzere New York'ta bulunan Cumhurbaşkanı Recep Tayyip Erdoğan'a eşlik eden Bolat, Anadolu Aslanları İş Adamları Derneğinin (ASKON) 4. Türk-Amerikan İş Dünyası Buluşması'nda konuştu.\n\nTürkiye ekonomisinin son yıllardaki dönüşümüne ilişkin değerlendirmelerde bulunan Bolat, Türkiye'nin 1980'de yaklaşık 60 milyar dolarlık bir ekonomiye ve 2,9 milyar dolarlık yıllık ihracata sahip olduğunu, o dönemde ülkede yaklaşık 25 bin şirket ve 1000 civarında ihracatçı bulunduğunu söyledi.\n\nBolat, Türkiye'nin 45 yıl içinde ekonomik kapasitesini önemli ölçüde artırdığını belirterek, haziran itibarıyla ülkenin üretiminin 1 trilyon 706 milyar dolara ulaştığını bildirdi.\n\nTürkiye'nin ağustos itibarıyla 280 milyar dolar mal, 125 milyar dolar hizmet ihracatı olmak üzere toplam 405 milyar dolarlık ihracat gerçekleştirdiğini belirten Bolat, ithalatla birlikte Türkiye'nin toplam dış ticaret hacminin 860 milyar dolara ulaştığını aktardı.\n\nBolat, Türkiye'nin dünyanın 16'ncı büyük ekonomisi olduğunu, satın alma gücü paritesine göre ise 11'inci sırada bulunduğunu belirterek, son 23 yılda yıllık ortalama yüzde 5,4 büyüme kaydedildiğini ifade etti.\n\nBakan Bolat, \"Altyapı, üstyapı, eğitim, sağlık, enerji, çevre, kültürel hizmetler, gençlik merkezleri, spor tesisleri, ulaştırma hizmetleri, Türkiye baştan aşağı yenilendi, dünyanın en yeni ülkelerinden biri haline geldi.\" dedi.\n\nTürkiye'nin dünyadaki saygınlık ve itibarına işaret eden Bolat, Türk mallarının imajına, Türkiye'nin teknoloji ve üretim kapasitesine dikkati çekti.\n\nBolat, Türk hizmetler sektörünün turizm, müteahhitlik, sağlık, eğitim, bilişim, yazılım, oyun ve fuarcılık gibi alanlarda uluslararası alanda öne çıktığını söyledi.\n\nBakan Bolat, \"Bu saygınlık, itibar ülkenin ekonomisine, dış ticaretine, ihracatına, turizmine yansıyor. Bu bir komple ekosistem.\" diye konuştu.\n\nTürkiye ile ABD arasındaki ilişkilere de değinen Bolat, ABD'nin Türkiye'nin ikinci büyük ihracat ortağı ve dördüncü büyük ithalat ortağı olduğunu belirtti.\n\nBolat, ABD'nin Türkiye'ye en fazla yatırım gönderen ikinci ülke olduğunu ve bu ülkeden Türkiye'ye yaklaşık 1 milyon turist geldiğini ifade etti.\n\nİki ülke arasında güçlü ekonomik ilişkiler olduğunu vurgulayan Bolat, Türkiye'nin ABD ile dış ticaret hacminin 38 milyar dolara ulaştığını kaydetti.\n\nBolat, ABD'deki Türk iş dünyasının iki ülke arasındaki ticaretin geliştirilmesinde önemli rol oynadığını belirterek, \"Sizlerin buradaki varlığınız bizim 38 milyar dolarlık dış ticaretimize ulaşmamızdaki en büyük faktör.\" dedi.\n\nBakan Bolat, \"Cumhurbaşkanımızın liderliğinde el birliğiyle ülkemizi daha yükseklere taşıyacağız. Ne kadar çok ekonomimizi geliştirirsek, ne kadar çok ihracatımızı artırırsak, ödemeler dengemizi ne kadar iyi hale getirirsek Türkiye ekonomisi çok daha güçlü olacak.\" diye konuştu.\n\n- \"Ticaret hacmini 100 milyar dolar seviyesine taşıma hedefini son derece önemsiyoruz\"\n\nASKON Genel Başkanı Orhan Aydın da dünya ekonomisinin çok hızlı bir dönüşümden geçtiğini belirterek, değişimin doğru okunması, fırsatların zamanında görülmesi ve cesaretle hareket edilmesi gereken bir dönemden geçildiğini aktardı.\n\nAydın, \"Türkiye ile ABD arasındaki ekonomik ilişkilere tam da bu perspektiften bakmak gerektiğini düşünüyorum. İki ülke arasındaki ticaret hacmini 100 milyar dolar seviyesine taşıma hedefini son derece önemsiyoruz.\" dedi.\n\nBunun yalnızca bir rakamdan ibaret olmadığını kaydeden Aydın, \"100 milyar dolar demek daha fazla Türk şirketinin Amerika pazarına girmesi, daha fazla Amerikalı yatırımcının Türkiye'ye yatırım yapması, daha fazla ortak üretim, daha fazla teknoloji transferi, daha fazla istihdam ve daha güçlü bir ekonomik ortaklık demek. Bunun için elimizden gelen tüm gayretleri ve imkanları seferber edeceğiz.\" diye konuştu.\n\nAydın, Türkiye'nin üretim gücüyle Amerika'nın teknoloji ve sermaye kapasitesinin enerjiden savunma sanayine, havacılıktan yazılıma, yapay zekadan tarıma, turizmden yüksek teknoloji üretime kadar çok geniş bir alanda ortak projelerde buluşturulabileceğini ifade etti.",
+      "published_at": "2026-09-23T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ticaret Bakanı Bolat, ASKON'un New York'taki 4. Türk-Amerikan İş Dünyası Buluşması'nda Türkiye'nin ağustos itibarıyla 280 milyar dolar mal ve 125 milyar dolar hizmet olmak üzere toplam 405 milyar dolar ihracat yaptığını, ABD ile dış ticaret hacminin 38 milyar dolara ulaştığını söyledi. ABD, Türkiye'nin ikinci büyük ihracat pazarı. ASKON, iki ülke arasında 100 milyar dolarlık ticaret hedefini öne çıkardı; ABD pazarındaki tarife ortamını izleyen ihracatçı imalatçılar için ilişkinin seyri önemli.",
+      "key_points": [
+        "Ağustos itibarıyla (12 aylık) ihracat: 280 milyar dolar mal, 125 milyar dolar hizmet, toplam 405 milyar dolar; dış ticaret hacmi 860 milyar dolar.",
+        "ABD, Türkiye'nin ikinci büyük ihracat ortağı ve dördüncü büyük ithalat ortağı; ikili ticaret hacmi 38 milyar dolar.",
+        "Türkiye'nin üretimi haziran itibarıyla 1 trilyon 706 milyar dolar; son 23 yılda yıllık ortalama büyüme yüzde 5,4.",
+        "ASKON Genel Başkanı Orhan Aydın ikili ticareti 100 milyar dolara taşıma hedefini vurguladı."
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "ASKON"
+        ],
+        "kisi": [
+          "Ömer Bolat",
+          "Orhan Aydın",
+          "Recep Tayyip Erdoğan"
+        ],
+        "sektor": []
+      },
+      "region": "AMERIKA",
+      "category": "dis-ticaret",
+      "sentiment": "POZITIF",
+      "tags": [
+        "abd",
+        "ihracat",
+        "ihracat-pazari",
+        "ticaret-bakanligi",
+        "odemeler-dengesi"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 50,
+        "keyword": 55,
+        "recency": 92,
+        "corroboration": 35,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "iso",
+      "url": "https://www.iso.org.tr/haberler/meclis-konusmasi/iso-baskani-erdal-bahcivan-gorevimi-huzurla-devrediyorum-ancak-turkiyenin-uretim-davasina-olan-inancimi-devretmiyorum-turkiyenin-gelecegi-uretimdedir/",
+      "title": "İSO Başkanı Bahçıvan eylül meclisinde: \"Enflasyonla mücadele sanayinin üretim gücünü zayıflatmamalı\"",
+      "body": "İstanbul Sanayi Odası (İSO) Meclisinin eylül ayı olağan toplantısı “Marka değeri güçlü, daha vizyoner bir İSO için dünya, bölge, Türkiye ve üretim hayatı üzerine düşünceler, değerlendirmeler” ana gündemi ile Odakule Fazıl Zobu Meclis Salonu’nda gerçekleştirildi.\n\nİSO Meclis Başkan Yardımcısı Sadık Ayhan Saruhan’ın başkanlık ettiği, İSO Yönetim Kurulu Başkanı Erdal Bahçıvan’ın açılış konuşmasını yaptığı 2022/2026 çalışma döneminin bu son meclis toplantısında İSO Meclis Üyeleri gündeme yönelik değerlendirmelerini paylaştı.\n\nT.C. Beyoğlu Kaymakamı A. Atakan Atasoy, İSO Yönetim Kurulu Üyeleri ve İSO Meclis Üyeleri’nin yer aldığı Meclis toplantısını basın mensupları da ilgiyle takip etti.\n\nİSO Yönetim Kurulu Başkanı Erdal Bahçıvan, Meclis toplantısının açılışında yaptığı konuşmada, görev dönemleri boyunca üretimin gücünü korumayı, sanayicinin rekabetçiliğini geliştirmeyi ve İSO’nun sanayinin güçlü sesi olmasını temel öncelik olarak gördüklerini vurguladı. Enflasyon, yüksek maliyetler ve sıkı finansal koşullar karşısında sanayinin üretim gücünün korunması gerektiğini söyledi. Bahçıvan, “Görevimi huzurla devrediyorum ancak Türkiye’nin üretim davasına olan inancımı devretmiyorum. Türkiye’nin geleceği üretimdedir. Sanayisine sahip çıkan bir Türkiye’nin aşamayacağı hiçbir engel yoktur” dedi.\n\nİSO eylül ayı Meclis toplantısı, İSO Meclis Başkan Yardımcısı Sadık Ayhan Saruhan tarafından açıldı. Saruhan, ana gündem maddesine ilişkin yaptığı konuşmada şunları söyledi:\n\n“Bizler çok iyi biliyoruz ki: Ticaret ailelerin, sanayi ise toplumların refahını artırır. Güçlü bir sanayi; yalnızca fabrikaların büyümesi değil; daha fazla istihdam, daha yüksek gelir ve daha güçlü bir toplumsal refah demektir. Bu nedenle sanayileşme bilincinin sadece bizler tarafından değil, toplumun tamamı tarafından anlaşılması gerekir. İstanbul Sanayi Odası bu bilincin topluma kazandırılması için büyük bir gayret göstermektedir. Bu anlayışla, geride bıraktığımız 4 yıl boyunca durmaksızın çalıştık. Türk sanayisinin önünün açılması için; bakanlarımızla, bürokratlarımızla, sivil toplum kuruluşlarımızla ve akademisyenlerimizle yan yana, omuz omuza çok sayıda ortak çalışma yürüttük. Çünkü Sanayicinin önünü açmanın Türkiye'nin önünü açmak olduğuna inanıyoruz. Elbette finansmana erişimden nitelikli insan kaynağına, enerji maliyetlerinden mevzuata kadar pek çok yapısal sorunumuz mevcut.\n\nAncak sanayi, uzun vadeli düşünmeyi gerektirir. Bugün atılan bir adımın sonucunu yıllar sonra alırsınız. Bu yüzden günü kurtaran değil, geleceği kuran politikalara ihtiyacımız var. En büyük önceliğimiz, üyelerimizi Ar-Ge ve inovasyon çalışmalarına yönlendirmek, Teknopark ve Ar-Ge merkezleriyle güçlü bağlar kurmalarını teşvik etmek olmalıdır. Unutmamalıyız ki, üyelerimizin kendi iç yenilikçi kapasitelerini geliştiremediğimiz sürece, en gelişmiş teknoloji transfer politikaları bile bu merkezlerden beklenen verimi alamayacaktır. Dolayısıyla, İstanbul Sanayi Odası olarak artık yeni fikirler ve söylemler üretmenin ötesine geçerek sahada somut adımlar atmak zorundayız. Süreç içerisinde yürüttüğümüz ETP (Endüstriyel Tasarım Prototipleme Projesi) ve nitelikli okul, mezun ve istihdamı hedeflediğimiz ve sadece öğrencilerin değil eğiticilerin de niteliklerinin arttırılmasının amaçlandığı İSO MEİP (Mesleki Eğitim İşbirliği Projesi) gibi güçlü adımları atmalı ve nitelikli insan kaynağımızı güçlendirecek İSO Akademi’ye benzer yeni ve vizyoner somut projeleri hızla hayata geçirmeliyiz.”\n\nAna gündem maddesine ilişkin görüşlerini paylaşmasının ardından İSO Meclis Başkan Yardımcısı Sadık Ayhan Saruhan, gündeme dair konuşmasının ardından açılış konuşmasını gerçekleştirmek üzere İSO Yönetim Kurulu Başkanı Erdal Bahçıvan’ı kürsüye davet etti.\n\nİSO Yönetim Kurulu Başkanı Erdal Bahçıvan, İstanbul Sanayi Odasının tüm sanayiciler için kıymetli bir yuva ve değerli bir marka olduğuna söyledi, “Biz sanayicilerin hayatında anlamlı yeri olan bu kurumu her açıdan güçlü kılmak öncelikli hedefimiz. Çok net bir şekilde ifade edecek olursam; sanayimize sahip çıkmanın, sanayimizin sorunlarını çözmenin yolu güçlü bir İSO’dan geçiyor. Siz değerli meclis üyelerimizin de kıymetli görüş ve önerileriyle İstanbul Sanayi Odası’nın gücüne güç katma çabalarına herkes destek olmalıdır” dedi.\n\nBu yılın son çeyreğine girerken, Orta Doğu Savaşı, Rusya-Ukrayna Savaşı, Rusya ve Almanya arasındaki gerilim, derinleşen tedarik sorunları, yükselen maliyetler, sıkılaşan finansal koşullar gibi gibi yaşanan pek çok gelişmenin dünya ekonomisinin yeniden bir stres testinden geçmekte olduğunu gösterdiğini belirten Bahçıvan, şu ifadeleri kullandı:\n\n“Tüm dünya gibi ülkemiz de -savaş bölgelerine olan yakınlığının da etkisiyle- jeopolitik çalkantıların etkilerini birçok kanaldan hissediyor. En önemli etkilerden biri, hiç şüphesiz ekonomik büyüme tarafında görülüyor. 2026 yılında büyümenin yüzde 3’ün hafif üzerinde gerçekleşmesi bekleniyor. Büyüme yavaşlarken, sanayi sektörünün genel ekonomiden negatif ayrıştığını ve sektörlerimiz için zorlu koşulların artarak devam ettiğini de unutmamak gerekiyor. Enflasyon ise en önemli makro kırılganlığımız olmaya devam ediyor. Ve ne yazık ki, savaş bu alandaki faturayı daha da artırmış durumda.”\n\nAçıklanan OVP’de sanayiyi önceleyen yaklaşımın geçmiş dönemlere göre daha güçlü biçimde yer aldığını da vurgulayan Bahçıvan, sözlerini şu şekilde sürdürüdü:\n\n“Ankara’da sanayiyi pozitif ayrıştırmaya ve önümüzdeki üç yıllık dönemde sanayinin rekabet gücünü koruyacak farklı modelleri devreye almaya yönelik güçlü bir iradenin oluştuğunu gözlemliyoruz. Bunun ilk adımlarını da finansman tarafında görmeye başladık. Ancak bir kere daha önemle uyarmak isterim ki; enflasyonla mücadelenin sanayinin üretim gücünü zayıflatmaması gerekiyor.\n\nAksi halde bugün talep üzerinden çözmeye çalıştığımız enflasyon sorununun yarın üretim ve arz tarafında yeni bir probleme dönüşme riskiyle karşılaşabiliriz. Ekonomi yönetiminin meselenin farkında olduğunu görmek bizim için önemlidir. Önümüzdeki dönemde sanayiye yönelik daha uzun vadeli finansman imkânlarının, sektörlerin kendi gerçeklerini dikkate alan destek mekanizmalarının ve rekabet gücünü koruyacak yeni araçların devreye alınmasını bekliyoruz. Türkiye’nin emek yoğun sektörlerden vazgeçme lüksü yoktur. Bu sektörlerde de üretimimizi, istihdamımızı ve rekabet gücümüzü mutlaka korumalıyız.”\n\nKonuşmasında İSO Yönetim Kurulu olarak 2022 yılı Kasım ayında başladıkları görev dönemindeki pek çok önemli çalışmadan örnekler veren ve görevlerini ekim ayı sonunda tamamlayacaklarını hatırlatan İSO Başkanı Bahçıvan, şunları söyledi:\n\n“Dört yıl boyunca taşıdığımız sorumluluğun merkezinde, ülkemizin üretim gücünü korumak, sanayimizin rekabetçiliğini geliştirmek ve üyelerimizin değişen ihtiyaçlarına yalnızca bugünün değil, yarının koşullarını da gözeten çözümler üretmek yer aldı. Yaşanan tüm zorluklara rağmen üretimi savunmayı, sorunları sadece tespit eden değil, çözüm geliştiren bir kurum olmayı ve sanayicinin sesini en güçlü biçimde karar vericilere ulaştırmaya çalıştık. Başkanlık dönemimiz boyunca pusulamız çok netti: Güçlü sanayi için doğruya doğru, yanlışa yanlış demek. Çünkü İSO’nun görevi yalnızca sorunları dile getirmek değil; üretimin yanında durmak, riskleri önceden görmek, sanayicimizin sesini karar alıcılara taşımak ve her eleştiriyi mutlaka çözüm önerisiyle birlikte sunmaktır. Üretimin nefes alması, Türkiye’nin nefes almasıdır. Sanayicinin güçlenmesi, ülkemizin güçlenmesidir. ‘\n\nSanayiye sahip çıkmak, Türkiye’ye sahip çıkmaktır’ anlayışıyla hareket ettik. Geriye dönüp baktığımda en büyük gururum; doğru bildiğimiz gerçekleri, herhangi bir hesap yapmadan, İSO’nun kurumsal kimliğine ve sanayicimizin vakarına yakışan bir dille ifade etmiş olmamızdır. Eleştirirken ülkemizin geleceğini düşündük, destek verirken kurumsal bağımsızlığımızı koruduk. Hiçbir zaman umutsuzluk üretmedik; her sorunun yanında çözüm iradesini da ortaya koyduk. Bizden önceki sanayici büyüklerimizden aldığımız gibi şimdi de bizden sonra geleceklere yalnızca bir unvan değil; sağlam bir kurumsal zemin, güçlü bir ekip, açık bir ufuk, korumaya değer ilkeler ve kıymetli bir marka bırakabiliyorsanız, görevinizi tamamlamışsınız demektir. Bugün duyduğum huzurun kaynağı da budur. Geride duran değil, ileriye yürümeye hazır bir İSO; geçmişinden güç alan, geleceğini ise yeni kadroların enerjisiyle devam ettirecek bir kurum bıraktığıma inanıyorum. Görevimi huzurla devrediyorum; ancak Türkiye’nin üretim davasına olan inancımı devretmiyorum. Türkiye’nin geleceği üretimdedir. Sanayisine sahip çıkan bir Türkiye’nin aşamayacağı hiçbir engel yoktur.”\n\nYapılan açılış konuşmalarının ardından İSO eylül ayı Meclis toplantısı, İSO Meclis Üyeleri’nin tek tek kürsüye gelerek görüş ve önerilerini paylaşmasıyla devam etti. Sektörel sorunların ve çözüm yollarının istişare edildiği toplantıda, sanayicilerin yeni dönem beklentileri de geniş bir yelpazede ele alındı. Eylül ayı olağan meclis toplantısı, sanayinin güçlü geleceği için ortak aklın ve dayanışmanın sürdürülmesi temennisiyle sona erdi.",
+      "published_at": "2026-09-23T10:00:00+03:00",
+      "language": "tr",
+      "summary": "İSO'nun 2022/2026 döneminin son meclis toplantısında Başkan Erdal Bahçıvan, 2026'da büyümenin yüzde 3'ün hafif üzerinde gerçekleşmesinin beklendiğini, sanayinin genel ekonomiden negatif ayrıştığını ve enflasyonun en önemli makro kırılganlık olmaya devam ettiğini söyledi. OVP'de sanayiyi pozitif ayrıştırma iradesinin ilk adımlarının finansman tarafında görüldüğünü belirten Bahçıvan, daha uzun vadeli finansman ve sektöre özgü destek mekanizmaları beklediklerini vurguladı. Görevini ekim sonunda devredeceğini hatırlattı.",
+      "key_points": [
+        "2026'da büyümenin yüzde 3'ün hafif üzerinde gerçekleşmesi bekleniyor; sanayi genel ekonomiden negatif ayrışıyor.",
+        "Bahçıvan: Enflasyonla mücadele sanayinin üretim gücünü zayıflatmamalı, aksi halde sorun arz tarafında yeni bir probleme dönüşebilir.",
+        "OVP'de sanayiyi pozitif ayrıştırma iradesinin ilk adımları finansman tarafında görülmeye başlandı; uzun vadeli finansman ve sektöre özgü destek bekleniyor.",
+        "\"Türkiye'nin emek yoğun sektörlerden vazgeçme lüksü yoktur\" mesajı verildi.",
+        "Toplantı 2022/2026 çalışma döneminin son meclis toplantısıydı; mevcut yönetim görevini ekim ayı sonunda tamamlayacak."
+      ],
+      "entities": {
+        "kurum": [
+          "İstanbul Sanayi Odası"
+        ],
+        "kisi": [
+          "Erdal Bahçıvan",
+          "Sadık Ayhan Saruhan"
+        ],
+        "sektor": [
+          "İmalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "iso",
+        "imalat-sanayi",
+        "ovp",
+        "enflasyon",
+        "finansman-maliyeti",
+        "sanayi-politikasi"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 92,
+        "corroboration": 40,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "iso",
+      "url": "https://www.iso.org.tr/haberler/diger-haberler/istanbul-sanayi-odasi-iso-5-surdurulebilirlik-raporunu-acikladi/",
+      "title": "İstanbul Sanayi Odası 5. Sürdürülebilirlik Raporu'nu açıkladı",
+      "body": "İstanbul Sanayi Odası (İSO) sanayi odaları arasında bir ilke imza atarak hazırladığı Sürdürülebilirlik Raporunun beşincisini açıkladı. Raporda, İSO’nun sürdürülebilirlik çalışmalarının çevresel, toplumsal ve ekonomik etkileri; “Üyeler”, “Çalışanlar”, “Çevre” ve “Toplum” için yaratılan değerler olmak üzere dört ana başlıkta yayımlandı.\n\nSanayi şirketlerine yüksek katma değerli yenilikçi hizmetler sunarak rekabetçi sürdürülebilirlik yetkinliklerinin gelişimini destekleyen İstanbul Sanayi Odası (İSO), 1 Ocak-31 Aralık 2025 tarihleri arasında Odakule Genel Merkezi, Yenibosna ve Ümraniye temsilcilikleri ile Tuzla ve Hadımköy hizmet birimlerindeki faaliyetlerini kapsayan 5. Sürdürülebilirlik Raporunu yayımladı.\n\nKüresel ölçekte kabul gören GRI Standartları 2021’e uygun olarak hazırlanan ve Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları (SKA) rehberliğinde şekillenen rapor; İSO’nun sürdürülebilirlik performansını ve iç/dış tüm paydaşları için yarattığı katma değeri dört ana başlık altında topluyor.\n\nİSO’dan Türkiye sanayisine dört ana sütunda değer odaklı gelecek vizyonu\n\nKurulduğu günden bu yana üyelerinin gücüyle Türkiye sanayisine yön veren İSO, hazırladığı raporda sürdürülebilirlik yolculuğunu ve somut performans çıktılarını; “Üyelerimiz”, “Çalışanlarımız”, “Çevremiz” ve “Toplumumuz için Yarattığımız Değerler” olmak üzere dört temel alanda şu şekilde detaylandırıyor:\n\nSanayinin üretim kabiliyetini artırmak ve ülke ekonomisine katkı sağlamak hedefiyle çalışmalarını yürüten İSO, “Üyelerimiz için Yarattığımız Değerler” başlığı altında, “Ekonomiye”, “Sürdürülebilir Üretime”, “Uluslararasılaşmaya”, “İnovasyona” ve “Çalışma Hayatına” katkı sağlamak için yürüttüğü faaliyetlere yer verdi.\n\nOdayı geleceğe taşıyacak en değerli kaynağın yetişmiş insan gücü olduğuna inanan İSO, rapordaki “Çalışanlarımız için Yarattığımız Değerler” bölümünde, “Çalışan Hakları ve Gelişimi”, “Güvenli Çalışma Ortamı” ve “Fırsat Eşitliği ve Çeşitlilik” konularında yürütülen çalışmalar ile çalışan hakları, gelişim ve fırsat eşitliği konularındaki performans verilerini de paylaştı.\n\nFaaliyet gösterdiği lokasyonlardaki çevresel etkilerini takip eden ve olumsuz etkilerini azaltmaya özen gösteren İSO, “Çevremiz İçin Yarattığımız Değerler” ana başlığında ISO 14064-1:2019 standardına uygun olarak gerçekleştirdiği kurumsal karbon ayak izi hesaplanma verilerine de yer verdi.\n\nToplumsal fayda yaratma sorumluluğu doğrultusunda eğitimden kültüre, sanattan afet desteğine kadar geniş bir alanda projeler üreten İSO, raporun “Toplumumuz İçin Yarattığımız Değerler” ana başlığında da Millî Eğitim Bakanlığı ile yürütülen Mesleki Eğitim İş Birliği Projesi (MEİP) başta olmak üzere İSOV faaliyetleri ile kültür ve sanat alanındaki çalışmaları aktarıldı.\n\nÇevresel etkileri göz önünde bulundurarak raporun basımı sınırlı sayıda tutulan İSO Sürdürülebilirlik Raporu 2025’in dijital versiyonuna https://www.iso.org.tr/surdurulebilirlik/rapor/ adresi üzerinden ulaşabilirsiniz.",
+      "published_at": "2026-09-25T10:00:00+03:00",
+      "language": "tr",
+      "summary": "İSO, sanayi odaları arasında ilk kez hazırladığı sürdürülebilirlik raporlarının beşincisini GRI Standartları 2021'e uygun olarak yayımladı; rapor 2025 yılı faaliyetlerini ve ISO 14064-1:2019'a göre hesaplanan kurumsal karbon ayak izini içeriyor. Rapor üyeler, çalışanlar, çevre ve toplum olmak üzere dört başlıkta düzenlendi. CSRD ve CBAM kapsamında raporlama yükümlülüğüyle karşılaşan üye sanayiciler için örnek bir çerçeve sunuyor.",
+      "key_points": [
+        "Rapor 1 Ocak-31 Aralık 2025 dönemini; Odakule, Yenibosna, Ümraniye, Tuzla ve Hadımköy birimlerini kapsıyor.",
+        "GRI Standartları 2021'e uygun ve BM Sürdürülebilir Kalkınma Amaçları rehberliğinde hazırlandı.",
+        "Kurumsal karbon ayak izi ISO 14064-1:2019 standardına göre hesaplandı.",
+        "MEİP ve İSOV faaliyetleri 'Toplumumuz İçin Yarattığımız Değerler' başlığında yer aldı.",
+        "Raporun dijital versiyonu iso.org.tr/surdurulebilirlik/rapor adresinde."
+      ],
+      "entities": {
+        "kurum": [
+          "İstanbul Sanayi Odası",
+          "İSOV"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "cevre",
+      "sentiment": "POZITIF",
+      "tags": [
+        "iso",
+        "surdurulebilirlik",
+        "surdurulebilirlik-raporlamasi",
+        "karbon",
+        "isov"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 40,
+        "keyword": 60,
+        "recency": 100,
+        "corroboration": 20,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "iso",
+      "url": "https://www.iso.org.tr/haberler/etkinlikler/terminal-istanbul-ekosistem-bulusmalari-sanayi-ve-teknoloji-bakani-mehmet-fatih-kacirin-katilimiyla-gerceklestirildi/",
+      "title": "Terminal İstanbul Ekosistem Buluşmaları Bakan Kacır'ın katılımıyla yapıldı: 1091 girişim 175 milyar lira yatırım aldı",
+      "body": "Terminal İstanbul Ekosistem Buluşmaları, Atatürk Havalimanı Dış Hatlar Terminali’nde T.C. Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır’ın katılımıyla gerçekleştirildi. Terminal İstanbul’un ev sahipliğinde düzenlenen etkinlikte T.C. Cumhurbaşkanlığı Yatırım Ofisi Başkanı Burak Dağlıoğlu, T.C. Sanayi ve Teknoloji Bakan Yardımcıları Oruç Baba İnan ve Zekeriya Coştu, T.C. Sağlık Bakan Yardımcısı Şuayip Birinci ve T.C. İstanbul Vali Yardımcısı Erhan Güney de yer aldı.\n\nİstanbul Sanayi Odası (İSO) Yönetim Kurulu Başkanı Erdal Bahçıvan’ın da katıldığı etkinlikte Terminal İstanbul Genel Müdürü Erkam Tüzgen’in yanı sıra başta Meta, Google, AWS, Samsung, Microsoft, Trendyol, Rasmal Ventures, Techstars Istanbul, ASELSAN, ROKETSAN, Turkish Technology ve Disrupt olmak üzere teknoloji, girişimcilik ve yatırım ekosisteminin önde gelen şirket ve kuruluşlarının temsilcileri de bulundu.\n\nProgram kapsamında Ekosistem İş Birliği İmza Töreni’nin de gerçekleştirildiği ve farklı paydaşlar arasındaki iş birliklerinin güçlendirilmesini amaçlayan etkinliğin açılışında konuşan Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, Atatürk Havalimanı Terminali'nin \"Terminal İstanbul\" markasıyla yaklaşık 200 bin metrekare kapalı alanda faaliyet gösterecek bir girişimcilik merkezine dönüştürüleceğini söyledi.\n\nKacır, Türkiye'nin teknoloji girişimciliğinde güçlü bir ekosistem oluşturmayı hedeflediğini belirterek, son 23 yılda hayata geçirilen Ar-Ge ve inovasyon altyapısının bu alandaki çalışmaların temelini oluşturduğunu söyledi.\n\nTürkiye'de 115 teknoparkta 13 binden fazla teknoloji girişiminin faaliyet gösterdiğini aktaran Kacır, bin 700'ü aşkın Ar-Ge ve tasarım merkezinde de çok sayıda araştırmacı ve mühendisin çalışmalarını sürdürdüğünü ifade etti. Kacır, \"Bizler de Türkiye'den küresel ölçekte iddia sahibi teknoloji girişimlerinin doğmasını, büyümesini ve dünyaya açılmasını sağlayacak güçlü bir girişimcilik ekosistemi inşa etmeyi, daha müreffeh ve daha güçlü bir Türkiye'nin anahtarı olarak görüyoruz\" ifadelerini kullandı.\n\nTeknoloji ve girişimcilikte başarının temelinde nitelikli insan kaynağının bulunduğunu belirten Kacır, Türkiye'nin genç ve dinamik nüfus yapısına dikkat çekti. Her yıl yaklaşık 1 milyon gencin üniversitelerden mezun olarak yetenek havuzuna katıldığını ifade eden Bakan Kacır, Dene-Yap teknoloji atölyeleri, Sektör Kampüste, Milli Teknoloji Uzmanlık Programları ve Milli Teknoloji Atölyeleri gibi çalışmalarla gençlerin geleceğin yetkinlikleriyle buluşturulduğunu söyledi.\n\nKacır, 2018'den bu yana düzenlenen TEKNOFEST ile milyonlarca gencin teknoloji geliştirme yolculuğuna dahil edildiğini ve yarışmalarda ortaya çıkan yenilikçi fikirlerin girişimlere dönüşmesinin desteklendiğini kaydetti.\n\nBakan Kacır, girişimlerin farklı aşamalardaki finansman ihtiyaçlarını karşılamak amacıyla çeşitli mekanizmaların hayata geçirildiğini belirtti. Kacır, \"Fonların fonu ve eş finansman mekanizmalarıyla bugüne dek 5,8 milyar liralık kamu kaynağını girişimlerimizin büyüme yolculuğuna yönlendirdik. Kamu kaynaklarımızın oluşturduğu kaldıraç etkisiyle 130 milyar liralık fon hacminin oluşmasını sağladık\" ifadelerini kullandı.\n\nBu yatırım fonlarının desteğiyle 1091 teknoloji girişiminin bugüne kadar 175 milyar lira yatırım aldığını açıklayan Kacır, Türkiye'nin teknoloji girişimciliğinde önemli bir aşamaya geldiğini söyledi. Türkiye'nin 2019'a kadar unicorn şirketi bulunmayan bir ülke olduğunu belirten Kacır, bugün 8 unicorn, yani Turcorn bulunduğunu ifade etti. Kacır, \"Hedefimiz 2030 yılına kadar 100 bin teknoloji girişiminin bu topraklardan doğması ve Turcorn'larımızın değerlemesinin 100 milyar doları aşması\" dedi.\n\nGirişimlerin küresel pazarlara açılmasını desteklemek amacıyla Turcorn 100 Programı'nın devreye alındığını belirten Kacır, Türkiye Tech Visa Programı ile de teknoloji profesyonellerinin Türkiye'ye kazandırılmasının hedeflendiğini söyledi. Kacır, program kapsamında 5 bin 500'ü aşkın teknoloji profesyonelinin Türkiye'nin girişimcilik ekosistemine dahil edildiğini ifade etti.",
+      "published_at": "2026-09-25T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Sanayi ve Teknoloji Bakanı Kacır, İSO Başkanı Bahçıvan'ın da katıldığı Terminal İstanbul Ekosistem Buluşmaları'nda Atatürk Havalimanı terminalinin yaklaşık 200 bin metrekarelik bir girişimcilik merkezine dönüştürüleceğini söyledi. Fonların fonu ve eş finansmanla 5,8 milyar liralık kamu kaynağının 130 milyar liralık fon hacmi oluşturduğunu, 1091 teknoloji girişiminin 175 milyar lira yatırım aldığını açıkladı. Açık inovasyon ve girişimlerle iş birliği arayan sanayiciler için İstanbul'da yeni bir odak noktası doğuyor.",
+      "key_points": [
+        "Atatürk Havalimanı Dış Hatlar Terminali, 'Terminal İstanbul' markasıyla yaklaşık 200 bin metrekare kapalı alanda girişimcilik merkezine dönüşüyor.",
+        "Fonların fonu ve eş finansmanla 5,8 milyar liralık kamu kaynağı 130 milyar liralık fon hacmi oluşturdu.",
+        "1091 teknoloji girişimi toplam 175 milyar lira yatırım aldı; Türkiye'de 8 Turcorn var.",
+        "115 teknoparkta 13 binden fazla girişim, 1.700'ü aşkın Ar-Ge ve tasarım merkezi faaliyette.",
+        "2030 hedefi: 100 bin teknoloji girişimi ve Turcorn değerlemelerinin 100 milyar doları aşması."
+      ],
+      "entities": {
+        "kurum": [
+          "Sanayi ve Teknoloji Bakanlığı",
+          "İstanbul Sanayi Odası",
+          "Cumhurbaşkanlığı Yatırım Ofisi",
+          "Terminal İstanbul"
+        ],
+        "kisi": [
+          "Mehmet Fatih Kacır",
+          "Erdal Bahçıvan",
+          "Burak Dağlıoğlu",
+          "Erkam Tüzgen"
+        ],
+        "sektor": [
+          "Teknoloji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "teknoloji",
+      "sentiment": "POZITIF",
+      "tags": [
+        "girisimcilik",
+        "sanayi-bakanligi",
+        "iso",
+        "ar-ge",
+        "istanbul",
+        "inovasyon"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 45,
+        "keyword": 55,
+        "recency": 100,
+        "corroboration": 25,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "iso",
+      "url": "https://www.iso.org.tr/haberler/etkinlikler/isov-dinckok-ytu-mesleki-ve-teknik-anadolu-lisesinde-yapay-zeka-ve-bilisim-donemi-basladi/",
+      "title": "İSOV Dinçkök YTÜ Mesleki ve Teknik Anadolu Lisesi'nde Yapay Zekâ ve Bilişim dönemi başladı",
+      "body": "İstanbul Sanayi Odası Vakfı Dinçkök Yıldız Teknik Üniversitesi Mesleki ve Teknik Anadolu Lisesi’nin (İSOV Dinçkök YTÜ MTAL) 2026-2027 eğitim-öğretim yılı açılış töreni, 21 Eylül Pazartesi günü gerçekleştirildi. İstanbul Sanayi Odası (İSO) ve İSOV Yönetim Kurulu Başkanı Erdal Bahçıvan’ın ev sahipliğinde düzenlenen açılış törenine, T.C. Beşiktaş Kaymakamı Oğuzhan Bingöl, YTÜ Rektör Yardımcısı Prof. Dr. Vatan Karakaya, İSOV Dinçkök YTÜ MTAL Okul Müdürü Rıfkı Ensar Usta, İSOV Kurul Üyeleri ile öğretmen ve öğrenciler katıldı. Törende ayrıca, İSOV Dinçkök YTÜ MTAL’i ilk üç tercihi arasında yazarak okulu kazanma başarısı gösteren 33 öğrenciye bilgisayarları takdim edildi.\n\nAçılışta konuşan İSO ve İSOV Yönetim Kurulu Başkanı Erdal Bahçıvan, öğrencilerden sadece bir diploma sahibi olmak yerine merak eden, sorgulayan, üreten, teknolojiyi kullanan, bunun da ötesinde teknolojiye yön verebilen bireyler olarak yetişmelerini arzu ettiklerini söyledi. Bahçıvan, şunları söyledi:\n\n“Çünkü Türkiye’nin üretimde, sanayide ve teknolojide geleceğini belirleyecek en önemli güç, iyi yetişmiş insan kaynağıdır. Biz sanayiciler bunu her gün çok yakından görüyoruz. Üretim dünyası büyük bir hızla değişiyor. Yapay zekadan otomasyona, yenilenebilir enerjiden dijital teknolojilere kadar hemen her alanda yeni bir dönem yaşanıyor. Bu yeni dönemde ülkeler arasındaki rekabeti yalnızca sahip olunan makineler ya da sermaye değil; bilgiyi üretebilen, teknolojiyi anlayabilen ve onu değere dönüştürebilen insanlar belirleyecek. İşte mesleki ve teknik eğitime verdiğimiz önemin temelinde de bu anlayış bulunuyor. Bu okulun arkasında İSO ve İSOV’un uzun yıllara dayanan güçlü iradesi var. Burada yetişen her genci Türkiye’nin üretim geleceğinin bir parçası olarak görüyoruz. Bu nedenle okulumuzun imkânlarını geliştirmeye, eğitim kalitesini yükseltmeye ve öğrencilerimizin önünde yeni kapılar açmaya devam ediyoruz” dedi.\n\nYTÜ iş birliği ile okulumuza çok değerli bir güç katıldı\n\nBahçıvan, Yıldız Teknik Üniversitesi ile gerçekleştirilen iş birliğinin stratejik önemine değindiği konuşmasında şunları kaydetti:\n\n“Nisan ayında YTÜ ve İl Milli Eğitim Müdürlüğümüzle imzaladığımız iş birliği protokolüyle okulumuza yeni ve çok değerli bir güç daha katıldı. Bu iş birliği kapsamında okulumuzun adına ‘YTÜ’ ibaresi eklendi. Ancak bizim için bu iş birliğinin esas anlamı, tabeladaki bir değişiklikten çok daha fazlası. Amacımız mesleki ve teknik öğretim ile üniversite arasında güçlü ve sürdürülebilir bir köprü kurmak, öğrencilerimizin YTÜ’nün akademik birikiminden ve teknik imkanlarından yararlanabilmelerini sağlamak ve eğitim niteliğini hep birlikte daha ileriye taşımaktır. Böylece sanayi, üniversite ve mesleki eğitimin aynı hedef etrafında buluştuğu örnek bir eğitim modeli oluşturmayı arzu ediyoruz” dedi.\n\nYapay zekâ ve Bilişim Teknolojileri de eklendi\n\nYeni eğitim öğretim yılında attıkları bir diğer önemli adımın hazırlık sınıfının açılması olduğunu da vurgulayan İSO Başkanı Bahçıvan, şunları söyledi:\n\n\"Bugünün dünyasında güçlü bir mesleki eğitimin, yabancı dil ve iletişim becerileriyle desteklenmesini son derece önemli buluyoruz. Gençlerimizin yalnızca Türkiye’deki değil, dünyadaki gelişmeleri de yakından takip edebilecek donanıma sahip olmalarını istiyoruz. Okulumuzun eğitim alanlarını da çağın ihtiyaçları doğrultusunda genişletiyoruz. Elektrik-Elektronik, Endüstriyel Otomasyon Teknolojileri alanlarımızın yanına bu yıl Yapay Zekâ ve Bilişim Teknolojileri gibi çok önemli iki alan eklendi. Bu iki alanın okulumuza kazandırılmasını özellikle değerli buluyorum.\n\nÇünkü bugün sanayinin dönüşümünün merkezinde dijitalleşme, veri, yazılım ve yapay zekâ bulunuyor. Bu teknolojileri lise çağından itibaren öğrenen, uygulayan ve geliştiren gençlerimizin yarının üretim dünyasında çok önemli roller üstleneceklerine inanıyorum. Bu yıl okulumuzun yerleştirme puanlarında önceki yıllara göre kaydedilen yükseliş, okulumuza yönelik ilginin ve güvenin arttığını da ortaya koyuyor. Ancak bizim için asıl başarı, bu yükselişi önümüzdeki yıllarda eğitim kalitesine, öğrencilerimizin gelişimine ve mezunlarımızın başarılarına dönüştürebilmektir.”\n\nBeşiktaş Kaymakamı Oğuzhan Bingöl de öğrencilere “Sizler bugün aslında sadece maddi destekle buraların inşa edildiği bir okulda eğitim görmüyorsunuz. Logolarını gördüğümüz, ekonomiye, sanayiye ve Türkiye'de eğitime yön veren çok güzide iki kurumu daha liseye başlarken tanımış oluyorsunuz. Öğrenciler sizden bir şey istiyorum; çalışırsanız, emek verirseniz bütün öğrencilerden üstün hale gelirsiniz” dedi.\n\nYTÜ Rektör Yardımcısı Prof. Dr. Vatan Karakaya da “Bu liseyle ilgili özellikle MEB, İSO ve YTÜ’nün o üçlü gücünü birleştirip yeni bir gelecek ortaya koymak, yeni bir model oluşturmak istiyoruz. Eğer üniversiteler ile liseler arasındaki mesafeyi daraltırsak gençlerimizin ufku artacak üniversiteyle sanayinin arasındaki mesafeyi kısaltırsak da üretimin kapasitesinin artacağı kanaatindeyiz” dedi.\n\nİSOV Dinçkök YTÜ MTAL Müdürü Rıfkı Ensar Usta ise, \"İl Millî Eğitim Müdürlüğümüz, İstanbul Sanayi Odamız ve Üniversitemiz arasında imzalanan eğitim iş birliği protokolü ile okulumuz yepyeni bir vizyon kazandı. Sanayicilerimizin destekleriyle bugüne kadar olduğu gibi bundan sonra da ülkemizin ihtiyaç duyduğu nitelikli insan gücünün yetiştirilmesinde önemli görevler üstleniyoruz. Yeni vizyonumuzla yarının Türkiye’sinde önemli projelere imza atacak gençler yetiştirmeye devam edeceğiz\" dedi.",
+      "published_at": "2026-09-21T10:00:00+03:00",
+      "language": "tr",
+      "summary": "İSO ve İSOV'un desteklediği İSOV Dinçkök YTÜ Mesleki ve Teknik Anadolu Lisesi'nde 2026-2027 eğitim yılı açıldı; Elektrik-Elektronik ve Endüstriyel Otomasyon alanlarına bu yıl Yapay Zekâ ve Bilişim Teknolojileri alanları eklendi, hazırlık sınıfı açıldı. Nisan'da YTÜ ve İl Milli Eğitim Müdürlüğü ile imzalanan protokolle okul üniversiteyle bağ kurdu. Nitelikli ara eleman açığı yaşayan İSO üyeleri için okul, dijitalleşme ve otomasyon yetkinliklerine sahip teknik personel kaynağı anlamına geliyor.",
+      "key_points": [
+        "2026-2027 eğitim yılında Yapay Zekâ ve Bilişim Teknolojileri alanları eklendi; hazırlık sınıfı açıldı.",
+        "Nisan ayında YTÜ ve İl Milli Eğitim Müdürlüğü ile imzalanan protokolle okulun adına 'YTÜ' ibaresi eklendi.",
+        "Okulu ilk üç tercihinde yazan 33 öğrenciye bilgisayar takdim edildi.",
+        "Bahçıvan: Sanayinin dönüşümünün merkezinde dijitalleşme, veri, yazılım ve yapay zekâ bulunuyor."
+      ],
+      "entities": {
+        "kurum": [
+          "İstanbul Sanayi Odası",
+          "İSOV",
+          "Yıldız Teknik Üniversitesi",
+          "Milli Eğitim Bakanlığı"
+        ],
+        "kisi": [
+          "Erdal Bahçıvan",
+          "Oğuzhan Bingöl",
+          "Vatan Karakaya",
+          "Rıfkı Ensar Usta"
+        ],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "istihdam",
+      "sentiment": "POZITIF",
+      "tags": [
+        "isov",
+        "iso",
+        "mesleki-egitim",
+        "nitelikli-isgucu",
+        "yapay-zeka",
+        "universite-sanayi-isbirligi"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 35,
+        "keyword": 50,
+        "recency": 84,
+        "corroboration": 55,
+        "reach": 40
+      }
+    },
+    {
+      "source_slug": "isov",
+      "url": "https://www.isov.org.tr/İSOV-Dinckok-YTU-MTAL-Yeni-Egitim-Yili-Acilisi-Gerceklestirildi/1065",
+      "title": "İSOV Dinçkök YTÜ MTAL yeni eğitim yılı açılışı gerçekleştirildi",
+      "body": "İSOV Dinçkök YTÜ Mesleki ve Teknik Anadolu Lisesinin 2026–2027 eğitim öğretim yılı açılış töreni, 21 Eylül 2026 tarihinde okulumuz bünyesindeki İSOV Sakıp Sabancı Konferans Salonu’nda gerçekleştirildi.\n\nÖğrencilerimizin yeni dönem heyecanını paylaştığımız törende, ilk üç tercihi arasında okulumuza yer vererek kayıt yaptıran 33 öğrencimize taahhüt ettiğimiz bilgisayarlar takdim edildi. Öğrencilerimiz, bilgisayarlarını İSO ve İSOV Yönetim Kurulu Başkanı Erdal Bahçıvan ile diğer protokol üyelerinin ellerinden aldı.\n\nTörene Erdal Bahçıvan’ın yanı sıra Beşiktaş Kaymakamı Oğuzhan Bingöl, Beşiktaş İlçe Millî Eğitim Müdürü Sedat Işık, Yıldız Teknik Üniversitesi Rektör Yardımcısı Prof. Dr. Vatan Karakaya ve ETP Yönetim Kurulu Üyesi Prof. Dr. Zafer Gemici katıldı. İSOV Yönetim Kurulundan Cengiz Kaya, Mustafa Tacir, Kenan Baytaş, Bülent Taş ile İSO–İSOV Eğitim ve İhtisas Kurulu üyeleri Mehmet Koç ve Koray Yavuz da öğrencilerimizin heyecanına ortak oldu.\n\nYıldız Teknik Üniversitesi iş birliğiyle yeni döneme başlayan okulumuzda, öğrencilerimizin akademik ve mesleki gelişimlerini destekleyen çalışmalar sürdürülüyor. Üniversitenin akademik birikimi ve araştırma olanaklarıyla sanayinin uygulama deneyimini buluşturan bu iş birliği, öğrencilerimizin lise yıllarından itibaren proje çalışmalarına katılmalarını ve mesleklerini yakından tanımalarını amaçlıyor.\n\nİSOV olarak öğrencilerimizin eğitim yolculuklarına eşlik etmekten mutluluk duyuyor; tüm öğrencilerimize, öğretmenlerimize ve ailelerimize başarılı bir eğitim öğretim yılı diliyoruz.",
+      "published_at": "2026-09-21T10:00:00+03:00",
+      "language": "tr",
+      "summary": "İSOV Dinçkök YTÜ Mesleki ve Teknik Anadolu Lisesi'nin 2026-2027 eğitim yılı açılış töreni 21 Eylül'de yapıldı; okulu ilk üç tercihinde yazan 33 öğrenciye bilgisayarları İSO ve İSOV Başkanı Erdal Bahçıvan tarafından verildi. Yıldız Teknik Üniversitesi iş birliğiyle öğrencilerin lise yıllarından itibaren proje çalışmalarına katılması hedefleniyor. İSOV'un mesleki eğitim yatırımı, üye sanayicilerin nitelikli teknik personel ihtiyacına yönelik uzun vadeli bir kaynak.",
+      "key_points": [
+        "Açılış töreni 21 Eylül 2026'da okuldaki İSOV Sakıp Sabancı Konferans Salonu'nda yapıldı.",
+        "Okulu ilk üç tercihinde yazan 33 öğrenciye taahhüt edilen bilgisayarlar teslim edildi.",
+        "YTÜ iş birliğiyle öğrencilerin lise yıllarından itibaren proje çalışmalarına katılması amaçlanıyor.",
+        "Törene Beşiktaş Kaymakamı, YTÜ Rektör Yardımcısı ve ETP Yönetim Kurulu Üyesi Prof. Dr. Zafer Gemici katıldı."
+      ],
+      "entities": {
+        "kurum": [
+          "İSOV",
+          "İstanbul Sanayi Odası",
+          "Yıldız Teknik Üniversitesi"
+        ],
+        "kisi": [
+          "Erdal Bahçıvan",
+          "Oğuzhan Bingöl",
+          "Sedat Işık",
+          "Vatan Karakaya",
+          "Zafer Gemici"
+        ],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "istihdam",
+      "sentiment": "POZITIF",
+      "tags": [
+        "isov",
+        "mesleki-egitim",
+        "nitelikli-isgucu",
+        "universite-sanayi-isbirligi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 30,
+        "keyword": 45,
+        "recency": 84,
+        "corroboration": 55,
+        "reach": 30
+      }
+    },
+    {
+      "source_slug": "isov",
+      "url": "https://www.isov.org.tr/İSOV-Hacakthon-Programi-Kapsaminda-Odakulede-Bir-Araya-Geldik/1064",
+      "title": "İSOV Hackathon Programı kapsamında bursiyerler Odakule'de bir araya geldi",
+      "body": "İSOV Hackathon Uygulamalı Eğitim Programı kapsamında bursiyerlerimiz, 19 Eylül 2026 tarihinde Odakule’de eğitmen Onur Özcan ile bir araya geldi.\n\nSaat 09.30–12.30 arasında yüz yüze gerçekleştirilen eğitim, öğrencilerimizin yarışmaya hazırlık sürecinin bir parçası olarak düzenlendi.\n\nİSO Akademi iş birliğiyle yürüttüğümüz programda bursiyerlerimiz, verimlilik odaklı problem alanlarına yönelik çözüm önerileri geliştiriyorlar.\n\nEğitimlerin yanı sıra mezun bursiyerlerimiz ve uzman mentörlerin desteğiyle takım çalışmalarını sürdüren öğrencilerimiz, hazırladıkları projeleri 7 Ekim 2026 tarihinde final jürisine sunacak.",
+      "published_at": "2026-09-19T10:00:00+03:00",
+      "language": "tr",
+      "summary": "İSOV bursiyerleri, İSO Akademi iş birliğiyle yürütülen Hackathon Uygulamalı Eğitim Programı kapsamında 19 Eylül'de Odakule'de eğitmen Onur Özcan ile bir araya geldi. Öğrenciler verimlilik odaklı problem alanlarına çözüm geliştiriyor ve projelerini 7 Ekim 2026'da final jürisine sunacak. Program, sanayicilerin verimlilik sorunlarına genç mühendis adaylarının çözüm üretmesini hedefliyor; üye firmalar için yetenek havuzuna erken erişim fırsatı.",
+      "key_points": [
+        "Yüz yüze eğitim 19 Eylül 2026'da Odakule'de 09.30-12.30 arasında yapıldı.",
+        "Program İSO Akademi iş birliğiyle yürütülüyor; odak verimlilik odaklı problem alanları.",
+        "Final: Takımlar projelerini 7 Ekim 2026'da jüriye sunacak.",
+        "Mezun bursiyerler ve uzman mentörler takımlara destek veriyor."
+      ],
+      "entities": {
+        "kurum": [
+          "İSOV",
+          "İSO Akademi"
+        ],
+        "kisi": [
+          "Onur Özcan"
+        ],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "istihdam",
+      "sentiment": "POZITIF",
+      "tags": [
+        "isov",
+        "verimlilik",
+        "nitelikli-isgucu",
+        "etkinlik"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 25,
+        "keyword": 40,
+        "recency": 76,
+        "corroboration": 20,
+        "reach": 25
+      }
+    },
+    {
+      "source_slug": "tubitak",
+      "url": "https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-2-cagrisi-basvuruya-acildi",
+      "title": "TÜBİTAK 1832 Sanayide Yeşil Dönüşüm 2026-2 çağrısı açıldı: son başvuru 12 Ekim 2026",
+      "body": "Koordinatörlüğünü Sanayi ve Teknoloji Bakanlığının yürüttüğü Dünya Bankası destekli Türkiye Yeşil Sanayi Projesi kapsamında özel sektörün yeşil dönüşüme yönelik ürün veya süreç geliştirme faaliyetleri TÜBİTAK Teknoloji ve Yenilik Destek Programları Başkanlığı (TEYDEB) tarafından desteklenmektedir. Bu amaçla hayata geçirilen 1801 kodlu Sanayi Ar-Ge Projeleri İçin Geri Ödemeli ve Hibe Destek Programı kapsamında 1832 kodlu Sanayide Yeşil Dönüşüm Programı’nın 2026 yılı 2. dönem çağrısı açılmıştır.\n\nÇağrı kapsamında firmaların yeşil dönüşüm faaliyetlerine yönelik THS 3-9 aralığındaki Ar-Ge çalışmaları desteklenecektir. Projelerin ağırlıklı olarak kavramsal aşamayı geçmiş teknolojilere yönelik yeni bir prototip geliştirilmesi, mevcut bir Ar-Ge prototipi üzerinde ileri geliştirme veya iyileştirme çalışmaları, prototipin doğrulanması veya onaylanmasına yönelik testler gibi ticarileşmeye yönelik teknoloji doğrulama çalışmaları yürütmesi beklenmektedir. Geliştirilen teknoloji ya da prototipin ölçek büyütme faaliyetlerinin yapılması zorunludur. THS 3’ten önce başlayan çalışmalar temel araştırma niteliğinde olduğundan, THS 8’den başlayan çalışmalar Ar-Ge süreçlerinin büyük bir kısmı tamamlandığından çağrı kapsamı dışındadır.\n\nÇağrıya KOBİ ve büyük ölçekli kuruluşların başvuruları mümkün olup, ortaklı başvuru da yapılabilmektedir. Sermaye şirketlerine en fazla %50’si geri ödenmek üzere faizsiz geri ödemeli destek sağlanacaktır. Destek oranı sırasıyla büyük ölçekli şirketler için %70, KOBİ’ler için %80, deprem bölgesindeki KOBİ’ler için %90’dır. Kullanılacak desteğin geri ödemesi proje bittikten 1 yıl sonra başlayacaktır. TÜBİTAK’tan talep edilen geri ödemeli desteğin tamamı (%100’ü) için başvuru aşamasında Banka Referans Mektubu, sözleşme aşamasında Teminat Mektubu sunulması gerekmektedir.\n\n2026-1 çağrısında olduğu gibi 2026-2 çağrısında da aşağıdaki koşullar geçerlidir:\n\nBir kuruluş için Dünya Bankası destekli en fazla 2 proje desteği sınırlaması kaldırılmış, kuruluş bazlı bütçe takibi uygulamasına geçilmiştir. Kuruluşlar, ölçeklerine göre program bazında belirlenen üst limitleri aşmamak koşuluyla 2’den fazla proje desteği alabileceklerdir. Program kapsamında daha önce destek almış kuruluşlar, 1832 programı kapsamında kalan limitlerini PRODİS üzerinden yapacakları yeni proje başvurusu aşamasında görebileceklerdir.\n\nÇağrı kapsamını belirleyen Yeşil Dönüşüm Ar-Ge ve Yenilik konu başlıkları genişletilmiştir. Sunulacak projelerin aşağıda belirtilen konu başlıklarından birinin kapsamına girmesi beklenmektedir:\n\nTemiz ve Döngüsel Ekonomi\n\nKonu başlıkları: İklim Değişikliği, Çevre ve Biyoçeşitlilik; Temiz ve Döngüsel Ekonomi; Temiz, Erişilebilir ve Güvenli Enerji Arzı; Yeşil ve Sürdürülebilir Tarım; Sürdürülebilir Akıllı Ulaşım.\n\nSunulacak projelerin daha önce yapılan bir Ar-Ge çalışmasının devamı olma koşulu kaldırılmıştır. Kuruluşlar herhangi bir eski proje ile ilişkilendirmeden yeni bir proje başvurusu yapabilirler.\n\nTHS 5-9 olan Ar-Ge çalışmaları kapsamı, THS 3-9 olarak genişletilmiştir. Bununla THS bitiş seviyesinin en az THS 7 olması beklenmektedir. Ölçek büyütme çalışmaları zorunludur.\n\nBaşarıyla tamamlanan projelere verilen ilave %20 hibe destek uygulaması kaldırılmıştır.\n\nÇağrıya başvurusu yapılması için başvuru sahibi kuruluşta proje konusu ile ilgili en az lisans seviyesinde bir personel olması gerektiğini önemle hatırlatırız.\n\nDetaylı bilgi için tıklayınız.\n\nÇağrı Kapanış Tarihi: 12 Ekim 2026 (23:59, UTC+3)\n\nÇağrıya TEYDEB Proje Değerlendirme ve İzleme Sistemi (PRODİS) üzerinden elektronik olarak başvuru yapılabilmektedir.",
+      "published_at": "2026-09-17T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Dünya Bankası destekli Türkiye Yeşil Sanayi Projesi kapsamındaki TÜBİTAK TEYDEB 1832 Sanayide Yeşil Dönüşüm Programı'nın 2026-2 çağrısı açıldı; THS 3-9 aralığındaki yeşil dönüşüm Ar-Ge projeleri faizsiz geri ödemeli destekleniyor. Destek oranı büyük ölçekli şirketlerde yüzde 70, KOBİ'lerde yüzde 80, deprem bölgesindeki KOBİ'lerde yüzde 90; desteğin en fazla yüzde 50'si geri ödeniyor. Son başvuru 12 Ekim 2026; CBAM ve karbon maliyetine hazırlanan imalatçılar için doğrudan finansman kanalı.",
+      "key_points": [
+        "Son başvuru: 12 Ekim 2026, saat 23.59 (PRODİS üzerinden).",
+        "Destek oranı: büyük ölçekli yüzde 70, KOBİ yüzde 80, deprem bölgesindeki KOBİ yüzde 90; desteğin en fazla yüzde 50'si faizsiz geri ödenir, geri ödeme proje bitiminden 1 yıl sonra başlar.",
+        "THS 3-9 aralığı destekleniyor, bitişte en az THS 7 bekleniyor; ölçek büyütme zorunlu.",
+        "Kuruluş başına en fazla 2 proje sınırı kaldırıldı; önceki Ar-Ge'nin devamı olma şartı kalktı; başarı hâlinde verilen ilave yüzde 20 hibe uygulaması kaldırıldı.",
+        "Geri ödemeli desteğin tamamı için başvuruda banka referans mektubu, sözleşmede teminat mektubu gerekiyor."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜBİTAK",
+          "TEYDEB",
+          "Sanayi ve Teknoloji Bakanlığı",
+          "Dünya Bankası"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "teydeb",
+        "tubitak",
+        "yesil-donusum",
+        "ar-ge-tesviki",
+        "son-basvuru",
+        "dunya-bankasi",
+        "karbon"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 80,
+        "keyword": 90,
+        "recency": 68,
+        "corroboration": 55,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "tubitak",
+      "url": "https://tubitak.gov.tr/tr/duyuru/1711-yapay-zeka-ekosistem-2026-yili-cagrisi-basvuru-suresi-guncellendi",
+      "title": "TÜBİTAK 1711 Yapay Zekâ Ekosistem 2026 çağrısında son başvuru 2 Ekim 2026'ya uzatıldı",
+      "body": "TÜBİTAK TEYDEB 1711 Yapay Zekâ Ekosistem 2026 Çağrısının başvuru süresi uzatılmıştır.\n\nTÜBİTAK Teknoloji ve Yenilik Destek Programları Başkanlığı (TEYDEB) tarafından yürütülen 1711 Yapay Zekâ Ekosistem Çağrısı kapsamında yapay zekâ çözümlerine ihtiyaç duyan şirketlerimizin, teknoloji sağlayıcı olarak en az bir şirket, bu konuda tecrübeli en az bir üniversite araştırma laboratuvarı/merkezi ya da kamu araştırma merkezi/enstitüsü ve TÜBİTAK Yapay Zekâ Enstitüsü ile konsorsiyum oluşturmaları hedeflenmektedir. Bu destek programının Türkiye yapay zekâ ekosistemini harekete geçirecek bir katalizör görevi üstlenmesi ve farklı açılardan katkı sağlaması beklenmektedir.\n\nKonsorsiyum oluşturma süreçlerinin devam etmesinden dolayı sektörden gelen talepler doğrultusunda 2026 çağrısının son başvuru tarihi 2 Ekim 2026, saat 23:59 olarak güncellenmiştir.",
+      "published_at": "2026-09-16T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TÜBİTAK TEYDEB, 1711 Yapay Zekâ Ekosistem 2026 çağrısının son başvuru tarihini sektörden gelen talepler üzerine 2 Ekim 2026 saat 23.59'a uzattı. Çağrıda yapay zekâ çözümüne ihtiyaç duyan şirketlerin; teknoloji sağlayıcı bir şirket, deneyimli bir üniversite ya da kamu araştırma merkezi ve TÜBİTAK Yapay Zekâ Enstitüsü ile konsorsiyum kurması bekleniyor. Üretimde yapay zekâ uygulaması planlayan sanayiciler için konsorsiyumu tamamlamak üzere ek süre sağlandı.",
+      "key_points": [
+        "Son başvuru: 2 Ekim 2026, saat 23.59 (uzatıldı).",
+        "Konsorsiyum: yapay zekâya ihtiyaç duyan şirket + en az bir teknoloji sağlayıcı şirket + en az bir üniversite/kamu araştırma merkezi + TÜBİTAK Yapay Zekâ Enstitüsü.",
+        "Uzatma, konsorsiyum oluşturma süreçlerinin sürmesi nedeniyle sektör talebiyle yapıldı.",
+        "Programın Türkiye yapay zekâ ekosistemini harekete geçirecek bir katalizör olması hedefleniyor."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜBİTAK",
+          "TEYDEB",
+          "TÜBİTAK Yapay Zekâ Enstitüsü"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Teknoloji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "teydeb",
+        "tubitak",
+        "yapay-zeka",
+        "son-basvuru",
+        "proje-cagrisi",
+        "dijital-donusum"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 55,
+        "keyword": 80,
+        "recency": 64,
+        "corroboration": 40,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "tubitak",
+      "url": "https://tubitak.gov.tr/tr/duyuru/ufuk-avrupa-programi-forest-ortakligi-2026-ortak-cagrisi-basvurulara-acildi",
+      "title": "Ufuk Avrupa FOREST Ortaklığı 2026 ortak çağrısı açıldı: ilk aşama uluslararası başvuru 2 Aralık 2026",
+      "body": "Ufuk Avrupa Programı çerçevesinde yürütülen FOREST Ortaklığı 2026 Ortak Çağrısı’na başvurular başladı.\n\nFOREST (Ormanlar, Ormancılık ve Orman Temelli Sektör: Sürdürülebilir Bir Geçiş için Araştırma ve İnovasyon [Forests, forestry, and the forest-based sector: Research and Innovation for a Sustainable Transition]) Ortaklığı, orman ekosistemleri temelli sürdürülebilir biyoekonomiye geçişin hızlandırılması için araştırma ve inovasyonu harekete geçirmeyi amaçlayan ortak fonlama projesidir.\n\nFOREST Ortaklığı kapsamında “FORESTPathways” başlıklı 2026 yılı ortak çağrısı 15 Eylül 2026 tarihinde açılmıştır. Çağrı, dayanıklı ormanlar ve orman temelli sürdürülebilir bir gelecek için iş birliğine dayalı araştırma ve yenilik faaliyetlerini desteklemek amacıyla 27 ülkeden 36 ortağı bir araya getirmektedir.\n\nFOREST Ortaklığı 2026 yılı ortak çağrısı ile disiplinler, sektörler ve ülkeler arası iş birliğinin teşvik edilmesi ve orman sisteminin tümüne yönelik araştırma ve yenilik ihtiyaçlarının ele alınması amaçlanmaktadır.\n\nBu kapsamda, FOREST 2026 yılı ortak çağrısında 4 ana başlık altında aşağıda belirtilen konulardaki projelerin desteklenmesi hedeflenmektedir.\n\nİklime dayanıklı orman sistemleri\n\nUyarlanabilir ve çok işlevli orman amenajman sistemleri\n\nKereste ve yenilikçi ahşap temelli ürünler\n\nOrman değer zincirleri, pazarlama ve yönetişim\n\nBaşvuru sahipleri, proje önerilerinin odağını yansıtan yukarıdaki konu başlıklarından birini seçmelidir.\n\nÇağrı kapsamında sadece uluslararası projeler finanse edilecektir. Uluslararası çağrı kurallarına göre konsorsiyum oluşturulması ve FOREST Elektronik Başvuru ve Değerlendirme Sistemi kullanılarak uluslararası başvurunun tamamlanması gerekmektedir. Uluslararası çağrı metni ve başvuru kuralları için tıklayınız.\n\nTürkiye’den ortakların yer alacağı projeler için hem çağrı sekretaryasına hem de TÜBİTAK’a başvuru yapılması zorunludur. Birinci aşama başvuru sürecinde, uluslararası başvuruya ek olarak projede yer alan Türk kurum/kuruluşların belirtilen tarihe kadar TÜBİTAK’a ayrıca ulusal başvuruda bulunmaları gerekmektedir. Ulusal başvuru TÜBİTAK UİDB Proje Başvuru Sistemi (PBS) üzerinden yalnızca elektronik imza (e-imza) kullanılarak gerçekleştirilmelidir. İkinci aşamaya ilişkin ulusal başvuru tarihi TÜBİTAK tarafından duyurulacaktır.\n\nBaşvuru öncesinde ulusal başvuru kurallarının detaylı bir şekilde incelenmesi gerekmektedir. Başvuru kurallarına uyulmaması durumunda başvurunun değerlendirmeye alınmadan iade edilmesi söz konusudur. FOREST Ortaklığı 2026 Yılı Ortak Çağrısı Ulusal Başvuru Kuralları dokümanı aşağıda sunulmuştur.\n\nSöz konusu çağrı kapsamında ülkemizden sunulacak proje önerileri, TÜBİTAK 1071 Uluslararası İşbirliği Projeleri Destek Programı kapsamında desteklenecektir.\n\nFOREST Ortaklığı 2026 Yılı Ortak Çağrısı ile ilgili 1 Ekim 2026 tarihi saat 10:00’da bir çevrim içi bilgilendirme toplantısı yapılacaktır. İlgili link üzerinden 30 Eylül 2026 tarihine kadar kayıt yapılması gerekmektedir.\n\n1. Aşama Uluslararası Başvuruları için Son Tarih: 2 Aralık 2026 (13:00, CET)\n\n1. Aşama Ulusal Başvurunun PBS Üzerinden Onaylanması için Son Tarih: 8 Aralık 2026 (23:59, TSİ)\n\n1. Aşama Ulusal Başvurunun E-imzası için Son Tarih: 11 Aralık 2026 (23:59, TSİ)",
+      "published_at": "2026-09-25T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ufuk Avrupa kapsamındaki FOREST Ortaklığı'nın 27 ülkeden 36 ortağı bir araya getiren 'FORESTPathways' 2026 ortak çağrısı 15 Eylül'de açıldı; kereste ve yenilikçi ahşap temelli ürünler ile orman değer zincirleri de çağrı konuları arasında. Türk ortaklar TÜBİTAK 1071 programıyla destekleniyor ve ulusal başvuruyu PBS üzerinden e-imzayla yapmak zorunda. Mobilya, kâğıt ve ahşap ürünleri imalatçıları için Avrupa konsorsiyumlarına katılma fırsatı.",
+      "key_points": [
+        "İlk aşama uluslararası başvuru son tarihi: 2 Aralık 2026 (13:00 CET).",
+        "Ulusal başvurunun PBS'de onaylanması için son tarih: 8 Aralık 2026 (23:59 TSİ); e-imza için son tarih: 11 Aralık 2026 (23:59 TSİ).",
+        "Çevrim içi bilgilendirme toplantısı 1 Ekim 2026 saat 10:00'da; kayıt için son gün 30 Eylül 2026.",
+        "Konular: iklime dayanıklı orman sistemleri, çok işlevli orman amenajmanı, kereste ve yenilikçi ahşap ürünleri, orman değer zincirleri.",
+        "Türkiye'den ortaklar TÜBİTAK 1071 Uluslararası İşbirliği Projeleri Destek Programı kapsamında destekleniyor."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜBİTAK",
+          "FOREST Ortaklığı",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Orman Ürünleri",
+          "Mobilya"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ufuk-avrupa",
+        "horizon-europe",
+        "tubitak",
+        "proje-cagrisi",
+        "son-basvuru",
+        "surdurulebilirlik"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 40,
+        "keyword": 70,
+        "recency": 100,
+        "corroboration": 30,
+        "reach": 40
+      }
+    },
+    {
+      "source_slug": "ufuk-avrupa",
+      "url": "https://ufukavrupa.org.tr/tr/haberler/insan-robot-etkilesimi-alaninda-gelistirilen-fortis-teknolojilerinin-yeni-sivil-uygulama",
+      "title": "FORTIS açık çağrısı: insan-robot etkileşimi teknolojilerinin yeni sivil alanlara aktarımına destek, son başvuru 4 Kasım 2026",
+      "body": "FORTIS Projesi kapsamında yayımlanan OC#2.2 “FORTIS Çözümünün Diğer Kilit Sektörlerde Değerlendirilmesi” açık çağrısı ile insan-robot etkileşimi alanında geliştirilen FORTIS teknolojilerinin yeni sivil uygulama alanlarına aktarılmasına yönelik projeler desteklenecektir.\n\nÇağrı kapsamında, FORTIS çözümünün tarım, sağlık, perakende ve etkinlik yönetimi gibi farklı sektörlerde uygulanmasına yönelik teknoloji transferi ve doğrulama faaliyetlerinin gerçekleştirilmesi hedeflenmektedir. Desteklenecek projelerin başlangıçta TRL 4–5 seviyesinde olması ve proje sonunda TRL 7 seviyesine ulaşması beklenmektedir.\n\nBaşvurular, en az bir KOBİ’nin yer aldığı iki ortaklı konsorsiyumlar tarafından yapılabilecektir. Konsorsiyumlarda üniversiteler, araştırma ve teknoloji kuruluşları, KOBİ’ler, start-up’lar, orta ölçekli şirketler ve son kullanıcı kuruluşlar yer alabilecektir.\n\nÜniversiteler ve araştırma kuruluşları için destek oranı %100, KOBİ’ler ve diğer kâr amacı güden kuruluşlar için ise %70’tir.\n\nProjelerin 10 ay süreyle yürütülmesi planlanmaktadır. Başvurular 4 Kasım 2026 tarihine kadar kabul edilecektir.",
+      "published_at": "2026-09-14T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Ufuk Avrupa destekli FORTIS projesinin OC#2.2 açık çağrısı, insan-robot etkileşimi alanında geliştirilen FORTIS teknolojilerinin tarım, sağlık, perakende ve etkinlik yönetimi gibi yeni sektörlere aktarılmasını destekliyor. En az bir KOBİ'nin yer aldığı iki ortaklı konsorsiyumlar başvurabiliyor; KOBİ'lere destek oranı yüzde 70. Robotik ve otomasyon alanında çalışan KOBİ'ler için 10 aylık, TRL 4-5'ten 7'ye ilerleyen doğrudan AB finansmanı fırsatı; son başvuru 4 Kasım 2026.",
+      "key_points": [
+        "Son başvuru: 4 Kasım 2026.",
+        "En az bir KOBİ'nin yer aldığı iki ortaklı konsorsiyumlar başvurabilir.",
+        "Destek oranı: üniversite ve araştırma kuruluşları yüzde 100, KOBİ'ler ve diğer kâr amaçlı kuruluşlar yüzde 70.",
+        "Projeler TRL 4-5'ten başlayıp TRL 7'ye ulaşmalı; süre 10 ay."
+      ],
+      "entities": {
+        "kurum": [
+          "FORTIS Projesi",
+          "TÜBİTAK",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Robotik",
+          "Otomasyon"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ufuk-avrupa",
+        "robotik",
+        "kobi",
+        "proje-cagrisi",
+        "son-basvuru",
+        "ab-fonlari"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 40,
+        "keyword": 70,
+        "recency": 56,
+        "corroboration": 20,
+        "reach": 35
+      }
+    },
+    {
+      "source_slug": "ufuk-avrupa",
+      "url": "https://ufukavrupa.org.tr/tr/haberler/p4planet-ortakligi-istanbulda-stratejik-onceliklerden-yeni-proje-fikirleri-ve-birliklerine",
+      "title": "P4Planet Ortaklığı İstanbul'da: proses endüstrileri için 2027 çağrılarına yönelik bilgilendirme ve ağ kurma günü yapıldı",
+      "body": "Ufuk Avrupa’da Türkiye Teknik Destek Projesi kapsamında TÜBİTAK tarafından, ARGEMİP ve A.SPIRE iş birliğiyle düzenlenen Processes4Planet (P4Planet) Ortaklığı Bilgilendirme ve Ağ Kurma Günü, 8 Eylül 2026 tarihinde İstanbul Teknopark’ta gerçekleştirildi. Etkinlik, büyük sanayi kuruluşları ve KOBİ’lerden sektör temsil kuruluşlarına, üniversitelerden araştırma ve teknoloji kuruluşlarına ve kamu kurumlarına uzanan 100’ü aşkın Türkiye Araştırma Alanı paydaşını, P4Planet ekosisteminin önde gelen Avrupalı kuruluşlarının temsilcileriyle bir araya getirdi.\n\nUfuk Avrupa’nın Dijital, Endüstri ve Uzay Kümesi kapsamında Avrupa Komisyonu ile A.SPIRE arasında kurulan ortak programlı kamu-özel sektör ortaklığı olan P4Planet; çimento, seramik, kimya, demir dışı metaller, mineraller, selüloz ve kâğıt, rafineri, çelik ve su gibi proses endüstrilerinin 2050 yılına kadar döngüsellik ve iklim nötrlüğü doğrultusunda dönüşümünü desteklerken Avrupa sanayisinin küresel rekabet gücünü artırmayı hedefliyor. İstanbul’da düzenlenen etkinlik, Türkiye’den kuruluşların P4Planet ekosistemiyle bağlantılarını güçlendirmelerine; yaklaşan çağrılar, yeni proje fırsatları ve potansiyel iş birlikleri hakkında bilgi edinmelerine ve yeni bağlantılar kurmalarına olanak sağladı.\n\nTÜBİTAK Dijital, Endüstri ve Uzay Kümesi Ulusal İrtibat Noktaları Dr. Hale Ay ve Elif Sena Yıkılmaz’ın koordinasyonunda ve ARGEMİP Genel Sekreteri Zeki Tuna’nın destekleriyle planlanan program, ARGEMİP Yönetim Kurulu Başkanı Okan Özkan ile TÜBİTAK AB Çerçeve Programları Müdürü Çağrı Yıldırım’ın açılış konuşmalarıyla başladı. Açılışın ardından Dr. Hale Ay, Ufuk Avrupa Programı, Avrupa Ortaklıkları ve TÜBİTAK destek mekanizmalarına ilişkin genel çerçeveyi katılımcılarla paylaştı. A.SPIRE Genel Müdürü Àngels Orduña Cao ise P4Planet’in çalışma yapısı ve mekanizmaları, 2050 Stratejik Araştırma ve Yenilik Gündemi (SRIA), A.SPIRE’ın rolü ve P4Planet 2027 çağrılarına ilişkin bilgi verdi. Dr. Hale Ay ve Elif Sena Yıkılmaz, program boyunca katılımcılara rehberlik ederek proje geliştirme ve uluslararası iş birliği olanaklarının değerlendirilmesine katkı sağladı.\n\nProgram, P4Planet’in mevcut çağrı döneminin ötesindeki dönüşüm perspektifine de yer verdi. A.SPIRE’ın 2040 Innovation4Competitiveness Vision yaklaşımı üzerinden, 2028-2034 döneminde proses endüstrisi öncülüğünde şekillenmesi öngörülen yeni araştırma ve yenilik ortaklığı yaklaşımı katılımcılarla paylaşıldı. Bu kapsamda, vizyonun üç stratejik hedefi; küresel endüstriyel rekabet gücü, Avrupa değer zincirlerinin stratejik özerkliği ve inovasyon odaklı sürdürülebilirlik olarak ortaya konmuştur. Ayrıca, dijitalleşme ve yapay zekânın tüm alanları yatay olarak kapsadığı enerji ve CO₂, emisyonların ve endişe konusu maddelerin azaltılması, biyobazlı hammaddelerin kullanımı, döngüsellik ve malzeme verimliliği ile malzeme, ürün ve üretim süreçlerinde inovasyon olmak üzere beş teknoloji inovasyon alanı ele alınmıştır.\n\nStratejik çerçevenin ardından söz, P4Planet Ortaklığı çağrıları kapsamında desteklenen projelerde yer alan kuruluşların temsilcilerine geçti. Bu kapsamda, başarılı proje örnekleri, başarıya katkı sağlayan temel faktörler, uygun proje fikirleri ve çağrıların belirlenmesi, doğru ortakların seçilmesi, rekabetçi proje tekliflerinin hazırlanması, değerlendirici perspektifinden başarı kriterleri ve geçmiş başvurulardan edinilen dersler üzerinde duruldu. Ayrıca, ülkemizdeki kuruluşların P4Planet ekosistemine daha aktif katılım sağlamaları ve gelecekteki çağrılar için güçlü konsorsiyumlar oluşturmalarına yönelik pratik öneriler paylaşıldı. “Avrupa’dan Başarı Hikâyeleri” oturumunda TECNALIA Research & Innovation’dan Dr. Iban Vicario Gómez, SINTEF’ten Dr. Richard Heyn ve CIRCE Centro Tecnológico’dan Andrés Yáñez Amador tecrübelerini ve perspektiflerini paylaşırken; “Türkiye’den Başarı Hikâyeleri” oturumunda ise Tüpraş’tan Can Demir, Teknopar’dan M. Edip Akay ve Baştaş’tan Mete Emre Ergüçlü deneyimlerini ve önerilerini katılımcılarla paylaştı.\n\nGünün ikinci yarısında program, bilgi ve deneyim paylaşımının yanı sıra yeni proje fikirlerine ve ortaklık arayışlarına da alan açtı. P4Planet 2027 çağrılarını hedefleyen fikirler pitching oturumunda katılımcılar tarafından sunulurken, ardından Türkiye’den kuruluşlar ile deneyimli Avrupalı P4Planet aktörleri bire bir görüşmelerde bir araya geldi. 30’u aşkın planlı ikili görüşmeye, gün boyunca bunun katbekat üzerinde gerçekleşen informal bire bir temasın eşlik etmesi, etkinliği proje fikirlerinin, uzmanlıkların ve potansiyel ortaklıkların doğrudan karşılık bulduğu yoğun bir ağ kurma ortamına dönüştürdü. Görüşmeler, kuruluşlara tamamlayıcı yetkinlikleri keşfetme, proje fikirlerini karşılıklı değerlendirme ve gelecekteki konsorsiyumların ilk bağlantılarını kurma fırsatını verdi.\n\nProcesses4Planet Bilgilendirme ve Ağ Kurma Günü; P4Planet’in uzun vadeli dönüşüm vizyonundan 2027 çağrılarına, Avrupa ve Türkiye’den proje deneyimlerinden yeni fikirlerin sunulmasına ve doğrudan ortaklık görüşmelerine uzanan yapısıyla, Türkiye Araştırma Alanı paydaşlarının Avrupa proses endüstrisi araştırma ve yenilik ekosistemiyle bağlarını güçlendiren ve gelecekteki iş birliklerine zemin hazırlayan kapsamlı bir buluşma oldu.",
+      "published_at": "2026-09-16T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TÜBİTAK, ARGEMİP ve A.SPIRE iş birliğiyle 8 Eylül'de İstanbul Teknopark'ta düzenlenen Processes4Planet bilgilendirme gününde 100'ü aşkın paydaş, çimento, seramik, kimya, demir dışı metaller, çelik ve kâğıt gibi proses endüstrilerinin 2050 iklim nötrlüğü hedefine yönelik P4Planet 2027 çağrılarını ele aldı. Tüpraş, Teknopar ve Baştaş başarı hikâyelerini paylaştı; 30'u aşkın ikili görüşme yapıldı. Enerji yoğun İSO üyeleri için karbonsuzlaşma Ar-Ge'sini AB fonlarıyla finanse etme yolu.",
+      "key_points": [
+        "Etkinlik 8 Eylül 2026'da İstanbul Teknopark'ta 100'ü aşkın Türkiye Araştırma Alanı paydaşıyla yapıldı.",
+        "P4Planet; çimento, seramik, kimya, demir dışı metaller, mineraller, selüloz-kâğıt, rafineri, çelik ve su sektörlerini kapsıyor.",
+        "P4Planet 2027 çağrıları ve 2028-2034 döneminde öngörülen yeni proses endüstrisi ortaklığı yaklaşımı anlatıldı.",
+        "Tüpraş, Teknopar ve Baştaş Türkiye'den başarı hikâyelerini paylaştı; 30'u aşkın planlı ikili görüşme yapıldı."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜBİTAK",
+          "ARGEMİP",
+          "A.SPIRE",
+          "Tüpraş",
+          "Baştaş"
+        ],
+        "kisi": [
+          "Hale Ay",
+          "Okan Özkan",
+          "Àngels Orduña Cao"
+        ],
+        "sektor": [
+          "Çimento",
+          "Kimya",
+          "Demir-Çelik",
+          "Seramik"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ufuk-avrupa",
+        "horizon-europe",
+        "celik",
+        "cimento",
+        "karbon",
+        "dongusel-ekonomi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 50,
+        "keyword": 65,
+        "recency": 64,
+        "corroboration": 25,
+        "reach": 40
+      }
+    },
+    {
+      "source_slug": "ufuk-avrupa",
+      "url": "https://ufukavrupa.org.tr/tr/haberler/avrupanin-hidrojen-rekabetciligi-icin-yedi-oncelikli-inovasyon-alani-belirlendi",
+      "title": "Clean Hydrogen Partnership raporu: Avrupa'nın hidrojen rekabetçiliği için yedi öncelikli inovasyon alanı belirlendi",
+      "body": "Clean Hydrogen Partnership tarafından yayımlanan yeni rapor, Avrupa’nın güçlü Ar-Ge kapasitesi, düzenleyici çerçevesi ve teknolojik birikimine rağmen; yüksek maliyetler, sınırlı üretim ölçeği, yavaş altyapı gelişimi ve yetersiz talep nedeniyle küresel hidrojen rekabetinde geride kalma riski taşıdığını ortaya koyuyor. Raporda, Avrupa hidrojen sektörünün rekabetçiliğini güçlendirmek üzere yedi öncelikli inovasyon teması belirleniyor.\n\nClean Hydrogen Partnership için ERM tarafından hazırlanan “European Hydrogen Competitiveness” başlıklı nihai rapor yayımlandı. Çalışmada Avrupa hidrojen sektörünün mevcut konumu Çin, Japonya ve Suudi Arabistan gibi küresel aktörlerle karşılaştırılıyor; Avrupa’nın güçlü ve zayıf yönleri değerlendirilerek gelecekteki araştırma, inovasyon ve sanayileşme desteklerinin yönlendirilmesi gereken alanlar inceleniyor.\n\nRapora göre temiz hidrojen, özellikle doğrudan elektrifikasyonun teknik veya ekonomik açıdan sınırlı kaldığı enerji yoğun sanayi, ağır taşımacılık ve uzun süreli enerji depolama gibi alanlarda Avrupa’nın enerji güvenliği ve karbonsuzlaşma hedeflerine katkı sağlayabilir. Bununla birlikte Avrupa’da hidrojen teknolojilerinin uygulamaya geçirilme hızı önceki beklentilerin altında kalıyor. Zayıf iş modelleri, yüksek enerji maliyetleri, karmaşık düzenlemeler, teknolojik ve ticari olgunluk eksiklikleri ile tedarik zinciri kısıtları sektörün büyümesini yavaşlatan başlıca unsurlar arasında gösteriliyor.\n\nKüresel hidrojen sektöründe taahhüt edilen yatırım tutarının 2024’ten 2025’e 35 milyar ABD doları artarak yaklaşık 110 milyar ABD dolarına ulaştığı belirtilirken, birçok projenin kamu desteği veya uzun vadeli gelir güvencesi olmaksızın henüz yatırım yapılabilir bir yapıya kavuşamadığına dikkat çekiliyor.\n\nRekabetçilik iki boyutta ele alınıyor\n\nRaporda Avrupa hidrojen sektörünün rekabetçiliği iki temel boyut üzerinden değerlendiriliyor:\n\nHidrojen teknolojilerinin Avrupa’nın karbonsuzlaşma ihtiyaçlarını karşılayacak ölçekte uygulanabilmesi,\n\nAvrupa şirketlerinin hidrojen üretimi, ekipman imalatı ve diğer değer zinciri faaliyetlerinde küresel pazardan anlamlı bir pay alabilmesi.\n\nBu iki hedefin her zaman birbiriyle örtüşmediği vurgulanıyor. Avrupa’da hidrojenin hızlı biçimde yaygınlaştırılması, kısa vadede düşük maliyetli ithal hidrojen ve ekipman kullanımını gerektirebilir. Ancak bu durum Avrupa’daki üreticilerin gelişmesini ve stratejik teknolojik kapasitenin korunmasını zorlaştırabilir. Yalnızca Avrupa içinde üretime öncelik verilmesi ise ilk projelerin maliyetlerini artırarak hidrojen kullanımını yavaşlatabilir.\n\nBu nedenle raporda maliyet, ölçek, yatırım ve ekonomik etki, altyapı, teknoloji ve inovasyon, politika ve düzenlemeler ile sürdürülebilirlik olmak üzere yedi rekabetçilik unsuru esas alınıyor.\n\nAvrupa güçlü bir temele sahip ancak ölçeklenmekte zorlanıyor\n\nRapora göre Avrupa; hidrojenin depolanması ve dağıtımı, ileri mühendislik, güvenlik, standartlar ve düzenleyici çerçeveler bakımından güçlü bir konumda bulunuyor. Innovation Fund ve Clean Hydrogen Partnership gibi mekanizmalar da teknoloji geliştirme ve ilk uygulama projelerine önemli kamu desteği sağlıyor.\n\nBuna karşılık Avrupa’nın araştırma ve inovasyon alanındaki gücü henüz maliyet avantajına, seri üretime ve hızlı pazar gelişimine yeterince dönüşmüş değil. Avrupa; inovasyon kapasitesi, orta akım teknolojileri ve düzenleyici çerçevelerde öne çıkarken maliyet, proje ölçeği ve imalat kapasitesinin artırılma hızı bakımından Çin, Japonya ve Suudi Arabistan’ın gerisinde kalıyor.\n\nAvrupa’nın rekabetçiliğini sınırlandıran başlıca sorunlar arasında şunlar yer alıyor:\n\nYüksek elektrik ve mühendislik, tedarik ve inşaat maliyetleri,\n\nYavaş ilerleyen altyapı ve şebeke bağlantıları,\n\nDüşük hacimli ve büyük ölçüde manuel üretim süreçleri,\n\nHidrojen talebi ile uzun vadeli alım taahhütlerinin yetersizliği,\n\nAr-Ge ve demonstrasyon projeleri ile ticari ölçekli yatırımlar arasındaki finansman boşluğu,\n\nÜye Devletlerin destek programları ve teşvikleri arasındaki farklılıklar.\n\nÇin düşük maliyetli elektrolizör üretimi ve büyük ölçekli imalat kapasitesiyle, Japonya yakıt hücreleri ve son kullanım teknolojileriyle, Suudi Arabistan ise düşük maliyetli yenilenebilir enerjiye dayanan büyük hidrojen ve türevleri projeleriyle öne çıkıyor.\n\nClean Hydrogen Partnership desteklerinde yeni yönelimler\n\nRaporda, Clean Hydrogen Partnership ve öncül ortaklıkların 2010–2025 döneminde projelere sağladığı toplam katkının yaklaşık 1,8 milyar avroya ulaştığı görülüyor. Finansmanın yüzde 31’i ulaştırma alanındaki son kullanım uygulamalarına, yüzde 18’i sabit uygulamalara, yüzde 18’i hidrojen üretim teknolojilerine, yüzde 14’ü hidrojen vadilerine ve yüzde 9’u depolama ve dağıtım teknolojilerine yönlendirildi.\n\nÜretim teknolojilerindeki destekler ağırlıklı olarak PEM ve alkali elektrolize ayrılırken, katı oksit ve daha sınırlı ölçüde AEM teknolojilerine yönelik finansman zaman içinde arttı. Hidrojen vadilerine yönelik destekler özellikle 2022’den sonra yükselirken, depolama ve dağıtım alanındaki finansmanın yaklaşık yüzde 70’i 2023 ve sonrasında başlayan projelere tahsis edildi.\n\nOrtaklık tarafından desteklenen çalışmalar, yakıt hücreli otobüsler gibi bazı uygulamalarda birim maliyetlerin yüzde 50’den fazla azaltılmasına katkı sağladı. Bununla birlikte rapor, teknolojik gelişmenin tek başına büyük ölçekli pazar oluşumu için yeterli olmadığını; düzenlemeler, talep teşvikleri ve uzun vadeli gelir güvencesiyle tamamlanması gerektiğini vurguluyor.\n\nAvrupa için yedi öncelikli inovasyon teması\n\nRapor, gelecekteki desteklerin hidrojen değer zincirinin tamamına eşit şekilde dağıtılması yerine Avrupa’nın rekabetçiliğine en fazla katkı sağlayacak alanlarda yoğunlaştırılmasını öneriyor. Bu doğrultuda yedi öncelikli tema belirleniyor:\n\nElektrolizör ve yakıt hücresi üretiminde otomasyon ve yapay zekâ kullanımının artırılması, bileşenlerin seri üretime uygun tasarlanması ve gigawatt ölçekli üretim hatlarının kurulması öneriliyor. Farklı üreticilerin bileşenlerinin standartlaştırılması ve birlikte çalışabilirliğin geliştirilmesi de maliyetlerin düşürülmesi bakımından öncelikli görülüyor.\n\n2. Hidrojen ekosistemleri ve vadileri\n\nHidrojen vadilerinin tekil demonstrasyon projeleri olmaktan çıkarılarak tekrarlanabilir ve yatırım yapılabilir bölgesel pazar modellerine dönüştürülmesi hedefleniyor. Üretim, altyapı ve talebin birlikte planlanması; sertifikalandırılmış tedarikçi ağlarının kurulması ve hidrojene özgü sigorta ve finansman ürünlerinin geliştirilmesi öneriliyor.\n\n3. Yenilenebilir elektriğe erişim\n\nElektriğin elektrolitik hidrojen maliyetindeki belirleyici rolü nedeniyle şebeke bağlantı süreleri ve ücretlerinin iyileştirilmesi, elektroliz tesisleri için rekabetçi elektrik tedarik modellerinin geliştirilmesi ve esnek çalışan elektrolizörlerin şebeke dengeleme hizmetlerine katılması gerektiği belirtiliyor.\n\n4. Hidrojen taşıyıcıları ve depolama\n\nSıvı organik hidrojen taşıyıcıları, amonyak, sıvı hidrojen ve yer altı depolama çözümleri öncelikli alanlar arasında bulunuyor. Amonyak parçalama süreçlerinin verimliliğinin artırılması, büyük hacimli amonyak işleyecek liman ve terminal altyapısının geliştirilmesi, sıvı hidrojen kayıplarının azaltılması ve yer altı depolama sahalarının izin süreçlerinin hızlandırılması öneriliyor.\n\n5. Elektrolitik hidrojen üretimi\n\nElektrolizörlerin yatırım maliyetlerinin düşürülmesi, verimlilik ve dayanıklılığın artırılması, değişken yenilenebilir üretime uyumlu işletme kabiliyetinin geliştirilmesi ve kritik ham madde kullanımının azaltılması hedefleniyor. AEM teknolojileri, kritik malzemelerin geri dönüşümü, yeni membran ve katalizörler ile elektrolizör yığını ve yardımcı sistemlerin daha iyi bütünleştirilmesi öne çıkan konular arasında yer alıyor.\n\nTemiz hidrojen arzına yönelik desteklerin talep tarafı önlemleriyle tamamlanması gerektiği belirtiliyor. Hidrojene geçecek sanayi tesisleri için yatırım desteği, gri hidrojen kullanıcılarının temiz hidrojene yönlendirilmesi, uzun vadeli alım sözleşmeleri ve hidrojen, amonyak veya metanolle çalışabilen çok yakıtlı teknolojilerin geliştirilmesi öneriliyor.\n\n7. Yapay zekâ, düzenlemeler ve bilgi paylaşımı\n\nYapay zekânın elektrik fiyatı tahmini, üretim optimizasyonu ve bakım planlamasında kullanılması; izin süreçlerinin dijitalleştirilmesi ve Üye Devletler arasındaki teknik şartların uyumlaştırılması öncelikler arasında gösteriliyor. Desteklenen projelerden elde edilen test ve işletme verilerinin ortak veri tabanlarında paylaşılması da yeni projelerin süre ve maliyetlerini azaltabilecek bir unsur olarak değerlendiriliyor.\n\nAr-Ge’den ticari uygulamaya geçiş önem kazanıyor\n\nRaporun temel mesajlarından biri, Avrupa hidrojen sektörünün karşı karşıya olduğu sorunun artık yalnızca erken aşama teknoloji geliştirme olmadığı yönünde. Temel güçlük, geliştirilen teknolojilerin maliyet açısından rekabetçi ve ölçeklenebilir ticari uygulamalara dönüştürülmesi olarak tanımlanıyor.\n\nBu nedenle gelecekteki desteklerin talep oluşturması, uzun vadeli gelir öngörülebilirliği sağlaması, üretim ve altyapı yatırımlarını eş zamanlı geliştirmesi ve projelerin nihai yatırım kararına ulaşmasını kolaylaştırması gerekiyor. Fark sözleşmeleri, RFNBO kotaları, satın alma zorunlulukları, hedefli öz sermaye yatırımları ve harmanlanmış finansman modelleri bu kapsamda değerlendiriliyor.\n\nKamu-özel sektör ortaklıklarının rolü değişmeli\n\nRapora göre kamu-özel sektör ortaklıkları Avrupa’nın hidrojen alanındaki Ar-Ge ve demonstrasyon kapasitesinin gelişmesinde önemli bir rol oynadı. Bununla birlikte sektör ticari ölçeğe ilerledikçe yalnızca sermaye hibelerine dayalı destekler yeterli olmayabilir.\n\nBu nedenle Clean Hydrogen Partnership gibi yapıların erken aşama stratejik teknolojileri desteklemeye devam ederken demonstrasyon ile ticari uygulama arasındaki finansman boşluğuna, talep oluşturulmasına ve gelir güvencesine daha fazla odaklanması öneriliyor. Boru hatları, depolama tesisleri ve terminaller gibi büyük altyapılar için imtiyaz veya tasarla-yap-işlet modellerinin değerlendirilmesi de raporda yer alan öneriler arasında bulunuyor.\n\nRaporun genel değerlendirmesine göre Avrupa’nın hidrojen rekabetçiliği yalnızca yeni teknolojilerin geliştirilmesine değil; bunların sanayileştirilmesine, uygun maliyetli yenilenebilir enerjiye erişime, altyapı ile talebin birlikte oluşturulmasına ve stratejik değer zincirlerinde Avrupa’daki ekonomik değerin korunmasına bağlı olacak.",
+      "published_at": "2026-09-22T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Clean Hydrogen Partnership için ERM'nin hazırladığı rapor, Avrupa'nın güçlü Ar-Ge'sine rağmen yüksek elektrik ve inşaat maliyetleri, sınırlı üretim ölçeği ve zayıf talep nedeniyle Çin, Japonya ve Suudi Arabistan karşısında geride kalma riskini ortaya koyuyor. Rapor, büyük ölçekli elektrolizör imalatı, hidrojen vadileri ve son kullanıcı sanayi tesislerine yatırım desteği dahil yedi öncelik öneriyor. Enerji yoğun imalatçılar ve elektrolizör tedarik zincirine girmek isteyen makine üreticileri için AB destek önceliklerinin yönünü gösteriyor.",
+      "key_points": [
+        "Küresel hidrojen yatırım taahhütleri 2024'ten 2025'e 35 milyar dolar artarak yaklaşık 110 milyar dolara ulaştı.",
+        "Clean Hydrogen Partnership ve öncülleri 2010-2025'te projelere yaklaşık 1,8 milyar avro katkı sağladı.",
+        "Yedi öncelik: büyük ölçekli imalat, hidrojen vadileri, yenilenebilir elektriğe erişim, taşıyıcılar ve depolama, elektrolitik üretim, son kullanım, yapay zekâ ve düzenlemeler.",
+        "Fark sözleşmeleri, RFNBO kotaları, alım zorunlulukları ve harmanlanmış finansman gibi talep tarafı araçları öneriliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Clean Hydrogen Partnership",
+          "ERM",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Makine"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "enerji",
+      "sentiment": "NOTR",
+      "tags": [
+        "hidrojen",
+        "avrupa-birligi",
+        "yenilenebilir-enerji",
+        "rekabetcilik",
+        "ufuk-avrupa",
+        "cin-rekabeti"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 45,
+        "keyword": 60,
+        "recency": 88,
+        "corroboration": 25,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "ufuk-avrupa",
+      "url": "https://ufukavrupa.org.tr/tr/haberler/cetpartnership-2026-ortak-cagrisi-basvurulari-icin-son-gunler",
+      "title": "CETPartnership 2026 ortak çağrısında son günler: uluslararası ön başvuru 8 Ekim, TÜBİTAK ulusal başvurusu 15 Ekim 2026",
+      "body": "Temiz enerji alanında uluslararası araştırma ve yenilik iş birliklerini destekleyen CETPartnership 2026 Yılı Ortak Çağrısı için birinci aşama başvuru süreci devam ediyor.\n\nÇağrı kapsamında; yenilenebilir enerji teknolojileri, enerji sistemlerinin esnekliği ve dayanıklılığı, enerji depolama, endüstriyel karbon yönetimi, hidrojen ve yenilenebilir yakıtlar, sabit batarya teknolojileri, ısıtma ve soğutma, entegre bölgesel ve endüstriyel enerji sistemleri ile yapılı çevrede temiz enerji entegrasyonu alanlarında proje önerileri sunulabiliyor.\n\nUluslararası ön proje başvurusu: 8 Ekim 2026, saat 14.00 CEST (Türkiye saatiyle 15.00)\n\nTÜBİTAK ulusal başvurusunun tamamlanması için son tarih: 15 Ekim 2026, saat 23.59\n\nTÜBİTAK ulusal başvurusunun e-imza sürecinin tamamlanması için son tarih: 22 Ekim 2026, saat 23.59\n\nUluslararası başvurunun proje koordinatörü tarafından CETPartnership Elektronik Başvuru Sistemi üzerinden sunulmasının yanı sıra, projede yer alan Türkiye’deki kurum ve kuruluşların TÜBİTAK Proje Başvuru Sistemi üzerinden ayrıca ulusal başvuru yapması zorunludur.\n\nTÜBİTAK başvurularında nelere dikkat edilmeli?\n\nBaşvuru sahiplerinin özellikle aşağıdaki hususları göz önünde bulundurması önem taşımaktadır:\n\nUlusal başvurular yalnızca elektronik imza kullanılarak tamamlanabilmektedir. Proje ekibinin ve ilgili kurum yetkililerinin e-imza durumları son tarihler beklenmeden kontrol edilmelidir.\n\nARBİS’te kurum yetkilisi tanımlama ve onay işlemleri ortalama uzun sürebildiğinden gerekli tanımlamalar önceden yapılmalıdır.\n\nAynı uluslararası projede Türkiye’den birden fazla ortak bulunması hâlinde, bu kuruluşlar TÜBİTAK’a ayrı başvurular yapmak yerine tek bir ulusal başvuru altında ayrı yürütücü kuruluşlar olarak tanımlanmalıdır.\n\nUluslararası başvuruda ortak olarak yer almayan bir kurum veya kuruluş, ulusal başvuruda yürütücü kuruluş olarak gösterilemez.\n\nBirinci aşama ulusal başvuruya, uluslararası başvuru formunun yanı sıra proje ortakları arasındaki bütçe dağılımını gösteren belge de yüklenmelidir.\n\nProje süresi en fazla 36 ay olabilir. TÜBİTAK’tan talep edilebilecek katkı, PTİ ve Kurum Hissesi hariç olmak üzere, proje başına en fazla 300.000 avrodur .\n\nYükseköğretim kurumları, eğitim ve araştırma hastaneleri ile kamu kurumları için kuruluş başına katkı üst sınırı ortak olunması durumunda 100.000 avro , uluslararası koordinatör olunması durumunda ise 125.000 avrodur . Özel kuruluşlar için üst sınır (projede tek Türk ortak olmaları halinde) 300.000 avrodur .\n\nUluslararası başvuru bütçesine, uygun kuruluşlar için proje süresi × 390 avro üzerinden hesaplanan tahmini PTİ ile PTİ hariç proje bütçesinin yüzde 10’u oranındaki Kurum Hissesi eklenmelidir. PTİ “personnel cost”, Kurum Hissesi ise “overhead” bölümünde gösterilmelidir.\n\nUluslararası çağrı koşulları ile projedeki tüm ortak ülkelerin ulusal uygunluk kuralları birlikte sağlanmalıdır. Kurallara uygun olmayan başvurular değerlendirmeye alınmadan iade edilebilmektedir.\n\nBaşvuru hazırlıklarının son günlere bırakılmaması; özellikle bütçe, ortaklık yapısı, ulusal belgeler ve e-imza süreçlerinin şimdiden kontrol edilmesi önerilmektedir.",
+      "published_at": "2026-09-22T10:00:00+03:00",
+      "language": "tr",
+      "summary": "Temiz enerji alanındaki CETPartnership 2026 ortak çağrısında birinci aşama sürüyor; endüstriyel karbon yönetimi, hidrojen, enerji depolama ve entegre endüstriyel enerji sistemleri gibi konularda proje sunulabiliyor. Türk ortaklar için TÜBİTAK'tan talep edilebilecek katkı proje başına en fazla 300.000 avro. Uluslararası ön başvuru 8 Ekim, TÜBİTAK ulusal başvurusu 15 Ekim, e-imza 22 Ekim 2026'da kapanıyor; karbonsuzlaşma projesi olan sanayiciler için süre dar.",
+      "key_points": [
+        "Uluslararası ön proje başvurusu: 8 Ekim 2026, 14.00 CEST (TSİ 15.00).",
+        "TÜBİTAK ulusal başvurusu son tarih: 15 Ekim 2026, 23.59; e-imza için son tarih: 22 Ekim 2026, 23.59.",
+        "TÜBİTAK'tan talep edilebilecek katkı proje başına en fazla 300.000 avro; özel kuruluşlar için üst sınır 300.000 avro.",
+        "Proje süresi en fazla 36 ay; ulusal başvuru yalnızca e-imzayla tamamlanabiliyor.",
+        "Konular arasında endüstriyel karbon yönetimi, hidrojen ve yenilenebilir yakıtlar, enerji depolama ve entegre endüstriyel enerji sistemleri var."
+      ],
+      "entities": {
+        "kurum": [
+          "CETPartnership",
+          "TÜBİTAK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ufuk-avrupa",
+        "proje-cagrisi",
+        "son-basvuru",
+        "yenilenebilir-enerji",
+        "hidrojen",
+        "karbon"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 50,
+        "keyword": 75,
+        "recency": 88,
+        "corroboration": 20,
+        "reach": 40
+      }
+    },
+    {
+      "source_slug": "ufuk-avrupa",
+      "url": "https://ufukavrupa.org.tr/tr/haberler/made-europe-ortakligi-bilgilendirme-ve-ag-kurma-gunu-13-ekim-2026-ankara",
+      "title": "Made in Europe Ortaklığı Bilgilendirme ve Ağ Kurma Günü 13 Ekim 2026'da Ankara'da",
+      "body": "TÜBİTAK tarafından, “Ufuk Avrupa’da Türkiye” Teknik Destek Projesi kapsamında, EFFRA (European Factories of the Future Research Association) iş birliğiyle 13 Ekim 2026 tarihinde Ankara’da “Made in Europe Ortaklığı Bilgilendirme ve Ağ Kurma Günü” düzenlenecektir.\n\nUfuk Avrupa Programı’nın “Dijital, Endüstri ve Uzay” Kümesi kapsamında kurulan “Made in Europe Ortaklığı”, Avrupa imalat sanayisinin yeşil ve dijital dönüşümünü hızlandırmayı, teknolojik liderliğini ve küresel rekabet gücünü güçlendirmeyi amaçlayan ortak programlı bir Avrupa kamu-özel sektör ortaklığıdır. Rekabetçi, yeşil, dijital, dayanıklı ve insan odaklı bir Avrupa imalat sanayisine katkı sağlamayı hedefleyen Ortaklık; verimli, esnek ve akıllı fabrikalar ve tedarik zincirleri, yapay zekanın imalatta kullanımı, döngüsel ve iklim nötr imalat, ileri imalat teknolojileri ve insan merkezli imalat gibi alanlarda araştırma ve yenilik faaliyetlerini desteklemektedir.\n\nFarklı ölçeklerdeki sanayi kuruluşları, araştırma ve teknoloji kuruluşları, üniversiteler, kümelenmeler ve diğer ilgili paydaşları bir araya getiren “Made in Europe Ortaklığı”nın özel sektör tarafı, EFFRA tarafından temsil edilmektedir. Yeni ve yenilikçi üretim teknolojilerinin geliştirilmesini teşvik eden ve kâr amacı gütmeyen bir kuruluş olan EFFRA, 10’dan fazla ülkede sanayi ve araştırma alanlarında faaliyet gösteren 150’den fazla üyesiyle çeşitli ve dinamik bir topluluğu bir araya getirmektedir.\n\n“Dijital, Endüstri ve Uzay” Kümesi’nin ilk hedefi olan “Avrupa için malzeme ve üretim alanında liderlik” kapsamında, “Made in Europe Ortaklığı” çağrıları yer almaktadır. Ülkemizde imalat endüstrileri alanında faaliyet gösteren kurum ve kuruluşların “Made in Europe Ortaklığı” çağrılarına etkin katılımını artırmak, Avrupalı paydaşlarla katma değeri yüksek iş birlikleri ve ortak projeler geliştirmelerini teşvik etmek amacıyla düzenlenen etkinlikte aşağıdaki konular ele alınacaktır:\n\n• Made in Europe Ortaklığının Vizyonu, Amacı ve Kapsamı\n\n• Made in Europe Ortaklığının Yapısı, Çalışma Mekanizmaları ve Yönetişim Modeli\n\n• EFFRA’nın Avrupa İmalat Ekosistemindeki Rolü ve Made in Europe Ortaklığındaki Konumu\n\n• Made in Europe Ortaklığı Stratejik Araştırma ve Yenilik Gündemi\n\n• Made in Europe Ortaklığı 2027 Çağrıları ve Proje Geliştirme Fırsatları\n\n• Türkiye’den Paydaşların Made in Europe Ekosistemine Katılım ve İş Birliği Olanakları\n\nEtkinlik kapsamında EFFRA Genel Müdürü “Made in Europe Ortaklığı”nın yapısı ve stratejik öncelikleri ile 2027 çağrılarına ilişkin güncel bilgileri katılımcılarla paylaşacaktır. Etkinlikte ayrıca “Made in Europe Ortaklığı” çağrıları kapsamında desteklenen projelerde yer alan Avrupa ve Türkiye’den önde gelen araştırma kuruluşları ve sanayi temsilcileri, deneyimlerini ve başarı hikâyelerini paylaşacak; “Made in Europe Ortaklığı” 2027 çağrılarına yönelik proje fikirlerinin paylaşılacağı kısa tanıtım (pitching) oturumları gerçekleştirilecek; potansiyel proje ortaklarının bir araya gelerek yeni iş birlikleri geliştirmelerine ve gelecekte oluşturulacak konsorsiyumların temellerini atmalarına olanak sağlayacak ikili görüşmeler yapılacaktır.\n\nEtkinlik; imalat sanayisi alanında faaliyet gösteren özel sektör kuruluşları, KOBİ’ler, üniversiteler, araştırma ve teknoloji kuruluşları, teknoloji sağlayıcıları, kümelenmeler ve ilgili kamu kurumları başta olmak üzere, “Made in Europe Ortaklığı” kapsamında Avrupa’daki paydaşlarla yeni proje ve iş birlikleri geliştirmek isteyen tüm Türkiye Araştırma Alanı paydaşlarına yöneliktir.\n\nMade in Europe Ortaklığı 2027 yılı çağrılarına buradan ulaşabilirsiniz.\n\nEtkinliğe ilişkin detaylı programa buradan ulaşabilirsiniz.\n\nEtkinlik yalnızca fiziksel katılıma açık olarak Ankara’da gerçekleştirilecektir. Katılım için ön kayıt formunun doldurulması ve katılım onayı alınması zorunludur. Ön kayıt yaptıran katılımcılardan, kontenjan ve hedef kitleye uygun bulunan kişilere, katılım onayı ile etkinlik yeri ve detaylı adres bilgileri e-posta yoluyla iletilecektir.",
+      "published_at": "2026-09-22T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TÜBİTAK, EFFRA iş birliğiyle 13 Ekim 2026'da Ankara'da, Avrupa imalat sanayisinin yeşil ve dijital dönüşümünü hedefleyen Made in Europe Ortaklığı'nın 2027 çağrılarına yönelik bilgilendirme ve ağ kurma günü düzenliyor. Akıllı fabrikalar, imalatta yapay zekâ, döngüsel ve iklim nötr imalat konularında proje fikirlerinin sunulacağı ve ikili ortaklık görüşmelerinin yapılacağı etkinliğe katılım ön kayıt ve onayla. İmalat sanayicileri için AB'nin doğrudan imalata ayrılmış fon hattına giriş kapısı.",
+      "key_points": [
+        "Etkinlik tarihi: 13 Ekim 2026, Ankara (yalnızca fiziksel katılım); ön kayıt ve katılım onayı zorunlu.",
+        "Made in Europe, Ufuk Avrupa 'Dijital, Endüstri ve Uzay' kümesindeki imalat odaklı kamu-özel ortaklığı; özel sektör tarafını EFFRA temsil ediyor.",
+        "Destek alanları: akıllı fabrikalar ve tedarik zincirleri, imalatta yapay zekâ, döngüsel ve iklim nötr imalat, ileri imalat teknolojileri.",
+        "2027 çağrıları için pitching oturumları ve ikili ortaklık görüşmeleri yapılacak."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜBİTAK",
+          "EFFRA",
+          "Avrupa Komisyonu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi"
+        ]
+      },
+      "region": "AVRUPA",
+      "category": "ar-ge",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ufuk-avrupa",
+        "horizon-europe",
+        "sanayi-40",
+        "dijital-donusum",
+        "etkinlik",
+        "imalat-sanayi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 45,
+        "keyword": 70,
+        "recency": 88,
+        "corroboration": 20,
+        "reach": 40
+      }
+    },
+    {
+      "source_slug": "istka",
+      "url": "https://www.istka.org.tr/haber/istanbul-kalkinma-ajansi-yaratici-ekonominin-guclendirilmesi-mali-destek-programi-bilgilendirme-toplantisi-ytmz",
+      "title": "İSTKA Yaratıcı Ekonominin Güçlendirilmesi Mali Destek Programı bilgilendirme toplantısı 2 Ekim'de İSO Odakule'de",
+      "body": "İstanbul Kalkınma Ajansı 2026 yılı Yaratıcı Ekonominin Güçlendirilmesi Mali Destek Programı ilan edilmiştir. Bu kapsamda, başvuruların genel niteliğini artırmaya yönelik olarak Ajansımız tarafından yüz yüze tanıtım toplantıları yapılacaktır.\n\nİstanbul Kalkınma Ajansı olarak, başvuru sürecinden değerlendirme kriterlerine kadar tüm detayları paylaşacağımız Bilgilendirme Toplantımıza davetlisiniz!\n\nToplantı Gündemi:\n\nYaratıcı Ekonominin Güçlendirilmesi Mali Destek Programı Kapsamı\n\nBaşvuru Süreci ve Değerlendirme Kriterleri\n\nKimler Başvurabilir?\n\nProje Örnekleri\n\nSoru-Cevap\n\nToplantı Detayları\n\nTarih: 02/10/2026\n\nYer: İstanbul Sanayi Odası\n\nFazıl Zobu Konferans Salonu\n\nMeşrutiyet Cad. No:63, Odakule, 34430 Beyoğlu/İSTANBUL\n\nSaat: 14.00-16.30\n\nToplantılara katılım için rezervasyon yapılması gerekmemektedir.",
+      "published_at": "2026-09-15T10:00:00+03:00",
+      "language": "tr",
+      "summary": "İSTKA, 2026 Yaratıcı Ekonominin Güçlendirilmesi Mali Destek Programı için 2 Ekim 2026'da 14.00-16.30 arasında İSO Odakule Fazıl Zobu Konferans Salonu'nda yüz yüze bilgilendirme toplantısı düzenleyecek. Toplantıda program kapsamı, başvuru süreci, değerlendirme kriterleri ve proje örnekleri anlatılacak; rezervasyon gerekmiyor. Tasarım ve yaratıcı endüstrilerle bağlantılı proje hazırlayan İSO üyeleri için başvuru kalitesini artırma fırsatı.",
+      "key_points": [
+        "Bilgilendirme toplantısı: 2 Ekim 2026, 14.00-16.30, İSO Fazıl Zobu Konferans Salonu, Odakule.",
+        "Gündem: program kapsamı, başvuru süreci ve değerlendirme kriterleri, uygun başvuru sahipleri, proje örnekleri, soru-cevap.",
+        "Katılım için rezervasyon gerekmiyor."
+      ],
+      "entities": {
+        "kurum": [
+          "İstanbul Kalkınma Ajansı",
+          "İstanbul Sanayi Odası"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "istka",
+        "kalkinma-ajansi",
+        "yaratici-ekonomi",
+        "mali-destek",
+        "etkinlik",
+        "son-basvuru"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 45,
+        "keyword": 70,
+        "recency": 60,
+        "corroboration": 60,
+        "reach": 40
+      }
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/15/yaratici-ekonomiye-300-milyon-tl-destek/",
+      "title": "İSTKA'dan yaratıcı ekonomiye 300 milyon TL destek: proje başına 20 milyon TL'ye kadar, son başvuru 4 Aralık 2026",
+      "body": "İstanbul Kalkınma Ajansı, yaratıcı ekonomiyi güçlendirecek projeler için 300 milyon TL bütçeli mali destek programını ilan etti. Proje başına 20 milyon TL’ye kadar destek sağlanacak.\n\nİSTKA Yeni Destek Programını İlan Etti\n\nİstanbul Kalkınma Ajansı (İSTKA), 2026 Yılı Yaratıcı Ekonominin Güçlendirilmesi Mali Destek Programı için başvuruların başladığını duyurdu.\n\nİSTKA/2026/YEG referans numarasıyla ilan edilen program kapsamında yaratıcı ekonominin geliştirilmesine yönelik projeler desteklenecek.\n\nProgramın Bütçesi 300 Milyon TL\n\nProgram için toplam 300 milyon TL kaynak ayrıldı.\n\nBaşarılı bulunan projelere sağlanacak destek tutarları şöyle belirlendi:\n\nAsgari destek tutarı: 5 milyon TL\n\nAzami destek tutarı: 20 milyon TL\n\nAzami destek oranı: Yüzde 75\n\nSon Başvuru Tarihi 4 Aralık\n\nPrograma yönelik proje başvuruları 4 Aralık 2026 saat 23.59’a kadar yapılabilecek.\n\nBaşvuru işlemlerinin Kalkınma Ajansları Yönetim Sistemi (KAYS) üzerinden gerçekleştirilmesi gerekiyor.\n\nTaahhütname İçin Son Gün 11 Aralık\n\nSon başvuru tarihinin ardından KAYS tarafından oluşturulan taahhütnamenin en geç 11 Aralık 2026 saat 17.00’ye kadar tamamlanması gerekiyor.\n\nE-imza ile imzalanabilecek,\n\nIslak imzalı olarak elden teslim edilebilecek,\n\nPosta yoluyla İstanbul Kalkınma Ajansına ulaştırılabilecek.\n\nBilgilendirme Toplantısı Düzenlenecek\n\nPrograma ilişkin bilgilendirme toplantısı, 2 Ekim 2026 Cuma günü saat 14.00–16.30 arasında İstanbul Sanayi Odası Fazıl Zobu Konferans Salonu’nda gerçekleştirilecek.\n\nToplantının adresi Meşrutiyet Caddesi No. 63, Odakule, Beyoğlu/İstanbul olarak açıklandı.\n\nSorular E-Posta Yoluyla İletilebilecek\n\nBaşvuru sahipleri, programa ilişkin sorularını başvuruların sona ermesinden en geç 20 gün öncesine kadar [email protected] adresine gönderebilecek.\n\nSoruların yanıtları, Ajansa ulaştıkları tarihten itibaren en geç 10 gün içinde sıkça sorulan sorular bölümünde yayımlanacak.\n\nBaşvuru rehberi, başvuru formu, bütçe tablosu, mantıksal çerçeve, kilit personel özgeçmişleri ve standart sözleşme dâhil tüm belgelere İSTKA’nın program duyurusundan ulaşılabilir.",
+      "published_at": "2026-09-15T10:45:00+03:00",
+      "language": "tr",
+      "summary": "İSTKA'nın İSTKA/2026/YEG referanslı Yaratıcı Ekonominin Güçlendirilmesi Mali Destek Programı'nda toplam 300 milyon TL kaynak ayrıldı; proje başına 5-20 milyon TL ve en fazla yüzde 75 destek verilecek. Başvurular 4 Aralık 2026 saat 23.59'a kadar KAYS üzerinden yapılacak, taahhütname için son gün 11 Aralık 2026. Tasarım ve yaratıcı endüstri bileşeni olan projeler geliştiren İstanbul sanayicileri için önemli bir hibe kaynağı.",
+      "key_points": [
+        "Program bütçesi 300 milyon TL; proje başına asgari 5 milyon TL, azami 20 milyon TL, azami destek oranı yüzde 75.",
+        "Son başvuru: 4 Aralık 2026, saat 23.59 (KAYS üzerinden).",
+        "Taahhütname için son gün: 11 Aralık 2026, saat 17.00.",
+        "Bilgilendirme toplantısı 2 Ekim 2026'da 14.00-16.30 arasında İSO Fazıl Zobu Konferans Salonu'nda.",
+        "Sorular başvuruların bitiminden en geç 20 gün öncesine kadar e-postayla iletilebiliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "İstanbul Kalkınma Ajansı",
+          "İstanbul Sanayi Odası"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "istka",
+        "kalkinma-ajansi",
+        "yaratici-ekonomi",
+        "mali-destek",
+        "hibe",
+        "son-basvuru"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 55,
+        "keyword": 75,
+        "recency": 60,
+        "corroboration": 60,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "tgrt-haber",
+      "url": "https://www.tgrthaber.com/ekonomi/istanbul-icin-300-milyon-tllik-destek-paketi-inovasyon-basvurulari-basladi-3361002",
+      "title": "İstanbul için 300 milyon TL'lik destek paketi: İSTKA İnovasyon Ekonominin Güçlendirilmesi başvuruları başladı",
+      "body": "İstanbul Kalkınma Ajansı'nın 2026 Yılı İnovasyon Ekonominin Güçlendirilmesi Mali Destek Programına başvurular başladı. Program ile İstanbul'un üretken ekonomi ekosisteminin güçlendirilmesi amacıyla toplam 300 milyon TL kaynak sağlanacak. Projeler için 5 milyon TL ile 20 milyon TL arasında destek verilecek.\n\nSanayi ve Teknoloji Bakanlığı Kalkınma Ajansları Genel Müdürlüğü koordinasyonunda faaliyet gösteren İstanbul Kalkınma Ajansı (İSTKA), 2026 Yılı İnovasyon Ekonominin Güçlendirilmesi Mali Destek Programı kapsamında proje başvurularını almaya başladı. İstanbul'un yeni endüstriler alanındaki üretim kapasitesinin geliştirilmesi, ekosistemde yer alan paydaşlar arasındaki iş birliğinin güçlendirilmesi ve İstanbul'un uluslararası ölçekte yenilikçi şehir kimliğinin daha görünür hale getirilmesi amacıyla hazırlanan program kapsamında 300 milyon TL kaynak tahsis edildi. Destek almaya hak kazanan her bir proje için 5 milyon TL ile 20 milyon TL arasında mali destek sağlanacak.\n\nİKİ ÖNCELİKLİ ALANDA PROJE DESTEĞİ\n\nProgram kapsamında iki öncelikli alanda projeler desteklenecek. İlk öncelik, yeni endüstriler ve kültür ekosisteminde faaliyet gösteren paydaşların üretim kapasitesinin geliştirilmesine odaklanıyor. Bu kapsamda yenilikçi, sürdürülebilir ve ölçeklenebilir altyapıların, platformların ve iş modellerinin geliştirilmesine yönelik projeler desteklenecek. Üretim imkânlarının geliştirilmesi, farklı sektör ve disiplinlerden paydaşların ortak çalışmalar yürütmesi, kültürel mirasın yeni teknolojilerle geleceğe taşınması ve geleneksel üretimlerin çağdaş tasarımlarla buluşturulmasına yönelik projeler bu öncelik kapsamında değerlendirilecek.\n\nİkinci öncelik ise İstanbul'un şehir kimliğinin güçlendirilmesine yönelik projeleri kapsıyor. Kamusal alanların yenilikçi tasarım uygulamalarıyla yeniden işlevlendirilmesi, uluslararası sanatçı ikamet programlarının geliştirilmesi, müze ve tarihî alanlarda genişletilmiş gerçeklik (XR) uygulamalarının hayata geçirilmesi ve atıl yapıların yeni üretim ve çalışma mekanlarına dönüştürülmesi gibi çalışmalar bu kapsamda desteklenebilecek.\n\nBAŞVURULAR KAYS ÜZERİNDEN YAPILACAK\n\nMali destek programına başvurular Kalkınma Ajansları Yönetim Sistemi (KAYS) üzerinden çevrim içi olarak gerçekleştirilecek. Programa sunulan projeler, ilgili mevzuat ve program rehberinde belirtilen kriterler doğrultusunda bağımsız değerlendiriciler tarafından değerlendirilecek. Programa son başvuru tarihi 04/12/2026 olarak belirlendi. İstanbul Kalkınma Ajansı'nın 2026 yılı çağrı rehberine ve programla ilgili detaylı bilgilere https://www.istka.org.tr web adresinden ulaşılabilmektedir.",
+      "published_at": "2026-09-23T10:45:00+03:00",
+      "language": "tr",
+      "summary": "İSTKA, 2026 Yılı İnovasyon Ekonominin Güçlendirilmesi Mali Destek Programı için başvuru almaya başladı; toplam 300 milyon TL kaynaktan her projeye 5-20 milyon TL destek verilecek. Program yeni endüstriler ve kültür ekosistemindeki üretim kapasitesini ve İstanbul'un şehir kimliğini güçlendirmeyi hedefliyor. Son başvuru 4 Aralık 2026; yenilikçi altyapı, platform ve iş modeli geliştiren İstanbul'daki üreticiler için yeni bir hibe penceresi.",
+      "key_points": [
+        "Toplam kaynak 300 milyon TL; proje başına 5 milyon TL ile 20 milyon TL arasında destek.",
+        "Son başvuru: 4 Aralık 2026 (KAYS üzerinden).",
+        "Birinci öncelik: yeni endüstriler ve kültür ekosistemindeki paydaşların üretim kapasitesi; yenilikçi, ölçeklenebilir altyapı, platform ve iş modelleri.",
+        "İkinci öncelik: İstanbul'un şehir kimliğinin güçlendirilmesi; atıl yapıların üretim mekânlarına dönüştürülmesi de destekleniyor."
+      ],
+      "entities": {
+        "kurum": [
+          "İstanbul Kalkınma Ajansı",
+          "Kalkınma Ajansları Genel Müdürlüğü"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "istka",
+        "kalkinma-ajansi",
+        "inovasyon",
+        "mali-destek",
+        "hibe",
+        "son-basvuru"
+      ],
+      "importance_factors": {
+        "authority": 55,
+        "impact": 60,
+        "keyword": 75,
+        "recency": 92,
+        "corroboration": 35,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "turkpatent",
+      "url": "https://www.turkpatent.gov.tr/duyurular/dolandiricilik-konusunda-kamuoyunun-dikkatine-2026",
+      "title": "TÜRKPATENT'ten sahte vekil ve sahte internet siteleri uyarısı: Kurum telefonla ücret talep etmiyor",
+      "body": "Son zamanlarda kendilerini Marka Vekili veya Patent Vekili olarak tanıtan yetkisiz kişilerce, başvuru veya tescil sahiplerinin telefonla arandıkları ve muhtelif senaryolarla kandırılmaya çalışıldıkları veya Türk Patent ve Marka Kurumundan geldiği algısı oluşturan ve çeşitli ücretler talep eden yazılar gönderildiği, fatura benzeri bildirimler yapıldığı yönünde şikâyetler Kurumumuza iletilmektedir.\n\nBunun yanı sıra, TÜRKPATENT’in adını, logosunu ve elektronik başvuru sistemlerinin görsel tasarımını taklit eden sahte internet siteleri üzerinden “harç”, “tescil bedeli” ve benzeri adlar altında ödeme talep edildiğine ilişkin bildirimler de Kurumumuza ulaşmaktadır.\n\nTÜRKPATENT, hiçbir başvuru sahibinden hiçbir zaman arayarak ücret talep etmemektedir, bilgilendirme yapmamaktadır. Resmi yazışma yoluyla iletişim kurmaktadır.\n\nMarka ve Patent Vekilleri sicilinde kayıtlı marka ve patent vekilleri Kurum çalışanı olmayıp TÜRKPATENT, hiçbir marka veya patent vekiline dosya yönlendirmemektedir.\n\nTürk Patent ve Marka Kurumunun tek resmi internet sitesi https://www.turkpatent.gov.tr adresidir. Bu adres dışında TÜRKPATENT’e ait olduğu izlenimi veren .com, .org ve benzeri uzantılara sahip internet sitelerine itibar edilmemelidir.\n\nTÜRKPATENT adına ödeme talep eden kişi veya internet sitelerine herhangi bir ödeme yapılmaması; şüpheli internet sitelerine kişisel bilgi, e-Devlet bilgisi, banka veya kredi kartı bilgilerinin girilmemesi gerekmektedir.\n\nBu tür durumlarla karşılaşan başvuru sahiplerinin mağdur olmaması için şu adımları izlemesinde fayda vardır:\n\n1 - Tarafınıza şüpheli bir talep iletildiğinde Kurumumuz Çağrı Merkezini ( 0312 303 1 303 ) arayarak dosyanızın durumunu ve talep edilen ücretin gerçek olup olmadığını teyit edebilirsiniz; size iletilen şüpheli taleple ilgili bilgi alabilirsiniz.\n\n2 – Kurum nezdinde takip edilen işler bakımından bir Marka Vekili veya Patent Vekili tarafından temsil ediliyorsanız vekilinizi arayarak talep edilen ücretin gerçek olup olmadığını teyit edebilirsiniz.\n\n3 - TÜRKPATENT’e ait olduğu izlenimi veren şüpheli bir internet sitesiyle karşılaştığınızda, işlem yapmadan veya ödeme gerçekleştirmeden önce adresin Kurumun tek resmi internet sitesi olan https://www.turkpatent.gov.tr alan adına ait olup olmadığını kontrol ediniz.\n\n4 - Kendilerini Marka Vekili veya Patent Vekili olarak tanıtan kişilerin Marka Vekili veya Patent Vekili olup olmadıklarını aşağıda yer alan bağlantıdan veya buraya tıklayarak araştırıp teyit edebilirsiniz.\n\n5 – Vekillik meslek kurallarına aykırı davranışlar sergilediği düşünülen Marka Vekili veya Patent Vekilleri için, Patent ve Marka Vekilleri Disiplin Kuruluna EPATS üzerinden şikâyette bulunabilirsiniz.\n\nŞüpheli durumlarda söz konusu kişilerle hiçbir şekilde iletişime geçilmemesi ve iş ilişkisi kurulmaması, şüpheli internet siteleri üzerinden herhangi bir işlem yapılmaması, kişisel bilgi paylaşılmaması veya herhangi bir hesaba ödeme yapılmaması hususları kamuoyuna saygıyla duyurulur.\n\nŞüpheli kişi, bildirim veya internet siteleri hakkında 0312 303 1 303 numaralı hattımızdan bilgi alabilir veya bilgi@turkpatent.gov.tr adresine bildirimde bulunabilirsiniz.\n\nTÜRKPATENT olarak Kurumumuzun adını, logosunu veya sistemlerini taklit eden sahte internet sitelerine karşı gerekli hukuki ve teknik süreçler yürütülmekte, anılan sahte sitelerin erişimin engellenmesine yönelik gerekli hukuki başvurular yapılmaktadır.",
+      "published_at": "2026-09-16T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TÜRKPATENT, kendilerini marka veya patent vekili olarak tanıtan yetkisiz kişilerin başvuru ve tescil sahiplerini telefonla arayarak ya da fatura benzeri yazılarla ücret istediği, kurumun logosunu taklit eden sahte sitelerin 'harç' ve 'tescil bedeli' adı altında ödeme topladığı konusunda uyardı. Kurum hiçbir zaman telefonla ücret talep etmiyor; tek resmi adres turkpatent.gov.tr. Marka ve patent portföyü olan sanayiciler, gelen ödeme taleplerini çağrı merkezi veya vekilleri üzerinden doğrulamalı.",
+      "key_points": [
+        "TÜRKPATENT hiçbir başvuru sahibinden telefonla ücret talep etmiyor; resmi yazışma yoluyla iletişim kuruyor.",
+        "Tek resmi internet sitesi turkpatent.gov.tr; .com, .org gibi uzantılı sitelere itibar edilmemeli.",
+        "Şüpheli talepler 0312 303 1 303 numaralı çağrı merkezinden doğrulanabiliyor.",
+        "Vekillerin sicil kaydı sorgulanabiliyor; meslek kurallarına aykırı davranan vekiller için EPATS üzerinden şikâyet yapılabiliyor.",
+        "Sahte sitelere erişim engeli için hukuki süreçler yürütülüyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Türk Patent ve Marka Kurumu"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "turkpatent",
+        "marka-tescili",
+        "patent",
+        "fikri-mulkiyet",
+        "dolandiricilik"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 40,
+        "keyword": 55,
+        "recency": 64,
+        "corroboration": 15,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "turkpatent",
+      "url": "https://www.turkpatent.gov.tr/duyurular/turkpatent-isif26-patent-randevu-sistemi-basvurulari-basladi",
+      "title": "TÜRKPATENT ISIF'26 Patent Randevu Sistemi başvuruları başladı: 30 Eylül-4 Ekim 2026, Şanlıurfa",
+      "body": "TEKNOFEST ev sahipliğinde, 30 Eylül – 4 Ekim 2026 tarihleri arasında Şanlıurfa GAP Havalimanı’nda gerçekleştirilecek TÜRKPATENT ISIF’26 – 11. Uluslararası Buluş Fuarı kapsamında, Kurumumuz tarafından Patent Randevu Sistemi hizmeti sunulacak.\n\nPatent ve faydalı model başvuru sahipleri ile sınai mülkiyet haklarına ilgi duyan vatandaşlarımız TÜRKPATENT uzmanlarıyla birebir görüşerek başvuru, tescil süreci ve tescil sonrası işlemler hakkında bilgilendirme ve danışmanlık hizmeti alabilecek.\n\nPatent Randevu Sistemi hizmetinden yararlanmak isteyenler, aşağıdaki bağlantı üzerinden randevu oluşturabilir.\n\nEtkinlik tarihi: 30 Eylül – 4 Ekim 2026. Yer: Şanlıurfa GAP Havalimanı. Bilgi için: (0312) 303 1 303.",
+      "published_at": "2026-09-23T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TÜRKPATENT, TEKNOFEST ev sahipliğinde 30 Eylül-4 Ekim 2026 tarihlerinde Şanlıurfa GAP Havalimanı'nda yapılacak ISIF'26 11. Uluslararası Buluş Fuarı'nda Patent Randevu Sistemi hizmeti sunacak. Patent ve faydalı model başvuru sahipleri kurum uzmanlarıyla birebir görüşerek başvuru, tescil ve tescil sonrası süreçlerde danışmanlık alabilecek. Ar-Ge çıktısını patentlemek isteyen sanayiciler için ücretsiz uzman erişimi.",
+      "key_points": [
+        "ISIF'26 – 11. Uluslararası Buluş Fuarı: 30 Eylül – 4 Ekim 2026, Şanlıurfa GAP Havalimanı.",
+        "Patent ve faydalı model başvuru sahipleri TÜRKPATENT uzmanlarıyla birebir görüşebilecek.",
+        "Hizmet için randevu, kurumun duyurudaki bağlantısı üzerinden oluşturuluyor.",
+        "Danışmanlık başvuru, tescil ve tescil sonrası işlemleri kapsıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Türk Patent ve Marka Kurumu",
+          "TEKNOFEST"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "duyuru",
+      "sentiment": "POZITIF",
+      "tags": [
+        "turkpatent",
+        "patent",
+        "sinai-mulkiyet",
+        "etkinlik"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 25,
+        "keyword": 45,
+        "recency": 92,
+        "corroboration": 15,
+        "reach": 30
+      }
+    },
+    {
+      "source_slug": "tse",
+      "url": "https://www.tse.org.tr/duyuru/sera-gazi-hesaplama-yenileme-kasim-2026/",
+      "title": "TSE Sera Gazı Hesaplama Uzmanı Belge Yenileme Eğitimi 3 Kasım 2026'da; başvurular 2 Kasım'a kadar",
+      "body": "TSE, süresi dolan \"Sera Gazı Hesaplama Uzmanı\" belgelerinin yenilenmesine yönelik belge yenileme eğitimi düzenliyor. Eğitim 3 Kasım 2026'da saat 10.00'da, uzaktan ve bir gün süreyle yapılacak.\n\nBaşvurular 23 Eylül 2026 saat 10.00'da başlayıp 2 Kasım 2026 saat 17.00'de sona erecek. Eğitim ücreti KDV dahil 7.314 TL olarak belirlendi. Başvurular TSE yazılım portalı (basvuru.tse.org.tr/uye) üzerinden yapılıyor; başvuru sırasında ödeme dekontunun sisteme yüklenmesi gerekiyor. Başvuru adımlarını gösteren görsel bir kılavuz da duyuruda yer alıyor; kılavuza göre kullanıcıların belge yenileme seçeneğini işaretlemesi ve belge teslimini seçmesi gerekiyor.\n\nDuyuruda yer alan yenileme kurallarına göre belge sahipleri, belgelerinin geçerlilik süresinin bitiminden itibaren bir yıl içinde yenileme başvurusu yapmalı. Yenilenen belgenin geçerlilik süresi, önceki belgenin sona erme tarihinden itibaren başlatılıyor. Sürelerin takibi başvuru sahiplerinin sorumluluğunda.\n\nEğitimle ilgili bilgi TSE Eğitim Geliştirme Müdürlüğü'nden alınabiliyor.",
+      "published_at": "2026-09-22T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TSE, süresi dolan Sera Gazı Hesaplama Uzmanı belgelerini yenilemek için 3 Kasım 2026'da bir günlük uzaktan eğitim düzenliyor; başvurular 23 Eylül-2 Kasım 2026 arasında, ücret KDV dahil 7.314 TL. Belge sahipleri, geçerlilik bitiminden itibaren bir yıl içinde yenileme yapmak zorunda. CBAM raporlaması ve emisyon hesaplaması yapan sanayi firmalarının çalışanlarının yetkinliğini güncel tutması için takip edilmesi gereken bir süre.",
+      "key_points": [
+        "Eğitim: 3 Kasım 2026, saat 10.00, uzaktan, 1 gün.",
+        "Başvuru dönemi: 23 Eylül 2026 10.00 – 2 Kasım 2026 17.00. Son başvuru: 2 Kasım 2026.",
+        "Ücret: KDV dahil 7.314 TL; başvuruda ödeme dekontu yüklenmeli.",
+        "Belge süresi bitiminden itibaren bir yıl içinde yenileme yapılmalı; yeni geçerlilik eski bitiş tarihinden başlıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "TSE"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "tse",
+        "karbon",
+        "cbam",
+        "belgelendirme",
+        "egitim",
+        "son-basvuru"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 30,
+        "keyword": 60,
+        "recency": 88,
+        "corroboration": 15,
+        "reach": 30
+      }
+    },
+    {
+      "source_slug": "kosgeb",
+      "url": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9491/tunus-10-uluslararasi-yedek-parca-ekipman-ve-endustriyel-hizmetler-fuari-sapri2026",
+      "title": "KOSGEB duyurusu: Tunus 10. Uluslararası Yedek Parça, Ekipman ve Endüstriyel Hizmetler Fuarı (SAPRI2026) 17-20 Kasım'da",
+      "body": "17-20 Kasım 2026 tarihlerinde, Tunus Kram Fuar Merkezi’nde, Tunus Sanayi, Maden ve Enerji Bakanlığı himayesinde 10. Uluslararası Yedek Parça, Ekipman ve Endüstriyel Hizmetler Fuarı (SAPRI2026) gerçekleştirilecektir.\n\nFuar; endüstri, enerji, endüstriyel bakım, dijital dönüşüm, endüstriyel ekipman ve Endüstri 4.0 teknolojileri alanlarında faaliyet gösteren girişimcileri, uzmanları, yatırımcıları ve uluslararası iş ortaklarını bir araya getiren uluslararası bir endüstri etkinliğidir. Etkinlik ile sanayi sektörünün modernizasyonunun desteklenmesi, sanayinin rekabet gücünün artırılması, enerji ve dijital dönüşümün hızlandırılması ve Tunus’un ileri sanayi teknolojileri ve hizmetleri ile Avrupa-Afrika iş birliği açısından bölgesel bir merkez olarak konumunun güçlendirilmesi amaçlanmaktadır.\n\nFuar kapsamında seminerler, bilimsel konferanslar, çalıştaylar ve ikili B2B görüşmelerinin yanı sıra çeşitli etkinlikler düzenlenecektir.\n\nFuarla eş zamanlı olarak, Tunus Tahribatsız Muayene Komitesi (COTEND) ve Afrika Tahribatsız Muayene Birliği (AFNDT) iş birliğinde 8. Afrika Tahribatsız Muayene Konferansı (ACNDT2026) gerçekleştirilecektir. Konferansın; tahribatsız muayene, akıllı bakım ile kritik altyapı ve tesislerin güvenliğinin izlenmesi alanlarında uzmanlık ve güncel yeniliklerin paylaşılmasına yönelik, kıta genelini kapsayan bilimsel ve teknik bir platform olması öngörülmektedir.\n\nFuara ilişkin detaylı bilgiye SAPRI2026 resmi internet sitesinden ulaşılabilecektir.",
+      "published_at": "2026-09-24T10:00:00+03:00",
+      "language": "tr",
+      "summary": "KOSGEB, 17-20 Kasım 2026'da Tunus Kram Fuar Merkezi'nde Tunus Sanayi, Maden ve Enerji Bakanlığı himayesinde yapılacak SAPRI2026 yedek parça, ekipman ve endüstriyel hizmetler fuarını KOBİ'lere duyurdu. Fuar endüstriyel bakım, enerji, dijital dönüşüm ve Endüstri 4.0 alanlarını kapsıyor; B2B görüşmeler ve eş zamanlı 8. Afrika Tahribatsız Muayene Konferansı düzenlenecek. Kuzey Afrika pazarına yedek parça ve ekipman satmak isteyen makine ve metal imalatçıları için bir tanıtım fırsatı.",
+      "key_points": [
+        "Fuar tarihi: 17-20 Kasım 2026, Tunus Kram Fuar Merkezi.",
+        "Kapsam: endüstri, enerji, endüstriyel bakım, dijital dönüşüm, endüstriyel ekipman ve Endüstri 4.0 teknolojileri.",
+        "Seminer, konferans, çalıştay ve ikili B2B görüşmeleri yapılacak.",
+        "Eş zamanlı olarak 8. Afrika Tahribatsız Muayene Konferansı (ACNDT2026) düzenlenecek."
+      ],
+      "entities": {
+        "kurum": [
+          "KOSGEB",
+          "Tunus Sanayi, Maden ve Enerji Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makine",
+          "Otomotiv Yan Sanayi"
+        ]
+      },
+      "region": "DIGER",
+      "category": "dis-ticaret",
+      "sentiment": "NOTR",
+      "tags": [
+        "kosgeb",
+        "afrika-pazari",
+        "etkinlik",
+        "ihracat-pazari",
+        "sanayi-40"
+      ],
+      "importance_factors": {
+        "authority": 90,
+        "impact": 25,
+        "keyword": 40,
+        "recency": 96,
+        "corroboration": 10,
+        "reach": 30
+      }
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/25/temmuzda-74-milyar-liralik-yatirima-tesvik/",
+      "title": "Temmuz 2026'da 480 yatırım teşvik belgesi: 74,2 milyar TL yatırım, en büyük pay imalatta",
+      "body": "Temmuz 2026’da 480 yatırım teşvik belgesi düzenlendi. Belgelerde 74,2 milyar TL sabit yatırım ve 11 bin 31 kişilik istihdam öngörüldü.\n\nTemmuz 2026 Yatırım Teşvik Belgesi Bülteni’ne göre, 9903 sayılı Karar kapsamında düzenlenen 480 belgede öngörülen sabit yatırım tutarı 74 milyar 248 milyon TL oldu. Bu yatırımlarla 11 bin 31 kişilik istihdam hedeflendi. Rakamlar, teşvik belgelerinde yer alan öngörüleri gösteriyor.\n\nEn Yüksek Yatırım Tutarı İmalatta\n\nTemmuz ayında imalat sektörüne 353 belge düzenlendi. Bu belgelerde 32,2 milyar TL yatırım ve 7 bin 541 kişilik istihdam öngörüldü.\n\nSabit yatırım tutarında imalatı 24,4 milyar TL ile enerji , 8,7 milyar TL ile madencilik izledi. Hizmetler sektöründe 6,8 milyar TL, tarımda ise 2,1 milyar TL yatırım öngörüldü.\n\nBelgelerin 233’ü Yeni Yatırımlara\n\nDüzenlenen belgelerin 233’ü komple yeni , 173’ü tevsi , 74’ü modernizasyon, entegrasyon veya ürün çeşitlendirme yatırımlarına ilişkin oldu. Komple yeni yatırımlar için öngörülen tutar yaklaşık 48 milyar TL , istihdam ise 8 bin 76 kişi olarak kaydedildi.\n\nBirinci Bölge Belge Sayısında İlk Sırada\n\nBölgesel dağılımda 219 belgeyle I. Bölge ilk sırada yer aldı. Bu bölgedeki belgelerde yaklaşık 22,8 milyar TL sabit yatırım öngörüldü. V. Bölgede ise 34 belgeye karşılık yaklaşık 15 milyar TL yatırım tutarı kaydedildi. Birden fazla ili kapsayan üç yatırımın toplam tutarı 11,7 milyar TL oldu.\n\nYerli Sermayeli Firmalara 462 Belge\n\nTemmuz belgelerinin 462’si yerli , 18’i yabancı sermayeli firmalara düzenlendi. Yerli sermayeli firmaların belgelerinde yaklaşık 70,9 milyar TL , yabancı sermayeli firmaların belgelerinde 3,3 milyar TL sabit yatırım öngörüldü.\n\n9903 Sayılı Karar Döneminde 5 Bin 651 Belge\n\nBültenin Temmuz ayından ayrı olarak verdiği 9903 sayılı Karar dönemi toplamında , 5 bin 651 yatırım teşvik belgesine ulaşıldı. Bu belgelerde 1 trilyon 205 milyar TL sabit yatırım ve 135 bin 503 kişilik istihdam öngörüldü. Dönem toplamında da en yüksek belge sayısı ve yatırım tutarı imalat sektöründe gerçekleşti.\n\nBültende ayrıca, proje bazlı devlet yardımı kapsamında 2017–2026 yılları için toplam 72 teşvik belgesi bulunduğu; bu belgelerde yaklaşık 2 trilyon TL yatırım ve 53 bin 703 kişilik istihdam öngörüldüğü belirtildi. Bu toplam, yalnızca Temmuz 2026’ya ait değil.",
+      "published_at": "2026-09-25T09:53:00+03:00",
+      "language": "tr",
+      "summary": "Temmuz 2026 Yatırım Teşvik Belgesi Bülteni'ne göre 9903 sayılı Karar kapsamında 480 belge düzenlendi; belgelerde 74,2 milyar TL sabit yatırım ve 11.031 kişilik istihdam öngörüldü. İmalat sanayi 353 belge ve 32,2 milyar TL ile ilk sırada. 9903 sayılı Karar döneminde toplam 5.651 belgede 1,2 trilyon TL yatırım öngörülüyor; yatırım iştahının imalatta sürdüğünü gösteren bir gösterge.",
+      "key_points": [
+        "Temmuz 2026'da 480 teşvik belgesi; 74 milyar 248 milyon TL sabit yatırım, 11.031 kişilik istihdam öngörüsü.",
+        "İmalata 353 belge: 32,2 milyar TL yatırım, 7.541 kişilik istihdam; enerji 24,4 milyar TL, madencilik 8,7 milyar TL.",
+        "Belgelerin 233'ü komple yeni, 173'ü tevsi, 74'ü modernizasyon/entegrasyon/ürün çeşitlendirme yatırımı.",
+        "9903 sayılı Karar döneminde toplam 5.651 belge, 1 trilyon 205 milyar TL yatırım ve 135.503 kişilik istihdam öngörüsü."
+      ],
+      "entities": {
+        "kurum": [
+          "Sanayi ve Teknoloji Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi",
+          "Enerji",
+          "Madencilik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "POZITIF",
+      "tags": [
+        "yatirim-tesvik-belgesi",
+        "yatirim-tesvik",
+        "imalat-sanayi",
+        "sanayi-yatirimi",
+        "sanayi-bakanligi"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 55,
+        "keyword": 70,
+        "recency": 100,
+        "corroboration": 30,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/25/uluslararasi-kirletmeden-uretmek-mumkun-konferansi/",
+      "title": "Uluslararası \"Kirletmeden Üretmek Mümkün\" Konferansı 6 Ekim'de İTÜ'de; kayıtlar 30 Eylül'e kadar",
+      "body": "Sanayide yeşil dönüşüm ve temiz üretim, 6 Ekim’de İstanbul Teknik Üniversitesinde düzenlenecek uluslararası konferansta ele alınacak. Katılım başvuruları 30 Eylül’e kadar yapılabilecek.\n\nÇevre, Şehircilik ve İklim Değişikliği Bakanlığı Çevre Yönetimi Genel Müdürlüğü, Uluslararası Kirletmeden Üretmek Mümkün Konferansı’nı 6 Ekim 2026’da İstanbul Teknik Üniversitesi (İTÜ) ev sahipliğinde düzenleyecek. Etkinlik, kamu, sanayi, akademi ve finans sektörü temsilcilerini bir araya getirecek.\n\nYeşil Dönüşüm Ve Temiz Üretim Gündemde\n\nKonferansta sanayide yeşil dönüşüm, Mevcut En İyi Tekniklerin (MET) uygulanması, temiz üretim, çevresel performans, yenilikçi çevre teknolojileri ve yeşil finansman ele alınacak. Katılımcılar ulusal ve uluslararası deneyimlerini ve iyi uygulama örneklerini paylaşacak.\n\nLisansüstü Öğrenciler İçin Poster Yarışması\n\nEtkinlikle eş zamanlı olarak lisansüstü öğrencilere yönelik Mevcut En İyi Teknikler odaklı Ar-Ge çalışmaları poster yarışması düzenlenecek. Uygun bulunan posterler etkinlik süresince sergilenecek. Yarışmaya ilişkin ayrıntılar İTÜ’nün etkinlik sayfasında yer alıyor.\n\nGirişimler De Çalışmalarını Tanıtabilecek\n\nKaynak ve enerji verimliliği, kirliliğin kaynağında önlenmesi, döngüsel ekonomi, dijitalleşme ve çevre teknolojileri alanlarında çalışan girişimlerin ve teknoloji firmalarının çözümlerini tanıtması planlanıyor.\n\nBaşvurular 30 Eylül’e Kadar\n\nKonferansa katılmak veya bir girişimle etkinlikte yer almak isteyenler, 30 Eylül 2026’ya kadar ilgili kayıt formunu doldurabilecek:\n\nKatılımcı kayıt formu\n\nYer: İstanbul Teknik Üniversitesi, İstanbul",
+      "published_at": "2026-09-25T11:43:00+03:00",
+      "language": "tr",
+      "summary": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Çevre Yönetimi Genel Müdürlüğü, 6 Ekim 2026'da İTÜ ev sahipliğinde Uluslararası Kirletmeden Üretmek Mümkün Konferansı'nı düzenliyor. Konferansta sanayide yeşil dönüşüm, Mevcut En İyi Teknikler (MET), temiz üretim ve yeşil finansman ele alınacak. Endüstriyel emisyonlar mevzuatına uyum hazırlığı yapan sanayiciler için MET uygulamalarını izleme fırsatı; kayıtlar 30 Eylül 2026'da kapanıyor.",
+      "key_points": [
+        "Konferans: 6 Ekim 2026, İstanbul Teknik Üniversitesi.",
+        "Katılımcı ve girişim kayıtları için son tarih: 30 Eylül 2026.",
+        "Gündem: sanayide yeşil dönüşüm, Mevcut En İyi Teknikler (MET), temiz üretim, çevresel performans, yeşil finansman.",
+        "Kaynak ve enerji verimliliği, döngüsel ekonomi ve çevre teknolojisi girişimleri çözümlerini tanıtabilecek."
+      ],
+      "entities": {
+        "kurum": [
+          "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+          "İstanbul Teknik Üniversitesi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayi"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "cevre",
+      "sentiment": "POZITIF",
+      "tags": [
+        "yesil-donusum",
+        "cevre-mevzuati",
+        "dongusel-ekonomi",
+        "etkinlik",
+        "son-basvuru",
+        "istanbul"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 40,
+        "keyword": 55,
+        "recency": 100,
+        "corroboration": 15,
+        "reach": 40
+      }
+    }
+  ]
+}

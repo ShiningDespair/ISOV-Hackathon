@@ -1,0 +1,1455 @@
+{
+  "collector": "amerika-asya",
+  "collected_at": "2026-09-25T23:00:00+03:00",
+  "sources": [
+    {
+      "slug": "cnbc",
+      "name": "CNBC",
+      "homepage_url": "https://www.cnbc.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "euronews",
+      "name": "Euronews Business",
+      "homepage_url": "https://www.euronews.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "FR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "federal-register",
+      "name": "Federal Register (ABD Resmi Gazetesi)",
+      "homepage_url": "https://www.federalregister.gov",
+      "source_type": "mevzuat",
+      "authority_weight": 100,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "mevzuat"
+    },
+    {
+      "slug": "federal-reserve",
+      "name": "Federal Reserve Board (ABD Merkez Bankası)",
+      "homepage_url": "https://www.federalreserve.gov",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "indexbox",
+      "name": "IndexBox Market Intelligence",
+      "homepage_url": "https://www.indexbox.io",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "arastirma"
+    },
+    {
+      "slug": "korea-herald",
+      "name": "The Korea Herald",
+      "homepage_url": "https://www.koreaherald.com",
+      "source_type": "basin",
+      "authority_weight": 78,
+      "country_code": "KR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "seoul-economic-daily",
+      "name": "Seoul Economic Daily",
+      "homepage_url": "https://en.sedaily.com",
+      "source_type": "basin",
+      "authority_weight": 72,
+      "country_code": "KR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "steelorbis",
+      "name": "SteelOrbis",
+      "homepage_url": "https://www.steelorbis.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "the-national",
+      "name": "The National (BAE)",
+      "homepage_url": "https://www.thenationalnews.com",
+      "source_type": "basin",
+      "authority_weight": 65,
+      "country_code": "AE",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "tribune-india",
+      "name": "The Tribune (Hindistan)",
+      "homepage_url": "https://www.tribuneindia.com",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "IN",
+      "language": "en",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ustr",
+      "name": "Office of the United States Trade Representative (USTR)",
+      "homepage_url": "https://ustr.gov",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "US",
+      "language": "en",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "vision-times",
+      "name": "Vision Times",
+      "homepage_url": "https://www.visiontimes.com",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TW",
+      "language": "en",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/15/2026-18789/certain-oil-country-tubular-goods-from-the-republic-of-trkiye-preliminary-results-of-countervailing",
+      "title": "ABD, Türkiye menşeli petrol kuyusu borularında (OCTG) Borusan için yüzde 0,63 sübvansiyon oranı belirledi",
+      "body": "ABD Ticaret Bakanlığı Uluslararası Ticaret İdaresi (ITA), 15 Eylül 2026 tarihli Federal Register ilanıyla Türkiye menşeli belirli petrol ülkesi boru ürünlerine (oil country tubular goods, OCTG) uygulanan telafi edici vergi (CVD) kararının 2024 dönemi idari incelemesinde ön sonuçları açıkladı (dosya no. C-489-817).\n\nBakanlık, inceleme kapsamındaki tek şirket olan Borusan Birleşik Boru Fabrikaları Sanayi ve Ticaret A.Ş.'ye (Borusan) sübvansiyon sağlandığına ön karar verdi. İnceleme dönemi 1 Ocak - 31 Aralık 2024 için hesaplanan net sübvansiyon oranı yüzde 0,63 (ad valorem). İlana göre BMB Holding A.Ş. ve Borusan Holding A.Ş. Borusan ile çapraz sahiplikli kabul edildi; Borusan Birleşik'in daha önce Borusan Mannesmann Boru'nun halefi olduğu tespit edilmişti.\n\nOCTG'ye yönelik CVD kararı ilk kez 2014'te (Hindistan ve Türkiye için) yayımlanmıştı. İnceleme 8 Aralık 2025'te başlatılmış; federal hükümetin kapanması nedeniyle tüm süreler 47 gün ve ardından 21 gün ertelenmiş, ön sonuç tarihi ayrıca 32 gün uzatılarak 10 Eylül 2026'ya çekilmişti.\n\nİlgili taraflar yayımdan itibaren 21 gün içinde görüş (case brief), bunu izleyen 5 gün içinde karşı görüş sunabilecek; duruşma talebi için süre 30 gün. Bakanlık nihai sonuçları, aksi karar verilmedikçe yayımdan itibaren 120 gün içinde açıklayacak. Nihai oran kesinleştiğinde gümrük idaresi (CBP) ilgili girişlere vergi tahakkuk ettirecek ve yeni nakit depozito oranı uygulanacak.\n\nTürk çelik boru sektörü açısından sonuç, oranın düşük seviyede kalmasıyla görece olumlu; ancak ABD'nin Türk teşvik ve finansman programlarını düzenli olarak sübvansiyon incelemesine tabi tutmaya devam ettiğini gösteriyor. Aynı dönemde ABD'de paslanmaz kaynaklı boru ve büyük çaplı kaynaklı boru dosyalarında da Türk üreticiler hakkında işlemler sürüyor.",
+      "published_at": "2026-09-15T08:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, Türkiye menşeli petrol ülkesi boru ürünlerine (OCTG) yönelik telafi edici vergi idari incelemesinde Borusan Birleşik Boru için 2024 dönemine ait ön sübvansiyon oranını yüzde 0,63 olarak açıkladı. Oran düşük olsa da 2014'ten beri süren önlem yürürlükte kalıyor; boru ihracatçıları için Türk teşvik programlarının ABD'de nasıl değerlendirildiği açısından emsal niteliği taşıyor.",
+      "key_points": [
+        "Borusan Birleşik Boru Fabrikaları için ön net sübvansiyon oranı: yüzde 0,63 (ad valorem), inceleme dönemi 1 Ocak - 31 Aralık 2024.",
+        "BMB Holding ve Borusan Holding, Borusan ile çapraz sahiplikli kabul edildi; Borusan Birleşik, Borusan Mannesmann'ın halefi sayılıyor.",
+        "Telafi edici vergi kararı 2014'ten beri yürürlükte; nihai sonuçlar yayımdan itibaren 120 gün içinde bekleniyor.",
+        "Son başvuru: Görüş (case brief) sunma süresi yayımdan itibaren 21 gün (6 Ekim 2026); duruşma talebi için 30 gün."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "ITA",
+          "Borusan Birleşik Boru",
+          "Borusan Holding",
+          "BMB Holding"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik",
+          "Boru",
+          "Enerji Ekipmanı"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "telafi-edici-vergi",
+        "turkiye-mensei",
+        "celik",
+        "boru-sanayi",
+        "abd",
+        "ticaret-savunmasi",
+        "son-basvuru"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 72,
+        "keyword": 88,
+        "recency": 82,
+        "corroboration": 40,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/21/2026-19263/welded-stainless-line-and-pressure-pipe-from-india-and-the-republic-of-trkiye-postponement-of",
+      "title": "Türkiye ve Hindistan menşeli paslanmaz kaynaklı borularda ABD sübvansiyon soruşturması: ön karar 14 Aralık'a ertelendi",
+      "body": "ABD Ticaret Bakanlığı, 21 Eylül 2026 tarihli Federal Register ilanıyla Hindistan ve Türkiye menşeli kaynaklı paslanmaz hat ve basınç borularına (welded stainless line and pressure pipe) yönelik telafi edici vergi (CVD) soruşturmalarında ön kararların ertelendiğini duyurdu (dosya no. C-533-951 ve C-489-859).\n\nBakanlık bu soruşturmaları 4 Ağustos 2026'da başlatmış, başlangıç ilanı 10 Ağustos'ta yayımlanmıştı. Tarife Kanunu'nun 703(b)(1) maddesi uyarınca ön kararın başlangıçtan itibaren 65 gün içinde, yani en geç 8 Ekim 2026'da verilmesi gerekiyordu. Ancak şikâyetçi ABD'li üreticiler Bristol Pipe and Tube Inc., Felker Brothers Corporation ve Primus Pipe and Tube Inc. 10 Eylül'de erteleme talebinde bulundu. Talep gerekçesi olarak meselelerin karmaşıklığı, incelenen sübvansiyon programlarının sayısı ve yanıtlayıcı şirketlerin Bakanlığın ilk anketlerine henüz yanıt vermemiş olması gösterildi.\n\nBakanlık reddi gerektiren zorlayıcı bir neden görmediğini belirterek ön karar süresini başlangıçtan itibaren 130 güne uzattı. Bu süre 12 Aralık Cumartesi'ye denk geldiği için 'bir sonraki iş günü' kuralı gereği yeni ön karar tarihi 14 Aralık 2026 oldu. Nihai kararlar ise ön karardan 75 gün sonra açıklanacak.\n\nTürk paslanmaz boru üreticileri açısından bu, ABD pazarındaki belirsizliğin yıl sonuna kadar süreceği anlamına geliyor. Ön kararda sübvansiyon tespit edilirse ithalatçılardan nakit depozito alınmaya başlanacak. Soruşturma kapsamındaki firmaların ihracat kredileri, yatırım teşvikleri ve enerji girdi maliyetleri gibi programlara ilişkin anket yanıtlarını eksiksiz vermesi, 'mevcut en iyi bilgi' (facts available) uygulamasıyla yüksek oran riskini azaltmak için kritik önemde.",
+      "published_at": "2026-09-21T08:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, Türkiye ve Hindistan menşeli kaynaklı paslanmaz hat ve basınç borularına yönelik telafi edici vergi soruşturmalarında ön karar tarihini 8 Ekim'den 14 Aralık 2026'ya erteledi. Paslanmaz boru ihraç eden Türk üreticiler için belirsizlik yıl sonuna uzuyor; soruşturma kapsamındaki firmaların anket yanıtlarını titizlikle hazırlaması kritik.",
+      "key_points": [
+        "Soruşturmalar 4 Ağustos 2026'da başlatıldı; ön kararın 8 Ekim 2026'da açıklanması bekleniyordu.",
+        "Şikâyetçiler Bristol Pipe and Tube, Felker Brothers ve Primus Pipe and Tube'un 10 Eylül'deki talebiyle ön karar ertelendi.",
+        "Yeni ön karar tarihi: 14 Aralık 2026; nihai karar ön karardan 75 gün sonra.",
+        "Gerekçe: incelenen sübvansiyon programı sayısı ve yanıtlayıcıların ilk anketlere henüz yanıt vermemiş olması."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "ITA",
+          "Bristol Pipe and Tube",
+          "Felker Brothers",
+          "Primus Pipe and Tube"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Paslanmaz Çelik",
+          "Boru",
+          "Demir-Çelik"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "telafi-edici-vergi",
+        "turkiye-mensei",
+        "boru-sanayi",
+        "celik",
+        "hindistan",
+        "abd",
+        "ticaret-savunmasi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 75,
+        "keyword": 88,
+        "recency": 90,
+        "corroboration": 35,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/25/2026-19626/large-diameter-welded-pipe-from-the-republic-of-trkiye-final-results-of-antidumping-duty",
+      "title": "Türkiye menşeli büyük çaplı kaynaklı borularda ABD nihai kararı: HDM Çelik ve Çimtaş'a yüzde 1,89 damping marjı",
+      "body": "ABD Ticaret Bakanlığı, 25 Eylül 2026 tarihli Federal Register ilanıyla Türkiye menşeli büyük çaplı kaynaklı borulara (large diameter welded pipe) uygulanan anti-damping vergisinin 2024-2025 dönemi idari incelemesinin nihai sonuçlarını açıkladı (dosya no. A-489-833).\n\nBakanlık, söz konusu boruların 1 Mayıs 2024 - 30 Nisan 2025 inceleme döneminde ABD'de normal değerin altında satıldığını tespit etti. Nihai ağırlıklı ortalama damping marjı HDM Çelik Boru Sanayi ve Ticaret A.Ş. (HDM Spiral Kaynaklı Çelik Boru A.Ş. dahil) ile Çimtaş Boru İmalatları ve Ticaret Ltd. için yüzde 1,89 olarak belirlendi.\n\nÖn sonuçlar 27 Mayıs 2026'da yayımlanmış ve ilgili taraflara görüş bildirme imkânı tanınmıştı. Hiçbir taraf görüş sunmadığından nihai sonuçlar ön sonuçlarla aynı kaldı ve ayrı bir karar memorandumu yayımlanmadı. Anti-damping kararı ilk olarak Mayıs 2019'da çıkarılmış, 2020'de mahkeme kararı sonrası kısmen revize edilmişti.\n\nGümrük ve Sınır Koruma İdaresi (CBP) tahakkuk talimatları yayımdan en erken 35 gün sonra gönderilecek. ABD Uluslararası Ticaret Mahkemesi'ne (CIT) dava açılması halinde, ihtiyati tedbir talebi için tanınan 90 günlük süre dolana kadar ilgili girişler tasfiye edilmeyecek. HDM'nin ABD'ye gideceğini bilmeden sattığı ve bir aracı üzerinden ABD'ye ulaşan ürünlere ise soruşturmadaki yüzde 1,57'lik 'diğer tüm firmalar' oranı uygulanacak.\n\nTürk çelik boru sektörü açısından sonuç, marjın düşük düzeyde sabitlenmesi nedeniyle yönetilebilir bir maliyet anlamına geliyor. Ancak ABD'nin yüzde 50'lik Section 232 çelik tarifesiyle birlikte düşünüldüğünde, ABD pazarındaki toplam gümrük yükü yüksek kalmaya devam ediyor ve enerji hattı projelerine yönelik ihracatta fiyat rekabeti zorlaşıyor.",
+      "published_at": "2026-09-25T08:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, Türkiye menşeli büyük çaplı kaynaklı borulara yönelik anti-damping idari incelemesini sonuçlandırdı ve HDM Çelik Boru ile Çimtaş Boru için yüzde 1,89 damping marjı belirledi. Marj düşük olsa da önlem sürüyor; ABD'ye boru ve enerji hattı ekipmanı satan Türk üreticiler nakit depozito ve tahakkuk süreçlerini izlemeli.",
+      "key_points": [
+        "İnceleme dönemi 1 Mayıs 2024 - 30 Nisan 2025; ağırlıklı ortalama damping marjı HDM Çelik Boru ve Çimtaş Boru için yüzde 1,89.",
+        "Ön sonuçlara (27 Mayıs 2026) itiraz gelmediği için nihai sonuçlar değişmeden kesinleşti.",
+        "CBP'ye tahakkuk talimatı yayımdan en erken 35 gün sonra verilecek; ABD Uluslararası Ticaret Mahkemesi'ne başvuru için 90 günlük pencere var.",
+        "HDM'nin ABD'ye gideceğini bilmediği girişlere yüzde 1,57'lik 'diğer tüm firmalar' oranı uygulanacak."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "ITA",
+          "CBP",
+          "HDM Çelik Boru",
+          "Çimtaş Boru"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik",
+          "Boru",
+          "Enerji Altyapısı"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "turkiye-mensei",
+        "boru-sanayi",
+        "celik",
+        "abd",
+        "ticaret-savunmasi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 70,
+        "keyword": 88,
+        "recency": 100,
+        "corroboration": 40,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/24/2026-19516/common-alloy-aluminum-sheet-from-the-peoples-republic-of-china-bahrain-brazil-croatia-egypt-germany",
+      "title": "ABD, Türkiye dahil 17 ülkeden alüminyum levha önlemlerinde içecek kutusu hammaddesini kapsam dışı bıraktı",
+      "body": "ABD Ticaret Bakanlığı, 24 Eylül 2026 tarihli Federal Register ilanıyla Çin, Bahreyn, Brezilya, Hırvatistan, Mısır, Almanya, Hindistan, Endonezya, İtalya, Umman, Romanya, Sırbistan, Slovenya, Güney Afrika, İspanya, Tayvan ve Türkiye menşeli genel alaşımlı alüminyum levhaya (common alloy aluminum sheet) uygulanan anti-damping (AD) ve telafi edici vergi (CVD) kararlarına ilişkin değişen koşullar incelemelerinin (CCR) nihai sonuçlarını açıkladı.\n\nBakanlık, kararları belirli alüminyum içecek kutusu hammaddesi (aluminum can stock) bakımından kısmen iptal etti. Türkiye için hem AD hem de CVD kararları (A-489-839, C-489-840) bu kapsamda yer alıyor. Başlangıç ve ön sonuçlar 11 Ağustos 2026'da yayımlanmış, taraflara görüş ve duruşma talebi imkânı tanınmıştı. İncelemeler, ABD'li yerli üreticileri temsil eden CAAS Enforcement Working Group'un 22 Haziran 2026 tarihli talebiyle başlatılmıştı. Yerli sanayi, kutu hammaddesinin kapsam dışında tutulmasının başından beri amaçlandığını belirterek kısmi iptali destekledi; ön sonuçlara itiraz eden olmadı.\n\nKarar geriye dönük uygulanıyor: iptal, ilgili ülke için tasfiye askıya almasının başladığı tarihten itibaren tasfiye edilmemiş tüm kutu hammaddesi girişlerine uygulanacak. Bakanlık, itiraz bulunmaması ve tahakkukların hızla yapılması ihtiyacı nedeniyle gümrük talimatlarının verilme süresini de kısalttı. Bahreyn ve diğer ülkeler için CVD kararlarındaki H-39 temper tanımına ilişkin kapsam hatası da düzeltildi.\n\nTürk alüminyum yassı mamul üreticileri açısından karar, ABD içecek kutusu sektörüne yönelik levha ihracatında AD/CVD yükünün kalkması ve geçmiş dönem depozitolarının iadesi ihtimali anlamına geliyor. Diğer alüminyum levha ürünlerinde ise 2021'den beri yürürlükte olan önlemler ile Section 232 alüminyum tarifesi aynen devam ediyor.",
+      "published_at": "2026-09-24T08:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, Türkiye'nin de aralarında bulunduğu 17 ülke menşeli genel alaşımlı alüminyum levhaya uygulanan anti-damping ve telafi edici vergi kararlarını içecek kutusu hammaddesi (can stock) bakımından kısmen kaldırdı. Karar geriye dönük uygulanıyor; kutu levhası ihraç eden Türk alüminyum haddehaneleri için ABD pazarında önemli bir kapı açılıyor.",
+      "key_points": [
+        "Kısmi iptal Çin, Bahreyn, Brezilya, Hırvatistan, Mısır, Almanya, Hindistan, Endonezya, İtalya, Umman, Romanya, Sırbistan, Slovenya, Güney Afrika, İspanya, Tayvan ve Türkiye'yi kapsıyor.",
+        "Kapsam dışı bırakılan ürün: belirli alüminyum içecek kutusu hammaddesi (can stock); Türkiye için hem AD hem CVD kararı etkileniyor.",
+        "İptal, askıya alma başlangıcından itibaren tasfiye edilmemiş tüm girişlere geriye dönük uygulanacak.",
+        "ABD'li üreticiler grubu (CAAS Enforcement Working Group) kısmi iptali destekledi; itiraz gelmedi."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "ITA",
+          "CAAS Enforcement Working Group"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Alüminyum",
+          "Ambalaj",
+          "Metal"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "aluminyum",
+        "anti-damping",
+        "telafi-edici-vergi",
+        "turkiye-mensei",
+        "ambalaj",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 72,
+        "keyword": 85,
+        "recency": 97,
+        "corroboration": 35,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19102/steel-concrete-reinforcing-bar-from-bulgaria-egypt-and-the-socialist-republic-of-vietnam-antidumping",
+      "title": "ABD, Bulgaristan, Mısır ve Vietnam inşaat demirine yüzde 34 ile 137 arasında anti-damping vergisi getirdi",
+      "body": "ABD Ticaret Bakanlığı, 18 Eylül 2026 tarihli Federal Register ilanıyla Bulgaristan, Mısır ve Vietnam menşeli beton çelik çubuklarına (steel concrete reinforcing bar, inşaat demiri) yönelik anti-damping (AD) vergisi kararlarını yayımladı.\n\nBakanlık nihai damping tespitlerini 30 Temmuz 2026'da açıklamış, ABD Uluslararası Ticaret Komisyonu (ITC) ise 11 Eylül 2026'da ABD sanayisinin bu ithalat nedeniyle maddi zarar gördüğüne karar vermişti. Böylece önlemler kesinleşti.\n\nBelirlenen ağırlıklı ortalama damping marjları şöyle: Bulgaristan'da Promet Steel JSC ve diğer tüm firmalar için yüzde 53,27. Mısır'da Al-Ezz Dekheila Steel, Ezz Steel, Ezz Rolling Mills ve Al-Ezz Flat Steel'den oluşan grup ile diğer tüm firmalar için yüzde 34,20; El Marakby Steel ve Suez Steel için mevcut bilgilerle olumsuz çıkarıma dayalı yüzde 52,73. Vietnam'da Hoa Phat grubu için yüzde 128,53 (sübvansiyon mahsubu sonrası nakit depozito yüzde 123,49), Vietnam geneli için yüzde 136,57 (nakit depozito yüzde 131,53).\n\nAynı gün Mısır ve Vietnam için telafi edici vergi kararları da ayrı bir ilanla yayımlandı.\n\nTürkiye açısından tablo iki yönlü: Türk inşaat demiri ABD'de zaten uzun süredir AD/CVD önlemlerine ve Section 232 tarifesine tabi olduğundan bu pazarda rekabet sınırlı. Buna karşın Mısır ve Vietnam gibi güçlü ihracatçıların ABD pazarından dışlanması, bu ülkelerin Orta Doğu, Afrika ve Asya pazarlarına daha agresif fiyatlarla yönelmesine yol açabilir; bu da Türk inşaat demiri üreticilerinin geleneksel ihracat pazarlarında fiyat baskısını artırabilir.",
+      "published_at": "2026-09-18T08:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, Bulgaristan, Mısır ve Vietnam menşeli beton çelik çubuklarına (inşaat demiri) yüzde 34,20 ile 136,57 arasında değişen anti-damping vergisi kararlarını yayımladı. Türkiye'nin ABD inşaat demiri pazarındaki üç rakibi ciddi vergi yüküyle karşılaşıyor; ancak bu ülkelerin ihracatının Türk çeliğinin geleneksel pazarlarına yönelme riski de izlenmeli.",
+      "key_points": [
+        "Bulgaristan (Promet Steel ve diğerleri): yüzde 53,27.",
+        "Mısır: Ezz Steel grubu ve diğerleri yüzde 34,20; El Marakby Steel ve Suez Steel yüzde 52,73 (olumsuz çıkarım).",
+        "Vietnam: Hoa Phat grubu yüzde 128,53 (nakit depozito yüzde 123,49); Vietnam geneli yüzde 136,57.",
+        "ITC 11 Eylül 2026'da maddi zarar kararı verdi; Mısır ve Vietnam için ayrıca telafi edici vergi kararları çıkarıldı."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "USITC",
+          "Ezz Steel",
+          "Hoa Phat",
+          "Promet Steel"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Demir-Çelik",
+          "İnşaat Demiri",
+          "İnşaat"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "celik",
+        "insaat-demiri",
+        "vietnam",
+        "usitc",
+        "fiyat-rekabeti",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 68,
+        "keyword": 85,
+        "recency": 92,
+        "corroboration": 45,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/23/2026-19498/guidance-and-procedures-for-implementing-tariff-adjustments-for-specialty-pharmaceuticals-and",
+      "title": "ABD ilaç tarifeleri: yüzde 100'lük Section 232 vergisi 29 Eylül'de tüm şirketlere genişliyor, sıfır oranlı ürünler tanımlandı",
+      "body": "ABD Ticaret Bakanlığı'na bağlı Sanayi ve Güvenlik Bürosu (BIS), 23 Eylül 2026 tarihli Federal Register ilanıyla ilaç ve ilaç hammaddelerine uygulanan Section 232 tarifelerinin uygulanmasına ilişkin rehber ve usulleri yayımladı.\n\nBaşkan Trump 2 Nisan 2026'da imzaladığı 11020 sayılı Proclamation ile ilaç ve etken madde ithalatının ABD ulusal güvenliğini tehdit ettiğine hükmetmiş ve patentli ilaçlar ile ilişkili etken maddelere yüzde 100 ad valorem tarife getirmişti. Tarife, Annex III'te sayılan şirketler için 31 Temmuz 2026'da, diğer tüm şirketler için ise 29 Eylül 2026'da yürürlüğe giriyor. Belirli ülkelerden gelen ürünlere ve Bakanlık onaylı yurt içine üretim taşıma (onshoring) anlaşması olan şirketlere farklı oranlar uygulanıyor.\n\nYeni ilan, sıfır tarife oranından yararlanabilecek özel ilaç gruplarını tanımlıyor: tüm onaylı endikasyonları yetim ilaç olarak belirlenmiş ürünler, nükleer tıp ürünleri, plazma kaynaklı tedaviler, doğurganlık ilaçları, hücre ve gen tedavisi ürünleri, antikor-ilaç konjugatları, kimyasal-biyolojik-radyolojik-nükleer tehditlere karşı tıbbi karşı önlemler ve hayvan sağlığı ürünleri. Bu ürünler, mevcut ya da yakında imzalanacak bir ticaret ve güvenlik çerçeve anlaşmasına sahip ülkelerin menşeli olmaları veya acil bir ABD sağlık ihtiyacını karşılamaları halinde sıfır orandan yararlanabilecek. Acil sağlık ihtiyacı başvuruları 23 Eylül 2026'dan itibaren sürekli olarak kabul ediliyor.\n\nİlan ayrıca Proclamation eklerinde altı teknik düzeltme yapıyor. Jenerik ilaçlar ve etken maddeleri şimdilik Section 232 ilaç tarifesinin kapsamı dışında bulunuyor.\n\nTürk ilaç sanayisinin ABD ihracatı ağırlıkla jenerik ürünlerden oluştuğu için doğrudan etki sınırlı görünse de, patentli veya lisanslı ürün ihraç eden ve ABD'li ortaklarla sözleşmeli üretim yapan firmaların 29 Eylül tarihli genişlemeye karşı ürün bazında kapsam analizi yapması gerekiyor.",
+      "published_at": "2026-09-23T08:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, patentli ilaçlara uygulanan yüzde 100'lük Section 232 tarifesinde sıfır oran uygulanacak özel ilaç gruplarını ve uygun ülkeleri tanımlayan rehberi yayımladı. Tarife 29 Eylül 2026'da tüm şirketler için yürürlüğe giriyor; ABD'ye ilaç veya etken madde ihraç eden Türk üreticiler kapsam ve muafiyet kriterlerini acilen gözden geçirmeli.",
+      "key_points": [
+        "Proclamation 11020 ile patentli ilaç ve etken maddelere yüzde 100 tarife: Annex III'teki şirketler için 31 Temmuz, diğer tüm şirketler için 29 Eylül 2026'dan itibaren.",
+        "Yetim ilaçlar, nükleer tıp, plazma kaynaklı tedaviler, doğurganlık ilaçları, hücre ve gen tedavileri, antikor-ilaç konjugatları ve hayvan sağlığı ürünleri sıfır orandan yararlanabiliyor.",
+        "Sıfır oran, ticaret ve güvenlik çerçeve anlaşması olan ülkelerin ürünlerine veya acil ABD sağlık ihtiyacını karşılayan ürünlere tanınıyor.",
+        "Jenerik ilaçlar ve etken maddeleri şimdilik Section 232 ilaç tarifesinin kapsamı dışında."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "BIS",
+          "Beyaz Saray"
+        ],
+        "kisi": [
+          "Donald Trump"
+        ],
+        "sektor": [
+          "İlaç",
+          "Kimya",
+          "Sağlık"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "section-232",
+        "ilac",
+        "tarife",
+        "gumruk-vergisi",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 95,
+        "corroboration": 60,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/24/2026-19537/measures-to-restrict-stockpiling-of-polysilicon-and-polysilicon-derivatives-under-proclamation-11052",
+      "title": "ABD, 4 Aralık'ta başlayacak polisilikon tarifeleri öncesi stok yapan ithalatçılara yasak getirebilecek",
+      "body": "ABD Ticaret Bakanlığı Sanayi ve Güvenlik Bürosu (BIS), 24 Eylül 2026 tarihli Federal Register'da polisilikon ve polisilikon türevlerinde stok birikimini kısıtlamaya yönelik geçici nihai kural (temporary final rule) yayımladı.\n\nBaşkan Trump 6 Ağustos 2026'da imzaladığı 11052 sayılı Proclamation ile polisilikon ve türevlerinin ithalatının ABD ulusal güvenliğini tehdit ettiğine hükmetmiş ve Section 232 kapsamında asgari ithalat fiyatları (MIP) ile tarifeler getirmişti. Bu önlemler 4 Aralık 2026'da yürürlüğe girecek. Proclamation, Ticaret Bakanı'na, önlemler başlamadan önce stok yapan şirketlerin ithalatını gümrük idaresi CBP ile koordineli biçimde kısıtlama yetkisi veriyordu.\n\nYeni kural 22 Eylül 2026'dan 3 Aralık 2026'ya kadar geçerli. Kural kapsamında Bakanlık mevcut ithalatçıları (importer of record) stok yapma belirtileri açısından izleyecek, stok yaptığı belirlenen şirketleri CBP'ye yazılı olarak bildirecek ve bu şirketlere ithalat yasağı uygulanabilecek. 6 Ağustos 2026 sonrasında CBP'ye kaydolan yeni ithalatçıların 4 Aralık öncesinde polisilikon ürünleri ithal edebilmesi için başvuru, belge ve taahhüt şartları getirildi. Yasağa tabi tutulan şirketler, BIS'e elektronik başvuru ile muafiyet talep edebilecek.\n\nPolisilikon, güneş hücreleri ve yarı iletken üretiminin temel hammaddesi. Kural, ABD'nin kritik tedarik zincirlerinde ithalatı fiyat tabanı ve tarifelerle yönetme eğiliminin genişlediğini gösteriyor. Türkiye'deki güneş paneli ve hücre üreticileri ABD pazarına yönelik sevkiyatlarda türev ürün kapsamını, ithalatçının kayıt tarihini ve 4 Aralık sonrası maliyet yapısını dikkate almalı.",
+      "published_at": "2026-09-24T08:30:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, 4 Aralık 2026'da yürürlüğe girecek polisilikon ve türevlerine yönelik asgari ithalat fiyatı ve Section 232 tarifeleri öncesinde stok yapan şirketlere ithalat yasağı getirilmesini sağlayan geçici kuralı yayımladı. Güneş paneli ve yarı iletken tedarik zincirinde ABD'ye ihracat yapan Türk üreticiler için yeni ithalatçı kısıtları ve belgelendirme yükü doğuyor.",
+      "key_points": [
+        "Proclamation 11052 (6 Ağustos 2026) polisilikon ürünlerine asgari ithalat fiyatı ve tarife getirdi; uygulama 4 Aralık 2026'da başlıyor.",
+        "Geçici kural 22 Eylül - 3 Aralık 2026 arasında geçerli; stok yaptığı tespit edilen ithalatçılara ithalat yasağı uygulanabilecek.",
+        "6 Ağustos 2026 sonrası CBP'ye kaydolan yeni ithalatçılara ek sınırlamalar, başvuru ve belgelendirme şartı getiriliyor.",
+        "Yasaktan muafiyet başvuruları BIS'e elektronik olarak yapılabilecek."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "BIS",
+          "CBP"
+        ],
+        "kisi": [
+          "Donald Trump"
+        ],
+        "sektor": [
+          "Güneş Enerjisi",
+          "Yarı İletken",
+          "Kimya"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "section-232",
+        "polisilikon",
+        "yenilenebilir-enerji",
+        "yari-iletken",
+        "ithalat-yasagi",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 62,
+        "keyword": 78,
+        "recency": 97,
+        "corroboration": 45,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "federal-register",
+      "url": "https://www.federalregister.gov/documents/2026/09/14/2026-18706/certain-linear-hydraulic-cylinders-and-parts-thereof-from-canada-the-peoples-republic-of-china-india",
+      "title": "ABD, beş ülkeden hidrolik silindir ithalatına anti-damping soruşturması açtı; Çin için Türkiye referans ülke seçenekleri arasında",
+      "body": "ABD Ticaret Bakanlığı, 14 Eylül 2026 tarihli Federal Register ilanıyla Kanada, Çin, Hindistan, Güney Kore ve Meksika menşeli belirli lineer hidrolik silindirler ve parçalarına yönelik 'adil değerin altında satış' (anti-damping) soruşturmalarını başlattı.\n\nDilekçeler 29 Temmuz 2026'da Hydraulic Cylinders Fair Trade Coalition ve üyeleri Aggressive Hydraulics, Hol-Mac, Ligon Hydraulics, Prince Manufacturing, PTC Alliance, Rosenboom Machine & Tool, Scot Industries, Stillwell ve Texas Hydraulics adına sunuldu. Dilekçelere Çin, Hindistan ve Meksika için telafi edici vergi (CVD) talepleri de eşlik ediyor; bunlara ilişkin soruşturmalar aynı gün ayrı bir ilanla başlatıldı. Bakanlık 3 Ağustos - 2 Eylül arasında şikâyetçilerden ek bilgi istemiş, yanıtlar 4 Eylül'e kadar tamamlanmıştı.\n\nŞikâyetçilerin iddia ettiği tahmini damping marjları şöyle: Kanada yüzde 248,33 ile 744,85 arası; Çin için Malezya vekil ülke alındığında yüzde 149,86-394,07, Meksika vekil alındığında yüzde 103,05-197,07, Türkiye vekil alındığında yüzde 299,38-440,48; Hindistan yüzde 85,31-370,67; Güney Kore yüzde 73,09-158,74; Meksika yüzde 56,79-157,12. Çin piyasa ekonomisi sayılmadığı için normal değer üçüncü bir ülkenin maliyet verileriyle hesaplanıyor; Türkiye bu dosyada vekil ülke adaylarından biri.\n\nHidrolik silindirler iş makineleri, tarım ekipmanları ve sanayi makinelerinin temel bileşenleri. Soruşturmanın olumlu sonuçlanması halinde ABD'nin başlıca tedarikçilerine yüksek vergiler gelebilir. Türkiye soruşturma kapsamında olmadığından, Türk hidrolik silindir ve makine yan sanayi üreticileri için ABD pazarında tedarik boşluğunu doldurma fırsatı doğabilir; ancak Section 232 türev ürün tarifeleri ve menşe kuralları dikkatle değerlendirilmeli.",
+      "published_at": "2026-09-14T08:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Bakanlığı, Kanada, Çin, Hindistan, Güney Kore ve Meksika menşeli lineer hidrolik silindir ve parçalarına anti-damping soruşturması başlattı; iddia edilen marjlar yüzde 56 ile 745 arasında. Türkiye soruşturmada yer almıyor ve Çin için referans (vekil) ülke seçeneklerinden biri; rakiplerin ABD'den dışlanması Türk makine ve hidrolik üreticilerine fırsat penceresi açabilir.",
+      "key_points": [
+        "Şikâyet 29 Temmuz 2026'da Hydraulic Cylinders Fair Trade Coalition tarafından yapıldı; Çin, Hindistan ve Meksika için ayrıca sübvansiyon soruşturması var.",
+        "İddia edilen damping marjları: Kanada yüzde 248,33-744,85; Hindistan yüzde 85,31-370,67; Kore yüzde 73,09-158,74; Meksika yüzde 56,79-157,12.",
+        "Çin için marj hesaplamasında Malezya, Meksika ve Türkiye vekil ülke olarak kullanıldı; Türkiye bazlı hesapta marj yüzde 299,38-440,48.",
+        "Soruşturmalar iş makineleri, tarım makineleri ve sanayi ekipmanında kullanılan silindirleri kapsıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Ticaret Bakanlığı",
+          "ITA",
+          "Hydraulic Cylinders Fair Trade Coalition"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makine",
+          "Hidrolik",
+          "İş Makineleri"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "anti-damping",
+        "telafi-edici-vergi",
+        "makine",
+        "cin",
+        "hindistan",
+        "kore",
+        "kanada",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 65,
+        "keyword": 80,
+        "recency": 80,
+        "corroboration": 35,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "ustr",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ustr-seeks-public-comment-foreign-trade-barriers-2027-national-trade-estimate-report",
+      "title": "USTR, 2027 Dış Ticaret Engelleri Raporu için görüş topluyor: son başvuru 29 Ekim 2026",
+      "body": "ABD Ticaret Temsilciliği (USTR), 14 Eylül 2026'da yaptığı açıklamayla ABD mal ve hizmet ihracatı ile ABD'li yatırımcıların doğrudan yabancı yatırımları önündeki engellere ilişkin kamuoyu görüşü toplamaya başladığını duyurdu. Toplanan görüşler, her yıl yayımlanan Dış Ticaret Engelleri Ulusal Ticaret Tahmini Raporu'nun (National Trade Estimate Report, NTE) 2027 sürümünde kullanılacak.\n\nAynı gün Federal Register'da yayımlanan ilana göre görüşlerin en geç 29 Ekim 2026 saat 23:59'a (ABD Doğu saati) kadar regulations.gov üzerinden USTR-2026-0498 dosya numarasıyla sunulması gerekiyor. Ticaret Politikası Personel Komitesi (TPSC) özellikle şu başlıklarda bilgi istiyor: tarifeler ve diğer ithalat vergileri, miktar kısıtlamaları, ithalat lisansları, gümrük ve gümrük kıymeti uygulamaları, ABD ihracatının rekabet gücünü etkileyen vergi politikaları; gereksiz ticaret kısıtlayıcı standartlar, etiketleme ve uygunluk değerlendirme prosedürleri gibi teknik ticaret engelleri ile uluslararası standartlar varken ulusal standart dayatılması. Görüşler ayrıca telekomünikasyon ürün ve hizmetlerine ilişkin ticaret anlaşmalarının yıllık incelemesinde de dikkate alınacak.\n\nUSTR Büyükelçisi Jamieson Greer, Başkan Trump'ın göreve geldiği ilk gün 'Önce Amerika Ticaret Politikası'nı başlattığını hatırlatarak, son bir buçuk yılda tarifeler ve ticaret anlaşmalarıyla yabancı ticaret engellerinin kaldırıldığını ve bu çalışmanın süreceğini söyledi.\n\nNTE raporu, ABD'nin ikili müzakerelerinde ve Section 301 gibi araçlarla yürüttüğü soruşturmalarda başvurulan temel envanter niteliğinde. Türkiye'nin ek gümrük vergileri, gözetim uygulamaları, yerlileştirme şartları ve kamu alım kuralları geçmiş raporlarda yer almıştı. Türk sanayi kuruluşlarının ve ABD'de faaliyet gösteren Türk şirketlerinin süreci izlemesi, gerekirse ABD'li ortakları aracılığıyla doğru bilgi sunulmasını sağlaması önem taşıyor.",
+      "published_at": "2026-09-14T18:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Temsilciliği (USTR), ABD ihracatı önündeki yabancı engelleri listeleyen 2027 Ulusal Ticaret Tahmini (NTE) raporu için kamuoyu görüşü istedi; son başvuru 29 Ekim 2026. Rapor ABD'nin müzakere ve yaptırım gündemini belirlediği için Türkiye'nin gümrük, teşvik, standart ve ek vergi uygulamalarının raporda nasıl yer alacağı Türk ihracatçıları dolaylı olarak etkileyebilir.",
+      "key_points": [
+        "Son başvuru: 29 Ekim 2026, saat 23:59 (ABD Doğu saati); başvurular regulations.gov üzerinden, dosya no. USTR-2026-0498.",
+        "Görüş istenen alanlar: tarifeler ve ithalat politikaları, teknik ticaret engelleri, standartlar, lisanslama, vergi uygulamaları ve yatırım engelleri.",
+        "NTE raporu ABD'nin ticaret müzakerelerinde ve ticaret yasalarının uygulanmasında temel araç olarak kullanılıyor.",
+        "Büyükelçi Greer: tarifeler ve ticaret anlaşmalarıyla yabancı engeller kaldırılmaya devam edilecek."
+      ],
+      "entities": {
+        "kurum": [
+          "USTR",
+          "TPSC"
+        ],
+        "kisi": [
+          "Jamieson Greer",
+          "Donald Trump"
+        ],
+        "sektor": [
+          "Genel Sanayi",
+          "Dış Ticaret"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "ustr",
+        "ticaret-politikasi",
+        "gumruk-vergisi",
+        "standart",
+        "son-basvuru",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 60,
+        "keyword": 75,
+        "recency": 80,
+        "corroboration": 40,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "ustr",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ustr-convenes-over-50-trading-partners-provide-training-related-imposing-and-enforcing-forced-labor",
+      "title": "USTR, 50'den fazla ticaret ortağına zorla çalışma ithalat yasağı eğitimi verdi",
+      "body": "ABD Ticaret Temsilciliği (USTR), 15 Eylül 2026'da dünyanın farklı bölgelerinden 50'yi aşkın ticaret ortağının temsilcilerini bir araya getirerek zorla çalışmayla üretilmiş mallara yönelik ithalat yasaklarının getirilmesi ve etkin biçimde uygulanması konusunda eğitim verdi.\n\nAçıklamaya göre bu çalışma, zorla çalışma ürünlerinin ticaretiyle kendi sınırlarında ithalat yasaklarıyla mücadele etmeye istekli hükümetleri desteklemeye yönelik bütüncül bir hükümet çabasının parçası. USTR eğitimi ABD İç Güvenlik Bakanlığı, Gümrük ve Sınır Koruma İdaresi (CBP) ve Çalışma Bakanlığı ile ortaklaşa veriyor; ayrıca ülkelere özel, ayrıntılı teknik destek de sağlanıyor.\n\nABD, zorla çalışmayla üretilen malların ithalatını yaklaşık 100 yıldır yasaklıyor ve son yıllarda Kongre ile yönetimler bu yasağı iç hukukta güçlendirip ticaret anlaşmalarına da taşıdı. USTR'nin bu konudaki Section 301 soruşturmasının da etkisiyle Temmuz 2026'ya kadar 12 ekonomi zorla çalışma ürünlerine ithalat yasağı getiren düzenlemeler kabul etti: Kamboçya, Kanada, Ekvador, Avrupa Birliği, Guatemala, Honduras, Hindistan, Endonezya, Meksika, Pakistan, Sri Lanka ve Trinidad ve Tobago. Açıklamada, o tarihten bu yana onlarca ülkenin daha benzer önlemler almaya ilgi gösterdiği belirtildi.\n\nUSTR, Haziran 2026'da 60 ekonominin zorla çalışma ürünlerine karşı ithalat yasağı uygulamamasını Section 301 kapsamında 'makul olmayan' bulmuş ve bu ekonomilerin ürünlerine ek tarifeler öngörmüştü. Yönetim, zorla çalışma ürünlerinin ticaretine karşı yeni bir küresel standart oluşturmayı hedeflediğini vurguluyor.\n\nTürk sanayicisi açısından bu eğilim, AB'nin zorla çalışma tüzüğüyle birlikte değerlendirildiğinde, pamuk, tekstil, polisilikon, alüminyum ve elektronik gibi tedarik zincirlerinde hammadde kaynağının belgelenmesini ve tedarikçi denetimini ABD ve AB pazarlarına erişimin fiili ön şartı haline getiriyor.",
+      "published_at": "2026-09-15T18:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD Ticaret Temsilciliği, zorla çalışmayla üretilmiş mallara ithalat yasağı getirmeleri için 50'den fazla ticaret ortağının temsilcilerine eğitim verdi. Section 301 soruşturmasının ardından 12 ekonomi benzer yasak kabul etti; tedarik zinciri izlenebilirliği Türk ihracatçıları için ABD ve AB'de giderek daha belirleyici bir pazar erişim şartına dönüşüyor.",
+      "key_points": [
+        "USTR; İç Güvenlik Bakanlığı, CBP ve Çalışma Bakanlığı ile birlikte ülkelere özel teknik destek de sağlıyor.",
+        "Temmuz 2026'ya kadar AB, Kanada, Meksika, Hindistan, Endonezya dahil 12 ekonomi zorla çalışma ürünlerine ithalat yasağı getirdi.",
+        "ABD'nin 60 ekonomiye yönelik zorla çalışma Section 301 soruşturması bu sürecin itici gücü oldu.",
+        "Onlarca ülkenin daha benzer önlemler almaya ilgi gösterdiği belirtildi."
+      ],
+      "entities": {
+        "kurum": [
+          "USTR",
+          "ABD İç Güvenlik Bakanlığı",
+          "CBP",
+          "ABD Çalışma Bakanlığı",
+          "Avrupa Birliği"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Tekstil",
+          "Elektronik",
+          "Genel Sanayi"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "zorla-calisma",
+        "ithalat-yasagi",
+        "izlenebilirlik",
+        "tedarikci-denetimi",
+        "ustr",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 55,
+        "keyword": 70,
+        "recency": 82,
+        "corroboration": 35,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "ustr",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-travel-milwaukee-wisconsin-host-g20-trade-ministerial",
+      "title": "G20 Ticaret Bakanları Milwaukee'de toplanıyor: gündemde çelik kapasite fazlası, zorla çalışma ve en çok kayırılan ulus ilkesi",
+      "body": "ABD Ticaret Temsilciliği (USTR), 25 Eylül 2026 tarihli açıklamasında Büyükelçi Jamieson Greer'in önümüzdeki hafta Milwaukee, Wisconsin'de G20 Ticaret Bakanları Toplantısı'na ev sahipliği yapacağını duyurdu.\n\nAçıklamaya göre Greer, G20 ticaret bakanlarıyla küresel tedarik zincirlerinde zorla çalışmanın ortadan kaldırılması, en çok kayırılan ulus (MFN) ilkesinin güncellenmesi, gıda ticaretinin silah olarak kullanılmasının kınanması ve yapısal kapasite fazlası ile üretim fazlasının ele alınması gibi geniş bir gündemde görüşmelere öncülük edecek. Bakanlar toplantı marjında Rockwell Automation fabrikasını gezecek; fabrika sahasında işçiler ve sanayi yöneticileriyle, Başkan Trump'ın ticaret programının ABD'nin yeniden sanayileşmesini nasıl hızlandırdığını ve tedarik zincirlerini nasıl güçlendirdiğini konuşacak.\n\nPrograma göre 29 Eylül akşamı Business Roundtable ve Ulusal İmalatçılar Birliği (NAM) ev sahipliğinde karşılama resepsiyonu verilecek. 30 Eylül sabahı Küresel Çelik Kapasite Fazlası Forumu (Global Forum on Steel Excess Capacity) bakanlar toplantısı yapılacak, ardından Rockwell Automation turu ve Greer'in açılış konuşmasıyla G20 Ticaret Bakanları açılış oturumu gerçekleşecek. 1 Ekim'de bakanlar toplantısı iki oturum halinde sürecek ve Greer 14.00'te basın toplantısı düzenleyecek.\n\nTürkiye G20 üyesi ve dünyanın önde gelen çelik üreticilerinden biri olarak hem Küresel Çelik Forumu hem de G20 ticaret gündemi açısından doğrudan muhatap. MFN ilkesinin 'güncellenmesi' söylemi, ABD'nin karşılıklılık temelli tarife yaklaşımını çok taraflı zemine taşıma arayışı olarak okunabilir; bu, DTÖ kurallarına dayalı ihracat yapan Türk sanayicisi için önemli bir risk başlığı. Çelik kapasite fazlası tartışmaları ise Çin kaynaklı arz baskısının ve ABD-AB korunma önlemlerinin geleceğine dair sinyaller verebilir.",
+      "published_at": "2026-09-25T17:00:00+03:00",
+      "language": "tr",
+      "summary": "ABD, 29 Eylül - 1 Ekim tarihlerinde Milwaukee'de G20 Ticaret Bakanları Toplantısı'na ev sahipliği yapacak; programda Küresel Çelik Kapasite Fazlası Forumu bakanlar toplantısı da var. Türkiye'nin de katıldığı toplantıda en çok kayırılan ulus (MFN) ilkesinin 'güncellenmesi' ve yapısal kapasite fazlası tartışılacak; sonuçlar Türk çeliği ve genel ihracat rejimi için yön gösterici olabilir.",
+      "key_points": [
+        "Toplantı 29 Eylül - 1 Ekim 2026'da Milwaukee, Wisconsin'de; ev sahibi USTR Büyükelçisi Jamieson Greer.",
+        "30 Eylül'de Küresel Çelik Kapasite Fazlası Forumu bakanlar toplantısı düzenlenecek.",
+        "Gündem: tedarik zincirlerinde zorla çalışma, MFN ilkesinin güncellenmesi, gıda ticaretinin silah olarak kullanılması, yapısal kapasite fazlası.",
+        "Bakanlar Rockwell Automation fabrikasını ziyaret edecek; Greer 1 Ekim'de basın toplantısı yapacak."
+      ],
+      "entities": {
+        "kurum": [
+          "USTR",
+          "G20",
+          "Küresel Çelik Kapasite Fazlası Forumu",
+          "Rockwell Automation",
+          "NAM",
+          "Business Roundtable"
+        ],
+        "kisi": [
+          "Jamieson Greer"
+        ],
+        "sektor": [
+          "Demir-Çelik",
+          "Genel Sanayi"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "g20",
+        "kapasite-fazlasi",
+        "celik",
+        "zorla-calisma",
+        "ustr",
+        "ticaret-politikasi",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 70,
+        "keyword": 82,
+        "recency": 100,
+        "corroboration": 40,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "federal-reserve",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "title": "Fed politika faizini 25 baz puan artırarak yüzde 3,75-4,00 aralığına çıkardı",
+      "body": "ABD Merkez Bankası (Fed) Federal Açık Piyasa Komitesi (FOMC), 16 Eylül 2026'daki toplantısının ardından yayımladığı açıklamada federal fon oranı hedef aralığını çeyrek puan artırarak yüzde 3,75-4,00'e yükselttiğini duyurdu. Karar 12-0 oy birliğiyle alındı.\n\nKomite açıklamasında şu değerlendirmelere yer verdi: Ekonomik faaliyet sağlam bir hızla genişliyor. Kısmen jeopolitik gelişmeler nedeniyle belirsizlik yüksek kalsa da iç harcamalar dirençli. Verimlilik artışı güçlü, sermaye yatırımları canlı. İstihdam artışı işgücü artışıyla uyumlu seyrediyor ve işsizlik oranı pek değişmedi.\n\nAçıklamada 'Enflasyon yüksek seyrini koruyor. Bugünkü politika adımı, Komite'nin yüzde 2 hedefine daha zamanında dönüşü destekleyecek. Komite fiyat istikrarını sağlayacak' ifadeleri kullanıldı. Faiz artırımının Fed'in çift yönlü görevi (maksimum istihdam ve fiyat istikrarı) doğrultusunda yapıldığı belirtildi. Komite, bankacılık sisteminde bol rezerv sağlama politikasını sürdürdüğünü de teyit etti.\n\nKarar, Fed'in Temmuz 2023'ten bu yana ilk faiz artırımı. Kısa ve kararlı ton, enerji fiyatları kaynaklı enflasyon baskısının kalıcılaşmasından duyulan endişeyi yansıtıyor.\n\nTürk sanayicisi açısından Fed'in yeniden sıkılaşma döngüsüne girmesi birkaç kanaldan etkili olabilir: küresel dolar likiditesinin daralması ve doların güçlenmesi, gelişmekte olan ülke para birimleri ve Türk lirası üzerinde baskı yaratabilir; dış finansman ve ihracat kredisi maliyetleri yükselebilir; ABD talebinde olası yavaşlama ise ABD'ye ihracat yapan sektörlerde sipariş temposunu etkileyebilir. Döviz cinsinden borcu yüksek firmaların kur riski yönetimini gözden geçirmesi önem kazanıyor.",
+      "published_at": "2026-09-16T21:00:00+03:00",
+      "language": "tr",
+      "summary": "Fed Açık Piyasa Komitesi 16 Eylül'de oy birliğiyle politika faizini 25 baz puan artırarak yüzde 3,75-4,00 aralığına yükseltti ve enflasyonun 'yüksek' seyrettiğini vurguladı. Doların güçlenmesi ve küresel finansman maliyetlerinin artması, dövizle borçlanan ve gelişmekte olan piyasalara ihracat yapan Türk sanayicisi için maliyet ve kur riskini artırıyor.",
+      "key_points": [
+        "FOMC 12-0 oyla federal fon oranı hedef aralığını yüzde 3,75-4,00'e yükseltti.",
+        "Açıklamada ekonomik faaliyetin sağlam hızda genişlediği, verimlilik artışının güçlü ve sermaye yatırımlarının canlı olduğu belirtildi.",
+        "Komite, jeopolitik gelişmeler nedeniyle belirsizliğin yüksek kaldığını ve enflasyonun yüksek seyrettiğini vurguladı.",
+        "Fed, bankacılık sisteminde bol rezerv politikasını sürdürüyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Fed",
+          "FOMC"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Finans",
+          "Genel Sanayi"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "fed",
+        "faiz-karari",
+        "enflasyon",
+        "para-politikasi",
+        "finansman-maliyeti",
+        "kur-riski",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 88,
+        "keyword": 85,
+        "recency": 90,
+        "corroboration": 95,
+        "reach": 90
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
+      "title": "Fed üç yılı aşkın sürenin ilk faiz artırımını yaptı, yıl sonuna kadar bir artış daha sinyali verdi",
+      "body": "Fed, 16 Eylül 2026'da üç yılı aşkın sürenin ilk faiz artırımını onayladı ve bir artışın daha geleceğine işaret etti. CNBC'nin haberine göre adım, tırmanan petrol fiyatları ve diğer faktörlerin yol açtığı enflasyonla mücadeleyi amaçlıyor.\n\nPiyasaların büyük ölçüde beklediği kararla Federal Açık Piyasa Komitesi, politika faizini 12-0 oyla 25 baz puan artırarak yüzde 3,75-4 hedef aralığına çıkardı. Piyasalar artışa yüzde 90'ın üzerinde olasılık fiyatlıyordu. Fed Başkanı Kevin Warsh basın toplantısında enflasyonun 'çok uzun süredir çok yüksek' olduğunu söyledi: 'Temel enflasyonun hedefimize açıkça ve yeterli hızla ilerlediğinden emin olmalıyız. Bugün FOMC bu standardın karşılanmadığına karar verdi.' Warsh, iş gücü piyasası dahil ekonominin güçlü olduğunu, enflasyonun hedefin üzerinde kaldığını ve Orta Doğu'daki gerilimin de karara katkıda bulunduğunu belirtti.\n\nGüncellenen projeksiyonlara göre nokta grafiğinde 18 katılımcıdan 16'sı yıl içinde bir artış daha bekliyor; bunlardan dördü iki artışı mümkün görüyor. Sonraki yıllar için artış öngörülmüyor; 2028 ve 2029 için indirimler çiziliyor. Yetkililer 2026 manşet PCE enflasyon beklentisini yüzde 3,7'ye, çekirdek PCE'yi yüzde 3,4'e yükseltti; hedefe 2029'a kadar ulaşılması beklenmiyor. İşsizlik oranı beklentisi yüzde 4,1'e düşürüldü.\n\nHaberde, Fed'in normalde İran savaşı kaynaklı yüksek akaryakıt maliyetleri ve tarifelerin kalıcı etkileri gibi arz kaynaklı enflasyonu göz ardı ettiği, ancak enerji fiyatlarının uzun süre yüksek kalmasının enflasyon beklentilerini bozmasından endişe edildiği belirtildi. Yapay zekâ yatırımlarındaki genişleme de enflasyonist bir etken olarak görülüyor. Kararın ardından S&P 500 yükseldi, Hazine tahvili getirileri ise son dönemde sert şekilde artmıştı.\n\nTürk sanayicisi için sıkılaşan dolar koşulları, dış borçlanma ve ihracat finansmanı maliyetlerini yukarı itebilir; güçlü dolar ise gelişmekte olan piyasa para birimlerinde oynaklığı artırabilir.",
+      "published_at": "2026-09-16T21:00:14+03:00",
+      "language": "tr",
+      "summary": "Fed, petrol fiyatlarındaki sıçramanın beslediği enflasyonla mücadele için 2023'ten bu yana ilk kez faiz artırdı; nokta grafiğine göre 18 yetkiliden 16'sı yıl sonuna kadar en az bir artış daha bekliyor. Başkan Kevin Warsh'ın şahin mesajları, küresel finansman koşullarının sıkılaşacağına işaret ediyor; Türk ihracatçıları için dolar kuru ve kredi maliyeti riski artıyor.",
+      "key_points": [
+        "FOMC 12-0 oyla faizi 25 baz puan artırarak yüzde 3,75-4,00'e çıkardı; Temmuz 2023'ten bu yana ilk artış.",
+        "Nokta grafiği: 18 katılımcıdan 16'sı yıl içinde bir artış daha, dördü iki artış daha öngörüyor.",
+        "2026 PCE enflasyon tahmini yüzde 3,7, çekirdek PCE yüzde 3,4; hedefe dönüş 2029'da bekleniyor. İşsizlik tahmini yüzde 4,1'e indirildi.",
+        "Warsh: enflasyon 'çok uzun süredir çok yüksek'; İran savaşı kaynaklı akaryakıt fiyatları ve tarifelerin etkisi karar gerekçeleri arasında."
+      ],
+      "entities": {
+        "kurum": [
+          "Fed",
+          "FOMC"
+        ],
+        "kisi": [
+          "Kevin Warsh"
+        ],
+        "sektor": [
+          "Finans",
+          "Enerji"
+        ]
+      },
+      "region": "AMERIKA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "fed",
+        "faiz-karari",
+        "enflasyon",
+        "petrol-fiyati",
+        "finansman-maliyeti",
+        "kur-riski",
+        "abd"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 88,
+        "keyword": 85,
+        "recency": 90,
+        "corroboration": 95,
+        "reach": 90
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/15/china-august-retail-sales-industrial-output-investment-exports-.html",
+      "title": "Çin'de Ağustos'ta sanayi üretimi yüzde 5,2 arttı, perakende satışlar ve yatırımlar zayıfladı",
+      "body": "Çin'de yatırımlardaki gerileme Ağustos'ta derinleşti ve perakende satış artışı daha da yavaşladı; sanayi üretimi ise beklentileri aştı. CNBC'nin aktardığı Ulusal İstatistik Bürosu (NBS) verilerine göre perakende satışlar Ağustos'ta yıllık yüzde 0,4 arttı; bu, Temmuz'daki yüzde 0,6'nın ve Reuters anketindeki yüzde 0,8'lik beklentinin altında.\n\nSanayi üretimi ise Temmuz'daki yüzde 4,5'ten Ağustos'ta yüzde 5,2'ye hızlanarak yüzde 4,8'lik beklentiyi aştı. Mülk ve altyapı yatırımlarını kapsayan kentsel sabit sermaye yatırımları yılın ilk sekiz ayında yıllık yüzde 7,2 daraldı; ocak-temmuz dönemindeki daralma yüzde 6,7 idi. Kentsel işsizlik oranı yüzde 5,2'den yüzde 5,3'e yükseldi. NBS sözcüsü Fu Linghui artışı mezuniyet dönemine bağladı.\n\nİstatistik bürosu açıklamasında 'dış ortamın olumsuz etkisinin yoğunlaştığına' dikkat çekerek yurt içinde 'güçlü arz ile zayıf talep' arasındaki dengesizliğin 'keskin' olduğunu ve bazı işletmelerin hâlâ faaliyet güçlükleri yaşadığını belirtti; makro politika ayarlamalarının artırılması ve iç talebin desteklenmesi çağrısında bulundu.\n\nKredi genişlemesi de beklentilerin çok gerisinde kaldı: Ağustos'ta yeni banka kredileri yaklaşık 400 milyar yuanlık beklentiye karşın yalnızca 60 milyar yuan (8,95 milyar dolar) arttı; kredi stoku büyümesi rekor düşük yüzde 4,9'a indi. Ekonomi ikinci çeyrekte yüzde 4,3 ile üç yılı aşkın sürenin en zayıf büyümesini kaydetmişti. Oxford Economics üçüncü çeyrek büyümesini yüzde 4,3 olarak tahmin ediyor ve Pekin'in yüzde 4,5-5 hedefinin altında kalınabileceği uyarısında bulunuyor.\n\nTürk sanayicisi açısından Çin'de üretimin talepten hızlı büyümesi, fazla arzın ihracat yoluyla dünya pazarlarına akması anlamına geliyor. Bu durum çelik, alüminyum, makine, kimya ve beyaz eşya gibi sektörlerde hem Türkiye iç pazarında hem de üçüncü pazarlarda fiyat baskısını artırabilir; ticaret savunma araçlarının etkin kullanımı daha kritik hale geliyor.",
+      "published_at": "2026-09-15T05:01:22+03:00",
+      "language": "tr",
+      "summary": "Çin'de Ağustos'ta sanayi üretimi yüzde 5,2 artışla beklentiyi aşarken perakende satışlar yüzde 0,4'e geriledi ve sabit sermaye yatırımları ilk sekiz ayda yüzde 7,2 daraldı. Güçlü arz-zayıf iç talep dengesizliği, Çin'in fazla üretimini ihracata yöneltme baskısını artırıyor; bu da çelik, makine ve kimya gibi sektörlerde Türk üreticiler için fiyat rekabetini sertleştirebilir.",
+      "key_points": [
+        "Sanayi üretimi Ağustos'ta yüzde 5,2 arttı (Temmuz: yüzde 4,5; beklenti: yüzde 4,8).",
+        "Perakende satışlar yüzde 0,4 arttı (beklenti yüzde 0,8); sabit sermaye yatırımı ocak-ağustosta yüzde 7,2 geriledi.",
+        "Kentsel işsizlik yüzde 5,3'e çıktı; yeni banka kredileri yalnızca 60 milyar yuan oldu, kredi büyümesi rekor düşük yüzde 4,9.",
+        "İstatistik Bürosu dış ortamın olumsuz etkisinin arttığını ve 'güçlü arz, zayıf talep' dengesizliğinin belirgin olduğunu vurguladı."
+      ],
+      "entities": {
+        "kurum": [
+          "Çin Ulusal İstatistik Bürosu",
+          "Oxford Economics"
+        ],
+        "kisi": [
+          "Fu Linghui"
+        ],
+        "sektor": [
+          "Genel Sanayi",
+          "İnşaat",
+          "Perakende"
+        ]
+      },
+      "region": "ASYA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin",
+        "sanayi-uretimi",
+        "ic-talep",
+        "kapasite-fazlasi",
+        "cin-rekabeti",
+        "buyume"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 80,
+        "keyword": 80,
+        "recency": 82,
+        "corroboration": 88,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "euronews",
+      "url": "https://www.euronews.com/business/2026/09/15/chinas-retail-sales-slow-again-as-beijing-struggles-to-revive-consumer-spending",
+      "title": "Çin'de perakende satışlar yeniden yavaşladı: Pekin tüketimi canlandırmakta zorlanıyor",
+      "body": "Euronews'in 15 Eylül 2026 tarihli haberine göre Çin'de perakende satış artışı Ağustos'ta yıllık yüzde 0,4'e geriledi. Bu, büyümenin yeniden başladığı dönemden bu yana en yavaş tempo ve üst üste ikinci aylık yavaşlama. Rakam, ekonomistlerin yüzde 0,8'lik tahmininin ve Temmuz'daki yüzde 0,6'nın altında kaldı.\n\nVeriler belirgin bir ekonomik dengesizliğe işaret ediyor: Sanayi üretimi Ağustos'ta yüzde 5,2 artarken (Temmuz'da yüzde 4,5), sabit sermaye yatırımları 2026'nın ilk sekiz ayında yüzde 7,2 daraldı.\n\nÇin Ulusal İstatistik Bürosu, 'yurt içinde güçlü arz ile zayıf talep arasındaki dengesizliğin belirgin olduğunu, bazı firmaların faaliyet güçlükleri yaşadığını ve istikrarlı ekonomik iyileşmenin temelinin pekiştirilmesi gerektiğini' belirtti.\n\nPinpoint Asset Management baş ekonomisti Zhiwei Zhang, 'Çin ekonomisi farklı yönlerde sinyaller vermeye devam ediyor; tüketim ve yatırım zayıf kalırken sanayi üretimi ivmesini koruyor' değerlendirmesinde bulundu.\n\nPekin kısa süre önce kredi verme kapasitesini korumak amacıyla devlete ait bankalara ve sigorta şirketlerine 360 milyar yuan (46,1 milyar avro) sermaye enjekte etti. Ancak analistler, mali desteğin ekonomiye yansımasının zaman alacağını ve yakın vadede zayıflığın süreceğini öngörüyor.\n\nTürk imalat sanayisi açısından Çin'deki arz fazlasının kalıcılaşması, düşük fiyatlı Çin ürünlerinin başta Avrupa, Orta Doğu ve Afrika olmak üzere Türk ihracatçılarının rekabet ettiği pazarlara yönelmesini hızlandırabilir. Aynı zamanda Çin iç talebinin zayıflığı, emtia ve ara malı fiyatlarında aşağı yönlü baskıyı sürdürerek girdi maliyetleri tarafında kısmi rahatlama sağlayabilir.",
+      "published_at": "2026-09-15T11:56:00+03:00",
+      "language": "tr",
+      "summary": "Çin'de perakende satış artışı Ağustos'ta yüzde 0,4'e gerileyerek ikinci ay üst üste yavaşlarken sanayi üretimi yüzde 5,2 arttı. Pekin'in bankalara 360 milyar yuanlık sermaye desteğine rağmen iç talebin zayıf kalması, Çin'in ihracat odaklı büyümesini sürdürmesi ve küresel pazarlarda Türk üreticilerle rekabetin sertleşmesi anlamına geliyor.",
+      "key_points": [
+        "Perakende satışlar Ağustos'ta yıllık yüzde 0,4 arttı; ikinci ay üst üste yavaşlama, beklenti yüzde 0,8 idi.",
+        "Sanayi üretimi yüzde 5,2 arttı, sabit sermaye yatırımı ilk sekiz ayda yüzde 7,2 daraldı.",
+        "Pekin devlet bankaları ve sigortacılara 360 milyar yuan (46,1 milyar avro) sermaye enjekte etti.",
+        "Analistler mali desteğin ekonomiye yansımasının zaman alacağını, zayıflığın süreceğini öngörüyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Çin Ulusal İstatistik Bürosu",
+          "Pinpoint Asset Management"
+        ],
+        "kisi": [
+          "Zhiwei Zhang"
+        ],
+        "sektor": [
+          "Perakende",
+          "Genel Sanayi"
+        ]
+      },
+      "region": "ASYA",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin",
+        "ic-talep",
+        "sanayi-uretimi",
+        "perakende",
+        "cin-rekabeti"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 72,
+        "keyword": 72,
+        "recency": 82,
+        "corroboration": 88,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "steelorbis",
+      "url": "https://www.steelorbis.com/steel-news/latest-news/chinas-semis-exports-up-5207-percent-in-january-august-2026-1478893.htm",
+      "title": "Çin'in yarı mamul çelik ihracatı ocak-ağustosta yüzde 52 artışla 14 milyon tonu aştı",
+      "body": "SteelOrbis'in 22 Eylül 2026 tarihli haberine göre Çin'in yarı mamul çelik ihracatı 2026'nın ilk sekiz ayında güçlü bir artış kaydetti. Çin gümrük verilerine göre ülke ocak-ağustos döneminde 14,0455 milyon ton yarı mamul çelik ihraç etti; bu, geçen yılın aynı dönemine göre yüzde 52,07 artış anlamına geliyor.\n\nAğustos ayında ise tablo karışık: Aylık yarı mamul çelik ihracatı 1,926 milyon ton oldu; bu, Temmuz'a göre yüzde 23,76 düşüş, geçen yılın Ağustos ayına göre ise yüzde 9,17 artış demek.\n\nHabere göre yarı mamul çelik, Çinli çelik üreticileri için fazla sıvı demir arzını yönetmenin ve yurt içindeki zayıf çelik talebini dengelemenin önemli bir ihracat aracı haline geldi. Çin'in toplam çelik ihracatı Ağustos'ta 10,15 milyon ton ile Temmuz'a göre yüzde 0,3 artmıştı; yılın ilk sekiz ayındaki toplam ihracat ise 75,15 milyon ton ile yüzde 3 gerilemişti. Bu tablo, Çin'in bitmiş ürün ihracatında pek çok ülkenin getirdiği ticaret savunma önlemleriyle karşılaşırken ihracat karmasını yarı mamule kaydırdığını gösteriyor.\n\nTürkiye açısından gelişme özellikle önemli: Türkiye, elektrik ark ocaklı üretimin yanı sıra kütük ve slab alarak haddeleme yapan geniş bir üretici tabanına sahip. Ucuz Çin kütüğü ve slabı, bir yandan hammaddeye erişimi kolaylaştırarak haddehanelerin maliyetini düşürebilir; öte yandan kütük üreten Türk çelikhanelerinin ihracat ve iç piyasa fiyatlarını aşağı çekerek kapasite kullanımını baskılayabilir. Ayrıca Çin kaynaklı yarı mamulle üretilen nihai ürünler, AB ve ABD'de menşe ve 'erit-dök' (melt and pour) kuralları açısından ek uyum riski doğuruyor.",
+      "published_at": "2026-09-22T12:00:00+03:00",
+      "language": "tr",
+      "summary": "Çin'in kütük ve slab gibi yarı mamul çelik ihracatı 2026'nın ilk sekiz ayında yüzde 52,07 artışla 14,05 milyon tona ulaştı. Çinli üreticilerin fazla sıvı demiri yarı mamul olarak dışarı satması, kütük ve slab piyasalarında Türk haddehaneleri ve entegre üreticiler üzerinde doğrudan fiyat baskısı yaratıyor.",
+      "key_points": [
+        "Ocak-ağustos yarı mamul çelik ihracatı: 14,0455 milyon ton, yıllık yüzde 52,07 artış.",
+        "Ağustos ayında ihracat 1,926 milyon ton; aylık yüzde 23,76 düşüş, yıllık yüzde 9,17 artış.",
+        "Yarı mamul ihracatı, Çinli çelikhanelerin fazla sıvı demiri ve zayıf iç talebi yönetme aracı haline geldi.",
+        "Veriler Çin gümrük idaresi istatistiklerine dayanıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Çin Gümrük İdaresi",
+          "SteelOrbis"
+        ],
+        "kisi": [
+          "Eunice Ouyang"
+        ],
+        "sektor": [
+          "Demir-Çelik"
+        ]
+      },
+      "region": "ASYA",
+      "category": "emtia",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "cin",
+        "celik",
+        "cin-ihracati",
+        "kapasite-fazlasi",
+        "melt-and-pour",
+        "fiyat-rekabeti"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 82,
+        "keyword": 88,
+        "recency": 95,
+        "corroboration": 70,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "korea-herald",
+      "url": "https://www.koreaherald.com/article/10880060",
+      "title": "Güney Kore ihracatı Eylül'ün ilk 20 gününde yüzde 78 arttı: çip ihracatı yüzde 259 sıçradı",
+      "body": "Güney Kore'nin ihracatı Eylül'ün ilk 20 gününde geçen yılın aynı dönemine göre yüzde 78 arttı. Korea Herald'ın Yonhap'a dayandırdığı habere göre Kore Gümrük İdaresi verileri, 1-20 Eylül döneminde dış satışların 2025'teki 40 milyar dolardan 71,4 milyar dolara yükseldiğini gösteriyor.\n\nBu, 20 günlük dönem için şimdiye kadarki en yüksek değer; önceki rekor bu yılın Haziran ayında kaydedilen 61,7 milyar dolardı. İthalat yıllık yüzde 26,7 artışla 48,4 milyar dolara çıktı ve dönemin ticaret fazlası 23 milyar dolar oldu.\n\nÜrün bazında yarı iletken ihracatı yüzde 259 artışla 34,12 milyar dolara ulaştı. Petrol ürünleri ihracatı yüzde 47,8 artışla 4 milyar dolar, otomobil ihracatı yüzde 9,3 artışla 3,73 milyar dolar oldu. Çelik ürünleri ihracatı yüzde 8, gemi ihracatı yüzde 63 arttı. Mobil cihaz ihracatı ise yüzde 0,4 azalarak 1,24 milyar dolara geriledi.\n\nPazar bazında Çin'e ihracat iki katını aşarak 16,6 milyar dolara, ABD'ye ihracat yüzde 118 artışla 14,2 milyar dolara yükseldi. Yıl başından 20 Eylül'e kadar toplam ihracat 764,9 milyar dolar, ticaret fazlası 225,5 milyar dolar oldu.\n\nTürk sanayicisi açısından veriler iki mesaj içeriyor: Birincisi, yapay zekâ yatırımlarının sürüklediği yarı iletken süper döngüsü bellek ve işlemci tedarikinde fiyatları yukarı itiyor; elektronik, beyaz eşya ve otomotiv elektroniği üreticileri için bileşen maliyeti ve teslim süresi riski artıyor. İkincisi, Kore'nin çelik ve gemi ihracatındaki artış, bu sektörlerde Türk üreticilerin üçüncü pazarlardaki rekabet ortamını etkileyebilir.",
+      "published_at": "2026-09-21T03:19:49+03:00",
+      "language": "tr",
+      "summary": "Güney Kore'nin ihracatı 1-20 Eylül döneminde yıllık yüzde 78 artışla 71,4 milyar dolarla rekor kırdı; yarı iletken ihracatı yüzde 259 artışla 34,12 milyar dolara ulaştı. Yapay zekâ kaynaklı çip talebinin küresel elektronik tedarik zincirinde kapasiteyi zorlaması, elektronik bileşen ve bellek fiyatlarında artış riski anlamına geliyor.",
+      "key_points": [
+        "1-20 Eylül ihracatı 71,4 milyar dolar (geçen yıl 40 milyar); önceki 20 günlük rekor Haziran'daki 61,7 milyar dolardı.",
+        "İthalat yüzde 26,7 artışla 48,4 milyar dolar; ticaret fazlası 23 milyar dolar.",
+        "Çip ihracatı yüzde 259 artışla 34,12 milyar dolar; petrol ürünleri yüzde 47,8, otomobil yüzde 9,3, çelik yüzde 8, gemi yüzde 63 arttı.",
+        "Çin'e ihracat iki katını aşarak 16,6 milyar dolar, ABD'ye ihracat yüzde 118 artışla 14,2 milyar dolar oldu."
+      ],
+      "entities": {
+        "kurum": [
+          "Kore Gümrük İdaresi",
+          "Yonhap"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Yarı İletken",
+          "Otomotiv",
+          "Demir-Çelik",
+          "Gemi İnşa"
+        ]
+      },
+      "region": "ASYA",
+      "category": "dis-ticaret",
+      "sentiment": "NOTR",
+      "tags": [
+        "kore",
+        "ihracat",
+        "yari-iletken",
+        "yapay-zeka",
+        "ticaret-fazlasi",
+        "tedarik-zinciri"
+      ],
+      "importance_factors": {
+        "authority": 78,
+        "impact": 72,
+        "keyword": 78,
+        "recency": 88,
+        "corroboration": 85,
+        "reach": 68
+      }
+    },
+    {
+      "source_slug": "seoul-economic-daily",
+      "url": "https://en.sedaily.com/finance/2026/09/21/ai-driven-chip-supercycle-lifts-koreas-exports-to-record",
+      "title": "Yapay zekâ çip süper döngüsü Kore ihracatını 71,4 milyar dolarla rekora taşıdı",
+      "body": "Seoul Economic Daily'nin 21 Eylül 2026 tarihli haberine göre Güney Kore'nin ihracatı Eylül ortasına kadar geçen yılın aynı dönemine göre yaklaşık yüzde 80 artarak dönem rekoru kırdı. Yapay zekâ kaynaklı süper döngüyle yarı iletken ihracatı üç katından fazla artarken çiplerin toplam ihracattaki payı yeni bir tarihi zirveye ulaştı.\n\nKore Gümrük İdaresi verilerine göre ayın ilk 20 gününde ihracat 71,4 milyar dolar oldu; bu, geçen yılın aynı dönemine göre yüzde 78,3 veya 31,36 milyar dolar artış demek. Rakam dönem için en yüksek değer ve Haziran'ın ilk 20 gününde kaydedilen 61,7 milyar dolarlık önceki rekoru yaklaşık 10 milyar dolar aştı. Çalışma günü farkını dikkate alan günlük ortalama ihracat yüzde 89,8 artışla 2,43 milyar dolardan 4,61 milyar dolara çıktı; geçen yıla göre bir iş günü eksik olmasına rağmen sevkiyatlar neredeyse iki katına ulaştı.\n\nYarı iletken ihracatı yüzde 259,4 artışla 34,13 milyar dolar ile ayın ilk 20 günü için rekor kırdı. Çiplerin toplam ihracattaki payı yüzde 47,8'e yükselerek Ağustos'un ilk 20 gününde görülen yüzde 47,2'lik önceki zirveyi aştı. Petrol ürünleri ihracatı yüzde 47,8, gemi ihracatı yüzde 63,0 ve bilgisayar çevre birimleri yüzde 187,6 arttı. Binek otomobil ihracatı yüzde 9,3 artarak geçen ayın aynı dönemindeki yüzde 45,1'lik düşüşü tersine çevirdi. Kablosuz iletişim cihazları yüzde 0,4, otomotiv parçaları yüzde 6,3 ve hassas aletler yüzde 6,3 geriledi.\n\nÜlke bazında Çin'e ihracat yüzde 113,8 artışla 16,6 milyar dolara, ABD'ye ihracat yüzde 118,0 artışla 14,2 milyar dolara çıktı. Tayvan'a sevkiyatlar yüzde 128,5, Hong Kong'a yüzde 137,7 arttı. Çin, ABD ve Vietnam toplam ihracatın yüzde 51,4'ünü oluşturdu.\n\nTürk sanayicisi için bu tablo, küresel yarı iletken kapasitesinin yapay zekâ veri merkezlerine yönelmesiyle otomotiv ve beyaz eşya gibi sektörlerde kullanılan standart çiplerde tedarik sıkışıklığı ve fiyat artışı riskine karşı stok ve tedarikçi çeşitlendirme planlarının güncellenmesi gerektiğine işaret ediyor.",
+      "published_at": "2026-09-21T03:44:09+03:00",
+      "language": "tr",
+      "summary": "Kore Gümrük İdaresi verilerine göre Eylül'ün ilk 20 gününde ihracat yüzde 78,3 artışla rekor kırdı; çiplerin toplam ihracattaki payı yüzde 47,8 ile tarihi zirveye çıktı. Yarı iletken tedarikinin birkaç Asya ülkesinde yoğunlaşması, Türk elektronik ve otomotiv yan sanayisi için tedarik güvenliği ve bileşen fiyatı riskini öne çıkarıyor.",
+      "key_points": [
+        "1-20 Eylül ihracatı yüzde 78,3 (31,36 milyar dolar) artışla 71,4 milyar dolar; günlük ortalama ihracat yüzde 89,8 artışla 4,61 milyar dolar.",
+        "Çip ihracatı yüzde 259,4 artışla 34,13 milyar dolar; toplam ihracattaki payı yüzde 47,8 ile rekor.",
+        "Gemi ihracatı yüzde 63, bilgisayar çevre birimleri yüzde 187,6 arttı; otomotiv parçaları yüzde 6,3 geriledi.",
+        "Tayvan'a ihracat yüzde 128,5, Hong Kong'a yüzde 137,7 arttı; Çin, ABD ve Vietnam toplam ihracatın yüzde 51,4'ünü oluşturdu."
+      ],
+      "entities": {
+        "kurum": [
+          "Kore Gümrük İdaresi",
+          "Yonhap"
+        ],
+        "kisi": [
+          "Seo Min-woo"
+        ],
+        "sektor": [
+          "Yarı İletken",
+          "Elektronik",
+          "Gemi İnşa",
+          "Otomotiv"
+        ]
+      },
+      "region": "ASYA",
+      "category": "dis-ticaret",
+      "sentiment": "NOTR",
+      "tags": [
+        "kore",
+        "ihracat",
+        "yari-iletken",
+        "yapay-zeka",
+        "tedarik-zinciri",
+        "veri-merkezi"
+      ],
+      "importance_factors": {
+        "authority": 72,
+        "impact": 70,
+        "keyword": 78,
+        "recency": 88,
+        "corroboration": 85,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "indexbox",
+      "url": "https://www.indexbox.io/blog/japans-august-2026-trade-deficit-widens-as-exports-and-imports-both-climb/",
+      "title": "Japonya'nın Ağustos dış ticaret açığı 1,1 trilyon yene çıktı: ihracat yüzde 19,3, ithalat yüzde 28 arttı",
+      "body": "IndexBox'ın 16 Eylül 2026 tarihli analizine göre Japonya Ağustos 2026'da hem ihracatın hem de ithalatın yıllık bazda arttığı bir dönemde dış ticaret açığı verdi. İhracat 10.048.375 milyon yen, ithalat 11.153.982 milyon yen oldu ve açık 1.105.607 milyon yene ulaştı.\n\nİhracat geçen yılın Ağustos ayına göre yüzde 19,3, ithalat yüzde 28,0 arttı. Açık, geçen yılki 294.090 milyon yenlik açığa göre yüzde 275,9 genişledi.\n\nBölgesel dağılımda Asya, 5.752.863 milyon yen (yüzde 21,4 artış) ile en büyük ihracat pazarı olmayı sürdürdü. Çin'e ihracat yüzde 20,6 artışla 1.809.532 milyon yen, Çin'den ithalat yüzde 22,5 artışla 2.361.115 milyon yen oldu. Tayvan'a ihracat yüzde 39,7, Güney Kore'ye yüzde 33,0 arttı. ABD'ye ihracat yüzde 24,9 artışla 1.724.442 milyon yene, ABD'den ithalat yüzde 55,2 artışla 1.654.064 milyon yene çıktı. AB'ye ihracat yüzde 11,0 artışla 866.313 milyon yen, AB'den ithalat yüzde 20,4 artışla 1.096.861 milyon yen oldu.\n\nÜrün bazında elektrikli makine ihracatı yüzde 31,5 artışla 1.996.590 milyon yen; bunun içinde yarı iletkenler yüzde 52,3 artışla 894.120 milyon yen. Taşıt ekipmanı ihracatı yüzde 7,9, motorlu taşıtlar yüzde 16,5, makine yüzde 21,0 ve kimyasallar yüzde 18,5 arttı. İthalatta mineral yakıtlar yüzde 38,4 artışla 2.463.655 milyon yene ulaştı; petrol ithalatı yüzde 58,7, LNG ithalatı yüzde 29,7 arttı. Yarı iletken ithalatı yüzde 82,1, makine ithalatı yüzde 35,1 yükseldi.\n\nTürk sanayicisi açısından Japonya verisi, Asya'nın sanayi ekonomilerinde yapay zekâ kaynaklı elektronik talebinin güçlü seyrettiğini, ancak enerji ithalat faturasının ticaret dengelerini bozduğunu gösteriyor. Enerji ithalatçısı Türkiye'de de benzer maliyet baskısı, özellikle enerji yoğun sektörlerde fiyat rekabetini zorluyor.",
+      "published_at": "2026-09-16T03:00:35+03:00",
+      "language": "tr",
+      "summary": "Japonya'nın ihracatı Ağustos'ta yüzde 19,3, ithalatı ise enerji faturasının etkisiyle yüzde 28 artınca dış ticaret açığı 1,1 trilyon yene yükseldi. Petrol ithalatının yüzde 58,7 artması, İran savaşı kaynaklı enerji maliyet şokunun Asya sanayisine yansıdığını gösteriyor; benzer bir enerji maliyeti baskısı Türk sanayicisi için de geçerli.",
+      "key_points": [
+        "İhracat 10,05 trilyon yen (yüzde 19,3 artış), ithalat 11,15 trilyon yen (yüzde 28 artış); açık 1,106 trilyon yen.",
+        "Yarı iletken ihracatı yüzde 52,3, makine ihracatı yüzde 21, motorlu taşıt ihracatı yüzde 16,5 arttı.",
+        "Mineral yakıt ithalatı yüzde 38,4, petrol ithalatı yüzde 58,7, LNG ithalatı yüzde 29,7 arttı.",
+        "ABD'ye ihracat yüzde 24,9 artışla 1,72 trilyon yen; AB'ye ihracat yüzde 11 arttı, AB ile 230,5 milyar yen açık verildi."
+      ],
+      "entities": {
+        "kurum": [
+          "Japonya Maliye Bakanlığı",
+          "IndexBox"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Otomotiv",
+          "Makine",
+          "Yarı İletken",
+          "Enerji"
+        ]
+      },
+      "region": "ASYA",
+      "category": "dis-ticaret",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "japonya",
+        "dis-ticaret-acigi",
+        "enerji-ithalati",
+        "yari-iletken",
+        "ihracat"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 62,
+        "keyword": 70,
+        "recency": 85,
+        "corroboration": 75,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
+      "title": "Japonya Merkez Bankası faizi yüzde 1,25'e çıkardı: 1995'ten bu yana en yüksek seviye",
+      "body": "Japonya Merkez Bankası (BoJ), 18 Eylül 2026'da politika faizini 25 baz puan artırarak yüzde 1,25'e çıkardı. CNBC'nin haberine göre bu, 1995'ten bu yana en yüksek seviye.\n\nAdım, BoJ'nin Mart 2024'te başlattığı parasal normalleşme sürecinde faiz artırım döngüsünün hızlandığını gösteriyor: Son artırımın üzerinden üç ay geçmişken yeni adım atıldı; bir önceki aralık altı aydı. Karar 7-2 oyla alındı; yönetim kurulu üyeleri Toichiro Asada ve Ayano Sato artırıma karşı çıktı. İkili, Başbakan Sanae Takaichi tarafından bu yıl atanan ve 'reflasyoncu' olarak bilinen isimler. CNBC anketine katılan ekonomistlerin yaklaşık yüzde 90'ı 25 baz puanlık artırımı bekliyordu.\n\nBoJ açıklamasında adımın enflasyonun yüzde 2 hedefinin üzerine çıkma riskine dayandığını belirterek temel enflasyonu 'yüzde 2 civarında' istikrara kavuşturmayı amaçladığını vurguladı. Ülkede Ağustos manşet enflasyonu yüzde 1,9, çekirdek enflasyon ise Temmuz'daki yüzde 1,8'den yüzde 1,7'ye geriledi. Muhalefet şerhi koyan Asada, çekirdek enflasyonun yüzde 2'nin altında olduğunu ve ekonominin güçlü olmayabileceğini belirterek faizin sabit tutulmasını savundu.\n\nArtırım, tarihsel olarak zayıf yen ve Tokyo ile Washington'ın yeni desteklemek için koordineli müdahalede bulunduğu bir dönemde geldi. Kararın ardından yen yüzde 0,45 değer kaybederek dolar karşısında 156,64'ten işlem gördü; 10 yıllık Japon devlet tahvili getirisi 4,9 baz puan düşüşle yüzde 2,947'ye indi. ABD Hazine Bakanı Scott Bessent, G20 toplantısında BoJ Başkanı Kazuo Ueda'ya 'kararlı piyasa ve parasal adımlar' atması çağrısında bulunmuştu.\n\nTürk sanayicisi açısından Fed'in iki gün önceki artırımıyla birlikte BoJ kararı, küresel sermaye maliyetinin yükseldiği bir döneme işaret ediyor. Zayıf yen ise otomotiv, makine ve çelik gibi sektörlerde Japon ihracatçıların fiyat avantajını koruyor; bu, üçüncü pazarlarda Türk üreticilerle rekabeti etkileyebilir.",
+      "published_at": "2026-09-18T06:16:15+03:00",
+      "language": "tr",
+      "summary": "Japonya Merkez Bankası (BoJ) politika faizini 25 baz puan artırarak yüzde 1,25'e yükseltti; karar 7-2 oyla alındı. Fed ve BoJ'nin eş zamanlı sıkılaşması küresel finansman koşullarını daraltıyor; yen ve dolar kurlarındaki oynaklık, Japon rakiplerle yarışan otomotiv ve makine ihracatçıları için fiyat rekabetini etkiliyor.",
+      "key_points": [
+        "BoJ politika faizini 25 baz puan artırarak yüzde 1,25'e çıkardı; 1995'ten bu yana en yüksek düzey.",
+        "Karar 7-2 oyla alındı; Toichiro Asada ve Ayano Sato faizin sabit tutulmasını savundu.",
+        "Ağustos manşet enflasyon yüzde 1,9, çekirdek enflasyon yüzde 1,7; karar enflasyonun hedefi aşma riskine dayandırıldı.",
+        "Kararın ardından yen dolar karşısında 156,64'e zayıfladı, 10 yıllık JGB getirisi yüzde 2,947'ye geriledi."
+      ],
+      "entities": {
+        "kurum": [
+          "Japonya Merkez Bankası",
+          "ABD Hazine Bakanlığı"
+        ],
+        "kisi": [
+          "Kazuo Ueda",
+          "Toichiro Asada",
+          "Ayano Sato",
+          "Sanae Takaichi",
+          "Scott Bessent"
+        ],
+        "sektor": [
+          "Finans",
+          "Otomotiv",
+          "Makine"
+        ]
+      },
+      "region": "ASYA",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "boj",
+        "japonya",
+        "faiz-karari",
+        "para-politikasi",
+        "kur-riski",
+        "enflasyon"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 92,
+        "corroboration": 88,
+        "reach": 80
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/13/oil-price-iran-war-strait-hormuz-saudi-pipeline.html",
+      "title": "Suudi Arabistan'ın Hürmüz'ü baypas eden boru hattını kapatmasıyla Brent 110 dolara yaklaştı",
+      "body": "CNBC'nin haberine göre ham petrol fiyatları, Suudi Arabistan'ın Hürmüz Boğazı'nı baypas eden kritik boru hattını kapatmasının ardından yükseldi. Uluslararası gösterge Brent vadelileri gün içinde 110 dolara yaklaştıktan sonra yüzde 1 artışla varil başına 105,68 dolardan kapandı. ABD ham petrolü WTI yüzde 1,3 artışla 101,39 dolara yükseldi. Fiyatlar, ABD ile İran arasındaki çatışmaların tırmanmasıyla bir önceki hafta yaklaşık yüzde 9 artmıştı.\n\nIrak'tan fırlatılan dronlar Perşembe günü Doğu-Batı boru hattına hasar verdi ve Suudi hükümeti bu kritik ham petrol arterini kapatmak zorunda kaldı. Riyad hasarın boyutunu ve hattın ne kadar kapalı kalacağını açıklamadı. Rystad Energy analisti Janiv Shah, sınırlı fiyat tepkisinin piyasanın Suudi stoklarının kısa vadede ihracatı destekleyeceğini beklediğini gösterdiğini, ancak kesintinin 5-7 günlük stok tamponunu aşması halinde durumun hızla değişebileceğini söyledi. Lipow Oil Associates Başkanı Andy Lipow ise görüntülere bakılırsa onarımın aylar sürebileceğini belirtti.\n\nGünlük 7 milyon varil taşıma kapasitesine sahip boru hattı, Körfez'deki üretim bölgelerini Kızıldeniz kıyısındaki ihracat terminallerine bağlıyor ve İran savaşının yol açtığı arz kesintisini hafifletmede kilit rol oynuyordu. Kpler emtia araştırma direktörü Matt Smith, hattın bir ay kapalı kalması ve Yanbu'daki stokların tükenmesi halinde piyasanın 120 milyon varil ihracat kaybedeceğini hesapladı.\n\nHürmüz'deki durumu görüşmek üzere Umman'da yapılması planlanan İran-Körfez ülkeleri toplantısı saldırının ardından ertelendi. Husi militanların Bab-ül Mendeb Boğazı'ndaki stratejik Perim Adası'nı ele geçirdiği bildirildi; bu, Kızıldeniz üzerinden alternatif petrol akışlarını da tehdit ediyor.\n\nTürk sanayicisi açısından petrol fiyatlarının 100 doların üzerinde kalıcılaşması; akaryakıt, petrokimya hammaddesi, doğal gaz ve elektrik maliyetlerini artırıyor. Kızıldeniz ve Hürmüz'deki riskler, Asya ile ticarette navlun ve sigorta primlerini de yukarı itiyor.",
+      "published_at": "2026-09-14T01:08:14+03:00",
+      "language": "tr",
+      "summary": "Irak'tan fırlatılan dronların hasar verdiği Suudi Doğu-Batı boru hattının kapanmasıyla Brent petrol 105,68 dolardan kapandı, gün içinde 110 dolara yaklaştı. Günlük 7 milyon varil kapasiteli hattın uzun süre kapalı kalması, enerji yoğun Türk sanayisi için akaryakıt, doğal gaz ve navlun maliyetlerinde yeni bir artış dalgası riski taşıyor.",
+      "key_points": [
+        "Brent yüzde 1 artışla 105,68 dolardan, WTI yüzde 1,3 artışla 101,39 dolardan kapandı; fiyatlar önceki hafta yaklaşık yüzde 9 artmıştı.",
+        "Günlük 7 milyon varil kapasiteli Doğu-Batı boru hattı drone saldırısı sonrası kapatıldı.",
+        "Kpler: hattın bir ay kapalı kalması piyasadan 120 milyon varil ihracat kaybı demek.",
+        "Umman'da yapılacak İran-Körfez toplantısı ertelendi; Husiler Bab-ül Mendeb'deki Perim Adası'nı ele geçirdi."
+      ],
+      "entities": {
+        "kurum": [
+          "Saudi Aramco",
+          "Rystad Energy",
+          "Kpler",
+          "Lipow Oil Associates"
+        ],
+        "kisi": [
+          "Janiv Shah",
+          "Andy Lipow",
+          "Matt Smith",
+          "Badr Albusaidi"
+        ],
+        "sektor": [
+          "Enerji",
+          "Petrokimya",
+          "Lojistik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "petrol-fiyati",
+        "brent",
+        "hormuz-bogazi",
+        "suudi-arabistan",
+        "enerji-maliyeti",
+        "jeopolitik-risk",
+        "kizildeniz"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 90,
+        "keyword": 85,
+        "recency": 80,
+        "corroboration": 92,
+        "reach": 88
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/16/oil-prices-today-brent-wti-hormuz-iran-war.html",
+      "title": "ABD'nin Suudi boru hattının birkaç gün içinde açılacağını açıklamasıyla petrol fiyatları düştü",
+      "body": "CNBC'nin haberine göre ham petrol fiyatları, Trump yönetiminin Suudi Arabistan'ın hasar gören Doğu-Batı boru hattının birkaç gün içinde yeniden çalışacağı yönündeki güvencesiyle düştü. ABD WTI vadelileri yüzde 3,2 düşüşle varil başına 102,43 dolardan, uluslararası gösterge Brent yüzde 2,7 düşüşle 105,83 dolardan kapandı. Fiyatlar, Basra Körfezi'nde çatışmaların sertleşmesiyle bu ay yüzde 16'nın üzerinde yükselmişti.\n\nABD Enerji Bakanı Chris Wright, CNBC'ye yaptığı açıklamada boru hattı kesintisinin 'kısa ve geçici bir aksama' olduğunu ve süresinin 'günlerle ölçüleceğini' söyledi. Buna karşın bağımsız analistler, bir pompa istasyonunda ciddi hasar gösteren uydu görüntülerine dayanarak hattın haftalarca kapalı kalabileceği uyarısında bulundu.\n\nWright, Suudilerin hat kapalıyken ABD askeri desteğiyle Hürmüz Boğazı üzerinden daha fazla petrol ihraç etmek için 'hızlı adım' attığını belirtti. Kpler'den Matt Smith, toplam 8 milyon varil taşıma kapasiteli dört süper tankerin Suudi Arabistan'ın Körfez'deki Ras Tanura ve Juaymah limanlarında yükleme yaptığını, bunların muhtemelen Umman rotası üzerinden boğazdan geçiş çabasının parçası olacağını söyledi.\n\nRiyad, Irak'tan fırlatılan dronların verdiği hasar nedeniyle hattı geçen hafta sonunda kapatmış, hasar tespiti veya takvim açıklamamıştı. ABD ordusu Umman kıyısı boyunca Körfez ülkelerinin Hürmüz üzerinden ihracatını artırmasına imkân veren bir rota oluşturdu; ancak akışlar hâlâ savaş öncesi seviyelerin oldukça altında. İran tankerlere saldırılarını sürdürüyor; Birleşik Krallık Denizcilik Ticaret Operasyonları Merkezi'ne göre Cumartesi'den bu yana en az iki gemi saldırıya uğradı.\n\nTürk sanayicisi için petrol fiyatlarındaki bu sert dalgalanma, enerji tedarik sözleşmelerinde fiyat riskinin yönetilmesini ve akaryakıt, plastik hammaddesi ve navlun gibi kalemlerde maliyet planlamasının kısa aralıklarla güncellenmesini gerektiriyor.",
+      "published_at": "2026-09-16T07:14:32+03:00",
+      "language": "tr",
+      "summary": "ABD Enerji Bakanı Chris Wright'ın Suudi Doğu-Batı boru hattındaki kesintinin 'günlerle ölçüleceğini' söylemesinin ardından Brent yüzde 2,7 düşüşle 105,83 dolara geriledi. Ancak fiyatlar ay başından bu yana yüzde 16'nın üzerinde yüksek; enerji maliyetlerindeki oynaklık Türk sanayicisinin bütçe ve fiyatlama planlarını zorlamaya devam ediyor.",
+      "key_points": [
+        "WTI yüzde 3,2 düşüşle 102,43 dolardan, Brent yüzde 2,7 düşüşle 105,83 dolardan kapandı; fiyatlar ay başından bu yana yüzde 16'nın üzerinde arttı.",
+        "Enerji Bakanı Wright: kesinti 'kısa ve geçici', süresi 'günlerle ölçülecek'.",
+        "Bağımsız analistler uydu görüntülerine dayanarak hattın haftalarca kapalı kalabileceği uyarısında bulundu.",
+        "Suudi Arabistan ABD askeri desteğiyle Hürmüz üzerinden sevkiyatı artırdı; 8 milyon varil kapasiteli dört süper tanker yükleme yaptı."
+      ],
+      "entities": {
+        "kurum": [
+          "ABD Enerji Bakanlığı",
+          "Kpler",
+          "UKMTO"
+        ],
+        "kisi": [
+          "Chris Wright",
+          "Matt Smith"
+        ],
+        "sektor": [
+          "Enerji",
+          "Petrokimya",
+          "Lojistik"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "NOTR",
+      "tags": [
+        "petrol-fiyati",
+        "brent",
+        "hormuz-bogazi",
+        "suudi-arabistan",
+        "enerji-maliyeti",
+        "volatilite"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 82,
+        "keyword": 80,
+        "recency": 90,
+        "corroboration": 92,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "the-national",
+      "url": "https://www.thenationalnews.com/business/energy/2026/09/22/saudi-arabia-restarts-east-west-pipeline-for-crude-exports/",
+      "title": "Suudi Arabistan Doğu-Batı boru hattını yeniden çalıştırdı, Brent 100 doların altına indi",
+      "body": "The National'ın 22 Eylül 2026 tarihli haberine göre Suudi Arabistan, 13 Eylül'de drone saldırıları nedeniyle kapatmak zorunda kaldığı Doğu-Batı Boru Hattı'nı yeniden çalıştırdı. Reuters'ın kaynaklara dayandırdığı bilgiye göre hat düşük bir pompa hızıyla işliyor ve krallığın Kızıldeniz kıyısındaki Yanbu limanından ham petrol ihracatı Salı günü içinde yeniden başlayabilir.\n\nYaklaşık 1.200 km uzunluğundaki boru hattı, saldırıların pompa istasyonlarına zarar vermesinin ardından kapatılmış ve Yanbu'dan ham petrol yüklemeleri durmuştu. Suudi Arabistan bu süreçte ihracatını Hürmüz Boğazı üzerinden artırdı. Equiti Group baş piyasa stratejisti Noureldeen Al Hammoury, AB'nin Sentinel uydu verilerine dayanarak hafta sonunda Körfez'deki ihracat terminallerinden toplam 14 milyon varil kapasiteli yedi süper tankerin yüklendiğini ve bunun 'ihracatın Hürmüz'e geri kaydığının şimdiye kadarki en açık işareti' olduğunu söyledi.\n\nAl Hammoury, 'Körfez yüklemelerindeki bu artış, Brent'i son haftalarda ilk kez 100 doların altına itti' dedi. Brent, BAE saatiyle 14.19'da yüzde 2,52 düşüşle varil başına 97,81 dolardan işlem görürken, ABD ham petrolünü izleyen WTI 89,50 dolara geriledi.\n\nBoru hattı, İran savaşı sırasında Hürmüz Boğazı'ndaki kısıtlar nedeniyle Suudi ihracatının Kızıldeniz'e kaydırılmasında kritik rol oynuyordu. Hattın kademeli olarak tam kapasiteye dönmesi, piyasadaki arz kaygılarını hafifletebilir; ancak Hürmüz ve Bab-ül Mendeb'deki güvenlik riskleri sürüyor.\n\nTürk sanayicisi açısından Brent'in 100 doların altına inmesi, akaryakıt ve petrokimya girdilerinde kısa vadeli bir rahatlama anlamına geliyor. Bununla birlikte fiyatların jeopolitik gelişmelere aşırı duyarlı olması, enerji maliyet planlamasında temkinli senaryoların korunmasını gerektiriyor.",
+      "published_at": "2026-09-22T13:50:48+03:00",
+      "language": "tr",
+      "summary": "Suudi Arabistan, 13 Eylül'deki drone saldırıları sonrası kapattığı Doğu-Batı boru hattını düşük kapasiteyle yeniden çalıştırdı; Brent haftalar sonra ilk kez 100 doların altına inerek 97,81 dolara geriledi. Petrol fiyatlarındaki gevşeme, enerji ve hammadde maliyetleri yüksek seyreden Türk sanayicisi için kısmi bir rahatlama sinyali.",
+      "key_points": [
+        "1.200 km'lik boru hattı 13 Eylül'deki drone saldırıları sonrası kapatılmıştı; düşük pompa hızıyla yeniden devreye alındı.",
+        "Kızıldeniz'deki Yanbu limanından ham petrol ihracatının yeniden başlaması bekleniyor.",
+        "Hafta sonu Körfez terminallerinden 14 milyon varil kapasiteli yedi süper tanker yüklendi.",
+        "Brent yüzde 2,52 düşüşle 97,81 dolara, WTI 89,50 dolara geriledi."
+      ],
+      "entities": {
+        "kurum": [
+          "Saudi Aramco",
+          "Equiti Group",
+          "Reuters"
+        ],
+        "kisi": [
+          "Noureldeen Al Hammoury"
+        ],
+        "sektor": [
+          "Enerji",
+          "Petrokimya"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "enerji",
+      "sentiment": "POZITIF",
+      "tags": [
+        "petrol-fiyati",
+        "brent",
+        "suudi-arabistan",
+        "hormuz-bogazi",
+        "enerji-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 65,
+        "impact": 78,
+        "keyword": 80,
+        "recency": 95,
+        "corroboration": 90,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/23/trump-xi-summit-us-china-trade-rare-earth-soybean-plane.html",
+      "title": "Soya, uçak ve nadir toprak: ABD-Çin ticaret ateşkesinin kırılgan dengesi",
+      "body": "CNBC'nin 23 Eylül 2026 tarihli analizine göre ABD-Çin ticaret ateşkesinin üç temel taahhüdü olan soya alımları, Boeing uçak siparişleri ve nadir toprak elementlerine erişim, ABD Başkanı Donald Trump ile Çin Devlet Başkanı Xi Jinping'in Washington'daki zirvesi öncesinde belirgin biçimde farklı hızlarda ilerliyor.\n\nAnalistlere göre bu dengesiz tablo, ateşkesin ticaretin sürmesini sağlama ve yeni bir tırmanmayı caydırma yönündeki asgari işlevini yerine getirdiğini, ancak iki tarafın da stratejik kozlarından vazgeçmeye istekli olmadığını gösteriyor. CMC Markets Asya satış direktörü Eric Xiao, 'Ateşkes en az maliyetli olduğu yerde en hızlı ilerliyor' dedi. Macquarie'den Larry Hu ilişkiyi 'karşılıklı kırılganlık dengesi'ne dayanan bir yumuşama dönemi olarak tanımladı.\n\nReuters'ın aktardığına göre Çin, Eylül'de tek bir haftada ABD'li üreticilerden yaklaşık 1 milyon ton soya alarak 25 milyon tonluk yıllık taahhüdünün yaklaşık yarısına ulaştı. 200 Boeing uçağı taahhüdünde ise USTR Büyükelçisi Jamieson Greer yaklaşık 140 uçağın 'iyi durumda' olduğunu, 10 uçak için de sipariş yazıldığını söyledi; müşteri, model ve teslim takvimi açıklanmadı.\n\nNadir toprak taahhüdünün ölçülmesi daha güç, çünkü söz belirli bir hacim değil güvenilir erişim üzerine. Financial Times'ın aktardığı Çin gümrük verilerine göre Çin'in ABD'ye nadir toprak mıknatısı sevkiyatı Ağustos'ta 512 tona geriledi; bu Temmuz'a göre yüzde 20, geçen yıla göre yüzde 13 düşüş. Bazı Çinli tedarikçiler jeopolitik ve uyum kaygılarıyla ABD siparişlerini reddederken bazı Amerikan şirketleri ihracat lisansı için altı aydan fazla bekledi.\n\nMacquarie'den Hu, nadir toprakları Çin'in temel koz alanı olarak tanımlarken bunun karşısında ABD'nin ileri yarı iletkenlerdeki kaldıracını koydu. Xiao'ya göre ihracatın tamamen kesilmesi ABD ve müttefiklerini alternatif tedarik zincirlerini hızlandırmaya iteceği için 'Çin'in en güçlü kartı, tam olarak oynayamayacağı bir kart'.\n\nTürk sanayicisi açısından nadir toprak mıknatıslarına erişimdeki belirsizlik, elektrik motorları, elektrikli araç bileşenleri, rüzgâr türbinleri ve savunma sanayisi tedarik zincirlerinde stok ve alternatif tedarikçi planlamasını gündemde tutuyor.",
+      "published_at": "2026-09-23T11:03:49+03:00",
+      "language": "tr",
+      "summary": "Trump-Xi zirvesi öncesinde ABD-Çin ticaret ateşkesinin soya alımı, Boeing siparişleri ve nadir toprak tedariki taahhütlerinin farklı hızlarda ilerlediği görülüyor; Çin'in ABD'ye nadir toprak mıknatısı ihracatı Ağustos'ta yüzde 20 geriledi. Nadir toprak mıknatıslarına bağımlı Türk elektrik motoru, otomotiv ve savunma üreticileri için tedarik riski sürüyor.",
+      "key_points": [
+        "Çin 25 milyon tonluk yıllık soya taahhüdünün yaklaşık yarısını gerçekleştirdi.",
+        "200 Boeing uçağı taahhüdünde yaklaşık 140 uçak için süreç 'iyi durumda', 10 uçak için sipariş hazırlanıyor.",
+        "Çin'in ABD'ye nadir toprak mıknatısı ihracatı Ağustos'ta 512 tona geriledi (aylık yüzde 20, yıllık yüzde 13 düşüş).",
+        "Bazı ABD'li şirketler ihracat lisansı için altı aydan fazla bekliyor; nadir topraklar Çin'in ana koz alanı olarak görülüyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Boeing",
+          "CMC Markets",
+          "Macquarie",
+          "USTR",
+          "Financial Times"
+        ],
+        "kisi": [
+          "Donald Trump",
+          "Xi Jinping",
+          "Eric Xiao",
+          "Larry Hu",
+          "Jamieson Greer"
+        ],
+        "sektor": [
+          "Nadir Toprak",
+          "Havacılık",
+          "Tarım",
+          "Otomotiv"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "cin",
+        "abd",
+        "nadir-toprak",
+        "miknatis",
+        "ticaret-savasi",
+        "tedarik-zinciri",
+        "kritik-hammadde"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 78,
+        "keyword": 85,
+        "recency": 95,
+        "corroboration": 85,
+        "reach": 85
+      }
+    },
+    {
+      "source_slug": "cnbc",
+      "url": "https://www.cnbc.com/2026/09/24/china-confirms-first-ai-talks-with-us-have-taken-place-hints-at-trade-truce-extension.html",
+      "title": "Çin, ABD ile ilk yapay zekâ görüşmelerini doğruladı; ticaret ateşkesinin Ocak'a uzatılması gündemde",
+      "body": "CNBC'nin Pekin çıkışlı 24 Eylül 2026 tarihli haberine göre Çin Ticaret Bakanlığı, üst düzey ticaret müzakerecilerinin ABD ile yapay zekâ konusunda ilk görüşmeleri gerçekleştirdiğini doğruladı.\n\nBakanlık sözcüsü He Yadong gazetecilere yaptığı açıklamada iki tarafın ayrıca tarifelerin düşürülmesi ve geçen Ekim ayında Kuala Lumpur'da varılan ticaret düzenlemelerinin uzatılmasına yönelik planları da ele aldığını söyledi. He, Çin Başbakan Yardımcısı He Lifeng'in ABD Hazine Bakanı Scott Bessent ile bu hafta ABD Başkanı Donald Trump ile Çin Devlet Başkanı Xi Jinping arasındaki zirve öncesinde New York'ta yaptığı görüşmeye atıfta bulundu.\n\nXi ABD'ye ulaşırken Bessent, Çarşamba günü Fox News'e iki ülkenin ticaret ateşkesini Ocak ayına kadar uzatma konusunda anlaştığını söyledi. Ekim 2025'te varılan ateşkes, tarifeleri daha düşük seviyede tutuyor ve Çin'in yarı iletkenler, pek çok ev eşyası ve savunma ürünleri için kritik bileşen olan nadir toprak elementlerine yönelik ihracat kontrollerini sınırlıyordu. Bessent hafta başında tarafların bir yapay zekâ diyaloğu ve yapay zekâ risklerine ilişkin karşılıklı uyarı mekanizması kurulmasını görüştüğünü de belirtmişti.\n\nTrump Perşembe sabahı Truth Social'da liderlerin yapay zekâyı konuşacağını yazdı. Çin bakanlığı, tarafların yapıcı ve samimi görüşmeler yaptığını ve birçok konuda uzlaşıya vardığını açıkladı.\n\nTürk sanayicisi açısından ABD-Çin ateşkesinin uzatılması, iki ülke arasında yeniden yüksek tarifelere dönülmesi halinde Çin mallarının Avrupa ve Türkiye gibi üçüncü pazarlara yönelmesi (ticaret sapması) riskini kısa vadede azaltıyor. Nadir toprak ihracat kontrollerindeki erteleme de elektrik motoru ve elektronik üreticilerinin tedarik güvenliği açısından olumlu. Ancak ateşkesin yalnızca Ocak'a kadar uzatılması, belirsizliğin 2027 başında yeniden gündeme geleceğini gösteriyor.",
+      "published_at": "2026-09-24T12:40:14+03:00",
+      "language": "tr",
+      "summary": "Çin Ticaret Bakanlığı, Trump-Xi zirvesi öncesinde ABD ile ilk yapay zekâ görüşmelerinin yapıldığını ve tarife indirimleri ile Kuala Lumpur ticaret düzenlemelerinin uzatılmasının konuşulduğunu doğruladı; ABD Hazine Bakanı Bessent ateşkesin Ocak'a uzatıldığını söyledi. Ateşkesin sürmesi, ABD-Çin tarife savaşının Türk ihracatçıları için yarattığı ticaret sapması riskini kısa vadede sınırlıyor.",
+      "key_points": [
+        "Çin Ticaret Bakanlığı sözcüsü He Yadong ilk ABD-Çin yapay zekâ görüşmelerini doğruladı.",
+        "Taraflar tarife indirimlerini ve Ekim 2025'te Kuala Lumpur'da varılan düzenlemelerin uzatılmasını görüştü.",
+        "Bessent: ticaret ateşkesi Ocak'a uzatıldı; ateşkes tarifeleri düşük tutuyor ve Çin'in nadir toprak ihracat kontrollerini sınırlıyor.",
+        "Görüşmeler Başbakan Yardımcısı He Lifeng ile Bessent arasında New York'ta yapıldı."
+      ],
+      "entities": {
+        "kurum": [
+          "Çin Ticaret Bakanlığı",
+          "ABD Hazine Bakanlığı"
+        ],
+        "kisi": [
+          "He Yadong",
+          "He Lifeng",
+          "Scott Bessent",
+          "Donald Trump",
+          "Xi Jinping"
+        ],
+        "sektor": [
+          "Yapay Zekâ",
+          "Nadir Toprak",
+          "Genel Sanayi"
+        ]
+      },
+      "region": "KURESEL",
+      "category": "ticaret-politikasi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "cin",
+        "abd",
+        "ticaret-savasi",
+        "tarife",
+        "yapay-zeka",
+        "nadir-toprak",
+        "ihracat-kontrolu"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 98,
+        "corroboration": 88,
+        "reach": 88
+      }
+    },
+    {
+      "source_slug": "vision-times",
+      "url": "https://www.visiontimes.com/2026/09/24/taiwans-august-export-orders-top-100-billion-for-first-time-as-ai-demand-surges.html",
+      "title": "Tayvan'ın ihracat siparişleri Ağustos'ta ilk kez 100 milyar doları aştı: yıllık artış yüzde 71,4",
+      "body": "Vision Times'ın 24 Eylül 2026 tarihli haberine göre Tayvan'ın ihracat siparişleri, yapay zekâ ile ilgili teknolojilere yönelik güçlü küresel talep sayesinde Ağustos'ta ilk kez 100 milyar doları aştı.\n\nTayvan Ekonomi Bakanlığı verilerine göre Ağustos ihracat siparişleri, geçen yılın aynı ayına göre yüzde 71,4 artışla 102,96 milyar dolara ulaştı. Bu, üst üste 19. aylık artış ve yeni bir aylık rekor. Rakam, bakanlığın 97-99 milyar dolarlık tahmininin de üzerinde gerçekleşti. 2026'nın ilk sekiz ayında toplam siparişler yüzde 55 artışla 704,99 milyar dolar ile dönem rekoruna ulaştı.\n\nArtışın büyük bölümü teknoloji sektöründen geldi. Bilgi ve iletişim teknolojisi siparişleri yüzde 100,5 artışla 34,21 milyar dolara, elektronik ürün siparişleri yüzde 83,9 artışla rekor 45,75 milyar dolara yükseldi. Bakanlık artışı yapay zekâ ve bulut bilişimin genişlemesine, sunucu, ağ ekipmanı ve endüstriyel bilgisayar talebine bağladı. Bakanlık İstatistik Dairesi Başkanı Huang Wei-jie, ABD'li büyük bulut hizmet sağlayıcılarının özel amaçlı çip (ASIC) geliştirmesini artırmasının Tayvan'da tasarlanan çiplere siparişleri desteklediğini söyledi.\n\nBüyüme elektronikle sınırlı kalmadı: Makine siparişleri yüzde 28,3, ana metal siparişleri yüzde 26,8, kimyasal ürün siparişleri yüzde 15,4, plastik ve kauçuk siparişleri yüzde 6,7 arttı; optik ekipman siparişleri yüzde 5 geriledi. ABD, 42,13 milyar dolar (yüzde 88,9 artış) ile en büyük sipariş kaynağı oldu; ASEAN'dan gelen siparişler yüzde 70,5 artışla 18,35 milyar dolar, Çin ve Hong Kong'dan gelen siparişler yüzde 47,7 artışla 16,39 milyar dolar oldu.\n\nBakanlık Eylül için 106-109,1 milyar dolar sipariş bekliyor ve yıllık siparişlerin 1,1 trilyon dolara yaklaşabileceğini öngörüyor. Ancak jeopolitik gelişmeler ve uluslararası ticaret politikalarındaki belirsizliğin küresel büyüme için risk oluşturduğu uyarısında bulundu.\n\nTürk sanayicisi açısından veri, yapay zekâ yatırımlarının küresel elektronik tedarik zincirinin önceliklerini belirlediğini gösteriyor; standart çip ve bileşen alımı yapan Türk üreticilerin uzun vadeli tedarik anlaşmaları ve stok planlamasıyla fiyat ve teslim süresi riskine karşı önlem alması önem taşıyor.",
+      "published_at": "2026-09-24T23:24:01+03:00",
+      "language": "tr",
+      "summary": "Tayvan'ın ihracat siparişleri yapay zekâ sunucusu ve çip talebiyle Ağustos'ta yıllık yüzde 71,4 artışla 102,96 milyar dolara ulaşarak ilk kez 100 milyar doları aştı. Siparişlerin ABD kaynaklı veri merkezi yatırımlarında yoğunlaşması, Türk elektronik ve makine üreticileri için yarı iletken tedarikinde kapasite ve fiyat baskısının süreceğine işaret ediyor.",
+      "key_points": [
+        "Ağustos ihracat siparişleri 102,96 milyar dolar (yüzde 71,4 artış); üst üste 19. ay artış ve bakanlık tahmini olan 97-99 milyar doların üzerinde.",
+        "Elektronik ürün siparişleri yüzde 83,9 artışla 45,75 milyar dolar, bilgi-iletişim siparişleri yüzde 100,5 artışla 34,21 milyar dolar.",
+        "Makine siparişleri yüzde 28,3, ana metal siparişleri yüzde 26,8, kimya yüzde 15,4 arttı.",
+        "ABD kaynaklı siparişler yüzde 88,9 artışla 42,13 milyar dolar; Eylül için 106-109,1 milyar dolar bekleniyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Tayvan Ekonomi Bakanlığı",
+          "Central News Agency"
+        ],
+        "kisi": [
+          "Huang Wei-jie"
+        ],
+        "sektor": [
+          "Yarı İletken",
+          "Elektronik",
+          "Makine"
+        ]
+      },
+      "region": "ASYA",
+      "category": "dis-ticaret",
+      "sentiment": "NOTR",
+      "tags": [
+        "tayvan",
+        "ihracat-siparisi",
+        "yari-iletken",
+        "yapay-zeka",
+        "veri-merkezi",
+        "tedarik-zinciri"
+      ],
+      "importance_factors": {
+        "authority": 55,
+        "impact": 65,
+        "keyword": 78,
+        "recency": 98,
+        "corroboration": 80,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "tribune-india",
+      "url": "https://www.tribuneindia.com/news/economic-growth/indias-trade-deficit-narrows-to-9-41-bn-in-august-as-exports-surge-25",
+      "title": "Hindistan'ın ihracatı Ağustos'ta yüzde 25 arttı, dış ticaret açığı 9,41 milyar dolara geriledi",
+      "body": "ANI'nin The Tribune'da yayımlanan 15 Eylül 2026 tarihli haberine göre Hindistan'ın dış ticaret açığı Ağustos 2026'da, ihracatın ithalattan daha hızlı büyümesiyle geçen yılın aynı ayındaki 11,62 milyar dolardan 9,41 milyar dolara geriledi.\n\nResmî verilere göre mal ve hizmetleri kapsayan toplam ihracat Ağustos'ta yıllık yüzde 25,41 artışla tahmini 82,68 milyar dolara ulaştı; geçen yılın Ağustos ayında bu rakam 65,93 milyar dolardı. İthalat ise aynı dönemde 77,55 milyar dolardan 92,09 milyar dolara yükseldi. İhracattaki hızlı artış, toplam ithalat faturasındaki yükselişe rağmen açığın daralmasını sağladı.\n\nMal ihracatı Ağustos'ta dolar bazında yüzde 26,12 artışla geçen yılki 34,74 milyar dolardan 43,81 milyar dolara çıktı. Rupi bazında mal ihracatı yüzde 37,59 artışla 4,18 lakh crore rupiye ulaştı. Mal ticareti açığı 26,86 milyar dolar oldu; altın ithalatındaki sert düşüş açığın daralmasına katkı sağladı.\n\nIndia Shipping News'in aynı verilere dayanan haberine göre ihracat artışında mühendislik ürünleri, petrol ürünleri, kimyasallar ve tekstil öne çıktı; Çin, Singapur, Güney Afrika ve Malezya'ya ihracat güçlendi, BRICS ülkelerine ihracat yüzde 13,3 artışla 34,5 milyar dolara ulaştı. Altın ithalatı yüzde 57,7 düşüşle 2,3 milyar dolara geriledi. Hindistan Ticaret Müsteşarı Rajesh Agrawal, takip edilen 168 ürün grubunun 68'inde hem değer hem hacim artışı görüldüğünü belirtti.\n\nTürk sanayicisi açısından Hindistan'ın mühendislik ürünleri, kimya ve tekstil ihracatındaki güçlü ivme, AB, Orta Doğu ve Afrika pazarlarında rekabetin yoğunlaştığı anlamına geliyor. Bu tablo karşısında Türk ihracatçılarının bu pazarlarda maliyet, kalite ve teslim süresi avantajlarını korumaya odaklanması gerekiyor.",
+      "published_at": "2026-09-15T13:02:26+03:00",
+      "language": "tr",
+      "summary": "Hindistan'ın mal ve hizmet ihracatı Ağustos'ta yıllık yüzde 25,41 artışla 82,68 milyar dolara çıktı; mal ihracatı yüzde 26,12 artışla 43,81 milyar dolar oldu. Mühendislik ürünleri, kimya ve tekstilde hızla büyüyen Hindistan, üçüncü pazarlarda Türk sanayicisi için giderek güçlenen bir rakip konumunda.",
+      "key_points": [
+        "Toplam ihracat (mal ve hizmet) yüzde 25,41 artışla 82,68 milyar dolar; toplam ithalat 92,09 milyar dolar.",
+        "Toplam dış ticaret açığı 11,62 milyar dolardan 9,41 milyar dolara geriledi.",
+        "Mal ihracatı yüzde 26,12 artışla 43,81 milyar dolar; rupi bazında yüzde 37,59 artış.",
+        "Artış mühendislik ürünleri, petrol ürünleri, kimya ve tekstilde yoğunlaştı."
+      ],
+      "entities": {
+        "kurum": [
+          "Hindistan Ticaret ve Sanayi Bakanlığı",
+          "ANI"
+        ],
+        "kisi": [
+          "Rajesh Agrawal"
+        ],
+        "sektor": [
+          "Mühendislik Ürünleri",
+          "Kimya",
+          "Tekstil",
+          "Petrol Ürünleri"
+        ]
+      },
+      "region": "ASYA",
+      "category": "dis-ticaret",
+      "sentiment": "NOTR",
+      "tags": [
+        "hindistan",
+        "ihracat",
+        "dis-ticaret-acigi",
+        "tekstil",
+        "kimya",
+        "fiyat-rekabeti"
+      ],
+      "importance_factors": {
+        "authority": 55,
+        "impact": 60,
+        "keyword": 70,
+        "recency": 82,
+        "corroboration": 75,
+        "reach": 55
+      }
+    }
+  ]
+}

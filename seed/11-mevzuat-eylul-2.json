@@ -1,0 +1,1019 @@
+{
+  "collector": "mevzuat",
+  "collected_at": "2026-09-25T21:00:00+03:00",
+  "sources": [
+    {
+      "slug": "resmi-gazete",
+      "name": "T.C. Resmî Gazete",
+      "homepage_url": "https://www.resmigazete.gov.tr",
+      "source_type": "mevzuat",
+      "authority_weight": 100,
+      "country_code": "TR",
+      "language": "tr"
+    },
+    {
+      "slug": "alomaliye",
+      "name": "Alomaliye — Mevzuat ve Uygulama Portalı",
+      "homepage_url": "https://www.alomaliye.com",
+      "source_type": "mevzuat",
+      "authority_weight": 70,
+      "country_code": "TR",
+      "language": "tr"
+    },
+    {
+      "slug": "musavirler-kulubu",
+      "name": "Müşavirler Kulübü",
+      "homepage_url": "https://musavirlerkulubu.com.tr",
+      "source_type": "mevzuat",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr"
+    },
+    {
+      "slug": "cumhuriyet-ekonomi",
+      "name": "Cumhuriyet Ekonomi",
+      "homepage_url": "https://www.cumhuriyet.com.tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "TR",
+      "language": "tr"
+    },
+    {
+      "slug": "star-gazetesi",
+      "name": "Star Gazetesi Ekonomi",
+      "homepage_url": "https://www.star.com.tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TR",
+      "language": "tr"
+    },
+    {
+      "slug": "dha",
+      "name": "Demirören Haber Ajansı (DHA)",
+      "homepage_url": "https://www.dha.com.tr",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "TR",
+      "language": "tr"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260914-1.htm",
+      "title": "Resmî Gazete, 14 Eylül 2026, Sayı: 33370 — Türk Gıda Kodeksi Aroma Vericiler Yönetmeliği Yenilendi: 10 Aroma Verici 31 Aralık 2026'dan İtibaren Yasak",
+      "body": "14 Eylül 2026 tarihli ve 33370 sayılı Resmî Gazete'de Tarım ve Orman Bakanlığı tarafından hazırlanan Türk Gıda Kodeksi Aroma Vericiler ve Aroma Verme Özelliği Taşıyan Gıda Bileşenleri Yönetmeliği yayımlandı. Yönetmeliğin amacı; insan sağlığını ve tüketici menfaatlerini korumak, gıda ticaretinde adil uygulamaları sağlamak ve çevreyi gözetmek suretiyle, gıdalarda kullanılan aroma vericilerin, aroma verme özelliği taşıyan gıda bileşenlerinin ve bunların üretiminde kullanılan kaynak materyallerin kullanım koşullarını ve etiketleme esaslarını belirlemek olarak tanımlandı.\n\nKapsam: Yönetmelik; gıdalarda kullanılan veya kullanılması amaçlanan aroma vericileri, aroma verme özelliği taşıyan gıda bileşenlerini, bunları içeren gıdaları, aroma vericilerin kaynak materyallerini ve tütsü aroma vericilerinin üretim koşullarını kapsıyor. Sadece tatlı, ekşi veya tuzlu tada sahip maddeler, işlenmemiş gıdalar ile olduğu haliyle tüketilen taze, kurutulmuş veya dondurulmuş baharat, ot, çay ve infüzyon karışımları kapsam dışında. Düzenleme, 5996 sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanununun 23, 24 ve 26. maddelerine dayanıyor.\n\nYürürlükten kaldırılan mevzuat: 29/12/2011 tarihli ve 28157 üçüncü mükerrer sayılı Resmî Gazete'de yayımlanan önceki Türk Gıda Kodeksi Aroma Vericiler ve Aroma Verme Özelliği Taşıyan Gıda Bileşenleri Yönetmeliği yürürlükten kaldırıldı.\n\nGeçiş hükümleri: Yönetmelik kapsamında faaliyet gösteren gıda işletmecileri 31/12/2026 tarihine kadar yeni hükümlere uyum sağlamak zorunda. Bu tarihten önce piyasaya arz edilen ürünler ve bu ürünleri içeren gıdalar raf ömrü sonuna kadar piyasada bulunabilecek. İşletmeler uyum sağlayıncaya kadar kaldırılan yönetmelik hükümlerine uymaya devam edecek.\n\nYasaklanan aroma vericiler: FL 04.029, FL 05.100, FL 05.175, FL 05.222, FL 15.029, FL 15.030, FL 15.060, FL 15.119, FL 15.130 ve FL 15.131 numaralı aroma verici maddeler 31/12/2026 tarihinden itibaren piyasaya arz edilmeyecek ve gıdaların üretiminde kullanılmayacak. Bu aroma vericiler ile bunlardan herhangi birini içeren gıdaların ithalatına da 31/12/2026 tarihinden itibaren izin verilmeyecek. Bu tarihten önce piyasaya arz edilmiş söz konusu maddeleri içeren gıdalar raf ömrü süresince piyasada kalabilecek.\n\nYönetmelik yayımı tarihinde yürürlüğe girdi; hükümlerini Tarım ve Orman Bakanı yürütecek.",
+      "published_at": "2026-09-14T00:00:00+03:00",
+      "summary": "Gıda ve içecek üreticileri için aroma verici mevzuatı baştan yazıldı: işletmelerin 31 Aralık 2026'ya kadar yeni yönetmeliğe uyum sağlaması gerekiyor. On aroma verici maddenin aynı tarihten itibaren üretimde kullanımı ve ithalatı yasaklandığı için reçete, tedarikçi ve stok planlamasının şimdiden gözden geçirilmesi gerekiyor.",
+      "key_points": [
+        "Resmî Gazete, 14 Eylül 2026, Sayı: 33370 — Tarım ve Orman Bakanlığı yönetmeliği",
+        "2011 tarihli eski aroma vericiler yönetmeliği yürürlükten kaldırıldı",
+        "Uyum son tarihi: 31 Aralık 2026; öncesinde piyasaya arz edilen ürünler raf ömrü boyunca satılabilir",
+        "FL 04.029, FL 05.100, FL 15.029 dahil 10 aroma verici 31 Aralık 2026'dan itibaren üretimde ve ithalatta yasak"
+      ],
+      "entities": {
+        "kurum": [
+          "Tarım ve Orman Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Gıda",
+          "Gıda Sanayii"
+        ]
+      },
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "yonetmelik",
+        "gida-sanayi",
+        "gida-kodeksi",
+        "uyum-yukumlulugu",
+        "mevzuat-degisikligi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 60,
+        "keyword": 55,
+        "recency": 45,
+        "corroboration": 20,
+        "reach": 45
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "musavirler-kulubu",
+      "url": "https://musavirlerkulubu.com.tr/makale/gib-e-fatura-ve-e-arsiv-kilavuz-guncellemeleri-14-eylul-2026da-yururlukte",
+      "title": "GİB e-Fatura ve e-Arşiv Kılavuz Güncellemeleri: 14 Eylül 2026'da Yürürlükte",
+      "body": "Gelir İdaresi Başkanlığı (GİB) tarafından 27 Temmuz 2026 tarihinde duyurulan e-Fatura, e-Arşiv Fatura paketi ve UBL-TR (Kod Listeleri) Kılavuzu güncellemeleri, 14 Eylül 2026 tarihinde yürürlüğe girdi. Güncellemeler; vergi istisna kodları, nakliye ve lojistik süreçlerinde kullanılan plaka tipleri ile e-belge zarf yapılarına ilişkin önemli değişiklikler içeriyor.\n\nUBL-TR kod listelerindeki değişiklikler: UBL-TR Codlist içinde yer alan TaxExemptionReasonCodeType listesine, 2942 sayılı Kamulaştırma Kanunu kapsamında taşınmazların kamulaştırmayı yapan Devlet ve kamu tüzel kişilerine devrine ilişkin 233 numaralı yeni bir istisna kodu eklendi. Güncelleme kapsamında bazı istisna kodları TaxExemptionReasonCodeType listesinden çıkarılarak YatirimTesvikTaxExemptionReasonCodeType adı altında oluşturulan yeni bir kod listesine taşındı. Bu değişiklik, yatırım teşvik kapsamındaki istisna kodlarının ayrı bir yapı üzerinden yönetilmesini gerektiriyor.\n\nPlaka tipi güncellemesi: e-Fatura, e-Arşiv Fatura ve e-İrsaliye belgelerinin nakliye ve lojistik sürecinde kullanılan LicensePlateIDSchemeIDType alanına, mevcut DORSEPLAKA tipinin yanı sıra YABANCIDORSE, YABANCIPLAKA ve YABANCIDORSEPLAKA tipleri eklendi. Yeni tipler, yabancı plakalı araç ve dorselerin e-belgelerde doğru şekilde tanımlanabilmesine imkân tanıyor.\n\nŞematron kuralları: GİB şematron kurallarında ReservedAliases ve UserEnvelopeAliases yapıları güncellendi; e-Gider Pusulasını temsilen erreceipt etiketi eklendi. Bu düzenlemeler, e-belge zarf yapılarının ve takma ad (alias) tanımlarının güncel kurallara uygun oluşturulmasını gerektiriyor.\n\nMükelleflerin yapması gerekenler: e-belge düzenleyen mükelleflerin; 233 numaralı istisna kodunu sistemlerine tanımlaması, yatırım teşvik istisna kodlarını yeni YatirimTesvikTaxExemptionReasonCodeType listesi üzerinden kullanacak şekilde uyarlaması, nakliye bilgisi içeren e-Fatura, e-Arşiv Fatura ve e-İrsaliyelerde yeni plaka tiplerini desteklemesi, zarf yapılarındaki alias güncellemelerini uygulaması ve e-Gider Pusulası için erreceipt etiketini entegrasyonlarına dahil etmesi gerekiyor.",
+      "published_at": "2026-09-14T00:31:04+03:00",
+      "summary": "Yatırım teşvik belgesiyle istisnalı satış yapan ve yabancı plakalı araçla sevkiyat yapan sanayiciler için e-belge altyapısı 14 Eylül'den itibaren değişti. Teşvik istisna kodları ayrı bir listeye taşındığından ERP ve entegratör ayarları güncellenmezse e-Fatura ve e-İrsaliyeler reddedilebilir.",
+      "key_points": [
+        "GİB'in 27 Temmuz 2026'da duyurduğu kılavuz güncellemeleri 14 Eylül 2026'da yürürlüğe girdi",
+        "Yatırım teşvik istisna kodları YatirimTesvikTaxExemptionReasonCodeType adlı yeni listeye taşındı",
+        "Kamulaştırma devirleri için 233 numaralı yeni istisna kodu eklendi",
+        "e-İrsaliye ve faturalarda YABANCIPLAKA, YABANCIDORSE, YABANCIDORSEPLAKA tipleri tanımlandı"
+      ],
+      "entities": {
+        "kurum": [
+          "Gelir İdaresi Başkanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Lojistik",
+          "İmalat Sanayii"
+        ]
+      },
+      "category": "vergi",
+      "sentiment": "NOTR",
+      "tags": [
+        "e-fatura",
+        "e-belge",
+        "vergi",
+        "yatirim-tesvik-belgesi",
+        "vergi-istisnasi",
+        "uyum-yukumlulugu"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 55,
+        "keyword": 55,
+        "recency": 40,
+        "corroboration": 30,
+        "reach": 55
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/15/fason-imalatta-12-5-puan-indirim-sartlari/",
+      "title": "Fason İmalat Yaptıran Kurumların Üretim Kazançlarına Uygulanacak 12,5 Puan Kurumlar Vergisi İndiriminin Şartlarına Dikkat",
+      "body": "Alomaliye'de yayımlanan değerlendirmede SMMM ve E. Vergi Dairesi Müdür Yardımcısı Hamza Ertekin, fason üretim yaptıran imalatçıların 2027'den itibaren uygulanacak indirimli kurumlar vergisinden yararlanma şartlarına dikkat çekti.\n\nYazıda hatırlatıldığı üzere, 4 Haziran 2026 tarihli ve 33270 sayılı Resmî Gazete'de yayımlanan 7582 sayılı Bazı Kanunlarda Değişiklik Yapılmasına Dair Kanunun 8. maddesiyle 5520 sayılı Kurumlar Vergisi Kanununun 32. maddesinin sekizinci fıkrası değiştirildi. Buna göre 2027 ve izleyen vergilendirme dönemlerinde, sanayi sicil belgesini haiz ve fiilen üretim faaliyetiyle iştigal eden kurumların münhasıran üretim faaliyetlerinden elde ettikleri kazançlara ve zirai üretim kazançlarına uygulanacak kurumlar vergisi oranı 12,5 puan indirimle yüzde 12,5 olarak belirlendi.\n\n4 Temmuz 2026 tarihli ve 33300 sayılı Resmî Gazete'de yayımlanan Kurumlar Vergisi Genel Tebliği (Seri No: 1)'nde Değişiklik Yapılmasına Dair Tebliğ (Seri No: 26) ile 1.1.2027'den itibaren elde edilen kazançlara uygulanacak indirimli oranın usul ve esasları belirlendi. Aynı Tebliğde, 2026 vergilendirme döneminde üretim faaliyetinden kaynaklanan kazançlara yüzde 1 puanlık indirimli oran uygulamasına devam edileceği açıklandı.\n\nErtekin'e göre Tebliğ, üretimin belirli safhalarında dışarıdan fason hizmet alınarak üretilen ürünlerden elde edilen kazançlara da indirimli oranın uygulanabileceğini, ancak bunun bazı şartlara bağlı olduğunu öngörüyor. KDV Genel Uygulama Tebliğindeki ihraç kayıtlı satışlarda tecil-terkin uygulamasında imalatçı belgesindeki malların tamamının fason olarak imal ettirilmesi ihraç kaydıyla teslime engel sayılmazken, kurumlar vergisi indiriminde üretim konusu malların tamamının fasonla üretilmesine izin verilmiyor. İmalatın fasondan çok işletmenin kendi imalatından oluşması ve fiili kapasitenin aşılmaması gerekiyor.\n\nYazar, bu durumda imalatçı belgesindeki üretim konusu mallardan tamamı fason olarak imal ettirilenlerden elde edilecek kazançlara indirimli kurumlar vergisi oranının uygulanamayacağı sonucunun çıktığını belirtiyor; kanun maddesinde yer almayan ve Tebliğle getirilen kısıtlayıcı şartların uygulamada ihtilaflara yol açabileceğini değerlendiriyor.",
+      "published_at": "2026-09-15T04:35:35+03:00",
+      "summary": "2027'den itibaren sanayi sicil belgeli üreticilerin üretim kazançlarına yüzde 12,5 kurumlar vergisi uygulanacak; ancak fason üretimin payı bu avantajı kaybettirebilir. Üretimin tamamını fasona yaptıran ya da fiili kapasitesini aşan işletmeler indirimden yararlanamayabileceği için üretim modeli ve kapasite raporu şimdiden gözden geçirilmeli.",
+      "key_points": [
+        "7582 sayılı Kanunla 2027'den itibaren üretim kazançlarına kurumlar vergisi oranı yüzde 12,5 (12,5 puan indirim)",
+        "KVK Genel Tebliği Seri No: 26 (4 Temmuz 2026) usul ve esasları belirledi; 2026 için 1 puanlık indirim sürüyor",
+        "Fason üretimle elde edilen kazançlar ancak üretimin ağırlıkla işletmenin kendi imalatından oluşması halinde indirimden yararlanabiliyor",
+        "Tamamı fasonla üretilen ürünlerde ve fiili kapasitenin aşıldığı durumlarda indirimli oran uygulanamayabilir"
+      ],
+      "entities": {
+        "kurum": [
+          "Hazine ve Maliye Bakanlığı",
+          "Gelir İdaresi Başkanlığı"
+        ],
+        "kisi": [
+          "Hamza Ertekin"
+        ],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "category": "vergi",
+      "sentiment": "NOTR",
+      "tags": [
+        "kurumlar-vergisi",
+        "vergi-orani",
+        "fason-uretim",
+        "imalat-sanayi",
+        "teblig",
+        "uyum-yukumlulugu"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 75,
+        "keyword": 70,
+        "recency": 50,
+        "corroboration": 20,
+        "reach": 60
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260916-1.htm",
+      "title": "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — Hava Kalitesinin Korunması Amacıyla Katı Yakıtların Kontrolü Yönetmeliği: Petrol Koku Tahsisatı SEÖS Şartına Bağlandı",
+      "body": "16 Eylül 2026 tarihli ve 33372 sayılı Resmî Gazete'de Çevre, Şehircilik ve İklim Değişikliği Bakanlığının Hava Kalitesinin Korunması Amacıyla Katı Yakıtların Kontrolü Yönetmeliği yayımlandı. Yönetmelik; ithal ve yerli katı yakıtların özelliklerini, belgelendirilmesini, iç piyasaya arzını ve kullanılmasını düzenliyor. Katı yakıt tanımı; katı fosil yakıtları, katı biyoyakıtları, kalsine edilmiş ve kalsine edilmemiş petrol kokunu kapsıyor. Mangal ve nargile kömürü ile gıda pişirme/kurutmada doğrudan temaslı kullanılan yakıtlar kapsam dışında.\n\nİthalat: Ticaret Bakanlığının ithalat denetimi mevzuatı kapsamındaki katı yakıtların ithalatı yalnızca Bakanlıkça düzenlenen Katı Yakıt İthalatçısı Kayıt Belgesine sahip firmalarca yapılabilecek. Numune analizi, kullanım amacına göre EK-1'deki sınır değerleri sağlarsa il müdürlüğünce Çevre İthalat ve İhracat İzinleri Uygulaması üzerinden Uygunluk Belgesi düzenlenecek; Uygunluk Belgesi düzenlenmeyen katı yakıt ithal edilemeyecek. Yakıt özelliklerinde muafiyet tanınan tesislere kapasite raporundaki kömür miktarı kadar tahsisat verilecek; tesisin periyodik veya çevrimiçi ölçümlerde emisyon sınır değerlerini aşması halinde muafiyet iptal edilecek. Sanayi veya termik santral amaçlı ithal yakıtlar Bakanlık uygun bulursa başka tesislere devredilebilecek. Savunma sanayii, ısıl işlem gerçekleşmeyen üretimde girdi, filtrasyon ve laboratuvar amaçlı ithalatta muafiyet başvurusu yapılabilecek.\n\nPetrol koku: Petrol koku tahsisatı yalnızca Geçici Faaliyet Belgesi ve/veya Çevre İzin Belgesi olan, Sürekli Emisyon Ölçüm Sistemi (SEÖS) kapsamında ölçüm yapan ve sonuçları çevrimiçi izlenen tesislere yapılacak. Yerli petrol koku, ithal petrol koku tahsisatı bulunan ve Sanayi Kaynaklı Hava Kirliliğinin Kontrolü Yönetmeliğinde petrol koku sınır değerleri verilen tesislerde kullanılabilecek. İlk kez petrol koku kullanacak tesisler Petrol Koku Deneme Tahsisat Belgesi için başvuracak.\n\nYerli kömür kullanan tesisler: SEÖS kapsamında çevrimiçi izlenmeyen ve yerli kömür kullanan tesislerin çevre iznine esas emisyon ölçümünde kullandığı yakıttan numune alınacak ve kullanılabilecek en düşük kalite yakıt özellikleri Katı Yakıt Modülüne (KYM) kaydedilecek. Bu tesisler her parametre bazında en fazla yüzde 20 tolerans değerinde yakıt kullanabilecek; daha düşük kalitede yakıt kullanmak isteyenler en geç üç ay içinde yeni emisyon ölçümü yaptıracak. Sanayi amaçlı yakıtı satın alan tesis, teslim alımı takip eden 24 saat içinde miktar bilgisini KYM'ye girecek. Sanayi amaçlı katı biyoyakıt yalnızca otomatik yakıt beslemeli, sekonder hava beslemeli ve en az yüzde 95 verimli toz arıtım sistemi bulunan yakma sistemlerinde kullanılabilecek.\n\nGeçiş ve yürürlük: Daha önce alınmış Uygunluk İzin Belgesi, Satış İzin Belgesi, Dağıtıcı Kayıt Belgesi, Katı Yakıt Satıcısı Kayıt Belgesi ve Katı Yakıt İthalatçısı Kayıt Belgesi 30/6/2027 tarihine kadar geçerli. Isınma amaçlı yakıt torbalarının renk ve QR kod zorunluluğuna ilişkin 12. maddenin üçüncü fıkrası 1/6/2028'de, diğer hükümler yayımı tarihinde yürürlüğe girdi. Aynı sayıda yayımlanan değişiklikle Isınmadan Kaynaklanan Hava Kirliliğinin Kontrolü Yönetmeliğinin katı yakıtlara ilişkin maddeleri ve ekleri yürürlükten kaldırıldı; katı yakıtlar için artık yalnızca yeni yönetmelik uygulanacak.",
+      "published_at": "2026-09-16T00:00:00+03:00",
+      "summary": "Kömür, petrol koku ve biyoyakıt kullanan çimento, seramik, tekstil ve enerji tesisleri için yakıt tedariki yeni bir belge ve dijital izleme rejimine bağlandı. Petrol koku yalnızca SEÖS ile çevrimiçi izlenen tesislere tahsis edilecek; emisyon sınırını aşan tesisin muafiyeti iptal edilecek. Mevcut belgeler 30 Haziran 2027'ye kadar geçerli olduğundan belge yenileme takviminin planlanması gerekiyor.",
+      "key_points": [
+        "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — Çevre, Şehircilik ve İklim Değişikliği Bakanlığı yönetmeliği",
+        "Uygunluk Belgesi olmadan katı yakıt ithal edilemeyecek; ithalat yalnızca kayıtlı ithalatçılarca yapılacak",
+        "Petrol koku tahsisatı yalnızca SEÖS ile çevrimiçi izlenen, çevre izinli tesislere",
+        "Yerli kömür kullanan tesislere parametre bazında yüzde 20 tolerans; sanayi alımları 24 saat içinde KYM'ye girilecek",
+        "Mevcut belgeler 30 Haziran 2027'ye kadar geçerli; torba renk/QR kuralı 1 Haziran 2028'de yürürlüğe giriyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+          "Ticaret Bakanlığı",
+          "MAPEG",
+          "TÜRKAK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Çimento",
+          "Madencilik"
+        ]
+      },
+      "category": "cevre",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "resmi-gazete",
+        "yonetmelik",
+        "cevre-mevzuati",
+        "kati-yakit",
+        "petrol-koku",
+        "hava-kalitesi",
+        "ithalat",
+        "izin-belgesi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 80,
+        "keyword": 70,
+        "recency": 55,
+        "corroboration": 55,
+        "reach": 65
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260916-9.htm",
+      "title": "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — Tıbbi Cihazda Onaylanmış Kuruluşlara Fiyat Teklifi ve Süre Kuralları: Başvurudan Sözleşmeye En Fazla 30 Gün",
+      "body": "16 Eylül 2026 tarihli ve 33372 sayılı Resmî Gazete'de Türkiye İlaç ve Tıbbî Cihaz Kurumu (TİTCK) tarafından hazırlanan \"Tıbbi Cihaz Yönetmeliği ve İn Vitro Tanı Amaçlı Tıbbi Cihaz Yönetmeliği Kapsamında Atanan Onaylanmış Kuruluşlar Tarafından Yürütülen Uygunluk Değerlendirme Faaliyetlerine İlişkin Belirli Ortak Kalite Yönetimi ve Prosedür Gereklilikleri Hakkında Tebliğ\" yayımlandı. Tebliğ, 7223 sayılı Ürün Güvenliği ve Teknik Düzenlemeler Kanunu ile 2/6/2021 tarihli Tıbbi Cihaz ve İn Vitro Tanı Amaçlı Tıbbi Cihaz yönetmeliklerine dayanıyor.\n\nFiyat teklifi: Onaylanmış kuruluşlar, imalatçıya fiyat teklifini yalnızca sınırlı bir bilgi setiyle sunabileceklerini garanti eden dokümante prosedürlere sahip olacak. Bu bilgiler arasında imalatçının kimliği, 7297 sayılı Cumhurbaşkanı Kararıyla yürürlüğe konulan KOBİ Yönetmeliği kapsamında KOBİ olup olmadığının belirlenmesi için çalışan sayısı ve yıllık net satış hasılatı, kalite yönetim sistemi kapsamındaki tesislerin adres, çalışan ve vardiya bilgileri, tedarikçi ve yüklenici faaliyetleri, cihazların kullanım amacı ve risk sınıfı ile uygulanacak uygunluk değerlendirme prosedürleri yer alıyor. Değişiklik ve yeniden belgelendirme tekliflerinde, imalatçı bilgilerin değişmediğini teyit ederse aynı bilgiler yeniden istenmeyecek.\n\nFiyat teklifi asgari olarak; gözetim, denetim ve habersiz denetimlerin ortalama maliyeti dahil kalite yönetim sistemi ve teknik dokümantasyon değerlendirmesinin detaylı tahmini toplam maliyetini, olası ilave maliyetleri ve tahmini süreleri içerecek. Onaylanmış kuruluş, tahmini maliyetin yüzde 10'unu aşan her artış hakkında imalatçıyı gerekçesiyle önceden bilgilendirecek.\n\nSüreler: Onaylanmış kuruluş; cihaz çeşitliliği, spesifik teknolojiler, risk sınıfı ve yürütülecek faaliyetleri dikkate alarak imalatçıyla mümkün olan en kısa süre üzerinde mutabık kalacak. Başvurunun incelenmesi ve sözleşmenin imzalanması, eksiksiz başvurunun alındığı günden itibaren en fazla 30 gün içinde tamamlanacak.\n\nYürürlük ve geçiş: Tebliğin 7. maddesinin dördüncü fıkrası 1/1/2028'de, diğer hükümleri 25/2/2027'de yürürlüğe girecek. Fiyat teklifi ve sürelere ilişkin 4, 5 ve 6. maddeler 25/2/2027'den önce imzalanan sözleşmelere; 7. maddenin ilk üç fıkrası 25/5/2027'den önce imzalanan sözleşmelere; 8, 9 ve 10. maddeler ise 25/11/2027'den önce geçerliliği sona eren sertifikaların yeniden belgelendirmesine uygulanmayacak.",
+      "published_at": "2026-09-16T00:00:00+03:00",
+      "summary": "Tıbbi cihaz ve in vitro tanı cihazı üreten sanayiciler için CE/uygunluk belgelendirme süreci daha öngörülebilir hale geliyor: onaylanmış kuruluşlar ayrıntılı maliyet teklifi verecek, yüzde 10'u aşan artışları önceden bildirecek ve başvurudan sözleşmeye en fazla 30 gün sürecek. Hükümler 25 Şubat 2027'de yürürlüğe gireceği için yeni belgelendirme sözleşmelerinin zamanlaması önem kazanıyor.",
+      "key_points": [
+        "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — TİTCK tebliği",
+        "Onaylanmış kuruluşlar gözetim ve habersiz denetim dahil detaylı tahmini maliyet sunacak",
+        "Tahmini maliyetin yüzde 10'unu aşan artışlar gerekçesiyle önceden bildirilecek",
+        "Başvuru incelemesi ve sözleşme imzası en fazla 30 gün içinde tamamlanacak",
+        "Yürürlük: 25 Şubat 2027 (7. maddenin 4. fıkrası 1 Ocak 2028)"
+      ],
+      "entities": {
+        "kurum": [
+          "Türkiye İlaç ve Tıbbî Cihaz Kurumu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Tıbbi Cihaz",
+          "Sağlık"
+        ]
+      },
+      "category": "mevzuat",
+      "sentiment": "POZITIF",
+      "tags": [
+        "resmi-gazete",
+        "teblig",
+        "tibbi-cihaz",
+        "belgelendirme",
+        "sertifikasyon",
+        "kobi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 55,
+        "keyword": 50,
+        "recency": 55,
+        "corroboration": 15,
+        "reach": 35
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260916-6.htm",
+      "title": "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — Türk Gıda Kodeksi Et, Hazırlanmış Et Karışımları ve Et Ürünleri Tebliği (No: 2026/15): Uyum Süresi 31 Mart 2027",
+      "body": "16 Eylül 2026 tarihli ve 33372 sayılı Resmî Gazete'de Tarım ve Orman Bakanlığının Türk Gıda Kodeksi Et, Hazırlanmış Et Karışımları ve Et Ürünleri Tebliği (Tebliğ No: 2026/15) yayımlandı. Tebliğin amacı; çiğ et, kıyma, kanatlı kıyma, hazırlanmış et karışımları, mekanik ayrılmış kanatlı eti ve et ürünlerinin tekniğine uygun olarak üretilmesi, ambalajlanması ve piyasaya arzına ilişkin hususları belirlemek. Et özütleri, eritilmiş hayvansal yağ, donyağı, jelatin, kolajen, kan ve kan plazması, kemik suyu ve ilik yağı kapsam dışında. Tebliğ, 19/2/2020 tarihli Türk Gıda Kodeksi Yönetmeliğine dayanıyor.\n\nÜretim kuralları: Çiğ et, kıyma ve hazırlanmış et karışımlarının üretimi ve satışında farklı hayvan türlerine ait etler birbirinden ve diğer gıdalardan ayrı olarak üretilecek ve piyasaya arz edilecek. Kıymadan elde edilen köfte, burger gibi hazırlanmış kırmızı et karışımlarında toplam et proteini en az yüzde 10, yağ oranı kütlece en çok yüzde 25, tuz oranı kütlece en çok yüzde 2 olacak. Köfte, burger ve mergez üretiminde, teknolojisi gereği süt, yumurta ve bunlardan elde edilen proteinler hariç, protein hidrolizatı ve protein tozu gibi azot kaynakları ile nişasta, soya ve soya ürünleri gibi dolgu maddeleri kullanılamayacak.\n\nDöner: Tebliğ döneri yaprak döner, kıyma döner (en çok yüzde 90 kıyma, en az yüzde 10 yaprak et) ve yaprak-kıyma döner (en az yüzde 60 yaprak et, en çok yüzde 40 kıyma) olarak sınıflandırıyor. Dönerde yağ oranı kütlece en çok yüzde 25, tuz oranı en çok yüzde 2 olacak; fıstık, peynir gibi girdiler kullanılamayacak, yaprak dönerde diyet lifi bileşen olarak kullanılamayacak.\n\nYürürlükten kaldırılan mevzuat ve geçiş: 29/1/2019 tarihli ve 30670 sayılı Resmî Gazete'de yayımlanan Türk Gıda Kodeksi Et, Hazırlanmış Et Karışımları ve Et Ürünleri Tebliği (Tebliğ No: 2018/52) yürürlükten kaldırıldı. Tebliğin yayımından önce faaliyet gösteren gıda işletmecileri 31/3/2027 tarihine kadar yeni hükümlere uyum sağlamak zorunda; uyum sağlanıncaya kadar eski tebliğ hükümleri uygulanacak. 31/3/2027'den önce piyasaya arz edilen ürünler raf ömrü sonuna kadar piyasada bulunabilecek. Tebliğ yayımı tarihinde yürürlüğe girdi.",
+      "published_at": "2026-09-16T00:00:00+03:00",
+      "summary": "Et ve et ürünleri işleyen gıda sanayicileri için reçete ve etiket kuralları yenilendi; köfte, burger ve dönerde yağ, tuz ve protein sınırları ile dolgu maddesi yasakları netleştirildi. Mevcut işletmelerin 31 Mart 2027'ye kadar üretim süreçlerini ve ambalajlarını yeni tebliğe uyarlaması gerekiyor.",
+      "key_points": [
+        "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — Tebliğ No: 2026/15",
+        "2018/52 sayılı eski et ürünleri tebliği yürürlükten kaldırıldı",
+        "Köfte ve burgerde et proteini en az yüzde 10, yağ en çok yüzde 25, tuz en çok yüzde 2",
+        "Soya, nişasta gibi dolgu maddeleri ve protein tozu köfte/burger/mergezde yasak",
+        "Mevcut işletmeler için uyum son tarihi: 31 Mart 2027"
+      ],
+      "entities": {
+        "kurum": [
+          "Tarım ve Orman Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Gıda",
+          "Et Ürünleri"
+        ]
+      },
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "teblig",
+        "gida-sanayi",
+        "gida-kodeksi",
+        "uyum-yukumlulugu",
+        "standart"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 50,
+        "keyword": 45,
+        "recency": 55,
+        "corroboration": 15,
+        "reach": 40
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260916-10.pdf",
+      "title": "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — EPDK 14864 Sayılı Kurul Kararı: 2027 Yılı İletim Ek Ücreti Binde 7 Olarak Belirlendi",
+      "body": "16 Eylül 2026 tarihli ve 33372 sayılı Resmî Gazete'de Enerji Piyasası Düzenleme Kurulunun 10/09/2026 tarihli ve 14864 sayılı Kararı yayımlandı. Kurul, 10 Eylül 2026 tarihli toplantısında 2027 yılında uygulanacak iletim ek ücretine ilişkin kararı aldı.\n\nKararın 1. maddesinin (a) bendine göre, 4628 sayılı Enerji Piyasası Düzenleme Kurumunun Teşkilat ve Görevleri Hakkında Kanunun 5. maddesinin yedinci fıkrasının (h) bendi, 10. maddesinin birinci fıkrasının (A) bendinin (e) alt bendi ile Elektrik Piyasası Tarifeler Yönetmeliğinin 7. maddesinin üçüncü fıkrası uyarınca, 2027 yılında uygulanacak iletim ek ücreti Türkiye Elektrik İletim Anonim Şirketi'nin (TEİAŞ) iletim tarifesinin yüzde 0,7'si (binde yedi) olarak belirlendi.\n\nAynı maddenin (b) bendine göre iletim ek ücretleri TEİAŞ tarafından aylık olarak hesaplanacak ve takip eden ayın 25'ine kadar Enerji Piyasası Düzenleme Kurumu hesabına yatırılacak. Karar 1.1.2027 tarihinden geçerli olmak üzere yayımı tarihinde yürürlüğe girdi; kararı EPDK Başkanı yürütecek.\n\nİletim ek ücreti, iletim tarifesi içinde tahsil edilerek EPDK'nın finansmanına aktarılan bir kalem niteliğinde. Aynı nüshada ayrıca Isınmadan Kaynaklanan Hava Kirliliğinin Kontrolü Yönetmeliğinde katı yakıt hükümlerini yeni Katı Yakıtların Kontrolü Yönetmeliğine devreden değişiklik ile Tarım ve Orman Bakanlığının yaprak sigara kağıdı teknik düzenleme tebliği (No: 2026/21) de yayımlandı; sigara kağıdı tebliğine uyum için piyasaya arz uygunluk belgesi güncelleme başvurularının en geç 30/10/2026'ya kadar yapılması gerekiyor.",
+      "published_at": "2026-09-16T00:00:00+03:00",
+      "summary": "Elektrik tüketen sanayici için 2027 tarifesinin bir bileşeni netleşti: TEİAŞ iletim tarifesi üzerinden alınan iletim ek ücreti binde 7 olarak sabitlendi. Karar 2027 elektrik maliyet bütçelemesinde iletim kalemindeki bu payın değişmeyeceğini gösteriyor; asıl belirleyici olacak iletim tarifesinin kendisi ise EPDK'nın yıl sonu tarife kararlarıyla belli olacak.",
+      "key_points": [
+        "Resmî Gazete, 16 Eylül 2026, Sayı: 33372 — EPDK Karar No: 14864, Karar Tarihi: 10/09/2026",
+        "2027 iletim ek ücreti: TEİAŞ iletim tarifesinin yüzde 0,7'si (binde yedi)",
+        "Ücret TEİAŞ tarafından aylık hesaplanıp izleyen ayın 25'ine kadar EPDK hesabına yatırılacak",
+        "Karar 1 Ocak 2027'den itibaren geçerli"
+      ],
+      "entities": {
+        "kurum": [
+          "EPDK",
+          "TEİAŞ"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Elektrik"
+        ]
+      },
+      "category": "enerji",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "epdk",
+        "elektrik-tarifesi",
+        "enerji-maliyeti",
+        "enerji-piyasasi",
+        "iletim-ek-ucreti"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 45,
+        "keyword": 55,
+        "recency": 55,
+        "corroboration": 10,
+        "reach": 45
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260917-4.pdf",
+      "title": "Resmî Gazete, 17 Eylül 2026, Sayı: 33373 — TEİAŞ Genel Müdürlüğü Ana Statüsü Yürürlüğe Konuldu (Karar Sayısı: 11790): Kamu İhale Kanunu ve Sayıştay Denetimine Tabi",
+      "body": "17 Eylül 2026 tarihli ve 33373 sayılı Resmî Gazete'de 11790 sayılı Cumhurbaşkanı Kararı yayımlandı. 16 Eylül 2026 tarihli kararla, ekli \"Türkiye Elektrik İletim Anonim Şirketi Genel Müdürlüğü Ana Statüsü\" 233 sayılı Kamu İktisadi Teşebbüsleri Hakkında Kanun Hükmünde Kararnamenin 54. maddesi gereğince yürürlüğe konuldu.\n\nDayanak ve kapsam: Ana Statü; TEİAŞ'ın hukuki yapısını, amacını, faaliyet konularını, organlarını, teşkilat yapısını, müessese, bağlı ortaklık, iştirak ve işletmelerini ve bunlar arasındaki ilişkileri düzenliyor. Dayanakları arasında 233 ve 399 sayılı KHK'ler, 14/3/2013 tarihli ve 6446 sayılı Elektrik Piyasası Kanunu, 13/1/2011 tarihli ve 6102 sayılı Türk Ticaret Kanunu ile 2001/2026 sayılı Bakanlar Kurulu Kararı sayılıyor. Ana Statüde iletim, elektrik enerjisinin gerilim seviyesi 36 kV üzerindeki hatlar üzerinden naklini ifade ediyor.\n\nHukuki yapı: TEİAŞ tüzel kişiliğe sahip, faaliyetlerinde özerk ve sorumluluğu sermayesiyle sınırlı bir iktisadi devlet teşekkülü olarak tanımlandı; 6446 sayılı Kanun, 233 ve 399 sayılı KHK'ler ve Ana Statü hükümleri saklı kalmak kaydıyla özel hukuk hükümlerine tabi. TEİAŞ, 5018 sayılı Kamu Mali Yönetimi ve Kontrol Kanunu ile 2886 sayılı Devlet İhale Kanununa tabi değil; buna karşılık 4734 sayılı Kamu İhale Kanunu, 4735 sayılı Kamu İhale Sözleşmeleri Kanunu, 3346 sayılı Kanun ve 6085 sayılı Sayıştay Kanunu hükümlerine tabi. Şirketin merkezi Ankara, sermayesi 17.731.798.237,00 TL olup tamamı Devlete ait; ilgili bakanlığı Enerji ve Tabii Kaynaklar Bakanlığı.\n\nFaaliyet konuları: TEİAŞ'ın amaç ve faaliyet konuları arasında tüm iletim tesislerini devralmak ve iletim faaliyetlerini yürütmek; Kurulca belirlenen lisans bedellerini ödemek; kurulması öngörülen yeni iletim tesisleri ile yenileme kapsamındaki tesislerin etüt ve planlamasını yapmak, bunları yatırım programına aldırmak, yapmak, işletmek, bakım onarım ve rehabilitasyonunu yürütmek; iletim tesislerinin yapılması ve işletilmesiyle ilgili mal ve hizmetleri yurt içinde tedarik etmek veya yurt dışından ithal ya da ihraç etmek; iletim sisteminin tesis ve işletilmesiyle ilgili sistem ve makine teçhizat konularında Ar-Ge ve eğitim çalışmaları yapmak ve yurt içi imkânları göz önüne alarak gerektiğinde bunları imal etmek veya ettirmek yer alıyor.\n\nYönetim ve denetim: Genel Müdür, TEİAŞ'ı idare ve yargı mercileri ile üçüncü kişilere karşı temsil ediyor; Genel Müdürlük üst birimleri Genel Müdürün teklifi üzerine Yönetim Kurulu kararıyla kuruluyor. Müessese ve bağlı ortaklıkların yönetiminde 233 ve 399 sayılı KHK'ler ile 6102 sayılı Kanun uygulanacak. Plan, program, bütçe, yatırım ve finansman programları, fiyat ve tarifeler ile tasfiye ve denetime ilişkin mali hükümler de Ana Statüde yer alıyor.",
+      "published_at": "2026-09-17T00:00:00+03:00",
+      "summary": "Elektrik iletim şebekesini işleten TEİAŞ'ın yeni ana statüsü, şirketin iletim yatırımları ve teçhizat alımlarında 4734 sayılı Kamu İhale Kanununa ve Sayıştay denetimine tabi olduğunu teyit ediyor. Trafo, kablo, şalt ve iletim ekipmanı üreten sanayiciler için TEİAŞ alımlarının kamu ihale kurallarıyla yürütüleceği ve yurt içi imalat imkânlarının gözetileceği çerçeve netleşti.",
+      "key_points": [
+        "Resmî Gazete, 17 Eylül 2026, Sayı: 33373 — Cumhurbaşkanı Kararı, Karar Sayısı: 11790",
+        "TEİAŞ sermayesi 17.731.798.237 TL, tamamı Devlete ait; ilgili bakanlık Enerji ve Tabii Kaynaklar Bakanlığı",
+        "TEİAŞ 4734 sayılı Kamu İhale Kanunu, 4735 sayılı Kanun ve Sayıştay denetimine tabi; 5018 ve 2886'ya tabi değil",
+        "Faaliyetler: 36 kV üstü iletim tesislerinin planlanması, yapımı, işletilmesi, teçhizat tedariki ve Ar-Ge"
+      ],
+      "entities": {
+        "kurum": [
+          "TEİAŞ",
+          "Enerji ve Tabii Kaynaklar Bakanlığı",
+          "Cumhurbaşkanlığı"
+        ],
+        "kisi": [
+          "Recep Tayyip Erdoğan"
+        ],
+        "sektor": [
+          "Enerji",
+          "Elektrik Ekipmanları"
+        ]
+      },
+      "category": "enerji",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "cumhurbaskani-karari",
+        "enerji-iletim-hatti",
+        "kamu-alimlari",
+        "ihale",
+        "enerji"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 40,
+        "keyword": 45,
+        "recency": 60,
+        "corroboration": 30,
+        "reach": 40
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/17/kati-yakit-kontrolunde-yeni-donem/",
+      "title": "Katı Yakıt Kontrolünde Yeni Dönem: İthalattan Nihai Tüketiciye Dijital İzleme",
+      "body": "Alomaliye, 16 Eylül 2026 tarihli ve 33372 sayılı Resmî Gazete'de yayımlanan Hava Kalitesinin Korunması Amacıyla Katı Yakıtların Kontrolü Yönetmeliğini değerlendirdi. Yönetmelikle katı yakıtların ithalatından nihai tüketiciye ulaştırılmasına kadar olan süreçler dijital olarak izlenecek; uygunluk, satış, depolama, bildirim ve denetim şartları yeniden düzenlendi. Düzenleme katı fosil yakıtları, katı biyoyakıtları, kalsine edilmiş ve kalsine edilmemiş petrol kokunu kapsıyor.\n\nKatı Yakıt Modülü: Belgelendirme ve stok takip işlemleri, Bakanlığın Hava Emisyon Yönetim Portalı içindeki Katı Yakıt Modülü (KYM) üzerinden yürütülecek. İthalatçı, üretici, dağıtıcı ve satıcı kayıtları, uygunluk ve satış izinleri, üretim ve satış miktarlarının bildirilmesi, stokların izlenmesi, depo bilgileri, yakıtın gönderildiği tesislerin bildirilmesi ve petrol koku tahsisatlarının takibi bu modülde yapılacak.\n\nİthalat ve muafiyet: Katı yakıt ithalatı Katı Yakıt İthalatçısı Kayıt Belgesine sahip firmalarca yapılacak; Uygunluk Belgesi düzenlenmeyen katı yakıt ithal edilemeyecek. Savunma sanayii, ısıl işlem uygulanmayan üretim girdileri, filtrasyon, araştırma ve laboratuvar analizlerinde kullanılacak yakıtlar için muafiyet başvurusu yapılabilecek; uygun bulunanlara Katı Yakıt Muafiyet Yazısı verilecek. Muafiyet tanınan tesislerin emisyon sınırlarını aşması halinde muafiyet iptal edilecek.\n\nYerli üretim ve analiz: Yerli katı yakıt üreticileri KYM'ye kayıt yaptıracak; üretim sahasından çıkan yakıtın satış bilgileri 24 saat içinde sisteme girilecek. Petrol koku ve kömür için alt ısıl değer ve toplam kükürt, kömür için ayrıca kül analizleri akredite laboratuvarlarda yapılacak. Çevrimiçi izlenmeyen yerli kömür kullanıcıları her parametrede en fazla yüzde 20 tolerans değerinde yakıt kullanabilecek.\n\nBelge süreleri: Isınma veya sanayi amaçlı katı yakıtın piyasaya arzı için düzenlenen Uygunluk Belgesi en fazla bir yıl, yakıtın üretildiği tesiste kullanılması amacıyla düzenlenen Uygunluk Belgesi en fazla beş yıl geçerli olacak.\n\nPetrol koku: Tahsisat yalnızca çevre izinli, SEÖS kapsamında ölçüm yapan ve sonuçları çevrimiçi izlenen tesislere yapılacak. İlk kez kullanacak tesislere en fazla altı aylık Petrol Koku Deneme Tahsisat Belgesi verilebilecek; deneme tahsisatı alan tesisler çevre izinlerini petrol kokuna göre yenilemek zorunda olacak. İthal ve yerli petrol kokunun toplam tahsis miktarı tesis için belirlenen toplam yakıt miktarını aşamayacak. Emisyon sınırlarını aşan tesislerin tahsisat belgesi iptal edilecek. Yakıtlar yalnızca KYM'de tanımlı depolarda saklanacak; gümrüklü sahadaki yığınlarda GTİP, miktar, gemi adı ve Uygunluk Belgesi numarası gibi bilgileri içeren levhalar bulunacak.",
+      "published_at": "2026-09-17T14:21:33+03:00",
+      "summary": "Katı yakıt yönetmeliğinin uygulama ayrıntıları sanayici açısından netleşti: petrol koku deneme tahsisatı en fazla altı ay, piyasaya arz Uygunluk Belgesi en fazla bir yıl geçerli olacak ve tüm stok hareketleri KYM'ye işlenecek. Petrol koku ve ithal kömür kullanan tesislerin çevre izni, SEÖS ve depo kayıtlarını bu yeni rejime göre güncellemesi gerekiyor.",
+      "key_points": [
+        "Tüm katı yakıt süreçleri Hava Emisyon Yönetim Portalı'ndaki Katı Yakıt Modülü (KYM) üzerinden izlenecek",
+        "Piyasaya arz Uygunluk Belgesi en fazla 1 yıl, tesis içi kullanım belgesi en fazla 5 yıl geçerli",
+        "Petrol koku deneme tahsisatı en fazla 6 ay; ithal ve yerli toplam tahsis tesisin yakıt miktarını aşamaz",
+        "Emisyon sınırını aşan tesisin muafiyeti ve tahsisatı iptal edilecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Enerji",
+          "Çimento",
+          "Madencilik"
+        ]
+      },
+      "category": "cevre",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "kati-yakit",
+        "petrol-koku",
+        "cevre-mevzuati",
+        "hava-kalitesi",
+        "izlenebilirlik",
+        "yonetmelik"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 75,
+        "keyword": 65,
+        "recency": 60,
+        "corroboration": 55,
+        "reach": 55
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260919-3.pdf",
+      "title": "Resmî Gazete, 19 Eylül 2026, Sayı: 33375 — 2030 Ulusal Akıllı Şehirler Stratejisi ve Eylem Planı (Cumhurbaşkanlığı Genelgesi 2026/11)",
+      "body": "19 Eylül 2026 tarihli ve 33375 sayılı Resmî Gazete'de 2030 Ulusal Akıllı Şehirler Stratejisi ve Eylem Planı ile ilgili 2026/11 sayılı Cumhurbaşkanlığı Genelgesi yayımlandı. 18 Eylül 2026 tarihli ve Cumhurbaşkanı Recep Tayyip Erdoğan imzalı genelgede, şehirlerin dijital dönüşüm yolculuğuna bütüncül bir bakış açısı getirmek amacıyla hazırlanan \"2020-2023 Ulusal Akıllı Şehirler Stratejisi ve Eylem Planı\"nın uygulama döneminin sona erdiği hatırlatıldı.\n\nGenelgeye göre bilgi ve iletişim teknolojileri kentsel yaşamı, kültürü ve yaşam biçimlerini hızla dönüştürmeye devam ediyor. \"İleri toplum, ileri teknoloji, sürdürülebilir ve dirençli dünya\" vizyonuyla şehirlerde yeni teknoloji ve uygulamaların benimsenmesi ve vatandaşlara sunulan hizmetlerde bütünlüğün sağlanması amacıyla \"2030 Ulusal Akıllı Şehirler Stratejisi ve Eylem Planı\" hazırlandı. Plan; kaynakların etkin kullanıldığı, mükerrer yatırımların önlendiği, standartları belirlenmiş ve birlikte çalışabilir sistemlere dayanan bir şehircilik modeli hedefliyor.\n\nÇevre, Şehircilik ve İklim Değişikliği Bakanlığının koordinasyonunda; kamu kurumları, yerel yönetimler, üniversiteler, özel sektör ve sivil toplum kuruluşlarının katkılarıyla hazırlanan belge \"akillisehirler.csb.gov.tr\" adresinde yayımlanacak. Strateji ve Eylem Planı kapsamında, şehirlerden kırsal kesimlere kadar tüm alanlarda dijital güvenlik tedbirleri en üst düzeyde tutularak başta akıllı şehir dönüşümü, veri yönetimi ve yapay zekâ destekli karar alma mekanizmaları olmak üzere akıllı şehir hizmetlerinin entegrasyonuna ve dijital şehir yönetimine öncelik verilecek.\n\nGenelgede ilgili tüm kamu kurum ve kuruluşları ile yerel yönetimlerin gerekli güvenlik tedbirlerini alarak yenilikçi, çevreci ve kapsayıcı projeleri hayata geçirmelerinin büyük önem taşıdığı belirtildi; kurumların görev ve sorumluluklarını hassasiyetle yerine getirmeleri ve uygulama sürecinde ihtiyaç duyulacak her türlü desteği sağlamaları istendi.",
+      "published_at": "2026-09-19T00:00:00+03:00",
+      "summary": "Akıllı şehir yatırımlarında birlikte çalışabilirlik ve standart şartı, belediye ve kamu alımlarına sensör, haberleşme, enerji yönetimi ve yazılım çözümleri sunan sanayiciler için 2030'a kadar yeni bir talep çerçevesi oluşturuyor. Strateji ve eylem planının ayrıntıları akillisehirler.csb.gov.tr'de yayımlanacağından ihale ve standart gerekliliklerinin buradan takip edilmesi gerekiyor.",
+      "key_points": [
+        "Resmî Gazete, 19 Eylül 2026, Sayı: 33375 — Cumhurbaşkanlığı Genelgesi 2026/11",
+        "2020-2023 planının ardından 2030 Ulusal Akıllı Şehirler Stratejisi ve Eylem Planı hazırlandı",
+        "Öncelikler: veri yönetimi, yapay zekâ destekli karar alma, dijital güvenlik ve birlikte çalışabilir sistemler",
+        "Koordinasyon Çevre, Şehircilik ve İklim Değişikliği Bakanlığında; plan akillisehirler.csb.gov.tr'de yayımlanacak"
+      ],
+      "entities": {
+        "kurum": [
+          "Cumhurbaşkanlığı",
+          "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı"
+        ],
+        "kisi": [
+          "Recep Tayyip Erdoğan"
+        ],
+        "sektor": [
+          "Bilişim",
+          "Elektronik"
+        ]
+      },
+      "category": "teknoloji",
+      "sentiment": "POZITIF",
+      "tags": [
+        "resmi-gazete",
+        "akilli-sehir",
+        "dijital-donusum",
+        "yapay-zeka",
+        "kamu-alimlari",
+        "siber-guvenlik"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 35,
+        "keyword": 35,
+        "recency": 65,
+        "corroboration": 40,
+        "reach": 40
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/21/e-borcu-yoktur-uygulamasi/",
+      "title": "SGK: Banka Borç Sorgu Metoduna Göre Güncellenen e-Borcu Yoktur Sistemi 17 Eylül'den İtibaren Türkiye Genelinde",
+      "body": "Sosyal Güvenlik Kurumu Sigorta Primleri Genel Müdürlüğü, 15.09.2026 tarihli ve E-16235552-206.07-149588114 sayılı \"e-Borcu Yoktur Uygulaması\" konulu yazısını yayımladı. Alomaliye'de 21 Eylül 2026'da yer alan yazıya göre, 10.06.2026 tarihli ve 141176935 sayılı Genel Yazı ile Kurum personeli ve işverenlerin kullandığı e-Borcu Yoktur Sistemi ile Kamu İhale Kurumunun kullandığı EKAP borç sorgu web servisi üzerinden yapılacak borç sorgulamalarında, borç sorgu tarihi ile sorguya esas tarihin aynı gün olması koşuluyla banka borç sorgu metoduna göre sorgulama yapılmasına yönelik yazılım çalışmalarının tamamlandığı duyurulmuştu.\n\nAynı genel yazıda işyeri ve işverenlerle ilgili terk kayıtları, ödeme planlarına ilişkin bozma işlemleri, Kurum emanet hesaplarında bulunan tutarların gerekli inceleme sonrası varsa ilgilinin borçlarına mahsup edilmesi, teşvik değişikliği ve teşvik iptali işlemlerinin süresi içinde sonuçlandırılması gerektiği açıklanmıştı.\n\nYeni yazıya göre e-Borcu Yoktur uygulamasındaki güncellemeler 15.06.2026 itibarıyla Eskişehir'de, 29.06.2026 itibarıyla İzmir'de pilot uygulama olarak kullanıma açıldı; gelen talepler doğrultusunda geliştirme işlemleri 07.09.2026 itibarıyla tamamlandı.\n\nBu itibarla banka borç sorgu metoduna göre güncellenen e-Borcu Yoktur Sistemi ve Kamu İhale Kurumunun kullandığı EKAP borç sorgu web servisi, 17.09.2026 tarihi mesai bitimi itibarıyla Türkiye geneli kullanıma açıldı. SGK birimlerinden 10.06.2026 tarihli genel yazıda açıklanan hususların titizlikle yerine getirilmesi istendi. Yazı Sigorta Primleri Genel Müdürü Mürsel Baki imzasını taşıyor.",
+      "published_at": "2026-09-21T10:59:25+03:00",
+      "summary": "Kamu ihalelerine giren ve teşvik kullanan sanayiciler için SGK borç sorgusu 17 Eylül'den itibaren tüm Türkiye'de aynı gün, banka borç sorgu yöntemiyle yapılıyor. Terk kaydı, bozulan ödeme planı veya teşvik iptali gibi işlemler anında borç olarak görünebileceğinden, ihale ve teşvik başvurularından önce SGK kayıtlarının güncelliği kontrol edilmeli.",
+      "key_points": [
+        "SGK Sigorta Primleri Genel Müdürlüğü yazısı: 15.09.2026 tarih, E-16235552-206.07-149588114 sayı",
+        "Güncellenmiş e-Borcu Yoktur Sistemi ve EKAP borç sorgu servisi 17.09.2026 mesai bitiminden itibaren Türkiye genelinde",
+        "Sorgular, sorgu tarihi ile esas tarih aynı gün olmak koşuluyla banka borç sorgu metoduna göre yapılıyor",
+        "Eskişehir (15 Haziran) ve İzmir (29 Haziran) pilotlarının ardından geliştirmeler 7 Eylül'de tamamlandı"
+      ],
+      "entities": {
+        "kurum": [
+          "SGK",
+          "Kamu İhale Kurumu"
+        ],
+        "kisi": [
+          "Mürsel Baki"
+        ],
+        "sektor": []
+      },
+      "category": "duyuru",
+      "sentiment": "NOTR",
+      "tags": [
+        "sgk",
+        "ihale",
+        "kamu-alimlari",
+        "e-borcu-yoktur",
+        "prim-tesviki",
+        "dijitallesme"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 45,
+        "keyword": 40,
+        "recency": 75,
+        "corroboration": 15,
+        "reach": 50
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/21/ithalde-odenen-katma-deger-vergisi-ve-indirilmemesi/",
+      "title": "İthalde Ödenen KDV ve İndirilme(me)si: 7846 Sayılı Karar Kapsamında Gözetim ve Korunma Önlemi KDV'si, Bildirim ve YMM Raporu Yükümlülüğü",
+      "body": "Alomaliye'de YMM Doğan Çengel imzasıyla yayımlanan çalışma, ithalatta ödenen katma değer vergisinin indirimini ve 7846 sayılı Cumhurbaşkanı Kararı ile getirilen kısıtlamayı ele aldı.\n\nYazıda, 4458 sayılı Gümrük Kanununun 74. maddesine göre Türkiye Gümrük Bölgesine gelen eşyanın serbest dolaşıma girişinin ticaret politikası önlemlerinin uygulanması, ithal için öngörülen diğer işlemlerin tamamlanması ve kanunen ödenmesi gereken vergilerin tahsili ile mümkün olduğu hatırlatılıyor. Ticaret Bakanlığının İthalat Rehberinde ithalat, eşyanın ülke dışından vergileri ödenerek veya ödenmeksizin geçici veya kesin olarak yurda sokulması işlemi olarak tanımlanıyor.\n\nÇengel'e göre indirim konusu yapılamayacak KDV'nin tüm unsurlarının yalnızca KDV Kanununa bakılarak tespiti mümkün değil. 7846 sayılı Cumhurbaşkanı Kararı gereği ithalatta gözetim ve korunma önlemi kapsamında ödenen bir kısım KDV'nin indirim mekanizması dışına çıkarılması da bu kapsamda. 57 Seri No.lu KDV Genel Uygulama Tebliğinde uygulamaya ilişkin açıklamalar yapılarak mükelleflere belirlenen limitlere göre bildirim ya da YMM tasdik raporu yükümlülüğü getirildi. Yazar, verginin kanuniliği ilkesine uygunluğu tartışmalı olan bu düzenlemelerin kapsam, hesaplama, bildirim ve rapor konularında tereddütler barındırdığını, yükümlülüklerin yerine getirilmemesi halinde uygulanacak cezaların da tartışmalı olduğunu belirtiyor.\n\nÇalışmada ayrıca ithalat işlemlerinin KDV'ye tabiiyeti ve vergiyi doğuran olay ele alınıyor: KDVK'nın 1/2. maddesine göre her türlü mal ve hizmet ithalatı KDV'nin konusuna giriyor; 16/1-a maddesinde teslimleri vergiden istisna edilen mal ve hizmet ithali KDV'den istisna. KDVK'nın 10/ı maddesine göre ithalatta vergiyi doğuran olay, gümrük vergisi ödeme mükellefiyetinin başlaması, gümrük vergisine tabi olmayan işlemlerde ise gümrük beyannamesinin tescili anında meydana geliyor. KDVK'nın 8/1-b maddesine göre mal ve hizmet ithal edenler verginin mükellefi; Gümrük Kanununun 181/2. maddesine göre ithalatta yükümlü beyan sahibi, dolaylı temsilde ise hesabına beyanda bulunulan kişi de yükümlü. İthalde alınan KDV, Kanunun 43/4. maddesine göre ilgili gümrük idaresince tarh ediliyor.\n\nÇalışmanın devamında 2 No.lu KDV ile ödenenler hariç ithalde ödenen KDV'nin indirimi, bildirim ve rapor yükümlülüğü ile bu yükümlülüğün yerine getirilmemesi halinde uygulanması gereken cezalar ayrıntılı olarak inceleniyor.",
+      "published_at": "2026-09-21T13:30:44+03:00",
+      "summary": "Gözetim ve korunma önlemine tabi ürün ithal eden sanayicilerin ödediği KDV'nin bir kısmı 7846 sayılı Karar gereği indirilemiyor ve limitlere göre bildirim ya da YMM raporu gerektiriyor. Uzman değerlendirmesi, düzenlemenin kapsam ve ceza yönünden tartışmalı olduğuna dikkat çekiyor; ithalatçıların gözetimli GTİP'lerde KDV indirim hesaplarını ve bildirim takvimlerini gözden geçirmesi önerilir.",
+      "key_points": [
+        "7846 sayılı Cumhurbaşkanı Kararı: gözetim ve korunma önlemi kapsamında ödenen KDV'nin bir kısmı indirilemiyor",
+        "57 Seri No.lu KDV Genel Uygulama Tebliği ile limitlere göre bildirim veya YMM tasdik raporu zorunlu",
+        "Uzmana göre düzenleme verginin kanuniliği ilkesi yönünden tartışmalı; cezalar da belirsiz",
+        "İthalatta vergiyi doğuran olay gümrük vergisi mükellefiyetinin başlaması veya beyannamenin tescili"
+      ],
+      "entities": {
+        "kurum": [
+          "Hazine ve Maliye Bakanlığı",
+          "Ticaret Bakanlığı"
+        ],
+        "kisi": [
+          "Doğan Çengel"
+        ],
+        "sektor": [
+          "İmalat Sanayii",
+          "Dış Ticaret"
+        ]
+      },
+      "category": "vergi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "kdv",
+        "ithalat",
+        "korunma-onlemi",
+        "vergi",
+        "bildirim-yukumlulugu",
+        "gumruk"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 60,
+        "keyword": 60,
+        "recency": 75,
+        "corroboration": 15,
+        "reach": 50
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260923-5.htm",
+      "title": "Resmî Gazete, 23 Eylül 2026, Sayı: 33379 — Çin Menşeli Güneş Paneli Bağlantı Kutularına Yüzde 38,23 ile 57,11 Arasında Kesin Anti-Damping Önlemi (Tebliğ No: 2026/29)",
+      "body": "23 Eylül 2026 tarihli ve 33379 sayılı Resmî Gazete'de Ticaret Bakanlığının İthalatta Haksız Rekabetin Önlenmesine İlişkin Tebliğ (Tebliğ No: 2026/29) yayımlandı. Tebliğ, 25/5/2025 tarihli ve 32910 sayılı Resmî Gazete'de yayımlanan 2025/8 sayılı Tebliğ ile Çin Halk Cumhuriyeti menşeli, 8544.42.90.00.11 ve 8544.60.10.00.11 GTİP'leri altında sınıflandırılan \"güneş (solar) panelleri için bağlantı kutuları (junction box)\" ile 8544.60.90.00.00 GTİP'i altındaki \"diğer tür iletkenli olanlar\" eşya tanımlı güneş paneli bağlantı kutularına yönelik başlatılan damping soruşturmasının sonucunu yürürlüğe koyuyor. Soruşturma Ticaret Bakanlığı İthalat Genel Müdürlüğünce yürütüldü.\n\nKarar: Soruşturma sonucunda Çin menşeli söz konusu ürün ithalatının dampingli olduğu ve yerli üretim dalında zarara neden olduğu tespit edildi. İthalatta Haksız Rekabeti Değerlendirme Kurulunun kararı ve Ticaret Bakanının onayıyla, eşyanın Türkiye'ye ithalatında CIF bedelin yüzdesi olarak aşağıdaki oranlarda dampinge karşı kesin önlem uygulanmasına karar verildi: Zhejiang Twinsel Electronic Technology Co., Ltd., Risen (Ningbo) New Material Co., Ltd., QC Solar (Suzhou) Corporation, QC Solar (JiangSu) Corporation ve Zhejiang Chint Xinhui PV Co., Ltd. için yüzde 38,23; diğer Çinli firmalar için yüzde 57,11.\n\nUygulama: Gümrük idareleri, önleme konu eşyanın serbest dolaşıma giriş rejimi kapsamındaki ithalatında bu oranlarda kesin önlemleri tahsil edecek. Uygulamaya esas olan, yürürlükteki Türk Gümrük Tarife Cetvelindeki GTİP ile tebliğdeki eşya tanımı; tarife pozisyonunda yapılacak değişiklikler tebliğin uygulanmasına engel teşkil etmeyecek. İthalatta Haksız Rekabetin Önlenmesi Hakkında Yönetmeliğin 35. maddesi uyarınca önlemler yürürlük tarihinden itibaren 5 yıl sonra yürürlükten kalkacak; bu süre dolmadan nihai gözden geçirme soruşturması başlatılırsa önlemler soruşturma sonuçlanıncaya kadar yürürlükte kalacak. Tebliğ yayımı tarihinde yürürlüğe girdi. Soruşturmaya ilişkin bilgi ve bulguları içeren Bilgilendirme Raporu tebliğin ekinde yer alıyor.\n\nAynı sayıda yayımlanan bir diğer Ticaret Bakanlığı tebliğiyle de 22/5/2021 tarihli ve 31488 sayılı Resmî Gazete'de yayımlanan İthalatta Haksız Rekabetin Önlenmesine İlişkin Tebliğ (Tebliğ No: 2021/19)'in 4. maddesindeki tabloda yer alan \"Zhejiang Juba Welding Equipments Manufacturing Co., Ltd.\" ibaresi \"Zhejiang Juba Mechanical & Electrical Co., Ltd.\" olarak değiştirildi.",
+      "published_at": "2026-09-23T00:00:00+03:00",
+      "summary": "Yerli güneş paneli bileşeni üreticileri Çin'e karşı beş yıllık koruma kazandı; buna karşılık Çin'den bağlantı kutusu tedarik eden panel üreticileri ve GES yatırımcıları için ithalat maliyeti CIF bedelin yüzde 38,23'ü ile 57,11'i kadar artıyor. Tedarikçi firma adına göre oran değiştiğinden satın alma sözleşmelerinde üretici firmanın tebliğdeki unvanla eşleşmesi kritik.",
+      "key_points": [
+        "Resmî Gazete, 23 Eylül 2026, Sayı: 33379 — Ticaret Bakanlığı Tebliği No: 2026/29",
+        "Kapsam: GTİP 8544.42.90.00.11, 8544.60.10.00.11 ve 8544.60.90.00.00 — güneş paneli bağlantı kutuları (junction box)",
+        "Adı sayılan beş Çinli firmaya CIF bedelin yüzde 38,23'ü, diğer Çinli firmalara yüzde 57,11 kesin önlem",
+        "Önlem 5 yıl yürürlükte kalacak; 25 Mayıs 2025'te başlatılan soruşturma tamamlandı",
+        "Aynı sayıda 2021/19 sayılı tebliğde kaynak ekipmanı üreticisi firmanın unvanı güncellendi"
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "İthalat Genel Müdürlüğü",
+          "İthalatta Haksız Rekabeti Değerlendirme Kurulu"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Yenilenebilir Enerji",
+          "Elektrik-Elektronik"
+        ]
+      },
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "anti-damping",
+        "cin-rekabeti",
+        "gunes-enerjisi",
+        "yenilenebilir-enerji",
+        "gtip",
+        "ticaret-savunmasi"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 70,
+        "keyword": 80,
+        "recency": 85,
+        "corroboration": 60,
+        "reach": 55
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260923-2.htm",
+      "title": "Resmî Gazete, 23 Eylül 2026, Sayı: 33379 — MASAK Genel Tebliği (Sıra No: 34): BM Güvenlik Konseyi Listelerindeki Kişilerin İşlemleri İvedilikle Bildirilecek ve Ertelenecek",
+      "body": "23 Eylül 2026 tarihli ve 33379 sayılı Resmî Gazete'de Hazine ve Maliye Bakanlığının Mali Suçları Araştırma Kurulu Genel Tebliği (Sıra No: 34) yayımlandı. Tebliğin amacı, Birleşmiş Milletler Güvenlik Konseyinin 7/2/2013 tarihli ve 6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun ile 27/12/2020 tarihli ve 7262 sayılı Kitle İmha Silahlarının Yayılmasının Finansmanının Önlenmesine İlişkin Kanun kapsamına giren listeleme kararlarına konu kişi, kuruluş veya organizasyonlarla ilgili olarak 11/10/2006 tarihli ve 5549 sayılı Suç Gelirlerinin Aklanmasının Önlenmesi Hakkında Kanun çerçevesinde ivedilikle alınması gereken tedbirleri belirlemek.\n\nDayanak: Tebliğ, 2007/13012 sayılı Bakanlar Kurulu Kararıyla yürürlüğe konulan Suç Gelirlerinin Aklanmasının ve Terörün Finansmanının Önlenmesine Dair Tedbirler Hakkında Yönetmeliğin 27. maddesi ile 29/7/2016 tarihli ve 29785 sayılı Resmî Gazete'de yayımlanan Suç Gelirlerinin Aklanmasının ve Terörizmin Finansmanının Önlenmesi Kapsamında İşlemlerin Ertelenmesine Dair Yönetmeliğe dayanıyor.\n\nTanımlar: Tebliğde yükümlü, Tedbirler Hakkında Yönetmeliğin 4. maddesinde sayılanlar ile bunların şube, acente, temsilci ve ticari vekilleri ile benzeri bağlı birimleri olarak tanımlanıyor.\n\nKararların duyurulması: BM Güvenlik Konseyinin tebliğ kapsamına giren listeleme kararlarına ve bu kararlara konu kişi, kuruluş veya organizasyonlara ilişkin olarak Dışişleri Bakanlığı aracılığıyla iletilen bilgiler, Mali Suçları Araştırma Kurulu Başkanlığının internet sitesinde yayımlanarak duyurulacak.\n\nYükümlülerin tedbirleri: Yükümlüler, 5549 sayılı Kanunun 19/A maddesi başta olmak üzere ilgili mevzuat uyarınca, karara konu kişi, kuruluş veya organizasyonlarca gerçekleştirilmek istenen işlemlerin ivedilikle Başkanlığa bildirilmesine ve ertelenmesine yönelik gerekli tedbirleri almakla yükümlü olacak.\n\nTebliğ yayımı tarihinde yürürlüğe girdi; hükümlerini Hazine ve Maliye Bakanı yürütecek. Aynı sayıda Mali Suçları Araştırma Kurulu Genel Tebliği (Sıra No: 5)'nde değişiklik yapan Sıra No: 33 tebliğ de yayımlandı.",
+      "published_at": "2026-09-23T00:00:00+03:00",
+      "summary": "Bankalar ve diğer MASAK yükümlüleri, BM Güvenlik Konseyi listelerindeki kişi ve kuruluşların işlemlerini artık MASAK sitesindeki duyurulara göre ivedilikle bildirip erteleyecek. Yaptırım riski taşıyan ülkelerle ticaret yapan ihracatçı ve ithalatçı sanayiciler için ödeme ve akreditif işlemlerinin bankada bekletilme riski arttığından müşteri ve karşı taraf taraması güncel listelerle yapılmalı.",
+      "key_points": [
+        "Resmî Gazete, 23 Eylül 2026, Sayı: 33379 — MASAK Genel Tebliği Sıra No: 34",
+        "Kapsam: 6415 ve 7262 sayılı kanunlar kapsamındaki BM Güvenlik Konseyi listeleme kararları",
+        "Listeleme bilgileri MASAK Başkanlığının internet sitesinde duyurulacak",
+        "Yükümlüler listedeki kişilerin işlemlerini 5549 sayılı Kanunun 19/A maddesi uyarınca ivedilikle bildirip erteleyecek"
+      ],
+      "entities": {
+        "kurum": [
+          "MASAK",
+          "Hazine ve Maliye Bakanlığı",
+          "Dışişleri Bakanlığı",
+          "BM Güvenlik Konseyi"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacılık",
+          "Dış Ticaret"
+        ]
+      },
+      "category": "mevzuat",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "teblig",
+        "masak",
+        "yaptirim",
+        "malvarligi-dondurma",
+        "bildirim-yukumlulugu"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 35,
+        "keyword": 40,
+        "recency": 85,
+        "corroboration": 45,
+        "reach": 40
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "star-gazetesi",
+      "url": "https://www.star.com.tr/ekonomi/bakanliktan-baglanti-paneli-ithalatina-damping-onlemi-karar-resmi-gazetede-haber-2041971/",
+      "title": "Bakanlıktan bağlantı paneli ithalatına damping önlemi: Karar Resmi Gazete'de",
+      "body": "Çin menşeli güneş (solar) panelleri için bağlantı kutuları ithalatına yönelik dampinge karşı kesin önlem uygulanması kararlaştırıldı. Ticaret Bakanlığı tarafından hazırlanan İthalatta Haksız Rekabetin Önlenmesine İlişkin Tebliğ, Resmi Gazete'de yayımlanarak yürürlüğe girdi.\n\nTebliğle Çin menşeli \"güneş (solar) panelleri için bağlantı kutuları (junction box)\" ile \"diğer tür iletkenli olanlar\" tanımlı \"güneş panelleri için bağlantı kutuları\" ürününe yönelik başlatılan ve İthalat Genel Müdürlüğü tarafından yürütülen damping soruşturmasının tamamlanması neticesinde alınan karar yürürlüğe konuldu.\n\nSoruşturma sonucu, söz konusu ürün ithalatının dampingli olduğu ve yerli üretim dalında zarara yol açtığı tespit edildi. Ulaşılan tespitleri değerlendiren İthalatta Haksız Rekabeti Değerlendirme Kurulunun kararı ve Ticaret Bakanı'nın onayıyla söz konusu eşyanın Türkiye'ye ithalatında dampinge karşı kesin önlemlerin uygulanmasına karar verildi.\n\nBuna göre Çin'den yapılan güneş (solar) panelleri için bağlantı kutuları ithalatında Zhejiang Twinsel Electronic Technology Co., Ltd, Risen (Ningbo) New Material Co., Ltd, QC Solar (Suzhou) Corporation ve QC Solar (JiangSu) Corporation firmalarına CIF bedelinin yüzde 38,23'ü kadar dampinge karşı önlem uygulanacak.\n\nAyrıca \"diğer tür iletkenli olanlar\" için bu oranın Zhejiang Chint Xinhui PV Co., Ltd. şirketine yüzde 38,23 ve diğerlerine yüzde 57,11 olarak uygulanması kararlaştırıldı.",
+      "published_at": "2026-09-23T09:10:00+03:00",
+      "summary": "23 Eylül tarihli Resmî Gazete'deki anti-damping kararı basına da yansıdı: Çin menşeli güneş paneli bağlantı kutularına firmaya göre yüzde 38,23 ile 57,11 arasında kesin önlem uygulanacak. GES ve panel üretimi yapan sanayiciler için Çin kaynaklı bileşen maliyetleri artarken yerli bağlantı kutusu üreticilerinin pazar payı fırsatı büyüyor.",
+      "key_points": [
+        "Çin menşeli güneş paneli bağlantı kutularına dampinge karşı kesin önlem yürürlüğe girdi",
+        "Dört Çinli firma ile Zhejiang Chint Xinhui PV için oran CIF bedelin yüzde 38,23'ü",
+        "Diğer Çinli üreticiler için oran yüzde 57,11",
+        "Soruşturma dampingin yerli üretim dalında zarara yol açtığını tespit etti"
+      ],
+      "entities": {
+        "kurum": [
+          "Ticaret Bakanlığı",
+          "İthalat Genel Müdürlüğü"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Yenilenebilir Enerji"
+        ]
+      },
+      "category": "ticaret-politikasi",
+      "sentiment": "NOTR",
+      "tags": [
+        "anti-damping",
+        "cin-rekabeti",
+        "gunes-enerjisi",
+        "ithalat",
+        "ticaret-savunmasi"
+      ],
+      "importance_factors": {
+        "authority": 55,
+        "impact": 65,
+        "keyword": 75,
+        "recency": 85,
+        "corroboration": 60,
+        "reach": 55
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/23/vergi-istihbarat-sistemi-tum-vergi-mufettislerinin-kullanimina-acildi/",
+      "title": "Vergi İstihbarat Sistemi (VDK-VİS) Tüm Vergi Müfettişlerinin Kullanımına Açıldı",
+      "body": "Vergi denetiminde büyük veri, ilişki analizi ve yapay zekâyı bir araya getiren Vergi İstihbarat Sistemi (VDK-VİS), tüm Vergi Müfettişlerinin kullanımına açıldı. Vergi Denetim Kurulu Başkanlığı, vergi denetiminde dijital dönüşüm çalışmalarına yeni bir uygulama ekledi.\n\nAçıklamada, ekonomik faaliyetlerin giderek daha karmaşık ve birbiriyle bağlantılı hale gelmesinin vergi denetiminde yalnızca tekil işlemlerin değil, işlemlerin arkasındaki kişi, şirket ve ekonomik ilişkilerin de bütüncül olarak değerlendirilmesini gerekli kıldığı belirtildi. Bu anlayışla geliştirilen VDK-VİS; büyük veri analitiğini, graf veritabanı teknolojilerini ve yapay zekâ destekli analiz yöntemlerini aynı platformda buluşturuyor.\n\nSistem; mükellefler, kişiler, şirketler ve işlemler arasındaki bağlantıları ilişki ağları üzerinde bir araya getirerek müfettişlerin incelenen olayın yalnızca görünen bölümünü değil, ilişkili ekonomik yapının bütününü değerlendirebilmesine imkân sağlıyor. VDK-VİS ile daha etkin analiz edilmesi hedeflenen alanlar; karmaşık şirket ve ortaklık yapıları, zincirleme işlem ilişkileri, döngüsel ticaret hareketleri, sahte belge organizasyonları ve birden fazla kişi veya şirket üzerinden oluşturulan ekonomik örüntüler olarak sıralandı.\n\nAğ analizi, örüntü tanıma, benzerlik eşleştirme ve risk yayılım analizi gibi yöntemlerin kullanıldığı sistemde, yapay zekâ kabiliyetlerinin kademeli olarak geliştirilmesiyle geçmişte tespit edilen riskli yapıların karakteristiklerinin yeni işlem ve ilişki ağları üzerinde aranabilmesi amaçlanıyor.\n\nVergi İstihbarat Sistemi aynı zamanda KURGAN Risk Analiz Sistemi ile bütünleşik çalışıyor. KURGAN'ın işlem bazında ortaya koyduğu riskler VİS'te ilişki ağları içinde ele alınırken, VİS'in ortaya çıkardığı bağlantı ve örüntüler de risk analiz süreçlerine yeni girdiler sağlıyor. Böylece işlem riski ile ilişki riski aynı analitik ekosistem içinde değerlendirilebiliyor. Müfettişler, incelemelerde bir mükellefin yalnızca kendi mali verilerini değil, içinde bulunduğu ekonomik ilişki ağını da değerlendirebilecek; bağlantıları, işlem zincirlerini ve risk örüntülerini tek bir analiz ortamında inceleyebilecek.",
+      "published_at": "2026-09-23T18:52:45+03:00",
+      "summary": "Vergi incelemelerinde artık yalnızca şirketin kendi kayıtları değil, tedarikçi ve müşteri ağı da KURGAN ile bütünleşik yapay zekâ destekli sistemle taranacak. Sahte belge düzenleyen bir tedarikçiyle çalışmak, alıcı sanayici için de inceleme riskini artırdığından tedarikçi doğrulama ve belge güvenliği süreçlerinin güçlendirilmesi gerekiyor.",
+      "key_points": [
+        "VDK-VİS tüm Vergi Müfettişlerinin kullanımına açıldı",
+        "Büyük veri, graf veritabanı ve yapay zekâ destekli ilişki ağı analizi tek platformda",
+        "Hedef alanlar: sahte belge organizasyonları, döngüsel ticaret, zincirleme işlemler, karmaşık ortaklık yapıları",
+        "Sistem KURGAN Risk Analiz Sistemi ile bütünleşik çalışıyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Vergi Denetim Kurulu",
+          "Hazine ve Maliye Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "category": "vergi",
+      "sentiment": "NOTR",
+      "tags": [
+        "vergi-denetimi",
+        "yapay-zeka",
+        "veri-analizi",
+        "kurgan",
+        "tedarikci-denetimi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 50,
+        "keyword": 45,
+        "recency": 85,
+        "corroboration": 15,
+        "reach": 55
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260924-1.htm",
+      "title": "Resmî Gazete, 24 Eylül 2026, Sayı: 33380 — Türkiye Yeşil Taksonomisi Yönetmeliği Yayımlandı: Reel Sektöre Gönüllü Raporlama, Finans Sektörüne 2029'dan İtibaren Zorunluluk",
+      "body": "24 Eylül 2026 tarihli ve 33380 sayılı Resmî Gazete'de Çevre, Şehircilik ve İklim Değişikliği Bakanlığının Türkiye Yeşil Taksonomisi Yönetmeliği yayımlandı. Yönetmeliğin amacı; sürdürülebilir kalkınma hedefleriyle uyumlu ekonomik faaliyetlerin desteklenmesi, sürdürülebilir yatırımlara finansman akışının teşvik edilmesi ve piyasada yeşile boyamanın önlenmesi amacıyla Türkiye Yeşil Taksonomisinin usul ve esaslarını düzenlemek. Yönetmelik, 7552 sayılı İklim Kanununun 8. maddesine dayanıyor.\n\nÇevresel hedefler ve uyum şartları: Yönetmelikte altı çevresel hedef belirlendi: sera gazı emisyonlarının azaltımı, iklim değişikliğine uyum, su ve deniz kaynaklarının sürdürülebilir kullanımı ve korunması, döngüsel ekonomiye geçiş, kirliliğin önlenmesi ve kontrolü, biyoçeşitliliğin ve ekosistemlerin korunması ile restorasyonu. Ek-1'deki uygun bir ekonomik faaliyetin \"uyumlu\" sayılması için bu hedeflerden en az birine önemli ölçüde katkı sağlaması, başka hiçbir hedefe önemli zarar vermemesi ve asgari sosyal koruma önlemlerine (ILO temel sözleşmeleri, OECD Çok Uluslu Şirketler Rehberi, BM İş Dünyası ve İnsan Hakları Rehber İlkeleri ve ulusal çalışma mevzuatı) uyması gerekiyor.\n\nTeknik tarama kriterleri: Kriterler İklim Değişikliği Başkanlığınca belirlenecek ve resmî internet sayfasında yayımlanacak; güncellemeler her yılın 15 Aralık tarihine kadar ilan edilecek ve izleyen yıldan itibaren geçerli olacak. Yönetmeliğe göre katı fosil yakıtların kullanıldığı üretim faaliyetleri çevresel açıdan sürdürülebilir ekonomik faaliyet olarak değerlendirilmeyecek.\n\nAnahtar performans göstergeleri ve raporlama: Göstergeler arasında taksonomiye uygun veya uyumlu ürün ve hizmetlerden elde edilen hasılat, yatırım harcamaları ve işletme giderlerinin oranları yer alıyor. Ek-1'deki faaliyetlerden en az birini yürüten kurum, kuruluş ve işletmeler Başkanlığın şablonlarına göre raporlama yapabilecek (gönüllü). Aracı kurumlar, yatırım ortaklıkları, portföy yönetim şirketleri, bankalar, sigorta, reasürans ve emeklilik şirketleri ise raporlama yapmak zorunda; bu kuruluşlar raporlamaları için ilgili işletmelerden taksonomi raporu talep edebilecek. Raporlar mali tablo döneminin bitimini izleyen altıncı ayın sonuna kadar Çevrimiçi Taksonomi Yönetim Sistemine yüklenecek ve kamuoyuna açık olacak. Uygun faaliyetlerden kaynaklanan hasılat, yatırım harcaması veya işletme gideri oranı yüzde 10'un altında kalan işletmeler ilgili göstergeyi raporlamaya dahil etmeyebilecek.\n\nKurumsal yapı ve yaptırım: İklim Değişikliği Başkanı başkanlığında Hazine ve Maliye, Sanayi ve Teknoloji, Ticaret, Enerji bakanlıkları, SPK, BDDK, SEDDK, KGK ve TCMB temsilcileri dahil 15 üyeli Türkiye Yeşil Taksonomisi Komitesi ile teknik uzman grupları kurulacak. Raporlama yapanlardan bilgi ve belge verme yükümlülüğünü yerine getirmeyenlere 7552 sayılı Kanunun 14. maddesi uyarınca idari para cezası uygulanacak. Geçici maddeye göre finansal kuruluşlar 1/1/2029 tarihine kadar taksonomi raporlaması yapmak zorunda değil. Yönetmelik yayımı tarihinde yürürlüğe girdi.",
+      "published_at": "2026-09-24T00:00:00+03:00",
+      "summary": "Yeşil kredi ve sürdürülebilir finansmana erişmek isteyen sanayiciler için Türkiye'nin resmi 'yeşil' tanımı yürürlüğe girdi. Reel sektörde raporlama gönüllü olsa da 2029'dan itibaren raporlama zorunluluğu olan bankalar kredi müşterilerinden taksonomi raporu isteyebilecek; katı fosil yakıtla üretim ise sürdürülebilir sayılmayacak. Yatırım harcamalarının taksonomiye uygunluğunun şimdiden ölçülmeye başlanması gerekiyor.",
+      "key_points": [
+        "Resmî Gazete, 24 Eylül 2026, Sayı: 33380 — 7552 sayılı İklim Kanununa dayanan yönetmelik",
+        "Uyum için üç şart: en az bir çevresel hedefe önemli katkı, diğerlerine önemli zarar vermeme, asgari sosyal koruma",
+        "Reel sektör raporlaması gönüllü; bankalar ve finans kuruluşları 1 Ocak 2029'dan itibaren zorunlu raporlayacak",
+        "Katı fosil yakıt kullanılan üretim faaliyetleri sürdürülebilir sayılmayacak",
+        "Raporlar mali dönem sonunu izleyen 6. ayın sonuna kadar Çevrimiçi Taksonomi Yönetim Sistemine yüklenecek"
+      ],
+      "entities": {
+        "kurum": [
+          "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+          "İklim Değişikliği Başkanlığı",
+          "SPK",
+          "BDDK",
+          "SEDDK",
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Finans",
+          "İmalat Sanayii",
+          "Enerji"
+        ]
+      },
+      "category": "cevre",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "yonetmelik",
+        "yesil-taksonomi",
+        "iklim-finansmani",
+        "surdurulebilirlik-raporlamasi",
+        "yesile-boyama",
+        "karbon"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 80,
+        "keyword": 80,
+        "recency": 90,
+        "corroboration": 65,
+        "reach": 70
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "dha",
+      "url": "https://www.dha.com.tr/gundem/turkiye-yesil-taksonomisi-yonetmeligi-yayimlandi-2950289",
+      "title": "Türkiye Yeşil Taksonomisi Yönetmeliği yayımlandı",
+      "body": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'na bağlı İklim Değişikliği Başkanlığı'nın hazırladığı, 16 sektör ve 137 ekonomik faaliyeti içeren Türkiye Yeşil Taksonomisi Yönetmeliği, Resmi Gazete'de yayımlandı.\n\nBakanlıktan yapılan yazılı açıklamaya göre; 2021 yılında yayımlanan Yeşil Mutabakat Eylem Planı kapsamında hazırlanan Türkiye Yeşil Taksonomisi Yönetmeliği, hangi yatırımların çevresel açıdan sürdürülebilir olduğunu belirlemede yol gösterici olacak. Sanayicilerin uluslararası yeşil finansmandan daha fazla pay alabilmesine olanak sağlarken piyasada şeffaflığı artırarak 'yeşile boyama' (greenwashing) riskini engelleyen ortak bir dil ve değerlendirme kriterleri sunacak.\n\nYönetmelik kapsamında ekonomik faaliyetler için 6 çevresel hedef belirlendi: sera gazı emisyonlarının azaltımı, iklim değişikliğine uyum, su ve deniz kaynaklarının sürdürülebilir kullanımı ve korunması, döngüsel ekonomiye geçiş, kirliliğin önlenmesi ve kontrolü, biyoçeşitliliğin ve ekosistemlerin korunması ile restorasyonu.\n\nYönetmeliğe göre bir ekonomik faaliyetin 'Yeşil Taksonomiye Uyumlu' olarak nitelendirilebilmesi için 'Önemli Katkı', 'Önemli Zarar Vermeme' ve 'Asgari Sosyal Koruma' şartlarını eşzamanlı sağlaması gerekecek.\n\nYönetmelik kapsamında hazırlanan Teknik Tarama Kriterleri 16 sektör ve 137 ekonomik faaliyetten oluşuyor. Süreçte öncelikle AB Taksonomisi'nde yer alan ekonomik faaliyetlerle başlandı; ancak AB Taksonomisi'nden farklı olarak Türkiye Yeşil Taksonomisi'ne ülke yapısı gereği kritik önem taşıyan tarım ve turizm sektörleri de dahil edildi. İlerleyen aşamalarda eklenecek sektör ve faaliyetler Teknik Uzman Grubu ve Türkiye Taksonomi Komitesi çalışmalarıyla belirlenecek. Teknik Tarama Kriterleri İklim Değişikliği Başkanlığı'nın resmi web sayfasından duyurulacak.\n\nRaporlama süreci reel sektör ve finans sektörü için ikili bir yapıda kurgulandı. Reel sektörün raporlama usul ve esaslarını İklim Değişikliği Başkanlığı; finans sektörünün raporlama usul ve esaslarını ve şablonlarını SPK, BDDK ve SEDDK belirleyecek. Reel sektör için gönüllü raporlamada yasal zorunluluk olmayacak; ancak bankalardan ve finans kuruluşlarından yeşil finansman talep eden şirketlerden raporlama talep edilebilecek. Finans sektörü 1 Ocak 2029'dan itibaren raporlama yapmakla yükümlü olacak.",
+      "published_at": "2026-09-24T09:02:06+03:00",
+      "summary": "Bakanlık açıklamasına göre Yeşil Taksonomi'nin teknik kriterleri 16 sektör ve 137 ekonomik faaliyeti kapsıyor ve AB'den farklı olarak tarım ile turizmi de içeriyor. Sanayici için kilit nokta, raporlama gönüllü olsa da yeşil kredi talep eden şirketlerden bankaların taksonomi raporu isteyebilecek olması.",
+      "key_points": [
+        "Teknik Tarama Kriterleri 16 sektör ve 137 ekonomik faaliyetten oluşuyor",
+        "AB Taksonomisi'nden farklı olarak tarım ve turizm sektörleri de kapsamda",
+        "Reel sektör raporlaması gönüllü; yeşil finansman talep eden şirketlerden rapor istenebilecek",
+        "Finans sektörü 1 Ocak 2029'dan itibaren zorunlu raporlama yapacak"
+      ],
+      "entities": {
+        "kurum": [
+          "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+          "İklim Değişikliği Başkanlığı",
+          "SPK",
+          "BDDK",
+          "SEDDK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Finans",
+          "Tarım",
+          "Turizm",
+          "İmalat Sanayii"
+        ]
+      },
+      "category": "cevre",
+      "sentiment": "POZITIF",
+      "tags": [
+        "yesil-taksonomi",
+        "iklim-finansmani",
+        "yesil-mutabakat",
+        "yesile-boyama",
+        "surdurulebilirlik-raporlamasi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 75,
+        "keyword": 75,
+        "recency": 90,
+        "corroboration": 65,
+        "reach": 70
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "resmi-gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/09/20260925-2.htm",
+      "title": "Resmî Gazete, 25 Eylül 2026, Sayı: 33381 — Uzaktan Çalışma Yönetmeliğinde Değişiklik: Hibrit Çalışmada Günler ve Saatler İş Sözleşmesinde Belirlenecek",
+      "body": "25 Eylül 2026 tarihli ve 33381 sayılı Resmî Gazete'de Çalışma ve Sosyal Güvenlik Bakanlığının Uzaktan Çalışma Yönetmeliğinde Değişiklik Yapılması Hakkında Yönetmelik yayımlandı.\n\nDeğişikliğin 1. maddesiyle, 10/3/2021 tarihli ve 31419 sayılı Resmî Gazete'de yayımlanan Uzaktan Çalışma Yönetmeliğinin çalışma sürelerini düzenleyen 9. maddesine şu fıkra eklendi: \"(2) İş görme ediminin bir kısmının işyerinde, bir kısmının uzaktan çalışma usulüyle yerine getirilmesi kararlaştırılabilir. Bu durumda işçinin işyerinde ve uzaktan çalışacağı günler ile çalışma saatleri iş sözleşmesinde belirlenir.\"\n\nYönetmelik yayımı tarihinde yürürlüğe girdi; hükümlerini Çalışma ve Sosyal Güvenlik Bakanı yürütecek.\n\nDeğişiklikle, 2021'den bu yana uzaktan çalışmayı düzenleyen yönetmelikte açık bir karşılığı bulunmayan karma (hibrit) çalışma modeli mevzuata girmiş oldu. Düzenleme çalışanlara otomatik olarak belirli sayıda gün uzaktan çalışma hakkı tanımıyor; hibrit modelin uygulanması tarafların anlaşmasına bağlı ve anlaşma halinde işyerinde ve uzaktan çalışılacak günler ile çalışma saatlerinin iş sözleşmesinde açıkça gösterilmesi gerekiyor.",
+      "published_at": "2026-09-25T00:00:00+03:00",
+      "summary": "İdari, mühendislik ve Ar-Ge kadrolarında fiilen uygulanan hibrit çalışma artık yönetmelikte açıkça tanımlandı; işyerinde ve uzaktan çalışılacak günler ile saatlerin iş sözleşmesine yazılması gerekiyor. İşverenlerin mevcut hibrit uygulamalarını yazılı sözleşme ekleriyle kayıt altına alması olası iş hukuku uyuşmazlıklarının önüne geçer.",
+      "key_points": [
+        "Resmî Gazete, 25 Eylül 2026, Sayı: 33381 — Çalışma ve Sosyal Güvenlik Bakanlığı yönetmeliği",
+        "Uzaktan Çalışma Yönetmeliğinin 9. maddesine hibrit çalışma fıkrası eklendi",
+        "İşyerinde ve uzaktan çalışılacak günler ile çalışma saatleri iş sözleşmesinde belirlenecek",
+        "Düzenleme otomatik uzaktan çalışma hakkı tanımıyor; yayımı tarihinde yürürlüğe girdi"
+      ],
+      "entities": {
+        "kurum": [
+          "Çalışma ve Sosyal Güvenlik Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "category": "istihdam",
+      "sentiment": "NOTR",
+      "tags": [
+        "resmi-gazete",
+        "yonetmelik",
+        "uzaktan-calisma",
+        "hibrit-calisma",
+        "istihdam",
+        "insan-kaynaklari"
+      ],
+      "importance_factors": {
+        "authority": 100,
+        "impact": 50,
+        "keyword": 50,
+        "recency": 100,
+        "corroboration": 70,
+        "reach": 70
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "cumhuriyet-ekonomi",
+      "url": "https://www.cumhuriyet.com.tr/turkiye/resmi-gazete-de-yayimlandi-uzaktan-calisma-yonetmeliginde-degisiklik-2540860",
+      "title": "Resmi Gazete'de yayımlandı: Uzaktan çalışma yönetmeliğinde değişiklik",
+      "body": "Türkiye'de çalışma hayatında uzaktan ve işyerinde çalışmanın birlikte uygulanmasına ilişkin yeni düzenleme yürürlüğe girdi. Uzaktan Çalışma Yönetmeliği'nde yapılan değişiklik, 25 Eylül 2026 tarihli Resmî Gazete'de yayımlandı.\n\nDüzenlemeyle, işçinin işinin bir bölümünü işyerinde, bir bölümünü ise uzaktan çalışma yöntemiyle yerine getirmesi mevzuatta açık biçimde düzenlendi. Buna göre çalışanın hangi günlerde işyerinde, hangi günlerde uzaktan çalışacağı ile çalışma saatleri iş sözleşmesinde belirlenecek. Çalışma ve Sosyal Güvenlik Bakanlığı tarafından hazırlanan değişiklikle, 10 Mart 2021 tarihli Uzaktan Çalışma Yönetmeliği'nin 9. maddesine yeni bir fıkra eklendi.\n\nBöylece özellikle pandemi döneminden sonra birçok işyerinde fiilen uygulanan \"haftanın belirli günleri ofis, belirli günleri ev\" şeklindeki karma çalışma modeline yönetmelikte açık bir karşılık getirildi. Yeni düzenleme çalışanlara otomatik olarak belirli sayıda gün evden çalışma hakkı tanımıyor. Temel yenilik, işyerinde ve uzaktan çalışmanın birlikte yürütülebilmesinin mevzuatta açıkça düzenlenmesi ve uygulanacak günlerle çalışma saatlerinin iş sözleşmesinde belirlenmesi oldu.\n\nTürkiye'de uzaktan çalışmanın yasal altyapısı yeni değil; Uzaktan Çalışma Yönetmeliği 10 Mart 2021'de yürürlüğe girmişti. Hazine ve Maliye Bakanı Mehmet Şimşek de geçen hafta katıldığı canlı yayında esnek çalışma modellerinin gündemde olduğunu açıklamış, özellikle 15-29 yaş grubunda eğitimde ve istihdamda olmayan gençlere yönelik programlar üzerinde çalışıldığını belirterek bu gruplar için daha esnek çalışma modelinin gündemde olduğunu söylemişti.\n\nEsnek ve uzaktan çalışma modelleri, 2027-2029 dönemini kapsayan Orta Vadeli Program'da da yer aldı. 6 Eylül'de Resmî Gazete'de yayımlanan programda, iş ve yaşam uyumunun sağlanması ve çalışan verimliliğinin artırılması amacıyla çalışma günlerinin düzenlenmesi ve esnek süreli istihdam modellerinin geliştirilmesine yönelik çalışmalar yapılması öngörüldü.",
+      "published_at": "2026-09-25T09:54:00+03:00",
+      "summary": "Hibrit çalışma düzenlemesi, OVP 2027-2029'daki esnek istihdam hedefinin ilk somut adımı olarak değerlendiriliyor; Bakan Şimşek de gençlere yönelik esnek çalışma modellerinin gündemde olduğunu açıklamıştı. İşverenler için hibrit düzenin sözleşmeye bağlanması zorunlu hale gelirken, esnek çalışmaya ilişkin yeni düzenlemeler de gündemde.",
+      "key_points": [
+        "Hibrit çalışma 25 Eylül 2026 itibarıyla yönetmelikte açıkça tanımlandı",
+        "Ofis ve uzaktan çalışma günleri ile saatler iş sözleşmesinde belirtilecek",
+        "Düzenleme otomatik evden çalışma hakkı tanımıyor",
+        "OVP 2027-2029'da esnek süreli istihdam modellerinin geliştirilmesi öngörülüyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Çalışma ve Sosyal Güvenlik Bakanlığı",
+          "Hazine ve Maliye Bakanlığı"
+        ],
+        "kisi": [
+          "Mehmet Şimşek"
+        ],
+        "sektor": []
+      },
+      "category": "istihdam",
+      "sentiment": "NOTR",
+      "tags": [
+        "uzaktan-calisma",
+        "hibrit-calisma",
+        "istihdam",
+        "orta-vadeli-program",
+        "yonetmelik"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 45,
+        "keyword": 45,
+        "recency": 100,
+        "corroboration": 70,
+        "reach": 70
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/25/kdv-tevkifatinda-alicinin-odememesi-ve-saticinin-sorumlulugu/",
+      "title": "KDV Tevkifatında Alıcının Vergiyi Ödememesinin Satıcıya Etkisi ve Müteselsil Sorumluluk Riski",
+      "body": "Alomaliye'de YMM M. Bahadır Altaş imzasıyla yayımlanan çalışma, KDV tevkifatında alıcının 2 No.lu KDV Beyannamesi ile beyan ettiği tevkifat tutarını ödememesi halinde satıcının karşılaştığı riskleri ele alıyor.\n\nÇalışmaya göre vergi alacağının güvence altına alınması amacıyla ihdas edilen tevkifat mekanizması son dönemde vergi idaresi ile mükellefler arasında ciddi ihtilaflara yol açıyor. Vergi idarelerinin mükelleflere gönderdiği yazılarda, alıcının işleme ait 4017 KDV Tevkifatı kodu ile bildirimde bulunmasına rağmen ödemeyi gerçekleştirmediği gerekçe gösterilerek, 213 sayılı Vergi Usul Kanununun 11. maddesi uyarınca söz konusu tutarın satıcılar tarafından ödenmesi talep ediliyor ya da satıcıdan tarhiyat yapılıyor.\n\nYazar, KDV'nin harcama üzerinden alınan, üretilen mal veya hizmetin her aşamasında yaratılan değerin vergilendirildiği ve özü itibarıyla nihai tüketicinin katlandığı bir tüketim vergisi olduğunu hatırlatıyor. 3065 sayılı KDV Kanununda tevkifata ilişkin doğrudan ve özel bir düzenleme bulunmadığını, mekanizmanın Kanunun 9/1. maddesindeki \"vergi alacağının emniyet altına alınması amacıyla vergiye tabi işlemlere taraf olanları verginin ödenmesinden sorumlu tutabilir\" yetkisine dayandığını belirtiyor. Altaş'a göre riskli sektörlerde vergi güvenlik müessesesi olarak başlatılan tevkifat, yüklenilen KDV nötrleşmediği için KDV'nin temel tekniğine aykırı ve günümüzde neredeyse her mükellef alım veya satımlarında tevkifatla karşılaşıyor.\n\nÇalışmada 3065 sayılı Kanunun 29. maddesinin 1. fıkrasının (ç) bendine (7491 sayılı Kanunla eklenen, 1/1/2024'te yürürlüğe giren) göre, vergi kesintisi yapmakla sorumlu tutulanlar tarafından sorumlu sıfatıyla beyan edilerek ödenen KDV'nin indirilebileceği hatırlatılıyor. Bu düzenleme indirim hakkını doğrudan ödeme şartına bağlamış görünse de, yazara göre bu zorunluluk sorumlu sıfatıyla beyan eden alıcı tarafı bağlıyor. Çalışma, KDV'nin nötrlük ve yansıtılabilirlik ilkeleri çerçevesinde tevkif edilen verginin ödenmesinden doğan sorumlulukları ve güncel yargı kararları doğrultusunda müteselsil sorumluluğun sınırlarını analiz ediyor.",
+      "published_at": "2026-09-25T15:03:48+03:00",
+      "summary": "Tevkifatlı satış yapan sanayiciler, alıcının beyan ettiği ama ödemediği KDV için vergi dairesinden ödeme talebi veya tarhiyatla karşılaşabiliyor. Uzman değerlendirmesine göre ödeme şartı alıcıyı bağlıyor ve satıcının müteselsil sorumluluğu sınırlı; yine de riskli müşterilerde tahsilat ve belge takibinin sıkılaştırılması önerilir.",
+      "key_points": [
+        "Vergi idareleri, 4017 kodlu tevkifatı ödemeyen alıcılar nedeniyle VUK 11. madde uyarınca satıcıdan ödeme istiyor",
+        "KDV tevkifatı KDVK 9/1. maddedeki sorumluluk yetkisine dayanıyor; kanunda özel düzenleme yok",
+        "KDVK 29/1-ç (1/1/2024) indirimi ödeme şartına bağlıyor; yazara göre bu şart alıcıyı bağlıyor",
+        "Çalışma müteselsil sorumluluğun sınırlarını güncel yargı kararlarıyla değerlendiriyor"
+      ],
+      "entities": {
+        "kurum": [
+          "Gelir İdaresi Başkanlığı"
+        ],
+        "kisi": [
+          "M. Bahadır Altaş"
+        ],
+        "sektor": []
+      },
+      "category": "vergi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "kdv",
+        "kdv-tevkifati",
+        "vergi-usul-kanunu",
+        "vergi",
+        "nakit-yonetimi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 55,
+        "keyword": 55,
+        "recency": 100,
+        "corroboration": 15,
+        "reach": 50
+      },
+      "language": "tr",
+      "region": "TURKIYE"
+    }
+  ]
+}

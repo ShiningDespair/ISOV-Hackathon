@@ -1,0 +1,1329 @@
+{
+  "collector": "turkiye-ekonomi",
+  "collected_at": "2026-09-25T18:00:00+03:00",
+  "sources": [
+    {
+      "slug": "aa-ekonomi",
+      "name": "Anadolu Ajansı Ekonomi",
+      "homepage_url": "https://www.aa.com.tr/tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 85,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "ekonomim",
+      "name": "Ekonomim (Dünya Gazetesi Dijital)",
+      "homepage_url": "https://www.ekonomim.com",
+      "source_type": "basin",
+      "authority_weight": 80,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "dunya-gazetesi",
+      "name": "Dünya Gazetesi",
+      "homepage_url": "https://www.dunya.com",
+      "source_type": "basin",
+      "authority_weight": 82,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "cumhuriyet-ekonomi",
+      "name": "Cumhuriyet Ekonomi",
+      "homepage_url": "https://www.cumhuriyet.com.tr/ekonomi",
+      "source_type": "basin",
+      "authority_weight": 70,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "finansopia",
+      "name": "Finansopia",
+      "homepage_url": "https://www.finansopia.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "borsa-gundem",
+      "name": "Borsa Gündem",
+      "homepage_url": "https://www.borsagundem.com.tr",
+      "source_type": "basin",
+      "authority_weight": 62,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "alomaliye",
+      "name": "Alomaliye",
+      "homepage_url": "https://www.alomaliye.com",
+      "source_type": "mevzuat",
+      "authority_weight": 72,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "mevzuat"
+    },
+    {
+      "slug": "karar-gazetesi",
+      "name": "Karar Gazetesi",
+      "homepage_url": "https://www.karar.com",
+      "source_type": "basin",
+      "authority_weight": 66,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "tcmb",
+      "name": "Türkiye Cumhuriyet Merkez Bankası",
+      "homepage_url": "https://www.tcmb.gov.tr",
+      "source_type": "kurum",
+      "authority_weight": 95,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "kurum"
+    },
+    {
+      "slug": "bloomberght",
+      "name": "Bloomberg HT",
+      "homepage_url": "https://www.bloomberght.com",
+      "source_type": "basin",
+      "authority_weight": 75,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "apara",
+      "name": "A Para",
+      "homepage_url": "https://www.apara.com.tr",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "finansingundemi",
+      "name": "Finansın Gündemi",
+      "homepage_url": "https://www.finansingundemi.com",
+      "source_type": "basin",
+      "authority_weight": 50,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "foreks",
+      "name": "ForInvest (Foreks Haber)",
+      "homepage_url": "https://www.foreks.com",
+      "source_type": "basin",
+      "authority_weight": 60,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "aksiyon",
+      "name": "Aksiyon",
+      "homepage_url": "https://www.aksiyon.com.tr",
+      "source_type": "basin",
+      "authority_weight": 50,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "businews",
+      "name": "Businews Türkiye",
+      "homepage_url": "https://businews.com.tr",
+      "source_type": "basin",
+      "authority_weight": 48,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    },
+    {
+      "slug": "aydinlik",
+      "name": "Aydınlık",
+      "homepage_url": "https://www.aydinlik.com.tr",
+      "source_type": "basin",
+      "authority_weight": 55,
+      "country_code": "TR",
+      "language": "tr",
+      "source_type_raw": "basin"
+    }
+  ],
+  "articles": [
+    {
+      "source_slug": "aa-ekonomi",
+      "url": "https://www.aa.com.tr/tr/ekonomi/tuik-temmuz-ayi-dis-ticaret-endekslerini-acikladi/4056377",
+      "title": "TÜİK temmuz ayı dış ticaret endekslerini açıkladı",
+      "body": "Türkiye İstatistik Kurumu (TÜİK), temmuz ayına ilişkin dış ticaret endekslerini açıkladı.\n\nBuna göre ihracat birim değer endeksi, temmuzda geçen yılın aynı ayına kıyasla yüzde 8,2 yükseldi. Endeks, Temmuz 2025'e göre gıda, içecek ve tütünde yüzde 6,5, ham maddelerde (yakıt hariç) yüzde 10, yakıtlarda yüzde 39,4 ve imalat sanayisinde (gıda, içecek, tütün hariç) yüzde 6,1 arttı.\n\nİthalat birim değer endeksi de temmuzda yıllık bazda yüzde 12,8 artış kaydetti. Endeks geçen yılın aynı ayına göre gıda, içecek ve tütünde yüzde 3,3 azalırken, yakıtlarda yüzde 23,7, ham maddelerde (yakıt hariç) yüzde 11,6 ve imalat sanayisinde (gıda, içecek, tütün hariç) yüzde 9,1 artış gösterdi.\n\nMiktar endeksleri: İhracat miktar endeksi, temmuzda geçen yılın aynı ayına kıyasla yüzde 4,9 azaldı. Endeks bu dönemde gıda, içecek ve tütünde yüzde 2,9 ve ham maddelerde (yakıt hariç) yüzde 6,4 artarken, yakıtlarda yüzde 30,2 ve imalat sanayisinde (gıda, içecek, tütün hariç) yüzde 4,2 azalış gösterdi.\n\nİthalat miktar endeksi temmuzda yıllık bazda yüzde 6,9 azaldı. Endeks, geçen yılın aynı ayına göre gıda, içecek ve tütünde yüzde 24,4 ve ham maddelerde (yakıt hariç) yüzde 11,3 artarken, yakıtlarda yüzde 8,6 ve imalat sanayisinde (gıda, içecek, tütün hariç) yüzde 7,7 azalış kaydetti.\n\nMevsim ve takvim etkisinden arındırılmış veriler: Mevsim ve takvim etkilerinden arındırılmış seriye göre ihracat miktar endeksi, haziranda 139,6 iken temmuzda yüzde 2,7 artarak 143,3 oldu. Takvim etkilerinden arındırılmış seriye göre ise endeks, Temmuz 2025'te 149,4 iken Temmuz 2026'da yüzde 4,9 azalışla 142,1 olarak gerçekleşti.\n\nMevsim ve takvim etkilerinden arındırılmış seriye göre ithalat miktar endeksi, haziranda 125,7 iken temmuzda yüzde 8,7 azalarak 114,7 olarak kayıtlara geçti. Takvim etkilerinden arındırılmış seriye göre endeks, geçen yıl temmuzda 129,2 iken bu yılın aynı ayında yüzde 6,9 azalışla 120,3 oldu.\n\nİhracat birim değer endeksinin ithalat birim değer endeksine bölünmesiyle hesaplanan ve Temmuz 2025'te 95,3 olarak elde edilen dış ticaret haddi, 4 puan azalışla Temmuz 2026'da 91,3 olarak kaydedildi.",
+      "published_at": "2026-09-14T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TÜİK verilerine göre temmuzda ithalat birim değerleri (yüzde 12,8) ihracat birim değerlerinden (yüzde 8,2) hızlı arttı; dış ticaret haddi 4 puan düşüşle 91,3'e geriledi. İmalat sanayii ihracat miktarı yıllık yüzde 4,2 azalırken ithal girdi fiyatları yüzde 9,1 yükseldi. Sanayici için bu tablo, girdi maliyetinin satış fiyatından hızlı arttığı ve kâr marjlarının sıkıştığı anlamına geliyor.",
+      "key_points": [
+        "İhracat birim değer endeksi yıllık yüzde 8,2, ithalat birim değer endeksi yüzde 12,8 arttı.",
+        "Dış ticaret haddi Temmuz 2025'teki 95,3'ten 91,3'e geriledi (−4 puan).",
+        "İmalat sanayii ihracat miktar endeksi yıllık yüzde 4,2 azaldı; ithalat miktarında düşüş yüzde 7,7.",
+        "Mevsimsellikten arındırılmış ihracat miktar endeksi aylık yüzde 2,7 artışla 143,3'e çıktı."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜİK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "dis-ticaret",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "dis-ticaret",
+        "tuik",
+        "ihracat",
+        "ithalat",
+        "dis-ticaret-haddi",
+        "girdi-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 70,
+        "keyword": 75,
+        "recency": 50,
+        "corroboration": 55,
+        "reach": 60
+      }
+    },
+    {
+      "source_slug": "finansopia",
+      "url": "https://www.finansopia.com/ekonomi/butce-agustos-ayinda-129-milyar-tl-fazla-verdi/",
+      "title": "Bütçe Ağustos ayında 12,9 milyar TL fazla verdi",
+      "body": "Merkezi yönetim bütçesi Ağustos 2026'da 12,9 milyar TL fazla verdi. Hazine ve Maliye Bakanlığı verilerine göre, aynı ayda bütçe gelirleri 1 trilyon 654,9 milyar TL'ye ulaşırken, bütçe giderleri 1 trilyon 642,1 milyar TL olarak gerçekleşti. Ocak-ağustos döneminde ise bütçe açığı 1 trilyon 308,1 milyar TL'ye yükseldi.\n\nAğustos ayında faiz dışı denge güçlü görünümünü korudu. Faiz dışı giderler 1 trilyon 445 milyar TL olurken, 209,9 milyar TL faiz dışı fazla kaydedildi.\n\nAğustos bütçe fazlası geçen yılın altında kaldı. Merkezi yönetim bütçesi Ağustos 2025'te 96 milyar 705 milyon TL fazla vermişti. Ağustos 2026'da ise bütçe fazlası 12 milyar 852 milyon TL olarak gerçekleşti. Faiz dışı dengede de geçen yılın aynı ayına göre gerileme görüldü. Ağustos 2025'te 276 milyar 436 milyon TL olan faiz dışı fazla, bu yılın aynı ayında 209 milyar 929 milyon TL'ye indi.\n\nBütçe giderleri yüzde 37,8 arttı. Merkezi yönetim bütçe giderleri ağustosta 1 trilyon 642 milyar 58 milyon TL oldu. Bu tutarın 197 milyar 76 milyon TL'sini faiz harcamaları oluştururken, faiz hariç giderler 1 trilyon 444 milyar 981 milyon TL seviyesinde gerçekleşti. Geçen yılın aynı ayında bütçe giderleri 1 trilyon 191 milyar 367 milyon TL seviyesindeydi. Faiz hariç bütçe giderleri Ağustos 2026'da geçen yılın aynı ayına göre yüzde 42,8 artarak 1 trilyon 444 milyar 981 milyon TL'ye çıktı.\n\nBütçe gelirleri 1,65 trilyon TL'yi aştı. Vergi gelirleri 1 trilyon 473 milyar 311 milyon TL, genel bütçe vergi dışı gelirleri ise 147 milyar 452 milyon TL oldu. Ağustos 2025'te 1 trilyon 288 milyar 72 milyon TL olan bütçe gelirleri, yıllık bazda yüzde 28,5 arttı. Ağustos ayındaki vergi geliri tahsilatı geçen yılın aynı dönemine göre yüzde 28,1 arttı.\n\nSekiz aylık bütçe açığı 1,31 trilyon TL. 2026 yılının ocak-ağustos döneminde merkezi yönetim bütçe giderleri 12 trilyon 162 milyar 740 milyon TL, bütçe gelirleri ise 10 trilyon 854 milyar 652 milyon TL oldu. Böylece sekiz aylık bütçe açığı 1 trilyon 308 milyar 88 milyon TL olarak gerçekleşti. Geçen yılın aynı döneminde merkezi yönetim bütçesi 907 milyar 635 milyon TL açık vermişti. Buna karşılık faiz dışı denge pozitif kaldı; ocak-ağustos döneminde 680 milyar 2 milyon TL faiz dışı fazla verildi.\n\nSekiz ayda faiz giderleri 1 trilyon 988 milyar 90 milyon TL'ye ulaştı. Vergi gelirleri tahsilatı sekiz aylık dönemde geçen yılın aynı dönemine göre yüzde 35,7 artarak 9 trilyon 327 milyar 893 milyon TL oldu.",
+      "published_at": "2026-09-15T11:04:00+03:00",
+      "language": "tr",
+      "summary": "Hazine ve Maliye Bakanlığı verilerine göre merkezi yönetim bütçesi ağustosta 12,9 milyar TL fazla verdi, ancak fazla geçen yılın (96,7 milyar TL) çok altında kaldı. Sekiz aylık açık 1,31 trilyon TL'ye çıktı; faiz giderleri 1,99 trilyon TL'ye ulaştı. Sanayici açısından maliye tarafında gevşeme alanının dar olduğu, yeni vergi ya da harcama adımlarında temkinli bir çerçeve beklenmesi gerektiği anlamına geliyor.",
+      "key_points": [
+        "Ağustosta bütçe 12,9 milyar TL fazla verdi (Ağustos 2025: 96,7 milyar TL fazla).",
+        "Ocak-ağustos bütçe açığı 1 trilyon 308 milyar TL; geçen yıl 907,6 milyar TL idi.",
+        "Faiz harcamaları sekiz ayda 1,99 trilyon TL'ye ulaştı.",
+        "Ağustosta faiz hariç giderler yıllık yüzde 42,8, vergi gelirleri yüzde 28,1 arttı."
+      ],
+      "entities": {
+        "kurum": [
+          "Hazine ve Maliye Bakanlığı"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "butce",
+        "kamu-maliyesi",
+        "mali-disiplin",
+        "makroekonomi"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 55,
+        "keyword": 55,
+        "recency": 55,
+        "corroboration": 50,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "foreks",
+      "url": "https://www.foreks.com/haber/detay/6aaa5aebbe4e21669e8fb7a2/PICNEWS/tr/simsek-ten-ekonomiye-yeni-yol-haritasi-sanayiye-destek-vergi-artisi-yok-16-09-26/",
+      "title": "Şimşek'ten ekonomiye yeni yol haritası: Sanayiye destek, vergi artışı yok",
+      "body": "Hazine ve Maliye Bakanı Mehmet Şimşek, ekonomi programında politika yönünün değişmediğini belirtirken reel sektöre yönelik yeni desteklerin devreye alınacağını açıkladı. Şimşek, kurumlar vergisi ve gelir vergisinde değişiklik ya da yeni vergi artışının gündemde olmadığını söyledi.\n\nİmalat sanayine işletme sermayesi desteği: Şimşek, reel sektörün rekabet gücünü önemsediklerini ve seçici, hedefli kredi programlarıyla şirketlerin üzerindeki baskıyı azaltmaya çalıştıklarını belirtti. İmalat sanayine bu yıldan başlayarak işletme sermayesi desteği verileceğini açıklayan Şimşek, program için 2026'da 250 milyar TL ile başlanacağını ve gelecek yıl büyütülebileceğini ifade etti.\n\nŞimşek, Türkiye'nin dışarıya sattığı malların yüzde 95'ten fazlasının sanayi üretimi olduğunu belirterek, Eximbank'ın bu yıl sağlayacağı toplam kredi miktarının 60 milyar dolar olacağını söyledi. Reeskont kredilerinin ise 2023'ten bu yana 17 kat artırıldığını kaydetti. Çiftçilere verilen kredilerin ortalama faizinin yüzde 12 seviyesinde olduğunu belirten Şimşek, kredilerde faizlerin enflasyonun oldukça altında tutularak ihracatın, sanayinin ve reel sektörün desteklendiğini söyledi.\n\n\"Para politikasını bozmak doğru değil\": Şimşek, reel sektörü desteklemek amacıyla genel para politikasının gevşetilmesi yaklaşımını doğru bulmadıklarını vurguladı. Enflasyon beklentilerinin yüksek olduğu bir ortamda işleyen bir para politikasına ihtiyaç bulunduğunu ifade etti. Daha önce enflasyondaki katılığın öngörülenden yüksek olduğunu belirten Şimşek, dezenflasyonun devam ettiğini ancak sürecin başlangıçta öngörülenden daha uzun sürebileceğini söylemişti.\n\nYeni vergi artışı gündemde değil: Şimşek, kurumlar vergisi ve gelir vergisinde değişiklik planlanmadığını, dolaylı vergiler tarafında da şu anda yeni bir adımın gündemde bulunmadığını açıkladı. 2027 için yüzde 3,5 olarak belirlenen bütçe açığı hedefinin bir \"üst limit\" olduğunu söyleyen Şimşek, yeni şoklar ortaya çıkmaması halinde daha iyi bir bütçe performansı beklediğini belirtti.\n\nSosyal konuta 250 milyar TL: Şimşek, deprem konutlarının önemli ölçüde tamamlandığını ve önümüzdeki birkaç yıl içinde 750 bin sosyal konut inşa edileceğini söyledi. Sosyal konut için geçen yıl 100 milyar TL ayrıldığını belirten Şimşek, bu yıl tutarın 250 milyar TL'ye çıkarılacağını açıkladı.\n\nEşel mobil yıl sonunda sona erecek: Şimşek, mazotta eşel mobil uygulamasının yıl sonuna kadar kısmen devam edeceğini ancak uygulamanın gelecek yılki bütçe planlamasında yer almadığını söyledi. Enerji arz güvenliğinde herhangi bir sorun bulunmadığını da belirten Şimşek, ekonomi yönetiminin reel sektörü desteklemeye devam edeceğini ifade etti.",
+      "published_at": "2026-09-16T12:01:00+03:00",
+      "language": "tr",
+      "summary": "Hazine ve Maliye Bakanı Şimşek, imalat sanayiine 2026'da 250 milyar TL ile başlayacak, gelecek yıl büyütülebilecek bir işletme sermayesi desteği verileceğini; kurumlar ve gelir vergisinde artışın gündemde olmadığını açıkladı. Genel para politikasının gevşetilmeyeceğini, desteğin seçici ve hedefli kredilerle sağlanacağını vurguladı. Sanayici için faiz indirimi yerine hedefli kredi kanalının öne çıkacağı ve motorinde eşel mobilin 2027'de kalkacağı anlamına geliyor.",
+      "key_points": [
+        "İmalat sanayiine işletme sermayesi desteği 2026'da 250 milyar TL ile başlayacak, 2027'de büyütülebilecek.",
+        "Kurumlar vergisi ve gelir vergisinde değişiklik ya da yeni dolaylı vergi adımı gündemde değil.",
+        "Eximbank'ın 2026 kredi hacmi 60 milyar dolar; reeskont kredileri 2023'ten bu yana 17 kat arttı.",
+        "Motorinde eşel mobil yıl sonuna kadar kısmen sürecek, 2027 bütçesinde yer almıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Hazine ve Maliye Bakanlığı",
+          "Türk Eximbank"
+        ],
+        "kisi": [
+          "Mehmet Şimşek"
+        ],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "POZITIF",
+      "tags": [
+        "isletme-sermayesi",
+        "kredi-destegi",
+        "imalat-sanayi",
+        "vergi",
+        "eximbank",
+        "reeskont-kredisi",
+        "motorin"
+      ],
+      "importance_factors": {
+        "authority": 60,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 60,
+        "corroboration": 70,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "aksiyon",
+      "url": "https://www.aksiyon.com.tr/imalat-sanayine-isletme-sermayesi-destegiyle-uretim-kapasitesini-guclendirme-plani-356010",
+      "title": "İmalat sanayine işletme sermayesi desteğiyle üretim kapasitesini güçlendirme planı",
+      "body": "Hazine ve Maliye Bakanı Mehmet Şimşek, bir televizyon programında Orta Vadeli Program (OVP), enflasyon, kur politikası ve ekonomiye ilişkin destekleri değerlendirdi. Şimşek, hayat pahalılığıyla mücadeleyi en büyük öncelik olarak vurgulayarak dezenflasyon hedefinden seçim sürecinde de taviz verilmeyeceğini söyledi.\n\nOVP'nin kamu için bağlayıcı bütçe taahhütleri ve özel sektör için yol haritası olduğunu belirten Şimşek, savaşın enflasyon üzerindeki etkisine dikkat çekerek, savaş olmasaydı enflasyonun bugün itibariyle en az 7 puan daha düşük olacağını; yani 31,5 yerine örneğin 24,5 civarında olabileceğini söyledi. Bu bağlamda yılın sonunda enflasyonun 28-29 aralığı yerine 21-22 civarında kapanabileceğini ifade etti.\n\nEnerji ve emtia fiyatlarındaki artışın yaygın olduğunu vurgulayan Şimşek, mazot, doğalgaz ve pek çok emtiadaki yükselişlerin Türkiye'de enflasyonu daha fazla etkilediğini söyledi. OVP hedeflerinin tutmadığı yönündeki algıyı reddeden Şimşek, bütçe açısından hedeflerin büyük ölçüde gerçekleştirildiğini belirtti. 2026 için hedeflenen yüzde 3,5'lik bütçe açığının yıl sonunda yaklaşık yüzde 3,1 olmasını beklediklerini söyledi.\n\nEnflasyonun Türkiye'de modelin öngördüğünden daha fazla atalet gösterdiğini ve endekslemenin önemli bir etkisi olduğunu belirten Şimşek, \"bir yıldaki 100 birimlik enflasyonun yaklaşık 40 puanı bir sonraki yıla taşınıyor\" diyerek yapışkanlığın süreci uzattığını aktardı.\n\nŞimşek, önümüzdeki dönemde sanayiye yönelik desteklerin ön plana çıkacağını belirterek, \"Bu sene başlayarak biz imalat sanayine işletme sermayesi desteği vereceğiz\" açıklamasını yaptı. Paket kapsamını şu şekilde özetledi: 250 milyar lira tutarında bir program, 6 ay ödemesiz, 36 ay vadeli ve TLREF artı 2 puandan 12 puan indirim yapılması; bunun sonucunda efektif faiz oranının yaklaşık yüzde 27 seviyesine gerileyeceğini ifade etti.\n\nAyrıca tarım ve reel sektöre yönelik adımları anlattı: son bir yılda yaklaşık 1 milyon çiftçiye 800 milyar lira kredi kullandırıldığını, kredilerin ortalama yüzde 12 faizle verildiğini belirtti. İhracatçı kredilerinin günlük 5 milyar liraya çıkarıldığını ve Eximbank sermayesinin 7 kat artırıldığını söyledi.\n\nŞimşek, ideal kur rejiminin dalgalı kur rejimi olduğunu vurgularken, kurun tek başına rekabet gücünü belirlemediğini, enerji maliyetleri ve dış talep gibi unsurların da rolü olduğunu belirtti. Eşel Mobil uygulamasıyla ilgili olarak bu yıl sonuna kadar mazotta kısmi devam olduğunu, gelecek yıl Eşel Mobil'in devam ettirilmesinin planlanmadığını açıkladı. Vergi gündeminde ise şu an için kurumlar veya gelir vergisinde değişiklik bulunmadığını söyledi.",
+      "published_at": "2026-09-16T17:13:00+03:00",
+      "language": "tr",
+      "summary": "Bakan Şimşek, imalat sanayiine yönelik 250 milyar liralık işletme sermayesi programının 6 ay ödemesiz, 36 ay vadeli olacağını ve TLREF+2 puana 12 puan indirimle efektif faizin yaklaşık yüzde 27'ye ineceğini söyledi. Savaş olmasaydı enflasyonun en az 7 puan daha düşük olacağını, 2026 bütçe açığının yüzde 3,1 civarında kapanmasını beklediklerini belirtti. Sanayici için bu, piyasa faizinin (politika faizi yüzde 37) belirgin altında kredi erişimi demek.",
+      "key_points": [
+        "250 milyar TL'lik program: 6 ay ödemesiz, 36 ay vade, TLREF+2'den 12 puan indirim.",
+        "Efektif kredi faizinin yaklaşık yüzde 27'ye inmesi hedefleniyor.",
+        "Şimşek'e göre savaş etkisi olmasa enflasyon en az 7 puan düşük olurdu.",
+        "Kurun tek başına rekabet gücünü belirlemediği, dalgalı kur rejiminin korunacağı vurgulandı."
+      ],
+      "entities": {
+        "kurum": [
+          "Hazine ve Maliye Bakanlığı",
+          "Türk Eximbank"
+        ],
+        "kisi": [
+          "Mehmet Şimşek"
+        ],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "POZITIF",
+      "tags": [
+        "isletme-sermayesi",
+        "kredi-maliyeti",
+        "imalat-sanayi",
+        "ovp",
+        "dezenflasyon",
+        "kur"
+      ],
+      "importance_factors": {
+        "authority": 50,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 60,
+        "corroboration": 70,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "aydinlik",
+      "url": "https://www.aydinlik.com.tr/haber/tuik-ucretli-calisan-sayisi-temmuzda-yuzde-17-artti-590358",
+      "title": "TÜİK: Ücretli çalışan sayısı temmuzda yüzde 1,7 arttı",
+      "body": "Türkiye İstatistik Kurumu (TÜİK), Temmuz 2026 dönemine ilişkin ücretli çalışan istatistiklerini açıkladı. Buna göre, sanayi, inşaat ve ticaret-hizmet sektörleri toplamında ücretli çalışan sayısı temmuzda geçen yılın aynı ayına göre yüzde 1,7 arttı.\n\nÜcretli çalışan sayısı, Temmuz 2025'te 16 milyon 114 bin 128 iken, Temmuz 2026'da 16 milyon 393 bin 563'e yükseldi. Sektörler bazında incelendiğinde, ücretli çalışan sayısı yıllık olarak sanayide yüzde 1,5 azalırken, inşaatta yüzde 3,5, ticaret-hizmet sektöründe ise yüzde 3,1 arttı.\n\nAylık değişim olmadı: Sanayi, inşaat ve ticaret-hizmet sektörleri toplamında ücretli çalışan sayısı temmuzda bir önceki aya göre değişmedi. Aylık bazda ücretli çalışan sayısı sanayide yüzde 0,1 azalırken, inşaat sektöründe değişim göstermedi. Ticaret-hizmet sektöründe ise ücretli çalışan sayısı yüzde 0,1 arttı. (Kaynak: DHA)",
+      "published_at": "2026-09-16T11:21:00+03:00",
+      "language": "tr",
+      "summary": "TÜİK verilerine göre ücretli çalışan sayısı temmuzda yıllık yüzde 1,7 artışla 16,39 milyona çıktı; ancak sanayide ücretli istihdam yıllık yüzde 1,5, aylık yüzde 0,1 azaldı. Artış inşaat ve ticaret-hizmetten geldi. Veri, imalat sanayiinde maliyet baskısı ve zayıf talep nedeniyle istihdam kaybının sürdüğünü gösteriyor.",
+      "key_points": [
+        "Ücretli çalışan sayısı Temmuz 2026'da 16 milyon 393 bin 563 oldu (yıllık +%1,7).",
+        "Sanayide ücretli çalışan sayısı yıllık yüzde 1,5 azaldı.",
+        "İnşaatta yüzde 3,5, ticaret-hizmette yüzde 3,1 yıllık artış var.",
+        "Aylık bazda toplam değişmedi; sanayide yüzde 0,1 düşüş."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜİK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii",
+          "İnşaat",
+          "Hizmetler"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "istihdam",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "istihdam",
+        "tuik",
+        "sanayi",
+        "isgucu"
+      ],
+      "importance_factors": {
+        "authority": 55,
+        "impact": 60,
+        "keyword": 65,
+        "recency": 60,
+        "corroboration": 40,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "dunya-gazetesi",
+      "url": "https://www.dunya.com/ekonomi/son-dakika-tcmbden-tl-likiditesine-3-yeni-adim-haberi-840363",
+      "title": "Son dakika... TCMB'den TL likiditesine 3 yeni adım",
+      "body": "Türkiye Cumhuriyet Merkez Bankası (TCMB), finansal piyasalardaki gelişmeler üzerine likidite imkanlarını gözden geçirdi.\n\nRepo fonlama miktarı artırılacak: TCMB'nin 17 Eylül 2026 tarihli \"Türk Lirası Likidite Yönetimine İlişkin Basın Duyurusu\"na göre, haftalık repo ihaleleriyle sağlanacak fonlama miktarı piyasa koşulları dikkate alınarak artırılacak. Bankaların borç alabilme limitleri de bankacılık sisteminin mevcut bilanço büyüklüklerine göre güncellenecek. Merkez Bankası ayrıca kendi bünyesindeki piyasalarda uygulanan teminat iskonto oranlarını azaltacak. TCMB, likidite koşullarının yakından izleneceğini ve ihtiyaç halinde ek tedbirlerin alınabileceğini bildirdi.\n\nYapısal risk yok, tedbirler devreye girdi: Küresel risklerin piyasalarda satış baskısı yarattığı dönemde, bazı fonlarda ortaya çıkan nakit ihtiyacının zorunlu hisse satışlarını tetiklemesi Borsa İstanbul'daki kayıpları derinleştirdi. Dün BIST 100 endeksi, 9 Eylül'de gördüğü 14 bin 700 puanlık zirveden 13 bin 122 puana gerileyerek bir haftada yüzde 10'un üzerinde değer kaybederken kayıpların yüzde 5,54'e ulaşmasıyla devre kesici devreye girdi.\n\nSert satışların ardından bugün olağanüstü toplanan Finansal İstikrar Komitesi, Borsa İstanbul ve sermaye piyasalarının işleyişine ilişkin yapısal bir risk bulunmadığını, sorunun belirli fonlarda yoğunlaştığını açıkladı. Likidite sıkışıklığının giderilmesi ve olası bulaşma riskinin önlenmesi için gerekli tedbirlerin hızla uygulanacağı bildirildi. TCMB'nin TL likiditesine 3 yeni adım hamlesi de bu gelişmelerin hemen ardından geldi.",
+      "published_at": "2026-09-17T09:42:00+03:00",
+      "language": "tr",
+      "summary": "TCMB, bazı yatırım fonlarındaki likidite sorunlarının Borsa İstanbul'da devre kesiciye yol açtığı satışların ardından haftalık repo fonlamasını artırma, bankalararası borçlanma limitlerini güncelleme ve teminat iskontolarını düşürme kararı aldı. BIST 100 bir haftada yüzde 10'dan fazla değer kaybetmişti. Sanayici için hızlı müdahale, kredi kanalında ani bir sıkışma riskini azaltıyor; ancak finansal oynaklık fonlama maliyetlerini yakından izlemeyi gerektiriyor.",
+      "key_points": [
+        "TCMB haftalık repo ihaleleriyle sağlanan fonlamayı artıracak.",
+        "Bankalararası Para Piyasası borçlanma limitleri bilanço büyüklüklerine göre güncellenecek; teminat iskonto oranları düşürülecek.",
+        "BIST 100, 9 Eylül'deki 14.700 zirvesinden 13.122'ye geriledi; 16 Eylül'de devre kesici çalıştı.",
+        "Finansal İstikrar Komitesi sorunun belirli fonlarda yoğunlaştığını, yapısal risk olmadığını açıkladı."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB",
+          "Finansal İstikrar Komitesi",
+          "Borsa İstanbul"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacılık",
+          "Sermaye Piyasası"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "tcmb",
+        "likidite",
+        "repo",
+        "borsa-istanbul",
+        "yatirim-fonu",
+        "finansal-istikrar"
+      ],
+      "importance_factors": {
+        "authority": 82,
+        "impact": 75,
+        "keyword": 70,
+        "recency": 65,
+        "corroboration": 85,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "tcmb",
+      "url": "https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Duyurular/Basin/2026/DUY2026-41",
+      "title": "Türk Lirası Likidite Yönetimine İlişkin Basın Duyurusu (2026-41)",
+      "body": "Türk Lirası Likidite Yönetimine İlişkin Basın Duyurusu. Sayı: 2026-41. Tarih: 17 Eylül 2026.\n\nTürkiye Cumhuriyet Merkez Bankası, finansal piyasalardaki gelişmeler doğrultusunda likidite imkânlarını gözden geçirmiştir. Bu bağlamda:\n\n1. Haftalık repo ihaleleri aracılığıyla sağlanan fonlama miktarı piyasa koşulları dikkate alınarak artırılacaktır.\n\n2. Bankalararası Para Piyasasında bankaların borç alabilme limitleri, bankacılık sisteminin mevcut bilanço büyüklükleri dikkate alınarak güncellenecektir.\n\n3. Merkez Bankası bünyesindeki piyasalarda geçerli olan teminat iskonto oranları azaltılacaktır.\n\nLikidite koşulları yakından takip edilmeye devam edilecek ve ihtiyaç duyulması halinde gerekli ek tedbirler alınacaktır.\n\nKamuoyunun bilgisine sunulur.",
+      "published_at": "2026-09-17T09:00:00+03:00",
+      "language": "tr",
+      "summary": "TCMB'nin 17 Eylül 2026 tarihli resmi duyurusunda, finansal piyasalardaki gelişmeler üzerine haftalık repo fonlamasının artırılacağı, bankalararası borçlanma limitlerinin güncelleneceği ve teminat iskonto oranlarının azaltılacağı bildirildi. Duyuru, fon piyasasındaki likidite sıkışmasının bankacılık sistemine ve dolayısıyla ticari kredi arzına yayılmasını önlemeye yönelik. Sanayici için kısa vadeli kredi kanalının açık tutulacağı mesajı taşıyor.",
+      "key_points": [
+        "Haftalık repo ihaleleriyle sağlanan fonlama miktarı artırılacak.",
+        "Bankalararası Para Piyasası borç alabilme limitleri güncellenecek.",
+        "TCMB piyasalarında teminat iskonto oranları azaltılacak.",
+        "İhtiyaç halinde ek tedbir alınacağı belirtildi."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacılık"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "NOTR",
+      "tags": [
+        "tcmb",
+        "likidite",
+        "repo",
+        "para-politikasi",
+        "finansal-istikrar"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 75,
+        "keyword": 70,
+        "recency": 65,
+        "corroboration": 85,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "cumhuriyet-ekonomi",
+      "url": "https://www.cumhuriyet.com.tr/ekonomi/finansal-istikrar-komitesi-nden-borsa-hareketliligine-iliskin-aciklama-sorun-gecici-ve-yonetilebilir-niteliktedir-2538365",
+      "title": "Finansal İstikrar Komitesi'nden borsa hareketliliğine ilişkin açıklama: 'Sorun geçici ve yönetilebilir niteliktedir'",
+      "body": "Finansal İstikrar Komitesi, sermaye piyasalarındaki son gelişmeleri değerlendirmek üzere toplandı. Toplantının ardından yapılan açıklamada, piyasalardaki hareketliliğin bazı fonlarda yaşanan kredi ve likidite sorunlarından kaynaklandığı belirtildi. Komite, gerekli tedbirlerin hızlı şekilde uygulanacağını ve gelişmelerin yakından takip edileceğini bildirdi.\n\nFinansal İstikrar Komitesi (FİK), sermaye piyasalarında yaşanan son gelişmelerin ardından Hazine ve Maliye Bakanı Mehmet Şimşek başkanlığında toplandı. Komite, piyasalardaki hareketliliğin sınırlı sayıdaki portföy yönetim şirketinin uhdesindeki bazı fonlarda yaşanan kredi ve likidite sorunlarından kaynaklandığını değerlendirdi.\n\nHazine ve Maliye Bakanlığı tarafından toplantının ardından yapılan açıklamada, Borsa İstanbul ve sermaye piyasalarının işleyişine ilişkin temel veya yapısal bir risk bulunmadığı belirtildi. Açıklamada, sorunun fon piyasasının belirli bir bölümünde yoğunlaştığı ve geçici ve yönetilebilir nitelikte olduğu ifade edildi.\n\nKomitenin, piyasaların sağlıklı işleyişinin sürdürülmesi ve makrofinansal istikrarın korunması amacıyla alınabilecek tedbirleri değerlendirdiği bildirildi. FİK, süreç boyunca yurttaşlardan yalnızca resmi kaynaklardan yapılan açıklamaların dikkate alınmasını istedi.",
+      "published_at": "2026-09-17T10:13:00+03:00",
+      "language": "tr",
+      "summary": "Hazine ve Maliye Bakanı Şimşek başkanlığında olağanüstü toplanan Finansal İstikrar Komitesi, borsadaki sert düşüşün sınırlı sayıda portföy yönetim şirketinin fonlarındaki kredi ve likidite sorunlarından kaynaklandığını, sorunun geçici ve yönetilebilir olduğunu açıkladı. Borsa İstanbul'un işleyişinde yapısal risk görülmediği vurgulandı. Sanayici açısından mesaj, finansal çalkantının reel kesim kredilerine yayılmasının önlenmeye çalışılacağıdır.",
+      "key_points": [
+        "FİK, Hazine ve Maliye Bakanı Mehmet Şimşek başkanlığında olağanüstü toplandı.",
+        "Hareketliliğin kaynağı: sınırlı sayıda portföy yönetim şirketinin fonlarındaki kredi ve likidite sorunları.",
+        "Borsa İstanbul ve sermaye piyasalarında temel veya yapısal risk bulunmadığı açıklandı.",
+        "Likidite sıkışıklığı ve bulaşma riskine karşı tedbirlerin hızla uygulanacağı belirtildi."
+      ],
+      "entities": {
+        "kurum": [
+          "Finansal İstikrar Komitesi",
+          "Hazine ve Maliye Bakanlığı",
+          "Borsa İstanbul"
+        ],
+        "kisi": [
+          "Mehmet Şimşek"
+        ],
+        "sektor": [
+          "Sermaye Piyasası"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "NOTR",
+      "tags": [
+        "finansal-istikrar",
+        "borsa-istanbul",
+        "yatirim-fonu",
+        "sermaye-piyasasi"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 65,
+        "keyword": 55,
+        "recency": 65,
+        "corroboration": 85,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "ekonomim",
+      "url": "https://www.ekonomim.com/ekonomi/kisa-vadeli-dis-borc-stoku-2481-milyar-dolar-oldu-haberi-918799",
+      "title": "Kısa vadeli dış borç stoku 248,1 milyar dolar oldu",
+      "body": "Türkiye'nin kısa vadeli dış borç stoku temmuzda aylık yüzde 3,8 artışla 177,1 milyar dolara yükseldi. Kalan vadesi bir yıl veya daha az olan dış borç stoku ise 248,1 milyar dolar olarak hesaplandı.\n\nTürkiye Cumhuriyet Merkez Bankası (TCMB), Temmuz 2026 dönemine ilişkin Kısa Vadeli Dış Borç İstatistiklerini yayımladı.\n\nBankaların kısa vadeli dış borcu aylık yüzde 4,3 artışla 77,8 milyar dolar oldu. Yurt içi bankaların yurt dışından sağladığı kısa vadeli kredi ve menkul kıymet yükümlülükleri yüzde 23,5 artışla 9,8 milyar dolara çıktı. Yurt dışı bankaların yurt içindeki mevduatı yüzde 7 artarak 19,8 milyar dolara, banka dışı yurt dışı yerleşiklerin mevduatı ise yüzde 1,1 artarak 21,6 milyar dolara yükseldi. Türk lirası cinsinden toplam mevduat yükümlülükleri yüzde 0,5 azalarak 26,6 milyar dolar oldu.\n\nDiğer sektörlerin kısa vadeli dış borcu bir önceki aya göre yüzde 3,6 artışla 74,7 milyar dolara ulaştı. Dış ticaretten kaynaklanan ticari kredi yükümlülükleri yüzde 2,4 artarak 65,1 milyar dolara, nakdi kredi yükümlülükleri ise yüzde 13,1 artarak 9,7 milyar dolara çıktı.\n\nPara birimi dağılımında ABD doları toplam stokun yüzde 34,3'ünü, avro yüzde 26,5'ini, Türk lirası yüzde 26'sını ve diğer para birimleri yüzde 13,2'sini oluşturdu.\n\nKalan vadeye göre hesaplamada mevduat yükümlülükleri toplam 68 milyar dolar, kredi ve menkul kıymet yükümlülükleri 77,8 milyar dolar oldu.",
+      "published_at": "2026-09-17T10:31:00+03:00",
+      "language": "tr",
+      "summary": "TCMB verilerine göre kısa vadeli dış borç stoku temmuzda aylık yüzde 3,8 artışla 177,1 milyar dolara, kalan vadeye göre bir yıl içinde ödenecek dış borç 248,1 milyar dolara yükseldi. Reel sektörün dış ticaretten kaynaklanan ticari kredi yükümlülükleri 65,1 milyar dolara, nakdi kredileri yüzde 13,1 artışla 9,7 milyar dolara çıktı. Döviz cinsi kısa vadeli borcu olan sanayiciler için kur ve çevirme (roll-over) riski artıyor.",
+      "key_points": [
+        "Kısa vadeli dış borç stoku temmuzda 177,1 milyar dolar (aylık +%3,8).",
+        "Kalan vadeye göre kısa vadeli dış borç 248,1 milyar dolar.",
+        "Reel sektörün ticari kredi yükümlülükleri 65,1 milyar dolar; nakdi krediler yüzde 13,1 artışla 9,7 milyar dolar.",
+        "Stokun yüzde 34,3'ü dolar, yüzde 26,5'i avro, yüzde 26'sı TL cinsinden."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Bankacılık",
+          "Dış Ticaret"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "dis-borc",
+        "tcmb",
+        "kur-riski",
+        "ithalat",
+        "odemeler-dengesi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 60,
+        "keyword": 60,
+        "recency": 65,
+        "corroboration": 50,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "tcmb",
+      "url": "https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Duyurular/Basin/2026/DUY2026-42",
+      "title": "Para Politikası Kurulu Toplantı Özeti (2026-42)",
+      "body": "Para Politikası Kurulu Toplantı Özeti. Sayı: 2026-42. Tarih: 17 Eylül 2026. Toplantı tarihi: 10 Eylül 2026.\n\nKurul, politika faizi olan bir hafta vadeli repo ihale faiz oranını yüzde 37'de sabit tutmuştur. Merkez Bankası gecelik vadede borç verme faiz oranı yüzde 40'ta, gecelik vadede borçlanma faiz oranı yüzde 35,5'te sabit tutulmuştur.\n\nKüresel gelişmeler: Jeopolitik gelişmelere bağlı olarak artan belirsizlikler neticesinde enerji fiyatlarındaki yüksek ve dalgalı seyir sürmektedir. Türkiye'nin dış ticaret ortaklarının ihracat paylarıyla ağırlıklandırılan küresel büyüme endeksinin 2026 yılı için yüzde 1,6, 2027 yılı için ise yüzde 2,5 artacağı tahmin edilmektedir. Emtia fiyatlarındaki oynaklığa bağlı olarak enflasyon beklentileri üzerindeki yukarı yönlü riskler sürmektedir.\n\nEnflasyon: Tüketici fiyatları ağustos ayında yüzde 1,84 artmış, yıllık enflasyon 0,24 puan gerileyerek yüzde 31,51 olmuştur. B endeksinin yıllık değişim oranı yüzde 30,68 olarak gerçekleşmiştir. Enerji fiyatları, ulaştırma hizmetleri ve eğitim fiyatları öne çıkan kalemler olmuştur.\n\nTalep ve üretim: İkinci çeyrekte GSYH yıllık yüzde 2,3, çeyreklik yüzde 1,1 büyümüştür. İç talep zayıflarken hizmetler dayanıklılığını korumuştur. Perakende satışlar ve imalat sanayiinde yavaşlama işaretleri görülmektedir.\n\nİstihdam: Mevsimsellikten arındırılmış istihdam 32,4 milyon kişi düzeyinde, bir önceki çeyreğe göre hafif gerilemiştir; işsizlik oranı yüzde 8,1'e yükselmiştir.\n\nPara politikası duruşu: Fiyat istikrarı sağlanana kadar sıkı para politikası duruşu sürdürülecektir. Enflasyon görünümünde belirgin ve kalıcı bir bozulma olması durumunda para politikası duruşu sıkılaştırılacaktır. Kredi ve mevduat piyasalarında öngörülenin dışında gelişmeler olması halinde parasal aktarım mekanizması ilave makroihtiyati adımlarla desteklenecektir. Kurul, politika kararlarını enflasyonu orta vadede yüzde 5 hedefine ulaştıracak parasal ve finansal koşulları sağlayacak şekilde belirleyecektir.",
+      "published_at": "2026-09-17T14:00:00+03:00",
+      "language": "tr",
+      "summary": "TCMB'nin 10 Eylül PPK toplantısının resmi özeti yayımlandı: politika faizi yüzde 37'de sabit, ağustos yıllık enflasyonu yüzde 31,51, ikinci çeyrek büyümesi yıllık yüzde 2,3. Özette iç talebin zayıfladığı, imalat sanayiinde yavaşlama işaretleri olduğu ve enerji fiyatlarının yukarı yönlü risk oluşturduğu belirtildi. Sanayici için sıkı duruşun süreceği, enflasyonda bozulma olursa ek sıkılaşmanın gündeme gelebileceği anlamına geliyor.",
+      "key_points": [
+        "Politika faizi yüzde 37, gecelik borç verme yüzde 40, borçlanma yüzde 35,5'te sabit.",
+        "Ağustos TÜFE aylık yüzde 1,84, yıllık yüzde 31,51; B endeksi yüzde 30,68.",
+        "İkinci çeyrekte GSYH yıllık yüzde 2,3 büyüdü; imalat sanayiinde yavaşlama işaretleri var.",
+        "Küresel büyüme endeksi tahmini: 2026 için yüzde 1,6, 2027 için yüzde 2,5.",
+        "Enflasyon görünümünde kalıcı bozulmada sıkılaştırma yapılacağı yinelendi."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "tcmb",
+        "para-politikasi",
+        "politika-faizi",
+        "enflasyon",
+        "ic-talep",
+        "enerji-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 95,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 65,
+        "corroboration": 85,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "borsa-gundem",
+      "url": "https://www.borsagundem.com.tr/tcmb-para-politikasi-kurulu-tutanaklari-yayimlandi-enflasyon-mesaji-one-cikti",
+      "title": "TCMB Para Politikası Kurulu tutanakları yayımlandı: Enflasyon mesajı öne çıktı",
+      "body": "Türkiye Cumhuriyet Merkez Bankası (TCMB) Para Politikası Kurulu Toplantı Özeti'nde, jeopolitik gelişmelere bağlı olarak artan belirsizlikler neticesinde enerji fiyatlarındaki yüksek ve dalgalı seyrin sürdüğü belirtilerek, \"Enerji arzı, tedarik zincirleri ve taşıma maliyetlerine ilişkin belirsizliklerin süresi ve boyutu enerji fiyatlarının gelecekteki seyri açısından belirleyici olmaya devam edecektir.\" ifadelerine yer verildi.\n\nDiğer taraftan, tarım emtia fiyatlarında da olumsuz hava koşulları ve jeopolitik gelişmeler kaynaklı yükseliş gözlendiği belirtilen özette, bu durumun enflasyon gelişmeleri ve beklentiler üzerinde yukarı yönlü bir başka risk unsuru olarak ortaya çıktığı bildirildi.\n\nÖzette, üretim yönünden değerlendirildiğinde, ikinci çeyrekte yıllık büyümeye inşaat dışındaki bütün kalemler pozitif katkı verirken büyümenin temel belirleyicisinin hizmetler sektörü olduğu belirtildi. Yıllık bazda, ilk çeyrekte gerileyen sanayi katma değerinin ikinci çeyrekte arttığı kaydedildi. Özel tüketim harcamalarındaki azalışın ikinci çeyrekte büyüyerek tüketimde belirgin yavaşlamaya işaret ettiği, toplam yatırımların ise çeyreklik bazda değişmediği aktarıldı. Mal ve hizmet ihracatı artarken ithalatın gerilediği, net ihracatın çeyreklik büyümeye pozitif katkı sağladığı vurgulandı.\n\nÖzette, yurt içi üretici fiyatlarının ağustosta yüzde 2,57 arttığı ve yıllık üretici enflasyonunun 0,12 puan artarak yüzde 27,95 olduğu anımsatıldı. Enerji fiyatlarının yüzde 6,99 artışla ana sanayi grupları arasında öne çıkmaya devam ettiğine işaret edilen özette, dayanıklı tüketim malları (mücevherat hariç) fiyatlarının yüzde 2,01 yükseldiği, diğer ana sanayi gruplarında artışların yüzde 1,5-1,8 bandında gerçekleştiği bilgisi paylaşıldı. Rafine edilmiş petrol ürünleri, tütün, kömür-linyit, metal cevheri ve elektrik fiyat artışıyla öne çıkan alt gruplar oldu.\n\nHaziranda gerileyen Brent ham petrol fiyatlarının temmuzda tekrar artan jeopolitik gerilimle birlikte ağustosta 91 dolar seviyesinde gerçekleştiği, eylül ayının ilk 10 günü itibarıyla ise ortalama 103 dolar seviyesine ulaştığı bildirildi. TTF doğal gaz fiyatlarının da yükselmeye devam ettiği belirtildi.\n\nÖzette şu ifadelere yer verildi: \"Jeopolitik gelişmelerle nisan ve mayıs aylarında tarihsel ortalamasının belirgin üzerinde gerçekleşen Küresel Arz Zinciri Baskı Endeksi, izleyen dönemde gerilemekle birlikte tarihsel ortalamasının üzerinde seyretmeye devam etmiştir. Yaşanan jeopolitik gelişmelerle Hürmüz Boğazı kaynaklı riskler varlığını korumakta, küresel navlun maliyetleri olumsuz seyretmektedir. Küresel ve Çin'e yönelik konteyner endekslerinde mart ayından itibaren gözlenen yükseliş eylül ayının ilk 10 günü itibarıyla devam etmiştir. Mevsimsel etkilerden arındırılmış imalat sanayi PMI verileri, ağustos ayında girdi ve ürün fiyat endekslerinde artışa, teslim sürelerinde de kısmi bir bozulmaya işaret etmiştir.\"\n\nReel sektör beklentilerine bakıldığında, firmaların 12 ay sonrasına ilişkin yıllık enflasyon beklentisinin ağustos ayında 0,3 puan yükselerek yüzde 32,8 seviyesinde ölçüldüğü belirtildi. \"Enflasyon beklentileri ve fiyatlama davranışları dezenflasyon süreci açısından risk unsuru olmaya devam etmektedir.\" değerlendirmesinde bulunuldu.\n\nPara politikası kararlarının enflasyon görünümü odaklı, toplantı bazlı ve ihtiyatlı bir yaklaşımla alındığının altı çizilen özette, \"Enflasyon görünümünde belirgin ve kalıcı bir bozulma olması durumunda para politikası duruşu sıkılaştırılacaktır. Kredi ve mevduat piyasalarında öngörülenin dışında gelişmeler olması halinde parasal aktarım mekanizması ilave makroihtiyati adımlarla desteklenecektir.\" ifadeleri yer aldı.",
+      "published_at": "2026-09-17T14:09:00+03:00",
+      "language": "tr",
+      "summary": "TCMB'nin PPK özetinde ağustos yıllık ÜFE'nin yüzde 27,95'e çıktığı, enerji fiyatlarının aylık yüzde 6,99 artışla sanayi grupları arasında öne çıktığı ve Brent'in eylülün ilk 10 gününde ortalama 103 dolara yükseldiği belirtildi. Özette Hürmüz kaynaklı riskler, yükselen navlun ve konteyner endeksleri ile PMI'daki teslim süresi bozulması da vurgulandı. İmalatçı için girdi, enerji ve lojistik maliyet baskısının sürdüğü, reel sektör enflasyon beklentisinin yüzde 32,8'e çıktığı bir tablo.",
+      "key_points": [
+        "Ağustosta Yİ-ÜFE aylık yüzde 2,57, yıllık yüzde 27,95; enerji fiyatları aylık yüzde 6,99 arttı.",
+        "Brent ağustosta ortalama 91 dolar, eylülün ilk 10 gününde 103 dolar.",
+        "Küresel Arz Zinciri Baskı Endeksi tarihsel ortalamanın üzerinde; konteyner endekslerinde yükseliş sürüyor.",
+        "Firmaların 12 ay sonrası enflasyon beklentisi yüzde 32,8'e yükseldi.",
+        "İkinci çeyrekte sanayi katma değeri yıllık bazda arttı; özel tüketimde belirgin yavaşlama var."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii",
+          "Enerji",
+          "Lojistik"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "tcmb",
+        "para-politikasi",
+        "uretici-fiyatlari",
+        "enerji-maliyeti",
+        "navlun",
+        "hurmuz-bogazi",
+        "brent"
+      ],
+      "importance_factors": {
+        "authority": 62,
+        "impact": 75,
+        "keyword": 80,
+        "recency": 65,
+        "corroboration": 85,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "finansingundemi",
+      "url": "https://www.finansingundemi.com/haber/tcmb-acikladi-ppk-toplantisinin-ozeti-yayimlandi/1908624",
+      "title": "TCMB açıkladı: PPK toplantısının özeti yayımlandı",
+      "body": "Türkiye Cumhuriyet Merkez Bankası (TCMB), 10 Eylül tarihli Para Politikası Kurulu (PPK) toplantısının özetini yayımladı. Özette, enflasyonun ana eğiliminin gerilediğine işaret edilirken enerji fiyatlarının enflasyon görünümü üzerinde yukarı yönlü risk oluşturmaya devam ettiği belirtildi. Kurul, toplantıda politika faizini yüzde 37, gecelik borç verme faizini yüzde 40 ve gecelik borçlanma faizini yüzde 35,5 seviyesinde sabit tutmuştu.\n\nEylül enflasyonunda eğitim kaynaklı düşüş bekleniyor: TCMB, ağustos ayında enflasyonun ana eğiliminde yaşanan yükselişte, geçen yıl eylül ayında tek seferde gerçekleşen vakıf üniversitesi ücret artışlarının bu yıl ağustos ve eylül aylarına yayılmasının etkili olduğunu bildirdi. Söz konusu takvim değişikliklerinin ağustos ayı enflasyonunu yaklaşık 0,25 puan artırdığı, eylül ayı enflasyonunu ise eğitim hizmetleri kaynaklı olarak mekanik biçimde aşağı çekmesinin beklendiği ifade edildi. Öncü verilerin, eylül ayında mevsimsellikten arındırılmış aylık hizmet enflasyonunda yavaşlamaya işaret ettiği belirtildi. Temel mal fiyatlarında ise ılımlı seyrin devam etmesinin beklendiği kaydedildi.\n\nBrent petrolün ortalaması 103 dolara yükseldi: TCMB, Brent petrolün ağustos ayında ortalama 91 dolar seviyesinde gerçekleştiğini, eylül ayının ilk 10 gününde ise ortalama fiyatın 103 dolara yükseldiğini açıkladı. Hürmüz Boğazı kaynaklı gelişmelerin enerji fiyatlarında belirgin bir yükselişe yol açtığı belirtilirken TTF doğal gaz fiyatlarındaki artışın da devam ettiği ifade edildi.\n\nRezervler 184,2 milyar dolara çıktı: TCMB'nin brüt uluslararası rezervleri, 24 Temmuz-4 Eylül döneminde 21,6 milyar dolar artarak 184,2 milyar dolara yükseldi. Türkiye'nin 5 yıllık kredi risk primi (CDS) ise 22 Temmuz-9 Eylül döneminde gerileyerek 220 baz puana indi. Önceki PPK toplantı haftasından 4 Eylül'e kadar DİBS piyasasına 1,3 milyar dolarlık giriş, hisse senedi piyasasına ise 0,1 milyar dolarlık çıkış gerçekleşti.\n\nYTAK limiti 750 milyar TL'ye çıkarıldı: Yatırım Taahhütlü Avans Kredisi (YTAK) programının toplam limitleri 300 milyar TL'den 750 milyar TL'ye yükseltildi. İlave 450 milyar TL'nin 50 milyar TL'si 2026 yılı limitine eklenerek bu yılki YTAK limiti 150 milyar TL'ye çıkarıldı. Kalan 400 milyar TL'nin 200 milyar TL'si 2027 yılına, 200 milyar TL'si ise 2028 yılına tahsis edildi.\n\nTCMB, enflasyon görünümünde belirgin ve kalıcı bir bozulma yaşanması halinde para politikası duruşunun sıkılaştırılacağını yineledi. Banka, yukarı yönlü risklere karşı ihtiyatlı duruşunu sürdüreceğini vurguladı.",
+      "published_at": "2026-09-17T14:22:00+03:00",
+      "language": "tr",
+      "summary": "PPK özetine göre Yatırım Taahhütlü Avans Kredisi (YTAK) programının toplam limiti 300 milyar TL'den 750 milyar TL'ye çıkarıldı; 2026 limiti 150 milyar TL'ye yükseldi, 2027 ve 2028'e 200'er milyar TL ayrıldı. Özette brüt rezervlerin 184,2 milyar dolara çıktığı, eylül enflasyonunun eğitim kalemi nedeniyle mekanik olarak düşeceği belirtildi. Yatırım planlayan sanayici için uygun maliyetli uzun vadeli yatırım kredisi havuzunun genişlediği anlamına geliyor.",
+      "key_points": [
+        "YTAK toplam limiti 300 milyar TL'den 750 milyar TL'ye yükseltildi.",
+        "2026 YTAK limiti 150 milyar TL; 2027 ve 2028'e 200'er milyar TL tahsis edildi.",
+        "Brüt rezervler 24 Temmuz-4 Eylül'de 21,6 milyar dolar artışla 184,2 milyar dolara çıktı; CDS 220 baz puan.",
+        "Eğitim ücretlerindeki takvim kayması eylül enflasyonunu mekanik olarak aşağı çekecek."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "POZITIF",
+      "tags": [
+        "ytak",
+        "tcmb",
+        "yatirim",
+        "kredi-destegi",
+        "rezervler",
+        "sanayi-yatirimi"
+      ],
+      "importance_factors": {
+        "authority": 50,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 65,
+        "corroboration": 80,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "aa-ekonomi",
+      "url": "https://www.aa.com.tr/tr/ekonomi/spk-tasfiye-edilen-yatirim-fonlarinin-tasfiye-surecine-iliskin-usul-ve-esaslari-belirledi/4060721",
+      "title": "SPK, tasfiye edilen yatırım fonlarının tasfiye sürecine ilişkin usul ve esasları belirledi",
+      "body": "SPK, tasfiye edilen yatırım fonlarının tasfiye sürecine ilişkin usul ve esasları belirledi.\n\nBuna göre, Tera Portföy Yönetimi AŞ'nin kurucusu olduğu fonların portföy saklayıcısı olarak Türkiye İş Bankasının, A1 Capital Portföy Yönetimi AŞ, Atlas Portföy Yönetimi AŞ, Bulls Portföy Yönetimi AŞ, Hedef Portföy Yönetimi AŞ, Pardus Portföy Yönetimi AŞ ve Pusula Portföy Yönetimi AŞ'nin kurucusu olduğu fonların portföy saklayıcısı olarak Ziraat Bankasının görevlendirilmesine ve ilgili bankaların bu fonların tasfiye süreçlerinin yürütülmesinde yetkilendirilmelerine karar verildi.\n\nTakip eden 2 iş günü içinde tasfiye konusu fonların her birinin tedavüldeki toplam katılma payı adedi ile yatırımcıların sicil bazında bireysel saklama hesapları detayındaki katılma payları ile varsa rehin, haciz, tedbir ve diğer takyidatlar ve gerçekleşmemiş emirlere ilişkin mutabakat Merkezi Kayıt Kuruluşu (MKK) ve bankalar arasında yapılacak. Fon portföyündeki saklamaya konu finansal varlıklar, Takasbank'ta ilgili bankalar nezdindeki hesaplar altında saklanacak.\n\nSüreçte yatırımcı menfaati gözetilecek: Fon portföyünde yer alan finansal varlıklar, yatırımcı menfaati, piyasa derinliği, likidite koşulları gözetilerek bankanın belirleyeceği sıklıkta fon hesabına verilecek satış talimatlarıyla nakde dönüştürülecek. Bankalar tarafından belirlenecek dönemler itibarıyla elde edilen nakit, fon yatırımcılarının mutabakatı yapılmış bireysel saklama hesaplarına fon katılma payı sahipliği oranında aktarılacak.\n\nSüreç en fazla 3 ay sürecek: İhbarlı fonlar için 17 Eylül saat 13.30'dan sonra iletilen katılma payı iade talimatları ile para piyasası fonları için izahnamede yer verilen gün sonu valör atlama saatinden sonra iletilen iade talimatları tasfiye esasları kapsamında yer alacak. İlgili fonların mal varlığının tasfiyesi, tasfiye duyuru tarihinden itibaren geçecek en fazla 3 aylık sürenin bitimini izleyen ilk iş gününde sona erecek. Kurulca uygun görülmesi halinde bu süre uzatılabilecek.\n\nTEFAS'ta alım ve satım yönünde işleme kapatılan fonlar için TEFAS dışı işlemler kapsamında kurucu ve diğer dağıtıcı kuruluşlar aracılığıyla katılma payı iade talimatları da gerçekleştirilmeyecek. 17 Eylül ve öncesinde fon portföyüne ilişkin olarak verilen ve takası gerçekleşmemiş olan varlık ve işlem talimatları olağan süreci dahilinde gerçekleştirilecek.",
+      "published_at": "2026-09-18T12:00:00+03:00",
+      "language": "tr",
+      "summary": "SPK, yedi portföy yönetim şirketine ait tasfiye edilen yatırım fonlarında Tera Portföy fonları için İş Bankası'nı, diğerleri için Ziraat Bankası'nı saklayıcı ve tasfiye yetkilisi olarak görevlendirdi; tasfiye en fazla 3 ay sürecek. 17 Eylül 13.30 sonrası verilen iade talimatları tasfiye kapsamına alındı. Nakit yönetimini para piyasası fonları üzerinden yapan sanayi şirketleri için likiditeye erişimin gecikebileceği anlamına geliyor.",
+      "key_points": [
+        "Tera Portföy fonlarında İş Bankası, A1, Atlas, Bulls, Hedef, Pardus ve Pusula fonlarında Ziraat Bankası tasfiyeyi yürütecek.",
+        "Tasfiye, duyurudan itibaren en fazla 3 ay içinde tamamlanacak; SPK süreyi uzatabilir.",
+        "17 Eylül saat 13.30'dan sonra verilen iade talimatları tasfiye esaslarına tabi.",
+        "Varlıklar piyasa derinliği ve likidite gözetilerek nakde çevrilip pay sahiplerine oransal aktarılacak."
+      ],
+      "entities": {
+        "kurum": [
+          "SPK",
+          "Türkiye İş Bankası",
+          "Ziraat Bankası",
+          "Takasbank",
+          "MKK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Sermaye Piyasası",
+          "Bankacılık"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "spk",
+        "yatirim-fonu",
+        "para-piyasasi-fonu",
+        "nakit-yonetimi",
+        "sermaye-piyasasi"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 60,
+        "keyword": 55,
+        "recency": 70,
+        "corroboration": 80,
+        "reach": 75
+      }
+    },
+    {
+      "source_slug": "businews",
+      "url": "https://businews.com.tr/finans-borsa/turkiyede-fon-piyasasinda-temizlik-ve-likidite-destegi-spk-ve-tcmbnin-kapsamli-onlemleri/",
+      "title": "Türkiye'de fon piyasasında temizlik ve likidite desteği: SPK ve TCMB'nin kapsamlı önlemleri",
+      "body": "Türkiye piyasaları, doğal afet, savaş veya iç siyasi gelişmeler dışında yaşadığı en kötü günün ardından kamu otoritelerinin hızla devreye girmesiyle yeni bir döneme adım attı. Hazine ve Maliye Bakanlığı, Finansal İstikrar Komitesi'ni toplayarak likidite sıkıntısını gidermek amacıyla kapsamlı tedbirlerin alınacağını duyurdu. Bu çerçevede, Türkiye Cumhuriyet Merkez Bankası (TCMB) teminatları gevşetti, limitleri artırdı; Sermaye Piyasası Kurulu (SPK) ise 7 şirketin toplam 130 fonunu tasfiye kararı aldı. Türkiye Varlık Fonu ise Borsa İstanbul'da en büyük alıcı konumuna yükseldi.\n\nPiyasa ve likidite gelişmeleri: Borsa İstanbul'da bankacılık endeksi gün içinde yüzde 6'nın üzerinde, BİST100 endeksi ise yüzde 2'nin üzerinde yükseliş kaydetti. SPK'nın 28 Ağustos'taki yatırım fonları rehberindeki değişiklikler ve küresel endeks sağlayıcılarının uyarıları sonrasında bazı fonlarda likidite sorunları ortaya çıktı. Pusula Portföy, Tera Portföy ve Atlas Portföy gibi firmaların fonları temerrüde düştü; bu durum panik satışlarına ve 1,76 trilyon TL'ye varan teminat tamamlama çağrılarına yol açtı.\n\nTCMB'nin likidite destekleri: TCMB, likidite koşullarını göz önünde bulundurarak haftalık repo ihalelerinin fonlama miktarını artırdı. Bankalararası Para Piyasası'nda borç alım limitleri güncellendi ve teminat iskonto oranları azaltıldı. 22 ve 24 Eylül vadeli iki ayrı repo ihalesi açıldı; her bir ihale 150 milyar TL tutarında olup, talep miktarın üç katına yaklaştı.\n\nSPK'nın tedbirleri: SPK, 7 portföy yönetim şirketinin tüm fonlarını TEFAS üzerinden alım satıma kapatarak 130 yatırım fonu için tasfiye kararı aldı. Bu şirketler arasında Tera Portföy, Pusula Portföy, Hedef Portföy, Atlas Portföy, A1 Portföy, Pardus Portföy ve Bulls Portföy bulunuyor. Tasfiye edilen fonların toplam portföy büyüklüğü 1 trilyon TL'yi aşıyor ve 934 bin yatırımcı bu fonları kullanıyordu. Ayrıca SPK kredili sermaye piyasası işlemlerinde özkaynak koruma oranını yüzde 35'ten yüzde 20'ye düşürme kararı aldı.\n\nUzman görüşleri: Gedik Yatırım Kıdemli Araştırma Analisti Burak Pırlanta, TCMB'nin önlemlerini fonlardaki geri ödeme sorunlarının banka likiditesini hızla azaltma riski karşısında bankacılık sistemini korumaya yönelik olarak değerlendirdi. Fonların varlıklarının büyük bir kısmının banka mevduatları, repo ve kısa vadeli borçlanma araçlarında bulunduğunu belirten Pırlanta, artırılan repo fonlaması ve borçlanma limitlerinin bankaların nakit likiditesini güçlendireceğini vurguladı.\n\nDiğer gelişmeler: Bankacılık Düzenleme ve Denetleme Kurumu (BDDK), halka açık bankaların hisse geri alımlarını yıl sonuna kadar çekirdek sermayeden indirmemesine izin vererek sermaye yeterliliği oranı hesaplamasında esneklik tanıdı. SPK, Pusula Portföy ve Tera Portföy yöneticilerine işlem bazlı piyasa dolandırıcılığı nedeniyle suç duyurusunda bulundu. Son iki iş gününde yatırım fonlarından 149,3 milyar TL net para çıkışı gerçekleşti; özellikle para piyasası fonları en çok etkilenen segment oldu.",
+      "published_at": "2026-09-18T05:07:00+03:00",
+      "language": "tr",
+      "summary": "Fon krizine karşı SPK yedi portföy şirketinin 130 fonunu tasfiye kararı aldı; tasfiye edilen fonların büyüklüğü 1 trilyon TL'yi aşıyor ve 934 bin yatırımcıyı ilgilendiriyor. TCMB repo fonlamasını artırıp teminat koşullarını gevşetti, BDDK bankalara sermaye yeterliliğinde esneklik tanıdı. Son iki iş gününde fonlardan 149,3 milyar TL çıkış oldu; şirket nakdini para piyasası fonlarında tutan sanayiciler ve banka kredi arzı açısından yakından izlenmesi gereken bir gelişme.",
+      "key_points": [
+        "SPK 7 portföy yönetim şirketinin 130 fonu için tasfiye kararı aldı; toplam büyüklük 1 trilyon TL'yi aşıyor.",
+        "TCMB 22 ve 24 Eylül vadeli 150'şer milyar TL'lik ek repo ihaleleri açtı; talep yaklaşık üç kat.",
+        "BDDK, bankaların hisse geri alımlarını yıl sonuna kadar çekirdek sermayeden düşmemesine izin verdi.",
+        "İki iş gününde yatırım fonlarından 149,3 milyar TL net çıkış yaşandı."
+      ],
+      "entities": {
+        "kurum": [
+          "SPK",
+          "TCMB",
+          "BDDK",
+          "Türkiye Varlık Fonu",
+          "Tera Portföy",
+          "Pusula Portföy"
+        ],
+        "kisi": [
+          "Burak Pırlanta"
+        ],
+        "sektor": [
+          "Sermaye Piyasası",
+          "Bankacılık"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "finansman",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "yatirim-fonu",
+        "spk",
+        "likidite",
+        "repo",
+        "bddk",
+        "para-piyasasi-fonu"
+      ],
+      "importance_factors": {
+        "authority": 48,
+        "impact": 70,
+        "keyword": 60,
+        "recency": 70,
+        "corroboration": 80,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "ekonomim",
+      "url": "https://www.ekonomim.com/ekonomi/reel-sektor-guveni-geriledi-kapasite-kullanimi-yukseldi-haberi-919593",
+      "title": "Reel sektör güveni eylülde geriledi",
+      "body": "Türkiye Cumhuriyet Merkez Bankası (TCMB), eylül ayına ilişkin Reel Kesim Güven Endeksi ve Kapasite Kullanım Oranı verilerini açıkladı.\n\nBuna göre, eylül ayında mevsimsellikten arındırılmış Reel Kesim Güven Endeksi, bir önceki aya göre 0,1 puan artarak 102,5 seviyesinde gerçekleşti. Mevsimsellikten arındırılmamış Reel Kesim Güven Endeksi ise bir önceki aya göre 0,8 puan azalarak 102 seviyesine geriledi. Endeks ağustosta 102,8 seviyesindeydi.\n\nSipariş ve istihdam değerlendirmeleri endeksi destekledi: Endeksi oluşturan anket sorularına ait yayılma endeksleri incelendiğinde, genel gidişat, mevcut toplam sipariş miktarı, gelecek üç aydaki toplam istihdam ve son üç aydaki toplam sipariş miktarına ilişkin değerlendirmeler endeksi artış yönünde etkiledi. Gelecek üç aydaki ihracat sipariş miktarı, mevcut mamul mal stoku, sabit sermaye yatırım harcaması ve gelecek üç aydaki üretim hacmine ilişkin değerlendirmeler ise endeksi azalış yönünde etkiledi.\n\nKapasite kullanımında iki ay sonra yükseliş: Mevsimsel etkilerden arındırılmış Kapasite Kullanım Oranı, bir önceki aya göre 0,6 puan artarak yüzde 74,1 oldu. Mevsimsel etkilerden arındırılmamış Kapasite Kullanım Oranı da bir önceki aya göre 0,7 puan artarak yüzde 74,2'ye çıktı. Böylece kapasite kullanım oranı iki aylık düşüşün ardından yeniden yükselişe geçti.",
+      "published_at": "2026-09-21T10:21:00+03:00",
+      "language": "tr",
+      "summary": "TCMB verilerine göre eylülde mevsimsellikten arındırılmış Reel Kesim Güven Endeksi 0,1 puan artışla 102,5'e çıkarken arındırılmamış endeks 0,8 puan düşüşle 102'ye geriledi. İmalat sanayiinde kapasite kullanım oranı iki aylık düşüşün ardından 0,6 puan artışla yüzde 74,1'e yükseldi. İhracat siparişi, yatırım harcaması ve üretim beklentilerinin endeksi aşağı çekmesi, sanayicinin önümüzdeki aylara temkinli baktığını gösteriyor.",
+      "key_points": [
+        "RKGE-MA eylülde 0,1 puan artışla 102,5; arındırılmamış RKGE 0,8 puan düşüşle 102,0.",
+        "KKO-MA 0,6 puan artışla yüzde 74,1; arındırılmamış KKO yüzde 74,2.",
+        "Gelecek üç ay ihracat siparişi, sabit sermaye yatırımı ve üretim hacmi beklentileri endeksi düşürdü.",
+        "Genel gidişat ve mevcut sipariş değerlendirmeleri endeksi destekledi."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "reel-kesim-guven-endeksi",
+        "kapasite-kullanimi",
+        "tcmb",
+        "imalat-sanayi",
+        "ihracat-siparisi"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 85,
+        "keyword": 90,
+        "recency": 80,
+        "corroboration": 85,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "karar-gazetesi",
+      "url": "https://www.karar.com/guncel-haberler/imalat-sanayinde-kapasite-kullanim-orani-eylulde-artti-2073252",
+      "title": "İmalat sanayinde kapasite kullanım oranı eylülde arttı",
+      "body": "Türkiye Cumhuriyet Merkez Bankası (TCMB), Eylül 2026 dönemine ilişkin İmalat Sanayi Kapasite Kullanım Oranı verilerini açıkladı.\n\nEylül ayında imalat sanayinde faaliyet gösteren 1.982 iş yerinin İktisadi Yönelim Anketi'ne verdiği yanıtlar toplulaştırılarak değerlendirildi. Anket, 1-14 Eylül tarihleri arasında uygulandı.\n\nİmalat sanayi genelinde mevsimsel etkilerden arındırılmış Kapasite Kullanım Oranı (KKO-MA), bir önceki aya göre 0,6 puan artarak yüzde 74,1 seviyesine çıktı. Mevsimsel etkilerden arındırılmamış Kapasite Kullanım Oranı (KKO) da aylık bazda 0,7 puan yükselerek yüzde 74,2 olarak gerçekleşti.\n\nDayanıklı tüketim mallarında gerileme: Mal gruplarına göre kapasite kullanım oranı eylülde tüketim mallarında yüzde 71,4, dayanıklı tüketim mallarında yüzde 66,4, dayanıksız tüketim mallarında yüzde 72,5 olarak kaydedildi. Ara mallarında kapasite kullanım oranı yüzde 74,5 olurken, yatırım mallarında yüzde 73,1 seviyesinde gerçekleşti. Ağustos ayında bu oranlar tüketim mallarında yüzde 71,6, dayanıklı tüketim mallarında yüzde 68,2, dayanıksız tüketim mallarında yüzde 72,2, ara mallarında yüzde 74,7 ve yatırım mallarında yüzde 69,7 seviyesindeydi. Buna göre eylülde yatırım mallarında kapasite kullanım oranı artarken, dayanıklı tüketim malları, tüketim malları ve ara mallarında düşüş görüldü. Dayanıksız tüketim mallarında ise oran yükseldi.\n\nSektörlerde en yüksek oran ağaç ürünlerinde: Sektörel verilere göre eylülde kapasite kullanım oranı ağaç ürünlerinde yüzde 83,7, tütünde yüzde 83,1 ve kağıtta yüzde 83 olarak gerçekleşti. Aynı dönemde tekstilde yüzde 69,5, giyimde yüzde 77,4, deride yüzde 59,8, kimyasal ürünlerde yüzde 72,6, eczacılık ürünlerinde yüzde 76,5, ana metalde yüzde 74,2 ve fabrikasyon metalde yüzde 74 olarak kaydedildi. Elektrikli teçhizatta kapasite kullanım oranı yüzde 72,6, makine ve ekipmanda yüzde 63,2, motorlu kara taşıtlarında yüzde 75,9, diğer ulaşım araçlarında yüzde 77,1 ve mobilyada yüzde 75,1 oldu.",
+      "published_at": "2026-09-21T10:07:00+03:00",
+      "language": "tr",
+      "summary": "TCMB'nin 1.982 imalat iş yerini kapsayan anketine göre eylülde kapasite kullanımı yüzde 74,1'e yükseldi; artışı yatırım malları (yüzde 69,7'den 73,1'e) sürükledi. Dayanıklı tüketim mallarında oran yüzde 68,2'den 66,4'e geriledi. Sektörel olarak makine-ekipman (yüzde 63,2) ve deri (yüzde 59,8) en düşük kapasiteyle çalışırken, ağaç ürünleri, tütün ve kağıt yüzde 83 üzerinde.",
+      "key_points": [
+        "Yatırım mallarında KKO yüzde 69,7'den 73,1'e yükseldi.",
+        "Dayanıklı tüketim mallarında KKO yüzde 68,2'den 66,4'e geriledi.",
+        "Makine ve ekipman yüzde 63,2, deri yüzde 59,8 ile en düşük kapasite kullanımında.",
+        "Ana metal yüzde 74,2, motorlu kara taşıtları yüzde 75,9, tekstil yüzde 69,5."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Makine",
+          "Tekstil",
+          "Otomotiv",
+          "Demir-Çelik",
+          "Kimya",
+          "Deri"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NOTR",
+      "tags": [
+        "kapasite-kullanimi",
+        "tcmb",
+        "imalat-sanayi",
+        "makine",
+        "tekstil",
+        "otomotiv"
+      ],
+      "importance_factors": {
+        "authority": 66,
+        "impact": 80,
+        "keyword": 90,
+        "recency": 80,
+        "corroboration": 85,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "alomaliye",
+      "url": "https://www.alomaliye.com/2026/09/22/tuketici-guveni-eylulde-yukseldi/",
+      "title": "Tüketici Güveni Eylülde Yükseldi",
+      "body": "Türkiye'de tüketici güven endeksi, Eylül 2026'da aylık bazda yüzde 1,3 artarak 91,9 seviyesine yükseldi.\n\nTüketici Güven Endeksi 91,9 oldu: Türkiye İstatistik Kurumu (TÜİK) ile Türkiye Cumhuriyet Merkez Bankası iş birliğiyle yürütülen Tüketici Eğilim Anketi'nin Eylül 2026 sonuçları açıklandı. Ağustos ayında 90,8 olan tüketici güven endeksi, Eylül ayında yüzde 1,3 artarak 91,9 oldu.\n\nHanenin mevcut maddi durumu geriledi: Mevcut dönemde hanenin maddi durumunu gösteren alt endeks, Eylül ayında yüzde 0,1 azalarak 75,4'ten 75,3'e geriledi.\n\nGelecek dönem beklentileri arttı: Gelecek 12 aylık dönemde hanenin maddi durum beklentisi endeksi, yüzde 0,6 artışla 93,1'den 93,7'ye yükseldi. Aynı döneme ilişkin genel ekonomik durum beklentisi endeksi ise yüzde 0,5 artarak 89,4'ten 89,8'e çıktı.\n\nDayanıklı tüketim harcama düşüncesinde güçlü artış: Gelecek 12 aylık dönemde dayanıklı tüketim mallarına harcama yapma düşüncesi endeksi, Eylül ayında yüzde 3,6 artarak 105,1'den 108,8'e yükseldi. Böylece alt endeksler arasında en yüksek aylık artış bu kalemde gerçekleşti.",
+      "published_at": "2026-09-22T11:55:00+03:00",
+      "language": "tr",
+      "summary": "TÜİK-TCMB Tüketici Eğilim Anketi'ne göre tüketici güven endeksi eylülde yüzde 1,3 artışla 91,9'a yükseldi. En güçlü artış, dayanıklı tüketim mallarına harcama düşüncesinde (yüzde 3,6 artışla 108,8) görüldü; hanelerin mevcut maddi durumu ise hafif geriledi. Beyaz eşya, mobilya ve otomotiv gibi dayanıklı tüketim malı üreticileri için iç talepte sınırlı bir canlanma sinyali.",
+      "key_points": [
+        "Tüketici güven endeksi 90,8'den 91,9'a yükseldi (+%1,3).",
+        "Dayanıklı tüketim malı harcama düşüncesi yüzde 3,6 artışla 108,8'e çıktı.",
+        "Hanenin mevcut maddi durumu endeksi 75,4'ten 75,3'e geriledi.",
+        "Genel ekonomik durum beklentisi 89,8'e yükseldi."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜİK",
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Dayanıklı Tüketim",
+          "Beyaz Eşya",
+          "Otomotiv"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "POZITIF",
+      "tags": [
+        "guven-endeksi",
+        "tuik",
+        "ic-talep",
+        "perakende"
+      ],
+      "importance_factors": {
+        "authority": 72,
+        "impact": 55,
+        "keyword": 65,
+        "recency": 85,
+        "corroboration": 70,
+        "reach": 50
+      }
+    },
+    {
+      "source_slug": "apara",
+      "url": "https://www.apara.com.tr/ekonomi/2026/09/23/tcmb-sektorel-enflasyon-beklentilerini-acikladi",
+      "title": "TCMB sektörel enflasyon beklentilerini açıkladı",
+      "body": "Türkiye Cumhuriyet Merkez Bankası (TCMB) Eylül 2026 Sektörel Enflasyon Beklentilerini açıkladı. Buna göre 12 ay sonrası yıllık enflasyon beklentisi piyasa katılımcılarında yüzde 23,70'e, hanehalkında yüzde 45,60'a yükseldi. Reel sektörün enflasyon beklentisi ise yüzde 32,50'ye geriledi.\n\nPiyasa Katılımcıları Anketi, İktisadi Yönelim Anketi ve TÜİK iş birliğiyle yürütülen Hanehalkı Beklenti Anketi kapsamında finansal ve reel sektör uzmanları, imalat sanayi firmaları ve hanehalkının 12 ay sonrası yıllık tüketici enflasyonu beklentileri derlendi.\n\nEylül ayında piyasa katılımcılarının 12 ay sonrası yıllık enflasyon beklentisi, bir önceki aya göre 0,01 puan artarak yüzde 23,70 seviyesine çıktı. Ağustos ayında bu beklenti yüzde 23,69 düzeyindeydi.\n\nReel sektörün 12 ay sonrası yıllık enflasyon beklentisi ise eylül ayında bir önceki aya göre 0,30 puan azalarak yüzde 32,50 oldu. Ağustos ayında reel sektörün beklentisi yüzde 32,80 seviyesindeydi. Rapordaki grafikte de reel sektör beklentisinin yıl içinde aşağı yönlü seyrini sürdürdüğü görülüyor.\n\nHanehalkının 12 ay sonrası yıllık enflasyon beklentisi ise eylülde 0,02 puan artarak yüzde 45,60 seviyesine yükseldi. Ağustos ayında söz konusu beklenti yüzde 45,58 olarak kaydedilmişti. Böylece üç kesim arasında en yüksek 12 ay sonrası enflasyon beklentisi hanehalkında, en düşük beklenti ise piyasa katılımcılarında gerçekleşti.\n\nGelecek 12 aylık dönemde enflasyonun düşeceğini bekleyen hanehalkının oranı da geriledi. Ağustosta yüzde 16,85 olan oran, eylülde 0,60 puan azalarak yüzde 16,25 seviyesine indi.",
+      "published_at": "2026-09-23T10:21:00+03:00",
+      "language": "tr",
+      "summary": "TCMB'nin Eylül 2026 sektörel enflasyon beklentilerine göre reel sektörün 12 ay sonrası enflasyon beklentisi 0,30 puan düşüşle yüzde 32,50'ye geriledi; piyasa katılımcılarında yüzde 23,70, hanehalkında yüzde 45,60. Firmalar ile piyasa arasındaki yaklaşık 9 puanlık fark, sanayicinin fiyatlama ve ücret pazarlıklarında hâlâ yüksek enflasyon varsaydığını gösteriyor.",
+      "key_points": [
+        "Reel sektörün 12 ay sonrası enflasyon beklentisi yüzde 32,80'den 32,50'ye geriledi.",
+        "Piyasa katılımcılarında beklenti yüzde 23,70 (ağustos: 23,69).",
+        "Hanehalkı beklentisi yüzde 45,60 ile en yüksek seviyede.",
+        "Enflasyonun düşeceğini bekleyen hane oranı yüzde 16,25'e indi."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB",
+          "TÜİK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "enflasyon-beklentisi",
+        "tcmb",
+        "enflasyon",
+        "dezenflasyon"
+      ],
+      "importance_factors": {
+        "authority": 55,
+        "impact": 65,
+        "keyword": 75,
+        "recency": 90,
+        "corroboration": 60,
+        "reach": 45
+      }
+    },
+    {
+      "source_slug": "bloomberght",
+      "url": "https://www.bloomberght.com/oecd-turkiye-ekonomisinin-bu-yil-yuzde-2-7-buyumesini-bekliyor-3789146",
+      "title": "OECD, Türkiye ekonomisinin bu yıl yüzde 2,7 büyümesini bekliyor",
+      "body": "Ekonomik İşbirliği ve Kalkınma Örgütü (OECD), Türkiye ekonomisinin bu yıl yüzde 2,7 büyüyeceğini tahmin ederken, küresel ekonomide büyümenin yüzde 2,9 olacağını öngördü. OECD, ara dönem Ekonomik Görünüm raporunu \"Arka Arkaya Şoklarla Başa Çıkmak\" başlığıyla yayımladı.\n\nRapora göre, küresel ekonomi 2025'te yüzde 3,4 büyüdü. Ekonomik büyüme hızı bu yılın ilk yarısında yavaşladı ancak Orta Doğu'daki jeopolitik risklerin olumsuz etkilerine rağmen ekonomide büyüme birçok ülkede dayanıklılığını korudu. Yapay zeka alanındaki gelişmelerin güçlü seyrini sürdürmesi de yatırım, üretim ve ticareti destekledi.\n\nAncak küresel ekonomik görünüm, büyük ölçüde Orta Doğu'daki savaşta kalıcı bir çözüm bulunup bulunmamasına bağlı olmaya devam ediyor. Üretimdeki darboğazlardan kaynaklanan yüksek rafineri marjları, tüketici fiyatları ve işletme maliyetleri üzerinde ek bir yukarı yönlü baskı oluşturuyor. Enerji fiyatlarının yanı sıra bazı tarım ürünlerinin fiyatları da aşırı hava koşullarının arz üzerindeki etkisiyle yüksek seyretmeye devam ediyor. Gümrük vergileri ve ihracat kısıtları dahil olmak üzere, ticaret politikalarında süregelen değişiklikler politika belirsizliğini artırarak arz kesintilerine katkıda bulunuyor.\n\nUzun vadeli mali riskler ve yapay zeka şirketlerinin yoğun tahvil ihracı konusundaki endişelerin artmasıyla, birçok ekonomide uzun vadeli faiz oranları en az 15 yılın en yüksek seviyesine çıktı. Bu gelişmelerin etkisiyle OECD, bu yıl için küresel ekonomik büyüme tahminini hazirandaki öngörüsüne göre 0,1 puan artırarak yüzde 2,9'a yükseltirken, 2027 için tahminini ise 0,1 puan düşürerek yüzde 3'e revize etti.\n\nEnflasyonun küresel çapta, emtia fiyatlarındaki artışları yansıtacak şekilde kısa vadede hızlanacağı ancak enerji fiyatlarında beklenen yavaşlama ve sıkılaştırılan para politikasının genel fiyat baskılarını sınırlamaya yardımcı olmasıyla 2027'de kademeli olarak yavaşlayacağı tahmin ediliyor.\n\nTürkiye'de dezenflasyonun devam etmesi bekleniyor: OECD, 2025'te yüzde 3,7 büyüyen Türkiye ekonomisinin bu yıl yüzde 2,7 büyüyeceğini öngördü. Kurumun 2027 için büyüme tahmini ise yüzde 3,6 oldu. Bu oranlar, kurumun hazirandaki tahminlerine göre 2026 için 0,4 ve 2027 için 0,2 puan aşağı yönlü revize anlamına geliyor. OECD, Türkiye'de enerji ve gübre fiyatlarındaki artıştan kaynaklanan olumsuzluklara rağmen, dezenflasyonun devam edeceğini, enflasyonun bu yıl yüzde 31,5 ve 2027'de ise yüzde 24,7 seviyesinde gerçekleşeceğini tahmin ediyor. Dezenflasyonun sürmesiyle Türkiye ve Brezilya gibi bazı gelişmekte olan ülkelerde para politikasındaki gevşemenin, ekonomik büyümeyi desteklemesi bekleniyor.\n\nOECD'ye göre, ABD'de ekonomik büyümenin bu yıl yüzde 2,2 ve 2027'de yüzde 2,1 seviyesinde gerçekleşmesi bekleniyor. Avro Bölgesi'nde ekonomik büyümenin bu yıl ve 2027'de yüzde 1 olacağı, Çin'de ise bu oranın sırasıyla yüzde 4,5 ve 4,2 seviyesinde gerçekleşeceği öngörülüyor.",
+      "published_at": "2026-09-23T11:32:00+03:00",
+      "language": "tr",
+      "summary": "OECD ara dönem raporunda Türkiye'nin 2026 büyüme tahminini 0,4 puan düşürerek yüzde 2,7'ye, 2027 tahminini yüzde 3,6'ya indirdi; enflasyonun 2026'da yüzde 31,5, 2027'de yüzde 24,7 olmasını bekliyor. Avro Bölgesi büyümesinin 2026 ve 2027'de yüzde 1'de kalacağı öngörülüyor. En büyük ihracat pazarı AB'de zayıf talep ve yurt içinde yavaş dezenflasyon, sanayici için hem dış hem iç sipariş tarafında sınırlı bir toparlanmaya işaret ediyor.",
+      "key_points": [
+        "OECD Türkiye 2026 büyüme tahmini yüzde 2,7 (−0,4 puan), 2027 yüzde 3,6 (−0,2 puan).",
+        "Türkiye enflasyon tahmini: 2026 yüzde 31,5, 2027 yüzde 24,7.",
+        "Küresel büyüme 2026'da yüzde 2,9, 2027'de yüzde 3; Avro Bölgesi her iki yıl yüzde 1.",
+        "Yüksek rafineri marjları ve ticaret kısıtları işletme maliyetlerini artırıyor."
+      ],
+      "entities": {
+        "kurum": [
+          "OECD"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii",
+          "Enerji"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "oecd",
+        "buyume-tahmini",
+        "enflasyon",
+        "avro-bolgesi",
+        "kuresel-talep"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 65,
+        "keyword": 70,
+        "recency": 90,
+        "corroboration": 70,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "aa-ekonomi",
+      "url": "https://www.aa.com.tr/tr/ekonomi/merkez-bankasi-rezervleri-174-4-milyar-dolar-oldu/4067744",
+      "title": "Merkez Bankası rezervleri 174,4 milyar dolar oldu",
+      "body": "Türkiye Cumhuriyet Merkez Bankasının toplam rezervleri, 18 Eylül haftasında bir önceki haftaya göre 4 milyar 319 milyon dolar azalışla 174 milyar 405 milyon dolar oldu.\n\nTCMB'nin haftalık para ve banka istatistiklerine göre, 18 Eylül itibarıyla bankanın brüt döviz rezervleri, 11 Eylül'deki 68 milyar 444 milyon dolar seviyesinden 5 milyar 636 milyon dolar azalarak 62 milyar 808 milyon dolara geriledi.\n\nBu dönemde altın rezervleri ise 1 milyar 317 milyon dolar artış gösterdi. 11 Eylül'de 110 milyar 280 milyon dolar olan altın rezervleri, 18 Eylül itibarıyla 111 milyar 597 milyon dolara yükseldi.\n\nToplam rezervler 4 Eylül'de 184 milyar 247 milyon dolar, 11 Eylül'de 178 milyar 724 milyon dolar seviyesindeydi. Haberde, TCMB rezervlerinin Ocak 2024'ten 18 Eylül 2026'ya kadar altın, brüt döviz ve toplam rezerv olarak seyri tablo halinde yer aldı.",
+      "published_at": "2026-09-24T14:30:00+03:00",
+      "language": "tr",
+      "summary": "TCMB verilerine göre toplam rezervler 18 Eylül haftasında 4,3 milyar dolar azalışla 174,4 milyar dolara geriledi; brüt döviz rezervi 5,6 milyar dolar düşüşle 62,8 milyar dolara indi. Rezervler iki haftada yaklaşık 10 milyar dolar erirken düşüş, fon piyasasındaki çalkantının yaşandığı haftaya denk geldi. Kur riskini yöneten sanayici için TL'deki baskıya karşı rezerv tamponunun zayıfladığını gösteriyor.",
+      "key_points": [
+        "Toplam rezervler 18 Eylül haftasında 178,7 milyar dolardan 174,4 milyar dolara geriledi.",
+        "Brüt döviz rezervleri 5,6 milyar dolar azalarak 62,8 milyar dolara indi.",
+        "Altın rezervleri 1,3 milyar dolar artışla 111,6 milyar dolara çıktı.",
+        "4 Eylül'deki 184,2 milyar dolardan bu yana rezervlerde yaklaşık 9,8 milyar dolar düşüş var."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "rezervler",
+        "tcmb",
+        "kur",
+        "dolar-kuru"
+      ],
+      "importance_factors": {
+        "authority": 85,
+        "impact": 60,
+        "keyword": 60,
+        "recency": 95,
+        "corroboration": 70,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "cumhuriyet-ekonomi",
+      "url": "https://www.cumhuriyet.com.tr/ekonomi/tcmb-rezervlerinde-sert-dusus-toplam-tutar-ne-kadar-oldu-2540666",
+      "title": "TCMB rezervlerinde sert düşüş: Toplam tutar ne kadar oldu?",
+      "body": "Türkiye Cumhuriyet Merkez Bankası (TCMB), haftalık para ve banka istatistiklerini açıkladı. Buna göre Merkez Bankası'nın toplam rezervleri, 18 Eylül haftasında bir önceki haftaya göre 4 milyar 319 milyon dolar azalarak 174 milyar 405 milyon dolara geriledi.\n\nBrüt döviz rezervleri 62,8 milyar dolara indi: 18 Eylül itibarıyla TCMB'nin brüt döviz rezervleri 5 milyar 636 milyon dolar azalarak 62 milyar 808 milyon dolara düştü. Brüt döviz rezervleri, 11 Eylül'de 68 milyar 444 milyon dolar seviyesinde bulunuyordu.\n\nAltın rezervleri arttı: Bu dönemde altın rezervleri ise 1 milyar 317 milyon dolar artış gösterdi. 11 Eylül'de 110 milyar 280 milyon dolar olan altın rezervleri, 18 Eylül itibarıyla 111 milyar 597 milyon dolara yükseldi.\n\nToplam rezervler 174,4 milyar dolara geriledi: Böylece Merkez Bankası'nın toplam rezervleri, 18 Eylül haftasında bir önceki haftaya göre 4 milyar 319 milyon dolar azaldı. Toplam rezervler 11 Eylül'deki 178 milyar 724 milyon dolar seviyesinden 174 milyar 405 milyon dolara geriledi.",
+      "published_at": "2026-09-24T15:50:00+03:00",
+      "language": "tr",
+      "summary": "TCMB'nin haftalık verilerine göre toplam rezervler 18 Eylül haftasında 4,3 milyar dolar düşüşle 174,4 milyar dolara, brüt döviz rezervleri 62,8 milyar dolara geriledi; altın rezervleri ise 111,6 milyar dolara yükseldi. Rezervlerdeki erime, finansal piyasalardaki dalgalanma döneminde TL'ye yönelik baskının sürdüğüne işaret ediyor; ithal girdi kullanan sanayici için kur gelişmelerinin yakından izlenmesi gerekiyor.",
+      "key_points": [
+        "Toplam rezervler 18 Eylül haftasında 4,3 milyar dolar azalarak 174,4 milyar dolar oldu.",
+        "Brüt döviz rezervleri 68,4 milyar dolardan 62,8 milyar dolara düştü.",
+        "Altın rezervleri 110,3 milyar dolardan 111,6 milyar dolara yükseldi."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "rezervler",
+        "tcmb",
+        "kur-riski"
+      ],
+      "importance_factors": {
+        "authority": 70,
+        "impact": 55,
+        "keyword": 55,
+        "recency": 95,
+        "corroboration": 70,
+        "reach": 55
+      }
+    },
+    {
+      "source_slug": "dunya-gazetesi",
+      "url": "https://www.dunya.com/ekonomi/tuik-acikladi-sektorel-guven-endeksleri-belli-oldu-haberi-841255",
+      "title": "TÜİK açıkladı! Sektörel güven endeksleri belli oldu",
+      "body": "Türkiye İstatistik Kurumu (TÜİK), Eylül 2026 dönemine ilişkin Hizmet, Perakende Ticaret ve İnşaat Güven Endeksleri verilerini yayımladı.\n\nVerilere bakıldığında mevsim etkilerinden arındırılmış verilere göre hizmet sektörü güven endeksi eylülde bir önceki aya kıyasla değişmeyerek 111,9 seviyesinde kaldı. Perakende ticaret sektörü güven endeksi yüzde 1,1 artışla 111,3'e yükselirken, inşaat sektörü güven endeksi yüzde 0,2 düşerek 83,0 oldu.\n\nHizmet sektöründe güven değişmedi: Hizmet sektörü güven endeksi ağustosta olduğu gibi eylül ayında da 111,9 seviyesinde gerçekleşti. Ancak endeksi oluşturan alt göstergelerde farklı yönlü hareketler görüldü. Son üç aylık dönemde iş durumuna ilişkin endeks yüzde 1,1 artarak 110,2'ye, hizmetlere yönelik talep göstergesi ise yüzde 0,4 yükselişle 109,7'ye çıktı. Buna karşılık gelecek üç aylık dönemde hizmetlere yönelik talep beklentisi yüzde 1,3 gerileyerek 115,9'a indi.\n\nPerakende ticarette güven arttı: Eylül ayında üç sektör arasında güvenin yükseldiği tek alan perakende ticaret oldu. Sektörün güven endeksi aylık bazda yüzde 1,1 artarak 110,1'den 111,3'e yükseldi. Perakende sektöründe son üç aylık dönemde iş hacmi ve satışlar yüzde 0,4 artışla 114,5 seviyesine çıktı. Mevcut mal stok seviyesi ise yüzde 1,3 düşüşle 91,4 olarak kaydedildi. Gelecek üç aylık döneme ilişkin iş hacmi ve satış beklentisindeki yükseliş de devam etti. Bu gösterge eylülde yüzde 3,5 artarak 128,0 seviyesine ulaştı.\n\nİnşaat sektöründe güven geriledi: İnşaat sektörü güven endeksindeki düşüş eylül ayında da devam etti. Ağustosta yüzde 0,4 azalan endeks, eylülde aylık bazda yüzde 0,2 gerileyerek 83,0 seviyesine indi. Buna karşın sektörde alınan kayıtlı siparişlerin mevcut düzeyine ilişkin gösterge yüzde 1,9 artarak 80,4'e yükseldi. Gelecek üç aylık dönemde toplam çalışan sayısına yönelik beklenti ise yüzde 2,1 azalarak 85,5'e geriledi.",
+      "published_at": "2026-09-24T10:00:00+03:00",
+      "language": "tr",
+      "summary": "TÜİK verilerine göre eylülde perakende ticaret güveni yüzde 1,1 artışla 111,3'e yükselirken hizmet güveni 111,9'da sabit kaldı, inşaat güveni yüzde 0,2 düşüşle 83,0'e geriledi. Perakendecilerin gelecek üç ay satış beklentisi yüzde 3,5 artışla 128'e çıktı, mal stokları azaldı. Tüketim malı üreticileri için sipariş toparlanması sinyali; çimento, çelik gibi inşaat girdisi üreticileri için ise talep zayıflığı sürüyor.",
+      "key_points": [
+        "Perakende ticaret güven endeksi 110,1'den 111,3'e yükseldi.",
+        "Perakendede gelecek üç ay satış beklentisi yüzde 3,5 artışla 128,0; mal stoku 91,4'e indi.",
+        "İnşaat güven endeksi 83,0'e geriledi; çalışan sayısı beklentisi yüzde 2,1 düştü.",
+        "Hizmet sektörü güveni 111,9'da sabit; gelecek üç ay talep beklentisi yüzde 1,3 geriledi."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜİK"
+        ],
+        "kisi": [],
+        "sektor": [
+          "Perakende",
+          "İnşaat",
+          "Hizmetler"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "guven-endeksi",
+        "tuik",
+        "perakende",
+        "insaat"
+      ],
+      "importance_factors": {
+        "authority": 80,
+        "impact": 55,
+        "keyword": 65,
+        "recency": 95,
+        "corroboration": 60,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "bloomberght",
+      "url": "https://www.bloomberght.com/ebrd-turkiyenin-2026-buyume-tahminini-yuzde-3e-cekti-3789253",
+      "title": "EBRD, Türkiye'nin 2026 büyüme tahminini yüzde 3'e çekti",
+      "body": "Avrupa İmar ve Kalkınma Bankası (EBRD), Türkiye ekonomisinin 2026'da yüzde 3 büyümesini bekliyor. Banka, Haziran 2026'da yayımladığı tahmininde Türkiye için yüzde 3,5 büyüme öngörmüştü. EBRD, 2027'de ise büyümenin yüzde 4'e hızlanacağını tahmin ediyor.\n\nEBRD'nin bugün yayımladığı son Bölgesel Ekonomik Görünüm (REP) raporunda Türkiye ekonomisine ilişkin büyüme tahminleri aşağı yönlü revize edildi. Rapora göre, 2026 yılı büyüme tahmininin yüzde 3'e indirilmesinde yüksek enflasyon ve sıkı finansal koşulların iç talebi zayıflatması etkili oldu. Orta Doğu'daki çatışmanın devam eden etkileri ve ihracatta maliyet rekabetçiliğine yönelik baskılar da büyüme görünümünü olumsuz etkileyen unsurlar arasında yer aldı.\n\nRaporda, Orta Doğu'daki çatışmaların tırmanmasının enerji fiyatları üzerinde ilave baskı oluşturabileceği, turizm gelirlerini azaltabileceği, sermaye çıkışlarını tetikleyebileceği ve ticareti sekteye uğratabileceği belirtildi. Raporda ayrıca, şirketlerin döviz cinsinden yükümlülüklerinin artmasının, Türk lirasındaki değer kaybına karşı şirket bilançolarını daha kırılgan hale getirdiği ifade edildi.\n\nEBRD, Orta Doğu'da kalıcı bir barışın sağlanması, dış talebin güçlenmesi ve ekonomi politikalarında disiplinin sürdürülmesinin yatırımları ve büyümeyi destekleyebileceğini belirtti.\n\nEBRD bölgesinin tamamında toplam büyümenin 2026'da yüzde 2,5 olması, 2027'de ise yüzde 4'e hızlanması bekleniyor. Banka, bölgeye ilişkin 2026 büyüme tahminini Haziran ayına kıyasla 0,6 puan aşağı çekti. Bölgeye ilişkin aşağı yönlü revizyonda daha sıkı finansman koşullarının yanı sıra Avrupa'nın bazı bölgelerinde yaşanan kuraklığın etkileri ve Rusya'nın Ukrayna'yı işgalinin devam etmesiyle bağlantılı Karadeniz ablukasının etkili olduğu belirtildi.",
+      "published_at": "2026-09-24T07:56:00+03:00",
+      "language": "tr",
+      "summary": "EBRD, Türkiye'nin 2026 büyüme tahminini yüzde 3,5'ten yüzde 3'e indirdi; 2027 için yüzde 4 bekliyor. Revizyonda yüksek enflasyon, sıkı finansal koşullar ve ihracatta maliyet rekabetçiliğine yönelik baskılar etkili oldu. Rapor, şirketlerin artan döviz yükümlülüklerinin TL'deki değer kaybına karşı bilançoları kırılganlaştırdığına dikkat çekiyor; döviz borcu olan sanayiciler için doğrudan uyarı niteliğinde.",
+      "key_points": [
+        "EBRD Türkiye 2026 büyüme tahmini yüzde 3,5'ten yüzde 3'e indi; 2027 tahmini yüzde 4.",
+        "Gerekçeler: yüksek enflasyon, sıkı finansal koşullar, ihracatta maliyet rekabetçiliği baskısı.",
+        "Şirketlerin döviz cinsi yükümlülüklerindeki artış bilançoları kur şokuna karşı kırılgan kılıyor.",
+        "EBRD bölgesi geneli için 2026 büyüme tahmini 0,6 puan düşürülerek yüzde 2,5'e çekildi."
+      ],
+      "entities": {
+        "kurum": [
+          "EBRD"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "ebrd",
+        "buyume-tahmini",
+        "rekabetcilik",
+        "kur-riski",
+        "finansman-maliyeti"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 65,
+        "keyword": 70,
+        "recency": 95,
+        "corroboration": 70,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "bloomberght",
+      "url": "https://www.bloomberght.com/tusiad-maliyet-bazli-rekabet-gucu-endeksi-nde-gerileme-egilimi-surdu-3789427",
+      "title": "TÜSİAD Maliyet Bazlı Rekabet Gücü Endeksi'nde gerileme eğilimi sürdü",
+      "body": "TÜSİAD Maliyet Bazlı Rekabet Gücü Endeksi (TÜSİAD-RGE), 2026 yılının ikinci çeyreğinde bir önceki çeyreğe göre yüzde 1,3 oranında gerileyerek 86,1 değerini aldı.\n\nİhracatçı imalat sanayi sektörlerinin girdi maliyetlerini 31 rakip ülkeyle karşılaştıran TÜSİAD-RGE (2017=100), 2026'nın ikinci çeyreğinde de gerileme eğilimini sürdürdü. Endeks, bir önceki döneme göre düşerek 86,1 seviyesine geldi.\n\nEndeksteki gerilemede en yüksek negatif katkıyı ara malı maliyetleri yaptı. ABD doları bazında yurt içi ara malı maliyetleri ikinci çeyrekte yüzde 4,6 artarken, rakip ülkelerdeki artış yüzde 3,3'te kaldı. Ara malı maliyetlerinin endekse negatif katkısı 1 puan oldu.\n\nİşgücü maliyetleri de endeksi 0,2 puan aşağı çekti. Yurt içi işgücü maliyetleri dolar bazında yüzde 2,2 artarken, rakip ülkelerdeki ücret artışı yüzde 0,5 ile sınırlı kaldı.\n\nEnerji maliyetlerinin endekse negatif katkısı ise 0,1 puan olarak gerçekleşti. İkinci çeyrekte ABD doları bazında yurt içi enerji maliyetleri yüzde 8,3, rakip ülkelerde ise yüzde 5,9 arttı. Yurt içi elektrik fiyatlarındaki gerileme, enerji maliyetlerindeki olumsuz ayrışmayı sınırladı.\n\nFinansman maliyetleri ise endekse net katkı sağlamadı. Dolar bazında yurt içi finansman maliyeti çeyreklik bazda yüzde 0,5 gerilerken, rakip ülkelerde yüzde 1 arttı.\n\nVerimlilik artışı sınırlı kaldı: İşgücü verimliliğindeki gelişmeleri hesaplamalara dahil eden Verimlilik Düzeltilmiş Endeks (TÜSİAD-RGEV) son iki çeyrektir ana endeksin üzerinde seyretmeye devam etti. Raporda, verimlilikteki olumlu gelişmenin üretim maliyetlerindeki artışın rekabet gücü üzerindeki olumsuz etkisini telafi etmekte sınırlı kaldığı belirtildi.",
+      "published_at": "2026-09-25T10:35:00+03:00",
+      "language": "tr",
+      "summary": "TÜSİAD Maliyet Bazlı Rekabet Gücü Endeksi, ihracatçı imalat sektörlerinin girdi maliyetlerini 31 rakip ülkeyle karşılaştırıyor ve 2026'nın ikinci çeyreğinde yüzde 1,3 düşüşle 86,1'e geriledi. En büyük olumsuz katkı ara malı maliyetlerinden geldi (dolar bazında yurt içinde yüzde 4,6, rakiplerde yüzde 3,3 artış). İşgücü ve enerji maliyetleri de rakiplerden hızlı arttı. İmalatçı ihracatçı için maliyet kaynaklı rekabet kaybının sürdüğünü teyit ediyor.",
+      "key_points": [
+        "TÜSİAD-RGE ikinci çeyrekte yüzde 1,3 gerileyerek 86,1'e indi (2017=100).",
+        "Dolar bazında ara malı maliyeti yurt içinde yüzde 4,6, rakiplerde yüzde 3,3 arttı (−1 puan katkı).",
+        "İşgücü maliyeti yurt içinde yüzde 2,2, rakiplerde yüzde 0,5 arttı (−0,2 puan).",
+        "Enerji maliyeti yurt içinde yüzde 8,3, rakiplerde yüzde 5,9 arttı; finansman maliyeti nötr."
+      ],
+      "entities": {
+        "kurum": [
+          "TÜSİAD"
+        ],
+        "kisi": [],
+        "sektor": [
+          "İmalat Sanayii"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "sanayi",
+      "sentiment": "NEGATIF",
+      "tags": [
+        "rekabetcilik",
+        "tusiad",
+        "girdi-maliyeti",
+        "enerji-maliyeti",
+        "imalat-sanayi",
+        "ihracat"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 80,
+        "keyword": 85,
+        "recency": 100,
+        "corroboration": 40,
+        "reach": 65
+      }
+    },
+    {
+      "source_slug": "bloomberght",
+      "url": "https://www.bloomberght.com/fitch-turkiye-de-yuksek-enflasyon-ve-soklara-karsi-hassasiyet-dengelenmeyi-zorluyor-3789479",
+      "title": "Fitch: Türkiye'de yüksek enflasyon ve şoklara karşı hassasiyet dengelenmeyi zorluyor",
+      "body": "Uluslararası derecelendirme kuruluşu Fitch Ratings, Türkiye ekonomisine ilişkin yayımladığı raporda, Nisan ayından bu yana döviz rezervlerinde gözlenen kısmi toparlanmanın, kur üzerindeki değer kaybı baskılarının hafiflemesinin ve sıkı politika karmasının sürdürülmesinin yüksek enerji fiyatlarının yarattığı riskleri sınırladığını belirtti. Bununla birlikte kurum, yüksek enflasyon ortamındaki politika tercihlerinin, yaklaşan seçimler öncesinde artan politika risklerinin ve şokların sermaye kaçışını tetikleme eğiliminin döviz rezervleri üzerinde baskı oluşturabileceği uyarısında bulundu. Fitch, bu risklerin Türkiye'nin \"BB-\" seviyesindeki kredi notu ve \"Durağan\" görünümü üzerinde ağırlık oluşturmaya devam ettiğini kaydetti.\n\nFitch, İran savaşının etkilerinin Türkiye'nin cari açık/GSYH oranını 2025 yılındaki yüzde 1,9 seviyesinden 2026'da yüzde 3'e yakın bir noktaya taşıyacağını öngördü. Yıllık ortalama petrol fiyatlarındaki yaklaşık 20 dolarlık artışın cari açığa 1 yüzdelik puandan fazla yük getireceği tahmin edilirken; 2027 yılında ortalama petrol fiyatının 87 dolardan 70 dolara gerileyeceği, ancak artan ithalat talebinin etkisiyle cari açığın genel olarak yatay seyredeceği ifade edildi.\n\nDöviz rezervlerindeki dinamikler: Raporda sıkı parasal koşulların, tutarlı politika karmasının ve brüt döviz rezervlerinin Mart sonundan bu yana 25 milyar dolar artışla 23 Eylül itibarıyla 176 milyar dolara (4,5 aylık cari dış ödemelere denk) yükselmesinin yakın vadeli dış riskleri hafiflettiği vurgulandı. Buna karşın rezervlerin, İran savaşı öncesindeki 210 milyar dolar seviyesinin ve \"BB\" notuna sahip ülkelerin 5,2 aylık medyanının altında kaldığına dikkat çekildi. Swap hariç net rezervlerin ise Mart sonundaki 16 milyar dolar seviyesinden 45 milyar dolara yükseldiği aktarıldı.\n\nFon tasfiyeleri ve dolarizasyon: Yaklaşık 18 milyar dolar tutarındaki yatırım fonlarının tasfiyesine yönelik son adımların geçmişteki düzenleyici eksiklikleri gün yüzüne çıkardığına işaret eden kuruluş; TCMB'nin likidite desteği ve türev piyasalardaki teminat gereksinimlerini esnetmesi de dahil olmak üzere zamanında verilen politika tepkilerinin hisse senedi piyasasını dengelediğini ve bu durumun ülke kredi notu üzerinde önemli bir etki yaratmasını beklemediklerini dile getirdi. Mevduat dolarizasyon oranının 2024'ten bu yana yüzde 39 seviyesinde genel olarak istikrarlı seyrettiği belirtildi. Fitch, 2027 sonu veya 2028 başında yapılması öngörülen cumhurbaşkanlığı seçimleri öncesinde dolarizasyonun tırmanma riskini orta derecede yüksek gördüğünü ifade etti.\n\nDolar/TL 2027 sonunda 60'a ulaşabilir: Fitch, reel efektif döviz kurundaki değerlenmenin ihracat üzerindeki baskısını hafifletmek amacıyla Mayıs 2026'dan bu yana izlenen kademeli ve bir miktar daha hızlı nominal TL değer kaybının devam edeceğini öngördü. Kurum, Dolar/TL paritesinin 2026 sonunda 51, 2027 sonunda ise 60 seviyesine ulaşmasını bekliyor. Fitch, yıl sonu enflasyon tahminlerini 2026 için yüzde 30,5, 2027 için ise yüzde 23,5 olarak açıkladı.\n\nMaliye politikası ve büyüme: Fitch, önümüzdeki yıl kredi teşvikleri, düşen ancak pozitif kalmaya devam eden reel faiz oranları ve genel yönetim açığında GSYH'nin yüzde 0,7'si oranında geçici bir artış yoluyla ılımlı bir gevşeme beklediğini duyurdu. 2027 yılında beklenen politika gevşemesinin etkisiyle GSYH büyümesinin 2026'daki yüzde 2,8 seviyesinden yüzde 4,3'e hızlanacağı tahmin ediliyor. Genel yönetim borcunun GSYH'ye oranının yüzde 24 civarında istikrarlı kalacağı belirtildi.",
+      "published_at": "2026-09-25T16:06:00+03:00",
+      "language": "tr",
+      "summary": "Fitch, Türkiye'nin BB- notu ve durağan görünümü üzerinde yüksek enflasyon, seçim öncesi politika riskleri ve şoklara karşı hassasiyetin ağırlık oluşturduğunu belirtti; fon tasfiyelerinin not üzerinde önemli etki yaratmasını beklemiyor. Kurum dolar/TL'nin 2026 sonunda 51'e, 2027 sonunda 60'a çıkmasını, enflasyonun 2026'da yüzde 30,5 olmasını öngörüyor. İhracatçı sanayici için kademeli ve bir miktar daha hızlı TL değer kaybının süreceği, ithal girdi kullananlar için ise maliyet baskısı anlamına geliyor.",
+      "key_points": [
+        "Fitch: Türkiye notu BB-, görünüm durağan; riskler rezervler üzerinde baskı oluşturabilir.",
+        "Dolar/TL beklentisi: 2026 sonu 51, 2027 sonu 60.",
+        "Cari açık/GSYH 2026'da yüzde 3'e yaklaşacak; petrol fiyatındaki 20 dolarlık artış 1 puandan fazla yük getiriyor.",
+        "Enflasyon tahmini 2026 sonu yüzde 30,5, 2027 sonu yüzde 23,5; büyüme 2026'da yüzde 2,8.",
+        "Yaklaşık 18 milyar dolarlık fon tasfiyesinin kredi notuna önemli etkisi beklenmiyor."
+      ],
+      "entities": {
+        "kurum": [
+          "Fitch Ratings",
+          "TCMB"
+        ],
+        "kisi": [],
+        "sektor": []
+      },
+      "region": "TURKIYE",
+      "category": "ekonomi",
+      "sentiment": "NOTR",
+      "tags": [
+        "kredi-notu",
+        "fitch",
+        "dolar-kuru",
+        "cari-acik",
+        "rezervler",
+        "enflasyon"
+      ],
+      "importance_factors": {
+        "authority": 75,
+        "impact": 70,
+        "keyword": 70,
+        "recency": 100,
+        "corroboration": 60,
+        "reach": 70
+      }
+    },
+    {
+      "source_slug": "dunya-gazetesi",
+      "url": "https://www.dunya.com/ihracat/doviz-donusumde-beklenti-yuzde-6-talep-yuzde-10-haberi-841345",
+      "title": "Döviz dönüşümde beklenti yüzde 6, talep yüzde 10",
+      "body": "Yeni yasama döneminin başlamasına sayılı günler kala ekonomi yönetiminin ve meclisin en kritik gündem maddelerinden birini sektörel ve ihracat teşvikleri oluşturacak. Başta ihracatçıların döviz dönüşüm desteği olmak üzere özellikle imalatçı ihracatçıların gözü, 1 Ekim'de açıklanması beklenen yeni teşvik düzenlemelerinde.\n\nDöviz dönüşümde yüzde 6'lık bir oran beklenirken, ortak talep, oranın en az yüzde 10'a yükseltilmesi yönünde. Dış ticaret fazlası veren ve emek yoğun çalışan sektörlerin temsilcileri, pozitif ayrımcılık yapılması çağrısında bulunurken, kimya, maden, elektrik-elektronik gibi sektör temsilcileri, tüm sektörlere aynı oranda destek verilmesi gerektiğini düşünüyor. 1 Ekim itibarıyla mevcut uygulamadaki döviz alımına ilişkin kısıtların yerine firmaların döviz pozisyonunu esas alan yeni bir modele de geçilecek. 1 Ekim düzenlemesinde döviz dönüşüm desteğinin yanı sıra reeskont kredi faizlerinin düşürülmesi, SGK prim teşvikleri ve girdi maliyetlerini azaltacak vergi indirimleri de talep ediliyor.\n\n\"İki katına çıkacak\" ne anlama geliyor? TCMB tarafından yürütülen ve firmaların yurt dışı kaynaklı dövizlerinin Türk lirasına dönüşümünü destekleyen uygulama kapsamında, destek oranı ilk kez Ocak 2023 tarihinde yüzde 2'den yüzde 3'e yükseltildi. Ağustos 2024'te tekrar yüzde 2 olarak uygulanmaya başlanırken, bu yılın ağustos ayında yeniden yüzde 3'e çıkarıldı ve destek süresi 31 Ocak 2027 tarihine kadar uzatıldı. Geçtiğimiz haftalarda Ticaret Bakanı'nın oranın iki katına çıkacağı yönündeki bir açıklaması ise ihracatçı tarafında \"Yüzde 2'nin iki katı mı, yoksa geçici oran yüzde 3'ün iki katı mı?\" sorusunu gündeme getirirken, ağırlıklı beklenti yüzde 6 olacağı yönünde.\n\nİstanbul Kimya ve Kimyevi Maddeler İhracatçıları Birliği (İKMİB) Başkanı İbrahim Vefa Aracı, \"Döviz dönüşüm desteğinin uzatılmasını ve en az 2 puan daha yükseltilmesini bekliyoruz\" derken, İstanbul Maden İhracatçıları Birliği (İMİB) Başkanı Metin Çekiç, döviz dönüşüm desteğinde oranı yüzde 10 olarak talep ettiklerini belirterek, \"Sektörel ayrım yapılması yönündeki taleplere katılmıyoruz. İhracata çalışan tüm sektörler için döviz dönüşümü kıymetli ve oranlar aynı olmalı\" dedi.\n\nAdana Sanayi Odası Başkanı Zeki Kıvanç, beklenen yeni teşvik paketinde döviz dönüşüm desteğinin yüzde 10'a çıkarılması gerektiğini vurguladı. Kıvanç, \"Çin ihracatçısına yüzde 13 döviz dönüşüm desteği veriyor ve dünyanın en büyük döviz rezervine sahip. Bizde ise carry trade ile gelen sıcak paraya yıllık yüzde 25-30 net getiri sağlanıyor. Carry trade'e verilen paranın yüzde 50'si ihracatçımıza verilsin\" dedi. Yüzde 40-50 seviyesindeki faiz ortamında sanayicilik yapmanın imkânsız hale geldiğini dile getiren Kıvanç, erken sanayisizleşme riskine işaret etti.\n\nİstanbul Tekstil ve Hammaddeleri İhracatçıları Birliği (İTHİB) Yönetim Kurulu Başkanı Ahmet Şişman, mevcut yüzde 3 seviyesindeki döviz dönüşüm desteğinin emek yoğun sektörler için en az yüzde 10'a çıkarılması gerektiğini belirtti. İstanbul Hazırgiyim ve Konfeksiyon İhracatçıları Birliği (İHKİB) Başkanı Mustafa Paşahan, 2022 yılında 21,2 milyar dolarla rekor kıran hazır giyim ihracatının 2025'te 16,8 milyar dolara gerilediğini, 2026 yılının ilk 8 ayında da yüzde 2,2'lik düşüşle yaklaşık 11 milyar dolarlık ihracat yapıldığını ifade etti.\n\nPlastik Sanayicileri Federasyonu (PLASFED) Başkanı Ömer Karadeniz, \"Kur riski yönetimi, vergi iadeleri ve finansmana erişim konularında Çin'deki gibi bütüncül bir destek modeli Türkiye'de de hayata geçirilmeli\" dedi. Türkiye Ayakkabı Sanayicileri Derneği (TASD) Başkanı Berke İçten, imalat sanayiinin son 3,5 yıldır daraldığını, 2023'ten bu yana ayakkabı sektöründe istihdamın yaklaşık yüzde 40'ının kaybedildiğini söyledi.\n\nTÜRKBESD Başkanı Alper Şengül, 2026'nın ilk 7 ayında beyaz eşya ihracatının yüzde 19, üretimin yüzde 15, iç satışların yüzde 6 gerilediğini kaydetti ve \"1 Ekim itibarıyla mevcut uygulamadaki döviz alımına ilişkin kısıtların yerine firmaların döviz pozisyonunu esas alan yeni bir modele geçilecek olması önemli bir değişiklik. Yeni sistemin uygulama koşulları belirlenirken sektörlerin net döviz kazandırma kapasitelerinin, yerli katma değerin ve istihdam kapasitelerinin de dikkate alınmasını önemsiyoruz\" dedi.",
+      "published_at": "2026-09-25T00:00:00+03:00",
+      "language": "tr",
+      "summary": "İmalatçı ihracatçılar, 1 Ekim'de açıklanması beklenen yeni teşvik düzenlemesinde TCMB'nin döviz dönüşüm desteğinin yüzde 3'ten en az yüzde 10'a çıkarılmasını talep ediyor; ağırlıklı beklenti yüzde 6. 1 Ekim'den itibaren döviz alım kısıtları yerine firmanın döviz pozisyonunu esas alan yeni bir modele geçilecek. Sektör temsilcileri yüksek faiz, kur ve maliyet baskısı nedeniyle erken sanayisizleşme riskine dikkat çekiyor; beyaz eşya üretimi ilk 7 ayda yüzde 15 geriledi.",
+      "key_points": [
+        "Döviz dönüşüm desteği şu anda yüzde 3 ve 31 Ocak 2027'ye kadar geçerli; beklenti yüzde 6, sektör talebi en az yüzde 10.",
+        "Yeni teşvik düzenlemesinin 1 Ekim 2026'da açıklanması bekleniyor.",
+        "1 Ekim'den itibaren döviz alım kısıtları yerine firmaların döviz pozisyonunu esas alan model uygulanacak.",
+        "Beyaz eşyada ilk 7 ayda ihracat yüzde 19, üretim yüzde 15 düştü; ayakkabıda istihdamın yaklaşık yüzde 40'ı kaybedildi.",
+        "Reeskont kredi faizinde indirim, SGK prim teşviki ve girdi vergisi indirimleri de talep ediliyor."
+      ],
+      "entities": {
+        "kurum": [
+          "TCMB",
+          "Ticaret Bakanlığı",
+          "İKMİB",
+          "İMİB",
+          "İTHİB",
+          "İHKİB",
+          "PLASFED",
+          "TÜRKBESD",
+          "Adana Sanayi Odası"
+        ],
+        "kisi": [
+          "Zeki Kıvanç",
+          "İbrahim Vefa Aracı",
+          "Metin Çekiç",
+          "Ahmet Şişman",
+          "Mustafa Paşahan",
+          "Ömer Karadeniz",
+          "Berke İçten",
+          "Alper Şengül"
+        ],
+        "sektor": [
+          "Tekstil",
+          "Hazır Giyim",
+          "Kimya",
+          "Madencilik",
+          "Plastik",
+          "Beyaz Eşya",
+          "Ayakkabı"
+        ]
+      },
+      "region": "TURKIYE",
+      "category": "tesvik",
+      "sentiment": "NOTR",
+      "tags": [
+        "doviz-donusum-destegi",
+        "ihracat-destegi",
+        "tesvik",
+        "rekabetcilik",
+        "reeskont-kredisi",
+        "tekstil"
+      ],
+      "importance_factors": {
+        "authority": 82,
+        "impact": 85,
+        "keyword": 85,
+        "recency": 100,
+        "corroboration": 40,
+        "reach": 70
+      }
+    }
+  ]
+}
