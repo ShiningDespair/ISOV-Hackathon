@@ -62,6 +62,11 @@ services:
       context: ./backend
     container_name: isov-backend
     restart: unless-stopped
+    # PID 1 olarak tini (docker-init): Node PID 1 iken Chromium'un (PDF
+    # uretimi ve scripts/tarayici.sh) yetim kalan alt surecleri toplanmiyordu;
+    # 1 saat 48 dakikada 24 zombi surec birikti. Bellek harcamazlar ama PID
+    # tablosunu haftalar icinde doldurur.
+    init: true
     depends_on:
       db:
         condition: service_healthy
