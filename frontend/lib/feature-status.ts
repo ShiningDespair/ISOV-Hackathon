@@ -386,14 +386,16 @@ export const OZELLIKLER: Ozellik[] = [
   {
     id: "paylas",
     ad: "Paylaş (WhatsApp, e-posta, bağlantı)",
-    durum: "kismi",
+    durum: "calisiyor",
     alan: "haber",
     nasil:
-      "Menü sunucu tarafında basılıyor (role=menu, oklarla gezinme, Escape, dışına tıklamada kapanma). Üretilen adresler ölçüldü: wa.me/?text=…, LinkedIn share-offsite, mailto (konu=başlık, gövde=başlık — kaynak + bağlantı). Paylaşım metninde özet YOK, kasıtlı.",
-    eksik:
-      "Tarayıcıda tıklama akışı (clipboard izni, navigator.share penceresi) elle doğrulanmadı.",
-    neden:
-      "Sunucuda tarayıcı yok; kopyalama ve cihaz paylaşımı yalnızca gerçek tarayıcıda ölçülebilir. Adres üretimi saf fonksiyon olarak lib/api-me.ts'te ve ölçüldü.",
+      "Bileşen yazılmış ama HİÇBİR SAYFADA kullanılmıyordu — persona testinde ekranda sıfır düğme sayıldı. Artık manşet, " +
+      "standart kart, Görsel ve Kart kartları, kişisel akış, 3'lü blok ve haber detayında. Mesaj Türkçe özet taşıyor: iki persona " +
+      "haberi İngilizce kaynağı açmayacak birine (mali işler direktörü, satış ekibi) iletiyor. Canlıda gerçek tarayıcıda okunan " +
+      "wa.me metni: kalın başlık + tek cümlelik Türkçe özet (≤220 karakter) + 'Kaynak: T.C. Resmî Gazete' + kaynak bağlantısı. " +
+      "E-postada tam özet ve en çok 3 madde. Bağlantı kaynağın kendi adresi: panel kapalı, hesabı olmayan alıcı /haber/:id'de " +
+      "giriş sayfası görür.",
+    eksik: "Sunucudan e-posta gönderimi SMTP'ye bağlı ve SMTP doğrulanmadı; mailto yolu çalışıyor.",
   },
   {
     id: "paylas-sunucu",
@@ -409,13 +411,13 @@ export const OZELLIKLER: Ozellik[] = [
   {
     id: "haber-gizle",
     ad: "Haberi gizle ve gerekçe bildir",
-    durum: "arayuz",
+    durum: "calisiyor",
     alan: "haber",
     nasil:
-      "Diyalog role=dialog + aria-modal, odak tuzağı, Escape ile kapanma, odak çağıran düğmeye dönüyor. Altı sebep slug'ı backend ENUM'uyla birebir (alakasiz, sektorum-degil, zaten-biliyorum, cok-tekrar, kaynak-guvenilmez, diger), not 200 karakterde kırpılıyor. PUT .../hide 404/501 dönerken 'henüz uygulanmadı' mesajı basılıyor, sayfa çökmüyor.",
-    eksik:
-      "Kalıcı gizleme ve 'geri al' çalışmıyor; iyimser kaldırma yalnızca açık sayfada geçerli.",
-    neden: "/me/articles/:id/hide ucu henüz uygulanmadı.",
+      "Canlıda gerçek tarayıcıyla uçtan uca ölçüldü (Deniz hesabı): 3'lü bloktaki Gizle → gerekçe diyaloğu → 'Haberi gizle' → " +
+      "yerinde 'Bu haber panelinizden çıkarıldı. Haber silinmedi. Geri al' satırı; sayfa yenilenince haber ilk 3'ten çıktı " +
+      "(1,70,67 → 45,70,67), PUT /me/articles/:id/hide {hidden:false} ile geri alınca döndü (1,70,67). Kullanıcı başına: başka " +
+      "hesabı etkilemiyor. Diyalog role=dialog + aria-modal, odak tuzağı, Escape.",
   },
   { id: "okuma-suresi", ad: "Haber okuma süresi göstergesi", durum: "yok", alan: "haber" },
 
@@ -659,6 +661,81 @@ export const OZELLIKLER: Ozellik[] = [
       "'panel'. Betik sahte localStorage/document.cookie ile koşturularak 6 " +
       "senaryoda ölçüldü; açık seçim çerezi eziyor, bozuk çerez panel'e düşüyor, " +
       "my_isov_view gibi önek tuzağı yakalanmıyor.",
+  },
+  // --- TUR 4: bes personanin gercek tarayici testi ve duzeltmeler -----
+  {
+    id: "gercek-tarayici-testi",
+    ad: "Gerçek tarayıcıyla kullanıcı testi (5 persona)",
+    durum: "calisiyor",
+    alan: "panel",
+    nasil:
+      "scripts/tarayici.sh: backend imajındaki Chromium'la gerçek oturum, tıklama, ekran görüntüsü ve ilk ekran ölçümü. " +
+      "Beş persona (genel müdür, İSOV teşvik uzmanı, ihracat müdürü, üretim mühendisi, İSO basın müdürü) kayıt sihirbazından " +
+      "başlayarak siteyi kullandı. Önceki turların hiçbirinde tarayıcı testi yoktu; bu test üç P0 buldu ve üçü de beşer/dörder " +
+      "personada bağımsız ölçüldü: giriş sonrası /giris'e geri atılma (kimse arayüzden giriş yapamıyordu), Görsel/Kart " +
+      "görünümünde boş haber ve rapor sayfası, hiç görünmeyen Paylaş/Gizle düğmeleri.",
+  },
+  {
+    id: "bugun-uc-sey",
+    ad: "Bugün Bilmeniz Gereken 3 Şey (ilk ekran)",
+    durum: "calisiyor",
+    alan: "kisiselestirme",
+    nasil:
+      "Ürünün en büyük geri bildirimi 'ilgi süresi yetmiyor' idi; mobilde (390×844) Bana Özel'in ilk ekranında TEK haber yoktu " +
+      "(ilk başlık y=813–872). Artık en üstte kişisel sıranın ilk 3'ü: başlık, tek cümle, 'Neden sizin için' satırı ve 44 px " +
+      "WhatsApp düğmesi. Canlıda gerçek tarayıcıyla ölçüldü (Emre/Kart, Nilgün/Görsel, Deniz/Kart): üçünde de kaydırmadan 3 gerçek " +
+      "başlık, ilk başlık y=314, yatay taşma yok. Gerekçe YALNIZCA gerçek eşleşmeden: backend matched_interests, yoksa etiket ∩ ilgi " +
+      "alanı, yoksa bölge; eşleşme yoksa kişisel gerekçe yazılmıyor ('Neden burada: korpus genelinde kritik'). Ölçülen örnekler: " +
+      "Nilgün 'İlgi alanınız: Faiz Kararı', Emre 'Alüminyum, Çelik', Deniz 'İhracat, Serbest Ticaret Anlaşması'.",
+    eksik: "Bloktaki WhatsApp düğmesi paylaşım kaydı (recordShare) atmıyor; Paylaş menüsündeki WhatsApp atıyor.",
+  },
+  {
+    id: "ilgi-alani-yuvasi",
+    ad: "Açık ilgi alanları için sıralama yuvası",
+    durum: "calisiyor",
+    alan: "kisiselestirme",
+    nasil:
+      "Ölçülen hata: ihracat müdürünün kendi seçtiği CBAM haberi Bana Özel'de 19., tarife 18. — 12 kalemlik listenin dışında; " +
+      "kişiselleştirme kullanıcının konusunu GENEL akıştan daha aşağı itiyordu. Teşhis ağırlık değil temsil: interest_tags eşleşme " +
+      "SAYISINA bakıyor, geniş 'ihracat' etiketi (30+ haber) tek başına listeyi dolduruyordu. Çözüm oran tabanlı yuva (her 4 slotun " +
+      "sonuncusu henüz temsil edilmemiş açık ilgi alanına; DÜŞÜK bant ve sessize alınmış etiket giremez). Canlıda ölçüldü: Deniz CBAM " +
+      "19→4, tarife 18→12, ilgi kapsaması 5/7→7/7; Nilgün CBAM 5'lik listede 4. Filtre balonu korunuyor: global örtüşme medyanı 6/10 " +
+      "(değişmedi, alarm 3/10), çiftler arası 5→4/10.",
+  },
+  {
+    id: "giris-hiz-siniri",
+    ad: "Giriş hız sınırı (kurumsal ağ dostu)",
+    durum: "calisiyor",
+    alan: "hesap",
+    nasil:
+      "Beş personanın dördü giriş sırasında 429 aldı: sınır yalnızca IP'ye bağlıydı ve BAŞARILI girişleri de sayıyordu; 1.400 " +
+      "çalışanlı bir fabrika tek NAT IP'sinden çıkar. Artık yalnızca başarısız denemeler sayılıyor: IP + e-posta 10/15 dk, IP 200/15 dk. " +
+      "Canlıda ölçüldü: aynı IP'den 12 ardışık doğru giriş, 12×200 (önce 11.'si 429). Hesap bazlı kilit (5 hata → 15 dk) aynen duruyor.",
+  },
+  {
+    id: "paylasilan-veri-yetkisi",
+    ad: "Paylaşılan veriye yazma yetkisi",
+    durum: "calisiyor",
+    alan: "yonetim",
+    nasil:
+      "Persona testi sırasında sıradan bir üye hesabının (rol 'uye') haftalık raporu yeniden üretebildiği görüldü. Denetimde aynı " +
+      "sınıfta altı uç çıktı: rapor üretme, toplama başlatma, kaynak ekleme, kaynağın otorite ağırlığını değiştirme (gizli önem " +
+      "skorunun bileşeni — herhangi bir üye HERKESİN sıralamasını kaydırabiliyordu), öneri kabul/ret ve görsel toplama. Hepsi artık " +
+      "admin/editor'e kapalı; canlıda üye hesabıyla ölçüldü: 6/6 uç 403, okuma uçları 200, kaynak otoritesi değişmedi. Arayüz de " +
+      "üyeye bu düğmeleri göstermiyor; üye kaynağı 'Kaynak Öner'den önerebiliyor.",
+  },
+  {
+    id: "veri-tazeligi",
+    ad: "Veri tazeliği göstergesi",
+    durum: "calisiyor",
+    alan: "haber",
+    nasil:
+      "İSO basın müdürü personasının P0'ı: künye bugünün tarihini ve bugünden türeyen sayı numarasını basıyordu, en yeni haber ise " +
+      "12 Eylül (13 günlük). Artık künye, gazete künyesi ve altbilgide 'Son veri: 12 Eylül 2026 · 13 gün önce'; 2 günden eskiyse " +
+      "'⚠ Eski veri' (renk tek gösterge değil: sözcük, işaret ve kesik kenarlık). Kaynak GET /stats/freshness, MAX(published_at): son " +
+      "toplama çalışması 19 Eylül ama 0 yeni haber getirdiği için onu göstermek veriyi olduğundan taze gösterirdi. Sayı No artık " +
+      "verinin gününden türüyor.",
+    eksik: "Sürekli toplama çalışmıyor; gösterge sorunu DÜRÜSTÇE söylüyor, çözmüyor.",
   },
   {
     id: "durum-sayfasi",
