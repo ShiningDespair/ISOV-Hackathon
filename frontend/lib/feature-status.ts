@@ -92,13 +92,31 @@ export const OZELLIKLER: Ozellik[] = [
   },
   {
     id: "haber-gorselleri",
-    ad: "Haber görselleri (og:image)",
-    durum: "kismi",
+    ad: "Haber görselleri ve kaynak amblemleri",
+    durum: "calisiyor",
     alan: "haber",
-    nasil: "131 haberin 80'inde gerçek görsel bulundu (%61,1), hepsi og:image üzerinden.",
-    eksik: "51 haberde görsel yok; tipografik yer tutucu basılıyor.",
+    nasil:
+      "131 haberin 80'inde gerçek og:image var (%61,1). Kalan 51'inde kaynağa özgü " +
+      "satır içi SVG amblem basılıyor: 81 kaynağın TAMAMI bir betikle tarandı, 32'si " +
+      "elle tasarlanmış kimliğe (Resmî Gazete, EUR-Lex, Federal Register, İSO, TOBB, " +
+      "KOSGEB, TÜBİTAK, ECB, IEA, Eurostat, USTR…), 49'u kaynak türü arketipine " +
+      "(basın 50 · kurum 17 · açık veri 6 · mevzuat 5 · uluslararası 3) düştü; boşa " +
+      "düşen kaynak YOK. Üçüncü kademe (ad baş harfleri + ülke kodu) sentetik uç " +
+      "durumlarla ayrıca sınandı: tür yok, bilinmeyen tür, hiç veri yok — üçünde de " +
+      "boş kutu çıkmıyor. Ağ isteği ve dış dosya yok, palet @theme jetonlarından " +
+      "türüyor (yeni marka rengi yok) ve slug hash'inden deterministik, yani aynı " +
+      "kaynak her zaman aynı amblemi alıyor. data-a11y-image taşındığı için " +
+      "\"Görselleri gizle\" ayarı amblemleri de gizliyor.",
+    eksik:
+      "Amblemler yalnızca GÖRSEL görünümünde basılıyor; panel, gazete ve kart " +
+      "görünümleri tasarım gereği görselsiz. Resmî Gazete'nin 20 haberinin " +
+      "hiçbirinde gerçek nüsha sayısı yok, künyeye sayı yerine yayım tarihi basılıyor.",
     neden:
-      "Resmî Gazete (20 haber) ara sertifika göndermiyor, 8 kaynak bot engeli uyguluyor. Mevzuat sayfaları zaten görsel taşımıyor.",
+      "Başlıklardaki \"Karar Sayısı: 11723\" Cumhurbaşkanı karar numarası, gazetenin " +
+      "nüsha numarası DEĞİL; künyeye onu basmak yanlış bilgi olurdu. Sayı " +
+      "UYDURULMUYOR: yalnızca 3xxxx aralığı kabul ediliyor ve öncesinde \"Karar\" " +
+      "geçen eşleşme reddediliyor (7 birim sınaması). Gerçek sayı geçen bir başlıkta " +
+      "amblem \"SAYI 32456\" basıyor.",
   },
   {
     id: "erisilebilirlik",
@@ -219,7 +237,31 @@ export const OZELLIKLER: Ozellik[] = [
       "sunucusunda oturumsuz ?tenant_key=baskakurum reddedilip 'isov'a düşüyor (115). " +
       "articles.js artık elle req.query okumuyor, tenantKeyOf()'tan geçiyor.",
   },
-  { id: "profil-ayarlari", ad: "Profil ayarları (pozisyon, sektör, ilgi, vakit)", durum: "yok", alan: "hesap" },
+  {
+    id: "profil-ayarlari",
+    ad: "Profil ayarları (pozisyon, sektör, ilgi, vakit)",
+    durum: "calisiyor",
+    alan: "hesap",
+    nasil:
+      "/ayarlar sayfasının İLK bölümü. PUT /me/profile ucu baştan beri " +
+      "çalışıyordu ama onu çağıran hiçbir ekran yoktu: pozisyon, sektör, ilgi " +
+      "alanları ve vakit bütçesi yalnızca KAYIT SIRASINDA seçilebiliyor, sonra " +
+      "bir daha değiştirilemiyordu. Form, kayıt sihirbazının kendi adım " +
+      "bileşenlerini (AdimPozisyon / AdimSektor / AdimIlgi / AdimVakit) yeniden " +
+      "kullanıyor — ikinci bir sektör arayüzü yazmak iki formun birbirinden " +
+      "kayması demekti. Yeni /auth/me isteği atmıyor, SessionProvider'ın tek " +
+      "çağrısını okuyor ve kayıttan sonra aynı bağlamı yeniliyor, böylece üst " +
+      "bardaki Hesabım menüsü de güncel pozisyonu gösteriyor. \"Kaydet\" yalnızca " +
+      "gerçek değişiklikte açılıyor (dizi karşılaştırması sırayı yok sayıyor) ve " +
+      "durum metne yazılı — düğmenin sönük görünmesine bırakılmıyor.",
+    eksik:
+      "Bölge odağı (region_focus) ve persona alanı formda yok; ikisi de şemada " +
+      "duruyor ve uç kabul ediyor.",
+    neden:
+      "Bölge odağı kişisel skorun en küçük ağırlıklı bileşeni (0,05) ve persona " +
+      "ancak bir LLM anahtarı takıldığında iş yapıyor. Form bu turda kullanıcının " +
+      "gerçekten değiştirmek istediği dört alanla sınırlı tutuldu.",
+  },
 
   {
     id: "kisisel-siralama",
@@ -247,11 +289,11 @@ export const OZELLIKLER: Ozellik[] = [
   },
   {
     id: "vakit-yogunlugu",
-    ad: "Vakit bazlı içerik yoğunluğu (2/5/15 dk)",
+    ad: "Vakit bazlı içerik yoğunluğu (2/5/10 dk)",
     durum: "calisiyor",
     alan: "kisiselestirme",
     nasil:
-      "GET /me/digest sayıldı: 2 dk → 5 haber, tek cümle (en uzunu 99 karakter, sınır 150); 5 dk → 12 haber × 3 madde; 15 dk → 30 haberin ilk 10'u tam özet + TÜM maddeler (5-6 madde), sonraki 20'si 3 madde. Metin ÜRETİLMİYOR, mevcut alanlardan seçiliyor: summary_short / summary_medium 131 haberde heuristik dolu (idempotent iş, ikinci koşumda 0 güncelleme), kolon boşsa okuma yolu anlık yardımcıya düşüyor.",
+      "GET /me/digest sayıldı: 2 dk → 5 haber, tek cümle (en uzunu 99 karakter, sınır 150); 5 dk → 12 haber × 3 madde; 10 dk → 20 haberin ilk 6'sı tam özet + TÜM maddeler (5-6 madde), sonraki 14'ü 3 madde. Üçüncü kademe kullanıcının isteğiyle 15 → 10 dakikaya indi; eski kayıtlardaki 15 değeri geriye uyumlu eşleniyor (ölçüldü: GET /me/digest?time_budget=15 → 10 dk / 20 kalem / 6 tam özet). Aritmetik iki ölçekte doğrulandı — sözleşme özet boyuyla 6×46 sn + 14×16 sn + 20×2 sn tarama = 9,0 dk; bugünkü korpusun GERÇEK kelime sayımıyla (tam özet ort. 119 kelime, maddeli ort. 33,6 kelime) 6,6 dk. Eski 15 dk kademesi aynı ölçekte 13,0 / 10,3 dk veriyordu, yani adı yanlıştı. Metin ÜRETİLMİYOR, mevcut alanlardan seçiliyor: summary_short / summary_medium 131 haberde heuristik dolu (idempotent iş, ikinci koşumda 0 güncelleme), kolon boşsa okuma yolu anlık yardımcıya düşüyor.",
   },
   { id: "rol-bazli-ozet", ad: "Role göre özet metni", durum: "yok", alan: "kisiselestirme" },
   {
@@ -270,22 +312,46 @@ export const OZELLIKLER: Ozellik[] = [
   {
     id: "rol-bazli-panel",
     ad: "Pozisyona göre ilk sayfa düzeni",
-    durum: "kismi",
-    alan: "panel",
-    nasil:
-      "/panelim dört düzeni de gerçekten ayrı çıktı veriyor; ölçüm curl + HTML sayımı (5 dk bütçesiyle): özet 3 KPI / 2 bölüm / 5 haber / 141 KB, aksiyon 4 KPI / 3 bölüm / 5 geri sayımlı kalem + 7 haber / 222 KB, operasyon 4 KPI / 3 bölüm / 2 çubuk grafik / 12 haber / 276 KB, takip 4 KPI / 4 bölüm / 6 takvim kalemi + 6 haber / 222 KB. Özet ölçülerek en kısa: her vakit bütçesinde 5 kalemde sabit ve en küçük HTML. Pozisyon eşlemesi frontend'de DEĞİL: 8 pozisyonun her biri için /auth/me'nin döndürdüğü layout alanı okundu (çerez taklit edilerek 8 istek, hepsi 200) ve beklenen düzeni verdi. Vakit bütçesi bağlayıcı: 2/5/15 dk sırasıyla 5/12/30 kalem basıyor (aksiyon 15 dk: 6 iş + 24 haber = 30).",
-    eksik:
-      "Gerçek düzen için /auth/me gerekiyor; o uç şu an 404/501 dönüyor. Bu yüzden düzen doğrulaması sahte bir /auth/me vekiliyle yapıldı, canlı oturumla değil.",
-    neden:
-      "Kullanıcı ve profil uçları paralel yazılıyor. Uç yayına girene kadar panel özet düzenine düşüyor, 'kişiselleştirme henüz etkin değil' notunu gösteriyor ve sort=kisisel göndermiyor — sayfa ne çöküyor ne boş kalıyor (501 vekili ve backend tamamen kapalı senaryolarında ikisi de HTTP 200).",
-  },
-  {
-    id: "kpi-seridi",
-    ad: "KPI şeridi ve basit grafikler",
     durum: "calisiyor",
     alan: "panel",
     nasil:
-      "Göstergeler gerçek /stats/overview ve /articles toplamlarından geliyor: özet 115 tekil haber / 11 kritik / 81 kaynak; takip 11 mevzuat / 3 vergi; operasyon kategori toplamlarını limit=1 sorgularının total alanından okuyor. Grafikler hazır Charts.tsx bileşenleri (özet: tek küçük Sparkline, operasyon: 2 BarList). Sayı gelmeyen gösterge '—' basıyor: backend kapalıyken 3 KPI da '—' çıktı, sıfır uydurulmadı.",
+      "Dört düzen de gerçekten ayrı çıktı veriyor; ölçüm curl + HTML sayımı (5 dk bütçesiyle): özet 3 KPI / 2 bölüm / 5 haber / 141 KB, aksiyon 4 KPI / 3 bölüm / 5 geri sayımlı kalem + 7 haber / 222 KB, operasyon 4 KPI / 3 bölüm / 2 çubuk grafik / 12 haber / 276 KB, takip 4 KPI / 4 bölüm / 6 takvim kalemi + 6 haber / 222 KB. Özet ölçülerek en kısa: her vakit bütçesinde 5 kalemde sabit ve en küçük HTML. Pozisyon eşlemesi frontend'de DEĞİL: 8 pozisyonun her biri için /auth/me'nin döndürdüğü layout alanı okundu (çerez taklit edilerek 8 istek, hepsi 200) ve beklenen düzeni verdi. Vakit bütçesi bağlayıcı: 2/5/10 dk sırasıyla 5/12/20 kalem basıyor.",
+    eksik:
+      "Panel ayrı bir sayfa olmaktan çıkıp bültenin \"Bana Özel\" akışı olduktan " +
+      "sonra (/?akis=ozel) KB ölçümleri yeniden alınmadı: grafikler ve geniş KPI " +
+      "ızgarası kalktığı için eski 141/222/276/222 KB sayıları geçersiz. " +
+      "Operasyon düzeni artık 4 KPI + 2 bölüm + /istatistik bağlantısı.",
+    neden:
+      "Ölçümün kendisi değil sayısı bayat: düzenlerin gerçekten ayrıştığı ve " +
+      "pozisyon eşlemesinin frontend'de TÜRETİLMEDİĞİ hâlâ geçerli. /auth/me " +
+      "artık yayında (oturumsuz 401, 404/501 değil), yani düzen sahte bir " +
+      "vekille değil gerçek uçla geliyor.",
+  },
+  {
+    id: "kpi-seridi",
+    ad: "KPI şeridi (sıkı tek satır)",
+    durum: "calisiyor",
+    alan: "panel",
+    nasil:
+      "Göstergeler gerçek /stats/overview ve /articles toplamlarından geliyor: " +
+      "özet 115 tekil haber / 11 kritik / 81 kaynak; takip 11 mevzuat / 3 vergi; " +
+      "operasyon kategori toplamlarını limit=1 sorgularının total alanından " +
+      "okuyor. Sayı gelmeyen gösterge '—' basıyor: backend kapalıyken 3 KPI da " +
+      "'—' çıktı, sıfır uydurulmadı. Kullanıcının şikâyeti üzerine (\"panelimde " +
+      "KPIlar vs çok yer kaplıyo haber görmek için kaydırmak gerekiyor\") şerit " +
+      "SIKI kipe alındı: iki sütunlu ızgara yerine saran tek satır, açıklama " +
+      "metni ekrandan title niteliğine taşındı (silinmedi). CSS'i " +
+      ".pano-kpi[data-sik=\"true\"] nitelik seçicisiyle yazıldı, çünkü kural " +
+      "dosyası globals.css'ten ÖNCE yükleniyor ve aynı özgüllükte yazım " +
+      "kaybediyordu. Grafikler /istatistik'e taşındı — ilk ekranı yiyen en " +
+      "pahalı öğeydi.",
+    eksik:
+      "\"İlk haber başlığı ilk ekranda görünür\" kuralı GERÇEK TARAYICIDA " +
+      "ölçülmedi; sunucuda tarayıcı yok.",
+    neden:
+      "Piksel yüksekliği ancak yerleşim motoruyla ölçülür. Ölçülebilen şey " +
+      "basılan DOM öğesi sayısı ve bölüm sırası oldu: şeritten önce en çok bir " +
+      "görünür not var, fazlası <details> içinde; grafik hiç yok.",
   },
   {
     id: "manset-seridi",
@@ -293,7 +359,28 @@ export const OZELLIKLER: Ozellik[] = [
     durum: "calisiyor",
     alan: "panel",
     nasil:
-      "Dört düzenin hepsinde 8 başlık basılıyor (band=KRITIK sorgusu, API sırası korunur, 6'ya düşerse ana listeden tamamlanır). Otomatik kaydırma YOK; şerit kendi overflow-x:auto kabında, kap tabindex=0 ve adlandırılmış bölge olduğu için klavyeyle gezilebiliyor, yumuşak kaydırma prefers-reduced-motion ve data-a11y-motion=\"azalt\" ile kapanıyor. Sayfa gövdesi yatay kaymıyor.",
+      "Dört düzenin hepsinde 8 başlık basılıyor (band=KRITIK sorgusu, API sırası " +
+      "korunur, 6'ya düşerse ana listeden tamamlanır). Şerit artık haber kanalı " +
+      "alt yazısı gibi KENDİLİĞİNDEN ve yavaş kayıyor: liste iki kez basılıp tek " +
+      "bir ray CSS ile translateX(0) → translateX(-50%) götürülüyor, dikiş " +
+      "görünmüyor, JS zamanlayıcı yok. Süre başlık SAYISIYLA çarpılıyor (9 " +
+      "sn/başlık, taban 30 sn) — 8 başlıkta 72 sn, 20 başlıkta 180 sn, yani " +
+      "piksel/saniye hızı başlık sayısından bağımsız. Kayma yalnızca bir liste " +
+      "kopyası kabı DOLDURUYORSA açılıyor (ResizeObserver ile ölçülüyor); " +
+      "açılmasa dönüş noktasında boşluk görünürdü. Sunucu çiziminde kapalı " +
+      "başlıyor, yani JS hiç çalışmazsa şerit bozulmuyor, yalnızca kaymıyor. " +
+      "Hover, focus-within ve Duraklat/Oynat düğmesiyle duruyor — düğme WCAG " +
+      "2.2.2 gereği (5 saniyeden uzun otomatik harekette kullanıcı kontrolü " +
+      "zorunlu), süs değil. İkinci liste aria-hidden ve İÇİNDE BAĞLANTI YOK " +
+      "(span basılıyor), yani ekran okuyucu başlıkları iki kez okumuyor ve " +
+      "kopyada odaklanabilir öğe sıfır (jsdom'da sayıldı). " +
+      "prefers-reduced-motion ve data-a11y-motion=\"azalt\" altında hareket hiç " +
+      "yok: kopya ve düğme hem CSS'te hem React'te basılmıyor, şerit " +
+      "overflow-x:auto + tabindex=0 kabında ok tuşlarıyla gezilen eski hâline " +
+      "düşüyor. Özgüllük postcss + @csstools/selector-specificity ile ölçüldü: " +
+      "kurallar globals.css'ten 1547 satır ÖNCE geldiği için nitelik seçiciyle " +
+      "(0,2,0) bir kademe yukarı çıkıldı, yoksa aynı özgüllükte yazım " +
+      "kaybediyordu. Sayfa gövdesi 390 px'te yatay kaymıyor.",
   },
 
   {
@@ -340,20 +427,40 @@ export const OZELLIKLER: Ozellik[] = [
     nasil:
       "Hazır aralıklar Link, özel aralık <details> içinde GET formu — JS gerekmiyor. Daralma ölçüldü: filtresiz 115 haber → from=2026-09-10 ile 42 → +to=2026-09-11 ile 40; to=2026-09-01 ile 13; region=TURKIYE eklenince 9. Tarihler tr-TR / Europe/Istanbul (19.09.2026'da 'Son 7 gün' = 13–19 Eylül).",
     eksik:
-      "Bülten sayfasının sağ üstüne yerleştirme entegrasyon adımında yapılacak; /degisiklikler sayfasında çalışıyor.",
+      "Bülten sayfasının sağ üstüne yerleştirme entegrasyon adımında yapılacak; /raporlar içindeki Değişiklikler modülünde çalışıyor.",
     neden:
       "app/page.tsx ve components/Filters.tsx paralel çalışma yüzünden bu işte değiştirilmedi; bileşen prop alan biçimde bağımsız yazıldı.",
   },
   {
     id: "degisiklikler-paneli",
-    ad: "Değişiklikler paneli",
-    durum: "arayuz",
+    ad: "Değişiklikler modülü (/raporlar içinde)",
+    durum: "kismi",
     alan: "takip",
     nasil:
-      "/degisiklikler dev ve production derlemesinde 200 dönüyor, backend tamamen kapalıyken de çökmüyor. Örnek /changes yanıtıyla ölçüldü: 6 kayıt gün gün gruplandı, tür şeridi 6→1 daralttı, kısa ibareler doğru üretildi (\"2 kaynaktan 4'e\", \"Orta → Kritik\"), is_confirmed=0 kaydı \"aynı konuda gelişme olabilir\" diye çekinceli basıldı.",
+      "Ayrı sayfa olmaktan çıktı, /raporlar içinde id=\"degisiklikler\" modülü oldu " +
+      "(kullanıcı isteği: \"Değişiklikler ve Raporları aynı panele taşıyabilirsin\"). " +
+      "Eski /degisiklikler yolu 308 + GÖRELİ Location ile buraya yönleniyor. " +
+      "Yönlendirme page.tsx + redirect() ile YAPILMADI, yol işleyicisiyle yapıldı: " +
+      "kökte app/loading.tsx durduğu için her sayfa Suspense sınırında ve " +
+      "redirect() çağrıldığında kabuk çoktan akmış oluyor — ölçüldü, yanıt " +
+      "Location başlığı OLMADAN 200 döndü, yani JS kapalı kullanıcı boş sayfa " +
+      "görürdü. Üretim derlemesinde ölçüldü: varsayılan yüzey tam 5 tek satırlık " +
+      "kalem ve süzgeç basmıyor; ?tumu=1 ile 12 kayıt 3 gün grubuna ayrıldı ve " +
+      "\"235 kayıt · ilk 12 gösteriliyor\" yazdı; ?type=dosya-gelismesi listeyi " +
+      "12'den 2'ye daralttı. Üç durum AYRI cümlelerle söyleniyor: 404/501 \"uç " +
+      "yayında değil\", 401/403 \"uç çalışıyor, eksik olan giriş\" + giriş " +
+      "bağlantısı, 200+0 kayıt \"bu korpusta henüz değişiklik kaydı yok\". 401 " +
+      "dalı geçersiz çerezle gerçekten ölçüldü: sayfa 200, doğru Türkçe cümle, " +
+      "bilinmeyen sayılarda \"—\", çökme yok.",
     eksik:
-      "Gerçek veri yok; uç 404/501 dönerken sayfa 'Değişiklik takibi henüz etkin değil' diyor, sayı uydurmuyor.",
-    neden: "/api/changes henüz uygulanmadı (yer tutucu router 501 döner).",
+      "Geçerli oturumla, 235 satırlık GERÇEK yanıtla render doğrulanmadı — " +
+      "sözleşme şekline uygun sabit veriyle doğrulandı. Sayfalama yok: uç 235 " +
+      "kayıt bildirdiğinde modül ilk 200'ü çekiyor ve bunu satırda açıkça yazıyor.",
+    neden:
+      "/api/changes YAYINDA ve oturum istiyor — oturumsuz 401 ölçüldü, 404/501 " +
+      "DEĞİL. article_changes tablosunda 235 satır var (yeni 115, " +
+      "ozet-guncellendi 115, dosya-gelismesi 5). Doğrulama için üretim " +
+      "veritabanına test kullanıcısı yazmak istenmedi.",
   },
   {
     id: "son-ziyaretten-beri",
@@ -422,7 +529,7 @@ export const OZELLIKLER: Ozellik[] = [
     durum: "calisiyor",
     alan: "dagitim",
     nasil:
-      "Sapma-only: tercih satırı OLMAYAN kullanıcı da varsayılanla (haftalık, 08:00 TRT, Pazartesi, min_band=YÜKSEK) bültene giriyor. Ölçüldü: Pazartesi 08:00'de 14 aday, aynı gün 09:00'da 0, Salı 08:00'de 0. Bir kullanıcıya günlük/17:00 tercihi yazılınca Salı 17:00'de yalnızca o kullanıcı aday oldu, 18:00'de aday çıkmadı; frequency='kapali' yapılınca listeden düştü. Haber sayısı vakit bütçesinden türüyor (2 dk→5, 5 dk→12, 15 dk→30) ve max_items verilmişse o kazanıyor (max_items=4 → 4 haber).",
+      "Sapma-only: tercih satırı OLMAYAN kullanıcı da varsayılanla (haftalık, 08:00 TRT, Pazartesi, min_band=YÜKSEK) bültene giriyor. Ölçüldü: Pazartesi 08:00'de 14 aday, aynı gün 09:00'da 0, Salı 08:00'de 0. Bir kullanıcıya günlük/17:00 tercihi yazılınca Salı 17:00'de yalnızca o kullanıcı aday oldu, 18:00'de aday çıkmadı; frequency='kapali' yapılınca listeden düştü. Haber sayısı vakit bütçesinden türüyor (2 dk→5, 5 dk→12, 10 dk→20) ve max_items verilmişse o kazanıyor (max_items=4 → 4 haber).",
     eksik:
       "only_changes ve format='tam' seçenekleri kodda uygulanıyor ama canlı veriyle ölçülmedi (article_changes tablosu bu korpusta boş).",
     neden:
@@ -459,6 +566,100 @@ export const OZELLIKLER: Ozellik[] = [
   },
 
   // --- /durum sayfasi ve arayuz rozeti -------------------------------
+  {
+    id: "hesabim-menusu",
+    ad: "Üst bardaki Hesabım menüsü ve çıkış",
+    durum: "calisiyor",
+    alan: "hesap",
+    nasil:
+      "Kullanıcının şikâyeti birebir \"giriş çıkış yapılı mı onu bile göremiyoruz\" " +
+      "idi: üst barda oturumun varlığına dair hiçbir işaret ve çıkış yapmanın " +
+      "arayüzde bir yolu yoktu. Menü dört oturum durumunu AYRI AYRI basıyor: " +
+      "bilinmiyor → nötr iskelet ve \"giriş yap\" YAZMIYOR (bilmediğimiz şeyi " +
+      "söylemek, giriş yapmış kullanıcıya yanlış bilgi vermek olurdu); var → baş " +
+      "harf madalyonu (tr-TR büyütme, \"ismail\" → \"İ\") + ad, e-posta, pozisyon, " +
+      "kurum, rol ve Ayarlar / Yönetim (yalnızca admin) / Özellik Durumu / Çıkış " +
+      "Yap; yok → Giriş Yap ve Kayıt Ol; belirsiz → nötr \"Hesap\" ve \"oturum " +
+      "durumu doğrulanamadı\" notu, kullanıcı oturumundan ATILMIYOR. Boş alan " +
+      "varsa satır hiç basılmıyor, \"—\" bile yazılmıyor. Yeni /auth/me isteği " +
+      "atmıyor, SessionProvider'ın sayfa başına tek çağrısını okuyor. Çıkış hata " +
+      "dönerse menüde Türkçe hata satırı çıkıyor ve oturum KORUNUYOR. " +
+      "Erişilebilirlik: aria-expanded / aria-haspopup=\"menu\" / aria-controls, " +
+      "Escape kapatıp odağı düğmeye döndürüyor, dışarı pointerdown kapatıyor, " +
+      "odak kökten çıkarsa kapanıyor (relatedTarget null ise kapatılmıyor — o, " +
+      "odağın tarayıcı arayüzüne gitmesi demek), role=\"menu\" <ul> ÜZERİNDE ve " +
+      "kimlik/not/hata satırları menü rolünün dışında (ARIA menu yalnızca " +
+      "menuitem/group çocuk kabul ediyor). Yazdırmada gizli.",
+  },
+  {
+    id: "sade-gezinti",
+    ad: "Sadeleştirilmiş üst bar (8 bağlantı → 3)",
+    durum: "calisiyor",
+    alan: "panel",
+    nasil:
+      "Kullanıcının isteği: \"uygulamanın görünümünü basitleştir şuan her yerde " +
+      "bir şeyler var\". Üst bar Bülten · Raporlar · İstatistik'e indi; /panelim " +
+      "bültenin akış anahtarına, /degisiklikler /raporlar modülüne, /etiketler " +
+      "/istatistik modülüne, /ayarlar ve /admin ve /durum Hesabım menüsüne " +
+      "taşındı. ESKİ YOLLARIN HİÇBİRİ 404 VERMİYOR: üçü de yol işleyicisiyle " +
+      "gerçek 3xx + Location üretiyor (/panelim 307 geçici, diğer ikisi 308 " +
+      "kalıcı) ve sorgu parametreleri aktarılıyor. Ekrandaki üç kural çizgisi " +
+      "tek kalın + bir ince kurala indi; NYT'nin imzası olan çift kural " +
+      "NewspaperMasthead'de (gazete görünümü ve yazdırma) KORUNDU. Aktif sayfa " +
+      "renkle DEĞİL kalınlık + alt çizgi + aria-current=\"page\" ile " +
+      "gösteriliyor (WCAG 1.4.1). 390 px'te hesap menüsü ve dört düğmeli görünüm " +
+      "anahtarı aynı satıra sığıyor; anahtar yalnızca üst bar sarmalayıcısı " +
+      "içinde daraltılıyor, /ayarlar sayfasında tam boy kalıyor.",
+  },
+  {
+    id: "akis-anahtari",
+    ad: "Bülten içinde Bana Özel / Genel akış anahtarı",
+    durum: "calisiyor",
+    alan: "panel",
+    nasil:
+      "Kullanıcının isteği: \"Panelim kısmı ayrı bir sayfa olmasın bülten ile " +
+      "aynı sayfa olsun bi yerde switch ekle\". Tek sayfa, iki akış, dört " +
+      "görünüm. ?akis= içeriği ve yoğunluğu seçiyor, görünüm anahtarı sunumu " +
+      "seçiyor ve ikisi BAĞIMSIZ — böylece \"üst yönetici → görsel, normal " +
+      "kullanıcı → kart\" varsayılanı kişisel akışta da anlam kazanıyor: kabuk " +
+      "(başlık, sıkı KPI şeridi, şerit) yuvaların dışında bir kez basılıyor, " +
+      "haber akışı dört yuvaya (panel/gazete → ArticleFlow, görsel → " +
+      "VisualFront, kart → DigestFront). Varsayılan akış profilden geliyor: " +
+      "/auth/me \"etkin\" ve bir layout döndürdüyse Bana Özel, aksi halde Genel. " +
+      "Anahtar Link tabanlı, yani JS'siz çalışıyor ve diğer arama " +
+      "parametrelerini koruyor. Oturum yokken Bana Özel seçilirse YÖNLENDİRME " +
+      "YAPILMIYOR: panel kendi dürüst notunu gösteriyor, altına küçük bir giriş " +
+      "bağlantısı düşüyor. Filtre bağlantılarının akis/vakit'i düşürdüğü hata " +
+      "ayrıca kapatıldı (withParam yalnızca kendisine verilen alanları " +
+      "taşıyordu; bölge çipine basan kullanıcı genel bültene dönüyordu).",
+  },
+  {
+    id: "rol-bazli-gorunum",
+    ad: "Pozisyona göre açılış görünümü",
+    durum: "calisiyor",
+    alan: "panel",
+    nasil:
+      "Kullanıcının isteği: \"En üst düzey yöneticiler için Görsel olan açılsın / " +
+      "Normal kullanıcılar için Kart görünümü açılsın / Kullanıcılar yine şuanki " +
+      "gibi kendileri değiştirebilir olsun\". POSITION_VIEW tek eşleme noktası " +
+      "(backend/src/lib/positions.js); DB kolonu YOK, layoutOf() ile aynı " +
+      "ilkeyle türetiliyor. 8 pozisyonun her biri için viewOf() gerçekten " +
+      "çağrıldı: ust-yonetim → gorsel, diğer 7 → kart, profil yok / bilinmeyen " +
+      "pozisyon → panel. viewOf() bilinçli olarak normalizePosition() " +
+      "KULLANMIYOR — o bilinmeyeni ust-yonetim'e çekiyor ve profilsiz " +
+      "kullanıcıya gorsel açardı. /auth/me default_view döndürüyor ve backend " +
+      "isov_view çerezi yazıyor; çerez httpOnly DEĞİL çünkü hidrasyondan ÖNCE " +
+      "satır içi betikte okunması gerekiyor (yoksa mizanpaj sıçrar), oturum " +
+      "taşımıyor ve kurcalanması yetki artışı değil yalnızca yanlış mizanpaj " +
+      "demek. Gerçek Set-Cookie ölçüldü: kayıt → isov_view=panel, pozisyon " +
+      "ust-yonetim → gorsel, mevzuat-hukuk → kart, çıkış → Expires=1970; " +
+      "isov_view satırlarında HttpOnly yok, oturum çerezinde var. Öncelik " +
+      "sırası hem satır içi betikte hem ViewProvider'da aynı: " +
+      "localStorage['isov:view'] (kullanıcının AÇIK seçimi) → isov_view çerezi → " +
+      "'panel'. Betik sahte localStorage/document.cookie ile koşturularak 6 " +
+      "senaryoda ölçüldü; açık seçim çerezi eziyor, bozuk çerez panel'e düşüyor, " +
+      "my_isov_view gibi önek tuzağı yakalanmıyor.",
+  },
   {
     id: "durum-sayfasi",
     ad: "Özellik durumu sayfası (/durum) ve arayüz rozeti",
