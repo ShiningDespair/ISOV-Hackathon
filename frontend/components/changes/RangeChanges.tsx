@@ -84,7 +84,8 @@ export async function rangeChangeOzeti(
     toplam,
     parcalar,
     aralik: tarihAraligiEtiketi(from, to),
-    hedef: `/degisiklikler${qs ? `?${qs}` : ""}`,
+    // Panel artik /raporlar icinde bir modul; capa dogrudan moduele iner.
+    hedef: `/raporlar${qs ? `?${qs}` : ""}#degisiklikler`,
   };
 }
 
@@ -112,7 +113,7 @@ export function RangeChangesLine({
         <>
           {" "}
           <Link href={ozet.hedef} className="u-link-underline degis-aralik-bag">
-            Değişiklikler panelinde gör
+            Değişiklikler modülünde gör
           </Link>
         </>
       ) : null}

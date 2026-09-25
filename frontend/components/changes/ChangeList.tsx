@@ -3,6 +3,12 @@
  *
  * Gruplama Europe/Istanbul takvimine göre yapılır; UTC'ye göre gruplamak
  * gece yarısı sonrası kayıtları yanlış güne yazardı.
+ *
+ * `basligiSeviyesi`: liste artık kendi sayfasında değil, `/raporlar`
+ * içindeki "Değişiklikler" modülünün İÇİNDE duruyor. Modülün başlığı `h2`
+ * olduğu için gün başlıkları `h3` olmak zorunda — yoksa sayfada aynı
+ * düzeyde onlarca `h2` birikir ve ekran okuyucunun başlık ağacı düzleşir.
+ * Varsayılan `h2` bırakıldı ki tek başına kullanımda davranış değişmesin.
  */
 
 import type { ChangeItem } from "@/lib/api-me";
@@ -20,7 +26,13 @@ function gunuOf(item: ChangeItem): string | null {
   return Number.isNaN(d.getTime()) ? null : istanbulGunu(d);
 }
 
-export function ChangeList({ items }: { items: ChangeItem[] }) {
+export function ChangeList({
+  items,
+  basligiSeviyesi = "h2",
+}: {
+  items: ChangeItem[];
+  basligiSeviyesi?: "h2" | "h3" | "h4";
+}) {
   // Gün -> kayıtlar. Map ekleme sırasını korur; liste backend'den tarihe
   // göre azalan geldiği için ek sıralama yapılmaz.
   const gruplar = new Map<string, ChangeItem[]>();
@@ -31,14 +43,16 @@ export function ChangeList({ items }: { items: ChangeItem[] }) {
     gruplar.set(key, list);
   }
 
+  const Baslik = basligiSeviyesi;
+
   return (
     <div className="degis-liste">
       {[...gruplar.entries()].map(([gun, kayitlar]) => (
         <section key={gun} className="degis-grup" aria-labelledby={`gun-${gun}`}>
-          <h2 id={`gun-${gun}`} className="u-kicker degis-grup-baslik">
+          <Baslik id={`gun-${gun}`} className="u-kicker degis-grup-baslik">
             {gun === "bilinmiyor" ? "Tarihi belirsiz" : formatDate(gun)}
             <span className="degis-grup-sayi"> · {kayitlar.length} kayıt</span>
-          </h2>
+          </Baslik>
           <ul className="degis-satirlar">
             {kayitlar.map((item, i) => (
               <ChangeRow

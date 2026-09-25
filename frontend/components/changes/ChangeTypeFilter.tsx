@@ -17,7 +17,8 @@ import { formatNumber } from "@/lib/format";
 
 export function ChangeTypeFilter({
   state,
-  basePath = "/degisiklikler",
+  /* Degisiklikler paneli artik /raporlar icindeki bir modul. */
+  basePath = "/raporlar",
   counts,
   showCounts = false,
 }: {
