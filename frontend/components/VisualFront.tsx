@@ -92,6 +92,11 @@ function ClusterNote({ article }: { article: Article }) {
 function VisualLead({ article }: { article: Article }) {
   return (
     <article className="gorsel-lead border-b border-ink pb-7">
+      {/* Kaynak amblemi (görseli olmayan haberler) için geçen alanlar:
+          `sourceSlug` adlandırılmış tasarımı, `sourceType` tür arketipini,
+          `countryCode` ülke damgasını seçer; `articleUrl` ve `publishedAt`
+          Resmî Gazete künyesindeki sayı/tarih için gerekiyor. Bunlar
+          geçmezse amblem yine çıkar, yalnızca monogram kademesine düşer. */}
       <Link
         href={`/haber/${article.id}`}
         aria-label={article.title}
@@ -107,6 +112,11 @@ function VisualLead({ article }: { article: Article }) {
           label={placeholderLabel(article)}
           fallbackInitials={regionLabel(article.region)}
           ratio="lead"
+          sourceSlug={article.source?.slug}
+          sourceType={article.source?.source_type}
+          countryCode={article.source?.country_code}
+          articleUrl={article.url}
+          publishedAt={article.published_at}
         />
       </Link>
 
@@ -160,6 +170,11 @@ function VisualLead({ article }: { article: Article }) {
 function VisualCard({ article }: { article: Article }) {
   return (
     <article className="gorsel-card">
+      {/* Kaynak amblemi (görseli olmayan haberler) için geçen alanlar:
+          `sourceSlug` adlandırılmış tasarımı, `sourceType` tür arketipini,
+          `countryCode` ülke damgasını seçer; `articleUrl` ve `publishedAt`
+          Resmî Gazete künyesindeki sayı/tarih için gerekiyor. Bunlar
+          geçmezse amblem yine çıkar, yalnızca monogram kademesine düşer. */}
       <Link
         href={`/haber/${article.id}`}
         aria-label={article.title}
@@ -175,6 +190,11 @@ function VisualCard({ article }: { article: Article }) {
           label={placeholderLabel(article)}
           fallbackInitials={regionLabel(article.region)}
           ratio="card"
+          sourceSlug={article.source?.slug}
+          sourceType={article.source?.source_type}
+          countryCode={article.source?.country_code}
+          articleUrl={article.url}
+          publishedAt={article.published_at}
         />
       </Link>
 
@@ -206,20 +226,35 @@ export function VisualFront({
   articles,
   total,
   state,
+  baslikDuzeyi = 1,
 }: {
   articles: Article[];
   total: number;
   state: FilterState;
+  /**
+   * Ekran okuyucu basliginin duzeyi.
+   *
+   * Neden prop: bu bilesen iki baglamda kullaniliyor ve ikisinde DOGRU
+   * duzey farkli.
+   *   - Genel akista gorunum yuvasi sayfanin TEK govdesi; panel yuvasi
+   *     `display:none` oldugu icin oradaki `h1` yardimci teknolojiye
+   *     hic ulasmiyor. Burada `h1` DOGRU, yoksa sayfa bassiz kalir.
+   *   - Bana Ozel akisinda kabuk, yuvalarin DISINDA bir `h1` basiyor;
+   *     burada da `h1` basmak iki ana yer isareti demek olurdu.
+   * Bu yuzden duzey cagirana birakildi, bilesen icinde tahmin edilmiyor.
+   */
+  baslikDuzeyi?: 1 | 2;
 }) {
+  const Baslik = baslikDuzeyi === 1 ? "h1" : "h2";
   const lead = articles[0];
   const grid = articles.slice(1, 1 + GRID_MAX);
   const tail = articles.slice(1 + GRID_MAX);
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-4 pb-10 sm:px-6">
-      <h1 className="sr-only-custom">
+      <Baslik className="sr-only-custom">
         İSO · İSOV Dış Kaynak İzleme Bülteni — Görsel Bülten
-      </h1>
+      </Baslik>
 
       {/* Filtre şeridi — panel görünümüyle aynı düzen (arama kutusu ana
           görünümde tek örnek kalsın diye burada tekrarlanmıyor). */}

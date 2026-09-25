@@ -68,6 +68,11 @@ export function serializeSource(row) {
     slug: row.source_slug,
     name: row.source_name,
     source_type: row.source_type,
+    // Kaynak amblemi icin: ulke etiketi ve (ileride) kaynaga gidis baglantisi.
+    // ARTICLE_COLUMNS bu iki kolonu da seciyor; secmeyen bir sorgudan gelen
+    // satirda alanlar `null` doner, frontend tipinde ikisi de istege bagli.
+    country_code: row.source_country_code ?? null,
+    homepage_url: row.source_homepage_url ?? null,
   };
 }
 

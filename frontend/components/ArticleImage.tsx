@@ -1,69 +1,73 @@
 "use client";
 
 /**
- * Haber görseli + tipografik yer tutucu (Görsel görünümü).
+ * Haber görseli + kaynak amblemi yer tutucusu (Görsel/Kart görünümleri).
  *
  * Neden istemci bileşeni: yalnızca `onError` için. Kaynak host'lar rastgele
  * olduğu için görsellerin bir kısmı 404/403 dönebilir ya da hotlink'e kapalı
- * olabilir; bu durumda kırık resim ikonu yerine yer tutucuya düşüyoruz.
- * Sayfanın geri kalanı (VisualFront) sunucu bileşeni olarak kalır.
+ * olabilir; bu durumda kırık resim ikonu yerine amblemi basıyoruz. Bu tek
+ * neden ortadan kalkmadığı sürece `"use client"` ZORUNLU kalır. Sayfanın geri
+ * kalanı (VisualFront) sunucu bileşeni; `<SourceArtwork>` de sunucu bileşeni
+ * ama buradan çağrıldığı için istemci ağacında render edilir — içinde state
+ * ve olay olmadığı için maliyeti yalnızca statik SVG işaretlemesi kadar.
  *
  * Neden `next/image` DEĞİL: `next.config.ts` içinde `remotePatterns` tanımlı
  * değil ve kaynak host'lar önceden bilinemiyor; `next/image` bilinmeyen host'ta
  * çalışma anında hata fırlatır. Düz `<img>` + CSS `aspect-ratio` kullanılıyor,
  * böylece mizanpaj kayması (layout shift) da olmuyor.
  *
- * Erişilebilirlik: hem gerçek görsel hem yer tutucu `data-a11y-image` taşır;
+ * Yer tutucu (docs/SADELESTIRME.md §5): eski tipografik blok yerine kaynağa
+ * özgü satır içi SVG amblem basılır. Üretim mantığı `lib/source-art.ts`
+ * içinde saf fonksiyon olarak duruyor; buraya yalnızca "hangi props hangi
+ * alandan geliyor" bilgisi ait.
+ *
+ * Erişilebilirlik: hem gerçek görsel hem amblem `data-a11y-image` taşır;
  * "Görselleri gizle" ayarı ikisini de gizler (globals.css ERİŞİLEBİLİRLİK).
  */
 
 import { useState } from "react";
 
-/** Yer tutucu ton sayısı — globals.css'teki .gorsel-tone-* ile aynı olmalı. */
-const TONE_COUNT = 4;
+import { SourceArtwork } from "./SourceArtwork";
 
-/** Kaynak adından baş harfler: "Resmî Gazete" -> "RG". */
-function initialsOf(name?: string | null, fallback = ""): string {
-  const words = String(name ?? "")
-    .replace(/[^\p{L}\p{N}\s]+/gu, " ")
-    .split(/\s+/)
-    .filter((w) => w.length > 0);
-
-  if (words.length === 0) {
-    return fallback.slice(0, 2).toLocaleUpperCase("tr-TR");
-  }
-  if (words.length === 1) {
-    return words[0].slice(0, 2).toLocaleUpperCase("tr-TR");
-  }
-  return (words[0][0] + words[1][0]).toLocaleUpperCase("tr-TR");
-}
-
-/**
- * Deterministik ton: aynı haber her zaman aynı yer tutucuyu alır.
- * Kimlik küçük tam sayı olduğu için basit bir karıştırma yeterli —
- * 1..8 aralığında ardışık id'ler farklı tonlara dağılsın diye çarpan var.
- */
-export function toneOf(seed: number): number {
-  const n = Math.abs(Math.trunc(Number.isFinite(seed) ? seed : 0));
-  return (n * 7 + 3) % TONE_COUNT;
-}
+// NOT: eski `toneOf()` yardımcısı ve `.gorsel-tone-*` sınıfları artık
+// kullanılmıyor. Amblem paleti haber kimliğinden değil KAYNAK SLUG'INDAN
+// türüyor (`lib/source-art.ts`), çünkü aynı kaynağın tüm haberlerinin aynı
+// kimliği taşıması gerekiyor. `.gorsel-tone-*` kuralları globals.css'te ölü
+// kaldı; o dosya bu turda kilitli olduğu için temizliği süpervizör yapacak.
 
 export interface ArticleImageProps {
-  /** `image_url`; yok / null ise doğrudan yer tutucu basılır. */
+  /** `image_url`; yok / null ise doğrudan kaynak amblemi basılır. */
   src?: string | null;
   /** Anlamlı alternatif metin — haber başlığı. */
   alt: string;
-  /** Deterministik ton kaynağı — `article.id`. */
+  /** Deterministik ton kaynağı — `article.id`. Amblem paleti slug'dan gelir. */
   seed: number;
-  /** Yer tutucudaki büyük harfler bu addan türetilir. */
+  /** Amblem yazısı bu addan türetilir — `article.source.name`. */
   sourceName?: string | null;
-  /** Yer tutucu kicker'ı — kategori ya da bölge. */
+  /** Yer tutucu kicker'ı — kategori ya da bölge. Kaynak adı yoksa yedek olur. */
   label?: string;
-  /** Baş harf üretilemezse kullanılacak yedek (ör. bölge adı). */
+  /** Ad üretilemezse kullanılacak yedek (ör. bölge adı). */
   fallbackInitials?: string;
   /** Çerçeve oranı: manşet 16:9, kart 4:3. */
   ratio?: "lead" | "card";
   className?: string;
+
+  // --- Amblem için isteğe bağlı kaynak alanları ----------------------
+  // Hiçbiri ZORUNLU değil: verilmezse amblem kademe 2/3'e düşer ve yine
+  // makul bir sonuç üretir (boş kutu YOK). Verildiğinde kademe 1 (elle
+  // tasarlanmış kimlik) devreye girer.
+  /** `article.source.slug` — kademe 1 adlandırılmış tasarımın anahtarı. */
+  sourceSlug?: string | null;
+  /** `article.source.source_type` — kademe 2 arketipi. */
+  sourceType?: string | null;
+  /** `article.source.country_code` — amblemin alt satırı. */
+  countryCode?: string | null;
+  /** `article.title` — Resmî Gazete sayı çıkarımı için. */
+  articleTitle?: string | null;
+  /** `article.url` — Resmî Gazete tarih çıkarımı için. */
+  articleUrl?: string | null;
+  /** `article.published_at` — URL'de tarih yoksa yedek. */
+  publishedAt?: string | null;
 }
 
 export function ArticleImage({
@@ -75,6 +79,12 @@ export function ArticleImage({
   fallbackInitials = "",
   ratio = "card",
   className = "",
+  sourceSlug,
+  sourceType,
+  countryCode,
+  articleTitle,
+  articleUrl,
+  publishedAt,
 }: ArticleImageProps) {
   const [broken, setBroken] = useState(false);
 
@@ -83,23 +93,27 @@ export function ArticleImage({
   const usable = url !== "" && !broken;
 
   // --- Yer tutucu: görsel yok ya da yüklenemedi ----------------------
-  // Dekoratif: haberin başlığı ve kicker'ı hemen yanında metin olarak
-  // zaten var, ekran okuyucuya ikinci kez okutmuyoruz.
+  // Kaynak amblemi. Dekoratif olduğu ve `data-a11y-image` taşıdığı için
+  // erişilebilirlik sözleşmesi SourceArtwork içinde korunuyor.
+  // `seed` burada artık palet seçmiyor; palet slug karmasından geliyor, yani
+  // aynı kaynağın tüm haberleri aynı amblemi alıyor (kurumsal kimlik).
   if (!usable) {
     return (
-      <div
-        data-a11y-image
-        aria-hidden="true"
-        className={`gorsel-ph gorsel-tone-${toneOf(seed)} ${ratioClass} ${className}`}
-      >
-        <span className="gorsel-ph-kicker">{label || "Bülten"}</span>
-        <span className="gorsel-ph-mark">
-          {initialsOf(sourceName, fallbackInitials)}
-        </span>
-        <span className="gorsel-ph-note">
-          {sourceName ? "Görsel yok" : "Kaynak belirtilmemiş"}
-        </span>
-      </div>
+      <SourceArtwork
+        ratio={ratio}
+        className={className}
+        slug={sourceSlug}
+        name={sourceName}
+        sourceType={sourceType}
+        countryCode={countryCode}
+        title={articleTitle ?? alt}
+        url={articleUrl}
+        publishedAt={publishedAt}
+        // Kaynak adı hiç yoksa elimizdeki en anlamlı yedek: kicker/bölge.
+        fallbackInitials={fallbackInitials || label}
+        // Kaynak türü verilmediğinde amblemin üst satırı bu etiket olur.
+        kicker={label}
+      />
     );
   }
 

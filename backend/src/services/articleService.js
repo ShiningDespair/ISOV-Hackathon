@@ -8,7 +8,18 @@ import { query } from '../lib/db.js';
 import { placeholders } from '../lib/http.js';
 import { serializeArticle } from '../lib/serialize.js';
 
-/** articles + sources + clusters ortak SELECT govdesi. */
+/**
+ * articles + sources + clusters ortak SELECT govdesi.
+ *
+ * `s.country_code` ve `s.homepage_url` kaynak amblemi icin eklendi
+ * (frontend/lib/source-art.ts): gorseli olmayan haberde kaynaga ozgu satir ici
+ * SVG yer tutucu uretiliyor, ulke etiketi oradan geliyor. Bu SELECT
+ * /articles, /articles/:id, /clusters, /me/* ve digest sorgularinin TAMAMI
+ * tarafindan paylasiliyor; alan eklemek hepsini birlikte besliyor.
+ *
+ * SQL yorumu (`--`) BURAYA YAZILMAZ: bu dize tek satirlik sorgulara da
+ * enterpole ediliyor, satir sonu yorumu arkasindaki kolonlari yutabilir.
+ */
 export const ARTICLE_COLUMNS = `
   a.id, a.title, a.url, a.summary, a.key_points, a.entities,
   a.image_url,
@@ -16,6 +27,7 @@ export const ARTICLE_COLUMNS = `
   a.importance_band, a.importance_score, a.published_at,
   a.cluster_id, a.is_duplicate, a.duplicate_of_id,
   s.slug AS source_slug, s.name AS source_name, s.source_type AS source_type,
+  s.country_code AS source_country_code, s.homepage_url AS source_homepage_url,
   c.member_count AS cluster_member_count
 `;
 
