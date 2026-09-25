@@ -27,3 +27,7 @@ volumes/
 
 # model onbellegi (embedding modelleri repoya girmez)
 backend/.cache/
+
+# Veritabani yedekleri: sifre ozetleri ve oturum kayitlari icerir, ASLA depoya girmez.
+backups/
+*.sql.gz
