@@ -29,6 +29,61 @@ export function PanoNotice({
   );
 }
 
+/**
+ * Bilgi notu yığını — İLK EKRANI YEMEZ.
+ *
+ * Notlar dürüstlük gereği duruyor (uç yayında değil / oturum yok / önizleme
+ * kipi gibi ayrımlar kullanıcıya AYRI cümlelerle söylenir) ama üç not üst
+ * üste ~150 piksel yiyor ve haber başlığını ilk ekranın dışına itiyordu.
+ * Çözüm gizlemek DEĞİL katlamak: ilk not her zaman açık, kalanlar
+ * `<details>` içinde ve sayısı özet satırında yazılı. `<details>` JS'siz
+ * çalışır, klavyeyle açılır, ekran okuyucuda "N not daha" olarak duyurulur.
+ */
+export function PanoNotices({
+  notices,
+  warnFirst = false,
+}: {
+  notices: string[];
+  /** İlk not bir uyarı mı (profil/oturum durumu) yoksa düz bilgi mi. */
+  warnFirst?: boolean;
+}) {
+  if (notices.length === 0) return null;
+
+  const [first, ...rest] = notices;
+
+  return (
+    <div className="pano-bilgi-yigin">
+      <PanoNotice tone={warnFirst ? "uyari" : "bilgi"}>{first}</PanoNotice>
+
+      {rest.length > 0 ? (
+        <details className="akis-not-katla">
+          <summary className="akis-not-ozet">
+            {rest.length} not daha
+          </summary>
+          <div className="akis-not-govde">
+            {rest.map((note, i) => (
+              <PanoNotice key={i}>{note}</PanoNotice>
+            ))}
+          </div>
+        </details>
+      ) : null}
+    </div>
+  );
+}
+
+/**
+ * Panel başlığı — TEK SATIR.
+ *
+ * Eskiden üç satır basıyordu (kicker + h1 + iki cümlelik açıklama) ve
+ * bunun yalnızca üçüncü satırı bilgi taşıyordu. Şimdi hepsi tek satırda,
+ * orta nokta ile ayrılmış: pozisyon · düzen · "N dakika / M kalem" ·
+ * kişiselleştirme durumu.
+ *
+ * `h1` BURADA DEĞİL: panel artık `/` sayfasının içinde yaşıyor ve o
+ * sayfanın kendi `h1`i var. İki `h1` ana yer işareti (landmark) sırasını
+ * bozar ve ekran okuyucuda "hangisi sayfanın adı" belirsizleşir. Başlık
+ * `h2` olarak basılır.
+ */
 export function PanoHeader({
   layout,
   positionLabel,
@@ -44,21 +99,29 @@ export function PanoHeader({
   itemCount: number;
   personalized: boolean;
 }) {
+  const parts: string[] = [
+    positionLabel ?? "Pozisyon bilgisi yok",
+    `${LAYOUT_LABELS[layout]} düzeni`,
+    `${timeBudget} dakika / ${itemCount} kalem`,
+    personalized ? "pozisyonunuza göre sıralı" : "genel önem sırası",
+  ];
+
   return (
-    <header className="pano-header">
-      <p className="u-kicker u-kicker-accent">
-        {positionLabel ?? "Pozisyon bilgisi yok"}
-      </p>
-      <h1 className="u-headline u-headline-lg mt-1">
+    <header className="pano-header akis-header-tek">
+      <h2 className="akis-header-ad" title={LAYOUT_HINTS[layout]}>
         {fullName ? `${fullName} — panelim` : "Panelim"}
-      </h1>
-      <p className="u-body u-body-soft mt-2 max-w-2xl text-[0.95rem]">
-        {LAYOUT_LABELS[layout]} düzeni · {LAYOUT_HINTS[layout]}.{" "}
-        <strong className="font-semibold">{timeBudget} dakikalık</strong> vakit
-        bütçesi {itemCount} kalem gösteriyor
-        {personalized
-          ? "; sıralama pozisyonunuza göre kişiselleştirildi."
-          : "; sıralama genel önem sırası."}
+      </h2>
+      <p className="akis-header-satir">
+        {parts.map((part, i) => (
+          <span key={i}>
+            {i > 0 ? (
+              <span aria-hidden="true" className="akis-ayrac">
+                ·
+              </span>
+            ) : null}
+            {part}
+          </span>
+        ))}
       </p>
     </header>
   );
@@ -91,6 +154,15 @@ export function PanoSection({
  * düzen `/auth/me` içindeki `layout` alanından gelir; buradaki `?duzen=`
  * parametresi yalnızca ÖNİZLEME içindir ve kullanıcının profilini
  * DEĞİŞTİRMEZ.
+ *
+ * Hedef `/panelim` DEĞİL `/?akis=ozel`: panelim ayrı bir sayfa olmaktan
+ * çıktı, bültenin "Bana Özel" akışı oldu. `/panelim` yalnızca eski
+ * bağlantılar 404 vermesin diye yönlendirme olarak duruyor; önizleme
+ * bağlantısının oraya gidip geri sıçraması gereksiz bir tur atardı.
+ *
+ * Vakit kademeleri BURADA YOK: sayfanın en altındaki `TimeBudgetSwitch`
+ * aynı işi yapıyor ve aynı anahtarı iki kez basmak kullanıcının hangisinin
+ * geçerli olduğunu sormasına yol açıyordu.
  */
 export function LayoutPreview({
   active,
@@ -106,25 +178,11 @@ export function LayoutPreview({
         {PANEL_LAYOUTS.map((item) => (
           <li key={item}>
             <Link
-              href={`/panelim?duzen=${item}&vakit=${timeBudget}`}
+              href={`/?akis=ozel&duzen=${item}&vakit=${timeBudget}`}
               className="pano-onizleme-baglanti"
               aria-current={item === active ? "page" : undefined}
             >
               {LAYOUT_LABELS[item]}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <span className="u-kicker text-ink-faint">Vakit</span>
-      <ul className="pano-onizleme-liste">
-        {([2, 5, 15] as TimeBudget[]).map((dk) => (
-          <li key={dk}>
-            <Link
-              href={`/panelim?duzen=${active}&vakit=${dk}`}
-              className="pano-onizleme-baglanti"
-              aria-current={dk === timeBudget ? "page" : undefined}
-            >
-              {dk} dk
             </Link>
           </li>
         ))}

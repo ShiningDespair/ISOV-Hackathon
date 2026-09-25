@@ -464,7 +464,7 @@ const STYLE_DETAIL: Record<string, string> = {
 /**
  * Yogunluk tablosunu okur: `{ "2": {items,style}, "5": {...} }`.
  * Backend bunu `density` ALTINDA, vakit listesinden AYRI veriyor
- * (`time_budgets: [2,5,15]`). Ikisini birlestirmeden vakit adimi
+ * (`time_budgets: [2,5,10]`). Ikisini birlestirmeden vakit adimi
  * "2 dakika" yazip ne getirdigini soylemezdi — oysa kullanicinin karari
  * tam olarak o bilgiye bagli.
  */
@@ -490,7 +490,7 @@ function normalizeTimeBudgets(raw: unknown, rawDensity?: unknown): TimeBudgetOpt
   if (Array.isArray(raw)) {
     for (const item of raw) {
       if (item && typeof item === "object") rows.push(item as Record<string, unknown>);
-      // Duz sayi dizisi (`[2,5,15]`) — gercek backend bicimi.
+      // Duz sayi dizisi (`[2,5,10]`) — gercek backend bicimi.
       else if (Number.isFinite(Number(item))) rows.push({ minutes: Number(item) });
     }
   } else if (raw && typeof raw === "object") {

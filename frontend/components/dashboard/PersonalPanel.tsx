@@ -1,5 +1,10 @@
 /**
- * PANELİM — pozisyona göre farklılaşan kişisel panel.
+ * BANA ÖZEL AKIŞ — pozisyona göre farklılaşan kişisel panel.
+ *
+ * Eskiden `/panelim` diye AYRI BİR SAYFAYDI. Kullanıcının isteği üzerine
+ * bültenin içine taşındı: `/?akis=ozel`. Sayfa değil bileşen olmasının
+ * nedeni bu — aynı `/` sayfası hem genel bülteni hem kişisel paneli
+ * basıyor, aradaki geçiş `FeedSwitch` anahtarı.
  *
  * DÖRT DÜZEN, TEK EŞLEME NOKTASI: hangi düzenin gösterileceği
  * `/auth/me` yanıtındaki türetilmiş `layout` alanından gelir. Pozisyon ->
@@ -8,7 +13,7 @@
  * önizleme/doğrulama içindir, profili değiştirmez.)
  *
  * VAKİT BÜTÇESİ BAĞLAYICIDIR: kalem sayısı ve biçim DENSITY'den gelir
- * (2 dk -> 5 kalem tek cümle, 5 dk -> 12 kalem üç madde, 15 dk -> 30 kalem
+ * (2 dk -> 5 kalem tek cümle, 5 dk -> 12 kalem üç madde, 10 dk -> 20 kalem
  * kademeli). Özet düzeni ayrıca 5 kalemle sınırlı kalır, çünkü sözleşmesi
  * "kaydırma gerektirmesin".
  *
@@ -21,10 +26,26 @@
  *
  * UÇLAR YOKSA (404/501/401): panel profil olmadan da açılır, `sort`
  * parametresi gönderilmez ve kullanıcıya "kişiselleştirme henüz etkin
- * değil" denir. Sayfa ne çöker ne de boş kalır.
+ * değil" denir. Uç yokluğu (404/501) ile oturum yokluğu (401/403) AYRI
+ * cümlelerle söylenir — `getPanelMe` bu ayrımı taşır. Sayfa ne çöker ne
+ * de boş kalır.
+ *
+ * ÜST BÖLÜM BÜTÇESİ (docs/SADELESTIRME.md §6): ilk haber başlığı ilk
+ * ekranda görünmek zorunda. Bu yüzden bu sürümde
+ *   - KPI'lar SIKI kipte (tek satırlık şerit, notlar `title` niteliğinde),
+ *   - başlık tek satır,
+ *   - bilgi notlarının ikinciden sonrası `<details>` içinde katlı,
+ *   - GRAFİK YOK. Günlük eğilim kıvılcım çizgisi ve operasyon düzeninin
+ *     bölge/kategori çubukları `/istatistik`'e taşındı; burada yerlerine
+ *     tek satırlık bir bağlantı duruyor. Grafik, haber başlığını ekranın
+ *     dışına iten en pahalı öğeydi ve zaten bir istatistik sayfasının işi.
+ *
+ * GÖRÜNÜM YUVALARI: panelin KABUĞU (başlık, KPI şeridi, şerit, bölümler)
+ * yuvaların DIŞINDA bir kez basılır; yalnızca HABER AKIŞI dört yuvaya
+ * ayrı ayrı basılır. Yani `akis` içeriği ve yoğunluğu seçer, `view`
+ * sunumu seçer.
  */
 
-import type { Metadata } from "next";
 import Link from "next/link";
 import { cookies } from "next/headers";
 
@@ -39,13 +60,22 @@ import {
   type PanelAuth,
   type PanelChanges,
   type PanelLayout,
+  type PanelMe,
   type TimeBudget,
 } from "@/lib/api-panel";
-import { humanize, regionLabel, toBuckets } from "@/lib/format";
+import { regionLabel, toBuckets } from "@/lib/format";
 import type { Article, StatsOverview } from "@/lib/types";
 
-import { BarList, Sparkline } from "@/components/Charts";
+import { DigestFront } from "@/components/DigestFront";
+import type { FilterState } from "@/components/Filters";
 import { DataUnavailable } from "@/components/States";
+import { VisualFront } from "@/components/VisualFront";
+import {
+  DigestView,
+  NewspaperView,
+  PanelView,
+  VisualView,
+} from "@/components/ViewSlot";
 import { ArticleFlow, type FlowStyle } from "@/components/dashboard/ArticleFlow";
 import { CalendarList, type CalendarItem } from "@/components/dashboard/CalendarList";
 import { ChangeFeed } from "@/components/dashboard/ChangeFeed";
@@ -55,19 +85,11 @@ import {
   LayoutPreview,
   PanoHeader,
   PanoNotice,
+  PanoNotices,
   PanoSection,
 } from "@/components/dashboard/PanoParts";
 import { TaskList, type TaskItem } from "@/components/dashboard/TaskList";
 import { calendarHitOf, deadlineOf } from "@/components/dashboard/deadline";
-
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
-export const metadata: Metadata = {
-  title: "Panelim",
-  description:
-    "Pozisyona ve vakit bütçesine göre farklılaşan kişisel panel: göstergeler, önemli konular şeridi ve haber akışı.",
-};
 
 /** Profil gelmezse gösterilecek düzen. Eşleme DEĞİL, yalnızca varsayılan. */
 const DEFAULT_LAYOUT: PanelLayout = "ozet";
@@ -87,6 +109,34 @@ function firstParam(
 ): string | undefined {
   if (Array.isArray(value)) return value[0];
   return value;
+}
+
+/**
+ * Geçerli vakit bütçesi — `?vakit=` varsa o, yoksa profildeki değer,
+ * o da yoksa 5 dakika.
+ *
+ * DIŞA AÇIK olmasının nedeni: sayfanın en altındaki `TimeBudgetSwitch`
+ * hangi kademenin etkin olduğunu göstermek zorunda ve o hesabı ikinci kez
+ * yazmak iki yerin birbirinden kayması demekti (aynı hata düzen
+ * eşlemesinde bir kez yapıldı). Tek fonksiyon, iki çağıran.
+ */
+export function effectiveTimeBudget(
+  params: Record<string, string | string[] | undefined>,
+  me: PanelMe | null,
+): TimeBudget {
+  const override = firstParam(params.vakit);
+  if (override !== undefined) return normalizeTimeBudget(override);
+  return me?.timeBudget ?? 5;
+}
+
+/** Sunucu bileşeninde `Cookie` başlığını elle taşır. */
+export async function panelAuthFromCookies(): Promise<PanelAuth> {
+  const jar = await cookies();
+  const cookieHeader = jar
+    .getAll()
+    .map((c) => `${c.name}=${c.value}`)
+    .join("; ");
+  return cookieHeader ? { cookie: cookieHeader } : {};
 }
 
 /** Kova listesinden tek anahtarın sayısını okur; yoksa null (KPI'da "—"). */
@@ -131,7 +181,7 @@ function uniqueArticleCount(stats: StatsOverview | null): number | null {
   for (const value of candidates) {
     if (typeof value === "number" && !Number.isNaN(value)) return value;
   }
-  const regions = toBuckets(stats.by_region);
+  const regions = toBuckets(stats.by_region, regionLabel);
   return regions.length > 0 ? regions.reduce((s, r) => s + r.count, 0) : null;
 }
 
@@ -141,24 +191,28 @@ function sourceCount(stats: StatsOverview | null): number | null {
 }
 
 /* ------------------------------------------------------------------ */
-/* Sayfa                                                               */
+/* Bileşen                                                             */
 /* ------------------------------------------------------------------ */
 
-export default async function PanelimPage({
-  searchParams,
+export async function PersonalPanel({
+  params,
+  me: meGiven,
+  auth: authGiven,
 }: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  /** `/` sayfasının çözülmüş `searchParams`'ı. */
+  params: Record<string, string | string[] | undefined>;
+  /**
+   * `/auth/me` sonucu — `/` sayfası varsayılan akışa karar verirken bunu
+   * zaten okumak zorunda. İkinci kez istemek boş bir tur olurdu, bu yüzden
+   * çağıran elindekini geçirebilir.
+   */
+  me?: PanelMe;
+  auth?: PanelAuth;
 }) {
-  const params = await searchParams;
-  const jar = await cookies();
-  const cookieHeader = jar
-    .getAll()
-    .map((c) => `${c.name}=${c.value}`)
-    .join("; ");
-  const auth: PanelAuth = cookieHeader ? { cookie: cookieHeader } : {};
+  const auth = authGiven ?? (await panelAuthFromCookies());
 
   const [me, statsRes] = await Promise.all([
-    getPanelMe(auth),
+    meGiven ? Promise.resolve(meGiven) : getPanelMe(auth),
     getStatsOverview(),
   ]);
 
@@ -171,11 +225,23 @@ export default async function PanelimPage({
     ? (layoutOverride as PanelLayout)
     : (me.layout ?? DEFAULT_LAYOUT);
 
-  const budgetOverride = firstParam(params.vakit);
-  const timeBudget: TimeBudget =
-    budgetOverride !== undefined
-      ? normalizeTimeBudget(budgetOverride)
-      : (me.timeBudget ?? 5);
+  const timeBudget: TimeBudget = effectiveTimeBudget(params, me);
+
+  /**
+   * Gorsel ve kart gorunumlerine gecen GEZINTI durumu.
+   *
+   * Bu iki bilesen kendi bolge ciplerini basiyor ve baglantilari
+   * `Filters.withParam` ile uretiyor; o da yalnizca kendisine VERILEN
+   * alanlari yeni URL'ye tasiyor. `akis` burada durmazsa kisisel akista
+   * bolge cipine basan kullanici genel bultene dusuyor. Filtre DEGIL,
+   * bu yuzden API sorgusuna girmiyor - yalnizca baglanti uretimine.
+   */
+  const gezintiDurumu: FilterState = {
+    akis: "ozel",
+    ...(firstParam(params.vakit) !== undefined
+      ? { vakit: String(timeBudget) }
+      : {}),
+  };
 
   const density = densityOf(timeBudget);
   const itemCount =
@@ -255,14 +321,10 @@ export default async function PanelimPage({
       : { available: false, items: [], note: null };
 
   // --- İstatistik kovaları ---------------------------------------
-  const regions = toBuckets(stats?.by_region, regionLabel);
-  const categories = toBuckets(
-    stats?.by_category ?? stats?.top_categories,
-    humanize,
-  );
+  // Yalnızca KPI'lar için gereken kovalar okunuyor. Bölge/kategori
+  // dağılımı ARTIK BURADA HESAPLANMIYOR: çubuk grafikler `/istatistik`'e
+  // taşındı (bkz. dosya başı, üst bölüm bütçesi).
   const bands = toBuckets(stats?.by_band);
-  const daily = toBuckets(stats?.daily ?? stats?.daily_series);
-  const dailyValues = daily.map((d) => d.count);
 
   const hasArticles = articles.length > 0;
   const unique = uniqueArticleCount(stats);
@@ -394,7 +456,7 @@ export default async function PanelimPage({
   if (fallbackNote) notices.push(fallbackNote);
   if (layout === "ozet" && density.items > OZET_MAX_ITEMS) {
     notices.push(
-      `Özet düzeni tek ekranda bitsin diye ${OZET_MAX_ITEMS} kalemle sınırlı. ${timeBudget} dakikalık bütçenin kalan ${density.items - OZET_MAX_ITEMS} kalemi, sayfa altındaki "Tüm Haber Akışı" bağlantısında duruyor.`,
+      `Özet düzeni tek ekranda bitsin diye ${OZET_MAX_ITEMS} kalemle sınırlı. ${timeBudget} dakikalık bütçenin kalan ${density.items - OZET_MAX_ITEMS} kalemi, sayfa altındaki "Genel" akışta duruyor.`,
     );
   }
   if (previewing) {
@@ -403,20 +465,49 @@ export default async function PanelimPage({
     );
   }
 
+  // Başlık, `full` sayısını DENSITY'den okur — elle yazılan "ilk 10" bir
+  // kez yanlış kaldı (kademe 20 kaleme inince metin güncellenmemişti).
   const flowTitle =
     flowStyle === "tek-cumle"
       ? "Haber Akışı — Tek Cümle"
       : flowStyle === "kademeli"
-        ? "Haber Akışı — İlk 10 Tam Özet"
-        : "Haber Akışı — Üç Madde";
+        ? `Haber Akışı — İlk ${density.full} Tam Özet`
+        : `Haber Akışı — ${density.bullets} Madde`;
 
   const listBroken = !listRes.ok;
   // `listRes` bir `let` olduğu için daraltma (narrowing) aşağıda kayboluyor;
   // hata metni burada sabitleniyor.
   const listError = listRes.ok ? null : listRes.error;
 
+  const flowRight =
+    flowArticles.length > 0 ? `${flowArticles.length} kalem` : undefined;
+
+  /**
+   * Akışın gövdesi — dört yuvanın panel/gazete ikilisinde AYNI öğe basılır.
+   * Kâğıtta ayrı bir mizanpaj yapılmıyor: vakit bütçesi yoğunluğu zaten
+   * kâğıda uygun hale getiriyor, ikinci bir mizanpaj kapsamı şişirirdi.
+   */
+  const flowBody = listBroken ? (
+    <DataUnavailable
+      message={listError ?? "Veri kaynağına ulaşılamadı."}
+      hint="Göstergeler ve şerit varsa gösterilmeye devam ediyor. Haber akışı, toplama servisi yanıt verdiğinde dolacak."
+    />
+  ) : flowArticles.length > 0 ? (
+    <ArticleFlow
+      articles={flowArticles}
+      style={flowStyle}
+      full={density.full}
+      bullets={density.bullets || 3}
+    />
+  ) : (
+    <PanoNotice>
+      Bu düzende akışa düşen kalem kalmadı; hepsi yukarıdaki bölümlerde
+      listelendi.
+    </PanoNotice>
+  );
+
   return (
-    <div className="pano-page">
+    <div className="pano-page akis-ozel">
       <PanoHeader
         layout={layout}
         positionLabel={me.positionLabel}
@@ -426,33 +517,22 @@ export default async function PanelimPage({
         personalized={personalized}
       />
 
-      {notices.length > 0 ? (
-        <div className="pano-bilgi-yigin">
-          {notices.map((note, i) => (
-            <PanoNotice key={i} tone={i === 0 && me.note ? "uyari" : "bilgi"}>
-              {note}
-            </PanoNotice>
-          ))}
-        </div>
-      ) : null}
+      <PanoNotices notices={notices} warnFirst={Boolean(me.note)} />
 
-      {/* -------- Göstergeler -------- */}
-      <section className="pano-bolum" data-pano-bolum="kpi">
-        <KpiRow items={kpis} />
-
-        {/* Özet düzeninde TEK ve KÜÇÜK grafik: günlük eğilim. */}
-        {layout === "ozet" && dailyValues.length > 1 ? (
-          <div className="pano-egilim">
-            <span className="u-kicker text-ink-faint">Günlük Eğilim</span>
-            <Sparkline
-              values={dailyValues}
-              label={`Günlük haber sayısı eğilimi, ${daily.length} gün`}
-            />
-          </div>
-        ) : null}
+      {/* -------- Göstergeler: SIKI kip, tek satır -------- */}
+      <section className="pano-bolum akis-bolum-sik" data-pano-bolum="kpi">
+        <KpiRow items={kpis} sik />
       </section>
 
-      {/* -------- Aksiyon: yapılacaklar en üstte -------- */}
+      {/* -------- Önemli konular şeridi --------
+          Şerit KPI'ların hemen ardında: ilk ekranda görünen ilk haber
+          başlıkları buradan gelir. Eskiden düzen bölümlerinin altındaydı
+          ve 15 dakikalık bütçede ekranın dışında kalıyordu. */}
+      {strip.length > 0 ? (
+        <HeadlineStrip articles={strip} label="En Önemli Konular" />
+      ) : null}
+
+      {/* -------- Aksiyon: yapılacaklar -------- */}
       {layout === "aksiyon" ? (
         <PanoSection
           id="yapilacaklar"
@@ -470,86 +550,101 @@ export default async function PanelimPage({
         </PanoSection>
       ) : null}
 
-      {/* -------- Operasyon: bölge ve kategori dağılımı -------- */}
-      {layout === "operasyon" ? (
-        <PanoSection id="dagilim" title="Bölge ve Kategori Dağılımı">
-          <div className="pano-dagilim">
-            <div>
-              <p className="u-kicker mb-2 text-ink-faint">Bölge</p>
-              <BarList data={regions} />
-            </div>
-            <div>
-              <p className="u-kicker mb-2 text-ink-faint">Kategori</p>
-              <BarList data={categories.slice(0, 8)} />
-            </div>
-          </div>
+      {/* -------- Takip: mevzuat takvimi -------- */}
+      {layout === "takip" ? (
+        <PanoSection
+          id="takvim"
+          title="Mevzuat Takvimi"
+          right={calendar.length > 0 ? `${calendar.length} tarih` : undefined}
+        >
+          {calendar.length > 0 ? (
+            <CalendarList items={calendar} />
+          ) : (
+            <PanoNotice>
+              Panelinizdeki kalemlerde takvim tarihi çıkarılamadı. Tarih
+              uydurulmaz; kalemler haber akışında duruyor.
+            </PanoNotice>
+          )}
         </PanoSection>
       ) : null}
 
-      {/* -------- Takip: değişiklik akışı, sonra takvim -------- */}
+      {/* -------- Haber akışı: dört görünüm yuvası --------
+          Kabuk yukarıda bir kez basıldı; burada YALNIZCA akış dört kez
+          basılıyor. Bölüm `id`'leri yuva başına farklı, çünkü dördü de
+          aynı anda DOM'da ve `id` tekil olmak zorunda. */}
+      <PanelView>
+        <PanoSection id="akis-panel" title={flowTitle} right={flowRight}>
+          {flowBody}
+        </PanoSection>
+      </PanelView>
+
+      <NewspaperView>
+        <PanoSection id="akis-gazete" title={flowTitle} right={flowRight}>
+          {flowBody}
+        </PanoSection>
+      </NewspaperView>
+
+      {/* Görsel ve kart görünümleri kendi mizanpajlarını basar; yalnızca
+          kişisel listeyle çağrılıyorlar.
+          `total` olarak korpus toplamı DEĞİL gösterilen kalem sayısı
+          geçiliyor: kişisel panel bilinçli olarak kısa bir liste, "1.243
+          haber" yazmak yanlış olurdu.
+          `state` yalnızca GEZİNTİ parametrelerini taşıyor (akis/vakit):
+          filtre şeridi kişisel akışta yok, ama iki bileşen kendi bölge
+          çiplerini basıyor ve o bağlantılar `akis=ozel`i düşürmemeli.
+          `baslikDuzeyi={2}` ve `sayiSeridi={false}`: kabuk zaten sayfanın
+          tek `h1`ini ve sıkı KPI şeridini basıyor. */}
+      <VisualView>
+        <VisualFront
+          articles={flowArticles}
+          total={flowArticles.length}
+          state={gezintiDurumu}
+          baslikDuzeyi={2}
+        />
+      </VisualView>
+
+      <DigestView>
+        <DigestFront
+          articles={flowArticles}
+          total={flowArticles.length}
+          state={gezintiDurumu}
+          sayiSeridi={false}
+        />
+      </DigestView>
+
+      {/* -------- Takip: değişiklik akışı (akıştan SONRA) --------
+          Değişiklik akışı bir denetim kaydı, günün haberi değil. Haberin
+          önünde durunca kullanıcı başlığa ulaşmak için kaydırmak
+          zorundaydı. */}
       {layout === "takip" ? (
-        <>
-          <PanoSection
-            id="degisiklik"
-            title="Değişiklik Akışı"
-            right={changes.available ? `${changes.items.length} kayıt` : undefined}
-          >
-            <ChangeFeed changes={changes} />
-          </PanoSection>
-
-          <PanoSection
-            id="takvim"
-            title="Mevzuat Takvimi"
-            right={calendar.length > 0 ? `${calendar.length} tarih` : undefined}
-          >
-            {calendar.length > 0 ? (
-              <CalendarList items={calendar} />
-            ) : (
-              <PanoNotice>
-                Panelinizdeki kalemlerde takvim tarihi çıkarılamadı. Tarih
-                uydurulmaz; kalemler haber akışında duruyor.
-              </PanoNotice>
-            )}
-          </PanoSection>
-        </>
+        <PanoSection
+          id="degisiklik"
+          title="Değişiklik Akışı"
+          right={changes.available ? `${changes.items.length} kayıt` : undefined}
+        >
+          <ChangeFeed changes={changes} />
+        </PanoSection>
       ) : null}
 
-      {/* -------- Önemli konular şeridi -------- */}
-      {strip.length > 0 ? (
-        <HeadlineStrip articles={strip} label="En Önemli Konular" />
+      {/* -------- Operasyon: dağılım grafikleri /istatistik'te -------- */}
+      {layout === "operasyon" ? (
+        <PanoSection id="dagilim" title="Bölge ve Kategori Dağılımı">
+          <p className="u-body u-body-soft text-[0.9rem] leading-snug">
+            Çubuk grafikler istatistik sayfasına taşındı; panel haberle
+            başlasın diye burada yalnızca bağlantı duruyor.{" "}
+            <Link href="/istatistik" className="u-link-underline">
+              İstatistik →
+            </Link>
+          </p>
+        </PanoSection>
       ) : null}
-
-      {/* -------- Haber akışı -------- */}
-      <PanoSection
-        id="akis"
-        title={flowTitle}
-        right={
-          flowArticles.length > 0 ? `${flowArticles.length} kalem` : undefined
-        }
-      >
-        {listBroken ? (
-          <DataUnavailable
-            message={listError ?? "Veri kaynağına ulaşılamadı."}
-            hint="Göstergeler ve şerit varsa gösterilmeye devam ediyor. Haber akışı, toplama servisi yanıt verdiğinde dolacak."
-          />
-        ) : flowArticles.length > 0 ? (
-          <ArticleFlow
-            articles={flowArticles}
-            style={flowStyle}
-            full={density.full}
-            bullets={density.bullets || 3}
-          />
-        ) : (
-          <PanoNotice>
-            Bu düzende akışa düşen kalem kalmadı; hepsi yukarıdaki bölümlerde
-            listelendi.
-          </PanoNotice>
-        )}
-      </PanoSection>
 
       <footer className="pano-alt">
-        <Link href="/" className="u-kicker u-link-underline text-ink">
-          Tüm Haber Akışı →
+        <Link
+          href="/?akis=genel"
+          className="u-kicker u-link-underline text-ink"
+        >
+          Genel Bülten →
         </Link>
         <LayoutPreview active={layout} timeBudget={timeBudget} />
       </footer>

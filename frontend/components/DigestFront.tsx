@@ -50,10 +50,21 @@ export function DigestFront({
   articles,
   total,
   state,
+  sayiSeridi = true,
 }: {
   articles: Article[];
   total: number;
   state: FilterState;
+  /**
+   * Sayisal ozet seridi basilsin mi.
+   *
+   * Neden kapatilabilir: Bana Ozel akisinda kabuk zaten pozisyona gore
+   * SIKI bir KPI seridi basiyor. Ikisi birlikte ust uste iki sayi seridi
+   * demek; kullanicinin bu turdaki asil sikayeti "KPI'lar cok yer
+   * kapliyor, haber gormek icin kaydirmak gerekiyor"di. Genel akista
+   * kabuk serit basmadigi icin varsayilan ACIK kalir.
+   */
+  sayiSeridi?: boolean;
 }) {
   const shown = articles.length;
 
@@ -88,13 +99,17 @@ export function DigestFront({
         </p>
       </header>
 
-      {/* Sayısal özet şeridi — okuma yükünü sayıya devreder. */}
-      <section aria-label="Bugünün sayıları" className="kart-summary">
-        <Stat label="Haber" value={shown} />
-        <Stat label="Kritik" value={criticalCount} accent />
-        <Stat label="Bölge" value={regionCount} />
-        <Stat label="Doğrulanmış" value={verifiedCount} />
-      </section>
+      {/* Sayısal özet şeridi — okuma yükünü sayıya devreder.
+          Bana Özel akışında `sayiSeridi={false}` ile kapatılır; orada
+          kabuğun sıkı KPI şeridi aynı işi pozisyona göre yapıyor. */}
+      {sayiSeridi ? (
+        <section aria-label="Bugünün sayıları" className="kart-summary">
+          <Stat label="Haber" value={shown} />
+          <Stat label="Kritik" value={criticalCount} accent />
+          <Stat label="Bölge" value={regionCount} />
+          <Stat label="Doğrulanmış" value={verifiedCount} />
+        </section>
+      ) : null}
 
       {/* Tek filtre: bölge. Bu görünümün amacı sadeleştirmek olduğu için
           band, etiket ve arama şeritleri bilinçli olarak yok. */}

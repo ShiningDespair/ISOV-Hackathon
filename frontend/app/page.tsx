@@ -1,19 +1,37 @@
 /**
- * ANA SAYFA — bülten.
- * Panel görünümü: gazete gridi (manşet + ikincil kolonlar + sağ dar kolon).
- * Gazete görünümü: tam genişlik basılı gazete mizanpajı.
- * Görsel görünümü: ana tasarım + haber görselleri (manşet bloğu, ızgara, liste).
+ * ANA SAYFA — bülten. TEK sayfa, İKİ akış, DÖRT görünüm.
+ *
+ * AKIŞ (`?akis=`) İÇERİĞİ ve YOĞUNLUĞU seçer:
+ *   ozel  — kişisel panel (eski `/panelim`): pozisyondan türeyen düzen,
+ *           vakit bütçesine göre kalem sayısı. `PersonalPanel` basar.
+ *   genel — herkes için aynı bülten, genel önem sıralaması.
+ *
+ * GÖRÜNÜM (`?view` / görünüm anahtarı) SUNUMU seçer ve her iki akışta da
+ * çalışır: panel gridi, basılı gazete, görsel bülten, kart özeti.
+ * Görünürlüğü `globals.css` içindeki `html[data-view] [data-view-slot]`
+ * kuralları belirler; dördü de DOM'a basılır, böylece ilk boyamada doğru
+ * mizanpaj görünür ve hidrasyon sıçraması olmaz.
+ *
+ * Bu ikisinin BAĞIMSIZ olması bilinçli: "üst yönetici -> görsel, normal
+ * kullanıcı -> kart" varsayılanı (docs/SADELESTIRME.md §3) kişisel akışta
+ * da geçerli olsun diye.
+ *
+ * ÜST BÖLÜM BÜTÇESİ (§6): ilk haber başlığı ilk ekranda görünmek zorunda.
+ * Bu yüzden akış anahtarı tek satır, KPI'lar sıkı şerit ve grafikler
+ * `/istatistik`'te.
  */
 
 import { Suspense } from "react";
 import Link from "next/link";
 
-import { getArticles, getStatsOverview, getTags } from "@/lib/api";
+import { getArticles, getTags } from "@/lib/api";
 import {
-  formatNumber,
-  regionLabel,
-  toBuckets,
-} from "@/lib/format";
+  densityOf,
+  getPanelMe,
+  type PanelMe,
+  type TimeBudget,
+} from "@/lib/api-panel";
+import { formatNumber } from "@/lib/format";
 import type { Article } from "@/lib/types";
 
 import {
@@ -28,13 +46,23 @@ import {
   LeadArticle,
   StandardArticle,
 } from "@/components/ArticleCard";
-import { BarList } from "@/components/Charts";
+import {
+  FeedSwitch,
+  normalizeFeedMode,
+  type FeedMode,
+} from "@/components/FeedSwitch";
+import { TimeBudgetSwitch } from "@/components/TimeBudgetSwitch";
 import { NewspaperFront } from "@/components/NewspaperFront";
 import { VisualFront } from "@/components/VisualFront";
 import { DataUnavailable, EmptyState, SectionRule } from "@/components/States";
 import { NewspaperView, PanelView, VisualView } from "@/components/ViewSlot";
 import { DigestView } from "@/components/ViewSlot";
 import { DigestFront } from "@/components/DigestFront";
+import {
+  PersonalPanel,
+  effectiveTimeBudget,
+  panelAuthFromCookies,
+} from "@/components/dashboard/PersonalPanel";
 
 // Demo: veri daima taze, derleme sırasında backend'e istek atılmaz.
 export const dynamic = "force-dynamic";
@@ -48,6 +76,26 @@ function one(value: string | string[] | undefined): string | undefined {
   return value && value.trim() !== "" ? value : undefined;
 }
 
+/** Sağ kolondaki etiket bulutunda gösterilecek etiket sayısı. */
+const TAG_CLOUD_MAX = 10;
+
+/**
+ * Genel akışta vakit bütçesinin liste uzunluğuna ÇARPANI.
+ *
+ * Neden 3 ve neden bir çarpan: genel bülten bir gazete sayfası, kişisel
+ * panel bir okuma listesi. Gazetede manşet + iki kolon + "Bültenin Devamı"
+ * var; 5 dakikalık bütçenin 12 kalemini birebir uygularsak manşetten sonra
+ * 11 haber kalıyor, üç kolonlu mizanpaj boşalıyor ve sayfa gazete gibi
+ * görünmeyi bırakıyor. Üç katı (36 kalem) kolonları dolduruyor ama 60'lık
+ * eski listeden belirgin biçimde kısa. Alt sınır 20: 2 dakikalık bütçede
+ * bile mizanpaj çökmesin.
+ */
+const GENEL_CARPAN = 3;
+const GENEL_MIN = 20;
+
+/** `?vakit=` verilmemişse genel akışın eski (regresyonsuz) uzunluğu. */
+const GENEL_VARSAYILAN_LIMIT = 60;
+
 export default async function HomePage({
   searchParams,
 }: {
@@ -55,6 +103,67 @@ export default async function HomePage({
 }) {
   const sp = await searchParams;
 
+  // --- Hangi akış? -------------------------------------------------
+  // `?akis=` açıkça verilmişse o kazanır. Verilmemişse varsayılan
+  // PROFİLDEN gelir: kişiselleştirme etkin VE sunucu bir `layout`
+  // döndürdüyse kullanıcının doğru yeri kişisel panel; aksi halde (oturum
+  // yok, uç yok, düzen gelmedi) genel bülten. Oturumu olmayan ziyaretçiye
+  // "kişiselleştirme uygulanmıyor" notlu bir panel açmak, sayfayı bir
+  // özür metniyle karşılamak olurdu.
+  const akisParam = normalizeFeedMode(one(sp.akis));
+
+  // `genel` açıkça istendiyse profili hiç sormuyoruz — gereksiz bir tur.
+  const profilGerekli = akisParam !== "genel";
+  const auth = profilGerekli ? await panelAuthFromCookies() : {};
+  const me: PanelMe | null = profilGerekli ? await getPanelMe(auth) : null;
+
+  const akis: FeedMode =
+    akisParam ??
+    (me && me.status === "etkin" && me.layout !== null ? "ozel" : "genel");
+
+  // Oturum yokken "Bana Özel" seçilirse YÖNLENDİRME YAPILMAZ: panel kendi
+  // dürüst notunu ("oturum açılmadığı için kişiselleştirme uygulanmıyor")
+  // gösterir. Anahtarın altına yalnızca küçük bir giriş bağlantısı düşer.
+  const girisGoster = me?.status === "oturum-yok";
+
+  const anahtar = (
+    <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
+      <FeedSwitch params={sp} active={akis} showLogin={girisGoster} />
+    </div>
+  );
+
+  /* ================================================================
+     BANA ÖZEL AKIŞ
+     Kabuk (başlık, sıkı KPI şeridi, şerit, bölümler) bir kez; haber akışı
+     dört görünüm yuvasına. Hepsi `PersonalPanel` içinde.
+     ================================================================ */
+  if (akis === "ozel") {
+    const vakit = effectiveTimeBudget(sp, me);
+    return (
+      <>
+        {anahtar}
+        {/* Sayfanın TEK `h1`i — görünüm yuvalarının DIŞINDA, yani dört
+            görünümde de aynı. `PanoHeader` bu yüzden `h2` basıyor: iki
+            `h1` ana yer işareti sırasını bozar.
+            `VisualFront` de kendi ekran-okuyucu başlığını basıyordu;
+            artık `baslikDuzeyi` prop'u alıyor ve kişisel akışta `h2`
+            basıyor. Genel akışta 1 kalıyor, çünkü orada panel yuvası
+            `display:none` olduğu için içindeki `h1` yardımcı teknolojiye
+            hiç ulaşmıyor — sayfa başsız kalmasın. */}
+        <h1 className="sr-only-custom">
+          İSO · İSOV Dış Kaynak İzleme Bülteni — Bana Özel
+        </h1>
+        <PersonalPanel params={sp} me={me ?? undefined} auth={auth} />
+        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
+          <TimeBudgetSwitch params={sp} active={vakit} feed="ozel" />
+        </div>
+      </>
+    );
+  }
+
+  /* ================================================================
+     GENEL AKIŞ — bugünkü bülten davranışı korunur.
+     ================================================================ */
   const state: FilterState = {
     region: one(sp.region),
     band: one(sp.band),
@@ -64,19 +173,64 @@ export default async function HomePage({
     source: one(sp.source),
   };
 
+  // Vakit bütçesi genel akışta da BİR ŞEY YAPAR: liste uzunluğunu sınırlar.
+  // Ama yalnızca kullanıcı bir kademe seçtiyse — `?vakit=` yoksa eski 60'lık
+  // liste aynen basılır (regresyon olmasın).
+  const vakitParam = one(sp.vakit);
+  const genelVakit: TimeBudget | null =
+    vakitParam !== undefined ? effectiveTimeBudget(sp, me) : null;
+  const limit =
+    genelVakit === null
+      ? GENEL_VARSAYILAN_LIMIT
+      : Math.max(GENEL_MIN, densityOf(genelVakit).items * GENEL_CARPAN);
+
+  /**
+   * Filtre baglantilarina gecen durum = filtreler + GEZINTI parametreleri.
+   *
+   * `Filters.withParam` yalnizca kendisine VERILEN alanlari yeni URL'ye
+   * tasiyor. `akis`/`vakit` burada durmazsa bolge cipine basan kullanici
+   * secimini kaybediyor - acikca "genel" demis biri varsayilana, 2 dakika
+   * secmis biri 60'lik listeye donuyordu.
+   *
+   * API sorgusu TEMIZ `state` ile yapiliyor (yukarida): bunlar birer
+   * arayuz parametresi, `/articles` bunlari tanimiyor.
+   *
+   * Varsayilan durumda alan HIC EKLENMIYOR, boylece adres cubugu sade
+   * kaliyor ve bugunku baglantilar birebir ayni uretiliyor (regresyon yok).
+   */
+  const gezinti: FilterState = {
+    ...state,
+    ...(akisParam ? { akis: akisParam } : {}),
+    ...(vakitParam !== undefined ? { vakit: vakitParam } : {}),
+  };
+
   // Paralel veri çekimi — hiçbiri fırlatmaz, hata ApiResult içinde döner.
-  const [articlesRes, tagsRes, statsRes] = await Promise.all([
-    getArticles({ ...state, limit: 60 }),
+  //
+  // `/stats/overview` ARTIK ÇEKİLMİYOR: tek tüketicisi sağ kolondaki
+  // "Bölge Dağılımı" çubuk grafiğiydi ve o grafik `/istatistik`'e taşındı
+  // (§6). Künye sayıları listenin kendisinden hesaplanıyor. Kullanılmayan
+  // bir istek, sunucu render süresine boşuna binen bir ağ turudur.
+  const [articlesRes, tagsRes] = await Promise.all([
+    getArticles({ ...state, limit }),
     getTags(),
-    getStatsOverview(),
   ]);
+
+  const vakitAnahtari = (
+    <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
+      <TimeBudgetSwitch params={sp} active={genelVakit} feed="genel" />
+    </div>
+  );
 
   // Backend tamamen erişilemezse temiz hata durumu göster.
   if (!articlesRes.ok) {
     return (
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
-        <DataUnavailable message={articlesRes.error} />
-      </div>
+      <>
+        {anahtar}
+        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
+          <DataUnavailable message={articlesRes.error} />
+        </div>
+        {vakitAnahtari}
+      </>
     );
   }
 
@@ -126,20 +280,21 @@ export default async function HomePage({
   const continuation = rest.slice(mainCount);           // SAG  — Bultenin Devami
 
   const tags = tagsRes.ok ? tagsRes.data : [];
+  // Etiket bulutu 18'den 10'a indi: sağ kolonda künye, etiketler, raporlar
+  // ve "Bültenin Devamı" üst üste duruyor ve 18 çip "Bültenin Devamı"nı
+  // ekranın çok aşağısında başlatıyordu. Tamamı `/istatistik#etiketler`de.
   const topTags = [...tags]
     .sort(
       (a, b) =>
         (b.usage_count ?? b.article_count ?? 0) -
         (a.usage_count ?? a.article_count ?? 0),
     )
-    .slice(0, 18);
-
-  const regionBuckets = statsRes.ok
-    ? toBuckets(statsRes.data.by_region, regionLabel)
-    : [];
+    .slice(0, TAG_CLOUD_MAX);
 
   return (
     <>
+      {anahtar}
+
       {/* ---------------- PANEL GÖRÜNÜMÜ ---------------- */}
       <PanelView>
         <div className="mx-auto w-full max-w-[1440px] px-4 pb-10 sm:px-6">
@@ -153,14 +308,14 @@ export default async function HomePage({
             className="border-b border-ink py-3"
           >
             <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-              <RegionTabs state={state} />
+              <RegionTabs state={gezinti} />
               <Suspense fallback={null}>
                 <SearchBox className="w-full lg:w-80" />
               </Suspense>
             </div>
             <div className="mt-3 flex flex-col gap-3">
-              <BandFilter state={state} />
-              <ActiveFilters state={state} />
+              <BandFilter state={gezinti} />
+              <ActiveFilters state={gezinti} />
             </div>
           </section>
 
@@ -205,7 +360,10 @@ export default async function HomePage({
 
               </div>
 
-              {/* SAĞ — dar kolon: künye, etiketler, bölge dağılımı */}
+              {/* SAĞ — dar kolon: künye, etiketler, raporlar, devamı.
+                  "Bölge Dağılımı" çubuk grafiği buradan KALDIRILDI: beş
+                  modül üst üste kalabalıktı ve "Bültenin Devamı" ekranın
+                  çok aşağısında başlıyordu. Grafik `/istatistik`'e ait. */}
               <aside className="lg:col-span-3 lg:border-l lg:border-rule lg:pl-8">
                 <SectionRule title="Bülten Künyesi" />
                 <dl className="mb-7 space-y-2">
@@ -234,19 +392,15 @@ export default async function HomePage({
                   </div>
                 </dl>
 
-                {regionBuckets.length > 0 ? (
-                  <section className="mb-7">
-                    <SectionRule title="Bölge Dağılımı" />
-                    <BarList data={regionBuckets} />
-                  </section>
-                ) : null}
-
                 {topTags.length > 0 ? (
                   <section className="mb-7">
                     <SectionRule
                       title="En Çok Etiketler"
                       right={
-                        <Link href="/etiketler" className="u-link-underline">
+                        <Link
+                          href="/istatistik#etiketler"
+                          className="u-link-underline"
+                        >
                           Tümü
                         </Link>
                       }
@@ -328,14 +482,18 @@ export default async function HomePage({
       {/* Aynı veri, aynı sıra (backend'in gizli skor sıralaması korunur);
           tek fark haber görsellerinin mizanpaja katılması. */}
       <VisualView>
-        <VisualFront articles={all} total={total} state={state} />
+        <VisualFront articles={all} total={total} state={gezinti} />
       </VisualView>
 
       {/* ---------------- KART GÖRÜNÜMÜ ---------------- */}
       {/* Az metin, yalnızca konu özetleri. Aynı veri, API sırası korunur. */}
       <DigestView>
-        <DigestFront articles={all} total={total} state={state} />
+        <DigestFront articles={all} total={total} state={gezinti} />
       </DigestView>
+
+      {/* Vakit bütçesi EN ALTTA — kullanıcının isteği birebir böyle.
+          Yuvaların dışında, yani her görünümde aynı yerde. */}
+      {vakitAnahtari}
     </>
   );
 }

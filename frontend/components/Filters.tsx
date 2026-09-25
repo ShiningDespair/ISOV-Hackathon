@@ -17,6 +17,20 @@ export interface FilterState {
   q?: string;
   category?: string;
   source?: string;
+  /**
+   * GEZINTI parametreleri — filtre DEGIL, ama filtre baglantilarinin
+   * KORUMASI gereken durum.
+   *
+   * `withParam` bu nesnenin tum alanlarini yeni URL'ye tasidigi icin,
+   * burada durmayan bir parametre filtreye basildiginda SESSIZCE DUSER.
+   * Somut sonuc: "Bana Ozel" akisindayken bolge cipine basan kullanici
+   * kendini genel bultende buluyordu.
+   *
+   * API sorgusuna GONDERILMEZ: `getArticles` cagrilari temiz `state`
+   * ile yapilir, bunlar yalnizca baglanti uretimine girer.
+   */
+  akis?: string;
+  vakit?: string;
 }
 
 /** Mevcut arama parametrelerini koruyarak yeni bir URL üretir. */

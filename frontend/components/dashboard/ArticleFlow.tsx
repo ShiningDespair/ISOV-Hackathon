@@ -4,7 +4,7 @@
  * Biçim `lib/api-panel.ts` DENSITY'den gelir, burada karar verilmez:
  *   tek-cumle (2 dk) : başlık + tek cümle (<=150 karakter)
  *   madde     (5 dk) : başlık + ilk üç anahtar madde
- *   kademeli  (15 dk): ilk `full` kalem tam özet, sonrası üç madde
+ *   kademeli  (10 dk): ilk `full` kalem tam özet, sonrası üç madde
  *
  * SIRALAMA: `articles` dizisi API'den geldiği sırayla basılır. Burada
  * hiçbir `sort` çağrısı YOK — kişisel skor ve `is_pinned` backend'de

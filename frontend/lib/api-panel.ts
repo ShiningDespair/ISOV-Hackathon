@@ -63,14 +63,19 @@ export const POSITION_LABELS: Record<string, string> = {
  * `backend/src/lib/positions.js` DENSITY sabitinin aynısı; sayılar okuma
  * süresi aritmetiğinden gelir (Türkçe ~200 kelime/dk) ve BURADA
  * DEĞİŞTİRİLMEZ.
+ *
+ * ÜÇÜNCÜ KADEME 15 DEĞİL 10 DAKİKA (bkz. docs/SADELESTIRME.md §4):
+ * kullanıcı en uzun kademeyi 10 dakika istedi. 30 kalem / ilk 10'u tam
+ * özet, 10 dakikada okunamıyordu — kademe adı ile içeriği birbirini
+ * yalanlıyordu. Yeni kademe 20 kalem, ilk 6'sı tam özet.
  */
 export const DENSITY = {
   2: { items: 5, full: 0, bullets: 0, style: "tek-cumle" },
   5: { items: 12, full: 0, bullets: 3, style: "madde" },
-  15: { items: 30, full: 10, bullets: 3, style: "kademeli" },
+  10: { items: 20, full: 6, bullets: 3, style: "kademeli" },
 } as const;
 
-export type TimeBudget = 2 | 5 | 15;
+export type TimeBudget = 2 | 5 | 10;
 export type DensityStyle = "tek-cumle" | "madde" | "kademeli";
 
 export interface Density {
@@ -80,11 +85,25 @@ export interface Density {
   style: DensityStyle;
 }
 
-const TIME_BUDGETS: TimeBudget[] = [2, 5, 15];
+export const TIME_BUDGETS: TimeBudget[] = [2, 5, 10];
 
+/**
+ * GERİYE UYUMLU: `user_profiles.time_budget_min` TINYINT ve eski kayıtlarda
+ * 15 yazıyor olabilir (kademe 10'a inmeden önce kaydolan kullanıcılar).
+ * 15'i "geçersiz" sayıp 5'e düşürmek, kullanıcının EN UZUN kademe seçimini
+ * sessizce en kısaya yakın bir değere indirmek olurdu; bu yüzden 15 -> 10
+ * eşlenir. Gerçekten tanınmayan değer (0, 7, "abc") -> 5, yani orta kademe.
+ *
+ * Not: `lib/types-auth.ts` içinde de bir `normalizeTimeBudget` var; o
+ * dosya kayıt/profil akışının (Ajan F + backend) sözleşmesine bağlı ve
+ * BURADAN import EDİLMEZ. İki kopya bilinçli: panel okuma yolu, profil
+ * yazma yolunun kademe listesi değişse bile çalışmaya devam etmeli.
+ */
 export function normalizeTimeBudget(value: unknown): TimeBudget {
   const n = Number(value);
-  return (TIME_BUDGETS as number[]).includes(n) ? (n as TimeBudget) : 5;
+  if ((TIME_BUDGETS as number[]).includes(n)) return n as TimeBudget;
+  if (n === 15) return 10;
+  return 5;
 }
 
 export function densityOf(timeBudget: unknown): Density {

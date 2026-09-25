@@ -4,7 +4,7 @@
  * Hazır aralıklar Link'tir: JS olmadan çalışır ve sunucu bileşeni olarak
  * render edilir. Özel aralık da JS gerektirmez — `<details>` + `method="get"`
  * formu tarayıcının kendi davranışıyla `?from=&to=` üretir. Bu yüzden dosyada
- * "use client" YOK; bileşen her yere (ana sayfa, /degisiklikler) konulabilir.
+ * "use client" YOK; bileşen her yere (ana sayfa, /raporlar) konulabilir.
  *
  * URL parametreleri backend'de ZATEN destekli:
  *   `from` → `published_at >= from`
@@ -39,6 +39,20 @@ export interface DateFilterState {
   type?: string;
   from?: string;
   to?: string;
+  /**
+   * GEZINTI parametreleri — filtre DEGIL, ama korunmak zorunda.
+   *
+   * `withState` KEYS listesinde durmayan bir parametreyi URL'ye YAZMAZ, yani
+   * tarih/tur sergecine basan kullanici onu SESSIZCE kaybeder. Olculen iki
+   * somut sonuc: /raporlar'daki "Tumu" baglantisi adresi /raporlar'a
+   * indirgeyip genis dokumu kisa dokume geri cevirdi; ana sayfada bolge
+   * cipine basan kullanici "Bana Ozel" akisindan genel bultene dustu.
+   *
+   * API sorgusuna GONDERILMEZ - yalnizca baglanti uretimine girer.
+   */
+  akis?: string;
+  vakit?: string;
+  tumu?: string;
 }
 
 /** URL'e yazılan sırada sabit anahtar listesi — çıktı deterministik olsun. */
@@ -53,6 +67,9 @@ const KEYS: (keyof DateFilterState)[] = [
   "type",
   "from",
   "to",
+  "akis",
+  "vakit",
+  "tumu",
 ];
 
 /**
@@ -220,7 +237,7 @@ export function DateRangeChip({
  * TARİH ARALIĞI ŞERİDİ.
  *
  * @param state    Mevcut filtreler (`from`/`to` dahil).
- * @param basePath Formun ve bağlantıların gideceği yol ("/" ya da "/degisiklikler").
+ * @param basePath Formun ve bağlantıların gideceği yol ("/" ya da "/raporlar").
  * @param note     "Bu aralıkta değişenler" satırı gibi ek bilgi. Veri yoksa
  *                 çağıran taraf `null` geçer; burada sayı UYDURULMAZ.
  * @param withChip Seçili aralığı çip olarak da göster.
