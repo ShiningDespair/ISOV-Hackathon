@@ -172,11 +172,17 @@ export default async function SettingsPage() {
         </div>
       </SettingsSection>
 
-      {/* -------- d) KAYNAKLAR  +  e) KAYNAK ÖNER (yan yana) -------- */}
+      {/* -------- d) KAYNAKLAR  +  e) KAYNAK ÖNER (yan yana) --------
+          İkisi ve Sistem Bilgisi varsayılan KATLANMIŞ (`katlanir`).
+          Ölçülen (Nilgün P2-5, 390 px): sayfa 16.668 px, Kaynaklar tek
+          başına ~6.000 px; Bülten tercihleri y = 14.330'a düşüyordu. Üst
+          yönetim kaynak listesi yönetmez, teknik kullanıcı tek dokunuşla
+          açar. Profil, Görünüm, Erişilebilirlik ve Bülten açık kalır. */}
       <div className="grid grid-cols-1 gap-x-10 lg:grid-cols-12">
         <div className="min-w-0 lg:col-span-7 xl:col-span-8">
           <SettingsSection
             id="kaynaklar"
+            katlanir
             kicker="Yönetim"
             title="Kaynaklar"
             aside={`${formatNumber(sources.length || totalSources)} kaynaktan ${formatNumber(watchedSources)} tanesi izleniyor`}
@@ -192,6 +198,7 @@ export default async function SettingsPage() {
         <div className="min-w-0 lg:col-span-5 lg:border-l lg:border-rule lg:pl-8 xl:col-span-4">
           <SettingsSection
             id="kaynak-oner"
+            katlanir
             kicker="Katkı"
             title="Kaynak Öner"
             lead="İzlenmesini istediğiniz bir adresi bırakın. Öneriler değerlendirildikten sonra kaynak listesine eklenir."
@@ -219,6 +226,7 @@ export default async function SettingsPage() {
       {/* ---------------- g) SİSTEM BİLGİSİ ---------------- */}
       <SettingsSection
         id="sistem"
+        katlanir
         kicker="Salt Okunur"
         title="Sistem Bilgisi"
         lead="Toplama ve tekilleştirme sürecinin güncel durumu. Bu bölümde değiştirilebilir bir ayar yoktur."

@@ -1,0 +1,198 @@
+/* erisim — TUR 4 · WP5. Dokunma hedefleri ve hazır yazı boyutu düğmeleri.
+   Yalnızca "erisim-" önekli yeni sınıflar ve mevcut bileşenlerin DOKUNMA
+   ALANI (min-height / görünmez genişletilmiş hedef). Renk, yazdırma ve
+   görünüm yuvası ([data-view-slot], html[data-view]) kurallarına hiç
+   dokunulmadı.
+
+   ÖZGÜLLÜK NOTU — BU DOSYA globals.css'TEN ÖNCE YÜKLENİR (`@import`
+   bloğunun sonunda). globals.css'teki `.ayar-btn` (0,1,0) gibi bir kuralı
+   aynı özgüllükle ezmek KAYBEDER. Her geçersiz kılma bu yüzden eleman ya
+   da nitelik seçiciyle bir kademe yukarıda yazıldı; her kuralın yanında
+   hangi kuralı neden geçtiği yazıyor. Yalnızca dokunma alanı büyütülüyor:
+   yazı boyu, renk ve kenarlık değişmiyor.
+
+   KAPSAM: `(max-width: 40rem)` VEYA `(pointer: coarse)`. Genişlik tek
+   başına yetmez — dokunmatik dizüstü ve tablet geniştir ama parmakla
+   kullanılır; işaretçi tek başına yetmez — dar pencerede fare de olabilir,
+   ama 390 px'te hedef büyütmenin maliyeti yok. Medya sorgusundaki rem,
+   kök yazı boyutundan (erişilebilirlik ölçeği) ETKİLENMEZ: tarayıcının
+   başlangıç 16 px'ine göre çözülür, yani 40rem = 640 px sabit.
+
+   ÖLÇÜ px: 44 px WCAG 2.5.5 hedefi. rem yazılsaydı %90 yazı ölçeğinde
+   39,6 px'e düşerdi.
+   ================================================================ */
+
+@media (max-width: 40rem), (pointer: coarse) {
+  /* --- Görünüm anahtarı: ölçülen 42–55 × 21 px (Emre) -------------
+     globals `.view-switch button` (0,1,1) ve hesap.css
+     `.hesap-arac .view-switch button` (0,2,1) dolgu veriyor; burası
+     (0,2,1) ve hesap.css'ten SONRA yüklendiği için eşitlikte kazanır.
+     Yalnızca yükseklik/genişlik tabanı ekleniyor, dolguya dokunulmuyor. */
+  .view-switch[role="group"] > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* --- Sihirbaz GERİ / İLERİ ve ayar düğmeleri: ölçülen 33 px -------
+     globals `.ayar-btn` (0,1,0) → `button.ayar-btn` (0,1,1). `<Link>`
+     olarak basılan `.ayar-btn` satır içi öğe; min-height satır içinde
+     işlemez, bu yüzden inline-flex. */
+  button.ayar-btn,
+  a.ayar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  /* --- Aç/kapa anahtarı (bülten dahil): ölçülen 74 × 18 px ----------
+     globals `.ayar-switch` (0,1,0) `padding: 0` → `button.ayar-switch`
+     (0,1,1). Görsel iz (2,25 × 1,125 rem) aynı kalır; düğmenin kendisi
+     kenarlıksız ve saydam olduğu için büyüyen alan görünmez. */
+  button.ayar-switch {
+    min-height: 44px;
+  }
+
+  /* --- Sihirbaz sektör BİRİNCİL / İKİNCİL onayı: ölçülen 74 × 17 px --
+     26 satırlık listede her satırı 44 px'e çıkarmak listeyi ~700 px
+     uzatırdı. Bunun yerine GÖRÜNMEZ genişletilmiş hedef: etiketin
+     `::before`'u yukarı/aşağı 14 px taşar → 17 + 28 = 45 px. Etikete
+     tıklamak girdiyi değiştirdiği için taşan alan da çalışır.
+     Komşu satırın onayıyla çakışmaz: satır yüksekliği ≥ 51 px (8 px
+     dolgu + ad satırı + onay + 8 px dolgu), iki hedef arasında boşluk
+     kalır. Yatayda iki etiket 1rem aralıklı, her biri 6 px taşar.
+     `label.otur-onay` (0,1,1) > globals `.otur-onay` (0,1,0). */
+  label.otur-onay {
+    position: relative;
+  }
+
+  label.otur-onay::before {
+    content: "";
+    position: absolute;
+    inset: -14px -6px;
+  }
+
+  /* --- Hesabım düğmesi: ölçülen 36 × 31 px (Emre) ------------------
+     hesap.css `.hesap-dugme` (0,1,0) → `button.hesap-dugme` (0,1,1). */
+  button.hesap-dugme {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Oturum bilinmeden basılan yer tutucu düğmeyle aynı yükseklikte kalsın,
+     yoksa durum gelince araç satırı 13 px zıplar. hesap.css
+     `.hesap-iskelet` (0,1,0) → (0,2,0). */
+  .hesap-arac > .hesap-iskelet {
+    height: 44px;
+  }
+
+  /* --- Erişilebilirlik paneli düğmeleri: ölçülen 26 px; KAPAT 57 × 12 */
+  .erisim-hedef {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* --- Hazır yazı boyutu düğmeleri: A / A+ / A++ -------------------
+   Nilgün (P2-2): "Gözlüğüm yanımda değilken tek dokunuşla büyük yazı
+   isterim. Kaydırıcıyı parmakla tutturmak zor." Kaydırıcı kaldı; yanına
+   üç hazır adım. Harf boyu düğmenin kendisinde büyüyor: renk ya da tek
+   başına metin değil, BOYUT da farkı gösteriyor. Seçili olan
+   aria-checked + dolu zemin (renk tek gösterge değil). */
+.erisim-boyut {
+  display: flex;
+  gap: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.erisim-boyut-dugme {
+  flex: 1 1 0;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-rule-strong);
+  background: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.erisim-boyut-dugme[data-boyut="1"] {
+  font-size: 1rem;
+}
+
+.erisim-boyut-dugme[data-boyut="2"] {
+  font-size: 1.25rem;
+}
+
+.erisim-boyut-dugme[data-boyut="3"] {
+  font-size: 1.5rem;
+}
+
+.erisim-boyut-dugme[aria-checked="true"] {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.erisim-boyut-dugme:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* --- /ayarlar katlanır bölümler ------------------------------------
+   Nilgün (P2-5): /ayarlar mobilde 16.668 px; Kaynaklar tek başına
+   ~6.000 px. Kaynaklar, Kaynak Öner ve Sistem Bilgisi `<details>` içinde
+   varsayılan kapalı. Başlık satırı (`summary`) tüm genişlikte dokunma
+   hedefi ve en az 44 px. Açık/kapalı durumu yalnızca ok işaretiyle değil
+   "Aç" / "Kapat" metniyle de yazılıyor (WCAG 1.4.1). */
+.erisim-katlanir > summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.erisim-katlanir > summary::-webkit-details-marker {
+  display: none;
+}
+
+.erisim-katlanir > summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.erisim-katlanir-durum {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.3rem 0.6rem;
+  white-space: nowrap;
+}
+
+.erisim-katlanir-durum::after {
+  content: " ▾";
+}
+
+.erisim-katlanir[open] .erisim-katlanir-durum::after {
+  content: " ▴";
+}
+
+.erisim-katlanir:not([open]) .erisim-katlanir-kapat,
+.erisim-katlanir[open] .erisim-katlanir-ac {
+  display: none;
+}
+
+/* Yazdırmada katlanmış bölümün içeriği de basılsın mı? `<details>`
+   kapalıyken tarayıcı içeriği basmaz. Ayarlar sayfası yazdırılacak bir
+   belge değil; bu yüzden ayrıca kural YAZILMADI (görünüm yuvası ve
+   yazdırma kurallarına dokunulmaması da §7 gereği). */

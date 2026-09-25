@@ -81,6 +81,26 @@
  * Yatay kaydırma YALNIZCA bu kabın içinde olur; sayfa gövdesi 390 piksel
  * genişlikte de yatay kaymaz.
  *
+ * KLAVYE: TEK TAB DURAĞI, OK TUŞLARIYLA GEZİNME ("roving tabindex",
+ * TUR 4 · WP5). Ölçülen hata (Burak, klavye kullanıcısı, 1440 px): Tab
+ * sırası şeridin İÇİNDEN geçiyordu — Duraklat + kaydırma kabı (tabindex=0)
+ * + 8 bağlantı = 10 durak; kayma sürerken bağlantıların çoğu ekran dışında
+ * (canlı ölçüm x = −147 … 2772), odak halkası görünmüyordu ve Yapılacaklar'a
+ * ulaşmak ~30 Tab sürüyordu. Kopya liste zaten bağlantısızdı (canlıda
+ * formülle sayılan 9 = 8 gerçek bağlantı + Duraklat, kopyadan 0).
+ * Şimdi: bağlantılardan yalnızca BİRİ `tabIndex=0`, diğerleri `-1`.
+ * Sağ/Sol ok bir sonraki/önceki başlığa, Home/End ilk/son başlığa gider;
+ * son odaklanan başlık bir sonraki Tab girişinde hatırlanır. Kaydırma kabı
+ * artık Tab durağı DEĞİL (ok tuşu işini bağlantılar görüyor), yani şerit
+ * 10 duraktan 2'ye iner: Duraklat + tek bağlantı. Ekran okuyucu 8 başlığın
+ * hepsini liste olarak okumaya devam eder (tabindex okuma sırasını
+ * değiştirmez); kabın etiketi ok tuşlarını söylüyor.
+ * Klavyeyle odaklanınca (`:focus-visible`) animasyon DURAKLATILMAZ,
+ * KALDIRILIR (serit.css): duraklatılmış bir `transform` odaklı başlığı
+ * kabın solunda, kaydırma ile ulaşılamayan eksi bir x'te bırakıyordu.
+ * Animasyonsuz ray doğal yerindedir ve odaklı başlık görünür alana
+ * kaydırılır.
+ *
  * Stiller: `frontend/app/css/serit.css` (docs/SADELESTIRME.md §1).
  */
 
@@ -89,6 +109,7 @@ import {
   useRef,
   useState,
   type CSSProperties,
+  type KeyboardEvent,
   type RefObject,
 } from "react";
 
@@ -221,6 +242,8 @@ export function HeadlineStrip({
   hiz?: SeritHizi;
 }) {
   const [duraklatildi, setDuraklatildi] = useState(false);
+  /** Roving tabindex: Tab ile şeride girildiğinde odaklanacak başlığın sırası. */
+  const [aktif, setAktif] = useState(0);
   const hareketAzaltildi = useHareketAzaltildi();
   const pencereRef = useRef<HTMLDivElement | null>(null);
   const listeRef = useRef<HTMLUListElement | null>(null);
@@ -231,6 +254,57 @@ export function HeadlineStrip({
   );
 
   if (articles.length === 0) return null;
+
+  // Liste kısalırsa (gizleme, filtre) hatırlanan sıra dışarıda kalmasın;
+  // yoksa hiçbir bağlantı tabIndex=0 almaz ve şerit Tab sırasından düşer.
+  const aktifSira = aktif < articles.length ? aktif : 0;
+
+  /**
+   * Ok tuşlarıyla gezinme. Hiçbir durumda istisna fırlatmaz: odak
+   * denenemezse (öğe DOM'dan düştüyse) sessizce atlanır.
+   */
+  const okTusu = (e: KeyboardEvent<HTMLUListElement>) => {
+    const son = articles.length - 1;
+    let hedef: number;
+    // Yalnızca yatay oklar: Yukarı/Aşağı sayfayı kaydırmaya devam etsin,
+    // şeritte takılı kalan klavye kullanıcısı sayfadan kopmasın.
+    if (e.key === "ArrowRight") hedef = Math.min(son, aktifSira + 1);
+    else if (e.key === "ArrowLeft") hedef = Math.max(0, aktifSira - 1);
+    else if (e.key === "Home") hedef = 0;
+    else if (e.key === "End") hedef = son;
+    else return;
+    // Ok tuşunun varsayılanı kabı kaydırmak; odak zaten öğeyi görünür
+    // alana getireceği için çift kaydırmayı önle.
+    e.preventDefault();
+    setAktif(hedef);
+    try {
+      const el = listeRef.current?.querySelectorAll<HTMLAnchorElement>(
+        "a.pano-serit-baglanti",
+      )[hedef];
+      el?.focus();
+    } catch {
+      /* yok sayılır */
+    }
+  };
+
+  /**
+   * Odaklanan başlığı kabın görünür alanına getir. Odak geldiği karede
+   * animasyon CSS'te kaldırılıyor; ölçüm o değişiklikten SONRA doğru olsun
+   * diye bir kare bekleniyor.
+   */
+  const gorunurYap = (el: HTMLElement) => {
+    try {
+      // Fareyle tıklamada (odak halkası yok) kaydırma yapılmaz: imleç
+      // üstündeyken animasyon yalnızca duraklatılmış, ray dönüşümlü; orada
+      // kabı kaydırmak başlığı imlecin altından kaçırırdı.
+      if (!el.matches(":focus-visible")) return;
+      window.requestAnimationFrame(() => {
+        el.scrollIntoView({ block: "nearest", inline: "nearest" });
+      });
+    } catch {
+      /* yok sayılır */
+    }
+  };
 
   /**
    * Kayma gerçekten çalışacak mı? İki koşul: hareket kapatılmamış olacak VE
@@ -251,8 +325,8 @@ export function HeadlineStrip({
    * hiç söz edilmemeli, yoksa olmayan bir davranış duyurulur.
    */
   const kapEtiketi = kayan
-    ? `${label} — ${articles.length} başlık. Kendiliğinden yavaşça kayan şerit; üzerine gelince, odaklanınca ya da Duraklat düğmesiyle durur. Ok tuşlarıyla elle de gezilebilir.`
-    : `${label} — ${articles.length} başlık, ok tuşlarıyla yatay gezilebilen liste.`;
+    ? `${label} — ${articles.length} başlık. Kendiliğinden yavaşça kayan şerit; üzerine gelince, odaklanınca ya da Duraklat düğmesiyle durur. Başlıklar arasında sağ ve sol ok tuşlarıyla gezilir.`
+    : `${label} — ${articles.length} başlık. Başlıklar arasında sağ ve sol ok tuşlarıyla gezilir.`;
 
   return (
     <section className="pano-serit-kap" aria-labelledby="pano-serit-baslik">
@@ -277,29 +351,42 @@ export function HeadlineStrip({
       </div>
 
       {/*
-        KAP. Her iki kipte de kaydırma burada olur (`overflow-x: auto`) ve
-        klavyeyle gezilebilir (`tabindex=0`). Animasyon içteki raya uygulanır;
-        duraklatma durumu buraya `data-*` niteliği olarak yazılıp CSS'te
-        okunur — böylece duraklatma stil katmanında çözülür, JavaScript her
-        karede iş yapmaz.
+        KAP. Her iki kipte de kaydırma burada olur (`overflow-x: auto`);
+        dokunmatikte parmakla, klavyede ok tuşuyla başlıklar arasında
+        (yukarıdaki roving tabindex). Kap artık Tab durağı DEĞİL — eskiden
+        `tabIndex=0` idi ve bağlantılarla birlikte ayrı bir durak daha
+        ekliyordu. `role="group"` + etiket: ekran okuyucu ilk bağlantıya
+        gelince grubun adını ve ok tuşu ipucunu okur. Animasyon içteki raya
+        uygulanır; duraklatma durumu buraya `data-*` niteliği olarak
+        yazılıp CSS'te okunur.
       */}
       <div
         ref={pencereRef}
         className="serit-pencere"
         data-kayan={kayan ? "true" : "false"}
         data-durdu={duraklatildi ? "true" : "false"}
-        tabIndex={0}
+        role="group"
         aria-label={kapEtiketi}
         style={{ "--serit-sure": `${sureSaniye}s` } as CSSProperties}
       >
         <div className="serit-ray">
           {/* GERÇEK liste: bağlantılar, normal odak sırası, ekran okuyucuya açık. */}
-          <ul ref={listeRef} className="pano-serit" data-serit-ray="true">
-            {articles.map((article) => (
+          <ul
+            ref={listeRef}
+            className="pano-serit"
+            data-serit-ray="true"
+            onKeyDown={okTusu}
+          >
+            {articles.map((article, sira) => (
               <li key={article.id} className="pano-serit-oge">
                 <Link
                   href={`/haber/${article.id}`}
                   className="pano-serit-baglanti"
+                  tabIndex={sira === aktifSira ? 0 : -1}
+                  onFocus={(e) => {
+                    setAktif(sira);
+                    gorunurYap(e.currentTarget);
+                  }}
                 >
                   <BandBadge band={article.importance_band} />
                   <span className="pano-serit-metin" title={article.title}>

@@ -154,6 +154,37 @@
   animation-play-state: paused;
 }
 
+/* --- Klavye odağı: animasyon KALDIRILIR (TUR 4 · WP5) -------------
+   Duraklatma (`paused`) fare için doğru: başlık imlecin altında kalır.
+   Klavye için YANLIŞ ölçüldü (Burak, 1440 px): duraklatılmış `transform`
+   odaklanan başlığı kabın solunda x = −147 px'te bırakıyordu; kap sola
+   kaydırılamadığı için (scrollLeft zaten 0) odak halkası hiç görünmüyordu.
+   Klavye odağı (`:focus-visible`) şeritteyken animasyon tamamen kalkar,
+   ray doğal yerine döner ve bileşen odaklı başlığı `scrollIntoView` ile
+   görünür alana getirir. Kopya da gizlenir: ok tuşuyla sona gidilince
+   aynı başlıklar ikinci kez görünmesin.
+   Özgüllük: `.serit-pencere[data-kayan="true"]:has(...) .serit-ray`
+   (0,5,0) > animasyon kuralı `.serit-pencere[data-kayan="true"] .serit-ray`
+   (0,3,0) — dosya sırası önemsiz. `:has()` desteklenmeyen motorda kural
+   düşer ve eski davranış (duraklatma) kalır; bozulma yok. */
+.serit-pencere[data-kayan="true"]:has(.pano-serit-baglanti:focus-visible) .serit-ray {
+  animation: none;
+}
+
+.serit-pencere[data-kayan="true"]:has(.pano-serit-baglanti:focus-visible) .serit-kopya {
+  display: none;
+}
+
+/* --- Duraklat düğmesi dokunma hedefi (TUR 4 · WP5) -----------------
+   Ölçülen: 80 × 20 px (390 px). Mobilde / dokunmatikte en az 44 px.
+   `.serit-ust .serit-dugme` (0,2,0) > `.serit-dugme` (0,1,0). */
+@media (max-width: 40rem), (pointer: coarse) {
+  .serit-ust .serit-dugme {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 /* --- `.pano-serit` listelerinin ray içindeki davranışı ------------- */
 /* `globals.css` içindeki `.pano-serit` kuralı listeye kendi
    `overflow-x: auto`sunu veriyor. Ray içinde bu YANLIŞ olur: iç içe iki

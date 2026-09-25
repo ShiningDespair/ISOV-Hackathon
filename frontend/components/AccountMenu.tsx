@@ -64,10 +64,18 @@ function basHarfler(fullName: string | null): string {
 }
 
 /**
- * Kurum adı. `/auth/me` yanıtı `user.tenant = {tenant_key, name}` taşıyor
- * ama `SessionUser` tipi (lib/types-auth.ts, başka bir işin dosyası)
- * yalnızca `tenant_key`i bildiriyor. Tipi değiştirmek yerine burada
- * savunmacı okunuyor: alan yoksa satır hiç basılmaz.
+ * Kurum ADI — anahtar DEĞİL.
+ *
+ * Ölçülen hata (TUR 4, süpervizörün ekran görüntüsü): menüde kurum satırında
+ * "isov" yazıyordu. Neden: backend `/auth/me` `user.tenant = {tenant_key,
+ * name}` döndürüyor ve `name` dolu ("İstanbul Sanayi Odası Vakfı"), ama
+ * `lib/api-auth.ts` `normalizeUser()` yalnızca `tenant_key`i taşıyıp adı
+ * düşürüyor; bu fonksiyon da adı bulamayınca ANAHTARA düşüyordu. Anahtar bir
+ * iç tanımlayıcıdır, kullanıcıya kurum adı gibi gösterilmez.
+ *
+ * Artık yalnızca ad okunur (iç içe `tenant.name` ya da düz `tenant_name`);
+ * ad yoksa satır HİÇ basılmaz. `normalizeUser()` adı taşımaya başladığında
+ * (başka iş paketinin dosyası) satır kendiliğinden görünür.
  */
 function kurumAdi(user: unknown): string | null {
   if (!user || typeof user !== "object") return null;
@@ -75,10 +83,8 @@ function kurumAdi(user: unknown): string | null {
   if (tenant && typeof tenant === "object") {
     const ad = metin((tenant as { name?: unknown }).name);
     if (ad) return ad;
-    const anahtar = metin((tenant as { tenant_key?: unknown }).tenant_key);
-    if (anahtar) return anahtar;
   }
-  return metin((user as { tenant_key?: unknown }).tenant_key);
+  return metin((user as { tenant_name?: unknown }).tenant_name);
 }
 
 /** Rol etiketi — yalnızca üye dışındaki roller için basılır. */

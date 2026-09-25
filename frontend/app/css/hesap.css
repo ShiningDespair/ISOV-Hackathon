@@ -40,6 +40,29 @@
     letter-spacing: 0.05em;
     font-size: 0.5625rem;
   }
+
+  /* BÜYÜK YAZIDA SATIRA SARMA (TUR 4 · WP5).
+     Olculen hata (Nilgun P2-2, 390 px, yazi %160): Hesabim + dort dugmeli
+     anahtar tek satira sigmiyor, `nowrap` yuzunden "KART" dugmesinin sag
+     kenari 409 px'e tasiyip kirpiliyordu. Artik arac satiri sarar: sigmazsa
+     anahtar Hesabim'in ALTINA iner (%160'ta anahtar 313 px, kap 358 px).
+     Normal yazida iki denetim yine tek satirda (Hesabim 44 + anahtar ~200).
+     Anahtarin kendisi de sarabilir — asiri harf araligi + %160 gibi
+     durumlarda dugmeler ikinci satira iner, hicbiri kirpilmaz.
+     Ozgulluk: `.hesap-arac .view-switch` (0,2,0) > globals `.view-switch`
+     (0,1,0); `.hesap-arac` ayni dosyada yukarida, bu kural sonra geliyor. */
+  .hesap-arac {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    /* Menu artik bu satira gore konumlaniyor (asagidaki .hesap-menu notu). */
+    position: relative;
+  }
+
+  .hesap-arac .view-switch {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
 }
 
 /* ----------------------------------------------------------------
@@ -159,6 +182,22 @@
     right: auto;
     left: 0;
     max-width: calc(100vw - 2rem);
+  }
+
+  /* TUR 4 · WP5: arac satiri artik sarabildigi icin Hesabim dugmesi
+     buyuk yazida satirda TEK BASINA, ortalanmis durabilir (x ~ 166 px);
+     dugmenin soluna yaslanan 339 px'lik menu o zaman SAGDAN tasardi.
+     Menu mobilde dugmeye degil, tam genislikteki `.hesap-arac` satirina
+     yaslaniyor: `.hesap-kok` konumlandirma baglami olmaktan cikiyor,
+     `.hesap-arac` (yukarida `position: relative`) oluyor. Sol kenar her
+     durumda kabin sol kenari (390 px'te x = 16), genislik en fazla kap
+     kadar; sarma olsun olmasin menu ekrana sigar. */
+  .hesap-kok {
+    position: static;
+  }
+
+  .hesap-arac .hesap-menu {
+    max-width: 100%;
   }
 }
 

@@ -50,7 +50,7 @@ function Choice<T extends string>({
           aria-checked={value === o.key}
           title={o.hint}
           onClick={() => onChange(o.key)}
-          className="u-kicker border px-2.5 py-1.5 transition-colors"
+          className="erisim-hedef u-kicker border px-2.5 py-1.5 transition-colors"
           style={
             value === o.key
               ? { borderColor: "var(--color-ink)", backgroundColor: "var(--color-ink)", color: "var(--color-paper)" }
@@ -58,6 +58,48 @@ function Choice<T extends string>({
           }
         >
           {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Hazır yazı boyutu adımları — kaydırıcının YANINDA, onun yerine değil.
+ *
+ * Nilgün (58, presbiyopi; P2-2): "Gözlüğüm yanımda değilken tek dokunuşla
+ * büyük yazı isterim. Kaydırıcıyı parmakla tutturmak zor." Kaydırıcı 0,05'lik
+ * adımlarla 15 kademe; telefonda doğru kademeyi tutturmak birkaç deneme
+ * alıyordu. Üç hazır adım tek dokunuş.
+ *
+ * Değerler: %100 (varsayılan), %125, %150. %160 (kaydırıcının üst sınırı)
+ * bilinçli olarak hazır adım DEĞİL: o ölçekte 390 px'te başlık tek başına bir
+ * ekranı dolduruyor (Nilgün a05); isteyen kaydırıcıyla yine çıkabilir.
+ * Kaydırıcı ara bir değerdeyse (ör. %135) hiçbir düğme seçili görünmez —
+ * yanlış bir "seçili" göstermek, olmayan bir durumu duyurmak olurdu.
+ */
+const BOYUT_ADIMLARI = [
+  { deger: 1, etiket: "A", ad: "Normal yazı, yüzde 100" },
+  { deger: 1.25, etiket: "A+", ad: "Büyük yazı, yüzde 125" },
+  { deger: 1.5, etiket: "A++", ad: "Çok büyük yazı, yüzde 150" },
+] as const;
+
+function BoyutAdimlari({ value, onChange }: { value: number; onChange: (v: number) => void }) {
+  return (
+    <div className="erisim-boyut" role="radiogroup" aria-label="Hazır yazı boyutu">
+      {BOYUT_ADIMLARI.map((a, i) => (
+        <button
+          key={a.deger}
+          type="button"
+          role="radio"
+          aria-checked={Math.abs(value - a.deger) < 0.001}
+          aria-label={a.ad}
+          title={a.ad}
+          data-boyut={i + 1}
+          onClick={() => onChange(a.deger)}
+          className="erisim-boyut-dugme"
+        >
+          {a.etiket}
         </button>
       ))}
     </div>
@@ -154,6 +196,7 @@ export function A11yControls({ compact = false }: { compact?: boolean }) {
             onChange={(v) => set("fontScale", v)}
             format={(v) => `%${Math.round(v * 100)}`}
           />
+          <BoyutAdimlari value={s.fontScale} onChange={(v) => set("fontScale", v)} />
           <Slider
             label="Satır aralığı"
             value={s.lineHeight}
@@ -243,7 +286,7 @@ export function A11yControls({ compact = false }: { compact?: boolean }) {
           type="button"
           onClick={reset}
           disabled={changedCount === 0}
-          className="u-kicker border border-ink px-3 py-1.5 transition-colors hover:bg-ink hover:text-paper disabled:cursor-not-allowed disabled:border-rule disabled:text-ink-faint disabled:hover:bg-transparent disabled:hover:text-ink-faint"
+          className="erisim-hedef u-kicker border border-ink px-3 py-1.5 transition-colors hover:bg-ink hover:text-paper disabled:cursor-not-allowed disabled:border-rule disabled:text-ink-faint disabled:hover:bg-transparent disabled:hover:text-ink-faint"
         >
           Sıfırla
         </button>

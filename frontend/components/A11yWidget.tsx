@@ -61,7 +61,7 @@ export function A11yWidget() {
                 setOpen(false);
                 buttonRef.current?.focus();
               }}
-              className="u-kicker text-ink-soft hover:text-accent"
+              className="erisim-hedef u-kicker text-ink-soft hover:text-accent"
               aria-label="Paneli kapat"
             >
               Kapat ✕

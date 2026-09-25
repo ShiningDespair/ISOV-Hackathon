@@ -18,6 +18,8 @@
 @import "./css/birlesik.css";
 @import "./css/profil.css";
 @import "./css/haber.css";
+@import "./css/erisim.css";
+@import "./css/tarih.css";
 
 /* ================================================================
    ISO · İSOV — Tasarım jetonları (New York Times esinli)
@@ -676,6 +678,49 @@ html[data-a11y-palette="monokrom"] {
   --color-accent: #1a1a1a;
 }
 
+/* --- Koyu temada vurgu rengi (TUR 4 · WP5) ---------------------- */
+/* ÖLÇÜLEN HATA (Emre, gerçek tarayıcı, 390 px): koyu tema yalnızca zemin
+   ve mürekkebi çeviriyordu; vurgu #8b0000 kalıyordu. #8b0000 / #121212 =
+   1,87:1 (WCAG AA metin için 4,5:1). "KRİTİK" rozeti ve "EN ÖNEMLİ
+   KONULAR" gece okunmuyordu. Renk körlüğü paletleri de koyu zeminde
+   ölçüldü ve hepsi düşüktü: #0b4f9e 2,34 · #a3005c 2,42 · #1a1a1a 1,08.
+   Aşağıdaki açık tonların kontrastı (WCAG bağıl parlaklık formülü,
+   zemin #121212 / yüzey #1b1b1b / derin #0d0d0d):
+     normal     #ff6b6b  6,75 / 6,21 / 7,00
+     protanopi, deuteranopi  #6cb2ff  8,43 / 7,75 / 8,75
+     tritanopi  #ff6fc8  7,46 / 6,86 / 7,74
+     monokrom   #e6e6e6 15,01 / 13,80 / 15,57
+   Vurgu zeminli metin (`.ayar-btn-primary:hover` vb.) --color-paper
+   kullanıyor; koyu temada o #121212, yani aynı oranlar geçerli.
+
+   NEDEN `@media screen`: aşağıdaki yazdırma bloğu koyu temada kâğıdı
+   beyaza çeviriyor ama --color-accent'i sıfırlamıyor. Açık ton kâğıda
+   geçseydi beyaz üstünde 2,78:1 olurdu. Yazdırma bloğuna DOKUNMAMAK için
+   açık ton yalnızca ekrana yazıldı; kâğıtta #8b0000 (10,01:1) kalır.
+
+   ÖZGÜLLÜK: tema kuralı `html[data-a11y-contrast="koyu"]` (0,1,1),
+   yukarıdaki palet kurallarıyla eşit; bu blok onlardan SONRA geldiği için
+   koyu temada paletin koyu zeminde okunmayan tonunu ezer. Palet + koyu
+   birleşimleri (0,2,1) olduğu için sıradan bağımsız kazanır. */
+@media screen {
+  html[data-a11y-contrast="koyu"] {
+    --color-accent: #ff6b6b;
+  }
+
+  html[data-a11y-contrast="koyu"][data-a11y-palette="protanopi"],
+  html[data-a11y-contrast="koyu"][data-a11y-palette="deuteranopi"] {
+    --color-accent: #6cb2ff;
+  }
+
+  html[data-a11y-contrast="koyu"][data-a11y-palette="tritanopi"] {
+    --color-accent: #ff6fc8;
+  }
+
+  html[data-a11y-contrast="koyu"][data-a11y-palette="monokrom"] {
+    --color-accent: #e6e6e6;
+  }
+}
+
 /* Renk tek başına bilgi taşımasın: KRİTİK bandı monokromda kalın çerçeve
    ve dolgu ile de ayrışır (WCAG 1.4.1 — renkten bağımsız ayırt edilebilirlik). */
 html[data-a11y-palette="monokrom"] .u-band-kritik {
@@ -763,13 +808,27 @@ html[data-a11y-images="gizli"] [data-a11y-image] {
   gap: 0.5rem;
 }
 
+/* ÖLÇÜLEN HATA (Nilgün P2-1, Emre; 390 px): sağ alttaki sabit düğme
+   [328–374 × 782–828] kayıt adım 5'te "İLERİ" düğmesinin sağ 46 px'ini,
+   adım 2'de bir seçenek satırını örtüyordu. Yazı %160'a çıkınca düğme rem
+   ile büyüyüp 74 × 74 px oluyor ve "DURAKLAT"ı kapatıyordu.
+   Çözüm iki parça:
+   (1) Boyut px: yazı ölçeği arayüzü büyütür, ama bu düğme içerik değil
+       araç; 46 px (≥ 44 px dokunma hedefi) her ölçekte sabit.
+   (2) Mobilde (≤ 40rem) düğme sabit/yüzen DEĞİL, üst barın sağ üst
+       köşesine `absolute` oturur (aşağıdaki medya bloğu). O köşe 390 px'te
+       ve %160 yazıda da boş ölçüldü (logo 124–266 px arasında, ortalı).
+       Kaydırınca sayfayla birlikte yukarı gider: hiçbir içeriğin ÜSTÜNE
+       binmez. Masaüstünde sağ alt köşe korunur; sayfanın sonuna düğme
+       kadar boşluk eklenir ki altbilginin son satırı düğmenin altında
+       kalmasın. */
 .a11y-widget-button {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.875rem;
-  height: 2.875rem;
+  width: 46px;
+  height: 46px;
   border: 1px solid var(--color-ink);
   background-color: var(--color-surface);
   color: var(--color-ink);
@@ -802,6 +861,34 @@ html[data-a11y-images="gizli"] [data-a11y-image] {
   padding: 1rem;
   border: 1px solid var(--color-ink);
   background-color: var(--color-surface);
+}
+
+/* Masaüstü: sayfa sonunda düğme kadar boşluk (46 px + 1rem kenar + 1rem
+   nefes). Yalnızca ekranda — kâğıtta düğme zaten yok. */
+@media screen and (min-width: 40.0625rem) {
+  body {
+    padding-bottom: calc(46px + 2rem);
+  }
+}
+
+/* Mobil: üst barın sağ üst köşesi. Seçiciler yukarıdakilerle aynı
+   özgüllükte (0,1,0) ve SONRA geldiği için kazanır; `@media print`
+   bloğundaki `.a11y-widget { display:none !important }` `!important`
+   taşıdığı için burası onu etkilemez. Panel DOM'da düğmeden önce;
+   `column-reverse` ile düğmenin ALTINDA açılır. */
+@media screen and (max-width: 40rem) {
+  .a11y-widget {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    bottom: auto;
+    flex-direction: column-reverse;
+  }
+
+  .a11y-widget-button {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 /* Kaydırıcılar — gazete estetiğine uygun, kalın ve dokunmatikte rahat */

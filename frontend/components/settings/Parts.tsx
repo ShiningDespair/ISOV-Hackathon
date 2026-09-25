@@ -8,13 +8,31 @@
 
 import type { ReactNode } from "react";
 
-/** Sayfa içindeki bir ayar bölümü — kural çizgisi + kicker + başlık. */
+/**
+ * Sayfa içindeki bir ayar bölümü — kural çizgisi + kicker + başlık.
+ *
+ * `katlanir`: bölüm `<details>` içinde, varsayılan KAPALI basılır.
+ * Ölçülen hata (Nilgün P2-5, 390 px): /ayarlar 16.668 px uzunluğundaydı;
+ * Kaynaklar tek başına ~6.000 px, Bülten tercihleri y = 14.330'da. Üst
+ * yönetim kaynak listesi yönetmez. Kaynaklar, Kaynak Öner ve Sistem Bilgisi
+ * katlanır; Profil ve Görünüm açık kalır.
+ *
+ * NEDEN `<details>`: JavaScript'siz çalışır (bu bileşen sunucu bileşeni),
+ * klavye (Enter/Space) ve ekran okuyucu ("daraltılmış/genişletilmiş")
+ * desteği tarayıcıdan gelir. Başlık (`h2`) `summary` içinde kalır, yani
+ * başlık gezinmesiyle bölüm yine bulunur. Durum yalnızca ok işaretiyle
+ * değil "Aç"/"Kapat" metniyle de yazılır (renk/simge tek gösterge değil).
+ * Çapa (`/ayarlar#kaynaklar`) ile gelindiğinde bölüm kendiliğinden
+ * AÇILMAZ; kodda bu çapalara giden bağlantı yok (grep: 0). Chromium sayfa
+ * içi aramada (Ctrl+F) kapalı `<details>`i kendisi açar.
+ */
 export function SettingsSection({
   id,
   kicker,
   title,
   lead,
   aside,
+  katlanir = false,
   children,
 }: {
   id: string;
@@ -22,24 +40,49 @@ export function SettingsSection({
   title: string;
   lead?: ReactNode;
   aside?: ReactNode;
+  /** true: `<details>` içinde, varsayılan kapalı. */
+  katlanir?: boolean;
   children: ReactNode;
 }) {
+  const baslik = (
+    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+      <div className="min-w-0">
+        <p className="u-kicker u-kicker-accent">{kicker}</p>
+        <h2 id={`${id}-baslik`} className="u-headline u-headline-md mt-1">
+          {title}
+        </h2>
+      </div>
+      {aside ? <div className="u-kicker text-ink-faint">{aside}</div> : null}
+    </div>
+  );
+  const giris = lead ? (
+    <p className="u-body u-body-soft mt-2 max-w-3xl text-[0.9375rem] leading-snug">
+      {lead}
+    </p>
+  ) : null;
+
+  if (katlanir) {
+    return (
+      <section id={id} className="ayar-section" aria-labelledby={`${id}-baslik`}>
+        <details className="erisim-katlanir" data-katlanir-id={id}>
+          <summary className="flex flex-wrap items-center justify-between gap-3">
+            <div className="min-w-0 flex-1">{baslik}</div>
+            <span className="erisim-katlanir-durum" aria-hidden="true">
+              <span className="erisim-katlanir-ac">Aç</span>
+              <span className="erisim-katlanir-kapat">Kapat</span>
+            </span>
+          </summary>
+          {giris}
+          <div className="mt-5">{children}</div>
+        </details>
+      </section>
+    );
+  }
+
   return (
     <section id={id} className="ayar-section" aria-labelledby={`${id}-baslik`}>
-      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-        <div className="min-w-0">
-          <p className="u-kicker u-kicker-accent">{kicker}</p>
-          <h2 id={`${id}-baslik`} className="u-headline u-headline-md mt-1">
-            {title}
-          </h2>
-        </div>
-        {aside ? <div className="u-kicker text-ink-faint">{aside}</div> : null}
-      </div>
-      {lead ? (
-        <p className="u-body u-body-soft mt-2 max-w-3xl text-[0.9375rem] leading-snug">
-          {lead}
-        </p>
-      ) : null}
+      {baslik}
+      {giris}
       <div className="mt-5">{children}</div>
     </section>
   );
