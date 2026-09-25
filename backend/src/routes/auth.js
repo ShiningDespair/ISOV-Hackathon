@@ -30,7 +30,9 @@ import {
 } from '../lib/session.js';
 import { requireAuth } from '../middleware/session.js';
 import {
-  loginRateLimit, passwordResetRateLimit, registerRateLimit,
+  loginAccountRateLimit, loginIpRateLimit,
+  passwordResetConsumeRateLimit, passwordResetRequestIpRateLimit, passwordResetRequestRateLimit,
+  registerRateLimit,
 } from '../middleware/rateLimit.js';
 import {
   MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH, PASSWORD_POLICY_TEXT,
@@ -193,7 +195,10 @@ router.post('/register', registerRateLimit, asyncHandler(async (req, res) => {
 // ---------------------------------------------------------------------
 // POST /auth/login -> 200 + oturum cerezi
 // ---------------------------------------------------------------------
-router.post('/login', loginRateLimit, asyncHandler(async (req, res) => {
+// Iki sinirlayici, ikisi de YALNIZCA BASARISIZ denemeyi sayar: once IP ust
+// siniri (kaba kuvvet), sonra IP + e-posta (asil sinir). Kurumsal NAT
+// arkasindaki 1.400 kisi birbirinin kotasini tuketmez (bkz. rateLimit.js).
+router.post('/login', loginIpRateLimit, loginAccountRateLimit, asyncHandler(async (req, res) => {
   const body = parseBody(loginSchema, req.body);
 
   // authenticate() basarisizlikta DAIMA ayni mesaji uretir ve olmayan
@@ -281,7 +286,7 @@ router.post('/password', requireAuth, asyncHandler(async (req, res) => {
 // Kullanici yoksa da 202: farkli yanit, kayitli e-postalari tespit etmeye
 // yarayan bir kesif araci olurdu.
 // ---------------------------------------------------------------------
-router.post('/password/reset-request', passwordResetRateLimit, asyncHandler(async (req, res) => {
+router.post('/password/reset-request', passwordResetRequestIpRateLimit, passwordResetRequestRateLimit, asyncHandler(async (req, res) => {
   const body = parseBody(resetRequestSchema, req.body);
   const result = await createPasswordReset(body.email);
 
@@ -301,7 +306,7 @@ router.post('/password/reset-request', passwordResetRateLimit, asyncHandler(asyn
 // ---------------------------------------------------------------------
 // POST /auth/password/reset — {token, next}
 // ---------------------------------------------------------------------
-router.post('/password/reset', passwordResetRateLimit, asyncHandler(async (req, res) => {
+router.post('/password/reset', passwordResetConsumeRateLimit, asyncHandler(async (req, res) => {
   const body = parseBody(resetSchema, req.body);
   await consumePasswordReset(body.token, body.next);
 

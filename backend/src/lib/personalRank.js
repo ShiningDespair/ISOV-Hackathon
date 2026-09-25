@@ -388,12 +388,27 @@ export const DEFAULT_PIN_RATIO = 5;
  * kisisel skoruyla daha one gelebilir. Sabitlenmis kuyruk yalnizca
  * ASGARI kapsamayi garanti eder, tavan koymaz.
  *
+ * ILGI ALANI YUVASI (`interest`) verilirse ayni dongude ikinci bir oran
+ * uygulanir; ayrintisi `pickInterestSlot()` ustunde. `interest` verilmezse
+ * davranis BIREBIR onceki surumdur (sabitlenmis slotlar ayni yerde, ayni
+ * sayida).
+ *
  * @param {Array} scored  comparePersonal ile siralanmis tum aday kume
- * @param {object} opts   { ratio }
+ * @param {object} opts   { ratio, interest: { slugs, muted, ratio } }
  */
-export function interleavePinned(scored = [], { ratio = DEFAULT_PIN_RATIO } = {}) {
+export function interleavePinned(scored = [], { ratio = DEFAULT_PIN_RATIO, interest = null } = {}) {
   const list = Array.isArray(scored) ? scored : [];
   const step = Number.isFinite(Number(ratio)) && Number(ratio) >= 2 ? Math.floor(Number(ratio)) : DEFAULT_PIN_RATIO;
+  const interestSlugs = new Set(interest?.slugs || []);
+  const interestStep = Number.isFinite(Number(interest?.ratio)) && Number(interest.ratio) >= 2
+    ? Math.floor(Number(interest.ratio))
+    : DEFAULT_INTEREST_RATIO;
+  const useInterest = interestSlugs.size > 0;
+  // Listede ZATEN temsil edilen ilgi alanlari (hangi yuvadan gelmis olursa).
+  const covered = new Set();
+  const markCovered = (item) => {
+    for (const slug of item.interest_hits || []) covered.add(slug);
+  };
 
   // Sabitlenmis kuyruk GLOBAL onem sirasina gore: bu slotun amaci "kurum
   // geneli en kritik olan", kisisel skor degil.
@@ -413,26 +428,99 @@ export function interleavePinned(scored = [], { ratio = DEFAULT_PIN_RATIO } = {}
   };
 
   while (out.length < list.length) {
-    // Pencerenin ilk slotu sabitlenmise ayrilir.
+    // Pencerenin ilk slotu sabitlenmise ayrilir. Cakismada (ornegin 16.
+    // slot hem 5'in hem 4'un penceresine duser) SABITLENMIS KAZANIR:
+    // filtre balonu korumasi ilgi yuvasindan once gelir.
     if (out.length % step === 0) {
       pi = nextUnused(pinnedQueue, pi);
       if (pi < pinnedQueue.length) {
         const item = pinnedQueue[pi];
         out.push({ ...item, pinned_slot: 1 });
+        markCovered(item);
         used.add(item.id);
         pi += 1;
         continue;
       }
       // Sabitlenmis kalmadi -> slot kisisel siralamaya gecer.
+    } else if (useInterest && out.length % interestStep === interestStep - 1) {
+      const item = pickInterestSlot(list, used, covered);
+      if (item) {
+        out.push({ ...item, interest_slot: 1 });
+        markCovered(item);
+        used.add(item.id);
+        continue;
+      }
+      // Kapsanmamis ilgi alani kalmadi -> slot kisisel siralamaya gecer.
     }
     li = nextUnused(list, li);
     if (li >= list.length) break;
     out.push(list[li]);
+    markCovered(list[li]);
     used.add(list[li].id);
     li += 1;
   }
 
   return out;
+}
+
+/** Kac slotta bir "ilgi alani yuvasi" acilir (pencerenin SON slotu). */
+export const DEFAULT_INTEREST_RATIO = 4;
+
+/**
+ * ILGI ALANI YUVASI — kullanicinin ACIKCA SECTIGI konularin temsili.
+ *
+ * OLCULEN HATA (TUR 4 persona testi, 2026-09-25): Deniz (dis-ticaret;
+ * ilgi: ihracat, tarife, anti-damping, navlun, tedarik-zinciri, STA, cbam)
+ * icin CBAM haberi (#82) kisisel sirada 19., ABD Tarife 338 (#87) 18.;
+ * 5 dk listesi 12 kalem. Nilgun (ust-yonetim, 11 ilgi alani) icin CBAM
+ * (#82) 7.; 2 dk listesi 5 kalem. Kisisellestirme kullanicinin kendi
+ * sectigi konuyu GENEL akistan asagi itiyordu.
+ *
+ * TESHIS — agirlik sorunu DEGIL, TEMSIL sorunu: iki personanin ilk 12'sinde
+ * de ilgi alaniyla eslesen haber ZATEN coktu (Deniz 9/12, Nilgun 5/5).
+ * Hepsi "ihracat" gibi GENIS bir etiketten geliyordu: korpusta 30+ haberde
+ * "ihracat" var. `interest_tags` bileseni eslesme SAYISINA bakar, hangi
+ * ilgi alaninin eslestigine bakmaz; tek "ihracat" eslesmesi tek "cbam"
+ * eslesmesiyle ayni 55 puani alir. Ustune `position_topic` (0,36) ve
+ * `sector_match` (0,22) genis konulu haberlere 100 verirken, dar konulu
+ * CBAM/tarife haberi (sektor 35) geride kalir. `interest_tags` agirligini
+ * artirmak GENIS etiketi de ayni oranda buyutur — sorunu cozmez, filtre
+ * balonunu buyutur.
+ *
+ * KURAL: her `ratio` slotun SONUNCUSU, listede HENUZ TEMSIL EDILMEMIS
+ * ilgi alanlarindan en coguyla eslesen habere ayrilir. Esitlikte toplam
+ * ilgi eslesmesi, sonra kisisel sira (`scored` sirasi) kazanir.
+ *   - DUSUK bantli haber bu yuvaya GIREMEZ: yuva siralamanin USTUNE bir
+ *     terfi; onemsiz haberi 5'lik listeye tasimamali.
+ *   - Sessize alinan etiketi tasiyan haber GIREMEZ.
+ *   - Aday yoksa slot normal kisisel siraya duser (no-op).
+ * Somut sonuc (ratio 4): 2 dk/5 -> 1 yuva, 5 dk/12 -> 3, 10 dk/20 -> 4
+ * (16. slot sabitlenmisle cakisir, sabitlenmis kazanir).
+ *
+ * ratio 5 de olculdu: Deniz'in 12'sinde yalnizca 2 yuva kalir, ikincisi
+ * "navlun" haberine gider ve tarife temsil edilmez. Olcum tablosu:
+ * docs/CONTRACT.md "Ilgi alani yuvasi".
+ */
+export function pickInterestSlot(list, used, covered) {
+  let best = null;
+  let bestNovel = 0;
+  let bestHits = 0;
+  for (const item of list) {
+    if (used.has(item.id)) continue;
+    if (item.muted_hit || String(item.band) === 'DUSUK') continue;
+    const hits = item.interest_hits || [];
+    if (hits.length === 0) continue;
+    let novel = 0;
+    for (const slug of hits) if (!covered.has(slug)) novel += 1;
+    if (novel === 0) continue;
+    // `list` kisisel sirada: kesin buyuk olmayan aday one gecemez.
+    if (novel > bestNovel || (novel === bestNovel && hits.length > bestHits)) {
+      best = item;
+      bestNovel = novel;
+      bestHits = hits.length;
+    }
+  }
+  return best;
 }
 
 /**
@@ -445,7 +533,8 @@ export function interleavePinned(scored = [], { ratio = DEFAULT_PIN_RATIO } = {}
  * @param {Map}    [input.semanticRanks]  article_id -> 0 tabanli sira
  * @param {number} [input.semanticTotal]  N (yoksa articles.length)
  * @param {Map}    [input.threadBonuses]  article_id -> 0..4
- * @returns {Array} siralanmis { id, personal_score, final_score, is_pinned, signals }
+ * @returns {Array} siralanmis { id, personal_score, final_score, is_pinned, signals,
+ *                   interest_hits, pinned_slot?, interest_slot? }
  */
 export function rankArticles({
   articles = [],
@@ -455,12 +544,15 @@ export function rankArticles({
   threadBonuses = null,
   weights = WEIGHTS,
   pinRatio = DEFAULT_PIN_RATIO,
+  interestRatio = DEFAULT_INTEREST_RATIO,
 } = {}) {
   const list = Array.isArray(articles) ? articles : [];
   const toGlobal = normalizeGlobal();
   const total = Number.isFinite(Number(semanticTotal)) && Number(semanticTotal) > 0
     ? Number(semanticTotal)
     : list.length;
+  const interestSet = new Set(profile?.interest_tag_slugs || []);
+  const mutedSet = new Set(profile?.muted_tag_slugs || []);
 
   const scored = list.map((article) => {
     const rank = semanticRanks instanceof Map ? semanticRanks.get(Number(article.id)) : null;
@@ -486,6 +578,10 @@ export function rankArticles({
       is_pinned,
       thread_bonus: round2(bonus || 0),
       signals: components,
+      band: article.band ?? null,
+      // Ilgi alani yuvasi icin: HANGI acik ilgi alanlari eslesti.
+      interest_hits: (article.tagSlugs || []).filter((slug) => interestSet.has(slug)),
+      muted_hit: (article.tagSlugs || []).some((slug) => mutedSet.has(slug)),
     };
   });
 
@@ -493,7 +589,11 @@ export function rankArticles({
 
   // Filtre balonu korumasi ORAN olarak uygulanir, siralama anahtari olarak
   // DEGIL. `pinRatio = 0` verilirse serpistirme atlanir (kalibrasyon ve
-  // birim testleri ham siralamayi gormek isteyebilir).
+  // birim testleri ham siralamayi gormek isteyebilir). `interestRatio = 0`
+  // yalnizca ilgi alani yuvasini kapatir (once/sonra olcumu icin).
   if (pinRatio === 0) return scored;
-  return interleavePinned(scored, { ratio: pinRatio });
+  const interest = interestRatio === 0 || interestSet.size === 0
+    ? null
+    : { slugs: [...interestSet], ratio: interestRatio };
+  return interleavePinned(scored, { ratio: pinRatio, interest });
 }

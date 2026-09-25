@@ -13,7 +13,9 @@ import {
   POSITIONS, POSITION_LABELS, TIME_BUDGETS, layoutOf, normalizePosition, normalizeTimeBudget, densityOf,
 } from '../lib/positions.js';
 import { NACE_SECTORS, sectorByCode } from '../lib/sectors.js';
-import { WEIGHTS, WEIGHTS_VERSION, THREAD_BONUS_MAX, rankArticles } from '../lib/personalRank.js';
+import {
+  WEIGHTS, WEIGHTS_VERSION, THREAD_BONUS_MAX, DEFAULT_INTEREST_RATIO, rankArticles,
+} from '../lib/personalRank.js';
 import { ARTICLE_COLUMNS, ARTICLE_FROM, serializeArticleRows } from './articleService.js';
 import * as vectorStore from './vectorStore.js';
 
@@ -412,6 +414,12 @@ export async function listPersonalized({
     const s = scoreById.get(Number(item.id));
     if (!s) continue;
     item.is_pinned = s.is_pinned;
+    // Ilgi alani yuvasi (lib/personalRank.js pickInterestSlot): haber
+    // listeye ACIK ILGI ALANI temsili icin terfi ettiyse 1. `matched_interests`
+    // kullanicinin KENDI sectigi etiketlerden eslesenler — arayuz "neden
+    // burada: CBAM ilgi alaniniz" diyebilsin. Skor degil, gizli alan yok.
+    item.interest_slot = s.interest_slot ? 1 : 0;
+    item.matched_interests = s.interest_hits || [];
     item.personal = reveal
       ? {
         personal_score: s.personal_score,
@@ -444,6 +452,7 @@ export async function listPersonalized({
         error: sem.error,
       },
       pinned_count: ranked.filter((r) => r.is_pinned === 1).length,
+      interest_slot_ratio: DEFAULT_INTEREST_RATIO,
     },
   };
 }

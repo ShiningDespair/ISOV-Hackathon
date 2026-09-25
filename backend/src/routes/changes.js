@@ -15,7 +15,7 @@
 import { Router } from 'express';
 import { query } from '../lib/db.js';
 import {
-  ApiError, asyncHandler, parseIdParam, parsePagination, pickFromAllowList, qs,
+  ApiError, asyncHandler, parseDateParam, parseIdParam, parsePagination, pickFromAllowList, qs,
 } from '../lib/http.js';
 import { parseJsonColumn, toIso } from '../lib/serialize.js';
 import { CHANGE_TYPES } from '../services/changeLog.js';
@@ -68,6 +68,63 @@ export function serializeChangeRow(row) {
   };
 }
 
+/**
+ * `?from=` / `?to=` — `detected_at` UZERINDE TARIH ARALIGI.
+ *
+ * OLCULEN HATA (TUR 4, Burak): arayuz "21–25 Eylul 2026" etiketi basiyordu
+ * ama iki uc da `from`/`to`yu HIC okumuyordu; `/me/changes` uc farkli
+ * aralikta da `total: 233` dondu ve liste 19 Eylul kayitlarini gosterdi.
+ * Pazartesi bulteni icin "bu hafta ne degisti" sorusuna yanlis cevap.
+ *
+ * Davranis `/articles` ile AYNI (routes/articles.js buildFilters):
+ *   - 'YYYY-MM-DD' Europe/Istanbul gun baslangici (lib/http.js parseDateParam,
+ *     +03:00);
+ *   - gun bazli `to` O GUNUN TAMAMINI kapsar. `/articles` "+1 gun - 1 sn"
+ *     ile `<=` kullaniyor; burada ESDEGER ve saniye kesirine dayanikli
+ *     "ertesi gun 00:00, `<`" kullanildi;
+ *   - tam zaman damgasi verilirse aynen `<=`.
+ * Gecersiz tarih veya from > to -> 400 (sessizce yok saymak, etiketin
+ * listeyle celismesinin ta kendisiydi).
+ *
+ * @returns {{ where: string[], params: Date[], from: Date|null, to: Date|null }}
+ *   `to` yanitta gosterilecek KAPSAYICI son an (gun bazliysa 23:59:59).
+ */
+export function changeDateRange(reqQuery) {
+  const where = [];
+  const params = [];
+  const rawFrom = qs(reqQuery?.from);
+  const rawTo = qs(reqQuery?.to);
+
+  let from = null;
+  if (rawFrom) {
+    from = parseDateParam(rawFrom);
+    if (!from) throw ApiError.badRequest('from geçerli bir tarih olmalı (YYYY-AA-GG)');
+    where.push('ac.detected_at >= ?');
+    params.push(from);
+  }
+
+  let to = null;
+  if (rawTo) {
+    const start = parseDateParam(rawTo);
+    if (!start) throw ApiError.badRequest('to geçerli bir tarih olmalı (YYYY-AA-GG)');
+    if (rawTo.length === 10) {
+      const nextDay = new Date(start.getTime() + 24 * 60 * 60 * 1000);
+      where.push('ac.detected_at < ?');
+      params.push(nextDay);
+      to = new Date(nextDay.getTime() - 1000);
+    } else {
+      where.push('ac.detected_at <= ?');
+      params.push(start);
+      to = start;
+    }
+  }
+
+  if (from && to && from.getTime() > to.getTime()) {
+    throw ApiError.badRequest('from, to tarihinden sonra olamaz');
+  }
+  return { where, params, from, to };
+}
+
 /** Ortak SELECT — kolonlar serializer'in bekledigi takma adlarla eslesir. */
 const CHANGE_SELECT = `
   ac.id, ac.article_id, ac.thread_id, ac.change_type, ac.detail, ac.detected_at,
@@ -84,7 +141,7 @@ const CHANGE_FROM = `
 
 /**
  * GET /api/changes
- * Query: `type`, `since`, `article_id`, `thread_id`, `page`, `limit`
+ * Query: `type`, `since`, `from`, `to`, `article_id`, `thread_id`, `page`, `limit`
  */
 router.get('/', asyncHandler(async (req, res) => {
   const { page, limit, offset } = parsePagination(req.query);
@@ -101,6 +158,10 @@ router.get('/', asyncHandler(async (req, res) => {
     where.push('ac.detected_at >= ?');
     params.push(d);
   }
+
+  const range = changeDateRange(req.query);
+  where.push(...range.where);
+  params.push(...range.params);
 
   const articleId = qs(req.query.article_id);
   if (articleId) {
@@ -147,6 +208,7 @@ router.get('/', asyncHandler(async (req, res) => {
     total,
     totalPages: Math.max(1, Math.ceil(total / (limit || 1))),
     counts: Object.fromEntries(counts.map((r) => [r.change_type, Number(r.c)])),
+    range: { from: toIso(range.from), to: toIso(range.to) },
     types: CHANGE_TYPE_LIST.map((t) => ({ key: t, label: CHANGE_LABELS[t] })),
   });
 }));

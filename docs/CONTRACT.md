@@ -637,3 +637,88 @@ cevirmek olurdu.
 sayisi degistigi icin o kademedeki sabitlenmis slot sayisi olculerek
 6'dan 4'e dustu (`ceil(20/5) = 4`). CONTRACT sinirlari ("en az 1", "en cok
 7") korunuyor.
+
+# EK (v4) — TUR 4 PERSONA DUZELTMELERI (WP2)
+
+## Ilgi alani yuvasi — `lib/personalRank.js` `pickInterestSlot()`
+
+**Olculen hata (persona testi, 2026-09-25):** Deniz (dis-ticaret, 5 dk/12
+kalem; ilgi: ihracat, tarife, anti-damping, navlun, tedarik-zinciri, STA,
+cbam) icin CBAM (#82) kisisel sirada **19.**, ABD Tarife 338 (#87) **18.**,
+ABD anti-damping (#92) **13.** Nilgun (ust-yonetim, 2 dk/5 kalem) icin CBAM
+(#82) **7.** Kullanicinin kendi sectigi konu Genel akistan daha asagida.
+
+**Teshis:** agirlik degil TEMSIL sorunu. Ilk 12'de ilgi eslesmesi zaten
+coktu (Deniz 9/12) ama hepsi GENIS "ihracat" etiketinden (korpusta 30+
+haber). `interest_tags` eslesme SAYISINA bakar; tek "ihracat" = tek "cbam"
+= 55 puan. #92'nin kaybi sektor bileseninden (oluklu mukavva / C13 tekstil
+-> 35), #82/#87'nin kaybi global skordan (g30 / g20). `interest_tags`
+agirligini artirmak genis etiketi de buyuturdu.
+
+**Kural:** her 4 slotun SONUNCUSU (0 tabanli 3, 7, 11, 15, 19) listede
+HENUZ TEMSIL EDILMEMIS acik ilgi alanlarindan en coguyla eslesen habere
+ayrilir; esitlikte toplam eslesme, sonra kisisel sira. DUSUK bant ve
+sessize alinan etiket giremez. Aday yoksa slot normal siraya duser.
+Sabitlenmis slotla cakismada (16. slot) **sabitlenmis kazanir**.
+`DEFAULT_PIN_RATIO = 5` ve sabitlenmis slotlarin yeri **DEGISMEDI**.
+
+API (ek alanlar, `sort=kisisel` ve `/me/digest` kalemlerinde):
+`interest_slot: 0|1`, `matched_interests: string[]` (kullanicinin KENDI
+sectigi etiketlerden eslesenler). `meta.interest_slot_ratio = 4`.
+
+**Olcum (5 persona + 3 gercek profil, anlamsal bilesen bugun kapali):**
+
+| Olcu | Once | ratio 5 | **ratio 4 (secilen)** |
+|---|---|---|---|
+| Deniz #82 CBAM / #87 tarife / #92 | 19 / 18 / 13 | 5 / 15 / 14 | **4 / 12 / 15** |
+| Deniz ilgi alani kapsama (ilk 12) | 5/7 | 6/7 | **7/7** |
+| Nilgun #82 CBAM (butce 5) | 7 | 5 | **4** |
+| Global ilk-10 ortusme medyani (5 persona) | 6/10 | 5/10 | **6/10** (esik >= 3) |
+| Global ortusme medyani (8 kullanici) | 7,5/10 | 6,5/10 | **6,5/10** |
+| Ciftler arasi ilk-10 ortusme medyani (10 cift) | 5/10 (4-6) | 4/10 | **4/10 (3-5)** |
+| Sabitlenmis slot 5/12 (her kullanici) | 1/3 | 1/3 | **1/3** |
+| Sabitlenmis slot 20 | 5 kullanici 4, 3 kullanici 3 | ayni | **u31: 3 -> 4, digerleri ayni** |
+
+Ciftler arasi ortusmenin 5'ten 4'e inmesi AYRISMANIN ARTTIGI yondedir
+(yuvalar kullaniciya ozel). En dusuk global ortusme Emre 3/10 (once 4/10).
+20'de 3 sabitlenmis gorulen profillerde KRITIK kuyrugu kisisel sira
+tarafindan tuketiliyor (hepsi zaten listede); u31'de ilgi yuvasi bir KRITIK'i
+kisisel siradan geri itti, o da 16. slotta sabitlenmis olarak geldi.
+
+## Giris hiz siniri — kurumsal NAT
+
+`/auth/login`: iki sinirlayici, **ikisi de yalnizca BASARISIZ denemeyi
+sayar** (2xx/3xx, 429 ve 5xx iade edilir; sayac istek basinda rezerve
+edilir, esanli istekler siniri asamaz):
+
+| Sinirlayici | Anahtar | Sinir |
+|---|---|---|
+| `loginAccountRateLimit` | IP + normalize e-posta | 15 dk'da 10 basarisiz |
+| `loginIpRateLimit` | IP | 15 dk'da 200 basarisiz |
+
+Hesap kilidi (`authService`, 5 hatali -> 15 dk) DEGISMEDI.
+Kayit: IP basina 15 dk'da 60 (basarili dahil; her basari bir hesap acar).
+Sifre sifirlama istegi: IP+e-posta 15 dk'da 3, IP 15 dk'da 30. Token
+tuketme: IP basina 15 dk'da 10 basarisiz. (Eskiden istek ve tuketme ayni
+5'lik IP kovasini paylasiyordu.)
+
+Olcum (sahte isleyici, ayni IP): 50 dogru giris once 10x200 + 40x429,
+sonra 50x200. A hesabinin 10 hatasindan sonra B'nin dogru girisi once 429,
+sonra 200. 250 farkli hesaba yanlis deneme: 200x401 + 50x429. Esanli 30
+yanlis istek ayni hesaba: 10 isleyiciye ulasir.
+
+## Degisiklikler — `from` / `to`
+
+`GET /changes` ve `GET /me/changes` `from`/`to` okur, `detected_at`
+uzerinde, `/articles` ile ayni kuralla: `YYYY-MM-DD` Europe/Istanbul gun
+basi; gun bazli `to` gunun TAMAMINI kapsar (`< ertesi gun 00:00`); tam
+zaman damgasi aynen. Gecersiz tarih veya `from > to` -> 400. Yanit ek
+alani: `range: {from, to}` (ISO, `to` kapsayici son an).
+`/me/changes`: acik aralik verilince varsayilan "son ziyaretten beri"
+esigi UYGULANMAZ (`since: null`, `since_source: 'aralik'`); `since` acikca
+verilirse kesisim.
+
+Olcum (korpusta 235 degisiklik, hepsi 19 Eylul 15:41-15:57):
+`from=2026-09-21&to=2026-09-25` -> 0 (once 233/235); `from=to=2026-09-19`
+-> 235; `to=2026-09-18` -> 0; `from=2026-09-19T15:55+03:00&to=...15:58`
+-> 115.

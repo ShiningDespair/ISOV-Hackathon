@@ -27,7 +27,7 @@ import {
   buildProfileText, loadProfile, listPersonalized, profileHash, tagLabelMap, taxonomy,
 } from '../services/personalize.js';
 import { ARTICLE_COLUMNS, ARTICLE_FROM } from '../services/articleService.js';
-import { serializeChangeRow, CHANGE_TYPE_LIST } from './changes.js';
+import { serializeChangeRow, CHANGE_TYPE_LIST, changeDateRange } from './changes.js';
 import { buildFilters } from './articles.js';
 import { tenantKeyOf } from './sources.js';
 
@@ -364,20 +364,30 @@ router.get('/changes', asyncHandler(async (req, res) => {
   const { page, limit, offset } = parsePagination(req.query);
   const type = pickFromAllowList(req.query.type, CHANGE_TYPE_LIST);
 
+  // Acik tarih araligi (`from`/`to`) verildiyse VARSAYILAN "son ziyaretten
+  // beri" esigi UYGULANMAZ: kullanici "21-25 Eylul" dedi; onceki ziyareti
+  // 24 Eylul'se araligi sessizce 24-25'e daraltmak yine etiketle celisirdi.
+  // `since` ACIKCA verilirse ikisi birlikte (kesisim) uygulanir.
+  const range = changeDateRange(req.query);
+  const hasRange = range.where.length > 0;
+
   let since = null;
   const raw = qs(req.query.since);
   if (raw) {
     const d = new Date(raw.length === 10 ? `${raw}T00:00:00+03:00` : raw);
     if (Number.isNaN(d.getTime())) throw ApiError.badRequest('since geçerli bir tarih olmalı');
     since = d;
+  } else if (hasRange) {
+    since = null;
   } else if (req.user.prev_seen_at) {
     since = new Date(req.user.prev_seen_at);
   } else {
     since = new Date(Date.now() - FIRST_VISIT_WINDOW_DAYS * 86400000);
   }
 
-  const where = ['ac.detected_at >= ?'];
-  const params = [since];
+  const where = [...range.where];
+  const params = [...range.params];
+  if (since) { where.push('ac.detected_at >= ?'); params.push(since); }
   if (type) { where.push('ac.change_type = ?'); params.push(type); }
   // Gizlenen haberin degisikligi de gizlenir: kullanici "bu haberi gorme"
   // dedi, ayni haber degisiklik akisinda geri gelmemeli.
@@ -418,7 +428,10 @@ router.get('/changes', asyncHandler(async (req, res) => {
     page, limit, total,
     totalPages: Math.max(1, Math.ceil(total / (limit || 1))),
     since: toIso(since),
-    since_source: raw ? 'istek' : (req.user.prev_seen_at ? 'onceki-ziyaret' : 'ilk-giris'),
+    // 'aralik': esik yerine acik from/to kullanildi (since null olabilir).
+    since_source: raw ? 'istek'
+      : (hasRange ? 'aralik' : (req.user.prev_seen_at ? 'onceki-ziyaret' : 'ilk-giris')),
+    range: { from: toIso(range.from), to: toIso(range.to) },
     counts: Object.fromEntries(counts.map((r) => [r.change_type, Number(r.c)])),
   });
 }));
@@ -474,6 +487,9 @@ router.get('/digest', asyncHandler(async (req, res) => {
       source: a?.source ?? null,
       published_at: a?.published_at ?? null,
       is_pinned: a?.is_pinned ?? 0,
+      // Ilgi alani yuvasi (lib/personalRank.js): "neden burada" icin.
+      interest_slot: a?.interest_slot ?? 0,
+      matched_interests: a?.matched_interests ?? [],
     };
   });
 
