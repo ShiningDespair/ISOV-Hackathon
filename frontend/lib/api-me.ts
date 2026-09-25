@@ -14,7 +14,13 @@
  *  3. Oturum httpOnly çerezle taşınır → `credentials: "include"` ZORUNLU.
  */
 
-import { apiBase, buildQuery, mutate, type ApiResult } from "./api";
+import {
+  apiBase,
+  buildQuery,
+  mutate,
+  serverCookieHeader,
+  type ApiResult,
+} from "./api";
 import { bandLabel } from "./format";
 import type { Article, Paginated, Source } from "./types";
 
@@ -25,18 +31,30 @@ const TIMEOUT_MS = 8000;
 /* Düşük seviye GET                                                    */
 /* ------------------------------------------------------------------ */
 
-/** GET — timeout'lu, çerezli, asla fırlatmaz. */
+/**
+ * GET — timeout'lu, çerezli, asla fırlatmaz.
+ *
+ * ÇEREZ SUNUCUDA ELLE İLETİLİR. `credentials: "include"` YALNIZCA tarayıcıda
+ * iş yapar; sunucu bileşeninden atılan `fetch` tarayıcının çerezini
+ * kendiliğinden taşımaz. Bu eksik ÖLÇÜLEN bir hataya yol açtı: giriş yapmış
+ * kullanıcıda /raporlar içindeki Değişiklikler modülü "oturum gerektiriyor —
+ * eksik olan giriş" yazıyordu, çünkü sunucudan atılan /changes isteği 401
+ * alıyordu. Aynı hata daha önce `lib/api.ts` içinde bültenin boş kalmasına
+ * yol açtı; yardımcı orada tanımlı ve buradan PAYLAŞILIYOR, ikinci bir kopya
+ * çıkarılmıyor.
+ */
 async function getJson<T>(path: string): Promise<ApiResult<T>> {
   const url = `${apiBase().replace(/\/+$/, "")}${path}`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  const cookieHeader = await serverCookieHeader();
 
   try {
     const res = await fetch(url, {
       cache: "no-store",
       credentials: "include",
       signal: controller.signal,
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json", ...cookieHeader },
     });
 
     let payload: unknown = null;

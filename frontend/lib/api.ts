@@ -78,8 +78,13 @@ export function buildQuery(params: Record<string, unknown> = {}): string {
  *
  * `next/headers` yalnizca sunucuda var; modul tepesinde ice aktarilirsa
  * istemci paketi kirilir, bu yuzden dinamik import ve window kontrolu.
+ *
+ * DISA ACIK: ayni hata `lib/api-me.ts` ve `lib/api-auth.ts` icinde de
+ * yasandi - ucu de `credentials: "include"` yaziyor ama o secenek YALNIZCA
+ * TARAYICIDA is yapiyor. Uc ayri kopya yerine tek tanim paylasiliyor;
+ * yoksa dorduncu bir okuma yolu eklendiginde ayni hata tekrar dogar.
  */
-async function serverCookieHeader(): Promise<Record<string, string>> {
+export async function serverCookieHeader(): Promise<Record<string, string>> {
   if (typeof window !== "undefined") return {};
   try {
     const { cookies } = await import("next/headers");

@@ -22,7 +22,12 @@
  * disa acik.
  */
 
-import { apiBase, mutate, type ApiResult } from "./api";
+import {
+  apiBase,
+  mutate,
+  serverCookieHeader,
+  type ApiResult,
+} from "./api";
 import {
   normalizeFrequency,
   normalizeRole,
@@ -91,17 +96,25 @@ function errorMessageFrom(payload: unknown): string | null {
  * `lib/api.ts`'teki `request()` cerez GONDERMIYOR (acik uclar icin dogru
  * karar). Oturum gerektiren okumalar icin ayri yardimci sart.
  */
+/**
+ * ÇEREZ SUNUCUDA ELLE İLETİLİR — `credentials: "include"` yalnızca tarayıcıda
+ * iş yapar. Bu dosyanın çağrıları çoğunlukla istemciden geliyor (giriş, kayıt,
+ * profil kaydetme) ama `getTaxonomy`/`getInterests`/`getMe` bir sunucu
+ * bileşeninden de çağrılabilir; o durumda oturum taşınmazsa yanıt sessizce
+ * 401 olur. Yardımcı `lib/api.ts` içinde tanımlı ve PAYLAŞILIYOR.
+ */
 export async function getJson<T>(path: string): Promise<ApiResult<T>> {
   const url = `${apiBase().replace(/\/+$/, "")}${path}`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  const cookieHeader = await serverCookieHeader();
 
   try {
     const res = await fetch(url, {
       cache: "no-store",
       credentials: "include",
       signal: controller.signal,
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json", ...cookieHeader },
     });
 
     let payload: unknown = null;

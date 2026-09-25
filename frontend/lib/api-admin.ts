@@ -23,7 +23,12 @@
  * yeniden yazılabilir bırakır; şifreyi okuyup geri gönderemez.
  */
 
-import { apiBase, mutate, type ApiResult } from "./api";
+import {
+  apiBase,
+  mutate,
+  serverCookieHeader,
+  type ApiResult,
+} from "./api";
 
 /** İstek zaman aşımı (ms) — lib/api.ts ile aynı değer. */
 const TIMEOUT_MS = 8000;
@@ -320,18 +325,27 @@ function hataMesaji(payload: unknown): string | null {
  * Yönetim uçlarından okuma. Çerezli, zaman aşımlı, ASLA fırlatmaz.
  * `status` her zaman doldurulur (ağ hatası dışında) — panel 401/403
  * ayrımını buna göre yapar.
+ *
+ * Çerez sunucuda ELLE iletilir. Bugün bu dosyanın tüm çağıranları istemci
+ * bileşeni (`components/admin/*` hepsi "use client"), yani
+ * `credentials: "include"` yeterli. Yardımcı buna rağmen ekli: aynı eksik
+ * `lib/api.ts` ve `lib/api-me.ts` içinde iki ayrı kez ölçülen hataya yol
+ * açtı (bülten 0 haber; Değişiklikler modülü giriş yapmış kullanıcıya
+ * "oturum gerekiyor" dedi). Bir gün bu uçlardan biri sunucudan okunursa
+ * hata üçüncü kez doğmasın.
  */
 export async function adminGet<T>(path: string): Promise<ApiResult<T>> {
   const url = `${apiBase().replace(/\/+$/, "")}/admin${path}`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  const cookieHeader = await serverCookieHeader();
 
   try {
     const res = await fetch(url, {
       cache: "no-store",
       credentials: "include",
       signal: controller.signal,
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json", ...cookieHeader },
     });
 
     let payload: unknown = null;
