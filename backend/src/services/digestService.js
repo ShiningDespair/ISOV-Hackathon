@@ -296,12 +296,17 @@ async function globalPick({ whereSql, params, limit }) {
   return serializeArticleRows(rows, { reveal: false });
 }
 
-/** Donem istatistikleri — bultenin KPI seridi ve grafikleri icin. */
+/**
+ * Donem istatistikleri — bultenin KPI seridi ve grafikleri icin.
+ * `clusters` yalnizca pencerede TEKIL haberi olan kumeleri sayar; tekrarin
+ * kumesini de saymak rapor #1'de "73 kume / 72 tekil" celiskisini uretti
+ * (temsilcisi pencere disinda kalan kume). Ayrinti: reportService.js.
+ */
 async function windowStats({ win }) {
   const row = await queryOne(
     `SELECT COUNT(*) AS scanned,
             SUM(CASE WHEN is_duplicate = 1 THEN 1 ELSE 0 END) AS duplicates,
-            COUNT(DISTINCT cluster_id) AS clusters,
+            COUNT(DISTINCT CASE WHEN is_duplicate = 0 THEN cluster_id END) AS clusters,
             SUM(CASE WHEN is_duplicate = 0 THEN 1 ELSE 0 END) AS uniq,
             COUNT(DISTINCT source_id) AS sources
        FROM articles

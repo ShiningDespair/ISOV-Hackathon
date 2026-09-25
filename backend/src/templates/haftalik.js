@@ -35,6 +35,7 @@ import { htmlDocument, trDate, trNumber, trPercent, clip, REGION_LABELS } from '
 import { barList, dailyBars, donut, topTags, stackedBand } from './charts.js';
 import {
   masthead, kpiRow, newsList, panel, sectionHead, toBuckets, categoryLabel, colophon,
+  dataLineText,
 } from './parts.js';
 
 export function renderHaftalik(model = {}) {
@@ -75,7 +76,10 @@ export function renderHaftalik(model = {}) {
 ${masthead({
     kicker: 'HAFTALIK BÜLTEN',
     title: model.title || 'İSO/İSOV Haftalık Bülten',
-    dateRange,
+    // "Dönem" oneki: donem ile verinin gercek tarihi (alttaki satir) ayni
+    // sey DEGIL — rapor #1'de donem 08–14.09, en yeni haber 12.09.
+    dateRange: `Dönem ${dateRange}`,
+    dataLine: dataLineText(model.articles, model.stats?.generated_at || model.generatedAt),
     lede: clip(model.executiveSummary || '', 360),
     brand: model.brand,
   })}

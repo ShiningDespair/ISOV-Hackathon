@@ -11,16 +11,42 @@
 // ---------------------------------------------------------------------
 import {
   PALETTE, FONT_SANS_ATTR, REGION_LABELS, BAND_LABELS,
-  bandClass, esc, trDate, trNumber, clip,
+  bandClass, esc, trDate, trDateTime, trNumber, clip,
 } from './theme.js';
+
+/**
+ * Kaynak adinin `lang` niteligi: kaynak Ingilizce (ya da baska bir Latin
+ * dili) yayinliyorsa VE adinda Turkceye ozgu harf yoksa.
+ *
+ * NEDEN: `.meta` satiri `text-transform: uppercase` ve belge `lang="tr"`;
+ * Chromium Turkce kuralla buyuttugu icin rapor #1'de Ingilizce kaynak adlari
+ * "CYPRUS MAİL", "FEDERAL REGİSTER", "OİLPRİCE.COM" diye basildi (persona
+ * testi, basin muduru). Yalniz `lang="en"` YETMEDI — olculdu: `sources.language`
+ * kaynagin YAYIN dilidir, adin dili degil. "Uluslararası Enerji Ajansı (IEA)"
+ * ve "Avrupa Komisyonu Basın Odası" en-kaynak ama Turkce adli; en kuralla
+ * "ENERJI", "KOMISYONU" olurdu. "Cyprus Mail (Reuters servisi)" ve "Federal
+ * Register (ABD Resmi Gazetesi)" ise karisik: en kuralla "SERVISI", "RESMI".
+ * Bu yuzden ad metinSEL olarak buyutulmez (bkz. metaLine, text-transform:
+ * none) — kaynak adi kaynagin yazdigi gibi basilir; `lang` yalnizca ekran
+ * okuyucu telaffuzu ve heceleme icin, Turkce harf iceren adlara verilmez.
+ */
+function langAttr(code, name = '') {
+  const lang = String(code || '').trim().toLowerCase();
+  if (!/^[a-z]{2,3}(-[a-z0-9]{2,8})?$/.test(lang) || lang === 'tr' || lang.startsWith('tr-')) return '';
+  if (/[çğıöşüÇĞİÖŞÜ]/.test(String(name))) return '';
+  return ` lang="${esc(lang)}"`;
+}
 
 /** Kaynak · bolge · tarih satiri. Bos parcalar sessizce atlanir. */
 function metaLine(article) {
   const bits = [];
-  if (article.source?.name) bits.push(article.source.name);
-  if (article.region) bits.push(REGION_LABELS[article.region] || article.region);
-  if (article.published_at) bits.push(trDate(article.published_at));
-  return bits.map(esc).join(' &middot; ');
+  if (article.source?.name) {
+    const name = article.source.name;
+    bits.push(`<span${langAttr(article.source.language, name)} style="text-transform:none">${esc(name)}</span>`);
+  }
+  if (article.region) bits.push(esc(REGION_LABELS[article.region] || article.region));
+  if (article.published_at) bits.push(esc(trDate(article.published_at)));
+  return bits.join(' &middot; ');
 }
 
 /**
@@ -68,13 +94,16 @@ export function newsList(articles = [], opts = {}) {
 /**
  * Kunye. `kicker` sablon adini (GÜNLÜK BÜLTEN / HAFTALIK BÜLTEN) tasir.
  */
-export function masthead({ kicker, title, dateRange, lede, brand = 'İSO · İSOV' }) {
+export function masthead({
+  kicker, title, dateRange, lede, brand = 'İSO · İSOV', dataLine = '',
+}) {
   return `<header class="masthead">
   <div class="masthead-top">
     <span class="wordmark">${esc(brand)}</span>
     <span class="kicker kicker-accent">${esc(kicker)}</span>
     <span class="kicker">${esc(dateRange)}</span>
   </div>
+  ${dataLine ? `<p class="kicker masthead-data" style="margin:-1.5mm 0 2.5mm">${esc(dataLine)}</p>` : ''}
   <h1>${esc(title)}</h1>
   ${lede ? `<p class="lede">${esc(lede)}</p>` : ''}
 </header>`;
@@ -91,6 +120,33 @@ export function kpiRow(items = []) {
     <div class="n">${esc(k.label)}</div>
   </div>`).join('');
   return `<section class="kpis">${cells}</section>`;
+}
+
+/**
+ * Kunyenin "verinin gercek tarihi" satiri:
+ *   "Veri: <en eski> – <en yeni yayin tarihi> · Oluşturulma: <tarih saat>"
+ *
+ * NEDEN: rapor #1 basliginda yalnizca DONEM (08.09 – 14.09) yaziyordu;
+ * dondeki haberlerin en yenisi 12.09 idi ve PDF 25.09'da basilinca okur
+ * dönemi "bu haftanin verisi" sandi (persona testi, basin muduru: "sayfanin
+ * tepesinde verinin gercekten ne zaman cekildigi yazsin"). Uc tarih PDF'teki
+ * kalemlerin `published_at` degerlerinden TURETILIR, hic uydurulmaz: tarihli
+ * kalem yoksa "Veri" parcasi hic basilmaz. `createdAt` raporun uretildigi an
+ * (stats.generated_at); yoksa PDF'in basildigi an.
+ */
+export function dataLineText(articles = [], createdAt = null) {
+  const times = (articles || [])
+    .map((a) => (a?.published_at ? new Date(a.published_at).getTime() : NaN))
+    .filter((t) => Number.isFinite(t));
+  const parts = [];
+  if (times.length) {
+    const lo = trDate(new Date(Math.min(...times)));
+    const hi = trDate(new Date(Math.max(...times)));
+    parts.push(lo === hi ? `Veri: ${lo} tarihli haberler` : `Veri: ${lo} – ${hi} yayın tarihli haberler`);
+  }
+  const created = createdAt ? trDateTime(createdAt) : '';
+  if (created) parts.push(`Oluşturulma: ${created}`);
+  return parts.join(' · ');
 }
 
 /** Bolum basligi + sayac. */
@@ -159,5 +215,5 @@ export function colophon(text) {
 
 export default {
   newsItem, newsList, masthead, kpiRow, sectionHead, panel,
-  toBuckets, categoryLabel, colophon,
+  toBuckets, categoryLabel, colophon, dataLineText,
 };

@@ -35,13 +35,29 @@ function fmtDate(d) {
 /**
  * Deterministik yonetici ozeti sablonu.
  * LLM anahtari yokken de rapor "dolu" gorunsun diye gercek sayilarla yazilir.
+ *
+ * NEDEN "N kumede toplandi" ifadesi kaldirildi: rapor #1 "83 haber tarandi,
+ * 73 kumede toplandi ve 11 tekrar eden kayit elendi" diyordu; 83 - 11 = 72
+ * ve ayni sayfadaki "72 Tekillestirilmis" kutusuyla celisiyordu (persona
+ * testi, basin muduru). Olculen neden: OVP kumesinin (#414) temsilcisi
+ * (#1, 06.09) donem DISINDA, tekrari (#53, 08.09) donem ICINDE; eski sorgu
+ * kumeyi tekrar uzerinden saydi. Artik kume yalnizca donemde tekil haberi
+ * olan kumelerden sayiliyor (= tekil haber sayisi) ve cumle aritmetigi
+ * kendi icinde tutuyor: taranan - elenen = kalan. Onceki donemin haberine
+ * ait tekrar varsa bu ayrica ve sayisiyla yazilir, gizlenmez.
  */
-export function buildTemplateSummary({ scanned, clusters, duplicates, topTitles, periodStart, periodEnd }) {
+export function buildTemplateSummary({
+  scanned, unique, duplicates, priorDuplicates = 0, topTitles, periodStart, periodEnd,
+}) {
   const dateRange = `${fmtDate(periodStart)} - ${fmtDate(periodEnd)}`;
+  const kept = Number.isFinite(Number(unique)) ? Number(unique) : scanned - duplicates;
   const parts = [];
+  const prior = Number(priorDuplicates) > 0
+    ? ` (${priorDuplicates} tanesi dönem öncesinde yayımlanmış bir haberin tekrarı)`
+    : '';
   parts.push(
-    `${dateRange} döneminde ${scanned} haber tarandı, ` +
-    `${clusters} kümede toplandı ve ${duplicates} tekrar eden kayıt elendi.`,
+    `${dateRange} döneminde ${scanned} haber tarandı; ` +
+    `${duplicates} tekrar eden kayıt elendi${prior} ve ${kept} tekil haber kaldı.`,
   );
   if (topTitles.length) {
     parts.push(`En kritik başlıklar: ${topTitles.slice(0, 5).map((t) => `“${t}”`).join('; ')}.`);
@@ -59,7 +75,7 @@ async function buildExecutiveSummary(context) {
 
   const body = [
     `Dönem: ${fmtDate(context.periodStart)} - ${fmtDate(context.periodEnd)}`,
-    `Taranan haber: ${context.scanned}, küme: ${context.clusters}, elenen tekrar: ${context.duplicates}`,
+    `Taranan haber: ${context.scanned}, elenen tekrar: ${context.duplicates}, kalan tekil haber: ${context.unique}`,
     'Öne çıkan başlıklar:',
     ...context.topTitles.map((t, i) => `${i + 1}. ${t}`),
   ].join('\n');
@@ -115,17 +131,26 @@ export async function generateReport(params = {}) {
     );
 
     // Donemin ham sayaclari (tekrarlar dahil) — ozet metninde kullanilacak.
+    // `clusters` YALNIZCA donemde tekil (temsilci) haberi olan kumeleri
+    // sayar. Eski `COUNT(DISTINCT cluster_id)` tekrarlarin kumesini de
+    // sayiyordu: temsilcisi donem disinda kalan bir kume (rapor #1'de OVP,
+    // #414) "73 kume / 72 tekil" celiskisini uretti. `prior_duplicates`:
+    // asli donemden ONCE yayimlanmis tekrarlar — metinde ayrica yazilir.
     const [scanRows] = await conn.execute(
       `SELECT COUNT(*) AS scanned,
-              SUM(CASE WHEN is_duplicate = 1 THEN 1 ELSE 0 END) AS duplicates,
-              COUNT(DISTINCT cluster_id) AS clusters
-         FROM articles
-        WHERE published_at >= ? AND published_at < DATE_ADD(?, INTERVAL 1 DAY)`,
-      [`${periodStart} 00:00:00`, periodEnd],
+              SUM(CASE WHEN a.is_duplicate = 1 THEN 1 ELSE 0 END) AS duplicates,
+              COUNT(DISTINCT CASE WHEN a.is_duplicate = 0 THEN a.cluster_id END) AS clusters,
+              SUM(CASE WHEN a.is_duplicate = 1 AND o.published_at < ? THEN 1 ELSE 0 END)
+                AS prior_duplicates
+         FROM articles a
+         LEFT JOIN articles o ON o.id = a.duplicate_of_id
+        WHERE a.published_at >= ? AND a.published_at < DATE_ADD(?, INTERVAL 1 DAY)`,
+      [`${periodStart} 00:00:00`, `${periodStart} 00:00:00`, periodEnd],
     );
     const scanned = Number(scanRows[0]?.scanned ?? 0);
     const duplicates = Number(scanRows[0]?.duplicates ?? 0);
     const clusterCount = Number(scanRows[0]?.clusters ?? 0);
+    const priorDuplicates = Number(scanRows[0]?.prior_duplicates ?? 0);
 
     // 2) Bolgeye gore bolumlere ayir, her bolumden en onemlileri al.
     const bySection = new Map(SECTION_ORDER.map((k) => [k, []]));
@@ -148,12 +173,12 @@ export async function generateReport(params = {}) {
     // 4) Yonetici ozeti.
     const topTitles = items.slice(0, 5).map((r) => r.title);
     const executiveSummary = await buildExecutiveSummary({
-      scanned, clusters: clusterCount, duplicates, topTitles,
+      scanned, unique: rows.length, clusters: clusterCount, duplicates, priorDuplicates, topTitles,
       periodStart, periodEnd,
     });
 
     // 5) Istatistik JSON'u.
-    const stats = buildStats({ rows, items, scanned, duplicates, clusterCount });
+    const stats = buildStats({ rows, items, scanned, duplicates, clusterCount, priorDuplicates });
 
     const title = params.title
       || `İSO/İSOV ${PERIOD_LABELS[periodType]} — ${fmtDate(periodStart)} - ${fmtDate(periodEnd)}`;
@@ -207,7 +232,7 @@ export async function generateReport(params = {}) {
   }
 }
 
-function buildStats({ rows, items, scanned, duplicates, clusterCount }) {
+function buildStats({ rows, items, scanned, duplicates, clusterCount, priorDuplicates = 0 }) {
   const byRegion = {};
   const byBand = { KRITIK: 0, YUKSEK: 0, ORTA: 0, DUSUK: 0 };
   const byCategory = {};
@@ -232,6 +257,7 @@ function buildStats({ rows, items, scanned, duplicates, clusterCount }) {
     scanned,
     unique: rows.length,
     duplicates,
+    prior_duplicates: priorDuplicates,
     clusters: clusterCount,
     dedup_ratio: scanned > 0 ? Number((duplicates / scanned).toFixed(4)) : 0,
     sources: sources.size,

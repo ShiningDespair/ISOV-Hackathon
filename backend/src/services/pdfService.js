@@ -363,6 +363,7 @@ export async function loadReportModel(reportId, { tip } = {}) {
   // Onem skoru GIZLI metrik: reveal=false (serializer null yazar).
   const articleRows = await findArticleRowsByIds(itemRows.map((r) => r.article_id));
   const serialized = await serializeArticleRows(articleRows, { reveal: false });
+  await attachSourceLanguage(serialized);
   const byId = new Map(serialized.map((a) => [a.id, a]));
 
   const ordered = itemRows
@@ -389,6 +390,38 @@ export async function loadReportModel(reportId, { tip } = {}) {
     sections,
     reportId: report.id,
   });
+}
+
+/**
+ * Haberlerin `source.language` alanini (yoksa) `sources.language`'den doldurur.
+ *
+ * NEDEN: sablon Ingilizce kaynak adina `lang="en"` verebilsin diye
+ * (parts.js langAttr; rapor #1'de 11 kaynak adi "CYPRUS MAİL" gibi Turkce
+ * kuralla buyutuluyordu). Serilestirici bu alani tasimiyor; ortak
+ * serilestiriciyi degistirmek yerine yalnizca PDF yolunda tek bir
+ * `IN (...)` sorgusu. Alan zaten doluysa dokunulmaz. HICBIR KOSULDA
+ * firlatmaz: hata olursa ad eskisi gibi (niteliksiz) basilir.
+ */
+export async function attachSourceLanguage(articles = []) {
+  try {
+    const slugs = [...new Set((articles || [])
+      .filter((a) => a?.source?.slug && a.source.language === undefined)
+      .map((a) => a.source.slug))];
+    if (!slugs.length) return articles;
+    const rows = await query(
+      `SELECT slug, language FROM sources WHERE slug IN (${slugs.map(() => '?').join(',')})`,
+      slugs,
+    );
+    const bySlug = new Map(rows.map((r) => [r.slug, r.language || null]));
+    for (const a of articles) {
+      if (a?.source?.slug && a.source.language === undefined && bySlug.has(a.source.slug)) {
+        a.source.language = bySlug.get(a.source.slug);
+      }
+    }
+  } catch (err) {
+    console.warn('[pdf] kaynak dili okunamadi:', err.message);
+  }
+  return articles;
 }
 
 /**
@@ -483,6 +516,7 @@ export async function renderDigestPdf({
   tip = 'gunluk', title, executiveSummary, articles = [], stats = {},
   periodStart, periodEnd, footerNote, sections,
 } = {}) {
+  await attachSourceLanguage(articles);
   const model = buildModel({
     kind: tip, title, executiveSummary, articles, stats, periodStart, periodEnd, sections,
   });

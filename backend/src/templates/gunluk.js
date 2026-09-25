@@ -11,7 +11,7 @@
 // ---------------------------------------------------------------------
 import { htmlDocument, trDate, trNumber, clip, REGION_LABELS } from './theme.js';
 import { barList, stackedBand } from './charts.js';
-import { masthead, kpiRow, newsList, panel, toBuckets, colophon } from './parts.js';
+import { masthead, kpiRow, newsList, panel, toBuckets, colophon, dataLineText } from './parts.js';
 
 /** Gunluk sablonun sert ust siniri. */
 export const MAX_ITEMS = 8;
@@ -42,7 +42,8 @@ export function renderGunluk(model = {}) {
 ${masthead({
     kicker: 'GÜNLÜK BÜLTEN',
     title: model.title || 'İSO/İSOV Günlük Bülten',
-    dateRange,
+    dateRange: dateRange ? `Dönem ${dateRange}` : '',
+    dataLine: dataLineText(articles, model.stats?.generated_at || model.generatedAt),
     lede: clip(model.executiveSummary || '', 300),
     brand: model.brand,
   })}
