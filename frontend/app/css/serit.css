@@ -1,0 +1,254 @@
+/* serit — bkz. docs/SADELESTIRME.md §1. Yalnizca "serit-" onekli yeni siniflar. */
+
+/* ================================================================
+   ÖNEMLİ KONULAR ŞERİDİ — kendiliğinden, yavaşça, kesintisiz kayan
+   haber şeridi (haber kanallarının alt yazısı gibi).
+
+   Bileşen: frontend/components/dashboard/HeadlineStrip.tsx
+
+   ÖZGÜLLÜK (SPECIFICITY) NOTU — BU DOSYA `globals.css`TEN ÖNCE YÜKLENİR:
+   Bu dosya `globals.css` içinde en üstteki `@import` bloğuyla bağlanıyor
+   ve CSS `@import` kuralları her türlü stil kuralından ÖNCE gelmek
+   zorunda. Yani buradaki kurallar cascade'de `globals.css`in kendi
+   kurallarından ÖNCE yer alır. Aynı özgüllükte yarışan iki kuraldan
+   SONRAKİ kazandığı için, `globals.css` içindeki `.pano-serit` (0,1,0)
+   kuralının üstüne buradan yine `.pano-serit` (0,1,0) yazmak KAYBEDER.
+
+   Çözüm dosya sırasıyla oynamak DEĞİL — o sıra yazdırma ve görünüm
+   anahtarı için kritik ve §1 gereği kilitli. Çözüm ÖZGÜLLÜĞÜ bir kademe
+   yukarı taşımak: bileşene yeni bir `data-*` niteliği eklendi ve seçici
+   `.pano-serit[data-serit-ray="true"]` biçiminde yazıldı. Nitelik seçici
+   özgüllüğü (0,1,0)'dan (0,2,0)'a çıkarır; (0,2,0) > (0,1,0) olduğu için
+   dosya sırası ARTIK ÖNEMSİZ hale gelir. Aynı gerekçeyle hareket azaltma
+   kuralları `html[data-a11y-motion="azalt"] .serit-ray` (0,2,1) olarak
+   yazıldı: `globals.css` içindeki `html[data-a11y-motion="azalt"] *`
+   kuralı (0,1,1) + `!important` ile TÜM animasyonları 0,001 ms'ye
+   indiriyor. `!important`e `!important` ile karşılık verildiğinde kazananı
+   yine ÖZGÜLLÜK belirler ve (0,2,1) > (0,1,1) olduğu için buradaki kural
+   geçer. Yani çakışma yok: iki kural aynı yöne çalışıyor, sonucu bu dosya
+   kesinleştiriyor.
+
+   Yeni `@theme` jetonu üretilmedi; yalnızca var olan `--color-*`
+   değişkenleri kullanıldı.
+   ================================================================ */
+
+/* --- Başlık satırı: bölüm başlığı + duraklat düğmesi ------------- */
+/* Düğme kaydırma kabının DIŞINDA duruyor. Bilinçli: kabın içinde olsaydı
+   düğmeye odaklanmak `:focus-within` üzerinden şeridi duraklatır, "Oynat"a
+   basmak da hiçbir görünür etki yaratmazdı (odak hâlâ kabın içinde). */
+.serit-ust {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* --- Duraklat / Oynat düğmesi ------------------------------------ */
+/* WCAG 2.2.2 (Pause, Stop, Hide): 5 saniyeden uzun süren otomatik hareket
+   için kullanıcı denetimi zorunludur. Süs değil, uyum gerekliliği. */
+.serit-dugme {
+  flex: 0 0 auto;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background-color: transparent;
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.15rem 0.45rem 0.1rem;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+
+.serit-dugme:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Basılı durum renkten BAĞIMSIZ olarak da ayırt edilebilir: düğmenin metni
+   zaten "Duraklat" ↔ "Oynat" diye değişiyor (WCAG 1.4.1). */
+.serit-dugme[aria-pressed="true"] {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.serit-dugme:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* --- Kaydırma kabı (pencere) -------------------------------------- */
+/* Kaydırma HER İKİ KİPTE DE burada olur. Kap `overflow: hidden` olsaydı
+   Tab ile görünür alanın dışındaki bir bağlantıya gidildiğinde tarayıcı
+   öğeyi görünür alana getiremezdi; ayrıca dokunmatik kullanıcı şeridi elle
+   gezemezdi. Bu yüzden kap kalıcı olarak kaydırılabilir bırakıldı ve
+   hareket yalnızca içteki raya uygulandı.
+
+   Yatay kayma bu kabın İÇİNDE kalır: sayfa gövdesi 390 piksel genişlikte
+   de yatay kaymaz. */
+.serit-pencere {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* Kaydırma yakalaması (snap) YALNIZCA şerit kaymıyorken. Animasyon
+   sürerken açık kalsa tarayıcı kaydırma konumunu kendiliğinden en yakın
+   öğeye çekebilir ve bu, transform ile birleşince titreme üretir. Kayma
+   kapalıyken ise bugünkü davranışın aynısı korunur: `.pano-serit-oge`
+   üzerindeki `scroll-snap-align` kabın burada tanımlanan ekseniyle
+   çalışır. `data-kayan="false"` sunucu çizimindeki varsayılan değer. */
+.serit-pencere[data-kayan="false"] {
+  scroll-snap-type: x proximity;
+}
+
+.serit-pencere:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* --- Ray: iki listeyi tek parça olarak taşır ---------------------- */
+/* Gerçek liste ve kopyası yan yana tek bir rayın içinde. Ray `max-content`
+   genişliğinde olduğu için `translateX(-50%)` tam olarak BİR liste
+   genişliği kadar kaydırır; dönüş anındaki görüntü başlangıç görüntüsünün
+   birebir aynısı olur, dikiş görünmez. */
+.serit-ray {
+  display: flex;
+  width: max-content;
+}
+
+/* Animasyon YALNIZCA hareket tercihi belirtilmemişken tanımlanıyor.
+   `prefers-reduced-motion: reduce` altında bu blok hiç uygulanmaz, yani
+   JavaScript yüklenmeden de tek kare hareket olmaz. */
+@media (prefers-reduced-motion: no-preference) {
+  .serit-pencere[data-kayan="true"] .serit-ray {
+    animation: serit-akis var(--serit-sure, 90s) linear infinite;
+    /* Bileşik katman: kaydırma ana iş parçacığını meşgul etmesin. */
+    will-change: transform;
+  }
+}
+
+/* Süre bileşenden `--serit-sure` ile gelir ve BAŞLIK SAYISIYLA çarpılarak
+   hesaplanır (öğe başına sabit saniye). Sabit toplam süre yazılsaydı hız
+   başlık sayısına göre değişir, çok başlıkta okunamaz hale gelirdi. */
+@keyframes serit-akis {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* --- Duraklatma --------------------------------------------------- */
+/* Üç yoldan durur: imleç üstüne gelince, klavye odağı içine girince ve
+   Duraklat düğmesiyle. Animasyon durdurulur ama SIFIRLANMAZ: kaldığı
+   yerden devam eder, okunan başlık yerinden oynamaz. */
+.serit-pencere[data-kayan="true"]:hover .serit-ray,
+.serit-pencere[data-kayan="true"]:focus-within .serit-ray,
+.serit-pencere[data-durdu="true"] .serit-ray {
+  animation-play-state: paused;
+}
+
+/* --- `.pano-serit` listelerinin ray içindeki davranışı ------------- */
+/* `globals.css` içindeki `.pano-serit` kuralı listeye kendi
+   `overflow-x: auto`sunu veriyor. Ray içinde bu YANLIŞ olur: iç içe iki
+   kaydırma kabı oluşur, kabın ok tuşuyla kaydırılması bozulur ve
+   `overflow` `min-width: auto`yu sıfıra indirdiği için liste flex içinde
+   büzülüp başlıklar ezilir. Nitelik seçici (0,2,0) ile geçiliyor. */
+/* Kısayol (`overflow`) DEĞİL uzun yazım kullanıldı: cascade kısayolları
+   uzun yazımlara açtıktan sonra çözer, dolayısıyla `overflow: visible`
+   (0,2,0) ile `overflow-x: auto` (0,1,0) karşılaştırması ancak açılım
+   bilinerek okunabilir. Uzun yazımla hangi bildirimin kazandığı doğrudan
+   ölçülebilir hale gelir — ölçüm iddiadan üstündür. */
+.pano-serit[data-serit-ray="true"] {
+  overflow-x: visible;
+  overflow-y: visible;
+  scroll-snap-type: none;
+  flex: 0 0 auto;
+}
+
+/* Kopya listenin ilk öğesi de ayırıcı çizgisini korur, yoksa iki liste
+   birleştiği yerde çizgi eksik kalır ve dikiş GÖRÜNÜR. */
+.serit-kopya .pano-serit-oge:first-child {
+  border-left: 1px solid var(--color-rule);
+}
+
+/* Kopyadaki `<span>`, gerçek listedeki `<a>` ile birebir aynı kutuyu
+   üretmek zorunda: genişlikler ayrışırsa %50 dönüş noktası kayar.
+   `user-select: none` kopyada: kullanıcı şeridi seçip kopyaladığında aynı
+   başlıklar iki kez panoya girmesin. */
+.serit-kopya {
+  user-select: none;
+}
+
+.serit-kopya .pano-serit-baglanti {
+  cursor: default;
+}
+
+/* ================================================================
+   HAREKET AZALTMA — iki kaynak, tek sonuç
+
+   Şerit tam olarak eski hâline düşer: hareket YOK, kopya liste GİZLİ
+   (yoksa kullanıcı aynı başlıkları iki kez görür), duraklat düğmesi
+   GİZLİ (duraklatacak hareket yok), kap hâlâ `overflow-x: auto` ve
+   `tabindex=0` olduğu için ok tuşlarıyla elle gezilir.
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .serit-ray {
+    animation-name: none;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    transform: none;
+  }
+
+  .serit-kopya {
+    display: none;
+  }
+
+  .serit-dugme {
+    display: none;
+  }
+}
+
+/* Erişilebilirlik widget'ının kipi. `globals.css` içindeki
+   `html[data-a11y-motion="azalt"] *` kuralı (0,1,0 + !important) animasyon
+   süresini 0,001 ms'ye çekiyor; bu kural onunla ÇAKIŞMAZ, aynı yöne
+   çalışır ve (0,2,0 + !important) olduğu için kesin sonuç verir. Widget bir
+   medya sorgusu değil bir DOM niteliği olduğundan yukarıdaki blok bu durumu
+   kapsamıyor, ayrı yazılması ZORUNLU. */
+html[data-a11y-motion="azalt"] .serit-ray {
+  animation-name: none !important;
+  animation-duration: 0s !important;
+  animation-iteration-count: 1 !important;
+  transform: none !important;
+}
+
+html[data-a11y-motion="azalt"] .serit-kopya {
+  display: none !important;
+}
+
+html[data-a11y-motion="azalt"] .serit-dugme {
+  display: none !important;
+}
+
+/* --- Yazdırma ----------------------------------------------------- */
+/* `globals.css` zaten `@media print` içinde `.pano-serit-kap`ı gizliyor ve
+   buradaki her şey o kabın İÇİNDE. Bu blok yalnızca güvence: kap kuralı
+   ileride değişse bile kâğıda kayan şerit artığı basılmaz. YALNIZCA
+   `serit-` önekli sınıflar hedefleniyor; `[data-view-slot]` ya da görünüm
+   yuvası gizleyen HİÇBİR kural yazılmadı (§1 — o öncelik tuzağı bir kez
+   boş PDF üretti). */
+@media print {
+  .serit-ust,
+  .serit-pencere,
+  .serit-dugme,
+  .serit-kopya {
+    display: none !important;
+  }
+}

@@ -1,0 +1,305 @@
+/* akis — bkz. docs/SADELESTIRME.md §1. Yalnizca "akis-" onekli yeni siniflar.
+   ================================================================
+   AKIS ANAHTARI, SIKI KPI SERIDI, VAKIT BUTCESI ANAHTARI
+   (Ajan B — /app/page.tsx, PersonalPanel, KpiRow, PanoParts)
+
+   OZGULLUK NOTU — BU DOSYA globals.css'TEN ONCE YUKLENIR.
+   Yani mevcut bir seciciyi ayni ozgullukte tekrar yazarsam KAYBEDERIM
+   (sonra gelen kazanir). Mevcut `.pano-kpi` kuralini degistirmem gerekti
+   ve bunu nitelik secicisiyle yaptim:
+
+       .pano-kpi            -> (0,1,0)
+       .pano-kpi[data-sik]  -> (0,2,0)
+
+   Bir kademe yukari cikti, dolayisiyla globals.css'teki `.pano-kpi`
+   `display:grid` kurali ve `[data-adet]` sutun kurallari SIKI kipte
+   ezilir; dosya sirasinin bir onemi kalmaz. `data-adet` niteligi
+   KORUNUYOR cunku genis kipte hala o kurallar gecerli.
+
+   Renkler yalnizca mevcut --color-* jetonlarindan. Yeni marka rengi YOK:
+   erisilebilirlik paletleri yalnizca --color-accent'i yeniden tanimliyor,
+   palet disi sabit bir renk o destegi sessizce bozardi.
+
+   Sayfa govdesi 390 piksel genislikte YATAY KAYMAZ: buradaki tum seritler
+   `flex-wrap: wrap`, hicbirinde `overflow-x` ya da min-width yok.
+   ================================================================ */
+
+/* ---------------------------------------------------------------- */
+/* 1. BANA OZEL / GENEL ANAHTARI                                     */
+/* ---------------------------------------------------------------- */
+
+.akis-anahtar-kap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+  border-bottom: 1px solid var(--color-rule);
+  padding-block: 0.5rem 0.45rem;
+}
+
+.akis-anahtar-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.akis-anahtar-oge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  background-color: transparent;
+  border: 1px solid var(--color-rule-strong);
+  /* Dokunma hedefi: 0.5rem dikey dolgu + 1.4 satir yuksekligi ~34px.
+     Segment anahtari tek satirda kalsin diye 44px'e cikarilmadi; iki
+     ogenin arasi bosluksuz, yani hedefler bitisik ve yanlis tiklama
+     komsu ogeye degil arka plana dusuyor. */
+  padding: 0.5rem 0.85rem 0.45rem;
+  margin-inline-end: -1px; /* komsu kenarlar birlesik gorunsun */
+}
+
+.akis-anahtar-oge:hover,
+.akis-anahtar-oge:focus-visible {
+  color: var(--color-ink);
+  background-color: var(--color-paper-deep);
+}
+
+/* AKTIF gosterge RENK DEGIL: ters kontrast + kalin cerceve + aria-current.
+   Renk koru bir kullanici da hangisinin secili oldugunu gorur (WCAG 1.4.1),
+   ekran okuyucu "gecerli sayfa" olarak duyurur. */
+.akis-anahtar-oge[aria-current="page"] {
+  color: var(--color-paper);
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  position: relative;
+  z-index: 1;
+}
+
+.akis-anahtar-not {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------- */
+/* 2. SIKI KPI SERIDI                                                */
+/*                                                                   */
+/* Neden: kullanici "KPI'lar cok yer kapliyo, haber gormek icin       */
+/* kaydirmak gerekiyor" dedi. Genis kip 3-4 gostergeyi 2 sutunlu bir  */
+/* izgaraya sarip ~190 piksel yiyordu. Sik kip tek satir, ~34 piksel. */
+/* ---------------------------------------------------------------- */
+
+/* KPI'yi saran bolumun ust dolgusu: globals.css'te `.pano-bolum` 1.6rem
+   veriyor (~26px) ve sik seridin tum kazanci o kadar. Sinif birlesimi
+   (0,2,0) oldugu icin burasi kazanir. */
+.pano-bolum.akis-bolum-sik {
+  padding-top: 0.6rem;
+}
+
+.pano-kpi[data-sik="true"] {
+  /* Izgara DEGIL, saran tek satir. */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1.1rem;
+  border-top: 1px solid var(--color-ink);
+  border-bottom: 1px solid var(--color-rule);
+  padding-block: 0.4rem 0.35rem;
+}
+
+.akis-kpi-oge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.akis-kpi-etiket {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+/* Etiketten sonra iki nokta: "etiket: deger" okunur, gorsel ayirici
+   olarak ayri bir isaret koymaya gerek kalmaz. */
+.akis-kpi-etiket::after {
+  content: ":";
+}
+
+.akis-kpi-deger {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+/* ---------------------------------------------------------------- */
+/* 3. TEK SATIRLIK PANEL BASLIGI                                     */
+/* ---------------------------------------------------------------- */
+
+.pano-header.akis-header-tek {
+  /* globals.css'teki `.pano-header` 1.25rem dikey dolgu veriyor; sinif
+     birlesimi (0,2,0) oldugu icin burasi kazanir. */
+  padding-block: 0.7rem 0.55rem;
+}
+
+.akis-header-ad {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.akis-header-satir {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+  margin: 0.1rem 0 0;
+}
+
+.akis-ayrac {
+  padding-inline: 0.4rem;
+  color: var(--color-ink-faint);
+}
+
+/* ---------------------------------------------------------------- */
+/* 4. KATLANAN BILGI NOTLARI                                         */
+/*                                                                   */
+/* Notlar silinmiyor, katlaniyor: ilki acik, kalanlar <details>       */
+/* icinde. <details> JS'siz calisir ve klavyeyle acilir.              */
+/* ---------------------------------------------------------------- */
+
+.akis-not-katla {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+}
+
+.akis-not-ozet {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  padding-block: 0.2rem;
+}
+
+.akis-not-ozet:hover,
+.akis-not-katla[open] > .akis-not-ozet {
+  color: var(--color-ink);
+}
+
+.akis-not-govde {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* 5. VAKIT BUTCESI ANAHTARI (sayfanin EN ALTI)                      */
+/* ---------------------------------------------------------------- */
+
+.akis-vakit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.9rem;
+  border-top: 1px solid var(--color-ink);
+  margin-top: 1.5rem;
+  padding-block: 0.8rem 1.4rem;
+}
+
+.akis-vakit-baslik {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.akis-vakit-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.akis-vakit-oge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: var(--color-ink);
+  border: 1px solid var(--color-rule-strong);
+  /* 0.55rem dolgu + 1.4 satir ~36px; dokunmaya yeter, listeyi tek satirda
+     tutar. */
+  padding: 0.55rem 0.8rem 0.5rem;
+  margin-inline-end: -1px;
+}
+
+.akis-vakit-oge:hover,
+.akis-vakit-oge:focus-visible {
+  background-color: var(--color-paper-deep);
+}
+
+.akis-vakit-oge[aria-current="page"] {
+  color: var(--color-paper);
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  position: relative;
+  z-index: 1;
+}
+
+.akis-vakit-aciklama {
+  flex: 1 1 16rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------- */
+/* 6. YAZDIRMA                                                       */
+/*                                                                   */
+/* Anahtarlar kagitta islevsiz (tiklanamaz). Yalnizca kendi "akis-"   */
+/* siniflarim gizleniyor; [data-view-slot] ya da html[data-view]      */
+/* kuralina DOKUNULMUYOR (sozlesme §1) — o blok bir kez bos PDF       */
+/* uretti.                                                            */
+/* ---------------------------------------------------------------- */
+
+@media print {
+  .akis-anahtar-kap,
+  .akis-vakit,
+  .akis-not-katla {
+    display: none !important;
+  }
+
+  .pano-kpi[data-sik="true"] {
+    border-color: #000 !important;
+  }
+}

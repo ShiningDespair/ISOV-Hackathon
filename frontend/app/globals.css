@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+/* ----------------------------------------------------------------
+   TUR 3 — parcali CSS (docs/SADELESTIRME.md §1)
+   Bu dosya yazdirma ve gorunum anahtari oncelik siralamasini tasidigi
+   icin paralel gelistirmede KILITLI tutuldu. Her is kolu kendi
+   dosyasina yaziyor ve YALNIZCA kendi onekli yeni siniflarini
+   tanimliyor; bu dosyadaki mevcut secicilerin ustune yazmiyor.
+   Buradaki @import'lar en ustte: CSS @import kurallari her turlu
+   stil kuralindan ONCE gelmek zorunda. Dolayisiyla bu dosyalar
+   CASCADE'de EN ONCE gelir - mevcut bir bileseni degistirmek icin
+   nitelik secici ile bir kademe yukari cikilir.
+   ---------------------------------------------------------------- */
+@import "./css/hesap.css";
+@import "./css/akis.css";
+@import "./css/serit.css";
+@import "./css/kaynak.css";
+@import "./css/birlesik.css";
+@import "./css/profil.css";
+
 /* ================================================================
    ISO · İSOV — Tasarım jetonları (New York Times esinli)
    Renk paleti kasıtlı olarak minimaldir: kağıt, mürekkep, kural
@@ -913,8 +931,7 @@ html[data-a11y-images="gizli"] [data-a11y-image] {
 
 /* --- Görsel çerçevesi ------------------------------------------- */
 /* aspect-ratio ile oran sabit: görsel inerken mizanpaj kaymaz. */
-.gorsel-frame,
-.gorsel-ph {
+.gorsel-frame {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -951,67 +968,17 @@ html[data-a11y-images="gizli"] [data-a11y-image] {
   display: block;
 }
 
-/* --- Tipografik yer tutucu -------------------------------------- */
-/* Görsel yoksa BOŞ KUTU gösterilmez: kicker + kaynak baş harfleri +
-   not'tan oluşan gazete bloğu basılır. İnce iç çerçeve, kâğıt zemin. */
-.gorsel-ph {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  text-align: center;
-  box-shadow: inset 0 0 0 1px var(--color-rule);
-}
-
-.gorsel-ph-kicker,
-.gorsel-ph-note {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.625rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-ink-soft);
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.gorsel-ph-note {
-  color: var(--color-ink-faint);
-}
-
-.gorsel-ph-mark {
-  font-family: var(--font-serif);
-  font-weight: 900;
-  font-size: clamp(2.25rem, 8vw, 4.5rem);
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: var(--color-ink);
-}
-
-/* Deterministik tonlar — `article.id`den türetilir (ArticleImage.toneOf).
-   Renk kullanımı minimal: yalnızca kâğıt tonuna mürekkep/vurgu karışımı,
-   yeni bir renk tanıtılmıyor. Palet jetonları a11y temalarıyla birlikte
-   değiştiği için koyu/yüksek kontrast temalarda da tutarlı kalır. */
-.gorsel-tone-0 {
-  background-color: var(--color-paper-deep);
-}
-
-.gorsel-tone-1 {
-  background-color: color-mix(in srgb, var(--color-ink) 6%, var(--color-paper-deep));
-}
-
-.gorsel-tone-2 {
-  background-color: color-mix(in srgb, var(--color-ink) 11%, var(--color-paper-deep));
-}
-
-.gorsel-tone-3 {
-  background-color: color-mix(in srgb, var(--color-accent) 7%, var(--color-paper-deep));
-}
+/* --- Tipografik yer tutucu: KALDIRILDI --------------------------
+   Görseli olmayan haberde artık kaynağa özgü satır içi SVG amblem
+   basılıyor (`components/SourceArtwork.tsx` + `lib/source-art.ts`;
+   biçimi `app/css/kaynak.css`). Eski `.gorsel-ph*` / `.gorsel-tone-*`
+   kuralları ve `ArticleImage.toneOf()` yardımcısı bu yüzden ölüydü ve
+   silindi — hiçbir bileşen basmıyordu, ama okuyan birine hâlâ yürürlükte
+   olan bir yer tutucu tasarımı varmış gibi görünüyordu.
+   `html[data-a11y-images="gizli"]` kuralına DOKUNULMADI: o kural
+   `data-a11y-image` NİTELİĞİNİ hedefliyor ve amblem de o niteliği
+   taşıyor, yani "Görselleri gizle" ayarı çalışmaya devam ediyor.
+   ---------------------------------------------------------------- */
 
 /* ================================================================
    KART GÖRÜNÜMÜ (data-view="kart") — "az metin, konu özetleri"

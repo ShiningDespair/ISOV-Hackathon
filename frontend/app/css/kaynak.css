@@ -1,0 +1,50 @@
+/* kaynak — bkz. docs/SADELESTIRME.md §1. Yalnizca "kaynak-" onekli yeni siniflar. */
+
+/* ================================================================
+   KAYNAK AMBLEMLERİ (docs/SADELESTIRME.md §5)
+
+   Haberin kendi görseli yoksa <SourceArtwork> satır içi SVG basar.
+   Görsel işin TAMAMI SVG'nin içinde: bu dosyada yalnızca SVG'yi
+   çerçeveye oturtan üç kural var.
+
+   ÖNCELİK NOTU: bu dosya globals.css'ten ÖNCE yükleniyor (@import
+   kuralları her şeyin üstünde olmak zorunda). Dolayısıyla mevcut
+   `.gorsel-frame` / `.gorsel-ph` kurallarına AYNI özgüllükte yazsam
+   kaybederdim. Bu yüzden:
+     - `.gorsel-*` sınıfları burada YENİDEN TANIMLANMIYOR,
+     - mevcut bir bileşeni gerçekten etkilemem gereken tek yerde
+       (`.gorsel-frame` zemini) `[data-kaynak-amblem="true"]` nitelik
+       seçicisi ekleniyor. Nitelik seçici özgüllüğü bir kademe yukarı
+       taşıdığı için kaynak dosya sırası önemsiz hale geliyor.
+   `display` bildirimlerinde `!important` YOK: globals.css'teki
+   `html[data-a11y-images="gizli"] [data-a11y-image] { display:none
+   !important }` kuralının "Görselleri gizle" ayarında kazanması gerek.
+   ================================================================ */
+
+/* SVG çerçeveyi tam doldurur. viewBox oranı `.gorsel-ratio-lead`
+   (16:9) ve `.gorsel-ratio-card` (4:3) ile birebir aynı olduğu için
+   `preserveAspectRatio` letterbox bırakmaz, bozulma da olmaz. */
+.kaynak-amblem-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Amblem çerçevesi: SVG boyanmadan önce zemin doğru tonda dursun.
+   Nitelik seçici sayesinde globals.css'teki `.gorsel-frame` arka planını
+   ezebiliyoruz (bkz. yukarıdaki ÖNCELİK NOTU). Değişken SVG'nin kendi
+   paletinden geliyor; jeton bulunmazsa mevcut davranışa düşer. */
+.gorsel-frame[data-kaynak-amblem="true"] {
+  background-color: var(--kaynak-zemin, var(--color-paper-deep));
+}
+
+/* Yazdırma (puppeteer PDF): SVG dolguları grafik olduğu için CSS arka planı
+   gibi kırpılmaz, yine de çerçevenin kendi zemini basılsın diye renk
+   ayarlaması zorlanıyor. Bu kural yalnızca KENDİ nitelik seçicimizi
+   hedefler; görünüm yuvalarına ya da [data-view-slot]'a dokunmaz. */
+@media print {
+  .gorsel-frame[data-kaynak-amblem="true"] {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

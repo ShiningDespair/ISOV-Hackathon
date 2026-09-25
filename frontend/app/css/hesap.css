@@ -1,0 +1,281 @@
+/* hesap — bkz. docs/SADELESTIRME.md §1. Yalnizca "hesap-" onekli yeni siniflar.
+ *
+ * Kapsam: ust bardaki "Hesabim" menusu, bolum gezintisinin aktif gostergesi ve
+ * ust bar arac kutusunun (hesap menusu + gorunum anahtari) mobil siklastirmasi.
+ *
+ * Bu dosya globals.css'ten ONCE yuklenir. Mevcut bir seciciyi (ornegin
+ * `.view-switch button`) degistirmek gerektiginde ozgullugu bir kademe
+ * yukari tasiyan sarmalayici sinif kullanildi; `[data-view-slot]`,
+ * `html[data-view]` ve gorunum yuvasi gizleyen @media print YAZILMADI.
+ */
+
+/* ----------------------------------------------------------------
+   Ust bar arac kutusu — hesap menusu + gorunum anahtari yan yana
+   ---------------------------------------------------------------- */
+.hesap-arac {
+  display: flex;
+  align-items: center;
+  /* Mobilde izgara tek kolon: denetimler ortada durur. Genis ekranda
+     ucuncu kolon oldugu icin saga yapisir. */
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+@media (min-width: 40rem) {
+  .hesap-arac {
+    justify-content: flex-end;
+  }
+}
+
+/* 390 px'te dort dugmeli gorunum anahtari + hesap dugmesi ayni satira
+   sigmali. Daraltma ViewSwitch'in KENDI CSS'inde degil burada yapiliyor:
+   anahtar /ayarlar sayfasinda da kullaniliyor, orada genis kalmali.
+   Ozgulluk: `.hesap-arac .view-switch button` (0,2,1) > `.view-switch button`
+   (0,1,1) — dosya sirasi onemsiz. */
+@media (max-width: 40rem) {
+  .hesap-arac .view-switch button {
+    padding: 0.28rem 0.42rem 0.24rem;
+    letter-spacing: 0.05em;
+    font-size: 0.5625rem;
+  }
+}
+
+/* ----------------------------------------------------------------
+   Hesabim menusu
+   ---------------------------------------------------------------- */
+.hesap-kok {
+  position: relative;
+  display: inline-flex;
+}
+
+.hesap-dugme {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  padding: 0.22rem 0.5rem 0.22rem 0.24rem;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  max-width: 11rem;
+}
+
+.hesap-dugme:hover {
+  background: var(--color-paper-deep);
+}
+
+.hesap-dugme[aria-expanded="true"] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Bas harf madalyonu. Tek basina bilgi tasimaz — yanindaki ad ve menu
+   icindeki e-posta ayni bilgiyi metinle de veriyor (WCAG 1.4.1). */
+.hesap-bas-harf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: 0.625rem;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.hesap-dugme[aria-expanded="true"] .hesap-bas-harf {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.hesap-ad {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Cok dar ekranda ad gizlenir, madalyon kalir; erisilebilir ad dugmenin
+   aria-label'inda tasiniyor, yani ekran okuyucu bilgiyi kaybetmiyor. */
+@media (max-width: 26rem) {
+  .hesap-ad {
+    display: none;
+  }
+}
+
+/* Oturum durumu henuz bilinmiyorken basilan yer tutucu.
+   Dugmeyle AYNI yuksekligi ve yakin genisligi tutar: durum gelince
+   mizanpaj siciramaz. "Giris yap" YAZMIYOR — henuz bilmiyoruz. */
+.hesap-iskelet {
+  display: inline-block;
+  width: 6.25rem;
+  height: 1.9rem;
+  border: 1px solid var(--color-rule);
+  background: var(--color-paper-deep);
+}
+
+@media (max-width: 26rem) {
+  .hesap-iskelet {
+    width: 2.4rem;
+  }
+}
+
+/* ----------------------------------------------------------------
+   Acilir menu
+   ---------------------------------------------------------------- */
+.hesap-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  z-index: 40;
+  width: 17rem;
+  max-width: calc(100vw - 2rem);
+  border: 1px solid var(--color-ink);
+  background: var(--color-surface);
+  box-shadow: 0 2px 0 0 var(--color-ink);
+  text-align: left;
+  padding: 0.6rem 0;
+}
+
+.hesap-menu-kimlik {
+  padding: 0 0.85rem 0.6rem;
+}
+
+.hesap-menu-ad {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+}
+
+.hesap-menu-satir {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--color-ink-soft);
+  margin-top: 0.2rem;
+  overflow-wrap: anywhere;
+}
+
+.hesap-menu-rol {
+  font-family: var(--font-sans);
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-top: 0.35rem;
+}
+
+.hesap-ayirac {
+  border-top: 1px solid var(--color-rule);
+  margin: 0 0 0.35rem;
+}
+
+.hesap-menu-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hesap-menu-link,
+.hesap-cikis {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.45rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+.hesap-menu-link:hover,
+.hesap-cikis:hover {
+  background: var(--color-paper-deep);
+}
+
+.hesap-cikis {
+  color: var(--color-accent);
+}
+
+.hesap-cikis[disabled] {
+  color: var(--color-ink-faint);
+  cursor: progress;
+}
+
+/* Hata satiri — cikis basarisiz olursa gorunur. Oturum ATILMAZ:
+   sunucu iptali dogrulanmadan kullaniciyi cikmis gibi gostermek yalan olur. */
+.hesap-hata {
+  margin: 0.35rem 0.85rem 0;
+  padding: 0.4rem 0.5rem;
+  border-left: 2px solid var(--color-accent);
+  background: var(--color-paper-deep);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+}
+
+/* "Oturum durumu dogrulanamadi" gibi notlar — hata degil, belirsizlik. */
+.hesap-not {
+  margin: 0.35rem 0.85rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+}
+
+/* ----------------------------------------------------------------
+   Bolum gezintisi — aktif sayfa gostergesi
+   Renk TEK BASINA bilgi tasimaz (WCAG 1.4.1): aktiflik kalinlik + alt
+   cizgi ile gosterilir ve aria-current="page" ile duyurulur.
+   ---------------------------------------------------------------- */
+.hesap-nav-link {
+  display: inline-block;
+  padding-bottom: 0.18rem;
+  border-bottom: 2px solid transparent;
+  color: var(--color-ink);
+}
+
+.hesap-nav-link:hover {
+  border-bottom-color: var(--color-rule);
+}
+
+.hesap-nav-link[aria-current="page"] {
+  border-bottom-color: var(--color-ink);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+/* ----------------------------------------------------------------
+   Yazdirma — menu ve arac kutusu basili nushada isi yok.
+   (Yalnizca kendi "hesap-" siniflarim gizleniyor; gorunum yuvalarina
+   dokunulmuyor.)
+   ---------------------------------------------------------------- */
+@media print {
+  .hesap-menu,
+  .hesap-arac,
+  .hesap-iskelet {
+    display: none !important;
+  }
+}

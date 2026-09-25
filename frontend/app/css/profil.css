@@ -1,0 +1,125 @@
+/* profil — /ayarlar sayfasindaki Profil bolumu.
+   Yalnizca "profil-" onekli yeni siniflar; mevcut ".ayar-*" ve ".otur-*"
+   kurallari OLDUGU GIBI yeniden kullaniliyor (kayit sihirbazinin adim
+   bilesenleri ".otur-" siniflarini tasiyor ve burada da ayni gorunuyor).
+   bkz. docs/SADELESTIRME.md §1 */
+
+.profil-kap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+/* --- Pozisyonun sonucu: duzen ve acilis gorunumu ------------------- */
+.profil-sonuc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem 1.5rem;
+  margin: 0;
+  border-top: 1px solid var(--color-ink);
+  border-bottom: 1px solid var(--color-rule);
+  padding-block: 0.7rem;
+}
+
+.profil-sonuc dd {
+  margin: 0;
+}
+
+.profil-sonuc-deger {
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.profil-sonuc-not {
+  display: block;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  margin-top: 0.15rem;
+}
+
+/* --- Alt bolumler -------------------------------------------------- */
+.profil-blok {
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.9rem;
+}
+
+.profil-blok-bas {
+  max-width: 44rem;
+}
+
+.profil-blok-ozet {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  margin-top: 0.15rem;
+}
+
+.profil-blok-govde {
+  margin-top: 0.6rem;
+}
+
+/* --- Eylem satiri -------------------------------------------------- */
+.profil-eylem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  border-top: 1px solid var(--color-ink);
+  padding-top: 0.8rem;
+}
+
+.profil-kaydet,
+.profil-geri {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--color-ink);
+  cursor: pointer;
+}
+
+.profil-kaydet {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.profil-geri {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.profil-kaydet:hover:not(:disabled) {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.profil-geri:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Devre disi hal: yalnizca solukluk DEGIL, imlec de degisiyor; durum
+   ayrica eylem satirindaki metinde yazili (WCAG 1.4.1). */
+.profil-kaydet:disabled,
+.profil-geri:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.profil-kaydet:focus-visible,
+.profil-geri:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Kagitta form anlamsiz. */
+@media print {
+  .profil-eylem,
+  .profil-blok-govde {
+    display: none !important;
+  }
+}
