@@ -96,7 +96,7 @@ export const OZELLIKLER: Ozellik[] = [
     durum: "calisiyor",
     alan: "haber",
     nasil:
-      "131 haberin 80'inde gerçek og:image var (%61,1). Kalan 51'inde kaynağa özgü " +
+      "292 haberin 207'sinde gerçek og:image var (%70,9; 13–25 Eylül toplamasında 161'in 127'si). Kalanlarda kaynağa özgü " +
       "satır içi SVG amblem basılıyor: 81 kaynağın TAMAMI bir betikle tarandı, 32'si " +
       "elle tasarlanmış kimliğe (Resmî Gazete, EUR-Lex, Federal Register, İSO, TOBB, " +
       "KOSGEB, TÜBİTAK, ECB, IEA, Eurostat, USTR…), 49'u kaynak türü arketipine " +
@@ -109,14 +109,12 @@ export const OZELLIKLER: Ozellik[] = [
       "\"Görselleri gizle\" ayarı amblemleri de gizliyor.",
     eksik:
       "Amblemler yalnızca GÖRSEL görünümünde basılıyor; panel, gazete ve kart " +
-      "görünümleri tasarım gereği görselsiz. Resmî Gazete'nin 20 haberinin " +
-      "hiçbirinde gerçek nüsha sayısı yok, künyeye sayı yerine yayım tarihi basılıyor.",
+      "görünümleri tasarım gereği görselsiz.",
     neden:
-      "Başlıklardaki \"Karar Sayısı: 11723\" Cumhurbaşkanı karar numarası, gazetenin " +
-      "nüsha numarası DEĞİL; künyeye onu basmak yanlış bilgi olurdu. Sayı " +
-      "UYDURULMUYOR: yalnızca 3xxxx aralığı kabul ediliyor ve öncesinde \"Karar\" " +
-      "geçen eşleşme reddediliyor (7 birim sınaması). Gerçek sayı geçen bir başlıkta " +
-      "amblem \"SAYI 32456\" basıyor.",
+      "Resmî Gazete künyesinde nüsha SAYISI gösteriliyor, uydurulmuyor: başlıklardaki \"Karar Sayısı: 11723\" " +
+      "Cumhurbaşkanı karar numarası olduğu için reddediliyor (3xxxx aralığı + \"Karar\" reddi, 7 birim sınaması). " +
+      "5–12 Eylül korpusunda gerçek sayı yoktu, amblem tarihe düşüyordu; 13–25 Eylül toplamasındaki 11 Resmî " +
+      "Gazete haberinde sayı sayfadan okundu ve canlıda amblem \"SAYI 33379\" basıyor (gerçek tarayıcıda okundu).",
   },
   {
     id: "erisilebilirlik",
@@ -735,7 +733,11 @@ export const OZELLIKLER: Ozellik[] = [
       "'⚠ Eski veri' (renk tek gösterge değil: sözcük, işaret ve kesik kenarlık). Kaynak GET /stats/freshness, MAX(published_at): son " +
       "toplama çalışması 19 Eylül ama 0 yeni haber getirdiği için onu göstermek veriyi olduğundan taze gösterirdi. Sayı No artık " +
       "verinin gününden türüyor.",
-    eksik: "Sürekli toplama çalışmıyor; gösterge sorunu DÜRÜSTÇE söylüyor, çözmüyor.",
+    eksik:
+      "Sürekli toplama çalışmıyor. 25 Eylül'de altı paralel toplayıcı ajanla 13–25 Eylül elle " +
+      "toplandı (161 haber, 160/161 URL bağımsız denetimde 200, 1'i bot engeli 403); gösterge " +
+      "'Son veri: 25 Eylül · bugün' dedi ve uyarı kendiliğinden kalktı. Otomatik toplama olmadan " +
+      "veri yeniden eskiyecek — gösterge o zaman yine dürüstçe uyaracak.",
   },
   {
     id: "durum-sayfasi",
