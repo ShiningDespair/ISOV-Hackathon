@@ -1,6 +1,6 @@
 /**
  * NYT tarzı üst bar / künye.
- * Solda tarih + sayı no, ortada büyük serif masthead, sağda "Hesabım"
+ * Solda bugünün tarihi + "Son veri" göstergesi, ortada büyük serif masthead, sağda "Hesabım"
  * menüsü ve görünüm anahtarı. Altında tek bir kalın kural çizgisi,
  * bölüm gezintisi ve bir ince kural.
  *
@@ -19,7 +19,8 @@
  */
 
 import Link from "next/link";
-import { formatMasthead, issueNumber } from "@/lib/format";
+import { formatMasthead } from "@/lib/format";
+import { DataFreshness } from "./DataFreshness";
 import { ViewSwitch } from "./ViewSwitch";
 import { AccountMenu } from "./AccountMenu";
 import { SectionNav, type NavItem } from "./SectionNav";
@@ -50,10 +51,21 @@ export function Masthead() {
             Üç kolonlu ızgara korunuyor; sağ kolon artık iki denetim
             taşıdığı için kendi `hesap-arac` sarmalayıcısında. */}
         <div className="grid grid-cols-1 items-center gap-3 py-3 sm:grid-cols-[1fr_auto_1fr] sm:py-4">
+          {/* SOL KOLON — bugünün tarihi ve VERİNİN tarihi AYRI satırda.
+              Eskiden "Cuma, 25 Eylül 2026 · Sayı No 2026-268" yazıyordu; en
+              yeni haber 12 Eylül'dü (Selin P0-1, 115 haber sayıldı). Bugünün
+              tarihi "okuma günü" olarak kalır, ama "Sayı No" bugünden
+              türetildiği için kaldırıldı: yeni veri yokken her gün yeni bir
+              sayı basmak, eski korpusu yeni sayı diye sunmaktı. Sayı No
+              artık yalnızca gazete künyesinde ve VERİNİN gününden. */}
           <div className="u-kicker order-2 hidden text-ink-faint sm:order-1 sm:block">
-            <time dateTime={now.toISOString()}>{formatMasthead(now.toISOString())}</time>
-            <span aria-hidden="true"> · </span>
-            <span>Sayı No {issueNumber(now)}</span>
+            <div>
+              <span className="sr-only">Bugün: </span>
+              <time dateTime={now.toISOString()}>{formatMasthead(now.toISOString())}</time>
+            </div>
+            <div className="mt-1">
+              <DataFreshness variant="masthead" />
+            </div>
           </div>
 
           <div className="order-1 text-center sm:order-2">
@@ -65,6 +77,11 @@ export function Masthead() {
                 Dış Kaynak İzleme
               </div>
             </Link>
+            {/* MOBİL — sol kolon 640 px altında gizli; tazelik göstergesi
+                orada kaybolmasın (Nilgün telefonla, 390 px). */}
+            <div className="u-kicker mt-2 text-ink-faint sm:hidden">
+              <DataFreshness variant="masthead" />
+            </div>
           </div>
 
           <div className="hesap-arac order-3">
@@ -102,7 +119,9 @@ export function NewspaperMasthead({
     <header className="mb-5 text-center">
       <div className="newspaper-folio flex flex-wrap items-center justify-between gap-2 border-b border-ink pb-1">
         <span>İstanbul Sanayi Odası · İSOV</span>
-        <span className="hidden sm:inline">Sayı No {issueNumber(now)}</span>
+        <span className="hidden sm:inline">
+          <DataFreshness variant="issue" />
+        </span>
         <span>Fiyatı Yoktur</span>
       </div>
 
@@ -122,6 +141,14 @@ export function NewspaperMasthead({
       </div>
 
       <div className="border-t border-ink" />
+
+      {/* Basılı nüshada da verinin gerçek tarihi — kupür başkanın masasına
+          gittiğinde "bu haberler ne zamanın?" sorusunun cevabı kağıtta
+          olsun (Selin: "sayfanın tepesinde verinin gerçekten ne zaman
+          çekildiği yazsın"). */}
+      <div className="newspaper-folio tarih-folio flex justify-center py-1">
+        <DataFreshness variant="folio" />
+      </div>
     </header>
   );
 }

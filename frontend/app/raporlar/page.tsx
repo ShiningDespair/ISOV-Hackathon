@@ -31,10 +31,11 @@ import type { Metadata } from "next";
 import { getReports } from "@/lib/api";
 import {
   CHANGE_TYPE_LABEL,
-  getChanges,
+  getChangesAll,
   hazirDegil,
   normalizeChangeType,
   oturumGerekli,
+  TEKNIK_TUR,
 } from "@/lib/api-me";
 import { formatDate, formatNumber, humanize, isoDate, truncate } from "@/lib/format";
 import type { Report } from "@/lib/types";
@@ -44,11 +45,13 @@ import {
   DateRangeFilter,
   gecerliGun,
   tarihAraligiEtiketi,
+  withState,
   type DateFilterState,
 } from "@/components/DateRangeFilter";
 import { ChangeList } from "@/components/changes/ChangeList";
 import { ChangeRow } from "@/components/changes/ChangeRow";
 import { ChangeTypeFilter } from "@/components/changes/ChangeTypeFilter";
+import { PdfDownloadLink } from "@/components/PrintButton";
 import { SinceLastVisit } from "@/components/changes/SinceLastVisit";
 
 export const dynamic = "force-dynamic";
@@ -64,8 +67,8 @@ export const metadata: Metadata = {
 const BASE = "/raporlar";
 /** Varsayılan yüzeyde görünen kalem sayısı — kasıtlı olarak küçük. */
 const KISA = 5;
-/** Tam listede çekilen üst sınır. */
-const LIMIT = 200;
+/** Tam listede en çok kaç sayfa (×100, backend MAX_LIMIT) çekilir. */
+const EN_COK_SAYFA = 5;
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
@@ -91,13 +94,22 @@ function summaryOf(report: Report): string {
   return report.executive_summary ?? report.summary ?? "";
 }
 
-function countOf(report: Report): number {
+/**
+ * Rapordaki haber sayısı; bilinmiyorsa `null` ("—" basılır, 0 uydurulmaz).
+ * Ölçülen hata: arşiv kartı "0 HABER" yazıyordu, rapor 40 haber içeriyor —
+ * liste ucu sayıyı `item_count` adıyla veriyor, burada yalnızca
+ * `article_count` okunuyordu (Selin P1-8, Burak P2-1).
+ */
+function countOf(report: Report): number | null {
   if (typeof report.article_count === "number") return report.article_count;
+  const itemCount = (report as { item_count?: unknown }).item_count;
+  if (typeof itemCount === "number") return itemCount;
   const fromSections = (report.sections ?? []).reduce(
     (sum, s) => sum + (s.articles?.length ?? s.items?.length ?? 0),
     0,
   );
-  return fromSections || (report.articles?.length ?? 0);
+  const n = fromSections || (report.articles?.length ?? 0);
+  return n > 0 ? n : null;
 }
 
 /* ------------------------------------------------------------------ */
@@ -165,12 +177,11 @@ export default async function RaporlarVeDegisikliklerPage({
 
   // İki uç PARALEL çağrılır; biri hata verse diğeri beklemez.
   const [degisRes, raporRes] = await Promise.all([
-    getChanges({
-      from: state.from,
-      to: state.to,
-      type: state.type,
-      limit: LIMIT,
-    }),
+    // from/to backend'e AYNEN gider; uygulanması backend'in işi (WP2).
+    getChangesAll(
+      { from: state.from, to: state.to, type: state.type },
+      EN_COK_SAYFA,
+    ),
     getReports(),
   ]);
 
@@ -178,15 +189,46 @@ export default async function RaporlarVeDegisikliklerPage({
 
   /* --- 1) DEĞİŞİKLİKLER MODÜLÜ ------------------------------------ */
 
-  const kayitlar = degisRes.ok ? degisRes.data.data : [];
+  /*
+   * TEKNİK GÜRÜLTÜ VARSAYILANDA GİZLİ. Ölçüm: 235 kaydın 115'i "Özet
+   * güncellendi — içerik değişmedi" ve kısa dökümün 5 satırının 5'ini
+   * dolduruyordu. Tür süzgeci YOKKEN bu tür listeden ve sayıdan düşülür;
+   * kaç kaydın gizlendiği hemen altında söylenir ve tek tıkla görülebilir.
+   * Kullanıcı türü AÇIKÇA seçerse (tür süzgeci) hiçbir şey gizlenmez.
+   * Süzme sırayı korur (filter), yeniden sıralama yapılmaz.
+   */
+  const teknikGizli = !state.type;
+  const hamKayitlar = degisRes.ok ? degisRes.data.data : [];
+  const kayitlar = teknikGizli
+    ? hamKayitlar.filter((k) => normalizeChangeType(k.change_type) !== TEKNIK_TUR)
+    : hamKayitlar;
+  const teknikSayisi = degisRes.ok && teknikGizli
+    ? degisRes.data.counts[TEKNIK_TUR] ??
+      hamKayitlar.length - kayitlar.length
+    : 0;
   const degisToplam = degisRes.ok
-    ? degisRes.data.total || kayitlar.length
+    ? Math.max(0, (degisRes.data.total || hamKayitlar.length) - teknikSayisi)
     : null;
+  const listeEksik = degisRes.ok && !degisRes.data.complete;
+  const teknikHedef = `${withState(state, { type: TEKNIK_TUR }, BASE)}#degisiklikler`;
 
   // Sayı yoksa "—" — sıfır uydurulmaz.
   const degisSag = degisToplam === null
     ? "—"
     : `${formatNumber(degisToplam)} kayıt${aralik ? ` · ${aralik}` : ""}`;
+
+  /** "115 teknik özet güncellemesi gizlendi · göster" — dürüst sayım. */
+  const teknikNotu =
+    teknikSayisi > 0 ? (
+      <p className="tarih-teknik-not u-kicker">
+        {formatNumber(teknikSayisi)} teknik özet güncellemesi gizlendi
+        <span className="sr-only"> (haberin özeti yenilendi, içerik değişmedi)</span>
+        {" · "}
+        <Link href={teknikHedef} className="u-link-underline">
+          Göster
+        </Link>
+      </p>
+    ) : null;
 
   const suzgecler = (
     <div className="degis-filtre-blok">
@@ -204,6 +246,7 @@ export default async function RaporlarVeDegisikliklerPage({
           (!degisRes.data.countsFromList ||
             degisRes.data.data.length >= degisRes.data.total)
         }
+        teknikGizli={teknikGizli}
       />
       {suzgecVar ? (
         <div className="degis-cipler">
@@ -296,15 +339,19 @@ export default async function RaporlarVeDegisikliklerPage({
             <p className="degis-toplam u-kicker">
               {formatNumber(degisToplam ?? kayitlar.length)} kayıt
               {aralik ? ` · ${aralik}` : ""}
-              {(degisToplam ?? 0) > kayitlar.length
+              {listeEksik && (degisToplam ?? 0) > kayitlar.length
                 ? ` · ilk ${formatNumber(kayitlar.length)} gösteriliyor`
                 : ""}
             </p>
+            {teknikNotu}
             {/* Gün başlıkları h3: modülün başlığı h2. */}
             <ChangeList items={kayitlar} basligiSeviyesi="h3" />
           </>
         ) : (
-          <DurumNotu>{bosCumle}</DurumNotu>
+          <>
+            <DurumNotu>{bosCumle}</DurumNotu>
+            {teknikNotu}
+          </>
         )}
         <p className="birlesik-genislet">
           <Link href={kisaHedef} className="u-kicker u-link-underline">
@@ -330,6 +377,7 @@ export default async function RaporlarVeDegisikliklerPage({
         ) : (
           <DurumNotu>{bosCumle}</DurumNotu>
         )}
+        {teknikNotu}
         {(degisToplam ?? 0) > ilkler.length ? (
           <p className="birlesik-genislet">
             <Link href={genisHedef} className="u-kicker u-link-underline">
@@ -409,14 +457,19 @@ export default async function RaporlarVeDegisikliklerPage({
                 </p>
               ) : null}
               <p className="u-kicker mt-2.5 text-ink-faint">
-                {formatNumber(countOf(sonRapor))} haber
+                {countOf(sonRapor) === null ? "—" : formatNumber(countOf(sonRapor))} haber
               </p>
-              <Link
-                href={`/raporlar/${sonRapor.id}`}
-                className="u-kicker u-link-underline mt-2 inline-block"
-              >
-                Raporu Oku →
-              </Link>
+              <p className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2">
+                <Link
+                  href={`/raporlar/${sonRapor.id}`}
+                  className="u-kicker u-link-underline inline-block"
+                >
+                  Raporu Oku →
+                </Link>
+                {/* Sunucudaki basıma hazır PDF — eskiden arayüzden hiç
+                    bağlanmamıştı (Burak P2-1). */}
+                <PdfDownloadLink reportId={sonRapor.id} label="PDF indir" />
+              </p>
             </article>
           ) : null}
         </section>
@@ -438,7 +491,7 @@ export default async function RaporlarVeDegisikliklerPage({
                     </time>
                     <span className="text-ink-faint">
                       {" "}
-                      · {formatNumber(countOf(report))} haber
+                      · {countOf(report) === null ? "—" : formatNumber(countOf(report))} haber
                     </span>
                   </p>
                   <Link href={`/raporlar/${report.id}`} className="group block">
@@ -446,6 +499,11 @@ export default async function RaporlarVeDegisikliklerPage({
                       {titleOf(report)}
                     </h4>
                   </Link>
+                  <PdfDownloadLink
+                    reportId={report.id}
+                    label="PDF indir"
+                    className="u-kicker u-link-underline tarih-pdf-bag"
+                  />
                 </li>
               ))}
             </ul>

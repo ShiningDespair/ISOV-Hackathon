@@ -20,7 +20,7 @@ import type { Article, Report, ReportItem, ReportSection } from "@/lib/types";
 
 import { StandardArticle, NewspaperArticle } from "@/components/ArticleCard";
 import { NewspaperMasthead } from "@/components/Masthead";
-import { PrintButton } from "@/components/PrintButton";
+import { PdfDownloadLink, PrintButton } from "@/components/PrintButton";
 import { DataUnavailable, EmptyState, SectionRule } from "@/components/States";
 import { NewspaperView } from "@/components/ViewSlot";
 
@@ -174,8 +174,10 @@ export default async function ReportDetailPage({ params }: { params: Params }) {
                 </>
               ) : null}
             </p>
-            <div className="mt-4">
-              <PrintButton label="Raporu PDF Yap" />
+            {/* Sunucu PDF'i birincil eylem; yazdırma ikincil olarak kalır. */}
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <PdfDownloadLink reportId={report.id} label="PDF indir" />
+              <PrintButton label="Yazdır" />
             </div>
           </header>
 
@@ -235,7 +237,10 @@ export default async function ReportDetailPage({ params }: { params: Params }) {
               <Link href="/raporlar" className="u-kicker u-link-underline">
                 ← Rapor Arşivi
               </Link>
-              <PrintButton label="Raporu PDF Yap (A4)" />
+              <span className="flex flex-wrap items-center gap-3">
+                <PdfDownloadLink reportId={report.id} label="PDF indir" />
+                <PrintButton label="Yazdır (A4)" />
+              </span>
             </div>
 
             <h2 className="u-headline mx-auto max-w-4xl text-center text-[clamp(1.5rem,4.5vw,3rem)] font-black leading-tight">

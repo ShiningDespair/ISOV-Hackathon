@@ -15,12 +15,21 @@
 
 import { useEffect, useState } from "react";
 
-import { getMeChanges, hazirDegil, oturumGerekli } from "@/lib/api-me";
+import {
+  getMeChanges,
+  hazirDegil,
+  oturumGerekli,
+  TEKNIK_TUR,
+  type MeChanges,
+} from "@/lib/api-me";
 import { formatDateTime, formatNumber } from "@/lib/format";
 
 interface Durum {
   total: number;
   since?: string | null;
+  sinceSource: MeChanges["sinceSource"];
+  /** Teknik "özet güncellendi" kayıtları — sayıdan düşülür, ayrıca söylenir. */
+  teknik: number;
 }
 
 export function SinceLastVisit() {
@@ -38,7 +47,12 @@ export function SinceLastVisit() {
         }
         return;
       }
-      setDurum({ total: res.data.total, since: res.data.since });
+      setDurum({
+        total: res.data.total,
+        since: res.data.since,
+        sinceSource: res.data.sinceSource,
+        teknik: res.data.counts[TEKNIK_TUR] ?? 0,
+      });
     })();
     return () => {
       iptal = true;
@@ -47,20 +61,46 @@ export function SinceLastVisit() {
 
   if (!durum) return null;
 
+  // Okura anlamlı sayı: teknik özet yenilemeleri hariç (aşağıdaki listeyle
+  // aynı kural — iki yerde iki ayrı sayı olmasın).
+  const anlamli = Math.max(0, durum.total - durum.teknik);
+  const ilkZiyaret = durum.sinceSource === "ilk-giris";
+
   return (
     <p className="degis-ziyaret" role="status" aria-live="polite">
-      <span className="u-kicker degis-ziyaret-etiket">Son ziyaretinizden beri</span>{" "}
-      {durum.total > 0 ? (
+      <span className="u-kicker degis-ziyaret-etiket">
+        {ilkZiyaret
+          ? "İlk ziyaretiniz — son 7 günün değişiklikleri"
+          : durum.sinceSource === "onceki-ziyaret"
+            ? "Son ziyaretinizden beri"
+            : "Bu dönemde"}
+      </span>{" "}
+      {anlamli > 0 ? (
         <strong className="degis-ziyaret-sayi">
-          {formatNumber(durum.total)} değişiklik
+          {formatNumber(anlamli)} değişiklik
         </strong>
       ) : (
         <span className="degis-ziyaret-sayi">yeni değişiklik yok</span>
       )}
-      {durum.since ? (
+      {durum.teknik > 0 ? (
         <span className="degis-ziyaret-tarih">
           {" "}
-          · son giriş {formatDateTime(durum.since)}
+          (+{formatNumber(durum.teknik)} teknik özet güncellemesi)
+        </span>
+      ) : null}
+      {/* "son giriş" YALNIZCA backend eşiğin gerçek bir önceki ziyaret
+          olduğunu söylediğinde. İlk ziyarette `since` 7 günlük pencerenin
+          başıdır ve "son giriş" diye basılması ölçülen sahte bilgiydi. */}
+      {durum.since && durum.sinceSource === "onceki-ziyaret" ? (
+        <span className="degis-ziyaret-tarih">
+          {" "}
+          · son ziyaret {formatDateTime(durum.since)}
+        </span>
+      ) : null}
+      {durum.since && ilkZiyaret ? (
+        <span className="degis-ziyaret-tarih">
+          {" "}
+          · {formatDateTime(durum.since)} sonrası
         </span>
       ) : null}
     </p>

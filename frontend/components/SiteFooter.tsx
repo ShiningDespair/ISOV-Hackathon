@@ -1,11 +1,9 @@
 /** Sayfa altı künyesi. */
 
 import Link from "next/link";
-import { formatMasthead } from "@/lib/format";
+import { DataFreshness } from "./DataFreshness";
 
 export function SiteFooter() {
-  const now = new Date().toISOString();
-
   return (
     <footer className="print-hidden mt-12 border-t border-ink">
       <div className="mx-auto w-full max-w-[1440px] px-4 py-6 sm:px-6">
@@ -16,7 +14,11 @@ export function SiteFooter() {
             </p>
             <p className="u-body u-body-soft mt-1 text-[0.8125rem]">
               Açık kaynaklardan otomatik toplanan, tekilleştirilen ve özetlenen
-              içerik. Son güncelleme: {formatMasthead(now)}.
+              içerik.
+              {/* Eskiden "Son güncelleme: {bugün}" yazıyordu — veri 13 gündür
+                  güncellenmemişken (Selin P0-1). Artık en yeni haberin
+                  tarihi; bilinmiyorsa hiçbir tarih basılmaz. */}
+              <DataFreshness variant="sentence" />
             </p>
           </div>
           {/* ÜST BARDAN KALKAN BAĞLANTILARIN İKİNCİ EVİ

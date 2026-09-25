@@ -45,6 +45,53 @@ function fillBuckets(rows, keys, keyField) {
   return keys.map((k) => ({ key: k, count: byKey.get(k) ?? 0 }));
 }
 
+// ---------------------------------------------------------------------
+// GET /api/stats/freshness — kunye icin "verinin tazeligi"
+//
+// NEDEN ayri ve hafif uc: kunye (Masthead) HER sayfada basiliyor. Oraya
+// /overview'u (8 sorgu, gruplamalar) baglamak her sayfa gorunumune sekiz
+// sorgu eklerdi. Bu uc iki indeksli MAX/LIMIT 1 sorgusu yapar.
+//
+// NEDEN "son veri" = en yeni haberin YAYIN tarihi, toplama calismasi degil:
+// olculen durum (25 Eylul 2026): collection_runs'in son kaydi 19 Eylul,
+// ama new_count = 0 — ayni tohum dosyasi yeniden okundu, tek bir yeni haber
+// gelmedi. "Son toplama: 19 Eylul" demek okura verinin 6 gunluk oldugunu
+// soylerdi; oysa okudugu en yeni haber 12 Eylul'un (13 gun). Okurun sorusu
+// "bu haberler ne kadar yeni", o yuzden birincil tarih MAX(published_at).
+// Son calisma da ayrica donuyor (kac yeni haber getirdigiyle), arayuz onu
+// ikincil bilgi olarak gosterebilsin.
+//
+// Gelecek tarihli published_at (kaynagin saat dilimi hatasi) "son veri"yi
+// yarina tasimasin diye NOW() ile sinirli.
+// ---------------------------------------------------------------------
+router.get('/freshness', asyncHandler(async (req, res) => {
+  const [latest, lastRun, lastProductive] = await Promise.all([
+    query(`SELECT MAX(published_at) AS last_published_at,
+                  MAX(collected_at) AS last_collected_at
+             FROM articles
+            WHERE is_duplicate = 0 AND published_at <= NOW()`),
+    query(`SELECT started_at, finished_at, trigger_type, new_count
+             FROM collection_runs ORDER BY started_at DESC LIMIT 1`),
+    query(`SELECT finished_at FROM collection_runs
+            WHERE new_count > 0 ORDER BY started_at DESC LIMIT 1`),
+  ]);
+  const l = latest[0] || {};
+  const r = lastRun[0];
+  res.json({
+    last_published_at: toIso(l.last_published_at),
+    last_collected_at: toIso(l.last_collected_at),
+    last_run: r ? {
+      started_at: toIso(r.started_at),
+      finished_at: toIso(r.finished_at),
+      trigger_type: r.trigger_type,
+      new_count: Number(r.new_count),
+    } : null,
+    // En son YENI haber getiren calismanin bitisi — bos calismalar sayilmaz.
+    last_productive_run_at: toIso(lastProductive[0]?.finished_at),
+    server_time: new Date().toISOString(),
+  });
+}));
+
 router.get('/overview', asyncHandler(async (req, res) => {
   const [
     totals,

@@ -16,11 +16,24 @@
  *     "yürürlüğe gir") geçen tarihler kabul edilir. İşaret yoksa kalem
  *     normal haber gibi gösterilir — tarih UYDURULMAZ.
  *
- *  2) YIL ZORUNLU. "1 Eylül - 31 Ekim 2026" aralığında yalnızca "31 Ekim
- *     2026" eşleşir, yani aralığın BİTİŞİ. Bu tesadüf değil, işimize gelen
- *     doğru davranış: geri sayım bitiş tarihine yapılır. Yılsız "1 Eylül"
- *     parçasını tahminle 2026'ya bağlamak, yanlış yıla geri sayım
- *     göstermekle sonuçlanabilirdi.
+ *  2) YIL METİNDEN GELİR. Yılsız bir tarih ("ön kayıt 22 Ekim") YALNIZCA
+ *     aynı maddede yıllı bir tarih varsa ve ona en yakın yıla bağlanarak
+ *     kabul edilir. Maddede hiç yıl yoksa tarih alınmaz (tahmin yok).
+ *     NEDEN değişti (Burak P1-2, 25 Eylül 2026): "1501 son başvuru 26 Ekim
+ *     2026 (ön kayıt 22 Ekim)" maddesinde yılsız ön kayıt atlanıyor,
+ *     listede 26 Ekim görünüyordu; 4 gün önceki ön kayıt kaçarsa başvuru
+ *     yapılamıyor. Aynı kural 1707'de ("ön kayıt son tarihi 11 Kasım 2026")
+ *     ön kaydı gösteriyordu — kullanıcı için kural tutarsızdı.
+ *
+ *  3) ARALIK BAŞI SON TARİH DEĞİLDİR. "1 Eylül - 13 Kasım 2026" içinde
+ *     başlangıç atlanır; bitiş "Son başvuru" sayılır (madde başvuru ya da
+ *     çağrıdan söz ediyorsa).
+ *
+ *  4) HER TARİHİN TÜRÜ YAZILIR (`step`): "Ön kayıt", "Son başvuru", "Son
+ *     kredi kullanımı"… Tür, tarihin bulunduğu CÜMLECİKTEN (virgül, noktalı
+ *     virgül, parantez arası) okunur; cümlecikte işaret yoksa "Son tarih".
+ *     Geri sayım en yakın GELECEK tarihe (sıradaki adım) yapılır ve adımın
+ *     türü yanında yazılır.
  */
 
 import type { Article } from "@/lib/types";
@@ -37,6 +50,13 @@ export interface DateHit {
   evidence: string;
   /** "Son 6 gün", "Bugün son gün", "Süre doldu" … */
   label: string;
+  /**
+   * Adımın türü: "Ön kayıt", "Son başvuru", "Son tarih", "Takvim"…
+   * Metindeki cümlecikten okunur, uydurulmaz.
+   */
+  step: string;
+  /** Yıl metinde bu tarihin yanında değil, aynı maddedeki başka tarihten mi? */
+  yearInferred: boolean;
 }
 
 const MONTHS: Record<string, number> = {
@@ -126,14 +146,27 @@ function hasMarker(text: string, markers: string[]): boolean {
   return markers.some((m) => t.includes(m));
 }
 
-/** Bir metindeki tüm (gün, ay, yıl) tarihlerini metin sırasında döndürür. */
-function parseDates(text: string): number[] {
-  const found: number[] = [];
+/** Metindeki bir tarih eşleşmesi — konumuyla (tür ve aralık tespiti için). */
+interface DateMatch {
+  stamp: number;
+  start: number;
+  end: number;
+  yearInferred: boolean;
+}
+
+const MONTH_PATTERN = Object.keys(MONTHS).join("|");
+
+/**
+ * Bir metindeki tüm tarihleri metin sırasında döndürür.
+ * Yılsız tarihler ("22 Ekim") yalnızca metinde yıllı bir tarih varsa, ona
+ * en yakın yıla bağlanarak alınır (±1 yıl adayından referansa en yakını).
+ */
+function parseDates(text: string): DateMatch[] {
+  const found: DateMatch[] = [];
   const lowered = lower(text);
 
-  const monthPattern = Object.keys(MONTHS).join("|");
   const written = new RegExp(
-    `(\\d{1,2})\\s+(${monthPattern})\\s+(\\d{4})`,
+    `(\\d{1,2})\\s+(${MONTH_PATTERN})\\s+(\\d{4})`,
     "g",
   );
   let m: RegExpExecArray | null;
@@ -142,7 +175,12 @@ function parseDates(text: string): number[] {
     const month = MONTHS[m[2] ?? ""] ?? 0;
     const year = Number(m[3]);
     if (day >= 1 && day <= 31 && month >= 1 && year >= 2000 && year <= 2100) {
-      found.push(Date.UTC(year, month - 1, day));
+      found.push({
+        stamp: Date.UTC(year, month - 1, day),
+        start: m.index,
+        end: m.index + m[0].length,
+        yearInferred: false,
+      });
     }
   }
 
@@ -152,11 +190,96 @@ function parseDates(text: string): number[] {
     const month = Number(m[2]);
     const year = Number(m[3]);
     if (day >= 1 && day <= 31 && month >= 1 && month <= 12) {
-      found.push(Date.UTC(year, month - 1, day));
+      found.push({
+        stamp: Date.UTC(year, month - 1, day),
+        start: m.index,
+        end: m.index + m[0].length,
+        yearInferred: false,
+      });
     }
   }
 
-  return found;
+  const full = [...found];
+  if (full.length > 0) {
+    const yearless = new RegExp(
+      `(?<![\\d.])(\\d{1,2})\\s+(${MONTH_PATTERN})(?![a-zçğıöşü]*\\s+\\d{4})`,
+      "g",
+    );
+    while ((m = yearless.exec(lowered)) !== null) {
+      const start = m.index;
+      if (full.some((f) => start >= f.start && start < f.end)) continue;
+      const day = Number(m[1]);
+      const month = MONTHS[m[2] ?? ""] ?? 0;
+      if (day < 1 || day > 31 || month < 1) continue;
+      // Referans: metinde bu tarihe EN YAKIN yıllı tarih.
+      const ref = full.reduce((a, b) =>
+        Math.abs(b.start - start) < Math.abs(a.start - start) ? b : a,
+      );
+      const refYear = new Date(ref.stamp).getUTCFullYear();
+      const stamp = [refYear - 1, refYear, refYear + 1]
+        .map((y) => Date.UTC(y, month - 1, day))
+        .reduce((a, b) =>
+          Math.abs(b - ref.stamp) < Math.abs(a - ref.stamp) ? b : a,
+        );
+      found.push({ stamp, start, end: start + m[0].length, yearInferred: true });
+    }
+  }
+
+  return found.sort((a, b) => a.start - b.start);
+}
+
+/** Tarihten hemen sonra "- 13 Kasım" gibi ikinci bir tarih geliyor mu? */
+function isRangeStart(lowered: string, end: number): boolean {
+  const rest = lowered.slice(end);
+  return new RegExp(
+    `^\\s*[-–—]\\s*(\\d{1,2}\\s+(${MONTH_PATTERN})|\\d{1,2}[./]\\d{1,2}[./]\\d{4})`,
+  ).test(rest);
+}
+
+/** Tarihten hemen önce "1 Eylül - " ya da "7-" (7-30 Eylül) gibi aralık başı var mı? */
+function isRangeEnd(lowered: string, start: number): boolean {
+  const before = lowered.slice(0, start);
+  return new RegExp(
+    `(\\d{1,2}(\\s+(${MONTH_PATTERN})(\\s+\\d{4})?)?|\\d{1,2}[./]\\d{1,2}[./]\\d{4})\\s*[-–—]\\s*$`,
+  ).test(before);
+}
+
+/**
+ * Adım türleri — ÖNCELİK SIRASIYLA. "ön kayıt son tarihi 11 Kasım"
+ * cümleciğinde hem "ön kayıt" hem "son tarih" var; doğru tür "Ön kayıt".
+ */
+const STEP_MARKERS: Array<[string, string]> = [
+  ["ön kayıt", "Ön kayıt"],
+  ["son başvuru", "Son başvuru"],
+  ["başvuru son", "Son başvuru"],
+  ["kadar başvuru", "Son başvuru"],
+  ["son kredi kullanımı", "Son kredi kullanımı"],
+  ["son teslim", "Son teslim"],
+  ["son kayıt", "Son kayıt"],
+  ["son ödeme", "Son ödeme"],
+];
+
+/** Tarihin içinde durduğu cümlecik (virgül, noktalı virgül, parantez arası). */
+function clauseAround(lowered: string, start: number, end: number): { before: string; after: string } {
+  const breaks = /[,;()]/;
+  let a = start;
+  while (a > 0 && !breaks.test(lowered[a - 1] ?? "")) a--;
+  let b = end;
+  while (b < lowered.length && !breaks.test(lowered[b] ?? "")) b++;
+  return { before: lowered.slice(a, start), after: lowered.slice(end, b) };
+}
+
+function stepOf(lowered: string, match: DateMatch): string {
+  const { before, after } = clauseAround(lowered, match.start, match.end);
+  for (const part of [before, after]) {
+    for (const [marker, label] of STEP_MARKERS) {
+      if (part.includes(marker)) return label;
+    }
+  }
+  if (isRangeEnd(lowered, match.start) && /başvuru|çağrı/.test(lowered)) {
+    return "Son başvuru";
+  }
+  return "Son tarih";
 }
 
 function isoOf(stamp: number): string {
@@ -203,14 +326,34 @@ export function extractDateHits(
     if (!isDeadline && !isCalendar) continue;
 
     const kind: DateKind = isDeadline ? "son-tarih" : "takvim";
-    for (const stamp of parseDates(text)) {
-      const days = Math.round((stamp - today) / DAY_MS);
+    const lowered = lower(text);
+    for (const match of parseDates(text)) {
+      // ESKİ TARİH: "14 Ağustos'tan 18 Eylül 2026'ya uzatıldı" — ayrılma
+      // ekli tarih uzatma/ertelemede ESKİ son tarihtir, adım değildir
+      // (korpusta #39; almasaydık "Son başvuru: 14 Ağustos" uydururduk).
+      if (
+        /^['’]?(t|d)(a|e)n(?![a-zçğıöşü])/.test(lowered.slice(match.end)) &&
+        /uzat|ertele/.test(lowered)
+      ) {
+        continue;
+      }
+      const rangeStart = isRangeStart(lowered, match.end);
+      // Son tarihte aralık başı hiç alınmaz; takvimde yalnızca yılsız
+      // aralık başı atlanır (eski davranış: yıllı başlangıç takvim olayı).
+      if (rangeStart && (kind === "son-tarih" || match.yearInferred)) continue;
+      const days = Math.round((match.stamp - today) / DAY_MS);
+      const iso = isoOf(match.stamp);
+      const step = kind === "son-tarih" ? stepOf(lowered, match) : "Takvim";
+      // Aynı madde/aynı haber içinde aynı tarih+tür bir kez.
+      if (hits.some((h) => h.iso === iso && h.step === step)) continue;
       hits.push({
-        iso: isoOf(stamp),
+        iso,
         days,
         kind,
         evidence: text,
         label: labelFor(days, kind),
+        step,
+        yearInferred: match.yearInferred,
       });
     }
   }
@@ -238,6 +381,33 @@ export function deadlineOf(
     return upcoming.reduce((a, b) => (b.days < a.days ? b : a));
   }
   return hits.reduce((a, b) => (b.days > a.days ? b : a));
+}
+
+/**
+ * Bir haberin TÜM son tarih adımları, tarih sırasında (haber içi — haber
+ * sıralamasına dokunmaz). Yapılacaklar satırında "Ön kayıt: 22 Ekim ·
+ * Son başvuru: 26 Ekim" dizisini ve CSV sütunlarını besler.
+ */
+export function deadlineStepsOf(
+  article: Article,
+  now: Date = new Date(),
+): DateHit[] {
+  return extractDateHits(article, now)
+    .filter((h) => h.kind === "son-tarih")
+    .sort((a, b) => a.days - b.days);
+}
+
+/** "22 Ekim 2026" → "22 Ekim" (yıl bu yılsa kısaltılır, satır kısa kalsın). */
+export function formatHitDateShort(iso: string, now: Date = new Date()): string {
+  const full = formatHitDate(iso);
+  const thisYear = new Date(todayStamp(now)).getUTCFullYear();
+  return full.endsWith(` ${thisYear}`) ? full.slice(0, -5) : full;
+}
+
+/** "Süresi doldu (10 gün önce)" */
+export function expiredLabel(days: number): string {
+  const n = Math.abs(days);
+  return n === 0 ? "Süresi doldu (bugün)" : `Süresi doldu (${n} gün önce)`;
 }
 
 /**

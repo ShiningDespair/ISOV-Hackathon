@@ -315,12 +315,73 @@ export async function getChanges(
   };
 }
 
+/**
+ * OKUR İÇİN GÜRÜLTÜ OLAN TÜR.
+ *
+ * Ölçüm (25 Eylül 2026, /raporlar): 235 kaydın 115'i "Özet güncellendi —
+ * içerik değişmedi"; kısa dökümün beş satırının beşini de bunlar
+ * dolduruyordu (Selin P1-8, Burak P1-6, Nilgün P1-5). Varsayılan görünüm
+ * bu türü dışarıda bırakır; tür süzgecinden hâlâ seçilir ve kaç kaydın
+ * gizlendiği her zaman söylenir.
+ */
+export const TEKNIK_TUR: ChangeType = "ozet-guncellendi";
+
+/**
+ * GET /changes — TÜM sayfalar (en çok `maxPages`), API sırası korunarak.
+ *
+ * NEDEN: backend `limit`i 100'de kesiyor (`MAX_LIMIT`, lib/http.js);
+ * sayfa eskiden `limit: 200` isteyip 100 alıyordu. Teknik türü istemcide
+ * süzünce ilk 100 kaydın yarısı gidiyor, geriye eksik bir liste kalıyordu.
+ * Sayfalar paralel çekilir ve SIRAYLA birleştirilir (yeniden sıralama yok).
+ * `complete` false ise liste eksiktir; arayüz bunu söyler.
+ */
+export async function getChangesAll(
+  query: Omit<ChangesQuery, "page" | "limit"> = {},
+  maxPages = 5,
+): Promise<ApiResult<ChangesPage & { complete: boolean }>> {
+  const PAGE = 100;
+  const first = await getChanges({ ...query, limit: PAGE, page: 1 });
+  if (!first.ok) return first;
+  const pages = Math.min(maxPages, Math.max(1, Math.ceil(first.data.total / PAGE)));
+  const rest = await Promise.all(
+    Array.from({ length: pages - 1 }, (_, i) =>
+      getChanges({ ...query, limit: PAGE, page: i + 2 }),
+    ),
+  );
+  const items = [...first.data.data];
+  let complete = true;
+  for (const r of rest) {
+    if (!r.ok) {
+      complete = false;
+      break;
+    }
+    items.push(...r.data.data);
+  }
+  if (items.length < first.data.total) complete = false;
+  return {
+    ok: true,
+    data: { ...first.data, data: items, page: 1, limit: items.length, totalPages: 1, complete },
+  };
+}
+
 /** `GET /me/changes` — son ziyaretten beri olanlar. */
 export interface MeChanges {
   /** Son ziyaretten beri değişiklik sayısı. */
   total: number;
-  /** Son ziyaret zamanı (ISO) — backend verirse. */
+  /**
+   * Eşik zamanı (ISO). DİKKAT: bu her zaman "son giriş" DEĞİL — bkz.
+   * `sinceSource`.
+   */
   since?: string | null;
+  /**
+   * Eşiğin kaynağı (backend `since_source`):
+   *  - "onceki-ziyaret" → `users.prev_seen_at`, gerçek bir önceki ziyaret
+   *  - "ilk-giris"      → önceki ziyaret YOK; backend son 7 güne düştü
+   *  - "istek"          → çağıran açıkça `since` verdi
+   *  - "aralik"         → açık from/to aralığı kullanıldı (WP2)
+   *  - null             → backend söylemedi; "son giriş" denemez
+   */
+  sinceSource: "onceki-ziyaret" | "ilk-giris" | "istek" | "aralik" | null;
   items: ChangeItem[];
   counts: Partial<Record<ChangeType, number>>;
 }
@@ -349,7 +410,18 @@ export async function getMeChanges(): Promise<ApiResult<MeChanges>> {
     (typeof inner.last_visit_at === "string" && inner.last_visit_at) ||
     null;
 
-  return { ok: true, data: { total, since, items, counts } };
+  // "son giriş" YALNIZCA gerçek önceki ziyarette söylenebilir. Ölçülen
+  // hata: bugün açılan hesaba "son giriş 18 Eylül 2026 19:47" yazılıyordu;
+  // API `prev_seen_at: null`, `since_source: "ilk-giris"` diyordu ve `since`
+  // backend'in 7 günlük varsayılan penceresinin başıydı (25 − 7 = 18 Eylül).
+  // Arayüz o alanı ayırt etmeden "son giriş" diye basıyordu.
+  const ss = inner.since_source;
+  const sinceSource =
+    ss === "onceki-ziyaret" || ss === "ilk-giris" || ss === "istek" || ss === "aralik"
+      ? ss
+      : null;
+
+  return { ok: true, data: { total, since, sinceSource, items, counts } };
 }
 
 /* ------------------------------------------------------------------ */
@@ -410,7 +482,18 @@ export function changeAt(item: ChangeItem): string | null {
  * Yalnızca açıkça 0/false geldiğinde çekince gösterilir.
  */
 export function changeCekinceli(item: ChangeItem): boolean {
-  const v = item.is_confirmed;
+  // Backend `is_confirmed`'i ÜST DÜZEYDE değil `detail` JSON'unun İÇİNDE
+  // döndürüyor. Önceden yalnızca üst düzeye bakılıyordu; alan "hiç gelmedi"
+  // sayılıp kayıt ONAYLI gösteriliyordu. Sonuç (canlıda ölçüldü): pipeline'ın
+  // kendisinin onaysız işaretlediği 5 dosya gelişmesinin 5'i de kesin dille
+  // basılıyordu — elle yapılan ölçümde YANLIŞ POZİTİF olduğu bilinen "Brent
+  // petrol" kaydı dahil, ve teknik güncellemeler gizlenince modülün en
+  // üstündeki kayıt oydu. Çekince kodu vardı ama hiç çalışmıyordu.
+  const detay =
+    item.detail && typeof item.detail === "object"
+      ? (item.detail as Record<string, unknown>).is_confirmed
+      : undefined;
+  const v = item.is_confirmed ?? (detay as ChangeItem["is_confirmed"]);
   if (v === undefined || v === null) return false;
   if (typeof v === "number") return v === 0;
   if (typeof v === "boolean") return v === false;

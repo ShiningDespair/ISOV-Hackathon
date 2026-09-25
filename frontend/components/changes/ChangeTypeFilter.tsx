@@ -8,7 +8,12 @@
 
 import Link from "next/link";
 
-import { CHANGE_TYPES, CHANGE_TYPE_LABEL, type ChangeType } from "@/lib/api-me";
+import {
+  CHANGE_TYPES,
+  CHANGE_TYPE_LABEL,
+  TEKNIK_TUR,
+  type ChangeType,
+} from "@/lib/api-me";
 import {
   withState,
   type DateFilterState,
@@ -21,11 +26,17 @@ export function ChangeTypeFilter({
   basePath = "/raporlar",
   counts,
   showCounts = false,
+  teknikGizli = false,
 }: {
   state: DateFilterState;
   basePath?: string;
   counts?: Partial<Record<ChangeType, number>>;
   showCounts?: boolean;
+  /**
+   * "Tümü" seçiliyken teknik özet güncellemeleri listede yok mu? Öyleyse
+   * etiket bunu söyler: "Tümü" deyip 115 kaydı saklamak yalan olurdu.
+   */
+  teknikGizli?: boolean;
 }) {
   const aktif = state.type ?? undefined;
 
@@ -37,7 +48,7 @@ export function ChangeTypeFilter({
         data-active={!aktif ? "true" : "false"}
         aria-current={!aktif ? "true" : undefined}
       >
-        Tümü
+        {teknikGizli ? "Tümü (teknik hariç)" : "Tümü"}
       </Link>
       {CHANGE_TYPES.map((t) => {
         const secili = aktif === t;
@@ -51,6 +62,7 @@ export function ChangeTypeFilter({
             aria-current={secili ? "true" : undefined}
           >
             {CHANGE_TYPE_LABEL[t]}
+            {t === TEKNIK_TUR ? " (teknik)" : ""}
             {typeof sayi === "number" && sayi > 0 ? (
               <span className="degis-tur-sayi"> {formatNumber(sayi)}</span>
             ) : null}

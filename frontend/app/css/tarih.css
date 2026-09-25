@@ -1,0 +1,221 @@
+/* tarih — WP4 (TUR 4): veri tazeliği, değişiklik gürültüsü, son başvuru
+   adımları, dışa aktarım ve PDF. Yalnızca "tarih-" önekli yeni sınıflar;
+   mevcut bir seçiciyi ezmek gerektiğinde nitelik seçiciyle bir kademe
+   yukarı çıkılır (bu dosya globals.css'ten ÖNCE yüklenir — serit.css
+   başındaki özgüllük notuna bakın). */
+
+/* ================================================================
+   1) "SON VERİ" GÖSTERGESİ — components/DataFreshness.tsx
+   Renk TEK gösterge değil: eski veride "⚠ Eski veri" sözcüğü ve kesik
+   kenarlıklı kutu da var (WCAG 1.4.1). Renk yalnızca pekiştirir.
+   ================================================================ */
+.tarih-tazelik {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  max-width: 100%;
+}
+
+.tarih-tazelik[data-tarih-eski="true"] {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.tarih-rozet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px dashed currentColor;
+  padding: 0.15rem 0.35rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tarih-rozet-isaret {
+  font-size: 0.9em;
+}
+
+.tarih-yas {
+  white-space: nowrap;
+}
+
+/* Gazete künyesi (basılı nüsha): renk yoksa da sözcük ve kenarlık kalır. */
+.tarih-tazelik[data-tarih-yer="folio"] {
+  font-weight: 700;
+}
+
+.tarih-folio:empty {
+  display: none;
+}
+
+@media print {
+  .tarih-tazelik[data-tarih-eski="true"] {
+    color: #000;
+  }
+}
+
+/* ================================================================
+   2) DEĞİŞİKLİKLER — "115 teknik özet güncellemesi gizlendi · Göster"
+   ================================================================ */
+.tarih-teknik-not {
+  margin: 0.5rem 0 0.25rem;
+  color: var(--color-ink-faint);
+}
+
+.tarih-teknik-not a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.25rem;
+  color: var(--color-ink);
+}
+
+@media (min-width: 640px) {
+  .tarih-teknik-not a {
+    min-height: 0;
+  }
+}
+
+/* ================================================================
+   3) YAPILACAKLAR — adımlar, süresi dolanlar, dışa aktarım
+   ================================================================ */
+.tarih-is-blok {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tarih-is-arac {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem 0.75rem;
+}
+
+.tarih-disa-aktar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0 0.85rem;
+  border: 1px solid var(--color-ink);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.tarih-disa-aktar:hover {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.tarih-disa-aktar:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.tarih-disa-durum {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.tarih-disa-durum:empty {
+  display: none;
+}
+
+.tarih-adim-tur {
+  color: var(--color-ink);
+}
+
+.tarih-adimlar {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+}
+
+.tarih-adim-ad {
+  font-weight: 700;
+}
+
+/* Geçmiş adım: "(geçti)" sözcüğü asıl bilgi, üstü çizili pekiştirir. */
+.tarih-adim[data-gecti="true"] {
+  color: var(--color-ink-faint);
+  text-decoration: line-through;
+}
+
+.tarih-gecmis {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--color-rule-strong);
+}
+
+.tarih-gecmis-baslik {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+/* Süresi dolan kalem: sol kalın çizgi kesik ve soluk — "iş bitti" hissi.
+   Nitelik seçici globals.css'teki `.pano-is`i (0,1,0) ezmek için (0,2,0). */
+.pano-is[data-tarih-gecti="true"] {
+  border-left-style: dashed;
+  border-left-color: var(--color-ink-faint);
+  background-color: var(--color-paper);
+}
+
+.pano-takvim-oge[data-tarih-gecti="true"] {
+  opacity: 0.8;
+}
+
+/* ================================================================
+   4) PDF İNDİR — components/PrintButton.tsx → PdfDownloadLink
+   ================================================================ */
+.tarih-pdf {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+}
+
+.tarih-pdf-bag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+@media (min-width: 640px) {
+  .tarih-pdf-bag {
+    min-height: 32px;
+  }
+}
+
+.tarih-pdf-durum {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.tarih-pdf-durum:empty {
+  display: none;
+}
+
+.tarih-pdf-durum[data-hata="true"] {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+@media print {
+  .tarih-pdf,
+  .tarih-is-arac {
+    display: none !important;
+  }
+}
