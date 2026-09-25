@@ -30,6 +30,8 @@ import {
 import type { Article } from "@/lib/types";
 
 import { ArticleImage } from "./ArticleImage";
+import { ArticleActions, HidableArticle } from "./ArticleActions";
+import { paylasilacak } from "@/lib/api-me";
 import { BandBadge } from "./BandBadge";
 import { CompactArticle } from "./ArticleCard";
 import {
@@ -91,6 +93,7 @@ function ClusterNote({ article }: { article: Article }) {
 /** MANŞET — solda görsel, sağda metin. */
 function VisualLead({ article }: { article: Article }) {
   return (
+    <HidableArticle articleId={article.id}>
     <article className="gorsel-lead border-b border-ink pb-7">
       {/* Kaynak amblemi (görseli olmayan haberler) için geçen alanlar:
           `sourceSlug` adlandırılmış tasarımı, `sourceType` tür arketipini,
@@ -124,6 +127,7 @@ function VisualLead({ article }: { article: Article }) {
         <div className="mb-2 flex flex-wrap items-center gap-2">
           <BandBadge band={article.importance_band} />
           <ClusterNote article={article} />
+          <ArticleActions haber={paylasilacak(article)} compact className="ml-auto" />
         </div>
 
         <Link href={`/haber/${article.id}`} className="group block">
@@ -163,12 +167,14 @@ function VisualLead({ article }: { article: Article }) {
         </Link>
       </div>
     </article>
+    </HidableArticle>
   );
 }
 
 /** Izgara kartı — üstte görsel, altında metin. */
 function VisualCard({ article }: { article: Article }) {
   return (
+    <HidableArticle articleId={article.id} className="gorsel-card-sarmal">
     <article className="gorsel-card">
       {/* Kaynak amblemi (görseli olmayan haberler) için geçen alanlar:
           `sourceSlug` adlandırılmış tasarımı, `sourceType` tür arketipini,
@@ -202,6 +208,7 @@ function VisualCard({ article }: { article: Article }) {
         <div className="flex flex-wrap items-center gap-2">
           <BandBadge band={article.importance_band} />
           <ClusterNote article={article} />
+          <ArticleActions haber={paylasilacak(article)} compact className="ml-auto" />
         </div>
 
         <Link href={`/haber/${article.id}`} className="group block">
@@ -219,6 +226,7 @@ function VisualCard({ article }: { article: Article }) {
         ) : null}
       </div>
     </article>
+    </HidableArticle>
   );
 }
 

@@ -18,6 +18,8 @@ import Link from "next/link";
 
 import { StandardArticle } from "@/components/ArticleCard";
 import { BandBadge } from "@/components/BandBadge";
+import { ArticleActions, HidableArticle } from "@/components/ArticleActions";
+import { paylasilacak } from "@/lib/api-me";
 import { leadSentence } from "@/components/DigestCard";
 import { formatDate, isoDate, regionLabel } from "@/lib/format";
 import type { Article } from "@/lib/types";
@@ -50,9 +52,11 @@ function FlowKicker({ article }: { article: Article }) {
 function SentenceItem({ article }: { article: Article }) {
   const sentence = leadSentence(article);
   return (
+    <HidableArticle articleId={article.id}>
     <article className="pano-akis-oge">
       <div className="mb-1.5 flex flex-wrap items-center gap-2">
         <BandBadge band={article.importance_band} />
+        <ArticleActions haber={paylasilacak(article)} compact className="ml-auto" />
       </div>
       <Link href={`/haber/${article.id}`} className="group block">
         <h3 className="u-headline u-headline-sm group-hover:text-accent">
@@ -66,6 +70,7 @@ function SentenceItem({ article }: { article: Article }) {
       ) : null}
       <FlowKicker article={article} />
     </article>
+    </HidableArticle>
   );
 }
 
@@ -82,9 +87,11 @@ function BulletItem({
   );
 
   return (
+    <HidableArticle articleId={article.id}>
     <article className="pano-akis-oge">
       <div className="mb-1.5 flex flex-wrap items-center gap-2">
         <BandBadge band={article.importance_band} />
+        <ArticleActions haber={paylasilacak(article)} compact className="ml-auto" />
       </div>
       <Link href={`/haber/${article.id}`} className="group block">
         <h3 className="u-headline u-headline-md group-hover:text-accent">
@@ -116,6 +123,7 @@ function BulletItem({
         })()
       )}
     </article>
+    </HidableArticle>
   );
 }
 

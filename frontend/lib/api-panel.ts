@@ -376,6 +376,30 @@ export interface PanelChanges {
   note: string | null;
 }
 
+/**
+ * Değişiklik notunu okunur metne çevirir.
+ *
+ * ÖLÇÜLEN HATA (persona testi): backend `detail` alanını NESNE olarak
+ * döndürüyor (`{label, similarity, is_confirmed, ...}`) ve burada
+ * `String(detail)` yapılıyordu; Değişiklik Akışı'nın sekiz satırının
+ * sekizinde de "[object Object]" basılıyordu. Nesneden insan okuyacağı
+ * alan seçilir, bulunamazsa satır notsuz basılır — iç alanlar (benzerlik
+ * skoru, thread anahtarı) kullanıcıya gösterilmez.
+ */
+function notMetni(v: unknown): string | null {
+  if (v === undefined || v === null) return null;
+  if (typeof v === "string") return v.trim() || null;
+  if (typeof v === "number" || typeof v === "boolean") return null;
+  if (typeof v === "object") {
+    const o = v as Record<string, unknown>;
+    for (const k of ["note", "text", "message", "aciklama", "label", "summary"]) {
+      const x = o[k];
+      if (typeof x === "string" && x.trim()) return x.trim();
+    }
+  }
+  return null;
+}
+
 function toChange(raw: unknown, index: number): PanelChange | null {
   if (!raw || typeof raw !== "object") return null;
   const obj = raw as Record<string, unknown>;
@@ -388,7 +412,7 @@ function toChange(raw: unknown, index: number): PanelChange | null {
   const articleId = pick(obj, ["article_id", "articleId"]) ?? article.id;
   const title = pick(obj, ["article_title", "title", "baslik"]) ?? article.title;
   const at = pick(obj, ["created_at", "detected_at", "changed_at", "at"]);
-  const note = pick(obj, ["note", "detail", "aciklama", "summary"]);
+  const note = notMetni(pick(obj, ["note", "detail", "aciklama", "summary"]));
 
   return {
     id: String(pick(obj, ["id", "change_key"]) ?? `degisiklik-${index}`),
@@ -396,7 +420,7 @@ function toChange(raw: unknown, index: number): PanelChange | null {
     articleId: articleId === undefined ? null : Number(articleId) || null,
     title: title === undefined ? null : String(title),
     at: at === undefined ? null : String(at),
-    note: note === undefined ? null : String(note),
+    note,
   };
 }
 

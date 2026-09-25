@@ -325,8 +325,11 @@ export function KayitSihirbazi() {
   /** Animasyon bitti: her sey kaydedildiyse panele git, degilse ozet goster. */
   const animasyonBitti = useCallback(() => {
     if (sonuc && sonuc.profilKaydedildi && sonuc.bultenKaydedildi) {
-      router.replace(devam);
-      router.refresh();
+      // TAM SAYFA gezinme: istemci ici router SessionProvider'in /kayit'ta
+      // aldigi "oturum yok" durumunu sifirlamiyordu ve SessionGuard yeni
+      // kaydolan kullaniciyi bos bir giris formuna atiyordu (olculdu).
+      // Ayrica isov_view cerezi yalnizca tam yuklemede okunuyor.
+      window.location.assign(devam);
       return;
     }
     setPhase("ozet");

@@ -22,6 +22,8 @@ import {
 import type { Article } from "@/lib/types";
 
 import { BandBadge } from "./BandBadge";
+import { ArticleActions, HidableArticle } from "./ArticleActions";
+import { paylasilacak } from "@/lib/api-me";
 
 /** Kartta gösterilecek tek cümlenin üst sınırı (karakter). */
 const SENTENCE_MAX = 150;
@@ -140,6 +142,7 @@ export function DigestCard({
   const category = humanize(article.category);
 
   return (
+    <HidableArticle articleId={article.id}>
     <article
       className="kart-card"
       data-band={normalizeBand(article.importance_band)}
@@ -182,6 +185,14 @@ export function DigestCard({
           ) : null}
         </div>
       </Link>
+
+      {/* Paylaş / Gizle kartın bağlantısının DIŞINDA: kartın tamamı tek bir
+          <a>, düğmeyi onun içine koymak geçersiz HTML ve dokunuş habere
+          gidiyor olurdu. */}
+      <div className="kart-eylem">
+        <ArticleActions haber={paylasilacak(article)} compact />
+      </div>
     </article>
+    </HidableArticle>
   );
 }

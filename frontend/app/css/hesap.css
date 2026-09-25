@@ -147,6 +147,21 @@
   padding: 0.6rem 0;
 }
 
+/* MOBİL: menü düğmenin SOL kenarına yaslanır.
+   Ölçülen hata (gerçek tarayıcı, 390 px): menü `right: 0` ile düğmenin sağ
+   kenarına yaslanıyordu; mobilde Hesabım düğmesi ortalanmış araç satırında
+   ortanın SOLUNDA durduğu için 17rem'lik menü ekranın solundan 161 px
+   taşıyor, "Çıkış Yap"ın merkezi x≈−26'ya düşüyor ve dokunuş boşa gidiyordu —
+   kullanıcı telefondan çıkış YAPAMIYORDU. Masaüstünde düğme sağ kenarda
+   olduğu için sağa yaslama doğru ve korunuyor. */
+@media (max-width: 40rem) {
+  .hesap-menu {
+    right: auto;
+    left: 0;
+    max-width: calc(100vw - 2rem);
+  }
+}
+
 .hesap-menu-kimlik {
   padding: 0 0.85rem 0.6rem;
 }
@@ -192,7 +207,11 @@
 
 .hesap-menu-link,
 .hesap-cikis {
-  display: block;
+  display: flex;
+  align-items: center;
+  /* Dokunma hedefi en az 44 px (WCAG 2.5.5 / Apple HIG). Ölçülen önceki
+     yükseklik 29 px idi; iki persona telefonda ıskaladı. */
+  min-height: 2.75rem;
   width: 100%;
   text-align: left;
   padding: 0.45rem 0.85rem;

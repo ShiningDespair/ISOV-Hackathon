@@ -1,12 +1,22 @@
 /**
  * Haber kartları — gazete estetiği: kutu ve gölge YOK.
  * Yalnızca kicker + başlık + özet + ince alt kural çizgisi.
+ *
+ * PAYLAŞ / GİZLE: kullanıcının açık isteğiydi ("her haberin sağ üstünde iki
+ * düğme"). Bileşenler (ArticleActions, ShareMenu, HideDialog) yazılmış ama
+ * HİÇBİR SAYFADA kullanılmıyordu — üç persona testi gerçek tarayıcıda
+ * ekranda sıfır düğme saydı. Manşet ve standart kartta bant rozetinin
+ * satırında, sağa yaslı. CompactArticle (dar liste satırı) ve
+ * NewspaperArticle (basılı sayfa) bilinçli olarak eylemsiz: ilkinde yer
+ * yok, ikincisi kâğıda basılıyor.
  */
 
 import Link from "next/link";
 import { isoDate, formatDate, kicker, regionLabel, truncate } from "@/lib/format";
 import type { Article } from "@/lib/types";
+import { paylasilacak } from "@/lib/api-me";
 import { BandBadge } from "./BandBadge";
+import { ArticleActions, HidableArticle } from "./ArticleActions";
 
 /** Kaynak · bölge · tarih satırı. */
 function Kicker({ article }: { article: Article }) {
@@ -47,10 +57,12 @@ function ClusterNote({ article }: { article: Article }) {
 /** MANŞET — sol geniş kolon, en yüksek bandın haberi. */
 export function LeadArticle({ article }: { article: Article }) {
   return (
+    <HidableArticle articleId={article.id}>
     <article className="border-b border-ink pb-6">
       <div className="mb-2 flex items-center gap-2">
         <BandBadge band={article.importance_band} />
         <ClusterNote article={article} />
+        <ArticleActions haber={paylasilacak(article)} compact className="ml-auto" />
       </div>
 
       <Link href={`/haber/${article.id}`} className="group block">
@@ -92,16 +104,19 @@ export function LeadArticle({ article }: { article: Article }) {
         Haberin Tamamı →
       </Link>
     </article>
+    </HidableArticle>
   );
 }
 
 /** İKİNCİL haber — orta kolonlar. */
 export function StandardArticle({ article }: { article: Article }) {
   return (
+    <HidableArticle articleId={article.id}>
     <article className="border-b border-rule pb-4">
       <div className="mb-1.5 flex flex-wrap items-center gap-2">
         <BandBadge band={article.importance_band} />
         <ClusterNote article={article} />
+        <ArticleActions haber={paylasilacak(article)} compact className="ml-auto" />
       </div>
 
       <Link href={`/haber/${article.id}`} className="group block">
@@ -120,6 +135,7 @@ export function StandardArticle({ article }: { article: Article }) {
         </p>
       ) : null}
     </article>
+    </HidableArticle>
   );
 }
 

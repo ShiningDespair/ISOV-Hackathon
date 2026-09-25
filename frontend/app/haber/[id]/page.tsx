@@ -26,7 +26,10 @@ import { BandBadge, RegionBadge } from "@/components/BandBadge";
 import { NewspaperMasthead } from "@/components/Masthead";
 import { PrintButton } from "@/components/PrintButton";
 import { DataUnavailable, SectionRule } from "@/components/States";
-import { NewspaperView, PanelView } from "@/components/ViewSlot";
+import { NewspaperView } from "@/components/ViewSlot";
+import { ArticleImage } from "@/components/ArticleImage";
+import { ArticleActions } from "@/components/ArticleActions";
+import { paylasilacak } from "@/lib/api-me";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -191,14 +194,43 @@ export default async function ArticlePage({ params }: { params: Params }) {
 
   return (
     <>
-      {/* ---------------- PANEL GÖRÜNÜMÜ ---------------- */}
-      <PanelView>
+      {/* ---------------- EKRAN GÖVDESİ (Panel · Görsel · Kart) ----------------
+          GÖRÜNÜM YUVASI DEĞİL, bilinçli olarak. Önceden bu gövde `<PanelView>`
+          içindeydi ve sayfa yalnızca Panel + Gazete yuvası basıyordu. Görsel ya
+          da Kart görünümünde globals.css ikisini de gizliyordu, yani haber
+          sayfası BEMBEYAZ açılıyordu. Pozisyona göre açılış görünümü gelince
+          (üst yönetim → Görsel, diğer yedi pozisyon → Kart) bu, HİÇBİR üye
+          rolünün varsayılan görünümle haber okuyamaması demekti — iki persona
+          testinde gerçek tarayıcıyla ölçüldü: `main` metin uzunluğu 0.
+          Gövdeyi üç yuvaya ayrı ayrı basmak aynı `id`leri üç kez üretirdi;
+          bunun yerine tek kopya yuvasız basılıyor ve yalnızca Gazete
+          görünümünde ve yazdırmada gizleniyor (app/css/haber.css). */}
+      <div className="ekran-govdesi">
         <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 sm:px-6">
           <nav aria-label="Geri" className="border-b border-rule py-3">
             <Link href="/" className="u-kicker u-link-underline">
               ← Bültene Dön
             </Link>
           </nav>
+
+          {/* Görsel görünümde haberin kendi görseli ya da kaynak amblemi
+              başlığın üstünde durur; diğer görünümlerde gizli. */}
+          <div className="haber-gorsel mt-5 max-w-[960px]">
+            <ArticleImage
+              src={article.image_url}
+              alt={article.title}
+              seed={article.id}
+              sourceName={article.source?.name}
+              label={humanize(article.category ?? "") || regionLabel(article.region)}
+              fallbackInitials={regionLabel(article.region)}
+              ratio="lead"
+              sourceSlug={article.source?.slug}
+              sourceType={article.source?.source_type}
+              countryCode={article.source?.country_code}
+              articleUrl={article.url}
+              publishedAt={article.published_at}
+            />
+          </div>
 
           <div className="grid grid-cols-1 gap-x-10 gap-y-8 pt-6 lg:grid-cols-12">
             {/* Ana sütun */}
@@ -212,6 +244,9 @@ export default async function ArticlePage({ params }: { params: Params }) {
                       {article.cluster.member_count} kaynak doğruladı
                     </span>
                   ) : null}
+                  {/* Detayda etiketli (kompakt değil): haberi okuyan kişi
+                      onu iletmeye en yakın anda. */}
+                  <ArticleActions haber={paylasilacak(article)} className="ml-auto" />
                 </div>
 
                 <h1 className="u-headline u-headline-xl">{article.title}</h1>
@@ -357,7 +392,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
             </aside>
           </div>
         </div>
-      </PanelView>
+      </div>
 
       {/* ---------------- GAZETE GÖRÜNÜMÜ ---------------- */}
       <NewspaperView>

@@ -22,7 +22,7 @@ import { StandardArticle, NewspaperArticle } from "@/components/ArticleCard";
 import { NewspaperMasthead } from "@/components/Masthead";
 import { PrintButton } from "@/components/PrintButton";
 import { DataUnavailable, EmptyState, SectionRule } from "@/components/States";
-import { NewspaperView, PanelView } from "@/components/ViewSlot";
+import { NewspaperView } from "@/components/ViewSlot";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -144,8 +144,13 @@ export default async function ReportDetailPage({ params }: { params: Params }) {
 
   return (
     <>
-      {/* ---------------- PANEL ---------------- */}
-      <PanelView>
+      {/* ---------------- EKRAN GÖVDESİ (Panel · Görsel · Kart) ----------------
+          Görünüm yuvası DEĞİL. Önceden `<PanelView>` içindeydi; Görsel ve Kart
+          görünümünde (pozisyona göre açılış görünümleri) rapor sayfası boş
+          açılıyordu — persona testinde ölçüldü, `main` metni 0 karakter.
+          Haber detayıyla aynı çözüm: tek kopya, yalnızca Gazete görünümünde ve
+          yazdırmada gizlenir (app/css/haber.css). */}
+      <div className="ekran-govdesi">
         <div className="mx-auto w-full max-w-[1440px] px-4 pb-12 sm:px-6">
           <nav aria-label="Geri" className="border-b border-rule py-3">
             <Link href="/raporlar" className="u-kicker u-link-underline">
@@ -215,7 +220,7 @@ export default async function ReportDetailPage({ params }: { params: Params }) {
             </div>
           )}
         </div>
-      </PanelView>
+      </div>
 
       {/* ---------------- GAZETE (basıma hazır) ---------------- */}
       <NewspaperView>

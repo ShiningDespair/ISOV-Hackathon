@@ -94,14 +94,25 @@ export function LoginForm() {
     setFieldError({});
   }, []);
 
-  const go = useCallback(
-    (target: string) => {
-      router.replace(target);
-      // Panel sunucu bileseni; cerez yeni geldi, veriyi yeniden cekmeli.
-      router.refresh();
-    },
-    [router],
-  );
+  /**
+   * Basarili giristen sonra TAM SAYFA gezinme — istemci ici router DEGIL.
+   *
+   * OLCULEN HATA (gercek tarayici, persona testi): dogru sifreyle giris
+   * yapan kullanici /giris'te, dolu formla KALIYORDU. Sebep: /giris
+   * acilirken SessionProvider /auth/me'den 401 alip durumu "yok" olarak
+   * tutuyor; `router.replace("/") + router.refresh()` yalnizca sunucu
+   * bilesenlerini yeniliyor, istemci baglamini SIFIRLAMIYOR. "/" acilinca
+   * SessionGuard hala "yok" goruyor ve kullaniciyi geri /giris'e atiyordu.
+   * Cerez aslinda yazilmisti; adresi elle yazan kullanici iceri girebiliyordu.
+   *
+   * Tam sayfa gezinme ikinci bir sorunu da cozuyor: pozisyondan gelen acilis
+   * gorunumu (`isov_view` cerezi) YALNIZCA satir ici onyukleme betiginde,
+   * yani tam sayfa yuklemesinde okunuyor. Istemci ici gezinmede ust
+   * yonetici Gorsel yerine bir onceki gorunumu goruyordu.
+   */
+  const go = useCallback((target: string) => {
+    window.location.assign(target);
+  }, []);
 
   /* --- giris ----------------------------------------------------- */
   async function submitLogin(e: React.FormEvent) {

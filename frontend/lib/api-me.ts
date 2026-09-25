@@ -557,21 +557,104 @@ export interface PaylasilacakHaber {
   title: string;
   url?: string | null;
   source?: { name?: string | null } | null;
+  /** Türkçe özet — iletilen mesajın kendi başına anlaşılır olması için. */
+  summary?: string | null;
+  /** Anahtar maddeler — yalnızca e-postada, en çok 3 tanesi. */
+  key_points?: string[] | null;
 }
 
 /**
- * Paylaşım metni: BAŞLIK + KAYNAK + BAĞLANTI.
+ * Haber nesnesinden paylaşım girdisini çıkarır. Kartlar sunucu bileşeni,
+ * eylem şeridi istemci bileşeni: sınırdan yalnızca bu küçük, düz nesne
+ * geçsin (tüm haber nesnesi değil).
+ */
+export function paylasilacak(article: {
+  id: number;
+  title: string;
+  url?: string | null;
+  summary?: string | null;
+  key_points?: string[] | null;
+  source?: { name?: string | null } | null;
+}): PaylasilacakHaber {
+  return {
+    id: article.id,
+    title: article.title,
+    url: article.url ?? null,
+    source: article.source?.name ? { name: article.source.name } : null,
+    summary: article.summary ?? null,
+    key_points: Array.isArray(article.key_points) ? article.key_points.slice(0, 3) : null,
+  };
+}
+
+/** Metni cümle sınırından kısaltır; cümle yoksa kelime sınırından. */
+function kisaOzet(metin: string | null | undefined, sinir: number): string | null {
+  const t = String(metin ?? "").replace(/\s+/g, " ").trim();
+  if (!t) return null;
+  if (t.length <= sinir) return t;
+  const kesit = t.slice(0, sinir);
+  const cumle = kesit.lastIndexOf(". ");
+  if (cumle > sinir * 0.5) return kesit.slice(0, cumle + 1);
+  const kelime = kesit.lastIndexOf(" ");
+  return `${kesit.slice(0, kelime > 0 ? kelime : sinir)}…`;
+}
+
+/**
+ * Paylaşım metni: BAŞLIK + TEK CÜMLELİK TÜRKÇE ÖZET + KAYNAK + BAĞLANTI.
  *
- * Özet KASITLI olarak yok: sözleşmedeki özetler 2-4 cümle, WhatsApp'ta
- * mesajı okunmaz yapıyor ve e-postada zaten haberin kendisi açılıyor.
+ * Önceki sürümde özet KASITLI olarak yoktu ("WhatsApp'ta mesajı okunmaz
+ * yapıyor"). Persona testinde iki ayrı kullanıcı bunun tersini söyledi:
+ * genel müdür haberi mali işler direktörüne, ihracat müdürü satış ekibine
+ * iletiyor ve alıcının çoğu İngilizce kaynağı açmıyor. Yalnızca başlık +
+ * yabancı bağlantı iletilemez bir mesaj. Uzunluk sorunu KISALTARAK
+ * çözüldü: WhatsApp'ta en çok ~220 karakterlik tek cümle.
+ *
+ * Bağlantı kaynağın KENDİ adresi: panel kapalı, oturumu olmayan alıcı
+ * /haber/:id açarsa giriş sayfası görür.
  */
 export function paylasimMetni(
   haber: PaylasilacakHaber,
   baglanti: string,
 ): string {
   const kaynak = haber.source?.name?.trim();
-  const bas = kaynak ? `${haber.title} — ${kaynak}` : haber.title;
-  return `${bas}\n${baglanti}`;
+  const ozet = kisaOzet(haber.summary, 220);
+  return [
+    `*${haber.title}*`,
+    ozet,
+    kaynak ? `Kaynak: ${kaynak}` : null,
+    baglanti,
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+/**
+ * E-posta gövdesi: WhatsApp'tan daha uzun — tam özet ve en çok üç
+ * anahtar madde. E-postayı alan kişi masasında okuyor.
+ */
+export function epostaGovdesi(
+  haber: PaylasilacakHaber,
+  baglanti: string,
+): string {
+  const kaynak = haber.source?.name?.trim();
+  const ozet = kisaOzet(haber.summary, 900);
+  const maddeler = (haber.key_points ?? [])
+    .map((m) => String(m).trim())
+    .filter(Boolean)
+    .slice(0, 3);
+  return [
+    haber.title,
+    "",
+    ozet,
+    maddeler.length ? "" : null,
+    ...maddeler.map((m) => `• ${m}`),
+    "",
+    kaynak ? `Kaynak: ${kaynak}` : null,
+    baglanti,
+    "",
+    "— İSO · İSOV Dış Kaynak İzleme",
+  ]
+    .filter((x) => x !== null)
+    .join("\n");
 }
 
 /** Kanal adresleri — UI yalnızca açar, kurgu burada tek yerde durur. */
@@ -579,11 +662,10 @@ export function paylasimAdresleri(
   haber: PaylasilacakHaber,
   baglanti: string,
 ): Record<"whatsapp" | "linkedin" | "mailto", string> {
-  const metin = paylasimMetni(haber, baglanti);
   return {
-    whatsapp: `https://wa.me/?text=${encodeURIComponent(metin)}`,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(paylasimMetni(haber, baglanti))}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(baglanti)}`,
-    mailto: `mailto:?subject=${encodeURIComponent(haber.title)}&body=${encodeURIComponent(metin)}`,
+    mailto: `mailto:?subject=${encodeURIComponent(haber.title)}&body=${encodeURIComponent(epostaGovdesi(haber, baglanti))}`,
   };
 }
 

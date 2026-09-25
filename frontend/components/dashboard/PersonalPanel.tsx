@@ -67,7 +67,7 @@ import { regionLabel, toBuckets } from "@/lib/format";
 import type { Article, StatsOverview } from "@/lib/types";
 
 import { DigestFront } from "@/components/DigestFront";
-import type { FilterState } from "@/components/Filters";
+import { ActiveFilters, type FilterState } from "@/components/Filters";
 import { DataUnavailable } from "@/components/States";
 import { VisualFront } from "@/components/VisualFront";
 import {
@@ -228,6 +228,30 @@ export async function PersonalPanel({
   const timeBudget: TimeBudget = effectiveTimeBudget(params, me);
 
   /**
+   * Kullanıcının seçtiği FİLTRELER — kişisel sıralamaya UYGULANIR.
+   *
+   * ÖLÇÜLEN HATA (üç ayrı persona testi): Bana Özel akışında bölge ya da
+   * etiket seçmek hiçbir şeyi değiştirmiyordu. URL doğru oluşuyordu
+   * (`?akis=ozel&region=AMERIKA`), ama bu bileşen parametreleri hiç
+   * okumuyordu ve liste aynı kalıyordu. /istatistik'teki etiket
+   * bağlantıları da (`/?tag=cbam`) profili olan kullanıcıda varsayılan
+   * akış Bana Özel olduğu için sessizce yok sayılıyordu: CBAM'ı ilgi
+   * alanına eklemiş genel müdür CBAM etiketine basıp alakasız 5 haber
+   * görüyordu. Backend `sort=kisisel` ile filtreleri birlikte zaten
+   * destekliyor (ölçüldü: tag=cbam → 3, region=AMERIKA → 10); eksik olan
+   * yalnızca buradaki aktarımdı.
+   *
+   * Şerit ("En Önemli Konular") bilinçli olarak filtrelenmez: korpus
+   * genelindeki kritik gündem, seçilen dilimden bağımsız.
+   */
+  const filtreler: FilterState = {};
+  for (const key of ["region", "band", "tag", "q", "category", "source"] as const) {
+    const v = firstParam(params[key]);
+    if (v && v.trim() !== "") filtreler[key] = v.trim();
+  }
+  const filtreVar = Object.keys(filtreler).length > 0;
+
+  /**
    * Gorsel ve kart gorunumlerine gecen GEZINTI durumu.
    *
    * Bu iki bilesen kendi bolge ciplerini basiyor ve baglantilari
@@ -241,6 +265,7 @@ export async function PersonalPanel({
     ...(firstParam(params.vakit) !== undefined
       ? { vakit: String(timeBudget) }
       : {}),
+    ...filtreler,
   };
 
   const density = densityOf(timeBudget);
@@ -250,7 +275,7 @@ export async function PersonalPanel({
   // --- Haberler ---------------------------------------------------
   const wantsPersonal = me.status === "etkin";
   let listRes = await getPanelArticles(
-    { limit: itemCount, sort: wantsPersonal ? "kisisel" : undefined },
+    { ...filtreler, limit: itemCount, sort: wantsPersonal ? "kisisel" : undefined },
     auth,
   );
   let personalized = wantsPersonal && listRes.ok;
@@ -258,7 +283,7 @@ export async function PersonalPanel({
 
   if (!listRes.ok && wantsPersonal) {
     // Kişisel sıralama reddedildi (ör. oturum düştü) — genel sıralamaya düş.
-    listRes = await getPanelArticles({ limit: itemCount }, auth);
+    listRes = await getPanelArticles({ ...filtreler, limit: itemCount }, auth);
     personalized = false;
     fallbackNote =
       "Kişisel sıralama uygulanamadı, genel önem sıralaması gösteriliyor.";
@@ -518,6 +543,15 @@ export async function PersonalPanel({
       />
 
       <PanoNotices notices={notices} warnFirst={Boolean(me.note)} />
+
+      {/* Etkin filtre kabukta, görünüm yuvalarının DIŞINDA: dört görünümde
+          de "neden bu kadar az haber var" sorusunun cevabı görünsün ve tek
+          dokunuşla kaldırılabilsin. */}
+      {filtreVar ? (
+        <div className="akis-filtre-satiri">
+          <ActiveFilters state={gezintiDurumu} />
+        </div>
+      ) : null}
 
       {/* -------- Göstergeler: SIKI kip, tek satır -------- */}
       <section className="pano-bolum akis-bolum-sik" data-pano-bolum="kpi">

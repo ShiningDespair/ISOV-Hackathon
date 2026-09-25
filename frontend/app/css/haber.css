@@ -1,0 +1,38 @@
+/* haber — /haber/[id] ve /raporlar/[id] ekran gövdesi.
+   Yalnızca "haber-" önekli yeni sınıflar.
+
+   Gövde görünüm yuvası DEĞİL; dört görünümün üçünde (Panel, Görsel, Kart)
+   görünür, Gazete görünümünde ve kâğıtta gizlenir — orada gazete yuvası
+   kendi basılı mizanpajını basıyor. Yuvasız içeriği gizleyen başka kural
+   yok, yani buradaki seçicilerin rakibi yok; yazdırma bloğundaki
+   [data-view-slot] kurallarına dokunulmuyor. */
+
+html[data-view="gazete"] .ekran-govdesi {
+  display: none;
+}
+
+/* Görsel yalnızca Görsel görünümünde. Varsayılan gizli: Panel ve Kart
+   görünümleri tasarım gereği görselsiz. */
+.haber-gorsel {
+  display: none;
+}
+
+html[data-view="gorsel"] .haber-gorsel {
+  display: block;
+}
+
+@media print {
+  .ekran-govdesi {
+    display: none !important;
+  }
+}
+
+/* Kart görünümünde Paylaş / Gizle şeridi: kartın tek bağlantısının altında,
+   ince bir kural çizgisiyle ayrılmış. */
+.kart-eylem {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--color-rule);
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem 0.45rem;
+}

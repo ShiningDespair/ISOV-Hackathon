@@ -303,3 +303,8 @@
     border-color: #000 !important;
   }
 }
+
+/* Bana Özel akışında etkin filtre satırı (bölge / etiket / bant). */
+.akis-filtre-satiri {
+  padding-top: 0.6rem;
+}
