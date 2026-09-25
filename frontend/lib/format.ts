@@ -133,10 +133,87 @@ export function kicker(article: Article): string {
   return parts.join(" · ");
 }
 
-/** Kategori adını okunur hale getirir: "mevzuat-degisikligi" -> "Mevzuat Değişikliği" */
+/**
+ * Veritabanındaki sabit değerlerin Türkçe görüntüleme adları.
+ *
+ * NEDEN: humanize() slug'ı yalnızca büyük harfle başlatıyordu; slug'lar
+ * ASCII olduğu için arayüze "Tesvik", "Ar Ge", "Ticaret Politikasi",
+ * "Cevre" ve haber detayında "DUYGU: Negatif" yerine "NEGATIF" düştü
+ * (25 Eylül 2026 persona testi, 5 personanın 5'i). Anahtarlar canlı
+ * veritabanından çıkarıldı: `SELECT DISTINCT category FROM articles`
+ * (19 değer) + şemadaki sentiment / source_type / period_type /
+ * trigger_type enum'ları + tags.kind enum'u. Burada olmayan değer
+ * humanize()'ın eski davranışına düşer.
+ */
+const CATEGORY_LABEL: Record<string, string> = {
+  "ar-ge": "Ar-Ge",
+  cevre: "Çevre",
+  "dis-ticaret": "Dış Ticaret",
+  duyuru: "Duyuru",
+  ekonomi: "Ekonomi",
+  emtia: "Emtia",
+  enerji: "Enerji",
+  finansman: "Finansman",
+  ihracat: "İhracat",
+  istihdam: "İstihdam",
+  lojistik: "Lojistik",
+  mevzuat: "Mevzuat",
+  sanayi: "Sanayi",
+  standart: "Standart",
+  "tedarik-zinciri": "Tedarik Zinciri",
+  teknoloji: "Teknoloji",
+  tesvik: "Teşvik",
+  "ticaret-politikasi": "Ticaret Politikası",
+  vergi: "Vergi",
+};
+
+const SENTIMENT_LABEL: Record<string, string> = {
+  POZITIF: "Olumlu",
+  NOTR: "Nötr",
+  NEGATIF: "Olumsuz",
+};
+
+/** Kaynak türü, rapor dönemi, çalıştırma tetikleyicisi ve etiket türü. */
+const ENUM_LABEL: Record<string, string> = {
+  // sources.source_type
+  kurum: "Kurum",
+  acik_veri: "Açık Veri",
+  basin: "Basın",
+  uluslararasi: "Uluslararası",
+  diger: "Diğer",
+  // reports.period_type
+  gunluk: "Günlük",
+  haftalik: "Haftalık",
+  aylik: "Aylık",
+  ozel: "Özel",
+  // collection_runs.trigger_type
+  manuel: "Manuel",
+  zamanlanmis: "Zamanlanmış",
+  seed: "Başlangıç Verisi",
+  // tags.kind
+  konu: "Konu",
+  sektor: "Sektör",
+  cografya: "Coğrafya",
+};
+
+/** Yalnızca sözlüğün kendi anahtarı ("constructor" gibi prototip adları değil). */
+function ownLabel(map: Record<string, string>, key: string): string | undefined {
+  return Object.prototype.hasOwnProperty.call(map, key) ? map[key] : undefined;
+}
+
+/**
+ * Sabit değeri okunur hale getirir: "ticaret-politikasi" -> "Ticaret Politikası",
+ * "NEGATIF" -> "Olumsuz". Sözlükte yoksa slug'ı kelime kelime büyük harfle başlatır.
+ */
 export function humanize(slug?: string | null): string {
   if (!slug) return "";
-  return slug
+  const key = String(slug).trim();
+  const known =
+    ownLabel(CATEGORY_LABEL, key.toLowerCase()) ??
+    ownLabel(SENTIMENT_LABEL, key.toUpperCase()) ??
+    ownLabel(ENUM_LABEL, key.toLowerCase());
+  if (known) return known;
+  return key
     .replace(/[-_]+/g, " ")
     .trim()
     .split(" ")
@@ -197,4 +274,26 @@ export function issueNumber(date = new Date()): string {
   const start = Date.UTC(date.getUTCFullYear(), 0, 1);
   const day = Math.floor((date.getTime() - start) / 86400000) + 1;
   return `${date.getUTCFullYear()}–${String(day).padStart(3, "0")}`;
+}
+
+
+/**
+ * Kaynak ADININ dili — `lang` niteliği için.
+ *
+ * `sources.language` kaynağın YAYIN dilidir, adının dili değil. İngilizce
+ * yayın yapan "Uluslararası Enerji Ajansı (IEA)" ya da "Avrupa Komisyonu
+ * Basın Odası"na `lang="en"` verilirse büyük harf dönüşümü İngilizce
+ * kurallarla yapılır ve "ULUSLARARASI ENERJI", "KOMISYONU" basılır (PDF
+ * tarafında Chromium'la ölçüldü). Kural: yayın dili İngilizce VE adda Türkçe
+ * harf yoksa "en"; aksi halde sayfanın `tr`'si geçerli kalsın. Böylece
+ * "Cyprus Mail" → "CYPRUS MAIL", "Uluslararası…" → "ULUSLARARASI…".
+ * "Cyprus Mail (Reuters servisi)" gibi karışık adlar Türkçe harf içermediği
+ * halde Türkçe kelime taşıyabilir; bu durumda "SERVISI" riski kabul edildi —
+ * kelime düzeyinde dil tespiti bu küçük sorun için fazla.
+ */
+export function kaynakAdiDili(
+  source?: { name?: string | null; language?: string | null } | null,
+): "en" | undefined {
+  if (!source || source.language !== "en") return undefined;
+  return /[çğıöşüÇĞİÖŞÜ]/.test(source.name ?? "") ? undefined : "en";
 }

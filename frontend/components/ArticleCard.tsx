@@ -12,7 +12,7 @@
  */
 
 import Link from "next/link";
-import { isoDate, formatDate, kicker, regionLabel, truncate } from "@/lib/format";
+import { isoDate, formatDate, kicker, regionLabel, truncate, kaynakAdiDili } from "@/lib/format";
 import type { Article } from "@/lib/types";
 import { paylasilacak } from "@/lib/api-me";
 import { BandBadge } from "./BandBadge";
@@ -23,7 +23,7 @@ function Kicker({ article }: { article: Article }) {
   return (
     <p className="u-kicker flex flex-wrap items-center gap-x-2 gap-y-1">
       {article.source?.name ? (
-        <span className="text-ink">{article.source.name}</span>
+        <span className="text-ink" lang={kaynakAdiDili(article.source)}>{article.source.name}</span>
       ) : null}
       <span aria-hidden="true" className="text-ink-faint">
         ·
@@ -149,7 +149,7 @@ export function CompactArticle({ article }: { article: Article }) {
         </h3>
       </Link>
       <p className="u-kicker mt-1 flex items-center gap-2">
-        <span>{article.source?.name ?? "Kaynak belirtilmemiş"}</span>
+        <span lang={kaynakAdiDili(article.source)}>{article.source?.name ?? "Kaynak belirtilmemiş"}</span>
         <BandBadge band={article.importance_band} />
       </p>
     </article>
@@ -171,7 +171,15 @@ export function NewspaperArticle({
           {article.title}
         </h3>
       </Link>
-      <p className="u-kicker mt-1 text-[0.625rem]">{kicker(article)}</p>
+      <p className="u-kicker mt-1 text-[0.625rem]">
+        {article.source?.name?.trim() ? (
+          <>
+            <span lang={kaynakAdiDili(article.source)}>{article.source.name.trim()}</span>
+            {" · "}
+          </>
+        ) : null}
+        {kicker({ ...article, source: null })}
+      </p>
       {withSummary && article.summary ? (
         <p className="u-body newspaper-justify mt-1.5 text-[0.875rem] leading-[1.45]">
           {truncate(article.summary, 260)}

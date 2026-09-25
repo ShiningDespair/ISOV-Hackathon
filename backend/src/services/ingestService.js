@@ -143,12 +143,19 @@ export async function upsertTags(conn, tags = []) {
     // 02_tags.sql'deki kuratorlu agirliklari asla asagi cekmez.
     const weight = clampByte(isObject ? tag.weight : undefined, UNCURATED_TAG_WEIGHT);
 
+    // Ad ve tür YALNIZCA yeni etiket eklenirken yazılır; var olan satırda
+    // korunur. NEDEN: seed etiketleri düz string geldiği için `label`
+    // labelFromSlug() ile slug'dan türüyor ("Celik", "Cbam", "Tcmb") ve
+    // eski `label = VALUES(label), kind = VALUES(kind)` 02_tags.sql'deki
+    // küratörlü adı ve türü eziyordu: 25 Eylül 2026 ölçümünde 402 etiketin
+    // yalnızca 71'inde Türkçe harf vardı; 98 küratörlü etiketin 42'sinin
+    // adı ASCII'ye, 29'unun türü 'konu'ya dönmüştü (haberde geçenler).
+    // Adlar 04_etiket_adlari.sql ile düzeltildi; bu upsert onları bir daha
+    // bozmamalı.
     await conn.execute(
       `INSERT INTO tags (slug, label, kind, weight)
        VALUES (?, ?, ?, ?)
        ON DUPLICATE KEY UPDATE
-         label = VALUES(label),
-         kind = VALUES(kind),
          weight = GREATEST(tags.weight, VALUES(weight))`,
       [slug, label, kind, weight],
     );

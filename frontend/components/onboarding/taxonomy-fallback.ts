@@ -21,6 +21,8 @@ import type {
   Taxonomy,
   TimeBudgetOption,
 } from "@/lib/types-auth";
+import { densityDetail } from "@/lib/api-auth";
+import { DENSITY, TIME_BUDGETS } from "@/lib/api-panel";
 
 /** Duzen kodu -> kullaniciya gosterilecek aciklama. */
 export const FALLBACK_LAYOUTS: Record<string, string> = {
@@ -73,32 +75,21 @@ export const FALLBACK_SECTORS: SectorOption[] = [
 ];
 
 /**
- * Vakit kademeleri. Sayilar keyfi degil, backend DENSITY ile ayni:
- * Turkce akici okuma ~200 kelime/dk uzerinden hesaplandi.
+ * Vakit kademeleri — `lib/api-panel.ts` DENSITY'den TÜRETİLİR, elle yazılmaz.
+ * NEDEN: bu liste elle yazılmıştı ve kademe 15 → 10 dakikaya indiğinde
+ * "15 dakika · 30 haber: ilk 10'u tam özet" olarak kaldı; backend
+ * taksonomisi gelmezse sihirbaz var olmayan bir kademe sunuyordu.
  */
-export const FALLBACK_TIME_BUDGETS: TimeBudgetOption[] = [
-  {
-    minutes: 2,
-    items: 5,
-    style: "tek-cumle",
-    label: "2 dakika",
-    detail: "5 haber, her biri tek cümlede (en fazla 150 karakter)",
-  },
-  {
-    minutes: 5,
-    items: 12,
-    style: "madde",
-    label: "5 dakika",
-    detail: "12 haber, her biri üç maddede",
-  },
-  {
-    minutes: 15,
-    items: 30,
-    style: "kademeli",
-    label: "15 dakika",
-    detail: "30 haber: ilk 10'u tam özet, sonraki 20'si üç madde",
-  },
-];
+export const FALLBACK_TIME_BUDGETS: TimeBudgetOption[] = TIME_BUDGETS.map((minutes) => {
+  const d = DENSITY[minutes];
+  return {
+    minutes,
+    items: d.items,
+    style: d.style,
+    label: `${minutes} dakika`,
+    detail: densityDetail(d),
+  };
+});
 
 /**
  * ILGI ALANLARI — etiket sozlugunden secilmis 48 kalem.

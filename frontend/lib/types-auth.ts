@@ -126,6 +126,8 @@ export interface SessionUser {
   role: UserRole;
   status?: string | null;
   tenant_key?: string | null;
+  /** Kurumun görünen adı ("İstanbul Sanayi Odası Vakfı"). */
+  tenant_name?: string | null;
   /** Yonetici sifre sifirladiginda true doner — giris sonrasi zorunlu adim. */
   must_change_password?: boolean;
 }

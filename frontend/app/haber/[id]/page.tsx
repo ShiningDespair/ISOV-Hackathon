@@ -18,8 +18,7 @@ import {
   humanize,
   isoDate,
   regionLabel,
-  truncate,
-} from "@/lib/format";
+  truncate, kaynakAdiDili } from "@/lib/format";
 import type { ClusterMember } from "@/lib/types";
 
 import { BandBadge, RegionBadge } from "@/components/BandBadge";
@@ -95,10 +94,33 @@ export default async function ArticlePage({ params }: { params: Params }) {
 
   /* Ortak içerik parçaları — iki görünüm de aynı veriyi kullanır. */
 
+  // Kaynak adının yanında haberin GERÇEK yayın adresi. NEDEN: basın müdürü
+  // testi "İSO PMI'ı Ticaret Gazetesi'ne atfedilmiş" dedi; ölçüldü, 131
+  // haberin 131'inde URL alan adı kaynağın ana sayfasıyla aynı — yani atıf
+  // doğru, haber gazetenin İSO verisini aktaran yazısı. Okurun bunu kendisi
+  // görmesi için alan adı yazılır. Adres kaynağın sitesinde DEĞİLSE (bugün
+  // 0 haber) kaynak yalnızca aktarandır ve bu açıkça söylenir. Birincil
+  // kaynak (İSO, TÜİK) alanı veri modelinde yok; tahminle yazılmaz.
+  const articleHost = hostOf(article.url);
+  const homeHost = hostOf(article.source?.homepage_url);
+  const hostDiffers =
+    Boolean(articleHost && homeHost) &&
+    articleHost !== homeHost &&
+    !articleHost.endsWith(`.${homeHost}`) &&
+    !homeHost.endsWith(`.${articleHost}`);
+
   const kickerLine = (
     <p className="u-kicker flex flex-wrap items-center gap-x-2 gap-y-1">
       {article.source?.name ? (
-        <span className="text-ink">{article.source.name}</span>
+        <span className="text-ink" lang={kaynakAdiDili(article.source)}>{article.source.name}</span>
+      ) : null}
+      {articleHost ? (
+        <>
+          <span aria-hidden="true" className="text-ink-faint">·</span>
+          <span className="normal-case tracking-normal" title="Haberin yayımlandığı adres">
+            {hostDiffers ? `Aktaran · asıl yayın: ${articleHost}` : articleHost}
+          </span>
+        </>
       ) : null}
       <span aria-hidden="true" className="text-ink-faint">·</span>
       <span>{regionLabel(article.region)}</span>
@@ -160,7 +182,9 @@ export default async function ArticlePage({ params }: { params: Params }) {
               </span>
               <div className="min-w-0 flex-1">
                 <p className="u-kicker">
-                  {member.source?.name ?? "Bilinmeyen kaynak"}
+                  <span lang={kaynakAdiDili(member.source)}>
+                    {member.source?.name ?? "Bilinmeyen kaynak"}
+                  </span>
                   {member.published_at ? (
                     <>
                       <span aria-hidden="true" className="mx-1.5 text-ink-faint">·</span>
@@ -356,7 +380,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
                 <dl className="space-y-2">
                   <div className="flex items-baseline justify-between gap-3 border-b border-rule pb-1.5">
                     <dt className="u-kicker">Kaynak</dt>
-                    <dd className="u-body text-right text-[0.9rem]">
+                    <dd className="u-body text-right text-[0.9rem]" lang={kaynakAdiDili(article.source)}>
                       {article.source?.name ?? "—"}
                     </dd>
                   </div>
@@ -421,7 +445,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
               </h1>
 
               <p className="u-kicker mt-3 border-y border-rule py-2 text-center">
-                {article.source?.name ?? "Kaynak"}
+                <span lang={kaynakAdiDili(article.source)}>{article.source?.name ?? "Kaynak"}</span>
                 {article.published_at ? (
                   <>
                     {" · "}
@@ -480,7 +504,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
                       {others.map((m) => (
                         <li key={m.id}>
                           <Link href={`/haber/${m.id}`}>
-                            <strong className="font-semibold">
+                            <strong className="font-semibold" lang={kaynakAdiDili(m.source)}>
                               {m.source?.name ?? "Kaynak"}:
                             </strong>{" "}
                             {m.title}

@@ -411,9 +411,9 @@ export function AdimVakit({
   return (
     <div>
       <p className="u-body u-body-soft text-[0.9375rem] leading-snug">
-        Günde ne kadar vaktiniz var? Bu seçim haber sayısını ve özet
-        uzunluğunu belirler. Sayılar okuma süresi aritmetiğinden geliyor
-        (Türkçe akıcı okuma yaklaşık 200 kelime/dakika).
+        Bu seçim haber sayısını ve özet uzunluğunu belirler. Sayılar okuma
+        süresi aritmetiğinden geliyor (Türkçe akıcı okuma yaklaşık 200
+        kelime/dakika).
       </p>
       <fieldset className="otur-grup mt-3">
       <legend className="sr-only">Günlük vaktiniz</legend>
@@ -436,11 +436,6 @@ export function AdimVakit({
         ))}
       </ul>
       </fieldset>
-      <p className="u-body u-body-soft mt-3 text-[0.8125rem] leading-snug">
-        15 dakika kademeli: 30 haberin hepsini tam özetle okumak yaklaşık 23
-        dakika sürerdi, yani vakit bütçesi hakkında yanlış bilgi vermiş
-        olurduk.
-      </p>
     </div>
   );
 }

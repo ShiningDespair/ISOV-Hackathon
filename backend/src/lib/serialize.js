@@ -73,6 +73,10 @@ export function serializeSource(row) {
     // satirda alanlar `null` doner, frontend tipinde ikisi de istege bagli.
     country_code: row.source_country_code ?? null,
     homepage_url: row.source_homepage_url ?? null,
+    // Kaynak adının dili: kartlar adı `lang` ile işaretler. NEDEN: sayfa
+    // lang="tr" ve CSS uppercase olduğu için "Cyprus Mail" -> "CYPRUS MAİL"
+    // basılıyordu (48 kaynağın dili 'en'). Seçmeyen sorguda null.
+    language: row.source_language ?? null,
   };
 }
 

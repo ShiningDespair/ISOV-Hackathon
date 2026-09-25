@@ -17,8 +17,7 @@ import {
   isoDate,
   normalizeBand,
   regionLabel,
-  truncate,
-} from "@/lib/format";
+  truncate, kaynakAdiDili } from "@/lib/format";
 import type { Article } from "@/lib/types";
 
 import { BandBadge } from "./BandBadge";
@@ -169,7 +168,11 @@ export function DigestCard({
         ) : null}
 
         <div className="kart-card-foot">
-          <span className="kart-source" title={article.source?.name ?? undefined}>
+          <span
+            className="kart-source"
+            title={article.source?.name ?? undefined}
+            lang={kaynakAdiDili(article.source)}
+          >
             {shortSource(article.source?.name) || "Kaynak belirtilmemiş"}
           </span>
           {article.published_at ? (

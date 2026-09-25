@@ -21,7 +21,7 @@ import { BandBadge } from "@/components/BandBadge";
 import { ArticleActions, HidableArticle } from "@/components/ArticleActions";
 import { paylasilacak } from "@/lib/api-me";
 import { leadSentence } from "@/components/DigestCard";
-import { formatDate, isoDate, regionLabel } from "@/lib/format";
+import { formatDate, isoDate, regionLabel, kaynakAdiDili } from "@/lib/format";
 import type { Article } from "@/lib/types";
 
 export type FlowStyle = "tek-cumle" | "madde" | "kademeli";
@@ -35,7 +35,11 @@ function FlowKicker({ article }: { article: Article }) {
   return (
     <p className="u-kicker mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
       {parts.map((part, i) => (
-        <span key={i} className={i === 0 ? "text-ink" : undefined}>
+        <span
+          key={i}
+          className={i === 0 ? "text-ink" : undefined}
+          lang={i === 0 ? kaynakAdiDili(article.source) : undefined}
+        >
           {part}
         </span>
       ))}

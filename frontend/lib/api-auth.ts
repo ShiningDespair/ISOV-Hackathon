@@ -28,6 +28,7 @@ import {
   serverCookieHeader,
   type ApiResult,
 } from "./api";
+import { DENSITY } from "./api-panel";
 import {
   normalizeFrequency,
   normalizeRole,
@@ -468,11 +469,41 @@ function normalizeSectors(raw: unknown): SectorOption[] {
   return out;
 }
 
-const STYLE_DETAIL: Record<string, string> = {
-  "tek-cumle": "her haber tek cümlede",
-  madde: "her haber üç maddede",
-  kademeli: "ilk 10 haber tam özet, sonraki 20 haber üç madde",
-};
+const SAYI_ADI: Record<number, string> = { 1: "bir", 2: "iki", 3: "üç", 4: "dört", 5: "beş" };
+
+/**
+ * Vakit kademesinin açıklaması — sayıların HEPSİ yoğunluk tablosundan
+ * (backend `lib/positions.js` DENSITY, yedeği `lib/api-panel.ts` DENSITY).
+ *
+ * NEDEN: metin eskiden elle yazılıydı ("ilk 10 haber tam özet, sonraki 20
+ * haber üç madde") ve kademe 15 → 10 dakikaya inince güncellenmedi;
+ * sihirbaz "10 dakika — 20 haber, ilk 10 tam özet, sonraki 20 üç madde"
+ * yazdı (10 + 20 ≠ 20). Nilgün P1-4, Burak P2-3, Selin P2-3.
+ */
+export function densityDetail(d: {
+  items: number;
+  full?: number;
+  bullets?: number;
+  style?: string;
+}): string {
+  const items = Number(d.items) || 0;
+  if (items <= 0) return "";
+  const full = Math.max(0, Math.min(items, Number(d.full) || 0));
+  const bullets = Number(d.bullets) || 0;
+  const madde = bullets > 0 ? `${SAYI_ADI[bullets] ?? bullets} madde` : "madde";
+  switch (d.style) {
+    case "tek-cumle":
+      return `${items} haber, her biri tek cümlede`;
+    case "madde":
+      return `${items} haber, her biri ${bullets > 0 ? `${SAYI_ADI[bullets] ?? bullets} maddede` : "maddeler hâlinde"}`;
+    case "kademeli":
+      return full > 0 && full < items
+        ? `${items} haber: ilk ${full} haber tam özet, sonraki ${items - full} haber ${madde}`
+        : `${items} haber`;
+    default:
+      return `${items} haber`;
+  }
+}
 
 /**
  * Yogunluk tablosunu okur: `{ "2": {items,style}, "5": {...} }`.
@@ -481,8 +512,10 @@ const STYLE_DETAIL: Record<string, string> = {
  * "2 dakika" yazip ne getirdigini soylemezdi — oysa kullanicinin karari
  * tam olarak o bilgiye bagli.
  */
-function densityMap(raw: unknown): Map<number, { items: number; style: string }> {
-  const out = new Map<number, { items: number; style: string }>();
+type DensityRow = { items: number; full: number; bullets: number; style: string };
+
+function densityMap(raw: unknown): Map<number, DensityRow> {
+  const out = new Map<number, DensityRow>();
   if (!raw || typeof raw !== "object") return out;
   for (const [k, v] of Object.entries(raw as Record<string, unknown>)) {
     const minutes = Number(k);
@@ -490,6 +523,8 @@ function densityMap(raw: unknown): Map<number, { items: number; style: string }>
     const o = (v && typeof v === "object" ? v : {}) as Record<string, unknown>;
     out.set(minutes, {
       items: Number(firstKey(o, ["items", "count", "haber"])) || 0,
+      full: Number(firstKey(o, ["full", "tam"])) || 0,
+      bullets: Number(firstKey(o, ["bullets", "madde"])) || 0,
       style: str(firstKey(o, ["style", "bicim"])),
     });
   }
@@ -527,9 +562,14 @@ function normalizeTimeBudgets(raw: unknown, rawDensity?: unknown): TimeBudgetOpt
   for (const o of rows) {
     const minutes = Number(firstKey(o, ["minutes", "time_budget", "dakika", "value"]));
     if (!Number.isFinite(minutes) || minutes <= 0) continue;
-    const d = density.get(minutes);
+    // Backend yoğunluğu gelmediyse istemcinin DENSITY kopyası (aynı sayılar).
+    const d =
+      density.get(minutes) ??
+      (minutes in DENSITY ? (DENSITY[minutes as keyof typeof DENSITY] as DensityRow) : undefined);
     const items = Number(firstKey(o, ["items", "count", "haber"])) || d?.items || 0;
     const style = str(firstKey(o, ["style", "bicim"])) || d?.style || "";
+    const full = Number(firstKey(o, ["full", "tam"])) || d?.full || 0;
+    const bullets = Number(firstKey(o, ["bullets", "madde"])) || d?.bullets || 0;
     out.push({
       minutes,
       items,
@@ -537,9 +577,7 @@ function normalizeTimeBudgets(raw: unknown, rawDensity?: unknown): TimeBudgetOpt
       label: `${minutes} dakika`,
       detail:
         str(firstKey(o, ["detail", "aciklama", "description"])) ||
-        (items
-          ? `${items} haber${STYLE_DETAIL[style] ? `, ${STYLE_DETAIL[style]}` : ""}`
-          : ""),
+        densityDetail({ items, full, bullets, style }),
     });
   }
   out.sort((a, b) => a.minutes - b.minutes);
@@ -645,6 +683,13 @@ function normalizeUser(raw: unknown): SessionUser {
     tenant_key:
       str(firstKey(o, ["tenant_key", "tenantKey"])) ||
       str((o.tenant as Record<string, unknown> | undefined)?.tenant_key) ||
+      null,
+    // Kurum ADI da taşınır. Önceden yalnızca anahtar taşınıyordu ve Hesabım
+    // menüsü kurum satırında "İstanbul Sanayi Odası Vakfı" yerine "isov"
+    // basıyordu (persona testi ekran görüntüsü). Backend adı zaten veriyor.
+    tenant_name:
+      str(firstKey(o, ["tenant_name", "tenantName"])) ||
+      str((o.tenant as Record<string, unknown> | undefined)?.name) ||
       null,
     must_change_password: Boolean(
       firstKey(o, ["must_change_password", "mustChangePassword"]),
