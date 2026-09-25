@@ -30,6 +30,7 @@ import {
 
 import { A11yControls } from "@/components/A11yControls";
 import { NewsletterPrefs } from "@/components/settings/NewsletterPrefs";
+import { ProfileSettings } from "@/components/settings/ProfileSettings";
 import { SettingsSection } from "@/components/settings/Parts";
 import { SourcesPanel } from "@/components/settings/SourcesPanel";
 import { SuggestionsPanel } from "@/components/settings/SuggestionsPanel";
@@ -125,13 +126,31 @@ export default async function SettingsPage() {
         <p className="u-kicker u-kicker-accent">Panel</p>
         <h1 className="u-headline u-headline-lg mt-1">Ayarlar</h1>
         <p className="u-body u-body-soft mt-2 max-w-3xl text-[0.95rem]">
-          Görünüm ve erişilebilirlik tercihleri yalnızca bu tarayıcıda saklanır.
-          Kaynaklar ve kaynak önerileri sunucuda tutulur; burada yapılan
-          değişiklik bülteni herkes için etkiler.
+          Profil sunucuda, hesabınıza kayıtlıdır; haber sıralamanızı ve panel
+          düzeninizi o belirler. Görünüm ve erişilebilirlik tercihleri
+          yalnızca bu tarayıcıda saklanır. Kaynaklar ve kaynak önerileri
+          sunucuda tutulur; orada yapılan değişiklik kurumunuzun panelini
+          etkiler.
         </p>
       </header>
 
-      {/* ---------------- a) GÖRÜNÜM ---------------- */}
+      {/* ---------------- a) PROFİL ----------------
+          EN ÜSTTE ve ilk bölüm olması bilinçli: sayfadaki tek SUNUCU
+          TARAFLI, hesaba yazılan ve sıralamayı gerçekten değiştiren ayar
+          bu. Aşağıdaki görünüm/erişilebilirlik tercihleri tarayıcıya
+          yazılıyor ve yalnızca sunumu etkiliyor. */}
+      <SettingsSection
+        id="profil"
+        kicker="Hesap"
+        title="Profil"
+        lead="Pozisyon, sektör, ilgi alanları ve vakit bütçesi. Kayıt sırasında seçtikleriniz burada durur ve her zaman değiştirilebilir; kaydettiğinizde haber sıralamanız ve panel düzeniniz yeniden hesaplanır."
+      >
+        <div className="max-w-3xl">
+          <ProfileSettings />
+        </div>
+      </SettingsSection>
+
+      {/* ---------------- b) GÖRÜNÜM ---------------- */}
       <SettingsSection
         id="gorunum"
         kicker="Tercih"
@@ -141,7 +160,7 @@ export default async function SettingsPage() {
         <ViewPreferences />
       </SettingsSection>
 
-      {/* ---------------- b) ERİŞİLEBİLİRLİK ---------------- */}
+      {/* ---------------- c) ERİŞİLEBİLİRLİK ---------------- */}
       <SettingsSection
         id="erisilebilirlik"
         kicker="Tercih"
@@ -153,7 +172,7 @@ export default async function SettingsPage() {
         </div>
       </SettingsSection>
 
-      {/* -------- c) KAYNAKLAR  +  d) KAYNAK ÖNER (yan yana) -------- */}
+      {/* -------- d) KAYNAKLAR  +  e) KAYNAK ÖNER (yan yana) -------- */}
       <div className="grid grid-cols-1 gap-x-10 lg:grid-cols-12">
         <div className="min-w-0 lg:col-span-7 xl:col-span-8">
           <SettingsSection
@@ -185,7 +204,7 @@ export default async function SettingsPage() {
         </div>
       </div>
 
-      {/* ---------------- e) BÜLTEN TERCİHLERİ ---------------- */}
+      {/* ---------------- f) BÜLTEN TERCİHLERİ ---------------- */}
       <SettingsSection
         id="bulten"
         kicker="Tercih"
@@ -197,7 +216,7 @@ export default async function SettingsPage() {
         </div>
       </SettingsSection>
 
-      {/* ---------------- f) SİSTEM BİLGİSİ ---------------- */}
+      {/* ---------------- g) SİSTEM BİLGİSİ ---------------- */}
       <SettingsSection
         id="sistem"
         kicker="Salt Okunur"
