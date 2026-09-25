@@ -1,10 +1,18 @@
 /**
- * Panelin ortak parçaları: başlık, bilgi notu, bölüm sarmalayıcı ve
- * düzen önizleme bağlantıları.
+ * Panelin ortak parçaları: başlık, bilgi notu, bölüm sarmalayıcı,
+ * katlanmış filtre ve düzen önizleme bağlantıları.
  */
 
 import Link from "next/link";
+import { Suspense } from "react";
 
+import {
+  ActiveFilters,
+  BandFilter,
+  RegionTabs,
+  type FilterState,
+} from "@/components/Filters";
+import { SearchBox } from "@/components/SearchBox";
 import { SectionRule } from "@/components/States";
 import {
   LAYOUT_HINTS,
@@ -42,14 +50,48 @@ export function PanoNotice({
 export function PanoNotices({
   notices,
   warnFirst = false,
+  tekSatir = false,
 }: {
   notices: string[];
   /** İlk not bir uyarı mı (profil/oturum durumu) yoksa düz bilgi mi. */
   warnFirst?: boolean;
+  /** Bütün notlar tek satırlık bir `<details>` içinde — bkz. gövde. */
+  tekSatir?: boolean;
 }) {
   if (notices.length === 0) return null;
 
   const [first, ...rest] = notices;
+
+  /*
+   * TEK SATIR KİPİ (Bana Özel, "Bugün Bilmeniz Gereken 3 Şey" bloğunun
+   * altı). Açık ilk not bile 2–3 satır (~60 px) yiyordu ve mobil
+   * 390×844'te haber başlığı ile yarışıyordu. Burada HİÇBİR not
+   * silinmiyor: özet satırı ilk notun kendisi (tek satırda, taşarsa "…"),
+   * dokununca hepsi tam metinle açılıyor. Uyarı tonu özet satırında da
+   * duruyor — renk tek başına değil, "Uyarı:" öneki yazılı (WCAG 1.4.1).
+   */
+  if (tekSatir) {
+    return (
+      <details className="akis-not-tek" data-ton={warnFirst ? "uyari" : "bilgi"}>
+        <summary className="akis-not-tek-ozet">
+          <span className="akis-not-tek-metin">
+            {warnFirst ? "Uyarı: " : "Not: "}
+            {first}
+          </span>
+          {rest.length > 0 ? (
+            <span className="akis-not-tek-sayi">+{rest.length}</span>
+          ) : null}
+        </summary>
+        <div className="akis-not-govde">
+          {notices.map((note, i) => (
+            <PanoNotice key={i} tone={i === 0 && warnFirst ? "uyari" : "bilgi"}>
+              {note}
+            </PanoNotice>
+          ))}
+        </div>
+      </details>
+    );
+  }
 
   return (
     <div className="pano-bilgi-yigin">
@@ -188,5 +230,54 @@ export function LayoutPreview({
         ))}
       </ul>
     </nav>
+  );
+}
+
+/**
+ * KATLANMIŞ "FİLTRELE" — Bana Özel akışının TEK filtre yeri.
+ *
+ * Neden: kişisel akışta Görsel görünümü kendi bölge + bant şeridini,
+ * Kart görünümü kendi 7 bölge çipini basıyordu; mobil 390×844'te bu
+ * şeritler ilk haberi ekranın altına iten kalemlerin en büyüklerindendi
+ * (Kart: ~100 px, Görsel: ~170 px). Üstelik Panel ve Gazete yuvalarında
+ * hiç filtre yoktu ve arama kutusu Bana Özel'de hiçbir görünümde yoktu
+ * (persona testi: teşvik uzmanı aramayı bulamadı). Şimdi dört görünümde
+ * de aynı, kapalıyken tek satır (44 px dokunma hedefi): içinde bölge,
+ * bant ve arama. `<details>` JS'siz çalışır, klavyeyle açılır.
+ *
+ * Bağlantılar `state` ile üretilir; `state` içinde `akis=ozel` olduğu için
+ * filtre seçmek kullanıcıyı genel akışa düşürmez. Arama kutusu URL'deki
+ * mevcut parametreleri (akis dahil) koruyarak `q` ekler.
+ *
+ * Etkin filtre varsa özet satırında SAYISI yazılır ve etkin filtre çipleri
+ * details'in DIŞINDA görünür kalır: "neden bu kadar az haber var"
+ * sorusunun cevabı katlanmamalı.
+ */
+export function PanoFiltrele({
+  state,
+  etkinSayi,
+}: {
+  state: FilterState;
+  etkinSayi: number;
+}) {
+  return (
+    <div className="akis-filtrele">
+      <details className="akis-filtrele-katla">
+        <summary className="akis-filtrele-ozet">
+          Filtrele ve ara
+          {etkinSayi > 0 ? (
+            <span className="akis-filtrele-sayi">{etkinSayi} etkin</span>
+          ) : null}
+        </summary>
+        <div className="akis-filtrele-govde">
+          <Suspense fallback={null}>
+            <SearchBox className="w-full" />
+          </Suspense>
+          <RegionTabs state={state} />
+          <BandFilter state={state} />
+        </div>
+      </details>
+      {etkinSayi > 0 ? <ActiveFilters state={state} /> : null}
+    </div>
   );
 }

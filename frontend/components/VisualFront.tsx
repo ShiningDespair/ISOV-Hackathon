@@ -24,6 +24,7 @@ import {
   formatNumber,
   humanize,
   isoDate,
+  kaynakAdiDili,
   regionLabel,
   truncate,
 } from "@/lib/format";
@@ -55,7 +56,7 @@ function placeholderLabel(article: Article): string {
 function MetaLine({ article }: { article: Article }) {
   return (
     <p className="u-kicker flex flex-wrap items-center gap-x-2 gap-y-1">
-      <span className="text-ink">
+      <span className="text-ink" lang={kaynakAdiDili(article.source)}>
         {article.source?.name?.trim() || "Kaynak belirtilmemiş"}
       </span>
       <span aria-hidden="true" className="text-ink-faint">
@@ -235,6 +236,8 @@ export function VisualFront({
   total,
   state,
   baslikDuzeyi = 1,
+  filtreSeridi = true,
+  mansetBasligi = "Günün Manşeti",
 }: {
   articles: Article[];
   total: number;
@@ -252,6 +255,24 @@ export function VisualFront({
    * Bu yuzden duzey cagirana birakildi, bilesen icinde tahmin edilmiyor.
    */
   baslikDuzeyi?: 1 | 2;
+  /**
+   * Bölge + bant filtre şeridi basılsın mı. VARSAYILAN AÇIK (genel akış
+   * aynen kalır).
+   *
+   * Neden kapatılabilir: Bana Özel akışında mobil 390×844'te ilk haber
+   * başlığı y=863'teydi (ekran 844); önündeki ~170 px'in büyük kısmı bu
+   * şeritti (7 bölge sekmesi + 4 bant çipi). Kişisel akışta kabuk tek,
+   * katlanmış bir "Filtrele" basıyor (bölge, bant, arama) — ikinci bir
+   * şerit hem yer yer hem de "hangisi geçerli" sorusu doğururdu.
+   */
+  filtreSeridi?: boolean;
+  /**
+   * İlk haber bölümünün başlığı. Genel akışta "Günün Manşeti". Bana
+   * Özel'de ilk üç haber kabuktaki "Bugün Bilmeniz Gereken 3 Şey"
+   * bloğunda; buradaki ilk haber dördüncü sıradaki olduğu için ona
+   * "manşet" demek yanlış olurdu.
+   */
+  mansetBasligi?: string;
 }) {
   const Baslik = baslikDuzeyi === 1 ? "h1" : "h2";
   const lead = articles[0];
@@ -266,13 +287,15 @@ export function VisualFront({
 
       {/* Filtre şeridi — panel görünümüyle aynı düzen (arama kutusu ana
           görünümde tek örnek kalsın diye burada tekrarlanmıyor). */}
-      <section aria-label="Bülten filtreleri" className="border-b border-ink py-3">
-        <RegionTabs state={state} />
-        <div className="mt-3 flex flex-col gap-3">
-          <BandFilter state={state} />
-          <ActiveFilters state={state} />
-        </div>
-      </section>
+      {filtreSeridi ? (
+        <section aria-label="Bülten filtreleri" className="border-b border-ink py-3">
+          <RegionTabs state={state} />
+          <div className="mt-3 flex flex-col gap-3">
+            <BandFilter state={state} />
+            <ActiveFilters state={state} />
+          </div>
+        </section>
+      ) : null}
 
       {articles.length === 0 ? (
         <EmptyState />
@@ -281,7 +304,7 @@ export function VisualFront({
           {lead ? (
             <section className="pt-6">
               <SectionRule
-                title="Günün Manşeti"
+                title={mansetBasligi}
                 right={`${formatNumber(total)} haber`}
               />
               <VisualLead article={lead} />

@@ -51,6 +51,9 @@ export function DigestFront({
   total,
   state,
   sayiSeridi = true,
+  baslikBlogu = true,
+  filtreSeridi = true,
+  siraNo,
 }: {
   articles: Article[];
   total: number;
@@ -65,6 +68,33 @@ export function DigestFront({
    * kabuk serit basmadigi icin varsayilan ACIK kalir.
    */
   sayiSeridi?: boolean;
+  /**
+   * "Kart Görünümü / Bugünün Özeti" başlığı ve açıklaması basılsın mı.
+   * VARSAYILAN AÇIK (genel akış aynen kalır).
+   *
+   * Neden kapatılabilir (persona testi, mobil 390×844): Bana Özel'de
+   * ilk kart y=813–872'deydi, ekran 844. Bu başlık bloğu (~110 px) ve
+   * altındaki 7 bölge çipi (~100 px, 44 px'lik iki satır) haberi ekranın
+   * dışına iten iki büyük kalemdi. Kişisel akışta sayfanın başlığı kabuğun
+   * "Bugün Bilmeniz Gereken 3 Şey" bloğu.
+   */
+  baslikBlogu?: boolean;
+  /**
+   * Bölge çip şeridi basılsın mı. VARSAYILAN AÇIK. Kişisel akışta kabuk
+   * tek, katlanmış bir "Filtrele" basıyor (bölge, bant, arama).
+   */
+  filtreSeridi?: boolean;
+  /**
+   * Kartın sıra numarası (haber id → API sırasındaki yeri, 1 tabanlı).
+   * VERİLMEZSE eski davranış: dizideki yeri ("01", "02"…).
+   *
+   * Neden: Bana Özel'de ilk üç haber kabuktaki "Bugün Bilmeniz Gereken 3
+   * Şey"de, aksiyon/takip düzeninde tarihli kalemler de kendi
+   * bölümünde. Buradaki ilk kart API sırasının 4.'sü (ya da daha
+   * gerisi); "01" yazmak sırayı yalanlardı. Numara API'den gelen dizideki
+   * yerdir — yeniden sıralama yok, yalnızca doğru etiket.
+   */
+  siraNo?: Record<number, number>;
 }) {
   const shown = articles.length;
 
@@ -88,6 +118,7 @@ export function DigestFront({
 
   return (
     <div className="kart-shell mx-auto w-full max-w-[1440px] px-4 pb-14 sm:px-6">
+      {baslikBlogu ? (
       <header className="kart-head">
         <p className="u-kicker u-kicker-accent">Kart Görünümü</p>
         <h2 className="u-headline kart-page-title">Bugünün Özeti</h2>
@@ -98,6 +129,7 @@ export function DigestFront({
             : ""}
         </p>
       </header>
+      ) : null}
 
       {/* Sayısal özet şeridi — okuma yükünü sayıya devreder.
           Bana Özel akışında `sayiSeridi={false}` ile kapatılır; orada
@@ -113,6 +145,7 @@ export function DigestFront({
 
       {/* Tek filtre: bölge. Bu görünümün amacı sadeleştirmek olduğu için
           band, etiket ve arama şeritleri bilinçli olarak yok. */}
+      {filtreSeridi ? (
       <nav aria-label="Bölge filtresi" className="kart-filter">
         {regionItems.map((item) => {
           const active = (state.region ?? undefined) === item.key;
@@ -129,6 +162,7 @@ export function DigestFront({
           );
         })}
       </nav>
+      ) : null}
 
       {shown === 0 ? (
         <EmptyState />
@@ -138,7 +172,7 @@ export function DigestFront({
             <DigestCard
               key={article.id}
               article={article}
-              order={index + 1}
+              order={siraNo?.[article.id] ?? index + 1}
             />
           ))}
         </div>

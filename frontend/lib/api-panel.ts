@@ -212,8 +212,28 @@ export interface PanelMe {
   positionLabel: string | null;
   fullName: string | null;
   timeBudget: TimeBudget | null;
+  /**
+   * Profildeki ilgi alanı etiketleri ve odak bölgeleri.
+   *
+   * Neden burada: Bana Özel'in "Bugün Bilmeniz Gereken 3 Şey" bloğu her
+   * kalem için "Neden sizin için" satırı basıyor ve o satır YALNIZCA
+   * gerçek eşleşmeden yazılabilir (haberin etiketi ∩ bu liste). `/auth/me`
+   * bu alanları zaten döndürüyor (ölçüldü: emre.tunc → 9 ilgi alanı,
+   * region_focus []); ikinci bir istek atmak yerine aynı yanıttan okunur.
+   * Profil yoksa ya da okunamadıysa BOŞ DİZİ — eşleşme uydurulmaz.
+   */
+  interestTagSlugs: string[];
+  regionFocus: string[];
   /** Kullanıcıya gösterilecek açıklama (durum `etkin` değilse). */
   note: string | null;
+}
+
+/** Profil alanını dize dizisine indirger; dizi değilse boş dizi. */
+function stringList(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((v) => (typeof v === "string" ? v.trim() : ""))
+    .filter((v) => v !== "");
 }
 
 const ME_NOTES: Record<Exclude<PersonalizationStatus, "etkin">, string> = {
@@ -241,6 +261,8 @@ export async function getPanelMe(auth: PanelAuth = {}): Promise<PanelMe> {
       positionLabel: null,
       fullName: null,
       timeBudget: null,
+      interestTagSlugs: [],
+      regionFocus: [],
       note: ME_NOTES[status],
     };
   }
@@ -282,6 +304,8 @@ export async function getPanelMe(auth: PanelAuth = {}): Promise<PanelMe> {
       return name ? String(name) : null;
     })(),
     timeBudget: rawBudget === undefined ? null : normalizeTimeBudget(rawBudget),
+    interestTagSlugs: stringList(profile.interest_tag_slugs),
+    regionFocus: stringList(profile.region_focus),
     note:
       layout === null
         ? "Profil okundu ancak panel düzeni sunucudan gelmedi; varsayılan düzen gösteriliyor."

@@ -308,3 +308,349 @@
 .akis-filtre-satiri {
   padding-top: 0.6rem;
 }
+
+/* ================================================================
+   7. "BUGUN BILMENIZ GEREKEN 3 SEY" (TUR 4 — BugununUcu.tsx)
+
+   Olculen hata: mobil 390x844'te Bana Ozel akisinda ilk gercek haber
+   y=813-872'deydi (ekran 844), ilk ekranda SIFIR haber. Bu blok akis
+   anahtarinin hemen altinda. Satir SINIRLARI bilincli: basligin 3,
+   cumlenin 2, gerekcenin 2 satiri gecmemesi bloğun en kotu durumda da
+   ~34 + 3 x ~223 px'te kalmasini GARANTI eder (hesap BugununUcu.tsx
+   basinda). Kesilen metin kaybolmaz: baslik haber sayfasina baglanti,
+   tam ozet orada.
+   ================================================================ */
+
+.akis-uc {
+  padding-top: 0.5rem;
+}
+
+.akis-uc-ust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.2rem 0.8rem;
+  border-bottom: 2px solid var(--color-ink);
+  padding-bottom: 0.3rem;
+}
+
+/* Baslik + not 390 px'te TEK satira sigsin diye 0.75rem / 0.05em:
+   0.8125rem / 0.08em'de not ikinci satira kayiyor ve bloga ~18 px
+   ekliyordu (olculdu: ust bolum 51 px). */
+.akis-uc-ust-baslik {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.akis-uc-ust-not {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+}
+
+.akis-uc-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.akis-uc-kalem {
+  border-bottom: 1px solid var(--color-rule);
+  padding-block: 0.6rem 0.65rem;
+  min-width: 0;
+}
+
+.akis-uc-govde {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.akis-uc-baslik {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--color-ink);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.akis-uc-baglanti {
+  color: inherit;
+  text-decoration: none;
+}
+
+.akis-uc-baglanti:hover,
+.akis-uc-baglanti:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.akis-uc-cumle {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--color-ink);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Gerekce satiri: bant rozeti + yazili gerekce. Renk tek basina bilgi
+   tasimaz (WCAG 1.4.1): rozetin metni ("Kritik") ve "Neden sizin icin:"
+   oneki yazili. Kisisel/genel ayrimi da metinde ("Neden burada:"). */
+.akis-uc-neden {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+.akis-uc-neden > * + * {
+  margin-inline-start: 0.4rem;
+}
+
+.akis-uc-neden-etiket {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.akis-uc-eylem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* WhatsApp: tek dokunus, >= 44 px. Marka yesili KULLANILMIYOR: paleti
+   yalnizca --color-* jetonlari tasir, erisilebilirlik paletleri
+   --color-accent'i yeniden tanimliyor. Dugmeyi tanitan sey metni. */
+.akis-uc-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-paper);
+  background-color: var(--color-ink);
+  border: 1px solid var(--color-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.akis-uc-wa:hover,
+.akis-uc-wa:focus-visible {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.akis-uc-wa-ikon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Blok icindeki Paylas / Gizle dugmeleri de 44 px. `.eylem-btn`
+   globals.css'te (0,1,0); burada (0,2,0) — dosya sirasi fark etmez. */
+.akis-uc-eylem .eylem-btn {
+  min-height: 44px;
+  min-width: 44px;
+  justify-content: center;
+  padding-inline: 0.6rem;
+}
+
+.akis-uc-eylem .eylem-kok {
+  align-items: center;
+}
+
+.akis-uc-eylem .eylem-ikon {
+  font-size: 1rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* 8. TEK SATIRLIK NOT (PanoNotices tekSatir)                        */
+/* ---------------------------------------------------------------- */
+
+.akis-not-tek {
+  margin-top: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  border-left: 3px solid var(--color-ink-soft);
+  background-color: var(--color-paper-deep);
+}
+
+.akis-not-tek[data-ton="uyari"] {
+  border-left-color: var(--color-accent);
+}
+
+.akis-not-tek-ozet {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  color: var(--color-ink);
+  list-style: none;
+}
+
+.akis-not-tek-ozet::-webkit-details-marker {
+  display: none;
+}
+
+.akis-not-tek-metin {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.akis-not-tek[open] .akis-not-tek-metin {
+  white-space: normal;
+}
+
+.akis-not-tek-sayi {
+  flex: none;
+  font-weight: 700;
+  color: var(--color-ink-soft);
+}
+
+.akis-not-tek > .akis-not-govde {
+  padding: 0 0.6rem 0.6rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* 9. KATLI "FILTRELE VE ARA" (PanoFiltrele)                         */
+/* ---------------------------------------------------------------- */
+
+.akis-filtrele {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.6rem;
+}
+
+.akis-filtrele-katla {
+  border: 1px solid var(--color-rule-strong);
+}
+
+.akis-filtrele-ozet {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+/* `display:flex` summary'de tarayicinin ucgen isareti kayboluyor
+   (olculdu: Chromium'da isaret yok). Acik/kapali durumu gorunur bir
+   isaretle yazilir; ekran okuyucu icin `open` niteligi zaten duyuruluyor
+   (details yerlesik davranisi). */
+.akis-filtrele-ozet::after,
+.akis-not-tek-ozet::after {
+  content: "+";
+  margin-inline-start: auto;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-ink);
+}
+
+.akis-filtrele-katla[open] > .akis-filtrele-ozet::after,
+.akis-not-tek[open] > .akis-not-tek-ozet::after {
+  content: "−";
+}
+
+.akis-filtrele-ozet::-webkit-details-marker {
+  display: none;
+}
+
+.akis-filtrele-katla[open] > .akis-filtrele-ozet {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.akis-filtrele-sayi {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--color-paper);
+  background-color: var(--color-ink);
+  padding: 0.1rem 0.45rem;
+}
+
+.akis-filtrele-govde {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  min-width: 0;
+}
+
+/* Filtrele icindeki bant cipleri ve bolge sekmeleri: mobilde 44 px
+   dokunma hedefi. Genel akistaki ayni bilesenlere DOKUNULMUYOR —
+   yalnizca bu kabin icinde. */
+.akis-filtrele-govde .tag-chip,
+.akis-filtrele-govde nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* Arama kutusu ve "Ara" dugmesi olculdu: 38 px. */
+.akis-filtrele-govde input[type="search"],
+.akis-filtrele-govde button[type="submit"] {
+  min-height: 44px;
+}
+
+/* Akis anahtari (Bana Ozel / Genel): 44 px dokunma hedefi. Eski yorum
+   34 px'te birakmisti; persona testinde uretim muhendisi "eldivenle
+   17-21 px'lik hedefi tutturamam" dedi. Nitelikli secici (0,2,0). */
+.akis-anahtar-oge[href] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+@media print {
+  .akis-uc-eylem,
+  .akis-filtrele,
+  .akis-not-tek {
+    display: none !important;
+  }
+}

@@ -40,7 +40,13 @@
  *     tek satırlık bir bağlantı duruyor. Grafik, haber başlığını ekranın
  *     dışına iten en pahalı öğeydi ve zaten bir istatistik sayfasının işi.
  *
- * GÖRÜNÜM YUVALARI: panelin KABUĞU (başlık, KPI şeridi, şerit, bölümler)
+ * İLK EKRAN (TUR 4, persona testi): akışın EN ÜSTÜNDE, dört görünümde de
+ * aynı "Bugün Bilmeniz Gereken 3 Şey" bloğu (`BugununUcu`) durur; panel
+ * başlığı, KPI şeridi ve kayan şerit onun ALTINA indi, bilgi notları tek
+ * satıra katlandı, filtreler tek bir katlı "Filtrele ve ara"da. Ölçülen
+ * hata ve piksel bütçesi: `BugununUcu.tsx` başı ve aşağıdaki render.
+ *
+ * GÖRÜNÜM YUVALARI: panelin KABUĞU (üç şey, başlık, KPI, şerit, bölümler)
  * yuvaların DIŞINDA bir kez basılır; yalnızca HABER AKIŞI dört yuvaya
  * ayrı ayrı basılır. Yani `akis` içeriği ve yoğunluğu seçer, `view`
  * sunumu seçer.
@@ -67,7 +73,7 @@ import { regionLabel, toBuckets } from "@/lib/format";
 import type { Article, StatsOverview } from "@/lib/types";
 
 import { DigestFront } from "@/components/DigestFront";
-import { ActiveFilters, type FilterState } from "@/components/Filters";
+import type { FilterState } from "@/components/Filters";
 import { DataUnavailable } from "@/components/States";
 import { VisualFront } from "@/components/VisualFront";
 import {
@@ -81,8 +87,10 @@ import { CalendarList, type CalendarItem } from "@/components/dashboard/Calendar
 import { ChangeFeed } from "@/components/dashboard/ChangeFeed";
 import { HeadlineStrip } from "@/components/dashboard/HeadlineStrip";
 import { KpiRow, type Kpi } from "@/components/dashboard/KpiRow";
+import { BugununUcu, UCU_ADET } from "@/components/dashboard/BugununUcu";
 import {
   LayoutPreview,
+  PanoFiltrele,
   PanoHeader,
   PanoNotice,
   PanoNotices,
@@ -249,7 +257,7 @@ export async function PersonalPanel({
     const v = firstParam(params[key]);
     if (v && v.trim() !== "") filtreler[key] = v.trim();
   }
-  const filtreVar = Object.keys(filtreler).length > 0;
+  const filtreSayisi = Object.keys(filtreler).length;
 
   /**
    * Gorsel ve kart gorunumlerine gecen GEZINTI durumu.
@@ -291,14 +299,22 @@ export async function PersonalPanel({
 
   const articles: Article[] = listRes.ok ? listRes.data.data : [];
 
+  // --- "Bugün Bilmeniz Gereken 3 Şey" ------------------------------
+  // API'nin kişisel sırasının İLK ÜÇÜ — dilimleme, sıralama değil.
+  const ustUc: Article[] = listRes.ok ? articles.slice(0, UCU_ADET) : [];
+  const ustIds = new Set(ustUc.map((a) => a.id));
+
   // Şerit ayrı bir sorgudan beslenir: en önemli konular = KRİTİK bant.
   // API sırası korunur; 6 başlık dolmazsa ana listeden tamamlanır.
+  // Üç şeyde duran haberler şeride ALINMAZ (`seen` onlarla başlar):
+  // ölçüldü, Emre'nin panelinde OVP haberi hem 1. kalemde hem şeridin
+  // başındaydı — ilk iki ekranda aynı başlık iki kez.
   const stripRes = await getPanelArticles(
     { band: "KRITIK", limit: STRIP_MAX },
     auth,
   );
   const strip: Article[] = [];
-  const seen = new Set<number>();
+  const seen = new Set<number>(ustIds);
   for (const a of stripRes.ok ? stripRes.data.data : []) {
     if (seen.has(a.id)) continue;
     seen.add(a.id);
@@ -335,9 +351,25 @@ export async function PersonalPanel({
     }
   }
 
-  // Ayırma: tarihli kalemler kendi bölümünde, kalanlar akışta. Her iki
-  // bölümün İÇİNDE API sırası korunuyor.
-  const flowArticles = articles.filter((a) => !dated.has(a.id));
+  // Üç şey aşağıda (yapılacaklar, takvim, akış) TEKRAR BASILMAZ; ama
+  // KPI sayıları (`tasks`, `calendar`) tüm liste üzerinden kalır, çünkü
+  // "Son Tarihli Kalem: 3" sayısı haberin hangi bölümde durduğundan
+  // bağımsız bir gerçek.
+  const tasksShown = tasks.filter((t) => !ustIds.has(t.article.id));
+  const calendarShown = calendar.filter((c) => !ustIds.has(c.article.id));
+
+  // Ayırma: üç şey en üstte, tarihli kalemler kendi bölümünde, kalanlar
+  // akışta. Her bölümün İÇİNDE API sırası korunuyor.
+  const flowArticles = articles.filter(
+    (a) => !dated.has(a.id) && !ustIds.has(a.id),
+  );
+
+  // Kart görünümünün sıra numarası API dizisindeki YER (1 tabanlı) — akış
+  // üç şeyden ve tarihli kalemlerden sonra başladığı için "01" yanlış olurdu.
+  const apiSirasi: Record<number, number> = {};
+  articles.forEach((a, i) => {
+    apiSirasi[a.id] = i + 1;
+  });
 
   // --- Değişiklik akışı (yalnızca takip düzeni ister) -------------
   const changes: PanelChanges =
@@ -531,8 +563,49 @@ export async function PersonalPanel({
     </PanoNotice>
   );
 
+  // Görsel/Kart görünümleri boş diziyle çağrılırsa "haber bulunamadı"
+  // boş durumunu basıyor — üç haber hemen yukarıdayken yanlış bir cümle.
+  // Akışa kalem düşmediyse dört görünümde de aynı dürüst not basılır.
+  const akisBos = !listBroken && flowArticles.length === 0;
+
   return (
     <div className="pano-page akis-ozel">
+      {/* ---- İLK EKRAN BÜTÇESİ (mobil 390×844) ----
+          Ölçülen hata: Bana Özel'de ilk gerçek haber y=813–872'deydi, yani
+          ilk ekranda SIFIR haber. Şimdiki sıra ve ölçülen yükseklikler
+          (yerel kopya, emre.tunc; masthead + akış anahtarı 0–251):
+            1. Bugün Bilmeniz Gereken 3 Şey ... 251–919 → başlıklar
+               y = 292 / 500 / 703, ilk ekranda 3 başlık
+            2. Filtrele ve ara (kapalı) ....... ~56 px   (ilk ekranın altı)
+            3. Notlar (tek satır, katlı) ...... ~44 px   (not varsa)
+            4. Panel başlığı .................. ~82 px
+            5. KPI şeridi (sıkı) .............. ~70 px
+            6. Kayan şerit .................... ~70 px
+            7. Yapılacaklar / takvim, görünüm akışı
+          Kalem başına bütçe ve en kötü durum `BugununUcu.tsx` başında.
+          1'den sonrası ilk ekranda OLMAK ZORUNDA DEĞİL; hedef "kaydırmadan
+          en az 3 gerçek haber başlığı, ilki y < 400". */}
+      {listBroken ? null : (
+        <BugununUcu
+          articles={ustUc}
+          profil={{
+            interestTagSlugs: me.interestTagSlugs,
+            regionFocus: me.regionFocus,
+          }}
+          personalized={personalized}
+        />
+      )}
+
+      {/* Tek filtre yeri — dört görünümde de aynı, katlı. Görsel ve Kart
+          görünümlerinin kendi şeritleri kişisel akışta kapalı
+          (`filtreSeridi={false}`). Etkin filtre çipleri katlanmaz. */}
+      <PanoFiltrele
+        state={gezintiDurumu}
+        etkinSayi={filtreSayisi}
+      />
+
+      <PanoNotices notices={notices} warnFirst={Boolean(me.note)} tekSatir />
+
       <PanoHeader
         layout={layout}
         positionLabel={me.positionLabel}
@@ -542,26 +615,16 @@ export async function PersonalPanel({
         personalized={personalized}
       />
 
-      <PanoNotices notices={notices} warnFirst={Boolean(me.note)} />
-
-      {/* Etkin filtre kabukta, görünüm yuvalarının DIŞINDA: dört görünümde
-          de "neden bu kadar az haber var" sorusunun cevabı görünsün ve tek
-          dokunuşla kaldırılabilsin. */}
-      {filtreVar ? (
-        <div className="akis-filtre-satiri">
-          <ActiveFilters state={gezintiDurumu} />
-        </div>
-      ) : null}
-
-      {/* -------- Göstergeler: SIKI kip, tek satır -------- */}
+      {/* -------- Göstergeler: SIKI kip, tek satır --------
+          Üç şeyin ALTINDA: sayı, haberin kendisinden önce gelmemeli. */}
       <section className="pano-bolum akis-bolum-sik" data-pano-bolum="kpi">
         <KpiRow items={kpis} sik />
       </section>
 
       {/* -------- Önemli konular şeridi --------
-          Şerit KPI'ların hemen ardında: ilk ekranda görünen ilk haber
-          başlıkları buradan gelir. Eskiden düzen bölümlerinin altındaydı
-          ve 15 dakikalık bütçede ekranın dışında kalıyordu. */}
+          Korpus genelindeki KRİTİK gündem. Eskiden ilk ekrandaki TEK haber
+          metniydi ve "…" ile kesikti; artık ilk ekranı üç şey dolduruyor,
+          şerit onların altında. */}
       {strip.length > 0 ? (
         <HeadlineStrip articles={strip} label="En Önemli Konular" />
       ) : null}
@@ -571,10 +634,15 @@ export async function PersonalPanel({
         <PanoSection
           id="yapilacaklar"
           title="Yapılacaklar — Son Başvuru Tarihli Kalemler"
-          right={tasks.length > 0 ? `${tasks.length} kalem` : undefined}
+          right={tasksShown.length > 0 ? `${tasksShown.length} kalem` : undefined}
         >
-          {tasks.length > 0 ? (
-            <TaskList items={tasks} />
+          {tasksShown.length > 0 ? (
+            <TaskList items={tasksShown} />
+          ) : tasks.length > 0 ? (
+            <PanoNotice>
+              Son başvuru tarihli kalemlerin hepsi yukarıdaki &quot;Bugün
+              Bilmeniz Gereken&quot; bloğunda.
+            </PanoNotice>
           ) : (
             <PanoNotice>
               Panelinizdeki kalemlerde son başvuru tarihi çıkarılamadı. Tarih
@@ -589,10 +657,15 @@ export async function PersonalPanel({
         <PanoSection
           id="takvim"
           title="Mevzuat Takvimi"
-          right={calendar.length > 0 ? `${calendar.length} tarih` : undefined}
+          right={calendarShown.length > 0 ? `${calendarShown.length} tarih` : undefined}
         >
-          {calendar.length > 0 ? (
-            <CalendarList items={calendar} />
+          {calendarShown.length > 0 ? (
+            <CalendarList items={calendarShown} />
+          ) : calendar.length > 0 ? (
+            <PanoNotice>
+              Takvim tarihli kalemlerin hepsi yukarıdaki &quot;Bugün Bilmeniz
+              Gereken&quot; bloğunda.
+            </PanoNotice>
           ) : (
             <PanoNotice>
               Panelinizdeki kalemlerde takvim tarihi çıkarılamadı. Tarih
@@ -623,27 +696,48 @@ export async function PersonalPanel({
           `total` olarak korpus toplamı DEĞİL gösterilen kalem sayısı
           geçiliyor: kişisel panel bilinçli olarak kısa bir liste, "1.243
           haber" yazmak yanlış olurdu.
-          `state` yalnızca GEZİNTİ parametrelerini taşıyor (akis/vakit):
-          filtre şeridi kişisel akışta yok, ama iki bileşen kendi bölge
-          çiplerini basıyor ve o bağlantılar `akis=ozel`i düşürmemeli.
+          `state` GEZİNTİ parametrelerini (akis/vakit) ve filtreleri
+          taşıyor. İki bileşenin kendi filtre şeritleri ve Kart'ın
+          "Bugünün Özeti" başlık bloğu kişisel akışta KAPALI
+          (`filtreSeridi={false}`, `baslikBlogu={false}`): tek filtre
+          yeri kabuktaki "Filtrele ve ara", sayfanın başı "Bugün Bilmeniz
+          Gereken 3 Şey". Görsel'in ilk bölümü "Günün Manşeti" değil
+          "Akışın Devamı" — manşet sayılacak üç haber zaten yukarıda.
           `baslikDuzeyi={2}` ve `sayiSeridi={false}`: kabuk zaten sayfanın
           tek `h1`ini ve sıkı KPI şeridini basıyor. */}
       <VisualView>
-        <VisualFront
-          articles={flowArticles}
-          total={flowArticles.length}
-          state={gezintiDurumu}
-          baslikDuzeyi={2}
-        />
+        {akisBos || listBroken ? (
+          <PanoSection id="akis-gorsel" title={flowTitle}>
+            {flowBody}
+          </PanoSection>
+        ) : (
+          <VisualFront
+            articles={flowArticles}
+            total={flowArticles.length}
+            state={gezintiDurumu}
+            baslikDuzeyi={2}
+            filtreSeridi={false}
+            mansetBasligi="Akışın Devamı"
+          />
+        )}
       </VisualView>
 
       <DigestView>
-        <DigestFront
-          articles={flowArticles}
-          total={flowArticles.length}
-          state={gezintiDurumu}
-          sayiSeridi={false}
-        />
+        {akisBos || listBroken ? (
+          <PanoSection id="akis-kart" title={flowTitle}>
+            {flowBody}
+          </PanoSection>
+        ) : (
+          <DigestFront
+            articles={flowArticles}
+            total={flowArticles.length}
+            state={gezintiDurumu}
+            sayiSeridi={false}
+            baslikBlogu={false}
+            filtreSeridi={false}
+            siraNo={apiSirasi}
+          />
+        )}
       </DigestView>
 
       {/* -------- Takip: değişiklik akışı (akıştan SONRA) --------
