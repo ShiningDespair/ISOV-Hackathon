@@ -38,7 +38,24 @@ export async function readSeedFiles(dir = DEFAULT_SEED_DIR) {
 
   const payloads = [];
   const errors = [];
-  for (const file of files) {
+  // ETIKET AD DOSYALARI (`etiket-adlari-*.json`): {slug: "Dogru Turkce Ad"}.
+  // Tohum sozlesmesinde `tags` duz slug dizisi; yeni bir slug'in adi baska
+  // turlu labelFromSlug()'dan turuyor ve "Celik", "Cbam" gibi bozuk cikiyordu
+  // (402 etiketin 331'i boyleydi, 04_etiket_adlari.sql ile elle duzeltildi).
+  // Toplayici yeni etiketin adini bu yan dosyaya yazar; ad YALNIZCA etiket
+  // ilk kez olusturulurken kullanilir (upsertTags var olan adi ezmez).
+  const tagLabels = new Map();
+  for (const file of files.filter(isTagLabelFile)) {
+    try {
+      const obj = JSON.parse(await fs.readFile(path.join(dir, file), 'utf8'));
+      for (const [slug, label] of Object.entries(obj || {})) {
+        if (typeof label === 'string' && label.trim()) tagLabels.set(slugifyTag(slug), label.trim());
+      }
+    } catch (err) {
+      errors.push({ file, message: `etiket ad dosyasi okunamadi: ${err.message}` });
+    }
+  }
+  for (const file of files.filter((f) => !isTagLabelFile(f))) {
     const full = path.join(dir, file);
     try {
       const raw = await fs.readFile(full, 'utf8');
@@ -50,7 +67,12 @@ export async function readSeedFiles(dir = DEFAULT_SEED_DIR) {
     }
   }
 
-  return { dir, files: payloads, errors, missing: false };
+  return { dir, files: payloads, errors, missing: false, tagLabels };
+}
+
+/** `etiket-adlari-*.json` — tohum degil, yeni etiketlerin Turkce adlari. */
+export function isTagLabelFile(name) {
+  return /^etiket-adlari-.*\.json$/i.test(String(name));
 }
 
 /** Slug'dan okunabilir etiket uretir: 'ar-ge-tesviki' -> 'Ar Ge Tesviki'. */
@@ -255,7 +277,7 @@ async function linkTags(conn, articleId, tags, tagMap) {
  *            inserted:number, skipped:number, errors:Array}}
  */
 export async function ingestFromSeed(conn, { dir = DEFAULT_SEED_DIR } = {}) {
-  const { files, errors: fileErrors = [], missing } = await readSeedFiles(dir);
+  const { files, errors: fileErrors = [], missing, tagLabels = new Map() } = await readSeedFiles(dir);
 
   const result = {
     dir,
@@ -284,7 +306,15 @@ export async function ingestFromSeed(conn, { dir = DEFAULT_SEED_DIR } = {}) {
   const sourceMap = await upsertSources(conn, allSources);
   const tagMap = await upsertTags(
     conn,
-    [...allTags].map((t) => (String(t).startsWith('{') ? safeParse(String(t)) : t)),
+    [...allTags].map((t) => {
+      const v = String(t).startsWith('{') ? safeParse(String(t)) : t;
+      // Duz slug icin yan dosyada ad varsa nesneye cevir; ad yalnizca yeni
+      // etiket OLUSTURULURKEN yazilir.
+      if (typeof v === 'string' && tagLabels.has(slugifyTag(v))) {
+        return { slug: v, label: tagLabels.get(slugifyTag(v)) };
+      }
+      return v;
+    }),
   );
   result.sources = sourceMap.size;
   result.tags = tagMap.size;

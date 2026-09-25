@@ -30,7 +30,7 @@ let totalArticles = 0;
 const err = (where, msg) => errors.push(`${where}: ${msg}`);
 const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 
-const files = readdirSync(SEED_DIR).filter((f) => f.endsWith('.json')).sort();
+const files = readdirSync(SEED_DIR).filter((f) => f.endsWith('.json') && !/^etiket-adlari-/i.test(f)).sort();
 if (files.length === 0) {
   console.error(`HATA: ${SEED_DIR} icinde .json dosyasi yok.`);
   process.exit(1);

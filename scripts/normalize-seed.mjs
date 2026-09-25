@@ -88,7 +88,7 @@ const slugify = (s) => deTr(String(s))
 const stats = { files: 0, sourceTypes: 0, regions: 0, sentiments: 0, tags: 0, factors: 0, scores: 0 };
 const unmapped = new Set();
 
-for (const file of readdirSync(SEED_DIR).filter((f) => f.endsWith('.json')).sort()) {
+for (const file of readdirSync(SEED_DIR).filter((f) => f.endsWith('.json') && !/^etiket-adlari-/i.test(f)).sort()) {
   const path = join(SEED_DIR, file);
   const doc = JSON.parse(readFileSync(path, 'utf8'));
   stats.files++;
