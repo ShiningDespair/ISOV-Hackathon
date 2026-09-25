@@ -1,36 +1,44 @@
 /**
  * NYT tarzı üst bar / künye.
- * Solda tarih, ortada büyük serif masthead, sağda görünüm anahtarı.
- * Altında ince çift kural çizgisi ve bölüm gezintisi.
+ * Solda tarih + sayı no, ortada büyük serif masthead, sağda "Hesabım"
+ * menüsü ve görünüm anahtarı. Altında tek bir kalın kural çizgisi,
+ * bölüm gezintisi ve bir ince kural.
+ *
+ * SADELEŞTİRME (docs/SADELESTIRME.md §2): gezinti 8 bağlantıdan 3'e indi.
+ * Taşınanlar: /panelim -> "/" içindeki anahtar, /degisiklikler -> /raporlar,
+ * /etiketler -> /istatistik, /ayarlar + /admin + /durum -> Hesabım menüsü.
+ * Eski yollar yaşamaya devam eder (redirect), yani paylaşılmış bağlantı
+ * 404 vermez.
+ *
+ * TİPOGRAFİK KARAR — çift kural tek kurala indi: ekran künyesinde üç ayrı
+ * kural çizgisi vardı (çift kural + gezinti altı ince kural). NYT'nin çift
+ * kuralı BASILI sayfanın imzası; o yüzden `NewspaperMasthead` içinde
+ * (gazete görünümü ve yazdırma) AYNEN KORUNDU. Ekranda tek kalın kural +
+ * gezinti altı ince kural kaldı: iki hairline yerine bir, serif masthead
+ * ve kicker karakteri bozulmadan.
  */
 
 import Link from "next/link";
 import { formatMasthead, issueNumber } from "@/lib/format";
 import { ViewSwitch } from "./ViewSwitch";
-import { AdminNavLink } from "./AdminNavLink";
+import { AccountMenu } from "./AccountMenu";
+import { SectionNav, type NavItem } from "./SectionNav";
 
 /**
- * Bolum gezintisi.
+ * Bölüm gezintisi — üç bölüm.
  *
- * "Panelim" ve "Degisiklikler" oturum gerektirir; middleware zaten cerezsiz
- * istegi /giris'e yonlendirdigi icin baglantiyi gizlemiyoruz - gizlemek,
- * kullanicinin ozelligin varligini hic ogrenmemesine yol acardi.
+ * Oturum gerektiren bölümler gizlenmiyor: middleware çerezsiz isteği
+ * /giris'e yönlendiriyor ve bağlantıyı gizlemek, kullanıcının özelliğin
+ * varlığını hiç öğrenmemesine yol açardı.
  *
- * "Yonetim" yalnizca role='admin' icin gorunur (asagida suzuluyor):
- * yetkisi olmayana gosterip 403 yedirmek kotu bir deneyim.
+ * "Yönetim" artık burada DEĞİL — Hesabım menüsünde ve yalnızca admin
+ * için basılıyor (components/AccountMenu.tsx).
  */
-const NAV = [
+const NAV: readonly NavItem[] = [
   { href: "/", label: "Bülten" },
-  { href: "/panelim", label: "Panelim" },
-  { href: "/degisiklikler", label: "Değişiklikler" },
   { href: "/raporlar", label: "Raporlar" },
-  { href: "/etiketler", label: "Etiketler" },
   { href: "/istatistik", label: "İstatistik" },
-  { href: "/ayarlar", label: "Ayarlar" },
 ];
-
-/** Yalnizca yonetici gezintisinde gorunen bolumler. */
-const ADMIN_NAV = [{ href: "/admin", label: "Yönetim" }];
 
 export function Masthead() {
   const now = new Date();
@@ -38,13 +46,14 @@ export function Masthead() {
   return (
     <header className="bg-paper print-hidden">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
-        {/* Üst satır: tarih · masthead · görünüm anahtarı */}
+        {/* Üst satır: tarih · masthead · hesap + görünüm anahtarı.
+            Üç kolonlu ızgara korunuyor; sağ kolon artık iki denetim
+            taşıdığı için kendi `hesap-arac` sarmalayıcısında. */}
         <div className="grid grid-cols-1 items-center gap-3 py-3 sm:grid-cols-[1fr_auto_1fr] sm:py-4">
-          <div className="u-kicker order-2 hidden sm:order-1 sm:block">
+          <div className="u-kicker order-2 hidden text-ink-faint sm:order-1 sm:block">
             <time dateTime={now.toISOString()}>{formatMasthead(now.toISOString())}</time>
-            <div className="mt-0.5 text-ink-faint">
-              Sayı No {issueNumber(now)}
-            </div>
+            <span aria-hidden="true"> · </span>
+            <span>Sayı No {issueNumber(now)}</span>
           </div>
 
           <div className="order-1 text-center sm:order-2">
@@ -58,33 +67,17 @@ export function Masthead() {
             </Link>
           </div>
 
-          <div className="order-3 flex items-center justify-center gap-3 sm:justify-end">
+          <div className="hesap-arac order-3">
+            <AccountMenu />
             <ViewSwitch />
           </div>
         </div>
 
-        {/* Çift kural çizgisi */}
+        {/* Tek kalın kural — masthead ile gezintiyi ayıran ana çizgi */}
         <div className="border-t border-ink" />
-        <div className="mt-[2px] border-t border-ink" />
 
-        {/* Bölüm gezintisi */}
-        <nav aria-label="Bölümler" className="flex justify-center">
-          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 py-2 sm:gap-x-8">
-            {NAV.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="u-kicker u-link-underline text-ink hover:text-accent"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-            {ADMIN_NAV.map((item) => (
-              <AdminNavLink key={item.href} href={item.href} label={item.label} />
-            ))}
-          </ul>
-        </nav>
+        <SectionNav items={NAV} />
+
         <div className="border-t border-rule" />
       </div>
     </header>

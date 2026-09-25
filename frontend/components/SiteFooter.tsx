@@ -19,6 +19,14 @@ export function SiteFooter() {
               içerik. Son güncelleme: {formatMasthead(now)}.
             </p>
           </div>
+          {/* ÜST BARDAN KALKAN BAĞLANTILARIN İKİNCİ EVİ
+              (docs/SADELESTIRME.md §2). Üst bar üç bağlantıya indi; burada
+              hiçbir bölüme erişim tamamen kaybolmasın diye /ayarlar ve
+              /durum en az bir yerden daha açık tutuluyor (ikisi ayrıca
+              Hesabım menüsünde). Etiketler bağlantısı DOĞRUDAN
+              yeni adrese (/istatistik#etiketler) gidiyor: eski /etiketler
+              yolu 308 ile yine çalışıyor, ama kendi arayüzümüzden fazladan
+              bir yönlendirme sıçraması geçirmenin gerekçesi yok. */}
           <nav aria-label="Alt gezinti">
             <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
               <li>
@@ -27,7 +35,10 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/etiketler" className="u-kicker u-link-underline">
+                <Link
+                  href="/istatistik#etiketler"
+                  className="u-kicker u-link-underline"
+                >
                   Etiketler
                 </Link>
               </li>
@@ -46,11 +57,15 @@ export function SiteFooter() {
                   Ayarlar
                 </Link>
               </li>
-              {/* Oturumsuz da acik: hangi ozelligin calistigini gormek icin
-                  giris yapmak gerekmesin. */}
+              {/* Oturumsuz da açık: hangi özelliğin çalıştığını görmek için
+                  giriş yapmak gerekmesin.
+
+                  Etiket "Durum" değil "Özellik Durumu": üst bardan kalkan
+                  bağlantı Hesabım menüsünde de bu adla duruyor, iki yerde
+                  iki ad aynı sayfayı iki ayrı şey gibi gösterirdi. */}
               <li>
                 <Link href="/durum" className="u-kicker u-link-underline">
-                  Durum
+                  Özellik Durumu
                 </Link>
               </li>
             </ul>
