@@ -12,7 +12,7 @@ import { serializeList, wantsReveal } from '../lib/serialize.js';
 import { generateReport, serializeReportRow, SECTION_ORDER } from '../services/reportService.js';
 import { findArticleRowsByIds, serializeArticleRows } from '../services/articleService.js';
 import { isAvailable as pdfAvailable, renderReportPdf } from '../services/pdfService.js';
-import { requireAuth } from '../middleware/session.js';
+import { requireAuth, requireRole } from '../middleware/session.js';
 
 const router = Router();
 
@@ -156,7 +156,13 @@ router.get('/:id/pdf', requireAuth, asyncHandler(async (req, res) => {
   return res.end(result.buffer);
 }));
 
-router.post('/generate', asyncHandler(async (req, res) => {
+// YALNIZCA editor/admin. Rapor tum kullanicilarin gordugu PAYLASILAN bir
+// kayit ve ayni donem icin yeniden uretim MEVCUT raporun ustune yaziyor
+// (uq_reports_period). Onceden yalnizca oturum isteniyordu: persona
+// testinde siradan bir uye hesabi (rol 'uye') haftalik raporu yeniden
+// uretebildi (201). Panel kapaliya gecmeden once yazilmis bir uc; kullanici
+// hesaplari gelince rol kontrolu eklenmemisti.
+router.post('/generate', requireRole('admin', 'editor'), asyncHandler(async (req, res) => {
   const parsed = generateSchema.safeParse(req.body || {});
   if (!parsed.success) {
     throw ApiError.badRequest(

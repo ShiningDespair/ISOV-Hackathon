@@ -15,6 +15,7 @@
  * ne olduğunu görür.
  */
 
+import { useSession } from "@/components/SessionProvider";
 import { useMemo, useState } from "react";
 
 import {
@@ -92,6 +93,7 @@ export function SuggestionsPanel({
   initialError: string | null;
 }) {
   const [items, setItems] = useState<SourceSuggestion[]>(initialSuggestions);
+  const { canEdit } = useSession();
   const [listError, setListError] = useState<string | null>(initialError);
   const [filter, setFilter] = useState<StatusFilter>("TUMU");
 
@@ -398,6 +400,10 @@ export function SuggestionsPanel({
                     .join(" · ")}
                 </p>
 
+                {/* Kabul/ret yalnızca editor/admin: kabul, sistem geneline
+                    kaynak ekliyor (backend rolle koruyor). Üye önerisinin
+                    durumunu görür, değiştiremez. */}
+                {canEdit ? (
                 <div className="mt-2 flex flex-wrap gap-2">
                   {SUGGESTION_STATUSES.filter((s) => s !== status).map((s) => (
                     <button
@@ -417,6 +423,7 @@ export function SuggestionsPanel({
                     </button>
                   ))}
                 </div>
+                ) : null}
               </li>
             );
           })}

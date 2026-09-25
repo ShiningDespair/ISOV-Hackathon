@@ -6,6 +6,7 @@
 // veriyi bozmaz; sadece kumeler ve skorlar tazelenir.
 // ---------------------------------------------------------------------
 import { Router } from 'express';
+import { requireRole } from '../middleware/session.js';
 import { pool } from '../lib/db.js';
 import { asyncHandler } from '../lib/http.js';
 import { toIso } from '../lib/serialize.js';
@@ -14,7 +15,11 @@ import { runPipeline } from '../services/pipeline.js';
 
 const router = Router();
 
-router.post('/run', asyncHandler(async (req, res) => {
+// YALNIZCA admin. Toplama tum kiracilarin paylastigi haber tablosuna
+// YAZIYOR. Onceden yalnizca oturum isteniyordu, yani herhangi bir uye
+// hesabi veri alimini tetikleyebiliyordu (persona testi sirasinda fark
+// edildi, ayni sinifta /reports/generate de acikti).
+router.post('/run', requireRole('admin'), asyncHandler(async (req, res) => {
   const startedAt = new Date();
   const conn = await pool.getConnection();
 

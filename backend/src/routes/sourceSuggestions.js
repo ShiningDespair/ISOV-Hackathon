@@ -10,6 +10,7 @@
 // corroboration bilesenini sisirirdi.
 // ---------------------------------------------------------------------
 import { Router } from 'express';
+import { requireRole } from '../middleware/session.js';
 import { query, queryOne, withTransaction } from '../lib/db.js';
 import {
   ApiError, asyncHandler, normalizeHttpUrl, parseIdParam,
@@ -140,7 +141,11 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 // --- PATCH /api/source-suggestions/:id ---------------------------------
-router.patch('/:id', asyncHandler(async (req, res) => {
+// YETKI: yalnizca admin/editor. Bu uc TUM kiracilarin paylastigi veriyi
+// degistiriyor; onceden yalnizca oturum isteniyordu (persona testi sonrasi
+// yetki denetiminde bulundu). Oneriyi 'kabul' etmek sistem geneline kaynak ekliyor. Oneri
+// BIRAKMAK (POST) uyelere acik kalir.
+router.patch('/:id', requireRole('admin', 'editor'), asyncHandler(async (req, res) => {
   const id = parseIdParam(req.params.id, 'Geçersiz öneri kimliği');
   const body = req.body && typeof req.body === 'object' ? req.body : {};
 

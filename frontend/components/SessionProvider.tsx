@@ -40,6 +40,12 @@ interface SessionContextValue {
   status: SessionStatus;
   me: MeResponse | null;
   isAdmin: boolean;
+  /**
+   * Paylaşılan veriyi değiştirebilir mi (admin ya da editor). Backend aynı
+   * kuralı `requireRole('admin','editor')` ile ZORLUYOR; buradaki bayrak
+   * yalnızca kullanıcıya 403 yedirecek düğmeleri göstermemek için.
+   */
+  canEdit: boolean;
   /** Profil/rol değişiminden sonra yeniden okumak için. */
   refresh: () => void;
 }
@@ -48,6 +54,7 @@ const SessionContext = createContext<SessionContextValue>({
   status: "bilinmiyor",
   me: null,
   isAdmin: false,
+  canEdit: false,
   refresh: () => {},
 });
 
@@ -82,9 +89,11 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   }, [tick]);
 
   const isAdmin = status === "var" && me?.user?.role === "admin";
+  const canEdit =
+    status === "var" && (me?.user?.role === "admin" || me?.user?.role === "editor");
 
   return (
-    <SessionContext.Provider value={{ status, me, isAdmin, refresh }}>
+    <SessionContext.Provider value={{ status, me, isAdmin, canEdit, refresh }}>
       {children}
     </SessionContext.Provider>
   );

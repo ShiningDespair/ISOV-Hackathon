@@ -23,6 +23,7 @@
 // Kimlik dogrulama henuz yok; `tenant_key` istekten gelir, yoksa 'isov'.
 // ---------------------------------------------------------------------
 import { Router } from 'express';
+import { requireRole } from '../middleware/session.js';
 import { query, queryOne, withTransaction } from '../lib/db.js';
 import {
   ApiError, asyncHandler, normalizeHttpUrl, parseIdParam,
@@ -208,7 +209,10 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 // --- POST /api/sources -------------------------------------------------
-router.post('/', asyncHandler(async (req, res) => {
+// YETKI: yalnizca admin/editor. Bu uc TUM kiracilarin paylastigi veriyi
+// degistiriyor; onceden yalnizca oturum isteniyordu (persona testi sonrasi
+// yetki denetiminde bulundu). Yeni kaynak sistem genelinde toplanir.
+router.post('/', requireRole('admin', 'editor'), asyncHandler(async (req, res) => {
   const body = req.body && typeof req.body === 'object' ? req.body : {};
   const tenantKey = tenantKeyOf(req);
 
@@ -310,7 +314,11 @@ const PATCHABLE = {
   },
 };
 
-router.patch('/:id', asyncHandler(async (req, res) => {
+// YETKI: yalnizca admin/editor. Bu uc TUM kiracilarin paylastigi veriyi
+// degistiriyor; onceden yalnizca oturum isteniyordu (persona testi sonrasi
+// yetki denetiminde bulundu). authority_weight gizli onem skorunun bir bileseni: herhangi bir uye
+// bir kaynagin otoritesini degistirip HERKESIN siralamasini kaydirabiliyordu.
+router.patch('/:id', requireRole('admin'), asyncHandler(async (req, res) => {
   const id = parseIdParam(req.params.id, 'Geçersiz kaynak kimliği');
   const tenantKey = tenantKeyOf(req);
   const body = req.body && typeof req.body === 'object' ? req.body : {};

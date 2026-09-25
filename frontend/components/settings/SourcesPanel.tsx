@@ -18,6 +18,7 @@
  * "Sunucuya ulaşılamadı." mesajına çevirir — sessiz başarısızlık yok.
  */
 
+import { useSession } from "@/components/SessionProvider";
 import { useMemo, useState } from "react";
 
 import {
@@ -120,6 +121,7 @@ export function SourcesPanel({
   initialError: string | null;
 }) {
   const [sources, setSources] = useState<Source[]>(initialSources);
+  const { canEdit } = useSession();
 
   // Filtreler
   const [q, setQ] = useState("");
@@ -654,7 +656,11 @@ export function SourcesPanel({
         </div>
       )}
 
-      {/* YENİ KAYNAK FORMU */}
+      {/* YENİ KAYNAK FORMU — yalnızca editor/admin.
+          Kaynak ekleme sistem GENELİNDE toplanır ve otorite ağırlığı gizli
+          önem skorunu herkes için etkiler; backend bu ucu artık rolle
+          koruyor. Üye, kaynağı yandaki "Kaynak Öner" ile önerir. */}
+      {canEdit ? (
       <div className="mt-8 border-t border-ink pt-4">
         <div className="flex flex-wrap items-baseline justify-between gap-3">
           <h3 className="u-headline text-[1.0625rem] font-bold">
@@ -820,6 +826,13 @@ export function SourcesPanel({
           </form>
         </div>
       </div>
+      ) : (
+        <p className="u-body u-body-soft mt-8 border-t border-ink pt-4 text-[0.875rem] leading-snug">
+          Yeni kaynak eklemek yönetici yetkisi gerektiriyor, çünkü kaynaklar
+          tüm kurumlar için toplanıyor. İzlenmesini istediğiniz bir adresi
+          yandaki <strong>Kaynak Öner</strong> bölümünden önerebilirsiniz.
+        </p>
+      )}
     </div>
   );
 }

@@ -7,6 +7,7 @@
 // araligina sikistirildigi icin string birlestirme guvenli.
 // ---------------------------------------------------------------------
 import { Router } from 'express';
+import { requireRole } from '../middleware/session.js';
 import { query } from '../lib/db.js';
 import {
   ApiError, asyncHandler, parsePagination, pickFromAllowList,
@@ -265,7 +266,10 @@ router.get('/', asyncHandler(async (req, res) => {
  */
 const IMAGE_HTTP_MAX_LIMIT = 100;
 
-router.post('/fetch-images', asyncHandler(async (req, res) => {
+// YETKI: yalnizca admin/editor. Bu uc TUM kiracilarin paylastigi veriyi
+// degistiriyor; onceden yalnizca oturum isteniyordu (persona testi sonrasi
+// yetki denetiminde bulundu). Paylasilan haber tablosuna yazar ve dis sitelere istek atar.
+router.post('/fetch-images', requireRole('admin'), asyncHandler(async (req, res) => {
   const body = req.body && typeof req.body === 'object' ? req.body : {};
 
   let limit = 25;
