@@ -7,6 +7,11 @@
 // PANEL DUZENI BURADAN TURETILIR, DB'de KOLON DEGIL. Ayni degeri hem
 // pozisyonda hem duzende tutmak, importance.js'te esiklerin uc ayri yerde
 // kopyalanip birbirinden kaymasi hatasinin aynisini davet eder.
+//
+// VARSAYILAN GORUNUM (POSITION_VIEW) de AYNI ILKEYLE burada. DB'de
+// `default_view` diye bir kolon YOK ve olmayacak: kolon olsaydi pozisyonu
+// degisen kullanicinin gorunumu ya elle guncellenmeyi beklerdi ya da iki
+// kaynak (kolon + pozisyon) birbirinden kayardi. Turetme tek yonlu.
 // ---------------------------------------------------------------------
 
 /** 8 pozisyon — users/user_profiles.position_code ENUM'u ile birebir. */
@@ -131,30 +136,136 @@ export function layoutOf(position) {
   return POSITION_LAYOUT[normalizePosition(position)];
 }
 
-/** Vakit butcesi -> gosterilecek haber sayisi. */
-export const TIME_BUDGETS = Object.freeze([2, 5, 15]);
+// ---------------------------------------------------------------------
+// VARSAYILAN GORUNUM (gorunum anahtarinin acilis degeri)
+//
+// Kullanicinin sozleri: "En ust duzey yoneticiler icin Gorsel olan
+// acilsin", "Normal kullanicilar icin Kart gorunumu acilsin",
+// "Kullanicilar yine suanki gibi kendileri degistirebilir olsun."
+//
+// Yani bu bir VARSAYILAN, bir kisitlama DEGIL: kullanicinin acik secimi
+// (frontend `localStorage['isov:view']`) her zaman kazanir. Backend
+// yalnizca "hic secim yapmamis" duruma bir baslangic degeri onerir.
+// ---------------------------------------------------------------------
 
+/**
+ * Gecerli gorunum kumesi.
+ *
+ * Frontend `components/ViewProvider.tsx` -> `VIEW_MODES` ile BIREBIR AYNI
+ * sira ve icerik. Iki liste ayrisirsa cerezden gelen deger frontend'de
+ * taninmaz ve sessizce 'panel'e duser — o yuzden buraya yeni bir gorunum
+ * eklemek ViewProvider'i da degistirmeyi GEREKTIRIR.
+ */
+export const VIEWS = Object.freeze(['panel', 'gazete', 'gorsel', 'kart']);
+
+/**
+ * 8 pozisyon -> varsayilan gorunum. TEK esleme noktasi.
+ * Ust yonetim 'gorsel', diger 7 pozisyon 'kart'.
+ */
+export const POSITION_VIEW = Object.freeze({
+  'ust-yonetim': 'gorsel',
+  'strateji': 'kart',
+  'tesvik-finansman': 'kart',
+  'dis-ticaret': 'kart',
+  'uretim-operasyon': 'kart',
+  'enerji-surdurulebilirlik': 'kart',
+  'mevzuat-hukuk': 'kart',
+  'medya-iletisim': 'kart',
+});
+
+/**
+ * Pozisyondan varsayilan gorunumu turetir. `layoutOf()`in esi.
+ *
+ * `normalizePosition()` KULLANILMAZ: o fonksiyon bilinmeyen degeri
+ * 'ust-yonetim'e cekiyor ve burada kullanilsa "profili hic olmayan
+ * kullanici" da 'gorsel' acardi. Profil satiri yoksa (`null`) ya da deger
+ * taninmiyorsa notr varsayilan 'panel' doner — "hic secmedi" ile "ust
+ * yonetim secti" ayrimi korunur (bkz. authService.js sapma-only ilkesi).
+ */
+export function viewOf(position) {
+  const code = String(position ?? '');
+  return POSITION_VIEW[code] ?? 'panel';
+}
+
+/**
+ * Vakit butcesi kademeleri (dakika) -> gosterilecek haber sayisi.
+ *
+ * UCUNCU KADEME 15 DEGIL 10: kullanici "en altta yine ayni secenekler
+ * olsun 2 5 10 dk" dedi (bkz. docs/SADELESTIRME.md §4).
+ */
+export const TIME_BUDGETS = Object.freeze([2, 5, 10]);
+
+/** Eski kademe -> yeni kademe. Sadece 15 var; 2 ve 5 degismedi. */
+const LEGACY_TIME_BUDGETS = Object.freeze({ 15: 10 });
+
+/**
+ * Bilinmeyen degerleri guvenli kademeye indirger.
+ *
+ * GERIYE UYUMLULUK: `user_profiles.time_budget_min` TINYINT (ENUM DEGIL),
+ * yani semada 15 hala yazilabilir bir deger ve goc gerektirmiyor. Eski
+ * kayitlarda 15 bulunabilir; onu "gecersiz" sayip 5'e dusurmek,
+ * kullanicinin EN UZUN kademe secimini neredeyse en kisaya cevirmek
+ * olurdu. Bu yuzden 15 -> 10 eslenir.
+ *
+ * Gercekten taninmayan deger (0, 7, null, 'abc') -> 5, yani orta kademe:
+ * hem en kisa kademeyi hem en uzununu dayatmayan notr secim.
+ */
 export function normalizeTimeBudget(value) {
   const n = Number(value);
-  return TIME_BUDGETS.includes(n) ? n : 5;
+  if (TIME_BUDGETS.includes(n)) return n;
+  if (LEGACY_TIME_BUDGETS[n]) return LEGACY_TIME_BUDGETS[n];
+  return 5;
 }
 
 /**
  * Vakit butcesinin icerik yogunlugu.
  *
  * Sayilar keyfi degil, okuma suresi aritmetiginden: Turkce akici okuma
- * ~200 kelime/dk.
- *   2 dk : 150 karakterlik cumle ~20 kelime ~6 sn; x5 = 30 sn + tarama = ~2 dk
- *   5 dk : 3 madde ~54 kelime ~16 sn; x12 = 3,2 dk + gezinme = ~5 dk
- *  15 dk : tam ozet (~62 kelime) + 5 madde (~90) = ~152 kelime ~46 sn
- *          DUZ "30 haber tam ozet" = ~23 dk, yani vakit butcesi hakkinda
- *          YALAN olurdu. Bu yuzden kademeli: ilk 10 tam + sonraki 20 madde
- *          = 10x46sn + 20x16sn = ~13 dk.
+ * ~200 kelime/dk. Korpustan olculen kalem maliyetleri:
+ *   tek cumle  : ~20 kelime  ->  20/200 dk = ~6 sn
+ *   3 madde    : ~54 kelime  ->  54/200 dk = ~16 sn
+ *   tam ozet   : ~62 kelime tam ozet + ~5 madde (~90 kelime) = ~152 kelime
+ *                -> 152/200 dk = ~46 sn
+ *   baslik tarama (okunmayan kalem dahil) : ~2 sn/kalem
+ *
+ *   2 dk : 5 x 6 sn = 30 sn + 5 x 2 sn tarama = 40 sn; kalan sure
+ *          baglantiya tiklama/geri donme paylasi        -> ~2 dk
+ *   5 dk : 12 x 16 sn = 192 sn + 12 x 2 sn = 216 sn = 3,6 dk
+ *          + gezinme                                    -> ~5 dk
+ *
+ *  10 dk : UCUNCU KADEME 15 DEGIL 10 (kullanicinin istegi). Iki hesap
+ *          birlikte verilir; ikisi de 10 dakikanin ALTINDA kalmali.
+ *
+ *          (a) SOZLESMEDEKI UST SINIR (CONTRACT'in varsaydigi ozet
+ *              uzunluklari: tam ozet ~152 kelime = ~46 sn, uc madde
+ *              ~54 kelime = ~16 sn). Uretilmis (LLM) ozetler bu boya
+ *              yaklasacak, yani KOTU DURUM hesabi:
+ *                ilk 6 tam ozet   :  6 x 46 sn = 276 sn
+ *                kalan 14 madde   : 14 x 16 sn = 224 sn
+ *                20 kalem tarama  : 20 x  2 sn =  40 sn
+ *                ------------------------------------------
+ *                toplam           = 540 sn = 9,0 dk   -> 10 dk'nin altinda
+ *
+ *          (b) BUGUNKU KORPUSTA OLCULEN (GET /me/digest?time_budget=10
+ *              yanitindaki 20 kalemin kelimeleri gercekten sayildi):
+ *                tam ozetli kalem ortalama 119,0 kelime = 35,7 sn
+ *                maddeli kalem    ortalama  33,6 kelime = 10,1 sn
+ *                6 x 35,7 + 14 x 10,1 = 355 sn; + 40 sn tarama
+ *                toplam = 395 sn = 6,6 dk
+ *
+ *          NEDEN BU KADEME DUZ DEGIL KADEMELI: ayni iki olcekle
+ *            eski 15 dk kademesi (30 kalem / ilk 10 tam)
+ *              (a) 780 sn = 13,0 dk   (b) 618 sn = 10,3 dk
+ *            duz "20 haber tam ozet"
+ *              (a) 960 sn = 16,0 dk   (b) 754 sn = 12,6 dk
+ *          Her iki secenek de her iki olcekte 10 dakikayi ASAR, yani
+ *          kademe adi icerigi hakkinda YALAN soylerdi. 20 kalem / 6 tam
+ *          ozet ise iki olcekte de 10 dakikanin ALTINDA kaliyor.
  */
 export const DENSITY = Object.freeze({
-  2:  { items: 5,  full: 0,  bullets: 0, style: 'tek-cumle' },
-  5:  { items: 12, full: 0,  bullets: 3, style: 'madde' },
-  15: { items: 30, full: 10, bullets: 3, style: 'kademeli' },
+  2:  { items: 5,  full: 0, bullets: 0, style: 'tek-cumle' },
+  5:  { items: 12, full: 0, bullets: 3, style: 'madde' },
+  10: { items: 20, full: 6, bullets: 3, style: 'kademeli' },
 });
 
 export function densityOf(timeBudget) {

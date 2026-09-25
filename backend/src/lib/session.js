@@ -15,9 +15,13 @@
 import { createHash, randomBytes } from 'node:crypto';
 import { query, queryOne } from './db.js';
 import { ApiError } from './http.js';
+import { VIEWS } from './positions.js';
 
 /** Cerez adi — sozlesmede sabit. */
 export const SESSION_COOKIE = 'isov_session';
+
+/** Varsayilan gorunum cerezi — sozlesmede sabit (docs/SADELESTIRME.md §3). */
+export const VIEW_COOKIE = 'isov_view';
 
 const DEFAULT_TTL_HOURS = 168; // 7 gun
 
@@ -98,6 +102,56 @@ export function setSessionCookie(res, token) {
  */
 export function clearSessionCookie(res) {
   res.clearCookie(SESSION_COOKIE, cookieOptions());
+}
+
+// ---------------------------------------------------------------------
+// GORUNUM CEREZI (isov_view) — httpOnly DEGIL, BILINCLI
+//
+// NEDEN httpOnly OLMADIGI:
+// Bu cerez OTURUM TASIMIYOR. Icerigi yalnizca bir mizanpaj tercihi:
+// 'panel' | 'gazete' | 'gorsel' | 'kart'. Degerin, sayfa HIDRASYONDAN
+// ONCE — `<head>` icindeki satir ici onyukleme betiginde
+// (ViewProvider.VIEW_BOOTSTRAP_SCRIPT) — okunabilmesi gerekiyor ki
+// `html[data-view]` ilk boyamada dogru olsun. httpOnly olsaydi
+// `document.cookie` bu degeri GOREMEZDI ve varsayilan gorunum ancak React
+// baglandiktan sonra uygulanabilirdi: gorunur bir MIZANPAJ SICRAMASI
+// (panel cizilir, sonra kart/gorsele atlar).
+//
+// TEHDIT MODELI: cerezin kurcalanmasinin EN KOTU sonucu, kullanicinin
+// kendi tarayicisinda YANLIS MIZANPAJ gormesidir. Bir yetki artisi
+// (privilege escalation) DEGIL — hicbir uc bu cereze bakarak veri
+// yetkilendirmesi yapmaz, hicbir sorgu onu filtre olarak kullanmaz.
+// Taninmayan deger frontend'de de burada da 'panel'e duser. Oturum
+// tokeni (isov_session) httpOnly KALIR; iki cerezi ayri tutmanin sebebi
+// tam olarak bu: biri kimlik, oburu tercih.
+// ---------------------------------------------------------------------
+
+/**
+ * Varsayilan gorunum cerezini yazar.
+ *
+ * `cookieOptions()` yeniden kullanilir (path/sameSite/secure TEK yerde
+ * kalsin) ama `httpOnly` acikca FALSE'a cevrilir — yukaridaki gerekce.
+ * Omur oturum TTL'i ile AYNI: cerez oturumdan uzun yasarsa cikis yapmis
+ * kullanicinin tarayicisinda anlamsiz bir kalinti olurdu.
+ */
+export function setViewCookie(res, view) {
+  const safe = VIEWS.includes(String(view)) ? String(view) : 'panel';
+  res.cookie(VIEW_COOKIE, safe, {
+    ...cookieOptions(),
+    httpOnly: false,
+    maxAge: sessionTtlHours() * 60 * 60 * 1000,
+  });
+}
+
+/**
+ * Gorunum cerezini temizler.
+ *
+ * `clearSessionCookie`in yorumundaki AYNI tuzak: secenekler
+ * (path/sameSite/secure) yazma anindakilerle birebir olmazsa tarayici
+ * cerezi dusurmez. `httpOnly: false` de yazmadaki degerle ayni tutulur.
+ */
+export function clearViewCookie(res) {
+  res.clearCookie(VIEW_COOKIE, { ...cookieOptions(), httpOnly: false });
 }
 
 // ---------------------------------------------------------------------

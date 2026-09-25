@@ -173,9 +173,9 @@ export function shortOf(article) {
 /**
  * Maddeler. `count` kadar madde doner.
  *
- * KAYNAK SECIMI, 5 dk ile 15 dk ARASINDAKI FARK:
+ * KAYNAK SECIMI, 5 dk ile 10 dk ARASINDAKI FARK:
  * `summary_medium` kolonu 5 DK KADEMESI icin uretildi ve TAM 3 madde tasir.
- * 15 dk kademesinin ilk 10 haberi ise "tam ozet + TUM maddeler" demek
+ * 10 dk kademesinin ilk 6 haberi ise "tam ozet + TUM maddeler" demek
  * (CONTRACT.md); korpusta haber basina 4-6 anahtar madde var. Kolonu o
  * kademede kaynak almak sessizce 3'e kirpardi — sozlesmenin "tum maddeler"
  * hukmunu kolonun bicimi yuzunden kaybetmek olurdu.
@@ -190,7 +190,7 @@ export function bulletsOf(article, count = 3) {
   return list.slice(0, wanted).map((b) => truncate(b, 240));
 }
 
-/** 15 dk kademesinin ilk 10 haberindeki tam ozet. */
+/** 10 dk kademesinin ilk 6 haberindeki tam ozet. */
 export function fullOf(article) {
   return clean(article?.summary) || shortOf(article);
 }
@@ -200,8 +200,8 @@ export function fullOf(article) {
  *
  * @param {object} article
  * @param {object} opts
- * @param {number} opts.timeBudget  2 | 5 | 15
- * @param {number} opts.index       0 tabanli sira (15 dk kademesi icin sart)
+ * @param {number} opts.timeBudget  2 | 5 | 10 (eski 15 -> 10'a eslenir)
+ * @param {number} opts.index       0 tabanli sira (10 dk kademesi icin sart)
  */
 export function shapeArticle(article, { timeBudget = 5, index = 0 } = {}) {
   const density = densityOf(timeBudget);
@@ -213,9 +213,15 @@ export function shapeArticle(article, { timeBudget = 5, index = 0 } = {}) {
   if (density.style === 'madde') {
     return { ...base, bicim: 'madde', bullets: bulletsOf(article, density.bullets) };
   }
-  // KADEMELI (15 dk): ilk `full` haber tam ozet + TUM maddeler,
-  // kalanlar uc madde. Duz "30 tam ozet" ~23 dk surer, yani vakit
-  // butcesi hakkinda YALAN olurdu (bkz. positions.js DENSITY yorumu).
+  // KADEMELI (10 dk): ilk `full` (= 6) haber tam ozet + TUM maddeler,
+  // kalan 14 haber uc madde. Sayilar positions.js DENSITY'den GELIR,
+  // burada sabit yazilmaz.
+  //
+  // NEDEN DUZ DEGIL KADEMELI: 20 haberin hepsi tam ozet olsa
+  // sozlesme ozet boylariyla 16,0 dk, bugunku korpusta OLCULEN boylarla
+  // 12,6 dk surer — iki olcekte de "10 dk" adi YALAN olurdu. Kademeli
+  // haliyle 9,0 dk (sozlesme) / 6,6 dk (olculen), yani iki olcekte de
+  // 10 dakikanin altinda. Tam hesap: positions.js DENSITY yorumu.
   if (index < density.full) {
     return {
       ...base,

@@ -485,3 +485,155 @@ REDDET** ve admine soyle — sessizce duz metin yazmak en kotu secenek.
 render eder, arayuzdeki rozetler ayni diziden okur.
 **Kural: "calisiyor" demek icin `nasil` alani doldurulmus olmali** — yani
 nasil dogrulandigi yazili olmali. Dogrulanmamis sey calisiyor sayilmaz.
+
+---
+
+# EK (v3) — VARSAYILAN GORUNUM ve VAKIT BUTCESI KADEMELERI
+
+Bu iki madde v1/v2 metnine EKTIR; yukaridaki bolumler yeniden yazilmadi.
+Celiski halinde BU BOLUM gecerlidir.
+
+## Varsayilan gorunum — `default_view` alani ve `isov_view` cerezi
+
+Pozisyon -> varsayilan gorunum eslemesi **TEK YERDE**:
+`backend/src/lib/positions.js` -> `POSITION_VIEW`.
+
+```
+'ust-yonetim'  -> 'gorsel'
+digerleri (7)  -> 'kart'
+profil YOK     -> 'panel'
+```
+
+`viewOf(position)` bu eslemenin tek okuma yolu ve `layoutOf()`in esidir.
+Gecerli kume `VIEWS = ['panel','gazete','gorsel','kart']`, frontend
+`components/ViewProvider.tsx` -> `VIEW_MODES` ile BIREBIR AYNI.
+
+**DB'de `default_view` KOLONU YOK ve olmayacak.** Panel duzeninde
+(`layout`) uygulanan ayni ilke: kolon olsaydi pozisyonu degisen
+kullanicinin gorunumu ya elle guncellenmeyi beklerdi ya da iki kaynak
+(kolon + pozisyon) birbirinden kayardi.
+
+### `/auth/me` yaniti
+
+`GET /auth/me` govdesine **`default_view` alani EKLENDI** (alan cikarilmadi,
+imza bozulmadi). Deger `viewOf(profile?.position_code ?? null)`.
+
+`layout` ile AYNI MANTIK DEGIL, bilincli fark: `layoutOf()` profil yokken
+`normalizePosition()` uzerinden `'ozet'`e duser, `viewOf()` ise `'panel'`e.
+Sebep **sapma-only** ilkesi: profil satiri OLMAYAN kullaniciya "ust yonetim
+secti" varsayimi yapip `'gorsel'` acmak, "hic secmedi" ile "ust yonetim
+secti" ayrimini kalici olarak yok ederdi. `onboarding_required` degismedi.
+
+`GET/PUT /me/profile` yanitindaki `profile` nesnesi de ayni kaynaktan
+`default_view` dondurur; profil satiri yokken (`exists === false`) deger
+`'panel'`dir.
+
+### `isov_view` cerezi — httpOnly DEGIL
+
+```
+isov_view = 'panel' | 'gazete' | 'gorsel' | 'kart'
+path=/, sameSite=lax, secure (yalnizca production), maxAge = oturum TTL
+httpOnly: FALSE
+```
+
+Yazildigi noktalar (`lib/session.js` -> `setViewCookie`):
+
+| Uc | Yazilan deger |
+|---|---|
+| `POST /auth/login` | `viewOf(position)` (= yanitin `default_view` alani) |
+| `POST /auth/register` | `'panel'` — profil satiri ACILMAZ, dolayisiyla dogal sonuc |
+| `PUT /me/profile` | yeni pozisyona gore YENIDEN yazilir |
+| `POST /auth/logout` | `clearViewCookie()` ile dusurulur |
+| `POST /auth/password/reset` | `clearViewCookie()` — tum oturumlar iptal edildi |
+
+**NEDEN httpOnly DEGIL:** bu cerez oturum tasimiyor, yalnizca bir mizanpaj
+tercihi. Degerin sayfa HIDRASYONDAN ONCE — `<head>` icindeki satir ici
+onyukleme betiginde (`ViewProvider.VIEW_BOOTSTRAP_SCRIPT`) —
+`document.cookie`'den okunabilmesi gerekiyor ki `html[data-view]` ilk
+boyamada dogru olsun. httpOnly olsaydi betik degeri GOREMEZ, varsayilan
+gorunum ancak React baglandiktan sonra uygulanir ve gorunur bir **mizanpaj
+sicramasi** olurdu (panel cizilir, sonra karta/gorsele atlar).
+
+**TEHDIT MODELI:** cerezin kurcalanmasinin en kotu sonucu, kullanicinin
+kendi tarayicisinda YANLIS MIZANPAJ gormesidir — bir **yetki artisi
+DEGIL**. Hicbir uc bu cereze bakarak yetkilendirme yapmaz, hicbir sorgu onu
+filtre olarak kullanmaz. Taninmayan deger hem backend'de hem frontend'de
+`'panel'`e duser. Oturum tokeni `isov_session` **httpOnly KALIR**; iki
+cerezin ayri tutulmasinin sebebi tam olarak bu: biri kimlik, oburu tercih.
+`clearViewCookie()` secenekleri (path/sameSite/secure/httpOnly) yazma
+anindakilerle BIREBIR ayni verir, aksi halde tarayici cerezi dusurmez.
+
+**CEREZ KULLANICININ ACIK SECIMINI EZMEZ.** Frontend oncelik sirasi:
+
+1. `localStorage['isov:view']` — kullanicinin ACIK secimi, HER ZAMAN kazanir
+2. `isov_view` cerezi — pozisyondan gelen varsayilan
+3. `'panel'`
+
+Kullanici gorunumu gorunum anahtarindan kendisi degistirmeye devam eder;
+`setView()` yalnizca kullanici anahtara bastiginda calistigi icin
+localStorage'in VARLIGI "acik secim yapilmis" demektir.
+
+## Vakit butcesi kademeleri: 2 / 5 / **10** dk
+
+Yukaridaki "Vakit butcesi -> yogunluk" tablosunun **ucuncu satiri
+(15 dk / 30 haber) GECERSIZDIR**; yerine:
+
+| Vakit | Haber | Tam ozet | Bicim |
+|---|---|---|---|
+| 2 dk | 5 | 0 | tek cumle (<=150 karakter) |
+| 5 dk | 12 | 0 | 3 madde (`key_points[0..2]`) |
+| **10 dk** | **20** | **6** | ilk 6 tam ozet + TUM maddeler, sonraki 14 uc madde |
+
+Tek kaynak `backend/src/lib/positions.js` -> `DENSITY` ve `TIME_BUDGETS`;
+aynasi `frontend/lib/api-panel.ts`.
+
+**ARITMETIK (Turkce akici okuma ~200 kelime/dk).** Iki olcek birlikte
+verilir; kademe ikisinde de 10 dakikanin ALTINDA kalmak zorunda.
+
+**(a) Sozlesme ozet boylari (ust sinir, uretilmis/LLM ozetler icin):**
+tek cumle ~20 kelime = ~6 sn; 3 madde ~54 kelime = ~16 sn; tam ozet
+(~62 kelime) + ~5 madde (~90 kelime) = ~152 kelime = ~46 sn; baslik
+taramasi ~2 sn/kalem.
+
+```
+10 dk kademesi:  6 x 46 sn = 276 sn   (tam ozet)
+                14 x 16 sn = 224 sn   (uc madde)
+                20 x  2 sn =  40 sn   (baslik taramasi)
+                -------------------
+                     toplam = 540 sn = 9,0 dk
+```
+
+**(b) Bugunku korpusta OLCULEN** (`GET /me/digest?time_budget=10`
+yanitindaki 20 kalemin kelimeleri sayildi): tam ozetli kalem ortalama
+**119,0 kelime = 35,7 sn**, maddeli kalem ortalama **33,6 kelime = 10,1 sn**.
+
+```
+6 x 35,7 + 14 x 10,1 = 355 sn  (+ 40 sn tarama)
+                     = 395 sn = 6,6 dk
+```
+
+**Karsilastirma — reddedilen iki secenek, ayni iki olcekte:**
+
+| Secenek | (a) sozlesme boyu | (b) olculen |
+|---|---|---|
+| eski 15 dk (30 kalem, ilk 10 tam) | 780 sn = 13,0 dk | 618 sn = 10,3 dk |
+| duz "20 haber tam ozet" | 960 sn = 16,0 dk | 754 sn = 12,6 dk |
+| **10 dk (20 kalem, ilk 6 tam)** | **540 sn = 9,0 dk** | **395 sn = 6,6 dk** |
+
+Reddedilen iki secenek her iki olcekte de 10 dakikayi ASIYOR — kademe adi
+icerigi hakkinda YALAN soylerdi. Bu yuzden kademe KADEMELI kaliyor.
+
+**GERIYE UYUMLULUK — 15 -> 10 ESLEMESI ZORUNLU.**
+`user_profiles.time_budget_min` **TINYINT UNSIGNED** (ENUM DEGIL, DEFAULT 5),
+yani 15 hala yazilabilir bir deger ve **sema gocu GEREKMIYOR**.
+`normalizeTimeBudget()` (backend `lib/positions.js`, frontend
+`lib/api-panel.ts` ve `lib/types-auth.ts`) `15 -> 10` esler; gercekten
+taninmayan deger (0, 7, null, `'abc'`) -> **5**. 15'i "gecersiz" sayip 5'e
+dusurmek, kullanicinin EN UZUN kademe secimini neredeyse en kisaya
+cevirmek olurdu.
+
+**Sabitlenmis haber serpistirmesi:** `interleavePinned` orani
+(`DEFAULT_PIN_RATIO = 5`) **DEGISMEDI** — olculerek kalibre edildi. Kalem
+sayisi degistigi icin o kademedeki sabitlenmis slot sayisi olculerek
+6'dan 4'e dustu (`ceil(20/5) = 4`). CONTRACT sinirlari ("en az 1", "en cok
+7") korunuyor.

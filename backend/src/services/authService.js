@@ -11,7 +11,7 @@ import { query, queryOne } from '../lib/db.js';
 import { ApiError } from '../lib/http.js';
 import { hashPassword, passwordPolicyError, verifyPassword } from '../lib/passwords.js';
 import { hashToken, revokeAllSessions } from '../lib/session.js';
-import { layoutOf, densityOf, normalizeTimeBudget, LAYOUT_LABELS, POSITION_LABELS } from '../lib/positions.js';
+import { layoutOf, viewOf, densityOf, normalizeTimeBudget, LAYOUT_LABELS, POSITION_LABELS } from '../lib/positions.js';
 import { toIso } from '../lib/serialize.js';
 
 /** Kayitta kurum verilmezse. */
@@ -195,11 +195,14 @@ export async function findProfile(userId) {
 }
 
 /**
- * /auth/me govdesi: kullanici + profil (varsa) + TURETILMIS duzen.
+ * /auth/me govdesi: kullanici + profil (varsa) + TURETILMIS duzen ve gorunum.
  *
- * `layout` DB'de kolon DEGIL, lib/positions.js'ten turetilir. Ayni degeri
- * iki yerde tutmak, importance.js'te esiklerin uc ayri yerde kopyalanip
- * kaymasi hatasinin aynisini davet eder.
+ * `layout` ve `default_view` DB'de kolon DEGIL, lib/positions.js'ten
+ * turetilir. Ayni degeri iki yerde tutmak, importance.js'te esiklerin uc
+ * ayri yerde kopyalanip kaymasi hatasinin aynisini davet eder.
+ *
+ * ALAN EKLENIR, ALAN CIKARILMAZ: `default_view` yeni bir alan; mevcut
+ * tuketiciler (arayuz, testler) etkilenmez.
  */
 export async function buildMePayload(userRow) {
   const profile = await findProfile(userRow.id);
@@ -215,6 +218,20 @@ export async function buildMePayload(userRow) {
     layout,
     layout_label: LAYOUT_LABELS[layout] ?? null,
     density: densityOf(timeBudget ?? 5),
+    // POZISYONDAN TURETILEN VARSAYILAN GORUNUM.
+    //
+    // `layout` ile AYNI MANTIK DEGIL, bilincli fark: layoutOf() profil
+    // yoksa 'ozet'e duser (normalizePosition() bilinmeyeni 'ust-yonetim'
+    // yapiyor), viewOf() ise 'panel'e duser. Sebep sapma-only ilkesi:
+    // profil satiri OLMAYAN kullanici icin "ust yonetim secti" varsayimi
+    // yapip 'gorsel' acmak, "hic secmedi" ile "ust yonetim secti"
+    // ayrimini yok ederdi. `position === null` -> 'panel', yani bugunku
+    // notr varsayilan aynen korunur.
+    //
+    // Bu alan bir EMIR degil ONERI: kullanicinin acik secimi
+    // (localStorage['isov:view']) her zaman kazanir, cerez/`default_view`
+    // yalnizca secim yokken devreye girer (docs/SADELESTIRME.md §3).
+    default_view: viewOf(position),
     // Profil satiri yoksa arayuz kullaniciyi onboarding'e alir.
     onboarding_required: profile === null,
   };

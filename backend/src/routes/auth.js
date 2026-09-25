@@ -6,7 +6,7 @@
 //   POST /auth/register                {email, password, full_name, title?, tenant_key?} -> 201
 //   POST /auth/login                   {email, password}                                 -> 200
 //   POST /auth/logout                                                                    -> 200
-//   GET  /auth/me                      oturum sahibi + profil + turetilmis layout        -> 200
+//   GET  /auth/me                      oturum sahibi + profil + turetilmis layout/view  -> 200
 //   POST /auth/password                {current, next}                                   -> 200
 //   POST /auth/password/reset-request  {email}                                           -> 202
 //   POST /auth/password/reset          {token, next}                                     -> 200
@@ -24,8 +24,9 @@ import { Router } from 'express';
 import { z } from 'zod';
 import { ApiError, asyncHandler } from '../lib/http.js';
 import {
-  clearSessionCookie, createSession, readSessionToken, revokeAllSessions,
-  revokeSessionByToken, sessionTtlHours, setSessionCookie,
+  clearSessionCookie, clearViewCookie, createSession, readSessionToken,
+  revokeAllSessions, revokeSessionByToken, sessionTtlHours, setSessionCookie,
+  setViewCookie,
 } from '../lib/session.js';
 import { requireAuth } from '../middleware/session.js';
 import {
@@ -126,10 +127,21 @@ function requestMeta(req) {
   };
 }
 
-/** Oturum acar, cerezi yazar, standart oturum ozetini doner. */
-async function openSession(req, res, userRow) {
+/**
+ * Oturum acar, IKI cerezi yazar, standart oturum ozetini doner.
+ *
+ * Ikinci cerez `isov_view` (httpOnly DEGIL, bkz. lib/session.js): degeri
+ * `payload.default_view`, yani pozisyondan turetilen varsayilan gorunum.
+ * Payload'dan okunur, burada YENIDEN HESAPLANMAZ — /auth/me'nin dondurdugu
+ * alan ile cerez ayrisirsa hangisinin dogru oldugu belirsiz kalirdi.
+ *
+ * Kayitta (POST /auth/register) profil satiri ACILMADIGI icin
+ * `default_view` dogal olarak 'panel' olur; ozel bir dal gerekmiyor.
+ */
+async function openSession(req, res, userRow, payload) {
   const { token, expiresAt } = await createSession(userRow.id, requestMeta(req));
   setSessionCookie(res, token);
+  setViewCookie(res, payload?.default_view);
   return {
     expires_at: expiresAt.toISOString(),
     ttl_hours: sessionTtlHours(),
@@ -169,9 +181,11 @@ router.post('/register', registerRateLimit, asyncHandler(async (req, res) => {
 
   // Kayit BASARILI olunca oturum acilir: kullanici ikinci kez kimlik
   // bilgisi girmesin. user_profiles satiri ACILMAZ (sapma-only) —
-  // profili onboarding adiminda kendisi dolduracak.
-  const session = await openSession(req, res, user);
+  // profili onboarding adiminda kendisi dolduracak. Dolayisiyla gorunum
+  // cerezi burada 'panel' yazilir; rolden gelen varsayilan ilk profil
+  // kaydinda (PUT /me/profile) devreye girer.
   const payload = await buildMePayload(user);
+  const session = await openSession(req, res, user, payload);
 
   res.status(201).json({ data: { ...payload, session } });
 }));
@@ -186,8 +200,10 @@ router.post('/login', loginRateLimit, asyncHandler(async (req, res) => {
   // kullanici dalinda da scrypt maliyetini oder (varlik sizintisi yok).
   const user = await authenticate({ email: body.email, password: body.password });
 
-  const session = await openSession(req, res, user);
+  // Payload ONCE: `default_view` hem yanitta hem `isov_view` cerezinde
+  // ayni degeri tasisin.
   const payload = await buildMePayload(user);
+  const session = await openSession(req, res, user, payload);
 
   res.json({ data: { ...payload, session } });
 }));
@@ -204,6 +220,11 @@ router.post('/logout', asyncHandler(async (req, res) => {
   if (token) revoked = await revokeSessionByToken(token);
 
   clearSessionCookie(res);
+  // Gorunum cerezi de dusurulur: oturum yokken tarayicida rolden gelen
+  // bir mizanpaj tercihi kalmasi anlamsiz olurdu. Kullanicinin KENDI acik
+  // secimi (localStorage['isov:view']) ETKILENMEZ — o frontend'de durur ve
+  // cikis onu temizlemez; kasten, cunku tercihi cihaza ait.
+  clearViewCookie(res);
   res.json({ data: { revoked }, message: 'Oturum kapatıldı.' });
 }));
 
@@ -285,8 +306,9 @@ router.post('/password/reset', passwordResetRateLimit, asyncHandler(async (req, 
   await consumePasswordReset(body.token, body.next);
 
   // consumePasswordReset() kullanicinin TUM oturumlarini iptal etti;
-  // bu tarayicidaki (varsa artik islevsiz) cerezi de dusurelim.
+  // bu tarayicidaki (varsa artik islevsiz) cerezleri de dusurelim.
   clearSessionCookie(res);
+  clearViewCookie(res);
 
   res.json({
     data: { ok: true },

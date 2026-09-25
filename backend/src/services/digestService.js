@@ -7,7 +7,9 @@
 //   makul bir bulten alir; bos durum yok.
 //
 // HABER SAYISI: `user_profiles.time_budget_min` -> lib/positions.js DENSITY
-//   (2 dk -> 5, 5 dk -> 12, 15 dk -> 30). `max_items` VERILMISSE O KAZANIR.
+//   (2 dk -> 5, 5 dk -> 12, 10 dk -> 20). `max_items` VERILMISSE O KAZANIR.
+//   Ucuncu kademe 15 DEGIL 10 dakika (docs/SADELESTIRME.md §4); eski
+//   kayitlardaki 15 degeri normalizeTimeBudget() ile 10'a eslenir.
 //   Sayilar okuma suresi aritmetiginden geliyor (CONTRACT "Vakit butcesi"),
 //   burada YENIDEN tanimlanmiyor — DENSITY'den okunuyor.
 //

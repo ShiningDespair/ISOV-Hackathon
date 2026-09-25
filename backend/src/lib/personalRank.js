@@ -374,7 +374,14 @@ export const DEFAULT_PIN_RATIO = 5;
  * slotlar kisisel siralamaya gider. Somut sonuc:
  *   2 dk / 5 haber   -> 1 sabitlenmis (CONTRACT: "en az 1")
  *   5 dk / 12 haber  -> 3 sabitlenmis
- *  15 dk / 30 haber  -> 6 sabitlenmis (CONTRACT: "en cok 7")
+ *  10 dk / 20 haber  -> 4 sabitlenmis (CONTRACT: "en cok 7")
+ *
+ * ORAN DEGISMEDI, KALEM SAYISI DEGISTI. Ucuncu kademe 15 dk / 30 kalemden
+ * 10 dk / 20 kaleme indi (docs/SADELESTIRME.md §4), dolayisiyla o
+ * kademedeki sabitlenmis slot sayisi olculerek 6'dan 4'e dustu
+ * (ceil(20/5) = 4; olcum: 20 kalemlik bas kesitte 4 `pinned_slot`).
+ * `ratio = 5` ayni kaldi: bu deger olculerek kalibre edildi ve her iki
+ * sinirin (en az 1, en cok 7) icinde kaliyor.
  *
  * Sabitlenmis haberler kisisel akista da yarisabilir: `scored` listesi
  * hepsini icerir ve kullaniciya gercekten uygun bir KRITIK haber kendi

@@ -10,7 +10,7 @@ import { normalizeText } from '../lib/dedup.js';
 import { placeholders } from '../lib/http.js';
 import { parseJsonColumn } from '../lib/serialize.js';
 import {
-  POSITIONS, POSITION_LABELS, layoutOf, normalizePosition, normalizeTimeBudget, densityOf,
+  POSITIONS, POSITION_LABELS, TIME_BUDGETS, layoutOf, normalizePosition, normalizeTimeBudget, densityOf,
 } from '../lib/positions.js';
 import { NACE_SECTORS, sectorByCode } from '../lib/sectors.js';
 import { WEIGHTS, WEIGHTS_VERSION, THREAD_BONUS_MAX, rankArticles } from '../lib/personalRank.js';
@@ -472,6 +472,10 @@ export function taxonomy() {
     })),
     sectors: NACE_SECTORS.map((s) => ({ code: s.code, label: s.label, group: s.group })),
     regions: Object.keys(REGION_WORDS),
-    time_budgets: [2, 5, 15].map((m) => ({ minutes: m, density: densityOf(m) })),
+    // Kademeler TIME_BUDGETS'ten okunur, burada YENIDEN YAZILMAZ.
+    // Onceki hali elle yazilmis `[2, 5, 15]` idi; ucuncu kademe 10'a
+    // inince (docs/SADELESTIRME.md §4) bu satir sessizce eski kademeyi
+    // yayinlamaya devam ederdi — taksonomi ile DENSITY birbirinden kayardi.
+    time_budgets: TIME_BUDGETS.map((m) => ({ minutes: m, density: densityOf(m) })),
   };
 }

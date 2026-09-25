@@ -35,9 +35,24 @@ export type PositionCode = (typeof POSITION_CODES)[number];
 export const LAYOUT_CODES = ["ozet", "aksiyon", "operasyon", "takip"] as const;
 export type LayoutCode = (typeof LAYOUT_CODES)[number];
 
-/** Vakit butcesi (dakika). Sozlesme: 2 / 5 / 15. */
-export const TIME_BUDGETS = [2, 5, 15] as const;
+/**
+ * Vakit bütçesi (dakika). Sözleşme: 2 / 5 / 10.
+ *
+ * ÜÇÜNCÜ KADEME 15 DEĞİL 10 (bkz. docs/SADELESTIRME.md §4): kullanıcı
+ * "en altta yine aynı seçenekler olsun 2 5 10 dk" dedi. Backend karşılığı
+ * `backend/src/lib/positions.js` -> TIME_BUDGETS.
+ */
+export const TIME_BUDGETS = [2, 5, 10] as const;
 export type TimeBudget = (typeof TIME_BUDGETS)[number];
+
+/**
+ * Pozisyondan türetilen varsayılan görünüm — `/auth/me` yanıtının
+ * `default_view` alanı ve `isov_view` çerezinin taşıdığı değer kümesi.
+ * Backend `lib/positions.js` -> VIEWS ve `components/ViewProvider.tsx`
+ * -> VIEW_MODES ile BİREBİR AYNI.
+ */
+export const VIEW_MODE_CODES = ["panel", "gazete", "gorsel", "kart"] as const;
+export type ViewModeCode = (typeof VIEW_MODE_CODES)[number];
 
 /**
  * Bulten sikligi — backend `NEWSLETTER_FREQ` ile birebir.
@@ -142,11 +157,26 @@ export interface NewsletterSettings {
   send_weekday?: number | null;
 }
 
-/** GET /auth/me yaniti. `layout` pozisyondan TURETILIR (DB kolonu degil). */
+/**
+ * GET /auth/me yanıtı. `layout` ve `default_view` pozisyondan TÜRETİLİR
+ * (DB kolonu değil).
+ */
 export interface MeResponse {
   user: SessionUser;
   profile: UserProfile | null;
   layout: string | null;
+  /**
+   * Pozisyondan türetilen varsayılan görünüm. Profil satırı YOKSA 'panel'
+   * ("hiç seçmedi" ile "üst yönetim seçti" ayrımı korunur).
+   *
+   * BİR ÖNERİ, EMİR DEĞİL: kullanıcının açık seçimi
+   * (`localStorage['isov:view']`) her zaman kazanır; bu alan ve `isov_view`
+   * çerezi yalnızca seçim yokken devreye girer.
+   *
+   * İsteğe bağlı (`?`): eski bir backend sürümü alanı döndürmüyorsa
+   * arayüz kırılmasın.
+   */
+  default_view?: ViewModeCode | string | null;
   newsletter?: NewsletterSettings | null;
 }
 
@@ -198,11 +228,28 @@ export function normalizeWeekday(value: unknown): number {
   return Number.isFinite(n) && n >= 1 && n <= 7 ? n : 1;
 }
 
+/**
+ * GERİYE UYUMLU: `user_profiles.time_budget_min` TINYINT ve eski
+ * kayıtlarda 15 yazıyor olabilir. 15'i "geçersiz" sayıp 5'e düşürmek,
+ * kullanıcının EN UZUN kademe seçimini neredeyse en kısaya çevirmek
+ * olurdu; bu yüzden 15 -> 10 eşlenir. Gerçekten tanınmayan değer
+ * (0, 7, null, "abc") -> 5, yani orta kademe.
+ *
+ * Backend `lib/positions.js` -> normalizeTimeBudget() ile aynı davranış.
+ */
 export function normalizeTimeBudget(value: unknown): TimeBudget {
   const n = Number(value);
-  return (TIME_BUDGETS as readonly number[]).includes(n)
-    ? (n as TimeBudget)
-    : 5;
+  if ((TIME_BUDGETS as readonly number[]).includes(n)) return n as TimeBudget;
+  if (n === 15) return 10;
+  return 5;
+}
+
+/** Tanınmayan görünüm kodu nötr varsayılana ('panel') düşer. */
+export function normalizeViewMode(value: unknown): ViewModeCode {
+  const v = String(value ?? "");
+  return (VIEW_MODE_CODES as readonly string[]).includes(v)
+    ? (v as ViewModeCode)
+    : "panel";
 }
 
 export function normalizeFrequency(value: unknown): NewsletterFrequency {

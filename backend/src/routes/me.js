@@ -17,9 +17,9 @@ import { query, queryOne } from '../lib/db.js';
 import {
   ApiError, asyncHandler, parseIdParam, parsePagination, pickFromAllowList, qs, toBool,
 } from '../lib/http.js';
-import { requireAuth } from '../lib/session.js';
+import { requireAuth, setViewCookie } from '../lib/session.js';
 import { toIso } from '../lib/serialize.js';
-import { layoutOf, normalizePosition, normalizeTimeBudget, densityOf, POSITIONS, TIME_BUDGETS } from '../lib/positions.js';
+import { layoutOf, viewOf, normalizePosition, normalizeTimeBudget, densityOf, POSITIONS, TIME_BUDGETS } from '../lib/positions.js';
 import { NACE_SECTORS, sectorByCode } from '../lib/sectors.js';
 import { buildDigest } from '../lib/summarize.js';
 import { WEIGHTS, WEIGHTS_VERSION } from '../lib/personalRank.js';
@@ -57,6 +57,17 @@ function serializeProfile(profile) {
   return {
     position_code: profile.position_code,
     layout: layoutOf(profile.position_code),
+    // Pozisyondan turetilen varsayilan gorunum — /auth/me'nin
+    // `default_view` alani ile AYNI kaynak (lib/positions.js viewOf).
+    // Kullanicinin acik secimini EZMEZ, yalnizca oneridir.
+    //
+    // `exists` KONTROLU SART: profil satiri yokken loadProfileRow()
+    // EMPTY_PROFILE dondurur ve orada `position_code: 'ust-yonetim'`
+    // yaziyor (form icin makul bir ON SECIM). O degeri dogrudan viewOf'a
+    // vermek, hic profil doldurmamis kullaniciya 'gorsel' onerirdi ve
+    // /auth/me'nin dondurdugu 'panel' ile CELISIRDI. Sapma-only ilkesi:
+    // satir yoksa notr varsayilan.
+    default_view: profile.exists === false ? 'panel' : viewOf(profile.position_code),
     time_budget_min: profile.time_budget_min,
     density: densityOf(profile.time_budget_min),
     primary_sector: primary ? { code: primary.code, label: primary.label } : null,
@@ -217,6 +228,17 @@ router.put('/profile', asyncHandler(async (req, res) => {
   );
 
   const after = await loadProfile(req.user.id, tenantKeyOf(req));
+
+  // GORUNUM CEREZI YENIDEN YAZILIR: pozisyon bu istekte degismis olabilir
+  // ve `isov_view` girişte yazildigi degerde kalirsa, pozisyonu 'ust-yonetim'
+  // yapan kullanici bir sonraki GIRISE kadar eski varsayilani gorurdu.
+  //
+  // Kullanicinin ACIK secimini ezmez: frontend once
+  // `localStorage['isov:view']`e bakiyor, cerez yalnizca orasi bossa
+  // devreye giriyor (docs/SADELESTIRME.md §3, Ajan A uygular). Backend'in
+  // isi sadece cerezi dogru yazmak.
+  setViewCookie(res, viewOf(after.position_code));
+
   res.json({
     profile: serializeProfile(after),
     profile_text: text,
