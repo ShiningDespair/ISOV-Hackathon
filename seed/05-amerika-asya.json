@@ -245,8 +245,7 @@
         "impact": 78,
         "keyword": 85,
         "recency": 97,
-        "corroboration": 88,
-        "reach": 85
+        "corroboration": 88
       }
     },
     {
@@ -300,8 +299,7 @@
         "impact": 72,
         "keyword": 82,
         "recency": 98,
-        "corroboration": 75,
-        "reach": 65
+        "corroboration": 75
       }
     },
     {
@@ -353,8 +351,7 @@
         "impact": 70,
         "keyword": 80,
         "recency": 98,
-        "corroboration": 90,
-        "reach": 75
+        "corroboration": 90
       }
     },
     {
@@ -404,8 +401,7 @@
         "impact": 82,
         "keyword": 75,
         "recency": 100,
-        "corroboration": 92,
-        "reach": 90
+        "corroboration": 92
       }
     },
     {
@@ -455,8 +451,7 @@
         "impact": 80,
         "keyword": 72,
         "recency": 100,
-        "corroboration": 85,
-        "reach": 75
+        "corroboration": 85
       }
     },
     {
@@ -505,8 +500,7 @@
         "impact": 90,
         "keyword": 92,
         "recency": 96,
-        "corroboration": 45,
-        "reach": 55
+        "corroboration": 45
       }
     },
     {
@@ -553,8 +547,7 @@
         "impact": 62,
         "keyword": 75,
         "recency": 96,
-        "corroboration": 35,
-        "reach": 50
+        "corroboration": 35
       }
     },
     {
@@ -601,8 +594,7 @@
         "impact": 58,
         "keyword": 70,
         "recency": 98,
-        "corroboration": 30,
-        "reach": 45
+        "corroboration": 30
       }
     },
     {
@@ -649,8 +641,7 @@
         "impact": 52,
         "keyword": 65,
         "recency": 95,
-        "corroboration": 30,
-        "reach": 45
+        "corroboration": 30
       }
     },
     {
@@ -700,8 +691,7 @@
         "impact": 60,
         "keyword": 68,
         "recency": 100,
-        "corroboration": 35,
-        "reach": 50
+        "corroboration": 35
       }
     },
     {
@@ -756,8 +746,7 @@
         "impact": 92,
         "keyword": 80,
         "recency": 96,
-        "corroboration": 85,
-        "reach": 80
+        "corroboration": 85
       }
     },
     {
@@ -807,8 +796,7 @@
         "impact": 88,
         "keyword": 88,
         "recency": 98,
-        "corroboration": 92,
-        "reach": 88
+        "corroboration": 92
       }
     },
     {
@@ -857,8 +845,7 @@
         "impact": 70,
         "keyword": 72,
         "recency": 98,
-        "corroboration": 75,
-        "reach": 60
+        "corroboration": 75
       }
     },
     {
@@ -907,8 +894,7 @@
         "impact": 95,
         "keyword": 92,
         "recency": 94,
-        "corroboration": 78,
-        "reach": 60
+        "corroboration": 78
       }
     },
     {
@@ -958,8 +944,7 @@
         "impact": 88,
         "keyword": 85,
         "recency": 98,
-        "corroboration": 72,
-        "reach": 65
+        "corroboration": 72
       }
     },
     {
@@ -1010,8 +995,7 @@
         "impact": 92,
         "keyword": 88,
         "recency": 100,
-        "corroboration": 88,
-        "reach": 85
+        "corroboration": 88
       }
     },
     {
@@ -1064,8 +1048,7 @@
         "impact": 88,
         "keyword": 82,
         "recency": 98,
-        "corroboration": 82,
-        "reach": 82
+        "corroboration": 82
       }
     },
     {
@@ -1117,8 +1100,7 @@
         "impact": 72,
         "keyword": 78,
         "recency": 100,
-        "corroboration": 82,
-        "reach": 68
+        "corroboration": 82
       }
     },
     {
@@ -1169,8 +1151,7 @@
         "impact": 65,
         "keyword": 70,
         "recency": 98,
-        "corroboration": 65,
-        "reach": 60
+        "corroboration": 65
       }
     },
     {
@@ -1224,8 +1205,7 @@
         "impact": 62,
         "keyword": 72,
         "recency": 98,
-        "corroboration": 70,
-        "reach": 58
+        "corroboration": 70
       }
     },
     {
@@ -1279,8 +1259,7 @@
         "impact": 85,
         "keyword": 88,
         "recency": 92,
-        "corroboration": 72,
-        "reach": 62
+        "corroboration": 72
       }
     },
     {
@@ -1334,8 +1313,7 @@
         "impact": 80,
         "keyword": 85,
         "recency": 86,
-        "corroboration": 80,
-        "reach": 60
+        "corroboration": 80
       }
     },
     {
@@ -1388,8 +1366,7 @@
         "impact": 72,
         "keyword": 68,
         "recency": 96,
-        "corroboration": 50,
-        "reach": 55
+        "corroboration": 50
       }
     },
     {
@@ -1440,8 +1417,7 @@
         "impact": 88,
         "keyword": 88,
         "recency": 88,
-        "corroboration": 75,
-        "reach": 62
+        "corroboration": 75
       }
     }
   ]

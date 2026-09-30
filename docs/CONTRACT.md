@@ -32,16 +32,15 @@ Agirlikli toplam, 0..100:
 
 | Bilesen        | Agirlik | Aciklama |
 |----------------|---------|----------|
-| `authority`    | 0.25    | Kaynak otoritesi (`sources.authority_weight`) |
+| `authority`    | 0.30    | Kaynak otoritesi (`sources.authority_weight`) |
 | `impact`       | 0.25    | ISO/ISOV uyelerine dogrudan etki (mevzuat/tesvik/maliyet) |
 | `keyword`      | 0.20    | Tetikleyici etiketlerin agirlik toplami (`tags.weight`) |
 | `recency`      | 0.15    | Yayin tazeligi, 7 gunde dogrusal soner |
 | `corroboration`| 0.10    | Kume uye sayisi (kac bagimsiz kaynak dogrulamis) |
-| `reach`        | 0.05    | Kaynagin erisim/olcek tahmini |
 
 `importance_factors` JSON'unda **ham bilesenler** (0..100) saklanir:
 ```json
-{"authority":85,"impact":90,"keyword":70,"recency":95,"corroboration":40,"reach":60}
+{"authority":85,"impact":90,"keyword":70,"recency":95,"corroboration":40}
 ```
 Panelde ham skor gosterilmez; sadece band + siralama kullanilir.
 
@@ -81,7 +80,7 @@ Her toplama ajani asagidaki formatta TEK bir JSON dosyasi yazar:
       "tags": ["tesvik", "kobi", "mevzuat-degisikligi"],
       "importance_factors": {
         "authority": 100, "impact": 85, "keyword": 70,
-        "recency": 95, "corroboration": 30, "reach": 60
+        "recency": 95, "corroboration": 30
       }
     }
   ]

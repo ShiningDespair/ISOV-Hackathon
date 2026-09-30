@@ -16,7 +16,7 @@ const SEED_DIR = resolve(process.argv[2] ?? new URL('../seed', import.meta.url).
 const REGIONS = new Set(['KURESEL', 'TURKIYE', 'AMERIKA', 'AVRUPA', 'ASYA', 'DIGER']);
 const SENTIMENTS = new Set(['POZITIF', 'NOTR', 'NEGATIF']);
 const SOURCE_TYPES = new Set(['mevzuat', 'kurum', 'acik_veri', 'basin', 'uluslararasi', 'diger']);
-const FACTORS = ['authority', 'impact', 'keyword', 'recency', 'corroboration', 'reach'];
+const FACTORS = ['authority', 'impact', 'keyword', 'recency', 'corroboration'];
 const TAG_SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 const errors = [];

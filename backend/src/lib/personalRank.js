@@ -290,7 +290,7 @@ export function personalScore(components, weights = WEIGHTS) {
 /**
  * GLOBAL SKORUN NORMALIZASYONU.
  *
- * `importance_score` TANIMI GEREGI 0..100: alti bilesenin (her biri 0..100)
+ * `importance_score` TANIMI GEREGI 0..100: bes bilesenin (her biri 0..100)
  * agirlikli toplami, agirliklar 1.00. Yani "normalize" edilmis hali ZATEN
  * kendisi; bu fonksiyon araliga sikistirip gecirir.
  *

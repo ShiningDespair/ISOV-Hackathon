@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS articles (
   -- --- GIZLI ONEM METRIGI ------------------------------------------
   -- 0..100. Panelde ham deger gosterilmez; sadece siralama + band icin kullanilir.
   importance_score  DECIMAL(5,2) NOT NULL DEFAULT 0.00,
-  -- skorun bilesenleri: {"authority":x,"recency":x,"reach":x,"impact":x,"keyword":x,"corroboration":x}
+  -- skorun bilesenleri: {"authority":x,"recency":x,"impact":x,"keyword":x,"corroboration":x}
   importance_factors JSON NULL,
   -- BANT — YUZDELIK TABANLI, uygulama katmaninda yazilir.
   --

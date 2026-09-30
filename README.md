@@ -28,12 +28,11 @@ gösterilmez**; API yalnızca `?reveal=1` ile döndürür. Kullanıcı yalnızca
 
 | Bileşen | Ağırlık | Ne ölçer |
 |---|---|---|
-| `authority` | 0.25 | Kaynağın yetkisi (Resmî Gazete 100 ↔ sektörel blog 40) |
+| `authority` | 0.30 | Kaynağın yetkisi (Resmî Gazete 100 ↔ sektörel blog 40) |
 | `impact` | 0.25 | Üye sanayiciye doğrudan maliyet/yükümlülük etkisi |
 | `keyword` | 0.20 | Tetikleyici etiketlerin ağırlık toplamı |
 | `recency` | 0.15 | Tazelik — 7 günde sönümlenir |
 | `corroboration` | 0.10 | Kaç bağımsız kaynak doğrulamış (küme büyüklüğü) |
-| `reach` | 0.05 | Kaynağın erişim ölçeği |
 
 Bileşenlerin ham hâli `importance_factors` JSON kolonunda saklanır — skor her
 zaman **açıklanabilir**. Bant, `importance_band` generated column'u ile üretilir:
@@ -54,7 +53,7 @@ her şey "yüksek önemli" ise bant bilgi taşımaz.
         ┌─────────────────────────────────────────┐
         │  tekilleştirme  (url → hash → simhash)  │
         │  özetleme + etiketleme  (Claude / heur) │
-        │  önem skorlama  (6 bileşenli)           │
+        │  önem skorlama  (5 bileşenli)           │
         └──────────────────┬──────────────────────┘
                            ↓
               MySQL 8  ◄──►  Qdrant (semantik katman)

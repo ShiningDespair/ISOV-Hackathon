@@ -73,7 +73,7 @@ const SENTIMENT_MAP = {
   'NEGATIF': 'NEGATIF', 'NEGATIVE': 'NEGATIF', 'OLUMSUZ': 'NEGATIF',
 };
 
-const FACTORS = ['authority', 'impact', 'keyword', 'recency', 'corroboration', 'reach'];
+const FACTORS = ['authority', 'impact', 'keyword', 'recency', 'corroboration'];
 
 /** Turkce karakterleri ASCII'ye indirger; slug uretiminde kullanilir. */
 const deTr = (s) => s
@@ -127,7 +127,7 @@ for (const file of readdirSync(SEED_DIR).filter((f) => f.endsWith('.json') && !/
       if (a.tags.join('|') !== before) stats.tags++;
     }
 
-    // Faktorler: eksik bilesen 50 varsayilir; skorun her zaman 6 bileseni olur
+    // Faktorler: eksik bilesen 50 varsayilir; skorun her zaman 5 bileseni olur
     // ki importance_factors JSON'u acikanabilirligi korusun.
     a.importance_factors ??= {};
     for (const k of FACTORS) {

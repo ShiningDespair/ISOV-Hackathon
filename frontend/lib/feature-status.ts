@@ -88,7 +88,7 @@ export const OZELLIKLER: Ozellik[] = [
     durum: "calisiyor",
     alan: "haber",
     nasil:
-      "6 bileşenli skor, importance_factors JSON'unda açıklanabilir. Bant yüzdelik tabanlı: 11 KRİTİK / 33 YÜKSEK / 41 ORTA / 30 DÜŞÜK. API'de ?reveal=1 olmadan skor null döner.",
+      "5 bileşenli skor, importance_factors JSON'unda açıklanabilir. Bant yüzdelik tabanlı: 11 KRİTİK / 33 YÜKSEK / 41 ORTA / 30 DÜŞÜK. API'de ?reveal=1 olmadan skor null döner.",
   },
   {
     id: "haber-gorselleri",

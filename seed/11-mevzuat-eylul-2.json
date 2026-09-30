@@ -96,8 +96,7 @@
         "impact": 60,
         "keyword": 55,
         "recency": 45,
-        "corroboration": 20,
-        "reach": 45
+        "corroboration": 20
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -140,8 +139,7 @@
         "impact": 55,
         "keyword": 55,
         "recency": 40,
-        "corroboration": 30,
-        "reach": 55
+        "corroboration": 30
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -186,8 +184,7 @@
         "impact": 75,
         "keyword": 70,
         "recency": 50,
-        "corroboration": 20,
-        "reach": 60
+        "corroboration": 20
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -237,8 +234,7 @@
         "impact": 80,
         "keyword": 70,
         "recency": 55,
-        "corroboration": 55,
-        "reach": 65
+        "corroboration": 55
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -282,8 +278,7 @@
         "impact": 55,
         "keyword": 50,
         "recency": 55,
-        "corroboration": 15,
-        "reach": 35
+        "corroboration": 15
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -327,8 +322,7 @@
         "impact": 50,
         "keyword": 45,
         "recency": 55,
-        "corroboration": 15,
-        "reach": 40
+        "corroboration": 15
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -372,8 +366,7 @@
         "impact": 45,
         "keyword": 55,
         "recency": 55,
-        "corroboration": 10,
-        "reach": 45
+        "corroboration": 10
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -420,8 +413,7 @@
         "impact": 40,
         "keyword": 45,
         "recency": 60,
-        "corroboration": 30,
-        "reach": 40
+        "corroboration": 30
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -465,8 +457,7 @@
         "impact": 75,
         "keyword": 65,
         "recency": 60,
-        "corroboration": 55,
-        "reach": 55
+        "corroboration": 55
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -512,8 +503,7 @@
         "impact": 35,
         "keyword": 35,
         "recency": 65,
-        "corroboration": 40,
-        "reach": 40
+        "corroboration": 40
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -556,8 +546,7 @@
         "impact": 45,
         "keyword": 40,
         "recency": 75,
-        "corroboration": 15,
-        "reach": 50
+        "corroboration": 15
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -603,8 +592,7 @@
         "impact": 60,
         "keyword": 60,
         "recency": 75,
-        "corroboration": 15,
-        "reach": 50
+        "corroboration": 15
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -651,8 +639,7 @@
         "impact": 70,
         "keyword": 80,
         "recency": 85,
-        "corroboration": 60,
-        "reach": 55
+        "corroboration": 60
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -698,8 +685,7 @@
         "impact": 35,
         "keyword": 40,
         "recency": 85,
-        "corroboration": 45,
-        "reach": 40
+        "corroboration": 45
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -741,8 +727,7 @@
         "impact": 65,
         "keyword": 75,
         "recency": 85,
-        "corroboration": 60,
-        "reach": 55
+        "corroboration": 60
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -782,8 +767,7 @@
         "impact": 50,
         "keyword": 45,
         "recency": 85,
-        "corroboration": 15,
-        "reach": 55
+        "corroboration": 15
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -834,8 +818,7 @@
         "impact": 80,
         "keyword": 80,
         "recency": 90,
-        "corroboration": 65,
-        "reach": 70
+        "corroboration": 65
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -883,8 +866,7 @@
         "impact": 75,
         "keyword": 75,
         "recency": 90,
-        "corroboration": 65,
-        "reach": 70
+        "corroboration": 65
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -924,8 +906,7 @@
         "impact": 50,
         "keyword": 50,
         "recency": 100,
-        "corroboration": 70,
-        "reach": 70
+        "corroboration": 70
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -967,8 +948,7 @@
         "impact": 45,
         "keyword": 45,
         "recency": 100,
-        "corroboration": 70,
-        "reach": 70
+        "corroboration": 70
       },
       "language": "tr",
       "region": "TURKIYE"
@@ -1009,8 +989,7 @@
         "impact": 55,
         "keyword": 55,
         "recency": 100,
-        "corroboration": 15,
-        "reach": 50
+        "corroboration": 15
       },
       "language": "tr",
       "region": "TURKIYE"

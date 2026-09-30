@@ -9,12 +9,11 @@
 // ---------------------------------------------------------------------
 
 export const WEIGHTS = Object.freeze({
-  authority: 0.25,     // kaynak otoritesi (sources.authority_weight)
+  authority: 0.30,     // kaynak otoritesi (sources.authority_weight)
   impact: 0.25,        // ISO/ISOV uyesine dogrudan etki
   keyword: 0.20,       // tetikleyici etiket agirliklari toplami
   recency: 0.15,       // yayin tazeligi
   corroboration: 0.10, // kac bagimsiz kaynak dogrulamis
-  reach: 0.05,         // kaynagin erisim/olcek tahmini
 });
 
 /** Faktor bilinmiyorsa "notr" kabul: ne odullendir ne cezalandir. */
