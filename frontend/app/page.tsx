@@ -143,8 +143,8 @@ export default async function HomePage({
       <>
         {anahtar}
         {/* Sayfanın TEK `h1`i — görünüm yuvalarının DIŞINDA, yani dört
-            görünümde de aynı. `PanoHeader` bu yüzden `h2` basıyor: iki
-            `h1` ana yer işareti sırasını bozar.
+            görünümde de aynı. Panelin kendi başlıkları bu yüzden `h2`:
+            iki `h1` ana yer işareti sırasını bozar.
             `VisualFront` de kendi ekran-okuyucu başlığını basıyordu;
             artık `baslikDuzeyi` prop'u alıyor ve kişisel akışta `h2`
             basıyor. Genel akışta 1 kalıyor, çünkü orada panel yuvası

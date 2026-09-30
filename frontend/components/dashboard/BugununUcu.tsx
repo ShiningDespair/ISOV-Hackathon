@@ -14,8 +14,10 @@
  * - SIRA API'NİN: kalemler kişisel sıranın ilk üçü, istemcide yeniden
  *   sıralanmaz. Çağıran (`PersonalPanel`) diziyi DİLİMLER, sıralamaz.
  * - METİN ÜRETİLMEZ: tek cümle `leadSentence` (kart görünümüyle aynı
- *   fonksiyon), paylaşım adresi `paylasimAdresleri` + `paylasilacak`
- *   (Paylaş menüsüyle aynı kurgu). Yeni özet ya da yeni mesaj metni yok.
+ *   fonksiyon). Ayrı "WhatsApp'ta gönder" düğmesi kaldırıldı; WhatsApp
+ *   Paylaş menüsünün içinde ("WhatsApp ile gönder"), tüm kartlarla aynı.
+ * - YERLEŞİM: 768 px ve üstünde kalemler iki sütunlu ızgarada; mobilde
+ *   tek sütun (aşağıdaki piksel bütçesi mobil içindir).
  * - GEREKÇE UYDURULMAZ: "Neden sizin için" satırı yalnızca GERÇEK bir
  *   eşleşmeden yazılır — backend'in `matched_interests`i (yoksa istemci
  *   yedeği: haberin etiketi ∩ kullanıcının ilgi alanı), yoksa
@@ -39,8 +41,7 @@
  *     başlık  ≤ 3 satır × 22 px (satır sınırı 3) .........  ≤ 66 px
  *     cümle   ≤ 2 satır × 20 px (satır sınırı 2) .........  ≤ 40 px
  *     gerekçe ≤ 2 satır × 17 px (satır sınırı 2) .........  ≤ 34 px
- *     eylem satırı: WhatsApp 186×44 + simgeli Paylaş/Gizle
- *       44×44, toplam ~293 px, TEK satır ..................  44 px
+ *     eylem satırı: Paylaş + Gizle, TEK satır ............  44 px
  *     aralıklar 3 × 6 + dolgu 20 + ayraç 1 ...............  ~39 px
  *     toplam ........................ tipik ~205, en kötü ~243 px
  *   → ÜÇÜNCÜ BAŞLIK y ≈ 282 + 2 × 205 = ~692 tipik,
@@ -56,13 +57,12 @@
  */
 
 import Link from "next/link";
-import { headers } from "next/headers";
 
 import { ArticleActions, HidableArticle } from "@/components/ArticleActions";
 import { BandBadge } from "@/components/BandBadge";
 import { leadSentence } from "@/components/DigestCard";
 import { FALLBACK_INTERESTS } from "@/components/onboarding/taxonomy-fallback";
-import { paylasilacak, paylasimAdresleri } from "@/lib/api-me";
+import { paylasilacak } from "@/lib/api-me";
 import { normalizeBand, normalizeRegion, regionLabel } from "@/lib/format";
 import type { Article } from "@/lib/types";
 
@@ -162,35 +162,14 @@ export function gerekceOf(article: Article, profil: UcuProfil): Gerekce | null {
   return null;
 }
 
-/**
- * Paylaşılacak bağlantı — `ShareMenu.baglantiOf` ile AYNI kural: haberin
- * kendi (kaynak) adresi; yoksa paneldeki sayfası. Sunucuda `window` yok,
- * bu yüzden köken istek başlıklarından okunur.
- */
-async function baglantiOf(article: Article): Promise<string> {
-  const u = article.url?.trim();
-  if (u && /^https?:/i.test(u)) return u;
-  try {
-    const h = await headers();
-    const host = h.get("x-forwarded-host") ?? h.get("host");
-    const proto = h.get("x-forwarded-proto") ?? "https";
-    if (host) return `${proto}://${host}/haber/${article.id}`;
-  } catch {
-    /* başlık okunamadı — göreli adrese düş */
-  }
-  return `/haber/${article.id}`;
-}
-
 function UcuKalem({
   article,
   sira,
   gerekce,
-  whatsapp,
 }: {
   article: Article;
   sira: number;
   gerekce: Gerekce | null;
-  whatsapp: string;
 }) {
   const cumle = leadSentence(article);
   return (
@@ -218,26 +197,8 @@ function UcuKalem({
           ) : null}
 
           <div className="akis-uc-eylem">
-            {/* Düz bağlantı: JS yüklenmeden de çalışır, tek dokunuş.
-                Metin ve adres `paylasimAdresleri`nden — Paylaş menüsündeki
-                "WhatsApp ile gönder" ile birebir aynı mesaj. */}
-            <a
-              href={whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="akis-uc-wa"
-              aria-label={`“${article.title}” haberini WhatsApp'ta gönder`}
-            >
-              <span aria-hidden="true" className="akis-uc-wa-ikon">
-                ✆
-              </span>
-              WhatsApp&apos;ta gönder
-            </a>
-            {/* `compact`: yalnızca simge (ad ekran okuyucuda kalır) — tüm
-                kartlardaki Paylaş/Gizle ile aynı görünüm. Metinli sürümde
-                satır 390 px'te ~381 px tutuyor ve kalemi ikinci satıra
-                (+~50 px) taşıyordu; simgeli sürüm ~293 px. */}
-            <ArticleActions haber={paylasilacak(article)} compact />
+            {/* WhatsApp, e-posta ve bağlantı Paylaş menüsünün içinde. */}
+            <ArticleActions haber={paylasilacak(article)} />
           </div>
         </article>
       </HidableArticle>
@@ -245,7 +206,7 @@ function UcuKalem({
   );
 }
 
-export async function BugununUcu({
+export function BugununUcu({
   articles,
   profil,
   personalized,
@@ -259,13 +220,10 @@ export async function BugununUcu({
   const kalemler = articles.slice(0, UCU_ADET);
   if (kalemler.length === 0) return null;
 
-  const hazir = await Promise.all(
-    kalemler.map(async (a) => ({
-      article: a,
-      gerekce: gerekceOf(a, profil),
-      whatsapp: paylasimAdresleri(paylasilacak(a), await baglantiOf(a)).whatsapp,
-    })),
-  );
+  const hazir = kalemler.map((a) => ({
+    article: a,
+    gerekce: gerekceOf(a, profil),
+  }));
 
   const baslik =
     kalemler.length === UCU_ADET
@@ -289,7 +247,6 @@ export async function BugununUcu({
             article={k.article}
             sira={i + 1}
             gerekce={k.gerekce}
-            whatsapp={k.whatsapp}
           />
         ))}
       </ol>

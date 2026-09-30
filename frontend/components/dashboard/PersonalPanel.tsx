@@ -576,12 +576,13 @@ export async function PersonalPanel({
           (yerel kopya, emre.tunc; masthead + akış anahtarı 0–251):
             1. Bugün Bilmeniz Gereken 3 Şey ... 251–919 → başlıklar
                y = 292 / 500 / 703, ilk ekranda 3 başlık
-            2. Filtrele ve ara (kapalı) ....... ~56 px   (ilk ekranın altı)
-            3. Notlar (tek satır, katlı) ...... ~44 px   (not varsa)
-            4. Panel başlığı .................. ~82 px
-            5. KPI şeridi (sıkı) .............. ~70 px
-            6. Kayan şerit .................... ~70 px
-            7. Yapılacaklar / takvim, görünüm akışı
+            2. Notlar (tek satır, katlı) ...... ~44 px   (not varsa)
+            3. KPI şeridi (sıkı) .............. ~70 px
+            4. Kayan şerit .................... ~70 px
+            5. Filtrele ve ara (kapalı) ....... ~56 px
+            6. Yapılacaklar / takvim, görünüm akışı
+          Panel durum satırı (pozisyon · düzen · vakit) künyede,
+          "Dış Kaynak İzleme"nin altında (`MastheadMeta`).
           Kalem başına bütçe ve en kötü durum `BugununUcu.tsx` başında.
           1'den sonrası ilk ekranda OLMAK ZORUNDA DEĞİL; hedef "kaydırmadan
           en az 3 gerçek haber başlığı, ilki y < 400". */}
@@ -596,20 +597,11 @@ export async function PersonalPanel({
         />
       )}
 
-      {/* Tek filtre yeri — dört görünümde de aynı, katlı. Görsel ve Kart
-          görünümlerinin kendi şeritleri kişisel akışta kapalı
-          (`filtreSeridi={false}`). Etkin filtre çipleri katlanmaz. */}
-      <PanoFiltrele
-        state={gezintiDurumu}
-        etkinSayi={filtreSayisi}
-      />
-
       <PanoNotices notices={notices} warnFirst={Boolean(me.note)} tekSatir />
 
       <PanoHeader
         layout={layout}
         positionLabel={me.positionLabel}
-        fullName={me.fullName}
         timeBudget={timeBudget}
         itemCount={articles.length}
         personalized={personalized}
@@ -628,6 +620,15 @@ export async function PersonalPanel({
       {strip.length > 0 ? (
         <HeadlineStrip articles={strip} label="En Önemli Konular" />
       ) : null}
+
+      {/* Tek filtre yeri — dört görünümde de aynı, katlı; "En Önemli
+          Konular" şeridinin ALTINDA, haber akışının hemen üstünde. Görsel
+          ve Kart görünümlerinin kendi şeritleri kişisel akışta kapalı
+          (`filtreSeridi={false}`). Etkin filtre çipleri katlanmaz. */}
+      <PanoFiltrele
+        state={gezintiDurumu}
+        etkinSayi={filtreSayisi}
+      />
 
       {/* -------- Aksiyon: yapılacaklar -------- */}
       {layout === "aksiyon" ? (

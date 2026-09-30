@@ -93,7 +93,14 @@
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  /* Kaydirma cubugu GIZLI: serit kendiliginden akiyor, cubuk yalnizca
+     gorsel gurultuydu. Kaydirma calismaya devam eder (dokunma, tekerlek,
+     ok tuslari) — yalnizca cubuk cizilmez. */
+  scrollbar-width: none;
+}
+
+.serit-pencere::-webkit-scrollbar {
+  display: none;
 }
 
 /* Kaydırma yakalaması (snap) YALNIZCA şerit kaymıyorken. Animasyon

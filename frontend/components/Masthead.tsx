@@ -32,8 +32,8 @@ import { SectionNav, type NavItem } from "./SectionNav";
  * /giris'e yönlendiriyor ve bağlantıyı gizlemek, kullanıcının özelliğin
  * varlığını hiç öğrenmemesine yol açardı.
  *
- * "Yönetim" artık burada DEĞİL — Hesabım menüsünde ve yalnızca admin
- * için basılıyor (components/AccountMenu.tsx).
+ * "Yönetim" bu listede yok: yalnızca admin oturumunda SectionNav onu
+ * sona ekler; Hesabım menüsünde de ayrıca durur (components/AccountMenu.tsx).
  */
 const NAV: readonly NavItem[] = [
   { href: "/", label: "Bülten" },
@@ -77,6 +77,9 @@ export function Masthead() {
                 Dış Kaynak İzleme
               </div>
             </Link>
+            {/* Bana Özel akışının durum satırı buraya portal ile yazılır
+                (components/MastheadMeta.tsx); diğer sayfalarda boş. */}
+            <div id="masthead-meta" />
             {/* MOBİL — sol kolon 640 px altında gizli; tazelik göstergesi
                 orada kaybolmasın (Nilgün telefonla, 390 px). */}
             <div className="u-kicker mt-2 text-ink-faint sm:hidden">

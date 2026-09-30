@@ -12,10 +12,10 @@ import {
   RegionTabs,
   type FilterState,
 } from "@/components/Filters";
+import { MastheadMeta } from "@/components/MastheadMeta";
 import { SearchBox } from "@/components/SearchBox";
 import { SectionRule } from "@/components/States";
 import {
-  LAYOUT_HINTS,
   LAYOUT_LABELS,
   PANEL_LAYOUTS,
   type PanelLayout,
@@ -114,29 +114,22 @@ export function PanoNotices({
 }
 
 /**
- * Panel başlığı — TEK SATIR.
- *
- * Eskiden üç satır basıyordu (kicker + h1 + iki cümlelik açıklama) ve
- * bunun yalnızca üçüncü satırı bilgi taşıyordu. Şimdi hepsi tek satırda,
- * orta nokta ile ayrılmış: pozisyon · düzen · "N dakika / M kalem" ·
+ * Panel durum satırı — pozisyon · düzen · "N dakika / M kalem" ·
  * kişiselleştirme durumu.
  *
- * `h1` BURADA DEĞİL: panel artık `/` sayfasının içinde yaşıyor ve o
- * sayfanın kendi `h1`i var. İki `h1` ana yer işareti (landmark) sırasını
- * bozar ve ekran okuyucuda "hangisi sayfanın adı" belirsizleşir. Başlık
- * `h2` olarak basılır.
+ * Panelin içinde BASILMAZ: künyede "Dış Kaynak İzleme"nin altına yazılır
+ * (`MastheadMeta`, portal). Eski "Ad Soyad — panelim" başlığı kaldırıldı;
+ * sayfanın başlığı zaten `h1` ve "Bugün Bilmeniz Gereken" bloğunun `h2`si.
  */
 export function PanoHeader({
   layout,
   positionLabel,
-  fullName,
   timeBudget,
   itemCount,
   personalized,
 }: {
   layout: PanelLayout;
   positionLabel: string | null;
-  fullName: string | null;
   timeBudget: TimeBudget;
   itemCount: number;
   personalized: boolean;
@@ -148,25 +141,7 @@ export function PanoHeader({
     personalized ? "pozisyonunuza göre sıralı" : "genel önem sırası",
   ];
 
-  return (
-    <header className="pano-header akis-header-tek">
-      <h2 className="akis-header-ad" title={LAYOUT_HINTS[layout]}>
-        {fullName ? `${fullName} — panelim` : "Panelim"}
-      </h2>
-      <p className="akis-header-satir">
-        {parts.map((part, i) => (
-          <span key={i}>
-            {i > 0 ? (
-              <span aria-hidden="true" className="akis-ayrac">
-                ·
-              </span>
-            ) : null}
-            {part}
-          </span>
-        ))}
-      </p>
-    </header>
-  );
+  return <MastheadMeta parts={parts} />;
 }
 
 /** Kural çizgili bölüm — mevcut `SectionRule` yeniden kullanılıyor. */
